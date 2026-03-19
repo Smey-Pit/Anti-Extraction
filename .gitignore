@@ -1,0 +1,64 @@
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# ── uv ────────────────────────────────────────────────────────────────────────
+.venv/
+# Keep uv.lock — it ensures reproducible installs on Spartan
+# DO NOT ignore uv.lock
+
+# ── Environment / secrets ─────────────────────────────────────────────────────
+.env
+# Keep .env.example — it's the template, no secrets in it
+
+# ── Experiment outputs ────────────────────────────────────────────────────────
+# All run artefacts — results, images, trajectories
+outputs/
+logs/
+
+# ── Model weights ─────────────────────────────────────────────────────────────
+# HuggingFace cache — weights are large and re-downloadable
+# Default HF cache location
+~/.cache/huggingface/
+# In case anyone puts weights inside the repo
+*.bin
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+
+# ── Data ──────────────────────────────────────────────────────────────────────
+# Raw images — large, not suited for git
+data/synthetic/images/
+data/document/images/
+data/ui/images/
+data/scene/images/
+data/pilots/
+# Keep labels.jsonl files — they're text, small, and critical for reproducibility
+# i.e. data/synthetic/labels.jsonl IS committed
+
+# ── Jupyter ───────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb
+
+# ── OS ────────────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ── IDE ───────────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ── Temp / debug ──────────────────────────────────────────────────────────────
+tmp/
+configs/tmp_*.yaml
