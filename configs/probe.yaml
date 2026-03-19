@@ -12,8 +12,8 @@ data:
   contrast_filter: null
 
 attack:
-  pgd_steps: 300
-  pgd_step_size: 0.00392156   # 1/255
+  pgd_steps: 5
+  pgd_step_size: 0.00392156
 
   # Unused by probe but required by dacite
   mu_init: 0.1
@@ -43,20 +43,33 @@ attack:
   mask_dilation: 3            # dilate text mask to cover antialiasing fringe
   epsilon:       0.01568627   # fallback when region_aware: false
 
+# epsilon_sweep:
+#   - 0.00784314    # 2/255
+#   - 0.01568627    # 4/255
+#   - 0.03137255    # 8/255
+
+#local testing for epsilon_sweep
 epsilon_sweep:
-  - 0.00784314    # 2/255
   - 0.01568627    # 4/255
-  - 0.03137255    # 8/255
 
 kappa_sweep:
   - 9999.0
 
+# surrogates:
+#   - name: internvl2
+#     model_id: OpenGVLab/InternVL2-8B
+#     dtype: bfloat16
+#     device_map: auto
+#     max_new_tokens: 256
+#     alpha: 1.0
+
+#this is a smaller model to test locally
 surrogates:
-  - name: internvl2
-    model_id: OpenGVLab/InternVL2-8B
-    dtype: bfloat16
-    device_map: auto
-    max_new_tokens: 256
+  - name: qwen2vl
+    model_id: Qwen/Qwen2-VL-2B-Instruct
+    dtype: float32
+    device_map: cpu
+    max_new_tokens: 64
     alpha: 1.0
 
 held_out_indices: []

@@ -34,7 +34,7 @@ def compute_wer(hypothesis: str, reference: str) -> float:
 
 
 def compute_exact_match(hypothesis: str, reference: str) -> bool:
-    return normalise(hypothesis) == normalise(reference))
+    return normalise(hypothesis) == normalise(reference)
 
 
 def compute_char_accuracy(hypothesis: str, reference: str) -> float:

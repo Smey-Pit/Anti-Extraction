@@ -1,21 +1,3 @@
-# ══════════════════════════════════════════════════════════════════════════════
-# vlm_suppress/attack/probe.py
-#
-# Unconstrained white-box probe — region-aware version.
-#
-# Same purpose as before: validate F_M^ens is optimisable before introducing
-# the readability constraint.
-#
-# Region-aware change: the l-inf projection now uses a per-pixel epsilon map
-# built from word_boxes. Text pixels use epsilon_text (tight budget),
-# background uses epsilon_bg (loose budget).
-#
-# This matters even for the probe because it sets up the correct gradient
-# flow and projection geometry that the full attack will use. Running the
-# probe with uniform epsilon and the attack with region-aware epsilon would
-# make the probe results misleading.
-# ══════════════════════════════════════════════════════════════════════════════
-
 from __future__ import annotations
 
 from dataclasses import dataclass, field
@@ -28,14 +10,14 @@ from vlm_suppress.config import AttackConfig, ObjectiveConfig
 from vlm_suppress.models.base import SurrogateModel
 
 
-# ── L2 projection (used when norm="l2") ───────────────────────────────────────
+# ── L2 projection ──────────────────────────────────────────────────────────────
 
 def _proj_l2(delta: torch.Tensor, epsilon: float) -> torch.Tensor:
-    flat = delta.view(-1)
+    flat = delta.reshape(-1)
     n = flat.norm(p=2)
     if n > epsilon:
         flat = flat * (epsilon / n)
-    return flat.view(delta.shape)
+    return flat.reshape(delta.shape)
 
 
 # ── Data classes ───────────────────────────────────────────────────────────────
@@ -52,13 +34,13 @@ class ProbeStepLog:
 
 @dataclass
 class ProbeResult:
-    image_id:    str
-    transcript:  str
-    norm:        str
-    epsilon:     float       # text-region epsilon (or global if uniform)
+    image_id:     str
+    transcript:   str
+    norm:         str
+    epsilon:      float
     region_aware: bool
 
-    x_adv:    torch.Tensor   # (3, H, W) float32 [0,1] CPU
+    x_adv:    torch.Tensor
     fm_clean: float
     fm_final: float
     fm_delta: float
@@ -70,65 +52,57 @@ class ProbeResult:
         return self.fm_delta > 0.0
 
 
-# ── Main probe function ────────────────────────────────────────────────────────
+# ── Main probe ─────────────────────────────────────────────────────────────────
 
 def run_probe(
     image_id:   str,
-    x_orig:     torch.Tensor,            # (3, H, W) float32 [0,1] CPU
+    x_orig:     torch.Tensor,
     transcript: str,
     surrogates: list[SurrogateModel],
     cfg:        AttackConfig,
     word_boxes: list[list[int]] | None = None,
     norm:       str   = "l2",
-    epsilon:    float | None = None,     # overrides cfg.epsilon_text if set
+    epsilon:    float | None = None,
     pgd_steps:  int   | None = None,
 ) -> ProbeResult:
-    """
-    Unconstrained PGD probe with region-aware l-inf projection.
 
-    norm="l2":   global L2 ball projection (no region split — useful for
-                 checking gradient flow cleanly before adding complexity).
-    norm="linf": per-pixel l-inf projection using the epsilon map from
-                 word_boxes. This is the geometry the full attack uses.
-
-    For the first probe run, use norm="l2" to confirm gradient flow,
-    then norm="linf" to confirm the region-aware projection works.
-    """
     device = surrogates[0].device
     steps  = pgd_steps if pgd_steps is not None else cfg.pgd_steps
     H, W   = x_orig.shape[-2], x_orig.shape[-1]
-
     x_orig_d = x_orig.to(device)
 
-    # ── Build epsilon map for linf mode ───────────────────────────────────────
-    use_region = (
-        norm == "linf"
-        and cfg.region_aware
-        and word_boxes is not None
-        and len(word_boxes) > 0
-    )
+    # ── Build projection tools ─────────────────────────────────────────────────
+    # L2 and Linf are handled completely separately.
+    # L2:   global scalar projection via _proj_l2 — eps_map is NEVER built
+    # Linf: per-pixel projection via eps_map from word_boxes
 
-    if use_region:
-        # Override epsilon_text if caller passed explicit epsilon
-        eps_text = epsilon if epsilon is not None else cfg.epsilon_text
-        eps_bg   = cfg.epsilon_bg
-        eps_map  = build_epsilon_map(
-            height=H, width=W,
-            word_boxes=word_boxes,
-            epsilon_text=eps_text,
-            epsilon_bg=eps_bg,
-            dilation=cfg.mask_dilation,
-            device=device,
+    if norm == "l2":
+        eps_display  = epsilon if epsilon is not None else cfg.epsilon
+        eps_map      = None        # not used for l2
+        use_region   = False
+
+    else:  # linf
+        use_region = (
+            cfg.region_aware
+            and word_boxes is not None
+            and len(word_boxes) > 0
         )
-        eps_display = eps_text   # for logging
-    else:
-        # Uniform fallback — used for l2 norm or when boxes unavailable
-        eps_uniform = epsilon if epsilon is not None else cfg.epsilon
-        eps_map = torch.full(
-            (1, H, W), eps_uniform,
-            dtype=torch.float32, device=device,
-        )
-        eps_display = eps_uniform
+        if use_region:
+            eps_display = epsilon if epsilon is not None else cfg.epsilon_text
+            eps_map = build_epsilon_map(
+                height=H, width=W,
+                word_boxes=word_boxes,
+                epsilon_text=eps_display,
+                epsilon_bg=cfg.epsilon_bg,
+                dilation=cfg.mask_dilation,
+                device=device,
+            )
+        else:
+            eps_display = epsilon if epsilon is not None else cfg.epsilon
+            eps_map = torch.full(
+                (1, H, W), eps_display,
+                dtype=torch.float32, device=device,
+            )
 
     # ── Clean baseline ─────────────────────────────────────────────────────────
     fm_clean = _measure_fm(x_orig_d, transcript, surrogates, cfg)
@@ -148,15 +122,16 @@ def run_probe(
             grad_sign = delta.grad.sign()
             delta_new = delta + cfg.pgd_step_size * grad_sign
 
+            # ── Projection — L2 and Linf are separate paths ────────────────────
             if norm == "l2":
-                # Global L2 projection
                 delta_new = _proj_l2(delta_new, eps_display)
             else:
-                # Per-pixel l-inf projection (region-aware)
                 delta_new = project_onto_region_ball(delta_new, eps_map)
 
+            # Keep x in [0, 1]
             delta_new = (x_orig_d + delta_new).clamp(0.0, 1.0) - x_orig_d
 
+        # ── Log step — completely isolated from PGD grad context ───────────────
         with torch.no_grad():
             fm_ce, fm_align = _measure_components(
                 (x_orig_d + delta_new).clamp(0.0, 1.0),
@@ -197,26 +172,33 @@ def _measure_fm(
     x: torch.Tensor, transcript: str,
     surrogates: list[SurrogateModel], cfg: AttackConfig,
 ) -> float:
-    x_g = x.detach().requires_grad_(True)
-    return compute_FM_ens(surrogates, x_g, transcript, cfg).item()
+    """Measure F_M^ens on clean image. Completely isolated from grad graph."""
+    with torch.no_grad():
+        return compute_FM_ens(
+            surrogates, x.detach().clone(), transcript, cfg
+        ).item()
 
 
 def _measure_components(
     x: torch.Tensor, transcript: str,
     surrogates: list[SurrogateModel], cfg: AttackConfig,
 ) -> tuple[float, float]:
+    """Per-component breakdown for logging. No grad, no side effects."""
     fm_ce = fm_align = 0.0
     alpha = 1.0 / len(surrogates)
-    for m in surrogates:
-        x_g = x.detach().requires_grad_(False)
-        if cfg.objective in (ObjectiveConfig.CE_ONLY, ObjectiveConfig.CE_AND_ALIGN):
-            try:
-                fm_ce += alpha * m.ce_loss(x_g, transcript).item()
-            except Exception:
-                pass
-        if cfg.objective in (ObjectiveConfig.ALIGN_ONLY, ObjectiveConfig.CE_AND_ALIGN):
-            try:
-                fm_align += alpha * m.align_loss(x_g, transcript).item()
-            except Exception:
-                pass
+
+    with torch.no_grad():
+        for m in surrogates:
+            x_d = x.detach().clone()
+            if cfg.objective in (ObjectiveConfig.CE_ONLY, ObjectiveConfig.CE_AND_ALIGN):
+                try:
+                    fm_ce += alpha * m.ce_loss(x_d, transcript).item()
+                except Exception:
+                    pass
+            if cfg.objective in (ObjectiveConfig.ALIGN_ONLY, ObjectiveConfig.CE_AND_ALIGN):
+                try:
+                    fm_align += alpha * m.align_loss(x_d, transcript).item()
+                except Exception:
+                    pass
+
     return fm_ce, fm_align

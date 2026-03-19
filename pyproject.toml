@@ -39,6 +39,7 @@ dependencies = [
     "scipy>=1.13.0",
     "scikit-image>=0.23.0",
     "rich>=13.7.0",
+    "qwen-vl-utils>=0.0.14",
 ]
 
 [project.optional-dependencies]

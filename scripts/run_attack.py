@@ -21,7 +21,9 @@ from rich.console import Console
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from vlm_suppress.attack.pgd import run_attack
-from vlm_suppress.config import ExperimentConfig
+from vlm_suppress.config import (
+    Domain, EnsembleWeighting, ExperimentConfig, ObjectiveConfig, ProxyStage
+)
 from vlm_suppress.data.dataset import TextImageDataset
 from vlm_suppress.eval.metrics import ModelMetrics, compute_transfer_ratio
 from vlm_suppress.eval.visualise import (
@@ -42,7 +44,7 @@ def _load_cfg(config: Path) -> ExperimentConfig:
         data_class=ExperimentConfig,
         data=raw,
         config=dacite.Config(
-            cast=[Path],
+            cast=[Path, Domain, ProxyStage, ObjectiveConfig, EnsembleWeighting],
             type_hooks={
                 Optional[tuple[int, int]]: lambda v: tuple(v) if v is not None else None,
             },

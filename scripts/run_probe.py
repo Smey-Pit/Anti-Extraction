@@ -26,7 +26,13 @@ from rich.table import Table
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from vlm_suppress.attack.probe import run_probe
-from vlm_suppress.config import ExperimentConfig
+from vlm_suppress.config import (
+    Domain,
+    EnsembleWeighting,
+    ExperimentConfig,
+    ObjectiveConfig,
+    ProxyStage,
+)
 from vlm_suppress.data.dataset import TextImageDataset
 from vlm_suppress.eval.metrics import ModelMetrics
 from vlm_suppress.eval.visualise import save_diff_heatmap
@@ -43,9 +49,8 @@ def _load_cfg(config: Path) -> ExperimentConfig:
         data_class=ExperimentConfig,
         data=raw,
         config=dacite.Config(
-            cast=[Path],
+            cast=[Path, Domain, ProxyStage, ObjectiveConfig, EnsembleWeighting],
             type_hooks={
-                # Handles image_size: [192, 768] → tuple, and null → None
                 Optional[tuple[int, int]]: lambda v: tuple(v) if v is not None else None,
             },
         ),
@@ -55,9 +60,15 @@ def _load_cfg(config: Path) -> ExperimentConfig:
 def _load_opt_surrogates(cfg: ExperimentConfig) -> list:
     from vlm_suppress.models.internvl import InternVL2
     from vlm_suppress.models.llava import LLaVA16
+    from vlm_suppress.models.qwen2vl import Qwen2VL
     from vlm_suppress.models.qwenvl import QwenVL
 
-    _REG = {"internvl2": InternVL2, "qwenvl": QwenVL, "llava16": LLaVA16}
+    _REG = {
+        "internvl2": InternVL2,
+        "qwenvl":    QwenVL,
+        "qwen2vl":   Qwen2VL,
+        "llava16":   LLaVA16,
+    }
     models = []
     for i, s in enumerate(cfg.surrogates):
         if i in cfg.held_out_indices:
