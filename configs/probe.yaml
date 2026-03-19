@@ -1,0 +1,68 @@
+run_id: probe_001
+phase: probe
+seed: 42
+
+data:
+  data_dir: data/synthetic
+  domain: synthetic
+  n_images: 10
+  image_size: [192, 768]      # [H, W] matches your img_height x img_width
+  split_filter: "debug"
+  category_filter: null
+  contrast_filter: null
+
+attack:
+  pgd_steps: 300
+  pgd_step_size: 0.00392156   # 1/255
+
+  # Unused by probe but required by dacite
+  mu_init: 0.1
+  mu_growth: 1.05
+  kappa: 9999.0
+
+  # Start ce_only for clearest signal; switch to ce_and_align once passing
+  lambda_ce: 1.0
+  lambda_align: 0.5
+  objective: ce_only
+
+  # Proxy weights — not used by probe
+  beta_edge: 1.0
+  beta_stroke: 1.0
+  beta_shape: 1.0
+  beta_conf: 0.0
+  proxy_stage: stage1
+  ensemble_weighting: uniform
+
+  # ── Region-aware perturbation ──────────────────────────────────────────
+  # Text pixels get a tight budget (preserves legibility).
+  # Background pixels get a loose budget (maximises attack signal).
+  # Set region_aware: false for the uniform baseline ablation.
+  region_aware:  true
+  epsilon_text:  0.01568627   # 4/255  — tight, text region
+  epsilon_bg:    0.06274510   # 16/255 — loose, background
+  mask_dilation: 3            # dilate text mask to cover antialiasing fringe
+  epsilon:       0.01568627   # fallback when region_aware: false
+
+epsilon_sweep:
+  - 0.00784314    # 2/255
+  - 0.01568627    # 4/255
+  - 0.03137255    # 8/255
+
+kappa_sweep:
+  - 9999.0
+
+surrogates:
+  - name: internvl2
+    model_id: OpenGVLab/InternVL2-8B
+    dtype: bfloat16
+    device_map: auto
+    max_new_tokens: 256
+    alpha: 1.0
+
+held_out_indices: []
+
+log:
+  output_dir: outputs
+  save_images: true
+  save_trajectories: true
+  save_visual_diffs: true
