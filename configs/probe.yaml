@@ -2,6 +2,8 @@ run_id: probe_001
 phase: probe
 seed: 42
 
+cer_clean_threshold: 0.05
+
 data:
   data_dir: data/synthetic
   domain: synthetic
@@ -12,8 +14,8 @@ data:
   contrast_filter: null
 
 attack:
-  pgd_steps: 5
-  pgd_step_size: 0.00392156
+  pgd_steps: 100
+  pgd_step_size: 0.00078431   # 0.2/255 — fine-grained exploration of epsilon ball
 
   # Unused by probe but required by dacite
   mu_init: 0.1
@@ -34,42 +36,25 @@ attack:
   ensemble_weighting: uniform
 
   # ── Region-aware perturbation ──────────────────────────────────────────
-  # Text pixels get a tight budget (preserves legibility).
-  # Background pixels get a loose budget (maximises attack signal).
-  # Set region_aware: false for the uniform baseline ablation.
   region_aware:  true
   epsilon_text:  0.01568627   # 4/255  — tight, text region
   epsilon_bg:    0.06274510   # 16/255 — loose, background
-  mask_dilation: 3            # dilate text mask to cover antialiasing fringe
+  mask_dilation: 3
   epsilon:       0.01568627   # fallback when region_aware: false
 
-# epsilon_sweep:
-#   - 0.00784314    # 2/255
-#   - 0.01568627    # 4/255
-#   - 0.03137255    # 8/255
-
-#local testing for epsilon_sweep
 epsilon_sweep:
-  - 0.01568627    # 4/255
+  - 0.01568627   # 4/255
+  - 0.03137255   # 8/255
 
 kappa_sweep:
   - 9999.0
 
-# surrogates:
-#   - name: internvl2
-#     model_id: OpenGVLab/InternVL2-8B
-#     dtype: bfloat16
-#     device_map: auto
-#     max_new_tokens: 256
-#     alpha: 1.0
-
-#this is a smaller model to test locally
 surrogates:
-  - name: qwen2vl
-    model_id: Qwen/Qwen2-VL-2B-Instruct
-    dtype: float32
-    device_map: cpu
-    max_new_tokens: 64
+  - name: internvl2
+    model_id: OpenGVLab/InternVL2-8B
+    dtype: bfloat16
+    device_map: auto
+    max_new_tokens: 256
     alpha: 1.0
 
 held_out_indices: []

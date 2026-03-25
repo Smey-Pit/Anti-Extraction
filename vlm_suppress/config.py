@@ -149,6 +149,8 @@ class ExperimentConfig:
     ])
 
     held_out_indices: list[int] = field(default_factory=list)
+    
+    cer_clean_threshold: float = 0.05
 
     frontier: Optional[FrontierConfig] = None
 

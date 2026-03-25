@@ -6,11 +6,11 @@ readme = "README.md"
 authors = [
     { email = "xxx@unimelb.edu.au" }
 ]
-requires-python = ">=3.12.12"
+requires-python = ">=3.11"
 dependencies = [
     # Core
-    "torch>=2.3.0",
-    "torchvision>=0.18.0",
+    "torch==2.6.0",
+    "torchvision==0.21.0",
     "numpy>=1.26.0",
     "pillow>=10.3.0",
     "opencv-python>=4.9.0",
@@ -23,7 +23,7 @@ dependencies = [
     "jiwer>=3.0.4",
     "lpips>=0.1.4",
     # Surrogate model dependencies
-    "transformers>=4.42.0",
+    "transformers==4.42.0",
     "accelerate>=0.30.0",
     "sentencepiece>=0.2.0",
     "einops>=0.8.0",
@@ -40,6 +40,7 @@ dependencies = [
     "scikit-image>=0.23.0",
     "rich>=13.7.0",
     "qwen-vl-utils>=0.0.14",
+    "markupsafe>=2.0,<3.0",
 ]
 
 [project.optional-dependencies]
@@ -54,9 +55,15 @@ dev = [
 requires = ["uv_build>=0.10.11,<0.11.0"]
 build-backend = "uv_build"
 
+[[tool.uv.index]]
+url = "https://download.pytorch.org/whl/cu124"
+
 [tool.uv]
 # Tells uv to treat the local vlm_suppress package as editable
 package = true
+
+[[tool.uv.index]]
+url = "https://pypi.org/simple"
 
 [tool.ruff]
 line-length = 100

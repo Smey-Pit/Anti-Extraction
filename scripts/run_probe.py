@@ -158,6 +158,7 @@ def main(
         table.add_column("Pass?",      justify="center")
 
         n_pass  = 0
+        n_skip  = 0
         n_total = 0
         epsilons = cfg.epsilon_sweep or [cfg.attack.epsilon]
 
@@ -185,6 +186,7 @@ def main(
                     norm=norm,
                     epsilon=eps,
                     pgd_steps=steps,
+                    word_boxes=sample.scaled_word_boxes(),
                 )
 
                 # ── Adversarial transcriptions ─────────────────────────────
@@ -205,6 +207,23 @@ def main(
                     for m in surrogates
                 ]
                 pm = all_mets[0]   # primary model (first surrogate)
+                # ── Dirty baseline filter ──────────────────────────────────
+                dirty_baseline = pm.cer_clean > cfg.cer_clean_threshold
+                if dirty_baseline:
+                    console.log(
+                        f"  [skip] {sample.image_id} eps={eps:.5f} — "
+                        f"CER_clean={pm.cer_clean:.4f} > threshold "
+                        f"{cfg.cer_clean_threshold} (dirty baseline)"
+                    )
+                    n_skip += 1
+                    # Still log to results.jsonl for record-keeping,
+                    # but mark as excluded so it's easy to filter later.
+                    logger.log_result({
+                        **_build_result_record(sample, pm, result, norm, eps, cfg),
+                        "excluded_dirty_baseline": True,
+                    })
+                    continue   # skip table row and pass/fail count
+
                 passed = result.passed and pm.cer_delta > 0
                 if passed:
                     n_pass += 1
@@ -288,7 +307,9 @@ def main(
         rate  = n_pass / max(n_total, 1)
         color = "green" if rate >= 0.7 else "red"
         console.print(
-            f"[bold {color}]Pass rate: {n_pass}/{n_total} ({rate*100:.0f}%)[/bold {color}]"
+            f"[bold {color}]Pass rate: {n_pass}/{n_total} "
+            f"({rate*100:.0f}%)  |  skipped (dirty baseline): {n_skip}"
+            f"[/bold {color}]"
         )
         if rate >= 0.7:
             console.print(

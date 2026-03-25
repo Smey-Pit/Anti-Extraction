@@ -133,13 +133,12 @@ def run_probe(
 
         # ── Log step — completely isolated from PGD grad context ───────────────
         with torch.no_grad():
-            fm_ce, fm_align = _measure_components(
-                (x_orig_d + delta_new).clamp(0.0, 1.0),
-                transcript, surrogates, cfg,
-            )
+            x_new = (x_orig_d + delta_new).clamp(0.0, 1.0)
+            fm_new = compute_FM_ens(surrogates, x_new, transcript, cfg)
+            fm_ce, fm_align = _measure_components(x_new, transcript, surrogates, cfg)
             trajectory.append(ProbeStepLog(
                 step=step,
-                fm_ens=fm.item(),
+                fm_ens=fm_new.item(),   # ← consistent: all from delta_new
                 fm_ce=fm_ce,
                 fm_align=fm_align,
                 delta_norm_l2=delta_new.norm(p=2).item(),

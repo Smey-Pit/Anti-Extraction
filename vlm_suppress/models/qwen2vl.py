@@ -49,7 +49,6 @@ class Qwen2VL(SurrogateModel):
         self._dtype  = torch_dtype if torch_dtype else (
             torch.bfloat16 if has_cuda else torch.float32
         )
-        device_map = cfg.device_map if has_cuda else "cpu"
 
         self.processor = AutoProcessor.from_pretrained(
             cfg.model_id, trust_remote_code=True
@@ -57,9 +56,8 @@ class Qwen2VL(SurrogateModel):
         self.model = Qwen2VLForConditionalGeneration.from_pretrained(
             cfg.model_id,
             torch_dtype=self._dtype,
-            device_map=device_map,
             trust_remote_code=True,
-        ).eval()
+        ).to(self._device).eval()
 
         self._max_new_tokens = cfg.max_new_tokens
         self._prompt = (
