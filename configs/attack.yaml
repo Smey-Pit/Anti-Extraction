@@ -1,0 +1,61 @@
+run_id: attack_003
+phase: attack
+seed: 42
+
+data:
+  data_dir: data/synthetic
+  domain: synthetic
+  n_images: 10
+  image_size: [192, 768]
+  split_filter: "debug"
+  category_filter: null
+  contrast_filter: null
+
+attack:
+  pgd_steps: 200
+  pgd_step_size: 0.00039216    # 2.5 * (8/255) / 200  — Madry convention at max epsilon
+
+  mu_init: 0.1
+  mu_growth: 1.05
+  kappa: 9999.0                # overridden by kappa_sweep below
+
+  lambda_ce: 1.0
+  lambda_align: 0.5
+  objective: ce_and_align           # switch to ce_and_align once stage1 is passing
+
+  beta_edge: 1.0
+  beta_stroke: 1.0
+  beta_shape: 1.0
+  beta_conf: 0.0
+  proxy_stage: stage2          # edge + stroke only; add shape in stage2
+
+  region_aware: true
+  epsilon_text: 0.01568627     # 4/255
+  epsilon_bg:   0.06274510     # 16/255
+  mask_dilation: 3
+  epsilon: 0.01568627          # fallback if region_aware: false
+
+epsilon_sweep:
+  - 0.01568627                 # 4/255
+  - 0.03137255                 # 8/255
+
+kappa_sweep:
+  - 0.03                       # tight
+  - 0.05                       # mid
+  - 0.07                       # loose
+
+surrogates:
+  - name: internvl2
+    model_id: OpenGVLab/InternVL2-8B
+    dtype: bfloat16
+    device_map: auto
+    max_new_tokens: 256
+    alpha: 1.0
+
+held_out_indices: []
+
+log:
+  output_dir: outputs
+  save_images: true
+  save_trajectories: true
+  save_visual_diffs: true

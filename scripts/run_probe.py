@@ -5,8 +5,9 @@ Purpose: verify F_M^ens is a real optimisable signal BEFORE introducing
 the readability constraint. This is the first test to run.
 
 Usage:
-    python scripts/run_probe.py --config configs/probe.yaml --norm l2
     python scripts/run_probe.py --config configs/probe.yaml --norm linf
+    python scripts/run_probe.py --config configs/probe.yaml --norm l2
+    python scripts/run_probe.py --config configs/probe.yaml --norm linf --steps 100
 """
 
 from __future__ import annotations
@@ -42,6 +43,8 @@ console = Console()
 app = typer.Typer()
 
 
+# ── Config loading ─────────────────────────────────────────────────────────────
+
 def _load_cfg(config: Path) -> ExperimentConfig:
     with config.open() as f:
         raw = yaml.safe_load(f)
@@ -57,11 +60,13 @@ def _load_cfg(config: Path) -> ExperimentConfig:
     )
 
 
-def _load_opt_surrogates(cfg: ExperimentConfig) -> list:
+# ── Surrogate loading ──────────────────────────────────────────────────────────
+
+def _load_surrogates(cfg: ExperimentConfig) -> list:
     from vlm_suppress.models.internvl import InternVL2
-    from vlm_suppress.models.llava import LLaVA16
     from vlm_suppress.models.qwen2vl import Qwen2VL
     from vlm_suppress.models.qwenvl import QwenVL
+    from vlm_suppress.models.llava import LLaVA16
 
     _REG = {
         "internvl2": InternVL2,
@@ -75,13 +80,15 @@ def _load_opt_surrogates(cfg: ExperimentConfig) -> list:
             continue
         cls = _REG.get(s.name)
         if cls is None:
-            raise ValueError(f"Unknown surrogate: {s.name}")
+            raise ValueError(f"Unknown surrogate: {s.name!r}")
         console.log(f"Loading {s.name} ({s.model_id}) ...")
         models.append(cls(s))
     return models
 
 
-def _save_probe_trajectory(trajectory: list, out_path: Path) -> None:
+# ── Trajectory plot ────────────────────────────────────────────────────────────
+
+def _save_trajectory_plot(trajectory: list, out_path: Path) -> None:
     import matplotlib
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
@@ -105,11 +112,53 @@ def _save_probe_trajectory(trajectory: list, out_path: Path) -> None:
     plt.close(fig)
 
 
+# ── Result record ──────────────────────────────────────────────────────────────
+
+def _result_record(
+    sample,
+    pm: ModelMetrics,
+    result,
+    norm: str,
+    eps: float,
+    cfg: ExperimentConfig,
+    *,
+    passed: bool,
+    excluded_dirty_baseline: bool = False,
+) -> dict:
+    return {
+        "image_id":                sample.image_id,
+        "model_name":              pm.model_name,
+        "norm":                    norm,
+        "epsilon":                 eps,
+        "objective_config":        cfg.attack.objective.value,
+        "probe_mode":              True,
+        "fm_clean":                result.fm_clean,
+        "fm_final":                result.fm_final,
+        "fm_delta":                result.fm_delta,
+        "cer_clean":               pm.cer_clean,
+        "cer_adv":                 pm.cer_adv,
+        "cer_delta":               pm.cer_delta,
+        "wer_clean":               pm.wer_clean,
+        "wer_adv":                 pm.wer_adv,
+        "wer_delta":               pm.wer_delta,
+        "exact_clean":             pm.exact_clean,
+        "exact_adv":               pm.exact_adv,
+        "passed":                  passed,
+        "transcript_ref":          sample.transcript,
+        "transcript_clean":        pm.transcript_clean,
+        "transcript_adv":          pm.transcript_adv,
+        "excluded_dirty_baseline": excluded_dirty_baseline,
+        **sample.metadata_dict(),
+    }
+
+
+# ── Main ───────────────────────────────────────────────────────────────────────
+
 @app.command()
 def main(
-    config: Path = typer.Option(...,   help="Path to YAML config"),
-    norm:   str  = typer.Option("l2",  help="Norm constraint: 'l2' or 'linf'"),
-    steps:  Optional[int] = typer.Option(None, help="Override PGD steps"),
+    config: Path          = typer.Option(...,  help="Path to YAML config"),
+    norm:   str           = typer.Option("linf", help="Norm: 'linf' or 'l2'"),
+    steps:  Optional[int] = typer.Option(None, help="Override pgd_steps from config"),
 ) -> None:
     from dotenv import load_dotenv
     load_dotenv()
@@ -119,11 +168,11 @@ def main(
 
     console.rule(f"[bold yellow]PROBE RUN — unconstrained {norm.upper()} attack")
     console.log("Purpose: verify F_M^ens is optimisable BEFORE readability constraint.")
-    console.log(f"Run ID:  {cfg.run_id}")
+    console.log(f"Run ID : {cfg.run_id}")
 
     with RunLogger(cfg) as logger:
 
-        # ── Load dataset ───────────────────────────────────────────────────
+        # ── Dataset ────────────────────────────────────────────────────────
         dataset = TextImageDataset(
             cfg.data.data_dir,
             image_size=cfg.data.image_size,
@@ -138,28 +187,26 @@ def main(
             console.print("[red]No samples loaded — check data_dir and split_filter.[/red]")
             raise SystemExit(1)
 
-        # ── Load surrogates ────────────────────────────────────────────────
-        surrogates = _load_opt_surrogates(cfg)
+        # ── Surrogates ─────────────────────────────────────────────────────
+        surrogates = _load_surrogates(cfg)
 
         # ── Results table ──────────────────────────────────────────────────
-        table = Table(
-            title=f"Probe Results — {norm.upper()} norm",
-            show_lines=True,
-        )
-        table.add_column("Image ID",   style="cyan", no_wrap=True)
-        table.add_column("Category",   style="white")
-        table.add_column("Contrast",   style="white")
-        table.add_column("F_M clean",  justify="right")
-        table.add_column("F_M final",  justify="right")
-        table.add_column("ΔF_M",       justify="right")
-        table.add_column("CER clean",  justify="right")
-        table.add_column("CER adv",    justify="right")
-        table.add_column("ΔCER",       justify="right")
-        table.add_column("Pass?",      justify="center")
+        table = Table(title=f"Probe Results — {norm.upper()} norm", show_lines=True)
+        for col, kw in [
+            ("Image ID",  dict(style="cyan", no_wrap=True)),
+            ("Category",  dict(style="white")),
+            ("Contrast",  dict(style="white")),
+            ("F_M clean", dict(justify="right")),
+            ("F_M final", dict(justify="right")),
+            ("ΔF_M",      dict(justify="right")),
+            ("CER clean", dict(justify="right")),
+            ("CER adv",   dict(justify="right")),
+            ("ΔCER",      dict(justify="right")),
+            ("Pass?",     dict(justify="center")),
+        ]:
+            table.add_column(col, **kw)
 
-        n_pass  = 0
-        n_skip  = 0
-        n_total = 0
+        n_pass = n_skip = n_total = 0
         epsilons = cfg.epsilon_sweep or [cfg.attack.epsilon]
 
         for sample in dataset:
@@ -176,7 +223,7 @@ def main(
                     with torch.no_grad():
                         clean_preds[m.name] = m.transcribe(sample.image_tensor)
 
-                # ── Run probe (no constraint) ──────────────────────────────
+                # ── Run probe ─────────────────────────────────────────────
                 result = run_probe(
                     image_id=sample.image_id,
                     x_orig=sample.image_tensor,
@@ -206,111 +253,83 @@ def main(
                     )
                     for m in surrogates
                 ]
-                pm = all_mets[0]   # primary model (first surrogate)
-                # ── Dirty baseline filter ──────────────────────────────────
-                dirty_baseline = pm.cer_clean > cfg.cer_clean_threshold
-                if dirty_baseline:
+                pm = all_mets[0]  # primary surrogate
+
+                # ── Dirty-baseline filter ──────────────────────────────────
+                if pm.cer_clean > cfg.cer_clean_threshold:
                     console.log(
                         f"  [skip] {sample.image_id} eps={eps:.5f} — "
                         f"CER_clean={pm.cer_clean:.4f} > threshold "
                         f"{cfg.cer_clean_threshold} (dirty baseline)"
                     )
                     n_skip += 1
-                    # Still log to results.jsonl for record-keeping,
-                    # but mark as excluded so it's easy to filter later.
-                    logger.log_result({
-                        **_build_result_record(sample, pm, result, norm, eps, cfg),
-                        "excluded_dirty_baseline": True,
-                    })
-                    continue   # skip table row and pass/fail count
+                    logger.log_result(
+                        _result_record(sample, pm, result, norm, eps, cfg,
+                                       passed=False, excluded_dirty_baseline=True)
+                    )
+                    continue
 
+                # ── Pass / fail ────────────────────────────────────────────
                 passed = result.passed and pm.cer_delta > 0
                 if passed:
                     n_pass += 1
 
                 # ── Table row ──────────────────────────────────────────────
-                fm_delta_str  = (
-                    f"[green]+{result.fm_delta:.4f}[/green]"
-                    if result.fm_delta > 0
-                    else f"[red]{result.fm_delta:.4f}[/red]"
-                )
-                cer_delta_str = (
-                    f"[green]+{pm.cer_delta:.4f}[/green]"
-                    if pm.cer_delta > 0
-                    else f"[red]{pm.cer_delta:.4f}[/red]"
-                )
-                pass_str = (
-                    "[green]✓ PASS[/green]" if passed
-                    else "[red]✗ FAIL[/red]"
-                )
+                def _signed(val: float, fmt: str = ".4f") -> str:
+                    s = f"{val:{fmt}}"
+                    return f"[green]+{s}[/green]" if val > 0 else f"[red]{s}[/red]"
+
                 table.add_row(
                     sample.image_id,
                     sample.text_category,
                     sample.contrast_level,
                     f"{result.fm_clean:.4f}",
                     f"{result.fm_final:.4f}",
-                    fm_delta_str,
+                    _signed(result.fm_delta),
                     f"{pm.cer_clean:.4f}",
                     f"{pm.cer_adv:.4f}",
-                    cer_delta_str,
-                    pass_str,
+                    _signed(pm.cer_delta),
+                    "[green]✓ PASS[/green]" if passed else "[red]✗ FAIL[/red]",
                 )
 
                 # ── JSON log ───────────────────────────────────────────────
-                logger.log_result({
-                    "image_id":         sample.image_id,
-                    "model_name":       pm.model_name,
-                    "norm":             norm,
-                    "epsilon":          eps,
-                    "objective_config": cfg.attack.objective.value,
-                    "probe_mode":       True,
-                    "fm_clean":         result.fm_clean,
-                    "fm_final":         result.fm_final,
-                    "fm_delta":         result.fm_delta,
-                    "cer_clean":        pm.cer_clean,
-                    "cer_adv":          pm.cer_adv,
-                    "cer_delta":        pm.cer_delta,
-                    "wer_clean":        pm.wer_clean,
-                    "wer_adv":          pm.wer_adv,
-                    "wer_delta":        pm.wer_delta,
-                    "exact_clean":      pm.exact_clean,
-                    "exact_adv":        pm.exact_adv,
-                    "passed":           passed,
-                    "transcript_ref":   sample.transcript,
-                    "transcript_clean": pm.transcript_clean,
-                    "transcript_adv":   pm.transcript_adv,
-                    **sample.metadata_dict(),
-                })
+                logger.log_result(
+                    _result_record(sample, pm, result, norm, eps, cfg, passed=passed)
+                )
 
-                # ── Trajectory log ─────────────────────────────────────────
+                # ── Trajectory ─────────────────────────────────────────────
                 if cfg.log.save_trajectories:
                     logger.log_trajectory(
                         sample.image_id, eps, kappa=0.0,
-                        trajectory=result.trajectory,   # type: ignore[arg-type]
+                        trajectory=result.trajectory,  # type: ignore[arg-type]
                     )
 
-                # ── Visual outputs ─────────────────────────────────────────
+                # ── Visuals ────────────────────────────────────────────────
                 if cfg.log.save_images:
                     stem = f"{sample.image_id}_{norm}_eps{eps:.5f}"
                     save_diff_heatmap(
                         sample.image_tensor, result.x_adv,
                         logger.image_path(f"{stem}_heatmap.png"),
                     )
-                    _save_probe_trajectory(
+                    _save_trajectory_plot(
                         result.trajectory,
                         logger.image_path(f"{stem}_trajectory.png"),
                     )
 
-        # ── Final summary ──────────────────────────────────────────────────
+        # ── Summary ────────────────────────────────────────────────────────
         console.print(table)
         console.rule()
-        rate  = n_pass / max(n_total, 1)
+
+        eligible = n_total - n_skip
+        rate = n_pass / max(eligible, 1)
         color = "green" if rate >= 0.7 else "red"
         console.print(
-            f"[bold {color}]Pass rate: {n_pass}/{n_total} "
-            f"({rate*100:.0f}%)  |  skipped (dirty baseline): {n_skip}"
+            f"[bold {color}]"
+            f"Pass rate: {n_pass}/{eligible} eligible ({rate*100:.0f}%)  |  "
+            f"skipped (dirty baseline): {n_skip}/{n_total} total"
             f"[/bold {color}]"
         )
+
         if rate >= 0.7:
             console.print(
                 "[green]✓ Objective signal confirmed. "
@@ -327,7 +346,10 @@ def main(
                 "  3. ΔF_M < 0       → sign error in ce_loss or align_loss\n"
                 "  4. ΔCER ≈ 0 but ΔF_M > 0 → loss moves but inference unaffected\n"
                 "     → check transcribe() uses same preprocessing as ce_loss()\n"
-                "  5. Try --norm linf and --steps 50 for a faster signal check[/yellow]"
+                "  5. CER_adv > 1.0  → hallucination, not suppression\n"
+                "     → inspect transcript_adv in results.jsonl\n"
+                "  6. Try --norm linf and --steps 50 for a faster signal check"
+                "[/yellow]"
             )
 
     console.rule("[bold]Probe complete")
