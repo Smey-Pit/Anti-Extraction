@@ -9,3 +9,6 @@ uv run python scripts/run_probe.py \
   --config configs/probe.yaml \
   --norm linf \
   --steps 50
+
+#running attack
+uv run python scripts/run_attack.py --config configs/attack.yaml
