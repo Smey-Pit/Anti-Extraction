@@ -23,6 +23,9 @@ build/
 # All run artefacts — results, images, trajectories
 outputs/
 logs/
+errlogs/
+outlogs/
+slurm/
 
 # ── Model weights ─────────────────────────────────────────────────────────────
 # HuggingFace cache — weights are large and re-downloadable

@@ -53,11 +53,17 @@ def _load_cfg(config: Path) -> ExperimentConfig:
 
 
 def _load_surrogates(cfg: ExperimentConfig, held_out: bool = False) -> list:
-    from vlm_suppress.models.internvl import InternVL2
+    from vlm_suppress.models.internvl2 import InternVL2
+    from vlm_suppress.models.internvl3_5 import InternVL35
     from vlm_suppress.models.llava import LLaVA16
     from vlm_suppress.models.qwenvl import QwenVL
+    from vlm_suppress.models.paligemma2 import PaliGemma2
 
-    _REG = {"internvl2": InternVL2, "qwenvl": QwenVL, "llava16": LLaVA16}
+    _REG = {"internvl3_5":InternVL35, 
+            "internvl2": InternVL2, 
+            "paligemma2": PaliGemma2,
+            "qwenvl": QwenVL, 
+            "llava16": LLaVA16}
     models = []
     for i, s_cfg in enumerate(cfg.surrogates):
         is_held_out = i in cfg.held_out_indices

@@ -1,33 +1,33 @@
-run_id: attack_003
+run_id: attack_new_ensemble_k2_2
 phase: attack
 seed: 42
 
 data:
   data_dir: data/synthetic
   domain: synthetic
-  n_images: 10
+  n_images: 50
   image_size: [192, 768]
   split_filter: "debug"
   category_filter: null
   contrast_filter: null
 
 attack:
-  pgd_steps: 200
+  pgd_steps: 250
   pgd_step_size: 0.00039216    # 2.5 * (8/255) / 200  — Madry convention at max epsilon
 
   mu_init: 0.1
   mu_growth: 1.05
-  kappa: 9999.0                # overridden by kappa_sweep below
+  kappa: 9999.0                # overridden by kappa_sweep
 
   lambda_ce: 1.0
   lambda_align: 0.5
-  objective: ce_and_align           # switch to ce_and_align once stage1 is passing
+  objective: ce_and_align
 
   beta_edge: 1.0
   beta_stroke: 1.0
   beta_shape: 1.0
   beta_conf: 0.0
-  proxy_stage: stage2          # edge + stroke only; add shape in stage2
+  proxy_stage: stage2
 
   region_aware: true
   epsilon_text: 0.01568627     # 4/255
@@ -35,24 +35,33 @@ attack:
   mask_dilation: 3
   epsilon: 0.01568627          # fallback if region_aware: false
 
+  ensemble_weighting: uniform
+
 epsilon_sweep:
   - 0.01568627                 # 4/255
   - 0.03137255                 # 8/255
+  - 0.06274509                 # 16/255
 
 kappa_sweep:
-  - 0.03                       # tight
-  - 0.05                       # mid
-  - 0.07                       # loose
+  - 0.03
+  - 0.05
+  - 0.07
 
 surrogates:
-  - name: internvl2
-    model_id: OpenGVLab/InternVL2-8B
+  - name: internvl3_5
+    model_id: OpenGVLab/InternVL3_5-8B
     dtype: bfloat16
-    device_map: auto
     max_new_tokens: 256
     alpha: 1.0
+  
+  - name: paligemma2
+    model_id: google/paligemma2-3b-mix-448
+    dtype: bfloat16
+    max_new_tokens: 256
+    alpha: 1.0
+  
 
-held_out_indices: []
+held_out_indices: []           # both surrogates in optimisation ensemble
 
 log:
   output_dir: outputs
