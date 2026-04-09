@@ -52,6 +52,7 @@ class SurrogateConfig:
     device_map:     str = "auto"
     max_new_tokens: int = 256
     alpha:          float = 1.0
+    device:         str = ''
 
 
 @dataclass

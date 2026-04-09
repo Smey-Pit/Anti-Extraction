@@ -46,8 +46,14 @@ class PaliGemma2(SurrogateModel):
 
     def __init__(self, cfg) -> None:
         self.name         = cfg.name
-        self._device      = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-        self._dtype       = torch.bfloat16 if self._device.type == "cuda" else torch.float32
+        _dev = getattr(cfg, "device", None)
+        if _dev:
+            self._device = torch.device(_dev)
+        else:
+            self._device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+        
+        
+        self._dtype      = torch.bfloat16 if self._device.type == "cuda" else torch.float32
         self._max_new_tokens = cfg.max_new_tokens
 
         self.processor = AutoProcessor.from_pretrained(cfg.model_id)

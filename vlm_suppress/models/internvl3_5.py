@@ -66,9 +66,13 @@ class InternVL35(SurrogateModel):
 
     def __init__(self, cfg) -> None:
         self.name = cfg.name
+        _dev = getattr(cfg, "device", None)
+        if _dev:
+            self._device = torch.device(_dev)
+        else:
+            self._device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+        
         self._dtype = torch.bfloat16
-        self._device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-
         self.tokenizer = AutoTokenizer.from_pretrained(
             cfg.model_id,
             trust_remote_code=True,

@@ -27,7 +27,7 @@ from vlm_suppress.config import (
 from vlm_suppress.data.dataset import TextImageDataset
 from vlm_suppress.eval.metrics import ModelMetrics, compute_transfer_ratio
 from vlm_suppress.eval.visualise import (
-    save_comparison_strip,
+    # save_comparison_strip,
     save_diff_heatmap,
     save_trajectory_plot,
 )
@@ -52,28 +52,73 @@ def _load_cfg(config: Path) -> ExperimentConfig:
     )
 
 
+def _assign_devices(n_models: int) -> list[torch.device]:
+    """
+    Distribute n_models across available CUDA GPUs as evenly as possible.
+
+    Examples:
+        3 models, 3 GPUs  → [cuda:0, cuda:1, cuda:2]
+        3 models, 2 GPUs  → [cuda:0, cuda:0, cuda:1]   (2 on GPU0, 1 on GPU1)
+        3 models, 1 GPU   → [cuda:0, cuda:0, cuda:0]
+        3 models, 0 GPUs  → [cpu,    cpu,    cpu   ]
+    """
+    n_gpus = torch.cuda.device_count()
+    if n_gpus == 0:
+        return [torch.device("cpu")] * n_models
+
+    # Round-robin assignment — fills GPUs 0,1,2,0,1,2,...
+    # For 3 models on 2 GPUs this gives [0,1,0], which puts 2 on GPU0.
+    # If you'd rather pack GPU0 first, replace with: gpu_idx = i % n_gpus → i // ceil(n/n_gpus)
+    assignments = [torch.device(f"cuda:{i % n_gpus}") for i in range(n_models)]
+
+    # Log the plan
+    summary = ", ".join(f"{d}" for d in assignments)
+    console.log(f"GPU assignment ({n_models} models, {n_gpus} GPUs): [{summary}]")
+    return assignments
+
+
 def _load_surrogates(cfg: ExperimentConfig, held_out: bool = False) -> list:
     from vlm_suppress.models.internvl2 import InternVL2
     from vlm_suppress.models.internvl3_5 import InternVL35
     from vlm_suppress.models.llava import LLaVA16
     from vlm_suppress.models.qwenvl import QwenVL
     from vlm_suppress.models.paligemma2 import PaliGemma2
+    from vlm_suppress.models.llama3_2 import LlamaVision
 
-    _REG = {"internvl3_5":InternVL35, 
-            "internvl2": InternVL2, 
-            "paligemma2": PaliGemma2,
-            "qwenvl": QwenVL, 
-            "llava16": LLaVA16}
+    _REG = {
+        "internvl3_5": InternVL35,
+        "internvl2":   InternVL2,
+        "paligemma2":  PaliGemma2,
+        "llama3_2":    LlamaVision,
+        "qwenvl":      QwenVL,
+        "llava16":     LLaVA16,
+    }
+
+    # Collect the surrogates that belong to this split (opt vs held-out)
+    selected = [
+        (i, s_cfg)
+        for i, s_cfg in enumerate(cfg.surrogates)
+        if (i in cfg.held_out_indices) == held_out
+    ]
+
+    devices = _assign_devices(len(selected))
+
     models = []
-    for i, s_cfg in enumerate(cfg.surrogates):
-        is_held_out = i in cfg.held_out_indices
-        if held_out != is_held_out:
-            continue
+    for (i, s_cfg), device in zip(selected, devices):
         cls = _REG.get(s_cfg.name)
         if cls is None:
             raise ValueError(f"Unknown surrogate: {s_cfg.name}")
-        console.log(f"Loading {'[held-out] ' if is_held_out else ''}{s_cfg.name} ...")
+
+        # Stamp the assigned device onto the config object so the wrapper
+        # reads it. SurrogateConfig is a dataclass — set the field directly.
+        s_cfg.device = str(device)
+
+        console.log(
+            f"Loading {'[held-out] ' if held_out else ''}"
+            f"{s_cfg.name} → {device} ..."
+        )
         models.append(cls(s_cfg))
+
     return models
 
 
@@ -176,6 +221,21 @@ def _run_single_config(
 
         if cfg.log.save_images:
             stem = f"{sample.image_id}_eps{epsilon:.5f}_kappa{kappa:.4f}"
+            # Save adversarial image as a plain PNG
+            adv_np = (
+                result.x_adv                     # (3, H, W) float32 [0,1]
+                .permute(1, 2, 0)                # (H, W, 3)
+                .mul(255)
+                .clamp(0, 255)
+                .byte()
+                .cpu()
+                .numpy()
+            )
+            from PIL import Image as _PILImage
+            _PILImage.fromarray(adv_np).save(
+                logger.image_path(f"{stem}_adv.png")
+            )
+
             if cfg.log.save_visual_diffs:
                 save_diff_heatmap(
                     sample.image_tensor, result.x_adv,
@@ -186,16 +246,16 @@ def _run_single_config(
                 logger.image_path(f"{stem}_trajectory.png"),
                 kappa=kappa,
             )
-            save_comparison_strip(
-                sample.image_tensor, result.x_adv,
-                image_id=sample.image_id,
-                transcript_ref=sample.transcript,
-                transcripts={
-                    m.model_name: (clean_preds[m.model_name], adv_preds[m.model_name])
-                    for m in all_metrics
-                },
-                out_path=logger.image_path(f"{stem}_strip.png"),
-            )
+            # save_comparison_strip(
+            #     sample.image_tensor, result.x_adv,
+            #     image_id=sample.image_id,
+            #     transcript_ref=sample.transcript,
+            #     transcripts={
+            #         m.model_name: (clean_preds[m.model_name], adv_preds[m.model_name])
+            #         for m in all_metrics
+            #     },
+            #     out_path=logger.image_path(f"{stem}_strip.png"),
+            # )
 
         # ── Terminal feedback ──────────────────────────────────────────────
         for mets in [m for m in all_metrics if m.model_name in opt_names]:
