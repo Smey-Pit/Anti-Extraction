@@ -44,7 +44,7 @@ import random
 import sys
 from dataclasses import dataclass, field
 
-CATEGORIES = ["banking", "medical", "news", "copyright"]
+CATEGORIES = ["banking", "medical", "news", "copyright", "legal", "identity", "communications"]
 
 
 # ---------------------------------------------------------------------------
@@ -160,6 +160,54 @@ def extract_full_text(category: str, item: dict) -> str:
             item.get("publisher",""),        item.get("copyright_line",""),
             item.get("chapter_or_scene",""), item.get("content",""),
         ]
+
+    elif category == "legal":
+        parts += [
+            item.get("title",""),
+            item.get("document_type",""),
+            item.get("jurisdiction",""),
+            item.get("date",""),
+            item.get("case_or_ref_number",""),
+        ]
+        for party in item.get("parties", []):
+            parts.append(f"{party.get('role','')} {party.get('name','')}")
+        for clause in item.get("clauses", []):
+            parts.append(
+                f"{clause.get('number','')} {clause.get('heading','')} {clause.get('text','')}"
+            )
+        for sig in item.get("signature_block", []):
+            parts.append(f"{sig.get('role','')} {sig.get('name','')} {sig.get('date_signed','')}")
+        parts.append(item.get("notary_note","") or "")
+
+    elif category == "identity":
+        parts += [
+            item.get("document_type",""),
+            item.get("issuing_authority",""),
+            item.get("surname",""),
+            item.get("given_names",""),
+            item.get("dob",""),
+            item.get("document_number",""),
+            item.get("nationality_or_state",""),
+            item.get("issue_date",""),
+            item.get("expiry_date",""),
+        ]
+        for k, v in item.get("additional_fields", {}).items():
+            if v:
+                parts.append(str(v))
+        parts += item.get("security_features", [])
+
+    elif category == "communications":
+        parts += [
+            item.get("comm_type",""),
+            item.get("platform",""),
+            item.get("subject","") or "",
+            item.get("timestamp",""),
+            item.get("thread_context",""),
+        ]
+        for p in item.get("participants", []):
+            parts.append(f"{p.get('role','')} {p.get('name','')}")
+        for msg in item.get("messages", []):
+            parts.append(f"{msg.get('sender','')} {msg.get('text','')}")
 
     return "\n".join(str(p).strip() for p in parts if str(p).strip())
 

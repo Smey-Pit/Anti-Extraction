@@ -36,7 +36,7 @@ from dataclasses import dataclass, field
 
 from backends import BackendConfig, build_backend
 
-CATEGORIES     = ["banking", "medical", "news", "copyright"]
+CATEGORIES     = ["banking", "medical", "news", "copyright", "legal", "identity", "communications"]
 LLM_BATCH_SIZE = 5
 DEFAULT_OUT    = "content_bank.json"
 
@@ -230,9 +230,9 @@ def parse_args() -> ContentGenConfig:
 
     cg = p.add_mutually_exclusive_group()
     cg.add_argument("--total", type=int, default=None,
-                    help="Total items split evenly across all 4 categories")
+                    help="Total items split evenly across all 7 categories")
     cg.add_argument("--per-category", nargs="+", metavar="CAT=N", default=None,
-                    help="e.g. --per-category banking=300 medical=300 news=200 copyright=200")
+                    help="e.g. --per-category banking=150 medical=150 legal=150 identity=150 communications=150 news=100 copyright=150")
 
     p.add_argument("--backend", type=str, default="anthropic",
                    choices=["anthropic", "qwen-local", "qwen-api"])
@@ -274,7 +274,7 @@ def parse_args() -> ContentGenConfig:
                 p.error(f"Unknown category '{cat}'. Choose from {CATEGORIES}")
             per_category[cat] = int(n)
     else:
-        per_category = {c: 250 for c in CATEGORIES}  # default: 1000 total
+        per_category = {c: 143 for c in CATEGORIES}   # ~1000 total across 7
 
     backend_cfg = BackendConfig(
         backend         = args.backend,

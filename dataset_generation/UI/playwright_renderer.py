@@ -570,14 +570,532 @@ body {{
 
 
 # ---------------------------------------------------------------------------
+# LEGAL TEMPLATE
+# ---------------------------------------------------------------------------
+
+def _html_legal(item: dict) -> str:
+    title      = _e(item.get("title", ""))
+    doc_type   = item.get("document_type", "contract")
+    jx         = _e(item.get("jurisdiction", ""))
+    date       = _e(item.get("date", ""))
+    ref        = _e(item.get("case_or_ref_number", ""))
+    notary     = _e(item.get("notary_note", "") or "")
+    url        = "ecourt.gov/filings/documents"
+
+    type_label = {
+        "contract":       "Contract",
+        "nda":            "Non-Disclosure Agreement",
+        "will":           "Last Will and Testament",
+        "eviction_notice":"Eviction Notice",
+        "court_filing":   "Court Filing",
+    }.get(doc_type, "Legal Document")
+
+    parties_html = ""
+    for party in item.get("parties", []):
+        parties_html += f"""
+        <div class="party-row">
+          <span class="party-role">{_e(party.get('role',''))}</span>
+          <span class="party-name">{_e(party.get('name',''))}</span>
+        </div>"""
+
+    clauses_html = ""
+    for clause in item.get("clauses", []):
+        clauses_html += f"""
+        <div class="clause">
+          <div class="clause-head">{_e(clause.get('number',''))} {_e(clause.get('heading',''))}</div>
+          <div class="clause-text">{_e(clause.get('text',''))}</div>
+        </div>"""
+
+    sigs_html = ""
+    for sig in item.get("signature_block", []):
+        signed = _e(sig.get("date_signed", "")) or "____________________"
+        sigs_html += f"""
+        <div class="sig-block">
+          <div class="sig-line">____________________________</div>
+          <div class="sig-role">{_e(sig.get('role',''))}</div>
+          <div class="sig-name">{_e(sig.get('name',''))}</div>
+          <div class="sig-date">Date: {signed}</div>
+        </div>"""
+
+    return f"""<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>{title}</title>
+<style>
+{_CHROME_CSS}
+* {{ box-sizing: border-box; margin: 0; padding: 0; }}
+body {{
+  font-family: 'Times New Roman', Georgia, serif;
+  background: #e8e8e8; color: #111; font-size: 14px;
+}}
+.viewer-bar {{
+  background: #2d3748; color: #ccc; padding: 8px 20px;
+  font-size: 12px; font-family: -apple-system, sans-serif;
+  display: flex; justify-content: space-between;
+}}
+.page-wrap {{ display: flex; justify-content: center; padding: 28px 16px 40px; }}
+.page {{
+  background: #fffffe; width: 720px; min-height: 900px;
+  padding: 64px 72px; box-shadow: 0 4px 24px rgba(0,0,0,0.22);
+}}
+.doc-type-label {{
+  text-align: center; font-size: 11px; font-weight: 700;
+  letter-spacing: 2px; text-transform: uppercase; color: #555; margin-bottom: 6px;
+}}
+.doc-title {{
+  text-align: center; font-size: 20px; font-weight: 700;
+  margin-bottom: 4px; letter-spacing: 0.3px;
+}}
+.doc-ref {{
+  text-align: center; font-size: 12px; color: #666; margin-bottom: 20px;
+}}
+.divider {{ border: none; border-top: 2px solid #111; margin: 16px 0; }}
+.meta-row {{
+  display: flex; justify-content: space-between;
+  font-size: 12px; color: #444; margin-bottom: 6px;
+}}
+.parties-section {{ margin: 16px 0; }}
+.parties-title {{ font-size: 11px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 1px; color: #666; margin-bottom: 8px; }}
+.party-row {{ display: flex; gap: 16px; margin-bottom: 4px; font-size: 13px; }}
+.party-role {{ font-weight: 700; min-width: 140px; color: #333; }}
+.party-name {{ color: #111; }}
+.whereas {{
+  font-size: 13px; line-height: 1.7; margin: 16px 0;
+  font-style: italic; color: #333;
+}}
+.clause {{ margin-bottom: 14px; }}
+.clause-head {{
+  font-size: 13px; font-weight: 700; margin-bottom: 4px; color: #111;
+}}
+.clause-text {{ font-size: 13px; line-height: 1.75; color: #222; }}
+.sig-section {{
+  display: flex; flex-wrap: wrap; gap: 32px; margin-top: 40px; padding-top: 20px;
+  border-top: 1px solid #ccc;
+}}
+.sig-block {{ flex: 1; min-width: 180px; }}
+.sig-line {{ border-bottom: 1px solid #333; margin-bottom: 4px; height: 24px; }}
+.sig-role {{ font-size: 11px; color: #666; text-transform: uppercase; letter-spacing: 0.5px; }}
+.sig-name {{ font-size: 13px; font-weight: 700; margin-top: 2px; }}
+.sig-date {{ font-size: 11px; color: #888; margin-top: 2px; }}
+.notary {{
+  margin-top: 20px; font-size: 11px; color: #666;
+  font-style: italic; border-top: 1px solid #eee; padding-top: 12px;
+}}
+</style></head><body>
+{_chrome_bar(url)}
+<div class="viewer-bar">
+  <span>{type_label}</span><span>{ref}</span>
+</div>
+<div class="page-wrap"><div class="page">
+  <div class="doc-type-label">{type_label}</div>
+  <div class="doc-title">{title}</div>
+  <div class="doc-ref">{ref}</div>
+  <hr class="divider">
+  <div class="meta-row">
+    <span>Jurisdiction: {jx}</span>
+    <span>Date: {date}</span>
+  </div>
+  <div class="parties-section">
+    <div class="parties-title">Parties</div>
+    {parties_html}
+  </div>
+  <p class="whereas">WHEREAS the parties hereto desire to set forth their mutual agreements and obligations as described herein, and for good and valuable consideration, the receipt and sufficiency of which are hereby acknowledged, the parties agree as follows:</p>
+  <hr class="divider">
+  {clauses_html}
+  <div class="sig-section">{sigs_html}</div>
+  {f'<div class="notary">{notary}</div>' if notary else ''}
+</div></div>
+</body></html>"""
+
+
+# ---------------------------------------------------------------------------
+# IDENTITY TEMPLATE
+# ---------------------------------------------------------------------------
+
+def _html_identity(item: dict) -> str:
+    doc_type   = item.get("document_type", "passport")
+    authority  = _e(item.get("issuing_authority", ""))
+    surname    = _e(item.get("surname", ""))
+    given      = _e(item.get("given_names", ""))
+    dob        = _e(item.get("dob", ""))
+    doc_num    = _e(item.get("document_number", ""))
+    nat        = _e(item.get("nationality_or_state", ""))
+    issue      = _e(item.get("issue_date", ""))
+    expiry     = _e(item.get("expiry_date", ""))
+    additional = item.get("additional_fields", {})
+    sec_feats  = item.get("security_features", [])
+    url        = "gov.valdoria.id/verify"
+
+    type_label = {
+        "passport":        "PASSPORT",
+        "drivers_licence": "DRIVER'S LICENCE",
+        "national_id":     "NATIONAL IDENTITY CARD",
+        "employee_id":     "EMPLOYEE IDENTIFICATION",
+        "insurance_card":  "INSURANCE CARD",
+    }.get(doc_type, "IDENTITY DOCUMENT")
+
+    # Colour scheme per doc type
+    colours = {
+        "passport":        ("#1a3a5c", "#eaf0fb"),
+        "drivers_licence": ("#2d5016", "#edf7e6"),
+        "national_id":     ("#5c1a1a", "#fbeaea"),
+        "employee_id":     ("#2d3748", "#f0f2f5"),
+        "insurance_card":  ("#1a4a5c", "#e8f4f8"),
+    }
+    hdr_bg, field_bg = colours.get(doc_type, ("#2d3748", "#f0f2f5"))
+
+    # Additional fields rows
+    add_rows = ""
+    for k, v in additional.items():
+        if v:
+            label = k.replace("_", " ").title()
+            add_rows += f"""
+            <div class="field-row">
+              <div class="field-label">{_e(label)}</div>
+              <div class="field-value">{_e(str(v))}</div>
+            </div>"""
+
+    mrz1 = _e(additional.get("mrz_line1", ""))
+    mrz2 = _e(additional.get("mrz_line2", ""))
+    mrz_html = ""
+    if mrz1 or mrz2:
+        mrz_html = f"""
+        <div class="mrz">
+          <div class="mrz-label">MACHINE READABLE ZONE</div>
+          <div class="mrz-line">{mrz1}</div>
+          <div class="mrz-line">{mrz2}</div>
+        </div>"""
+
+    sec_html = "".join(
+        f'<span class="sec-badge">{_e(f)}</span>' for f in sec_feats
+    )
+
+    return f"""<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>{type_label}</title>
+<style>
+{_CHROME_CSS}
+* {{ box-sizing: border-box; margin: 0; padding: 0; }}
+body {{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #d0d0d0; }}
+.page-wrap {{ display: flex; justify-content: center; padding: 32px 16px; }}
+.id-card {{
+  background: white; width: 640px;
+  border-radius: 12px; overflow: hidden;
+  box-shadow: 0 6px 32px rgba(0,0,0,0.30);
+}}
+.id-header {{
+  background: {hdr_bg}; color: white; padding: 18px 24px;
+  display: flex; justify-content: space-between; align-items: center;
+}}
+.id-type {{ font-size: 16px; font-weight: 800; letter-spacing: 2px; }}
+.id-authority {{ font-size: 10px; opacity: 0.75; margin-top: 3px; max-width: 300px; }}
+.id-doc-num {{ font-size: 13px; font-family: 'Courier New', monospace;
+  background: rgba(255,255,255,0.15); padding: 4px 10px; border-radius: 4px; }}
+.id-body {{ display: flex; }}
+.id-photo {{
+  width: 140px; min-height: 180px; background: {field_bg};
+  display: flex; align-items: center; justify-content: center;
+  border-right: 1px solid #ddd; flex-shrink: 0;
+}}
+.photo-placeholder {{
+  width: 90px; height: 110px; background: #ccc; border-radius: 4px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 10px; color: #888; text-align: center; line-height: 1.4;
+}}
+.id-fields {{ flex: 1; padding: 16px 20px; background: {field_bg}; }}
+.field-row {{ margin-bottom: 10px; }}
+.field-label {{
+  font-size: 9px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 1px; color: #666; margin-bottom: 2px;
+}}
+.field-value {{ font-size: 14px; font-weight: 600; color: #111; }}
+.name-row {{ display: flex; gap: 20px; margin-bottom: 10px; }}
+.id-footer {{
+  background: {hdr_bg}; padding: 10px 24px;
+  display: flex; justify-content: space-between; align-items: center;
+}}
+.footer-dates {{ display: flex; gap: 32px; }}
+.footer-date-item label {{
+  font-size: 9px; text-transform: uppercase; letter-spacing: 1px;
+  color: rgba(255,255,255,0.6); display: block;
+}}
+.footer-date-item span {{ font-size: 13px; font-weight: 700; color: white; }}
+.mrz {{
+  background: #f8f8f8; padding: 12px 16px;
+  border-top: 1px solid #eee;
+}}
+.mrz-label {{ font-size: 9px; color: #aaa; text-transform: uppercase;
+  letter-spacing: 1px; margin-bottom: 6px; }}
+.mrz-line {{
+  font-family: 'Courier New', monospace; font-size: 12px;
+  letter-spacing: 2px; color: #333; margin-bottom: 2px;
+  word-break: break-all;
+}}
+.sec-features {{
+  padding: 8px 20px; background: #fafafa;
+  border-top: 1px solid #eee; display: flex; flex-wrap: wrap; gap: 6px;
+}}
+.sec-badge {{
+  font-size: 9px; background: #e8e8e8; color: #555;
+  padding: 2px 7px; border-radius: 10px; letter-spacing: 0.3px;
+}}
+</style></head><body>
+{_chrome_bar(url)}
+<div class="page-wrap"><div class="id-card">
+  <div class="id-header">
+    <div>
+      <div class="id-type">{type_label}</div>
+      <div class="id-authority">{authority}</div>
+    </div>
+    <div class="id-doc-num">{doc_num}</div>
+  </div>
+  <div class="id-body">
+    <div class="id-photo">
+      <div class="photo-placeholder">PHOTO</div>
+    </div>
+    <div class="id-fields">
+      <div class="name-row">
+        <div class="field-row">
+          <div class="field-label">Surname</div>
+          <div class="field-value">{surname}</div>
+        </div>
+        <div class="field-row">
+          <div class="field-label">Given Names</div>
+          <div class="field-value">{given}</div>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field-label">Date of Birth</div>
+        <div class="field-value">{dob}</div>
+      </div>
+      <div class="field-row">
+        <div class="field-label">Nationality / State</div>
+        <div class="field-value">{nat}</div>
+      </div>
+      {add_rows}
+    </div>
+  </div>
+  <div class="id-footer">
+    <div class="footer-dates">
+      <div class="footer-date-item"><label>Issue Date</label><span>{issue}</span></div>
+      <div class="footer-date-item"><label>Expiry Date</label><span>{expiry}</span></div>
+    </div>
+  </div>
+  {mrz_html}
+  {f'<div class="sec-features">{sec_html}</div>' if sec_html else ''}
+</div></div>
+</body></html>"""
+
+
+# ---------------------------------------------------------------------------
+# COMMUNICATIONS TEMPLATE
+# ---------------------------------------------------------------------------
+
+def _html_communications(item: dict) -> str:
+    comm_type    = item.get("comm_type", "sms_thread")
+    platform     = _e(item.get("platform", "Messages"))
+    participants = item.get("participants", [])
+    subject      = item.get("subject", "")
+    timestamp    = _e(item.get("timestamp", ""))
+    messages     = item.get("messages", [])
+    url          = "messages.app/thread"
+
+    # Identify "self" participant name for bubble alignment
+    self_name = next(
+        (p["name"] for p in participants if p.get("role") == "self"),
+        participants[0]["name"] if participants else "Me",
+    )
+    other_name = next(
+        (p["name"] for p in participants if p.get("role") != "self"),
+        "Contact",
+    )
+
+    if comm_type == "email":
+        return _html_email(item, platform, participants, subject,
+                           timestamp, messages, self_name, url)
+
+    # SMS / DM bubble layout
+    bubbles_html = ""
+    for msg in messages:
+        is_self  = msg.get("sender") == self_name
+        side     = "self" if is_self else "other"
+        read_dot = "" if msg.get("read", True) else '<span class="unread-dot"></span>'
+        bubbles_html += f"""
+        <div class="bubble-row {side}">
+          <div class="bubble {side}">{_e(msg.get('text',''))}</div>
+          <div class="msg-meta">{_e(msg.get('time',''))} {read_dot}</div>
+        </div>"""
+
+    # Platform colour
+    platform_colours = {
+        "WhatsApp":    ("#075e54", "#dcf8c6"),
+        "Telegram":    ("#2ca5e0", "#e3f4fd"),
+        "Signal":      ("#2c6bed", "#e8effd"),
+        "Instagram DM":("#833ab4", "#f0e6ff"),
+        "Slack":       ("#4a154b", "#f0e6f0"),
+        "Discord":     ("#5865f2", "#edeeff"),
+        "Messages":    ("#1c8ef9", "#e5f3ff"),
+    }
+    hdr_bg, self_bg = platform_colours.get(
+        item.get("platform",""), ("#1c8ef9", "#e5f3ff")
+    )
+
+    return f"""<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>{platform}</title>
+<style>
+{_CHROME_CSS}
+* {{ box-sizing: border-box; margin: 0; padding: 0; }}
+body {{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #f0f0f0; }}
+.msg-app {{ max-width: 420px; margin: 0 auto; background: white;
+  min-height: 100vh; display: flex; flex-direction: column; }}
+.app-header {{
+  background: {hdr_bg}; color: white; padding: 12px 16px;
+  display: flex; align-items: center; gap: 12px; position: sticky; top: 0;
+}}
+.contact-avatar {{
+  width: 36px; height: 36px; border-radius: 50%;
+  background: rgba(255,255,255,0.3);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 14px; flex-shrink: 0;
+}}
+.contact-name {{ font-weight: 600; font-size: 15px; }}
+.contact-status {{ font-size: 11px; opacity: 0.8; }}
+.timestamp-bar {{
+  text-align: center; font-size: 11px; color: #999;
+  padding: 12px 0 4px;
+}}
+.thread {{
+  flex: 1; padding: 8px 12px; display: flex; flex-direction: column; gap: 4px;
+}}
+.bubble-row {{ display: flex; flex-direction: column; }}
+.bubble-row.self {{ align-items: flex-end; }}
+.bubble-row.other {{ align-items: flex-start; }}
+.bubble {{
+  max-width: 72%; padding: 9px 13px; border-radius: 18px;
+  font-size: 14px; line-height: 1.45; word-break: break-word;
+}}
+.bubble.self {{
+  background: {self_bg}; color: #111;
+  border-bottom-right-radius: 4px;
+}}
+.bubble.other {{
+  background: #f0f0f0; color: #111;
+  border-bottom-left-radius: 4px;
+}}
+.msg-meta {{
+  font-size: 10px; color: #aaa; margin: 2px 4px 6px;
+  display: flex; align-items: center; gap: 4px;
+}}
+.unread-dot {{
+  width: 6px; height: 6px; border-radius: 50%;
+  background: {hdr_bg}; display: inline-block;
+}}
+.input-bar {{
+  background: #f9f9f9; border-top: 1px solid #e8e8e8;
+  padding: 10px 12px; display: flex; gap: 8px; align-items: center;
+}}
+.input-field {{
+  flex: 1; background: white; border: 1px solid #ddd;
+  border-radius: 20px; padding: 8px 14px; font-size: 13px; color: #ccc;
+}}
+</style></head><body>
+{_chrome_bar(url)}
+<div class="msg-app">
+  <div class="app-header">
+    <div class="contact-avatar">{_e(other_name[0].upper())}</div>
+    <div>
+      <div class="contact-name">{_e(other_name)}</div>
+      <div class="contact-status">{platform}</div>
+    </div>
+  </div>
+  <div class="timestamp-bar">{timestamp}</div>
+  <div class="thread">{bubbles_html}</div>
+  <div class="input-bar">
+    <div class="input-field">Message</div>
+  </div>
+</div>
+</body></html>"""
+
+
+def _html_email(item, platform, participants, subject,
+                timestamp, messages, self_name, url):
+    """Email layout — separate from bubble layout."""
+    to_names   = ", ".join(
+        _e(p["name"]) for p in participants if p.get("role") != "self"
+    )
+    from_name  = _e(self_name)
+    subject_e  = _e(subject or "(No subject)")
+
+    msgs_html = ""
+    for i, msg in enumerate(messages):
+        is_self   = msg.get("sender") == self_name
+        bg        = "#f9fafb" if i % 2 == 0 else "#ffffff"
+        sender_e  = _e(msg.get("sender", ""))
+        time_e    = _e(msg.get("time", ""))
+        text_e    = _e(msg.get("text", ""))
+        msgs_html += f"""
+        <div class="email-msg" style="background:{bg}">
+          <div class="email-msg-header">
+            <span class="email-sender">{sender_e}</span>
+            <span class="email-time">{time_e}</span>
+          </div>
+          <div class="email-body">{text_e}</div>
+        </div>"""
+
+    return f"""<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>{platform} — {subject_e}</title>
+<style>
+{_CHROME_CSS}
+* {{ box-sizing: border-box; margin: 0; padding: 0; }}
+body {{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #f3f4f6; }}
+.email-client {{ max-width: 760px; margin: 0 auto; background: white;
+  min-height: 100vh; }}
+.email-header {{
+  background: #1a73e8; color: white; padding: 14px 20px;
+  display: flex; align-items: center; gap: 10px;
+}}
+.email-app-name {{ font-size: 18px; font-weight: 700; letter-spacing: -0.3px; }}
+.thread-header {{ padding: 20px 24px; border-bottom: 1px solid #e8e8e8; }}
+.thread-subject {{ font-size: 20px; font-weight: 700; margin-bottom: 8px; }}
+.thread-meta {{ font-size: 12px; color: #666; }}
+.email-msg {{ padding: 16px 24px; border-bottom: 1px solid #f0f0f0; }}
+.email-msg-header {{
+  display: flex; justify-content: space-between;
+  margin-bottom: 8px;
+}}
+.email-sender {{ font-weight: 600; font-size: 13px; }}
+.email-time   {{ font-size: 11px; color: #aaa; }}
+.email-body   {{ font-size: 14px; line-height: 1.7; color: #333; white-space: pre-wrap; }}
+</style></head><body>
+{_chrome_bar(url)}
+<div class="email-client">
+  <div class="email-header">
+    <div class="email-app-name">{platform}</div>
+  </div>
+  <div class="thread-header">
+    <div class="thread-subject">{subject_e}</div>
+    <div class="thread-meta">
+      To: {to_names} &nbsp;·&nbsp; {timestamp}
+    </div>
+  </div>
+  {msgs_html}
+</div>
+</body></html>"""
+
+
+# ---------------------------------------------------------------------------
 # TEMPLATE DISPATCH
 # ---------------------------------------------------------------------------
 
 _HTML_BUILDERS = {
-    "banking":   _html_banking,
-    "medical":   _html_medical,
-    "news":      _html_news,
-    "copyright": _html_copyright,
+    "banking":        _html_banking,
+    "medical":        _html_medical,
+    "news":           _html_news,
+    "copyright":      _html_copyright,
+    "legal":          _html_legal,
+    "identity":       _html_identity,
+    "communications": _html_communications,
 }
 
 SUPPORTED_CATEGORIES = list(_HTML_BUILDERS.keys())

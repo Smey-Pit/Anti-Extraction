@@ -175,14 +175,35 @@ _HEADER_PALETTES = {
         ((55, 65, 82),   (80, 95, 115)),
         ((38, 48, 65),   (62, 76, 96)),
     ],
+    "legal": [
+        ((60, 45, 20),   (90, 68, 35)),
+        ((45, 32, 10),   (75, 55, 25)),
+        ((72, 55, 28),   (105, 80, 42)),
+        ((38, 28, 8),    (65, 48, 18)),
+    ],
+    "identity": [
+        ((20, 60, 100),  (35, 90, 140)),
+        ((10, 45, 85),   (25, 72, 122)),
+        ((30, 72, 115),  (48, 102, 155)),
+        ((15, 52, 92),   (28, 80, 132)),
+    ],
+    "communications": [
+        ((28, 142, 84),  (45, 170, 105)),
+        ((20, 120, 70),  (35, 148, 88)),
+        ((38, 155, 95),  (58, 185, 118)),
+        ((15, 105, 60),  (28, 132, 78)),
+    ],
 }
 
 # Background colour options: white, off-white, very light category tint
 _BG_OPTIONS = {
-    "banking":   [(255,255,255), (252,253,255), (245,248,255)],
-    "medical":   [(255,255,255), (253,254,255), (245,250,255)],
-    "news":      [(255,255,255), (255,253,252), (255,249,247)],
-    "copyright": [(255,255,255), (255,254,250), (252,250,245)],
+    "banking":        [(255,255,255), (252,253,255), (245,248,255)],
+    "medical":        [(255,255,255), (253,254,255), (245,250,255)],
+    "news":           [(255,255,255), (255,253,252), (255,249,247)],
+    "copyright":      [(255,255,255), (255,254,250), (252,250,245)],
+    "legal":          [(255,255,255), (255,253,248), (252,249,242)],
+    "identity":       [(255,255,255), (248,251,255), (242,247,255)],
+    "communications": [(255,255,255), (248,255,251), (242,252,247)],
 }
 
 
@@ -675,15 +696,188 @@ def render_copyright(data: dict, lay: LayoutSpec, rng: random.Random) -> Image.I
     return img
 
 
+def render_legal(data: dict, lay: LayoutSpec, rng: random.Random) -> Image.Image:
+    img  = Image.new("RGB", (lay.W, lay.H), lay.bg_color)
+    draw = ImageDraw.Draw(img)
+    c    = Composer(img, draw, lay)
+
+    doc_type   = data.get("document_type", "contract")
+    type_label = {
+        "contract": "CONTRACT", "nda": "NON-DISCLOSURE AGREEMENT",
+        "will": "LAST WILL AND TESTAMENT",
+        "eviction_notice": "EVICTION NOTICE", "court_filing": "COURT FILING",
+    }.get(doc_type, "LEGAL DOCUMENT")
+
+    c.draw_header(data.get("title", type_label), data.get("case_or_ref_number", ""))
+
+    c.draw_inline_fields([
+        ("Jurisdiction", data.get("jurisdiction", "")),
+        ("Date",         data.get("date", "")),
+    ])
+
+    c.draw_section_title("Parties")
+    for party in data.get("parties", []):
+        c.draw_table_row(
+            [party.get("role", ""), party.get("name", "")],
+            [1.5, 3.5],
+            colors=[lay.label_color, lay.text_color],
+        )
+
+    c.skip(lay.para_gap)
+    c.draw_small_text(
+        "WHEREAS the parties hereto agree to the following terms and conditions:",
+        color=lay.label_color,
+    )
+    c.skip(lay.para_gap // 2)
+
+    c.draw_section_title("Terms and Conditions")
+    for clause in data.get("clauses", []):
+        heading = f"{clause.get('number','')}  {clause.get('heading','')}"
+        c.draw_body_text(heading, bold=True)
+        c.draw_body_text(clause.get("text", ""))
+        c.skip(lay.para_gap // 2)
+
+    c.skip(lay.para_gap)
+    c.draw_section_title("Signatures")
+    for sig in data.get("signature_block", []):
+        signed = sig.get("date_signed", "") or "____________________"
+        c.draw_table_row(
+            [sig.get("role",""), sig.get("name",""), f"Date: {signed}"],
+            [2, 2.5, 2],
+            colors=[lay.label_color, lay.text_color, lay.label_color],
+        )
+
+    notary = data.get("notary_note", "")
+    if notary and c._fits(lay.small_line_h + 8):
+        c.skip(lay.para_gap)
+        c.draw_small_text(notary, color=lay.label_color)
+
+    return img
+
+
+def render_identity(data: dict, lay: LayoutSpec, rng: random.Random) -> Image.Image:
+    img  = Image.new("RGB", (lay.W, lay.H), lay.bg_color)
+    draw = ImageDraw.Draw(img)
+    c    = Composer(img, draw, lay)
+
+    doc_type   = data.get("document_type", "passport")
+    type_label = {
+        "passport": "PASSPORT", "drivers_licence": "DRIVER'S LICENCE",
+        "national_id": "NATIONAL IDENTITY CARD",
+        "employee_id": "EMPLOYEE IDENTIFICATION",
+        "insurance_card": "INSURANCE CARD",
+    }.get(doc_type, "IDENTITY DOCUMENT")
+
+    c.draw_header(type_label, data.get("issuing_authority", ""))
+
+    c.draw_inline_fields([
+        ("Surname",     data.get("surname", "")),
+        ("Given Names", data.get("given_names", "")),
+    ])
+    c.draw_inline_fields([
+        ("Date of Birth",        data.get("dob", "")),
+        ("Nationality / State",  data.get("nationality_or_state", "")),
+        ("Document Number",      data.get("document_number", "")),
+    ])
+    c.draw_inline_fields([
+        ("Issue Date",  data.get("issue_date", "")),
+        ("Expiry Date", data.get("expiry_date", "")),
+    ])
+
+    additional = data.get("additional_fields", {})
+    if additional:
+        c.draw_section_title("Additional Information")
+        for k, v in additional.items():
+            if v and k not in ("mrz_line1", "mrz_line2"):
+                label = k.replace("_", " ").title()
+                c.draw_label_value(label, str(v))
+
+    mrz1 = additional.get("mrz_line1", "")
+    mrz2 = additional.get("mrz_line2", "")
+    if mrz1 or mrz2:
+        c.skip(lay.para_gap)
+        c.draw_section_title("Machine Readable Zone")
+        font_mono = _load_font("mono", lay.small_size)
+        for line in [mrz1, mrz2]:
+            if line and c._fits(lay.small_line_h):
+                draw.text((c.x, c.y), str(line), font=font_mono, fill=lay.text_color)
+                c.y += lay.small_line_h
+
+    sec = data.get("security_features", [])
+    if sec:
+        c.skip(lay.para_gap)
+        c.draw_small_text("Security Features: " + "  ·  ".join(sec),
+                          color=lay.label_color)
+
+    return img
+
+
+def render_communications(data: dict, lay: LayoutSpec,
+                          rng: random.Random) -> Image.Image:
+    img  = Image.new("RGB", (lay.W, lay.H), lay.bg_color)
+    draw = ImageDraw.Draw(img)
+    c    = Composer(img, draw, lay)
+
+    comm_type = data.get("comm_type", "sms_thread")
+    platform  = data.get("platform", "Messages")
+
+    participants = data.get("participants", [])
+    self_name = next(
+        (p["name"] for p in participants if p.get("role") == "self"),
+        "Me",
+    )
+    other_name = next(
+        (p["name"] for p in participants if p.get("role") != "self"),
+        "Contact",
+    )
+
+    header_sub = f"{platform}  ·  {data.get('timestamp','')}"
+    if comm_type == "email" and data.get("subject"):
+        header_sub = data.get("subject","")
+
+    c.draw_header(other_name if comm_type != "email" else platform, header_sub)
+
+    if comm_type == "email" and data.get("subject"):
+        c.draw_label_value("Subject", data.get("subject",""))
+
+    c.draw_small_text(
+        "  ·  ".join(p.get("name","") for p in participants),
+        color=lay.label_color,
+    )
+    c.skip(lay.para_gap)
+    c.draw_divider()
+
+    for msg in data.get("messages", []):
+        is_self   = msg.get("sender") == self_name
+        color     = lay.accent_color if is_self else lay.text_color
+        sender    = msg.get("sender","")
+        time_str  = msg.get("time","")
+        text      = msg.get("text","")
+
+        c.draw_small_text(f"{sender}  {time_str}", color=lay.label_color)
+        c.draw_body_text(text, color=color)
+        c.skip(lay.para_gap // 2)
+
+    ctx = data.get("thread_context","")
+    if ctx and c._fits(lay.small_line_h + 8):
+        c.skip(lay.para_gap)
+        c.draw_small_text(f"[Context: {ctx}]", color=lay.label_color)
+
+    return img
+
+
 # ---------------------------------------------------------------------------
 # PUBLIC API
 # ---------------------------------------------------------------------------
 
 CATEGORY_RENDERERS = {
-    "banking":   render_banking,
-    "medical":   render_medical,
-    "news":      render_news,
-    "copyright": render_copyright,
+    "banking":        render_banking,
+    "medical":        render_medical,
+    "news":           render_news,
+    "copyright":      render_copyright,
+    "legal":          render_legal,
+    "identity":       render_identity,
+    "communications": render_communications,
 }
 
 

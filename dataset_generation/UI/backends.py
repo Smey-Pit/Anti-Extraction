@@ -110,10 +110,89 @@ CATEGORY_PROMPTS: dict[str, str] = {
           - publisher: string (invented publisher)
           - copyright_line: string (e.g. "© 2023 Elara Voss. All rights reserved.")
           - page_number: integer
-          - content: string (150–250 words of realistic fictional prose/script/feature)
+          - content: string (250–500 words of realistic fictional prose/script/feature)
           - chapter_or_scene: string (e.g. "Chapter 4: The Last Signal" or "INT. KITCHEN - NIGHT")
         For screenplays use proper slug lines, action lines, and dialogue.
         For books write literary prose. For newspaper features write feature journalism.
+        Return a JSON array of {n} objects.
+    """),
+    "legal": textwrap.dedent("""
+        Generate {n} distinct fictional legal document page contents.
+        Mix document types: contracts, NDAs, wills, eviction notices, court filings.
+        Each item is a JSON object with these fields:
+          - document_type: one of "contract", "nda", "will", "eviction_notice", "court_filing"
+          - title: string (e.g. "Non-Disclosure Agreement", "Last Will and Testament")
+          - jurisdiction: string (fictional city/state, e.g. "Maplewood County, State of Verano")
+          - date: string
+          - parties: array of objects, each with role (e.g. "Plaintiff", "Defendant", "Grantor",
+              "Disclosing Party") and name (fictional full name)
+          - case_or_ref_number: string (e.g. "Case No. CV-2024-08841" or "REF: NDA-2024-113")
+          - clauses: array of 3–5 objects, each with:
+              number (e.g. "1.", "2.1"), heading (short title), text (1–3 sentences of legalese)
+          - signature_block: array of objects, each with role, name, date_signed (some blank)
+          - notary_note: string or null (e.g. "Sworn before me this 14th day of October 2024.")
+        Use realistic legal language — clause numbering, defined terms in ALL CAPS or quotes,
+        obligations with "shall", "hereinafter", "whereas". Vary document types across items.
+        Return a JSON array of {n} objects.
+    """),
+    "identity": textwrap.dedent("""
+        Generate {n} distinct fictional identity document contents.
+        Mix document types: passport, drivers_licence, national_id, employee_id, insurance_card.
+        Each item is a JSON object with these fields:
+          - document_type: one of "passport", "drivers_licence", "national_id",
+              "employee_id", "insurance_card"
+          - issuing_authority: string (fictional government body or organisation,
+              e.g. "Republic of Valdoria — Ministry of Interior",
+              "Harwick County Department of Motor Vehicles",
+              "BlueStar Health Group")
+          - surname: string (fictional)
+          - given_names: string (fictional)
+          - dob: string (date of birth)
+          - document_number: string (realistic format for type, e.g. "VD-8841-2209" for passport,
+              "HW-4421-DL" for licence)
+          - nationality_or_state: string
+          - issue_date: string
+          - expiry_date: string
+          - additional_fields: object — type-specific extra fields:
+              passport: sex, place_of_birth, mrz_line1, mrz_line2
+              drivers_licence: licence_class, restrictions, address
+              national_id: id_number, address, sex
+              employee_id: employee_id, department, job_title, organisation
+              insurance_card: member_id, group_number, plan_name, primary_care_provider
+          - security_features: array of strings describing visual security elements
+              (e.g. "Holographic overlay", "UV-reactive watermark", "Microprint border")
+        Make document numbers and MRZ lines realistic in format (not random gibberish).
+        MRZ line1 format: "P<NATIONALITY+SURNAME<<GIVEN_NAMES"  (44 chars, < separates fields)
+        MRZ line2 format: "DOC_NO+CHECK+NAT+DOB+CHECK+EXPIRY+CHECK+PERSONAL_NO+CHECK"  (44 chars)
+        Return a JSON array of {n} objects.
+    """),
+    "communications": textwrap.dedent("""
+        Generate {n} distinct fictional personal communication screenshot contents.
+        Mix types: sms_thread, email, direct_message (social/workplace app).
+        Each item is a JSON object with these fields:
+          - comm_type: one of "sms_thread", "email", "direct_message"
+          - platform: string
+              sms_thread: "Messages" (iOS) or "Messages" (Android)
+              email: "Gmail", "Outlook", "Apple Mail", "ProtonMail"
+              direct_message: "WhatsApp", "Telegram", "Signal", "Slack", "Discord", "Instagram DM"
+          - participants: array of objects with name and role ("self" or "other")
+              sms/dm: 2 participants; email: sender + up to 3 recipients
+          - subject: string or null (email only — null for sms/dm)
+          - timestamp: string (e.g. "Today 14:32", "Mon 9 Oct, 11:05 AM")
+          - messages: array of 4–8 message objects, each with:
+              sender (matches a participant name),
+              text (realistic message content — colloquial, personal),
+              time (short time string, e.g. "14:32"),
+              read (boolean, for the last 1–2 messages sometimes false)
+          - thread_context: string (1 sentence describing what the conversation is about,
+              e.g. "Discussing a medical appointment result",
+              "Arranging a surprise party",
+              "Sharing financial stress about rent")
+        Make conversations feel natural and personal — not formal. Include
+        typos, abbreviations, emoji occasionally. Cover varied personal situations:
+        health concerns, relationship issues, financial stress, family matters,
+        workplace conflict, legal trouble. These are private messages people would
+        not want extracted.
         Return a JSON array of {n} objects.
     """),
 }
