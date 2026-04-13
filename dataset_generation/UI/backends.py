@@ -110,7 +110,7 @@ CATEGORY_PROMPTS: dict[str, str] = {
           - publisher: string (invented publisher)
           - copyright_line: string (e.g. "© 2023 Elara Voss. All rights reserved.")
           - page_number: integer
-          - content: string (250–500 words of realistic fictional prose/script/feature)
+          - content: string (150–250 words of realistic fictional prose/script/feature)
           - chapter_or_scene: string (e.g. "Chapter 4: The Last Signal" or "INT. KITCHEN - NIGHT")
         For screenplays use proper slug lines, action lines, and dialogue.
         For books write literary prose. For newspaper features write feature journalism.
@@ -370,9 +370,12 @@ class LocalTransformersBackend(LLMBackend):
 
     GPU memory guide
     ----------------
-    Qwen2.5-7B-Instruct in bfloat16  ≈ 15 GB VRAM  → fits a single A100/H100/4090
-    Qwen2.5-7B-Instruct in int4      ≈  5 GB VRAM  → fits a 3090/A5000
-    Pass load_in_4bit=True for quantised loading (requires bitsandbytes).
+    Qwen2.5-7B-Instruct in bfloat16  ≈ 15 GB VRAM  → fits an A100/H100/4090
+    Qwen2.5-7B-Instruct in int8      ≈  9 GB VRAM  → fits a 3090/A5000/A40
+    Qwen2.5-7B-Instruct in int4      ≈  5 GB VRAM  → fits a 3080/T4
+    Pass load_in_8bit=True or load_in_4bit=True (requires bitsandbytes).
+    8-bit is recommended over 4-bit — much better JSON schema compliance
+    for complex categories (legal, identity) at only 4 GB extra VRAM cost.
     """
 
     DEFAULT_MODEL = "Qwen/Qwen2.5-7B-Instruct"
@@ -383,10 +386,12 @@ class LocalTransformersBackend(LLMBackend):
         max_new_tokens: int  = 4096,
         temperature:   float = 0.7,
         load_in_4bit:  bool  = False,
-        load_in_8bit:  bool  = False,   # add this
+        load_in_8bit:  bool  = False,
         device_map:    str   = "auto",
         max_retries:   int   = 2,
     ):
+        if load_in_4bit and load_in_8bit:
+            raise ValueError("Specify at most one of load_in_4bit or load_in_8bit.")
         self.model_name      = model_name
         self.max_new_tokens  = max_new_tokens
         self.temperature     = temperature
@@ -394,10 +399,12 @@ class LocalTransformersBackend(LLMBackend):
         self._pipe           = None          # lazy-loaded on first generate()
         self._load_kwargs    = dict(
             load_in_4bit=load_in_4bit,
+            load_in_8bit=load_in_8bit,
             device_map=device_map,
         )
+        quant = "int4" if load_in_4bit else ("int8" if load_in_8bit else "bfloat16")
         print(f"  [backend] Local transformers — model={model_name} "
-              f"4bit={load_in_4bit} device_map={device_map}")
+              f"quant={quant} device_map={device_map}")
         print(f"  [backend] Model will be downloaded/loaded on first generate() call.")
 
     def _load(self):
@@ -424,6 +431,7 @@ class LocalTransformersBackend(LLMBackend):
         elif self._load_kwargs.get("load_in_4bit"):
             from transformers import BitsAndBytesConfig
             quant_cfg = BitsAndBytesConfig(load_in_4bit=True, bnb_4bit_compute_dtype=torch.bfloat16)
+
         tokenizer = AutoTokenizer.from_pretrained(self.model_name, trust_remote_code=True)
         model = AutoModelForCausalLM.from_pretrained(
             self.model_name,
@@ -492,6 +500,7 @@ class BackendConfig:
     # Local transformers (qwen-local)
     local_model:    str   = LocalTransformersBackend.DEFAULT_MODEL
     load_in_4bit:   bool  = False
+    load_in_8bit:   bool  = False
     device_map:     str   = "auto"
 
     # Shared
@@ -533,6 +542,7 @@ def build_backend(cfg: BackendConfig) -> LLMBackend:
             max_new_tokens=cfg.max_tokens,
             temperature=cfg.temperature,
             load_in_4bit=cfg.load_in_4bit,
+            load_in_8bit=cfg.load_in_8bit,
             device_map=cfg.device_map,
             max_retries=cfg.max_retries,
         )

@@ -247,8 +247,10 @@ def parse_args() -> ContentGenConfig:
 
     lg = p.add_argument_group("qwen-local options")
     lg.add_argument("--local-model",  type=str, default="Qwen/Qwen2.5-7B-Instruct")
-    lg.add_argument("--load-in-4bit", action="store_true")
-    lg.add_argument("--load-in-8bit", action="store_true", help="Load in 8-bit (~9 GB VRAM, better quality than 4-bit)")
+    lg.add_argument("--load-in-4bit", action="store_true",
+                    help="4-bit quantisation (~5 GB VRAM). Lower quality, use only if 8-bit doesn't fit.")
+    lg.add_argument("--load-in-8bit", action="store_true",
+                    help="8-bit quantisation (~9 GB VRAM). Recommended sweet spot for quality vs VRAM.")
     lg.add_argument("--device-map",   type=str, default="auto")
 
     sg = p.add_argument_group("Shared generation options")
@@ -285,6 +287,7 @@ def parse_args() -> ContentGenConfig:
         api_key         = args.api_key,
         local_model     = args.local_model,
         load_in_4bit    = args.load_in_4bit,
+        load_in_8bit    = args.load_in_8bit,
         device_map      = args.device_map,
         max_tokens      = args.max_tokens,
         temperature     = args.temperature,
