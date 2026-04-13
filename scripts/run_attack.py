@@ -135,6 +135,9 @@ def _run_single_config(
     cfg.attack.kappa   = kappa
 
     for sample in dataset:
+        for m in opt_surrogates + heldout_surrogates:
+            if hasattr(m, "_pv_proc_cache"):
+                m._pv_proc_cache = None
         console.log(
             f"  [{sample.image_id}] eps={epsilon:.5f} kappa={kappa:.4f} "
             f"cat={sample.text_category} contrast={sample.contrast_level}"
