@@ -248,6 +248,7 @@ def parse_args() -> ContentGenConfig:
     lg = p.add_argument_group("qwen-local options")
     lg.add_argument("--local-model",  type=str, default="Qwen/Qwen2.5-7B-Instruct")
     lg.add_argument("--load-in-4bit", action="store_true")
+    lg.add_argument("--load-in-8bit", action="store_true", help="Load in 8-bit (~9 GB VRAM, better quality than 4-bit)")
     lg.add_argument("--device-map",   type=str, default="auto")
 
     sg = p.add_argument_group("Shared generation options")

@@ -379,12 +379,13 @@ class LocalTransformersBackend(LLMBackend):
 
     def __init__(
         self,
-        model_name:   str   = DEFAULT_MODEL,
-        max_new_tokens: int = 4096,
-        temperature:  float = 0.7,
-        load_in_4bit: bool  = False,
-        device_map:   str   = "auto",
-        max_retries:  int   = 2,
+        model_name:    str   = DEFAULT_MODEL,
+        max_new_tokens: int  = 4096,
+        temperature:   float = 0.7,
+        load_in_4bit:  bool  = False,
+        load_in_8bit:  bool  = False,   # add this
+        device_map:    str   = "auto",
+        max_retries:   int   = 2,
     ):
         self.model_name      = model_name
         self.max_new_tokens  = max_new_tokens
@@ -417,10 +418,12 @@ class LocalTransformersBackend(LLMBackend):
         t0 = time.time()
 
         quant_cfg = None
-        if self._load_kwargs.get("load_in_4bit"):
+        if self._load_kwargs.get("load_in_8bit"):
+            from transformers import BitsAndBytesConfig
+            quant_cfg = BitsAndBytesConfig(load_in_8bit=True)
+        elif self._load_kwargs.get("load_in_4bit"):
             from transformers import BitsAndBytesConfig
             quant_cfg = BitsAndBytesConfig(load_in_4bit=True, bnb_4bit_compute_dtype=torch.bfloat16)
-
         tokenizer = AutoTokenizer.from_pretrained(self.model_name, trust_remote_code=True)
         model = AutoModelForCausalLM.from_pretrained(
             self.model_name,
