@@ -40,11 +40,12 @@ slurm/
 
 # ── Data ──────────────────────────────────────────────────────────────────────
 # Raw images — large, not suited for git
-data/synthetic/images/
+data/synthetic_dataset/images/
 data/document/images/
-data/ui/images/
+data/ui_dataset/images/
 data/scene/images/
 data/pilots/
+
 # Keep labels.jsonl files — they're text, small, and critical for reproducibility
 # i.e. data/synthetic/labels.jsonl IS committed
 
