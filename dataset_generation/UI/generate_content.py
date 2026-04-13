@@ -26,7 +26,7 @@ Usage
     # Resume / append to an existing bank (safe to re-run after crash)
     python generate_content.py --total 1000 --out content_bank.json --resume
 """
-import os
+
 import argparse
 import json
 import pathlib
@@ -216,16 +216,15 @@ def main(cfg: ContentGenConfig) -> None:
 # ---------------------------------------------------------------------------
 # CLI
 # ---------------------------------------------------------------------------
-current_dir = os.path.dirname(os.path.abspath(__file__))
-# Get the base data directory
-base_data_dir = os.path.abspath(os.path.join(current_dir, "..", "..", "data", "ui_dataset"))
+
 def parse_args() -> ContentGenConfig:
     p = argparse.ArgumentParser(
         description=__doc__,
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )
-    p.add_argument("--out", dest="out_path", type=str, default=os.path.join(base_data_dir, "ui_dataset_content_bank.json"),
-                   help=f"Output JSON path (default: {os.path.join(base_data_dir, 'ui_dataset_content_bank.json')})")
+
+    p.add_argument("--out", dest="out_path", type=str, default=DEFAULT_OUT,
+                   help=f"Output JSON path (default: {DEFAULT_OUT})")
     p.add_argument("--resume", action="store_true",
                    help="Append to existing bank instead of overwriting")
 
