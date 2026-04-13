@@ -281,3 +281,16 @@ python render_images.py \
 | `medical` | Patient health portal | Diagnoses, medications, lab results |
 | `news` | News / opinion site | Political sentiment, named sources |
 | `copyright` | Document / ebook reader | Book prose, screenplay, feature journalism |
+
+## Patch Identifiers with patch_identifiers.py
+# Preview what changes without writing anything
+python patch_identifiers.py --input content_bank.json --dry-run
+
+# Patch in-place (overwrites the original)
+python patch_identifiers.py --input content_bank.json
+
+# Save to a new file, keep original untouched
+python patch_identifiers.py --input content_bank.json --output content_bank_patched.json
+
+# Different seed = different numbers (but still reproducible)
+python patch_identifiers.py --input content_bank.json --seed 99
