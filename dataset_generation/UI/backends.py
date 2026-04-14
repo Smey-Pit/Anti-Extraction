@@ -171,10 +171,10 @@ CATEGORY_PROMPTS: dict[str, str] = {
         Mix types: sms_thread, email, direct_message (social/workplace app).
         Each item is a JSON object with these fields:
           - comm_type: one of "sms_thread", "email", "direct_message"
-          - platform: string
-              sms_thread: "Messages" (iOS) or "Messages" (Android)
-              email: "Gmail", "Outlook", "Apple Mail", "ProtonMail"
-              direct_message: "WhatsApp", "Telegram", "Signal", "Slack", "Discord", "Instagram DM"
+          - platform: string — the app name only, no parentheses or notes.
+              Use exactly one of: "iMessage", "Android Messages",
+              "Gmail", "Outlook", "Apple Mail", "ProtonMail",
+              "WhatsApp", "Telegram", "Signal", "Slack", "Discord", "Instagram DM"
           - participants: array of objects with name and role ("self" or "other")
               sms/dm: 2 participants; email: sender + up to 3 recipients
           - subject: string or null (email only — null for sms/dm)
@@ -198,17 +198,58 @@ CATEGORY_PROMPTS: dict[str, str] = {
 }
 
 
+def _repair_json(raw: str) -> str:
+    """
+    Repair common JSON malformations produced by smaller models before parsing.
+    Applied before json.loads() — fixes the output without requiring a retry.
+
+    Known patterns
+    --------------
+    1. Trailing annotation outside string quotes:
+         "platform": "Messages" (iOS),   →   "platform": "iMessage",
+         "platform": "Messages" (Android) →   "platform": "Android Messages",
+       General form: "key": "value" (annotation)  →  "key": "value"
+
+    2. Single-quoted strings (Python-style):
+         'key': 'value'  →  "key": "value"
+       Only applied when the whole document looks single-quoted.
+    """
+    import re
+
+    # Pattern 1: "value" (annotation)  →  context-aware replacement
+    # Group 1 = the string value, Group 2 = the annotation inside parens
+    def _fix_annotation(m):
+        value      = m.group(1).strip()
+        annotation = m.group(2).strip().lower()
+        if "ios" in annotation:
+            return '"iMessage"'
+        if "android" in annotation:
+            return '"Android Messages"'
+        # Generic: keep the value, drop the annotation
+        return f'"{value}"'
+
+    raw = re.sub(
+        r'"([^"]+)"\s+\(([^)]+)\)(?=\s*[,\n\]\}])',
+        _fix_annotation,
+        raw,
+    )
+
+    return raw
+
+
 def _clean_json(raw: str) -> list[dict]:
-    """Strip markdown fences and parse JSON. Returns list or raises ValueError."""
+    """Strip markdown fences, repair common malformations, and parse JSON."""
     raw = raw.strip()
     # Strip ```json ... ``` or ``` ... ```
     if raw.startswith("```"):
         parts = raw.split("```")
-        # parts[1] is the content between first pair of fences
         raw = parts[1]
         if raw.startswith("json"):
             raw = raw[4:]
         raw = raw.strip()
+
+    raw = _repair_json(raw)
+
     data = json.loads(raw)
     if not isinstance(data, list):
         raise ValueError(f"Expected JSON array, got {type(data)}")
@@ -466,6 +507,7 @@ class LocalTransformersBackend(LLMBackend):
                 outputs = self._pipe(
                     text,
                     max_new_tokens=self.max_new_tokens,
+                    max_length=None,
                     temperature=self.temperature,
                     do_sample=True,
                     pad_token_id=tokenizer.eos_token_id,
