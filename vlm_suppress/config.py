@@ -100,6 +100,7 @@ class AttackConfig:
 @dataclass
 class DataConfig:
     data_dir:   Path   = Path("data/synthetic")
+    data_dir_additional: Optional[str] = None
     domain:     Domain = Domain.SYNTHETIC
     n_images:   int    = 10
     # (H, W) — set to null in YAML to keep original image resolution

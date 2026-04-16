@@ -137,6 +137,7 @@ class TextImageDataset(Dataset):
     def __init__(
         self,
         data_dir:        Path,
+        data_dir_additional: Optional[str] = None,
         image_size:      Optional[tuple[int, int]] = (512, 512),
         split_filter:    Optional[str] = None,
         max_samples:     Optional[int] = None,
@@ -146,10 +147,10 @@ class TextImageDataset(Dataset):
         self.data_dir   = Path(data_dir)
         self.image_size = image_size
 
-        labels_path = self.data_dir / "labels.jsonl"
+        labels_path = self.data_dir / f"labels{data_dir_additional}.jsonl"
         if not labels_path.exists():
             raise FileNotFoundError(
-                f"labels.jsonl not found in {self.data_dir}\n"
+                f"labels{data_dir_additional}.jsonl not found in {self.data_dir}\n"
                 f"Expected: {labels_path}"
             )
 

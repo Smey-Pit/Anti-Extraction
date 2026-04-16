@@ -287,6 +287,7 @@ def main(
     with RunLogger(cfg) as logger:
         dataset = TextImageDataset(
             cfg.data.data_dir,
+            cfg.data.data_dir_additional,
             image_size=cfg.data.image_size,
             max_samples=cfg.data.n_images,
             split_filter=cfg.data.split_filter,

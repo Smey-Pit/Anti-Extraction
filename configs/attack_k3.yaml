@@ -1,13 +1,14 @@
-run_id: attack_k2_llava_holdout
+run_id: attack_k1_UI
 phase: attack
 seed: 42
 
 data:
-  data_dir: data/synthetic
-  domain: synthetic
-  n_images: 50
+  data_dir: data/ui_dataset
+  data_dir_additional: '_playwright'
+  domain: ui
+  n_images: 10
   image_size: [192, 768]
-  split_filter: "debug"
+  split_filter: "train"
   category_filter: null
   contrast_filter: null
 
@@ -48,17 +49,17 @@ kappa_sweep:
   - 0.07
 
 surrogates:
-  - name: internvl3_5
-    model_id: OpenGVLab/InternVL3_5-8B
-    dtype: bfloat16
-    max_new_tokens: 256
-    alpha: 1.0
+  # - name: internvl3_5
+  #   model_id: OpenGVLab/InternVL3_5-8B
+  #   dtype: bfloat16
+  #   max_new_tokens: 256
+  #   alpha: 1.0
   
-  - name: paligemma2
-    model_id: google/paligemma2-3b-mix-448
-    dtype: bfloat16
-    max_new_tokens: 256
-    alpha: 1.0
+  # - name: paligemma2
+  #   model_id: google/paligemma2-3b-mix-448
+  #   dtype: bfloat16
+  #   max_new_tokens: 256
+  #   alpha: 1.0
   
   - name: llava16
     model_id: llava-hf/llava-v1.6-mistral-7b-hf
@@ -66,7 +67,7 @@ surrogates:
     max_new_tokens: 256
     alpha: 1.0
   
-held_out_indices: [2]           # both surrogates in optimisation ensemble
+held_out_indices: []           # both surrogates in optimisation ensemble
 
 log:
   output_dir: outputs
