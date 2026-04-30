@@ -22,6 +22,7 @@ import torch
 from vlm_suppress.attack.constraints import compute_LH, constraint_satisfied, penalty_term
 from vlm_suppress.attack.ensemble import compute_FM_ens
 from vlm_suppress.attack.masks import build_epsilon_map, project_onto_region_ball
+from vlm_suppress.attack.salience import build_salience_budget_map
 from vlm_suppress.config import AttackConfig
 from vlm_suppress.models.base import SurrogateModel
 
@@ -83,6 +84,7 @@ def run_attack(
     # ── Build epsilon map ──────────────────────────────────────────────────────
     use_region = cfg.region_aware and word_boxes is not None and len(word_boxes) > 0
     if use_region:
+        # [ABLATION: uniform-text budget]
         eps_map = build_epsilon_map(
             height=H, width=W,
             word_boxes=word_boxes,
@@ -97,6 +99,25 @@ def run_attack(
             (1, H, W), cfg.epsilon,
             dtype=torch.float32, device=device,
         )
+
+    if cfg.salience_budget and word_boxes:
+        # [SALIENCE BUDGET] Phase 1: compute salience map before PGD loop
+        alpha_weights = getattr(cfg, 'alpha_weights', None)
+        if alpha_weights is None:
+            alpha_weights = [1.0 / len(surrogates)] * len(surrogates)
+        eps_map = build_salience_budget_map(
+            image_tensor  = x_orig_d.unsqueeze(0),
+            transcript    = transcript,
+            word_boxes    = word_boxes,
+            surrogates    = surrogates,
+            alpha_weights = alpha_weights,
+            epsilon_min   = cfg.epsilon_min,
+            epsilon_max   = cfg.epsilon,        # reuse cfg.epsilon as ceiling
+            epsilon_bg    = cfg.epsilon_bg,
+            dilation      = cfg.mask_dilation,
+            device        = device,
+        )
+    # else: eps_map already set by the existing block above
 
     # ── Initialise delta ───────────────────────────────────────────────────────
     delta = torch.zeros_like(x_orig_d)

@@ -96,6 +96,13 @@ class AttackConfig:
     # cover anti-aliasing fringe pixels around character edges.
     mask_dilation:  int   = 3
 
+    # ── Salience-conditioned budget map ────────────────────────────────────
+    # When True, eps_map is replaced by a gradient-salience-weighted map
+    # computed once before the PGD loop. Requires word_boxes to be non-empty.
+    # [ABLATION: uniform-text budget] is the active path when this is False.
+    salience_budget: bool  = False
+    epsilon_min:     float = 0.008   # budget floor for text pixels (salience mode)
+
 
 @dataclass
 class DataConfig:
