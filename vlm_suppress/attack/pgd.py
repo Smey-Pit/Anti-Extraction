@@ -5,9 +5,9 @@
 #
 # Key change from uniform version:
 #   The l-inf projection is now per-pixel via an epsilon map built from
-#   word_boxes. Text pixels use epsilon_text (tight), background pixels
-#   use epsilon_bg (loose). This lets the attack inject more energy into
-#   background regions without harming text readability.
+#   word_boxes. Text pixels use epsilon_text (large budget), background pixels
+#   use epsilon_bg (small budget). This concentrates suppression energy on
+#   text regions where the model extracts content.
 #
 # When cfg.region_aware=False (or word_boxes is empty), behaviour is
 # identical to the original uniform projection — safe fallback.
@@ -70,8 +70,8 @@ def run_attack(
 
     Region-aware mode (cfg.region_aware=True):
         Builds a per-pixel epsilon map from word_boxes.
-        Text pixels  → cfg.epsilon_text  (tight)
-        Background   → cfg.epsilon_bg    (loose)
+        Text pixels  → cfg.epsilon_text  (large budget)
+        Background   → cfg.epsilon_bg    (small budget)
 
     Uniform mode (cfg.region_aware=False):
         Uses cfg.epsilon globally for all pixels.
@@ -100,23 +100,33 @@ def run_attack(
             dtype=torch.float32, device=device,
         )
 
-    if cfg.salience_budget and word_boxes:
-        # [SALIENCE BUDGET] Phase 1: compute salience map before PGD loop
-        alpha_weights = getattr(cfg, 'alpha_weights', None)
-        if alpha_weights is None:
-            alpha_weights = [1.0 / len(surrogates)] * len(surrogates)
-        eps_map = build_salience_budget_map(
-            image_tensor  = x_orig_d.unsqueeze(0),
-            transcript    = transcript,
-            word_boxes    = word_boxes,
-            surrogates    = surrogates,
-            alpha_weights = alpha_weights,
-            epsilon_min   = cfg.epsilon_min,
-            epsilon_max   = cfg.epsilon,        # reuse cfg.epsilon as ceiling
-            epsilon_bg    = cfg.epsilon_bg,
-            dilation      = cfg.mask_dilation,
-            device        = device,
-        )
+    if cfg.salience_budget:
+        if not word_boxes:
+            import warnings
+            warnings.warn(
+                "salience_budget=True but word_boxes is empty — "
+                "falling back to non-salience eps_map. "
+                "Check that the dataset sample has bounding box annotations.",
+                RuntimeWarning,
+                stacklevel=2,
+            )
+        else:
+            # [SALIENCE BUDGET] Phase 1: compute salience map before PGD loop
+            alpha_weights = getattr(cfg, 'alpha_weights', None)
+            if alpha_weights is None:
+                alpha_weights = [1.0 / len(surrogates)] * len(surrogates)
+            eps_map = build_salience_budget_map(
+                image_tensor  = x_orig_d.unsqueeze(0),
+                transcript    = transcript,
+                word_boxes    = word_boxes,
+                surrogates    = surrogates,
+                alpha_weights = alpha_weights,
+                epsilon_min   = cfg.epsilon_min,
+                epsilon_max   = cfg.epsilon,        # reuse cfg.epsilon as ceiling
+                epsilon_bg    = cfg.epsilon_bg,
+                dilation      = cfg.mask_dilation,
+                device        = device,
+            )
     # else: eps_map already set by the existing block above
 
     # ── Initialise delta ───────────────────────────────────────────────────────

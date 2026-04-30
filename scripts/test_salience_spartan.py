@@ -283,10 +283,7 @@ def main() -> None:
             )
 
     # ── Visualisation ─────────────────────────────────────────────────────────
-    # Colourbar range spans the full actual budget map range.
-    # Note: the instruction specified vmin=epsilon_bg, vmax=cfg.epsilon, but in
-    # the default config epsilon_bg (0.0627) > cfg.epsilon (0.0157), which would
-    # invert the scale. Using the true data range instead.
+    # Colourbar spans the true data range of the budget map.
     vmin = float(bmap_cpu.min().item())
     vmax = float(bmap_cpu.max().item())
 

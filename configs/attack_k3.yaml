@@ -36,6 +36,7 @@ attack:
   mask_dilation: 3
   epsilon:      0.06274510     # 16/255 — salience mode ceiling; fallback if region_aware: false
   epsilon_min:  0.01568627     # 4/255  — salience mode floor
+  salience_budget: true
 
   ensemble_weighting: uniform
 

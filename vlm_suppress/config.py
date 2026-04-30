@@ -82,12 +82,10 @@ class AttackConfig:
     # epsilon (above) is IGNORED when region_aware=True — the two budgets
     # below replace it entirely.
     #
-    # Rationale: background pixels do not affect readability, so they can
-    # absorb a larger perturbation to maximise the attack signal without
-    # harming human readability. Text pixels must stay within a tighter
-    # budget to preserve legibility.
-    #
-    # epsilon_text > epsilon_bg is the expected operating regime.
+    # epsilon_text > epsilon_bg is the expected operating regime:
+    # text pixels receive the larger budget to concentrate suppression
+    # energy where the model extracts content; background pixels receive
+    # a small budget to avoid unnecessary readability disruption.
     # Setting both equal to epsilon reproduces the uniform baseline.
     region_aware:   bool  = True
     epsilon_text:   float = 0.06274510   # text pixels — large budget
@@ -101,7 +99,7 @@ class AttackConfig:
     # computed once before the PGD loop. Requires word_boxes to be non-empty.
     # [ABLATION: uniform-text budget] is the active path when this is False.
     salience_budget: bool  = False
-    epsilon_min:     float = 0.008   # budget floor for text pixels (salience mode)
+    epsilon_min:     float = 0.01568627   # budget floor for text pixels (salience mode), 4/255
 
 
 @dataclass
