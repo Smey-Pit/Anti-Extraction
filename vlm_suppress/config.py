@@ -87,11 +87,11 @@ class AttackConfig:
     # harming human readability. Text pixels must stay within a tighter
     # budget to preserve legibility.
     #
-    # epsilon_text < epsilon_bg is the expected operating regime.
+    # epsilon_text > epsilon_bg is the expected operating regime.
     # Setting both equal to epsilon reproduces the uniform baseline.
     region_aware:   bool  = True
-    epsilon_text:   float = 4.0  / 255.0   # tight — preserves legibility
-    epsilon_bg:     float = 16.0 / 255.0   # loose — background can absorb more
+    epsilon_text:   float = 0.06274510   # text pixels — large budget
+    epsilon_bg:     float = 0.00392157   # background pixels — small budget
     # Mask dilation radius in pixels — expands the text mask slightly to
     # cover anti-aliasing fringe pixels around character edges.
     mask_dilation:  int   = 3
