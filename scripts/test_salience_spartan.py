@@ -9,8 +9,8 @@ computation, prints statistics, and saves a three-panel visualisation.
 Usage:
     python scripts/test_salience_spartan.py --config configs/attack.yaml
 
-The script forces cfg.attack.salience_budget = True regardless of what the
-YAML contains, so no YAML edits are required.
+The script forces cfg.attack.salience_budget = True as a safety net
+(attack.yaml already has salience_budget: true).
 """
 
 from __future__ import annotations
@@ -201,9 +201,16 @@ def main() -> None:
         raise RuntimeError(
             "Dataset is empty — check data_dir, split_filter, and other filters in config."
         )
-    sample    = dataset[0]
+    sample     = dataset[0]
     word_boxes = sample.scaled_word_boxes()
-    H, W      = sample.image_tensor.shape[-2], sample.image_tensor.shape[-1]
+    H, W       = sample.image_tensor.shape[-2], sample.image_tensor.shape[-1]
+
+    if not word_boxes:
+        raise RuntimeError(
+            f"Sample '{sample.image_id}' has no word boxes. "
+            "build_salience_budget_map requires bounding box annotations. "
+            "Check that labels.jsonl contains word_boxes for this sample."
+        )
 
     print(f"\nSample:          {sample.image_id}")
     print(f"Image shape:     {tuple(sample.image_tensor.shape)}  (C={3}, H={H}, W={W})")

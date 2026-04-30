@@ -4,8 +4,8 @@
 # Builds spatial binary masks that separate text regions from background.
 #
 # These masks drive the region-aware perturbation budget split:
-#   - text pixels    → tight epsilon (epsilon_text)
-#   - background     → loose epsilon (epsilon_bg)
+#   - text pixels    → large epsilon (epsilon_text)
+#   - background     → small epsilon (epsilon_bg)
 #
 # The masks are built from word_boxes (or char_boxes if available) which
 # are already part of your dataset schema. No model inference needed.
@@ -32,8 +32,8 @@ def build_text_mask(
 ) -> torch.Tensor:
     """
     Returns a binary mask of shape (1, H, W) on `device`:
-        1.0  →  text region  (tight epsilon applies)
-        0.0  →  background   (loose epsilon applies)
+        1.0  →  text region  (large epsilon applies)
+        0.0  →  background   (small epsilon applies)
 
     If word_boxes is empty, falls back to a full-ones mask (uniform budget,
     same behaviour as the old implementation).
