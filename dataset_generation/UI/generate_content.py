@@ -104,9 +104,9 @@ def generate_category(
 
         empty_streak = 0
 
-        for item in batch:
+        for i, item in enumerate(batch):
             item["_category"]   = category
-            item["_content_id"] = f"{category}_{already + len(results):04d}"
+            item["_content_id"] = f"{category}_{already + len(results) + i:04d}"
 
         results.extend(batch[: n_needed - len(results)])
         print(f"  [{category}] {len(results)}/{n_needed} collected.", flush=True)
