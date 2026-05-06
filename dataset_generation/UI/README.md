@@ -134,21 +134,25 @@ python generate_content.py --total 1000 --out content_bank.json --resume
 
 Renders images from the saved content bank. **No LLM calls. No GPU needed.**
 Safe to run on HPC CPU nodes.
-
+### Step 2.1 - Patching banking json
+```bash
+python /content/Anti-Extraction/dataset_generation/UI/patch_identifiers.py --input /content/Anti-Extraction/data/ui_dataset/ui_dataset_content_bank.json
+```
+### Step 2.2 - Rendering
 ### Arguments
 
 | Argument | Default | Description |
 |---|---|---|
-| `--content PATH` | `content_bank.json` | Content bank from Step 1 |
-| `--out DIR` | `domain2_ui_dataset` | Output directory |
+| `--content PATH` | `ui_dataset_content_bank.json` | Content bank from Step 1 |
+| `--out DIR` | `data\ui_dataset` | Output directory |
 | `--seed N` | `42` | Layout seed — controls font, size, canvas, margins |
-| `--categories` | all 4 | Subset to render: `banking medical news copyright` |
+| `--categories` | all 7 | Subset to render: `banking medical news copyright legal identity communications` |
 | `--mode LABEL` | `pil` | Label written into annotations (useful for paired renders) |
 | `--dry-run` | off | Print plan without writing files |
 
 ### Basic render
 ```bash
-python render_images.py --content content_bank.json --out domain2_ui_dataset/
+python render_images.py --content Anti-Extraction/data/ui_dataset/ui_dataset_content_bank.json --out data/ui_dataset
 ```
 
 ### Paired renders from the same content

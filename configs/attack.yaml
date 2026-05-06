@@ -3,9 +3,9 @@ phase: attack
 seed: 42
 
 data:
-  data_dir: data/synthetic_dataset
-  data_dir_additional: null
-  domain: "synthetic"
+  data_dir: data/ui_dataset
+  data_dir_additional: pil
+  domain: "ui"
   n_images: 1
   image_size: [192, 768]
   split_filter: "train"
