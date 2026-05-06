@@ -147,10 +147,14 @@ class TextImageDataset(Dataset):
         self.data_dir   = Path(data_dir)
         self.image_size = image_size
 
-        labels_path = self.data_dir / f"labels{data_dir_additional}.jsonl"
+        if data_dir_additional is not None:
+            labels_path = self.data_dir / f"labels_{data_dir_additional}.jsonl"
+        else:
+            labels_path = self.data_dir / f"labels.jsonl"
+            
         if not labels_path.exists():
             raise FileNotFoundError(
-                f"labels{data_dir_additional}.jsonl not found in {self.data_dir}\n"
+                f"{labels_path} not found in {self.data_dir}\n"
                 f"Expected: {labels_path}"
             )
 

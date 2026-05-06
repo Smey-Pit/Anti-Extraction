@@ -251,7 +251,7 @@
     "layout_type": "multi_line",
     "img_width": 768,
     "img_height": 192,
-    "split": "debug"
+    "split": "train"
   },
   {
     "image_id": "sample_0002",
@@ -554,7 +554,7 @@
     "layout_type": "single_line",
     "img_width": 768,
     "img_height": 192,
-    "split": "debug"
+    "split": "train"
   },
   {
     "image_id": "sample_0003",
@@ -1091,7 +1091,7 @@
     "layout_type": "single_line",
     "img_width": 768,
     "img_height": 192,
-    "split": "debug"
+    "split": "train"
   },
   {
     "image_id": "sample_0004",
@@ -1241,7 +1241,7 @@
     "layout_type": "single_line",
     "img_width": 768,
     "img_height": 192,
-    "split": "debug"
+    "split": "train"
   },
   {
     "image_id": "sample_0005",
@@ -1418,7 +1418,7 @@
     "layout_type": "single_line",
     "img_width": 768,
     "img_height": 192,
-    "split": "debug"
+    "split": "train"
   },
   {
     "image_id": "sample_0006",
@@ -1595,7 +1595,7 @@
     "layout_type": "single_line",
     "img_width": 768,
     "img_height": 192,
-    "split": "debug"
+    "split": "train"
   },
   {
     "image_id": "sample_0007",
@@ -2115,7 +2115,7 @@
     "layout_type": "key_value",
     "img_width": 768,
     "img_height": 192,
-    "split": "debug"
+    "split": "train"
   },
   {
     "image_id": "sample_0008",
@@ -2310,7 +2310,7 @@
     "layout_type": "single_line",
     "img_width": 768,
     "img_height": 192,
-    "split": "debug"
+    "split": "train"
   },
   {
     "image_id": "sample_0009",
@@ -2861,7 +2861,7 @@
     "layout_type": "key_value",
     "img_width": 768,
     "img_height": 192,
-    "split": "debug"
+    "split": "train"
   },
   {
     "image_id": "sample_0010",
@@ -3570,7 +3570,7 @@
     "layout_type": "key_value",
     "img_width": 768,
     "img_height": 192,
-    "split": "debug"
+    "split": "train"
   },
   {
     "image_id": "sample_0011",
@@ -4270,7 +4270,7 @@
     "layout_type": "multi_line",
     "img_width": 768,
     "img_height": 192,
-    "split": "debug"
+    "split": "train"
   },
   {
     "image_id": "sample_0012",
@@ -4447,7 +4447,7 @@
     "layout_type": "single_line",
     "img_width": 768,
     "img_height": 192,
-    "split": "debug"
+    "split": "train"
   },
   {
     "image_id": "sample_0013",
@@ -4597,7 +4597,7 @@
     "layout_type": "single_line",
     "img_width": 768,
     "img_height": 192,
-    "split": "debug"
+    "split": "train"
   },
   {
     "image_id": "sample_0014",
@@ -4756,7 +4756,7 @@
     "layout_type": "single_line",
     "img_width": 768,
     "img_height": 192,
-    "split": "debug"
+    "split": "train"
   },
   {
     "image_id": "sample_0015",
@@ -4906,7 +4906,7 @@
     "layout_type": "single_line",
     "img_width": 768,
     "img_height": 192,
-    "split": "debug"
+    "split": "train"
   },
   {
     "image_id": "sample_0016",
@@ -5047,7 +5047,7 @@
     "layout_type": "single_line",
     "img_width": 768,
     "img_height": 192,
-    "split": "debug"
+    "split": "train"
   },
   {
     "image_id": "sample_0017",
@@ -5197,7 +5197,7 @@
     "layout_type": "single_line",
     "img_width": 768,
     "img_height": 192,
-    "split": "debug"
+    "split": "train"
   },
   {
     "image_id": "sample_0018",
@@ -5374,7 +5374,7 @@
     "layout_type": "single_line",
     "img_width": 768,
     "img_height": 192,
-    "split": "debug"
+    "split": "train"
   },
   {
     "image_id": "sample_0019",
@@ -6092,7 +6092,7 @@
     "layout_type": "multi_line",
     "img_width": 768,
     "img_height": 192,
-    "split": "debug"
+    "split": "train"
   },
   {
     "image_id": "sample_0020",
@@ -6828,7 +6828,7 @@
     "layout_type": "key_value",
     "img_width": 768,
     "img_height": 192,
-    "split": "debug"
+    "split": "train"
   },
   {
     "image_id": "sample_0021",
@@ -7203,7 +7203,7 @@
     "layout_type": "single_line",
     "img_width": 768,
     "img_height": 192,
-    "split": "debug"
+    "split": "train"
   },
   {
     "image_id": "sample_0022",
@@ -7849,7 +7849,7 @@
     "layout_type": "multi_line",
     "img_width": 768,
     "img_height": 192,
-    "split": "debug"
+    "split": "train"
   },
   {
     "image_id": "sample_0023",
@@ -8130,7 +8130,7 @@
     "layout_type": "multi_line",
     "img_width": 768,
     "img_height": 192,
-    "split": "debug"
+    "split": "train"
   },
   {
     "image_id": "sample_0024",
@@ -8280,7 +8280,7 @@
     "layout_type": "single_line",
     "img_width": 768,
     "img_height": 192,
-    "split": "debug"
+    "split": "train"
   },
   {
     "image_id": "sample_0025",
@@ -8520,7 +8520,7 @@
     "layout_type": "single_line",
     "img_width": 768,
     "img_height": 192,
-    "split": "debug"
+    "split": "train"
   },
   {
     "image_id": "sample_0026",
@@ -8972,7 +8972,7 @@
     "layout_type": "key_value",
     "img_width": 768,
     "img_height": 192,
-    "split": "debug"
+    "split": "train"
   },
   {
     "image_id": "sample_0027",
@@ -9410,7 +9410,7 @@
     "layout_type": "single_line",
     "img_width": 768,
     "img_height": 192,
-    "split": "debug"
+    "split": "train"
   },
   {
     "image_id": "sample_0028",
@@ -9803,7 +9803,7 @@
     "layout_type": "single_line",
     "img_width": 768,
     "img_height": 192,
-    "split": "debug"
+    "split": "train"
   },
   {
     "image_id": "sample_0029",
@@ -10530,7 +10530,7 @@
     "layout_type": "multi_line",
     "img_width": 768,
     "img_height": 192,
-    "split": "debug"
+    "split": "train"
   },
   {
     "image_id": "sample_0030",
@@ -10671,7 +10671,7 @@
     "layout_type": "single_line",
     "img_width": 768,
     "img_height": 192,
-    "split": "debug"
+    "split": "train"
   },
   {
     "image_id": "sample_0031",
@@ -10866,7 +10866,7 @@
     "layout_type": "single_line",
     "img_width": 768,
     "img_height": 192,
-    "split": "debug"
+    "split": "train"
   },
   {
     "image_id": "sample_0032",
@@ -11530,7 +11530,7 @@
     "layout_type": "key_value",
     "img_width": 768,
     "img_height": 192,
-    "split": "debug"
+    "split": "train"
   },
   {
     "image_id": "sample_0033",
@@ -11680,7 +11680,7 @@
     "layout_type": "single_line",
     "img_width": 768,
     "img_height": 192,
-    "split": "debug"
+    "split": "train"
   },
   {
     "image_id": "sample_0034",
@@ -11911,7 +11911,7 @@
     "layout_type": "single_line",
     "img_width": 768,
     "img_height": 192,
-    "split": "debug"
+    "split": "train"
   },
   {
     "image_id": "sample_0035",
@@ -12061,7 +12061,7 @@
     "layout_type": "single_line",
     "img_width": 768,
     "img_height": 192,
-    "split": "debug"
+    "split": "train"
   },
   {
     "image_id": "sample_0036",
@@ -12977,7 +12977,7 @@
     "layout_type": "multi_line",
     "img_width": 768,
     "img_height": 192,
-    "split": "debug"
+    "split": "train"
   },
   {
     "image_id": "sample_0037",
@@ -13442,7 +13442,7 @@
     "layout_type": "single_line",
     "img_width": 768,
     "img_height": 192,
-    "split": "debug"
+    "split": "train"
   },
   {
     "image_id": "sample_0038",
@@ -14115,7 +14115,7 @@
     "layout_type": "key_value",
     "img_width": 768,
     "img_height": 192,
-    "split": "debug"
+    "split": "train"
   },
   {
     "image_id": "sample_0039",
@@ -14274,7 +14274,7 @@
     "layout_type": "single_line",
     "img_width": 768,
     "img_height": 192,
-    "split": "debug"
+    "split": "train"
   },
   {
     "image_id": "sample_0040",
@@ -14848,7 +14848,7 @@
     "layout_type": "key_value",
     "img_width": 768,
     "img_height": 192,
-    "split": "debug"
+    "split": "train"
   },
   {
     "image_id": "sample_0041",
@@ -15007,7 +15007,7 @@
     "layout_type": "single_line",
     "img_width": 768,
     "img_height": 192,
-    "split": "debug"
+    "split": "train"
   },
   {
     "image_id": "sample_0042",
@@ -15788,7 +15788,7 @@
     "layout_type": "multi_line",
     "img_width": 768,
     "img_height": 192,
-    "split": "debug"
+    "split": "train"
   },
   {
     "image_id": "sample_0043",
@@ -16010,7 +16010,7 @@
     "layout_type": "single_line",
     "img_width": 768,
     "img_height": 192,
-    "split": "debug"
+    "split": "train"
   },
   {
     "image_id": "sample_0044",
@@ -16759,7 +16759,7 @@
     "layout_type": "multi_line",
     "img_width": 768,
     "img_height": 192,
-    "split": "debug"
+    "split": "train"
   },
   {
     "image_id": "sample_0045",
@@ -16945,7 +16945,7 @@
     "layout_type": "single_line",
     "img_width": 768,
     "img_height": 192,
-    "split": "debug"
+    "split": "train"
   },
   {
     "image_id": "sample_0046",
@@ -17667,7 +17667,7 @@
     "layout_type": "multi_line",
     "img_width": 768,
     "img_height": 192,
-    "split": "debug"
+    "split": "train"
   },
   {
     "image_id": "sample_0047",
@@ -18060,7 +18060,7 @@
     "layout_type": "single_line",
     "img_width": 768,
     "img_height": 192,
-    "split": "debug"
+    "split": "train"
   },
   {
     "image_id": "sample_0048",
@@ -18796,7 +18796,7 @@
     "layout_type": "multi_line",
     "img_width": 768,
     "img_height": 192,
-    "split": "debug"
+    "split": "train"
   },
   {
     "image_id": "sample_0049",
@@ -18937,7 +18937,7 @@
     "layout_type": "single_line",
     "img_width": 768,
     "img_height": 192,
-    "split": "debug"
+    "split": "train"
   },
   {
     "image_id": "sample_0050",
@@ -19501,6 +19501,6 @@
     "layout_type": "single_line",
     "img_width": 768,
     "img_height": 192,
-    "split": "debug"
+    "split": "train"
   }
 ]

@@ -1,13 +1,14 @@
-run_id: attack_new_ensemble_k1_llama32
+run_id: attack_new_salience
 phase: attack
 seed: 42
 
 data:
-  data_dir: data/synthetic
-  domain: synthetic
-  n_images: 50
+  data_dir: data/synthetic_dataset
+  data_dir_additional: null
+  domain: "synthetic"
+  n_images: 1
   image_size: [192, 768]
-  split_filter: "debug"
+  split_filter: "train"
   category_filter: null
   contrast_filter: null
 
