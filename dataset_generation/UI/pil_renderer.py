@@ -266,6 +266,7 @@ class Composer:
         self.draw = draw
         self.lay  = lay
         self.y    = lay.header_h + lay.para_gap   # start below header
+        self._word_boxes: list[list[dict]] = []
 
     @property
     def x(self) -> int:
@@ -277,6 +278,27 @@ class Composer:
     def skip(self, px: int) -> None:
         self.y += px
 
+    def _text(self, x, y, text, font, fill) -> None:
+        # textbbox gives ink bounds for localisation;
+        # textlength gives typographic advance for cursor positioning
+        self.draw.text((x, y), text, font=font, fill=fill)
+        if not text.strip():
+            return
+        words = text.split()
+        cur_x = float(x)
+        line_boxes = []
+        for word in words:
+            bbox = self.draw.textbbox((cur_x, y), word, font=font)
+            line_boxes.append({"word": word, "box": [bbox[0], bbox[1], bbox[2], bbox[3]]})
+            cur_x += self.draw.textlength(word + " ", font=font)
+        self._word_boxes.append(line_boxes)
+
+    def draw_raw_text(self, x, y, text, font, fill) -> None:
+        self._text(x, y, text, font, fill)
+
+    def get_word_boxes(self) -> list[list[dict]]:
+        return self._word_boxes
+
     def draw_header(self, main_text: str, sub_text: str) -> None:
         """Coloured header strip with main label and sub-label."""
         lay = self.lay
@@ -287,16 +309,16 @@ class Composer:
         font_sub   = _load_font(lay.font_family, lay.small_size)
 
         title_y = (lay.header_h - lay.title_size) // 2 - 2
-        self.draw.text((lay.margin_left, title_y), main_text,
-                       font=font_title, fill=(255, 255, 255))
+        self._text(lay.margin_left, title_y, main_text,
+                   font_title, (255, 255, 255))
 
         # Sub-label right-aligned
         if sub_text:
             sub_w = self.draw.textlength(sub_text, font=font_sub)
             sub_x = lay.W - lay.margin_right - int(sub_w)
             sub_y = (lay.header_h - lay.small_size) // 2
-            self.draw.text((sub_x, sub_y), sub_text,
-                           font=font_sub, fill=(220, 220, 220))
+            self._text(sub_x, sub_y, sub_text,
+                       font_sub, (220, 220, 220))
 
         self.y = lay.header_h + lay.para_gap
 
@@ -311,8 +333,8 @@ class Composer:
             fill=lay.subheader_color,
         )
         font = _load_font(lay.font_family, lay.heading_size)
-        self.draw.text((lay.margin_left, self.y + 2), text,
-                       font=font, fill=(240, 240, 240))
+        self._text(lay.margin_left, self.y + 2, text,
+                   font, (240, 240, 240))
         self.y += bar_h + lay.para_gap
 
     def draw_label_value(self, label: str, value: str,
@@ -325,11 +347,11 @@ class Composer:
         font_val = _load_font(lay.font_family + "_bold", lay.body_size)
         vc = value_color or lay.text_color
 
-        self.draw.text((self.x, self.y), label.upper(),
-                       font=font_lbl, fill=lay.label_color)
+        self._text(self.x, self.y, label.upper(),
+                   font_lbl, lay.label_color)
         self.y += lay.small_line_h
-        self.draw.text((self.x, self.y), value,
-                       font=font_val, fill=vc)
+        self._text(self.x, self.y, value,
+                   font_val, vc)
         self.y += lay.line_h + 4
 
     def draw_inline_fields(self, fields: list[tuple[str, str]]) -> None:
@@ -347,10 +369,10 @@ class Composer:
 
         for i, (label, value) in enumerate(fields):
             cx = self.x + i * col_w
-            self.draw.text((cx, self.y), label.upper(),
-                           font=font_lbl, fill=lay.label_color)
-            self.draw.text((cx, self.y + lay.small_line_h), value,
-                           font=font_val, fill=lay.text_color)
+            self._text(cx, self.y, label.upper(),
+                       font_lbl, lay.label_color)
+            self._text(cx, self.y + lay.small_line_h, value,
+                       font_val, lay.text_color)
 
         self.y += lay.small_line_h + lay.line_h + lay.para_gap
 
@@ -360,8 +382,8 @@ class Composer:
         if not self._fits(lay.heading_size + 6):
             return
         font = _load_font(lay.font_family + "_bold", lay.heading_size)
-        self.draw.text((self.x, self.y), text,
-                       font=font, fill=lay.accent_color)
+        self._text(self.x, self.y, text,
+                   font, lay.accent_color)
         # Underline
         line_y = self.y + lay.heading_size + 2
         self.draw.line(
@@ -386,7 +408,7 @@ class Composer:
         for line in textwrap.wrap(text, width=wrap_w):
             if not self._fits(lay.line_h):
                 break
-            self.draw.text((self.x, self.y), line, font=font, fill=col)
+            self._text(self.x, self.y, line, font, col)
             self.y += lay.line_h
 
     def draw_small_text(self, text: str, color: Optional[tuple] = None) -> None:
@@ -396,7 +418,7 @@ class Composer:
             return
         font = _load_font(lay.font_family, lay.small_size)
         col = color or lay.label_color
-        self.draw.text((self.x, self.y), str(text), font=font, fill=col)
+        self._text(self.x, self.y, str(text), font, col)
         self.y += lay.small_line_h
 
     def draw_table_row(self, cols: list[str],
@@ -424,7 +446,7 @@ class Composer:
                 tx = x + col_px - int(tw) - 4
             else:
                 tx = x
-            self.draw.text((tx, self.y + 2), str(col_text), font=font, fill=col_color)
+            self._text(tx, self.y + 2, str(col_text), font, col_color)
             x += col_px
 
         self.y += lay.small_line_h + 4
@@ -461,7 +483,7 @@ class Composer:
         font = _load_font(lay.font_family + "_bold", lay.body_size)
         ty = self.y + 6
         for line in lines:
-            self.draw.text((self.x + 12, ty), line, font=font, fill=color)
+            self._text(self.x + 12, ty, line, font, color)
             ty += lay.line_h
 
         self.y += box_h + lay.para_gap
@@ -525,7 +547,7 @@ def render_banking(data: dict, lay: LayoutSpec, rng: random.Random) -> Image.Ima
     if note:
         c.draw_small_text(f"⚠  {note}", color=(130, 90, 10))
 
-    return img
+    return img, c.get_word_boxes()
 
 
 def render_medical(data: dict, lay: LayoutSpec, rng: random.Random) -> Image.Image:
@@ -584,7 +606,7 @@ def render_medical(data: dict, lay: LayoutSpec, rng: random.Random) -> Image.Ima
     if fu:
         c.draw_small_text(f"Follow-up: {fu}", color=lay.good_color)
 
-    return img
+    return img, c.get_word_boxes()
 
 
 def render_news(data: dict, lay: LayoutSpec, rng: random.Random) -> Image.Image:
@@ -601,7 +623,7 @@ def render_news(data: dict, lay: LayoutSpec, rng: random.Random) -> Image.Image:
     cat_tag = data.get("category_tag", "")
     if cat_tag:
         font_tag = _load_font(lay.font_family + "_bold", lay.small_size)
-        draw.text((c.x, c.y), cat_tag.upper(), font=font_tag, fill=lay.accent_color)
+        c.draw_raw_text(c.x, c.y, cat_tag.upper(), font_tag, lay.accent_color)
         c.y += lay.small_line_h + 4
 
     # Headline — large bold
@@ -612,7 +634,7 @@ def render_news(data: dict, lay: LayoutSpec, rng: random.Random) -> Image.Image:
     for line in textwrap.wrap(headline, width=wrap_w):
         if not c._fits(lay.title_size + 4):
             break
-        draw.text((c.x, c.y), line, font=font_hl, fill=lay.text_color)
+        c.draw_raw_text(c.x, c.y, line, font_hl, lay.text_color)
         c.y += lay.title_size + 6
 
     c.skip(4)
@@ -639,7 +661,7 @@ def render_news(data: dict, lay: LayoutSpec, rng: random.Random) -> Image.Image:
     if tags and c._fits(lay.small_line_h + 4):
         c.draw_small_text("Tags: " + "  ·  ".join(tags), color=lay.label_color)
 
-    return img
+    return img, c.get_word_boxes()
 
 
 def render_copyright(data: dict, lay: LayoutSpec, rng: random.Random) -> Image.Image:
@@ -687,13 +709,13 @@ def render_copyright(data: dict, lay: LayoutSpec, rng: random.Random) -> Image.I
                     lay.body_size,
                 )
                 if c._fits(lay.line_h):
-                    draw.text((c.x + indent, c.y), stripped, font=font, fill=lay.text_color)
+                    c.draw_raw_text(c.x + indent, c.y, stripped, font, lay.text_color)
                     c.y += lay.line_h
     else:
         # Book excerpt or newspaper feature — wrapped prose
         c.draw_body_text(content)
 
-    return img
+    return img, c.get_word_boxes()
 
 
 def render_legal(data: dict, lay: LayoutSpec, rng: random.Random) -> Image.Image:
@@ -752,7 +774,7 @@ def render_legal(data: dict, lay: LayoutSpec, rng: random.Random) -> Image.Image
         c.skip(lay.para_gap)
         c.draw_small_text(notary, color=lay.label_color)
 
-    return img
+    return img, c.get_word_boxes()
 
 
 def render_identity(data: dict, lay: LayoutSpec, rng: random.Random) -> Image.Image:
@@ -800,7 +822,7 @@ def render_identity(data: dict, lay: LayoutSpec, rng: random.Random) -> Image.Im
         font_mono = _load_font("mono", lay.small_size)
         for line in [mrz1, mrz2]:
             if line and c._fits(lay.small_line_h):
-                draw.text((c.x, c.y), str(line), font=font_mono, fill=lay.text_color)
+                c.draw_raw_text(c.x, c.y, str(line), font_mono, lay.text_color)
                 c.y += lay.small_line_h
 
     sec = data.get("security_features", [])
@@ -809,7 +831,7 @@ def render_identity(data: dict, lay: LayoutSpec, rng: random.Random) -> Image.Im
         c.draw_small_text("Security Features: " + "  ·  ".join(sec),
                           color=lay.label_color)
 
-    return img
+    return img, c.get_word_boxes()
 
 
 def render_communications(data: dict, lay: LayoutSpec,
@@ -863,7 +885,7 @@ def render_communications(data: dict, lay: LayoutSpec,
         c.skip(lay.para_gap)
         c.draw_small_text(f"[Context: {ctx}]", color=lay.label_color)
 
-    return img
+    return img, c.get_word_boxes()
 
 
 # ---------------------------------------------------------------------------
@@ -902,4 +924,5 @@ def render_pil(
     """
     lay      = make_layout(category, rng)
     renderer = CATEGORY_RENDERERS[category]
-    return renderer(data, lay, rng)
+    image, word_boxes = renderer(data, lay, rng)
+    return image, word_boxes

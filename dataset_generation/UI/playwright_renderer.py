@@ -1108,6 +1108,30 @@ def build_html(item: dict, category: str) -> str:
 
 
 # ---------------------------------------------------------------------------
+# WORD-BOX LINE GROUPING
+# ---------------------------------------------------------------------------
+
+_LINE_GROUP_THRESHOLD_PX = 4
+
+
+def _group_into_lines(raw_boxes: list, H: int) -> list:
+    boxes = [b for b in raw_boxes if b["top"] < H]
+    if not boxes:
+        return []
+    boxes.sort(key=lambda b: b["top"])
+    lines = []
+    cur = [boxes[0]]
+    for b in boxes[1:]:
+        if b["top"] - cur[0]["top"] > _LINE_GROUP_THRESHOLD_PX:
+            lines.append(sorted(cur, key=lambda x: x["left"]))
+            cur = [b]
+        else:
+            cur.append(b)
+    lines.append(sorted(cur, key=lambda x: x["left"]))
+    return lines
+
+
+# ---------------------------------------------------------------------------
 # ASYNC RENDERER CLASS
 # ---------------------------------------------------------------------------
 
@@ -1196,10 +1220,50 @@ class PlaywrightRenderer:
         try:
             await page.set_content(html, wait_until="domcontentloaded")
             png_bytes = await page.screenshot(full_page=False)
+            raw_boxes = await page.evaluate("""() => {
+    const skip = new Set(['STYLE', 'SCRIPT', 'NOSCRIPT']);
+    const walker = document.createTreeWalker(
+        document.body,
+        NodeFilter.SHOW_TEXT,
+        { acceptNode(node) {
+            let el = node.parentElement;
+            while (el) {
+                if (skip.has(el.tagName)) return NodeFilter.FILTER_REJECT;
+                el = el.parentElement;
+            }
+            return NodeFilter.FILTER_ACCEPT;
+        }}
+    );
+    const spans = [];
+    let node;
+    while ((node = walker.nextNode())) {
+        const words = node.textContent.split(/\\s+/).filter(w => w.length > 0);
+        if (!words.length) continue;
+        const parts = node.textContent.split(/(\\s+)/);
+        const frag = document.createDocumentFragment();
+        for (const part of parts) {
+            if (!part || /^\\s+$/.test(part)) {
+                frag.appendChild(document.createTextNode(part));
+            } else {
+                const span = document.createElement('span');
+                span.className = '__wb';
+                span.textContent = part;
+                frag.appendChild(span);
+                spans.push(span);
+            }
+        }
+        node.parentNode.replaceChild(frag, node);
+    }
+    return spans.map(s => {
+        const r = s.getBoundingClientRect();
+        return { word: s.textContent, top: r.top, left: r.left, right: r.right, bottom: r.bottom };
+    });
+}""")
         finally:
             await page.close()
 
-        return png_bytes
+        word_boxes = _group_into_lines(raw_boxes, h)
+        return png_bytes, word_boxes
 
 
 # ---------------------------------------------------------------------------

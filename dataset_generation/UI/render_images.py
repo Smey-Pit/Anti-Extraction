@@ -214,7 +214,8 @@ def extract_full_text(category: str, item: dict) -> str:
 
 def build_annotation(item: dict, img_path: str,
                      render_mode: str, seed: int,
-                     layout_meta: dict) -> dict:
+                     layout_meta: dict,
+                     word_boxes: list = None) -> dict:
     category   = item["_category"]
     content_id = item["_content_id"]
     raw        = {k: v for k, v in item.items() if not k.startswith("_")}
@@ -233,6 +234,7 @@ def build_annotation(item: dict, img_path: str,
         "has_ambiguous_chars": False,
         "layout_type":         "web_portal",
         "text_category":       category,
+        "word_boxes":          word_boxes if word_boxes is not None else [],
     }
 
 
@@ -254,7 +256,7 @@ def render_pass_pil(items: list[dict], cfg: RenderConfig,
         item_rng   = make_item_rng(cfg.seed, content_id)
 
         try:
-            img = render_pil(item, category, item_rng)
+            img, word_boxes = render_pil(item, category, item_rng)
             img.save(str(img_path))
             n_ok += 1
 
@@ -274,6 +276,7 @@ def render_pass_pil(items: list[dict], cfg: RenderConfig,
                 item,
                 str(img_path.relative_to(out)),
                 "pil", cfg.seed, layout_meta,
+                word_boxes=word_boxes,
             )
             annotations.append(ann)
 
@@ -311,7 +314,7 @@ async def render_pass_playwright_async(
             item_rng   = make_item_rng(cfg.seed, content_id)
 
             try:
-                png_bytes = await renderer.render(item, category, rng=item_rng)
+                png_bytes, word_boxes = await renderer.render(item, category, rng=item_rng)
                 img_path.write_bytes(png_bytes)
                 n_ok += 1
 
@@ -334,6 +337,7 @@ async def render_pass_playwright_async(
                     item,
                     str(img_path.relative_to(out)),
                     "playwright", cfg.seed, layout_meta,
+                    word_boxes=word_boxes,
                 )
                 annotations.append(ann)
 
