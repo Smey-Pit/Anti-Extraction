@@ -128,16 +128,23 @@ def run_attack(
             else:
                 sal_surrogates = surrogates
 
-            # Wrap each surrogate for per-model lazy load/unload during the
-            # salience pass.  from_eager wraps already-loaded models as a
-            # no-op context so build_salience_budget_map's isinstance branch
-            # handles them without reloading.
+            # salience_lazy is only effective when the surrogates are real
+            # LazySurrogate instances (i.e. lazy_loading=True).  Wrapping
+            # already-loaded models in from_eager does not free VRAM — the
+            # originals remain resident.  Warn if the config is inconsistent.
             if cfg.salience_lazy:
+                import warnings
                 from vlm_suppress.models.lazy import LazySurrogate as _LS
-                sal_surrogates = [
-                    s if isinstance(s, _LS) else _LS.from_eager(s)
-                    for s in sal_surrogates
-                ]
+                non_lazy = [s for s in sal_surrogates if not isinstance(s, _LS)]
+                if non_lazy:
+                    warnings.warn(
+                        f"salience_lazy=True but {len(non_lazy)} surrogate(s) are "
+                        "already-loaded SurrogateModel instances — VRAM will NOT be "
+                        "freed between salience passes.  Set lazy_loading: true to "
+                        "actually reduce peak VRAM during the salience phase.",
+                        RuntimeWarning,
+                        stacklevel=2,
+                    )
 
             alpha_weights = [1.0 / len(sal_surrogates)] * len(sal_surrogates)
             eps_map = build_salience_budget_map(
