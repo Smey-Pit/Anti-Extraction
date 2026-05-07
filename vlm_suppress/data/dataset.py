@@ -194,12 +194,25 @@ class TextImageDataset(Dataset):
 
         if self.image_size is not None:
             target_h, target_w = self.image_size
-            img = img.resize((target_w, target_h), Image.LANCZOS)
-            scale_x = target_w / orig_w
-            scale_y = target_h / orig_h
+            scale    = min(target_w / orig_w, target_h / orig_h)
+            new_w    = round(orig_w * scale)
+            new_h    = round(orig_h * scale)
+            img_fit  = img.resize((new_w, new_h), Image.LANCZOS)
+            canvas   = Image.new("RGB", (target_w, target_h), (255, 255, 255))
+            offset_x = (target_w - new_w) // 2
+            offset_y = (target_h - new_h) // 2
+            canvas.paste(img_fit, (offset_x, offset_y))
+            img      = canvas
+            # Boxes are pre-adjusted to absolute canvas coordinates here,
+            # so scaled_word_boxes() (which applies scale_x/y again) must be
+            # a no-op — hence scale_x = scale_y = 1.0.
+            scale_x  = 1.0
+            scale_y  = 1.0
         else:
-            scale_x = 1.0
-            scale_y = 1.0
+            offset_x = 0
+            offset_y = 0
+            scale_x  = 1.0
+            scale_y  = 1.0
 
         tensor = torch.from_numpy(
             np.array(img, dtype=np.float32) / 255.0
@@ -209,11 +222,26 @@ class TextImageDataset(Dataset):
         # word_boxes: your schema is [[{"word":..,"box":..}, ...], [...]]
         # Flatten to a single list of [x0,y0,x1,y1]
         word_boxes_raw: list[list[WordBox]] = rec.get("word_boxes", [])
-        flat_word_boxes: list[Box] = [
-            wb["box"]
-            for line_words in word_boxes_raw
-            for wb in line_words
-        ]
+        if self.image_size is not None:
+            # Letterbox path: apply scale and paste offset so boxes are in
+            # absolute canvas coordinates. scale_x/y are 1.0 on the sample,
+            # making scaled_word_boxes() a no-op as intended.
+            flat_word_boxes: list[Box] = [
+                [
+                    int(wb["box"][0] * scale + offset_x),
+                    int(wb["box"][1] * scale + offset_y),
+                    int(wb["box"][2] * scale + offset_x),
+                    int(wb["box"][3] * scale + offset_y),
+                ]
+                for line_words in word_boxes_raw
+                for wb in line_words
+            ]
+        else:
+            flat_word_boxes = [
+                wb["box"]
+                for line_words in word_boxes_raw
+                for wb in line_words
+            ]
 
         # char_boxes: [[{"char":.., "box":..}, ...], [...]]
         # Flatten to single list of {"char": str, "box": Box}
