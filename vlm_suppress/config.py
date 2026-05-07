@@ -101,6 +101,10 @@ class AttackConfig:
     salience_budget: bool  = False
     epsilon_min:     float = 0.01568627   # budget floor for text pixels (salience mode), 4/255
 
+    # Indices into the full surrogate list (opt + held-out) to use when
+    # computing the salience map. None means use only the opt pool (surrogates).
+    salience_surrogate_indices: Optional[list[int]] = None
+
 
 @dataclass
 class DataConfig:

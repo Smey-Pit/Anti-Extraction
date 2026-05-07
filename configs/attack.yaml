@@ -37,6 +37,11 @@ attack:
   epsilon:      0.06274510     # 16/255 — salience mode ceiling; fallback if region_aware: false
   epsilon_min:  0.01568627     # 4/255  — salience mode floor
   salience_budget: true
+  # Indices into the full surrogate list (opt + held-out, in declaration order)
+  # used to compute the salience map.  0-1 = opt surrogates (internvl3_5,
+  # paligemma2); 2-4 reserved for held-out surrogates once held_out_indices
+  # is populated.
+  salience_surrogate_indices: [0, 1, 2, 3, 4]
 
   ensemble_weighting: uniform
 
@@ -51,23 +56,23 @@ kappa_sweep:
   - 0.07
 
 surrogates:
-  - name: internvl3_5
-    model_id: OpenGVLab/InternVL3_5-8B
-    dtype: bfloat16
-    max_new_tokens: 256
-    alpha: 1.0
-  
-  - name: paligemma2
-    model_id: google/paligemma2-3b-mix-448
-    dtype: bfloat16
-    max_new_tokens: 256
-    alpha: 1.0
-  
-  # - name: llama3_2
-  #   model_id: meta-llama/Llama-3.2-11B-Vision-Instruct
+  # - name: internvl3_5
+  #   model_id: OpenGVLab/InternVL3_5-8B
   #   dtype: bfloat16
   #   max_new_tokens: 256
   #   alpha: 1.0
+  
+  # - name: paligemma2
+  #   model_id: google/paligemma2-3b-mix-448
+  #   dtype: bfloat16
+  #   max_new_tokens: 256
+  #   alpha: 1.0
+  
+  - name: llama3_2
+    model_id: meta-llama/Llama-3.2-11B-Vision-Instruct
+    dtype: bfloat16
+    max_new_tokens: 256
+    alpha: 1.0
   
 
 held_out_indices: []           # both surrogates in optimisation ensemble

@@ -57,13 +57,14 @@ class AttackResult:
 
 
 def run_attack(
-    image_id:      str,
-    x_orig:        torch.Tensor,          # (3, H, W) float32 [0,1] CPU
-    transcript:    str,
-    surrogates:    list[SurrogateModel],
-    cfg:           AttackConfig,
-    word_boxes:    list[list[int]] | None = None,
-    font_embedder: object = None,
+    image_id:       str,
+    x_orig:         torch.Tensor,          # (3, H, W) float32 [0,1] CPU
+    transcript:     str,
+    surrogates:     list[SurrogateModel],
+    cfg:            AttackConfig,
+    word_boxes:     list[list[int]] | None = None,
+    font_embedder:  object = None,
+    all_surrogates: list[SurrogateModel] | None = None,
 ) -> AttackResult:
     """
     Run the constrained PGD attack for one image.
@@ -112,14 +113,26 @@ def run_attack(
             )
         else:
             # [SALIENCE BUDGET] Phase 1: compute salience map before PGD loop
-            alpha_weights = getattr(cfg, 'alpha_weights', None)
-            if alpha_weights is None:
-                alpha_weights = [1.0 / len(surrogates)] * len(surrogates)
+            # Select the surrogate pool for salience estimation.
+            # cfg.salience_surrogate_indices picks specific models from the
+            # full pool (opt + held-out); None falls back to opt pool only.
+            _pool = all_surrogates if all_surrogates is not None else surrogates
+            if cfg.salience_surrogate_indices is not None:
+                sal_surrogates = [
+                    _pool[i] for i in cfg.salience_surrogate_indices
+                    if i < len(_pool)
+                ]
+                if not sal_surrogates:
+                    sal_surrogates = surrogates
+            else:
+                sal_surrogates = surrogates
+
+            alpha_weights = [1.0 / len(sal_surrogates)] * len(sal_surrogates)
             eps_map = build_salience_budget_map(
                 image_tensor  = x_orig_d.unsqueeze(0),
                 transcript    = transcript,
                 word_boxes    = word_boxes,
-                surrogates    = surrogates,
+                surrogates    = sal_surrogates,
                 alpha_weights = alpha_weights,
                 epsilon_min   = cfg.epsilon_min,
                 epsilon_max   = cfg.epsilon,        # reuse cfg.epsilon as ceiling

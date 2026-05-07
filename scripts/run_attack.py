@@ -157,6 +157,7 @@ def _run_single_config(
             surrogates=opt_surrogates,
             cfg=cfg.attack,
             word_boxes=sample.scaled_word_boxes(),   # always use scaled boxes
+            all_surrogates=opt_surrogates + heldout_surrogates,
         )
 
         # ── Adversarial transcriptions ─────────────────────────────────────

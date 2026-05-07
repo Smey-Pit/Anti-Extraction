@@ -37,6 +37,10 @@ attack:
   epsilon:      0.06274510     # 16/255 — salience mode ceiling; fallback if region_aware: false
   epsilon_min:  0.01568627     # 4/255  — salience mode floor
   salience_budget: true
+  # Indices into the full surrogate list (opt + held-out, in declaration order)
+  # used to compute the salience map.  0 = opt surrogate (llava16);
+  # 1-4 reserved for held-out surrogates once held_out_indices is populated.
+  salience_surrogate_indices: [0, 1, 2, 3, 4]
 
   ensemble_weighting: uniform
 
