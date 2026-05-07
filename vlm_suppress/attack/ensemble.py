@@ -70,17 +70,23 @@ def compute_FM_ens(
     alphas = _compute_alphas(surrogates, cfg)
 
     if lazy:
+        # All surrogates share the same x_delta = clamp(x_orig_d + delta) node.
+        # Each backward would free clamp's saved mask, breaking the second
+        # surrogate's backward.  retain_graph=True keeps the shared path alive
+        # across all FM backward calls; the final obj.backward() in the PGD loop
+        # (carrying only the penalty, since fm is detached) is the last consumer
+        # and frees everything with the default retain_graph=False.
         fm_total = torch.tensor(0.0, device=image_tensor.device, dtype=torch.float32)
         for surrogate, alpha in zip(surrogates, alphas):
             if isinstance(surrogate, LazySurrogate):
                 with surrogate as model:
                     loss_k = _weighted_contribution(model, image_tensor, transcript, cfg, alpha)
-                    loss_k.backward()
+                    loss_k.backward(retain_graph=True)
             else:
                 # Eagerly-loaded model in a lazy run (e.g. a held-out surrogate
                 # selected for this step) — call directly and backward immediately.
                 loss_k = _weighted_contribution(surrogate, image_tensor, transcript, cfg, alpha)
-                loss_k.backward()
+                loss_k.backward(retain_graph=True)
             fm_total = fm_total + loss_k.detach()
         return fm_total
     else:

@@ -48,9 +48,7 @@ attack:
   ensemble_weighting: uniform
 
 epsilon_sweep:
-  - 0.01568627                 # 4/255
-  - 0.03137255                 # 8/255
-  - 0.06274509                 # 16/255
+  - 0.50
 
 kappa_sweep:
   - 0.03
@@ -58,17 +56,17 @@ kappa_sweep:
   - 0.07
 
 surrogates:
-  # - name: internvl3_5
-  #   model_id: OpenGVLab/InternVL3_5-8B
-  #   dtype: bfloat16
-  #   max_new_tokens: 256
-  #   alpha: 1.0
+  - name: internvl3_5
+    model_id: OpenGVLab/InternVL3_5-8B
+    dtype: bfloat16
+    max_new_tokens: 256
+    alpha: 1.0
   
-  # - name: paligemma2
-  #   model_id: google/paligemma2-3b-mix-448
-  #   dtype: bfloat16
-  #   max_new_tokens: 256
-  #   alpha: 1.0
+  - name: paligemma2
+    model_id: google/paligemma2-3b-mix-448
+    dtype: bfloat16
+    max_new_tokens: 256
+    alpha: 1.0
   
   - name: llama3_2
     model_id: meta-llama/Llama-3.2-11B-Vision-Instruct
