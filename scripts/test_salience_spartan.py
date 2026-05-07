@@ -69,13 +69,14 @@ def _assign_devices(n_models: int) -> list[torch.device]:
 
 # ── Surrogate loading — opt split only ───────────────────────────────────────
 
-def _load_opt_surrogates(cfg: ExperimentConfig) -> list:
+def _load_opt_surrogates(cfg: ExperimentConfig, lazy: bool = False) -> list:
     from vlm_suppress.models.internvl2 import InternVL2
     from vlm_suppress.models.internvl3_5 import InternVL35
     from vlm_suppress.models.llava import LLaVA16
     from vlm_suppress.models.llama3_2 import LlamaVision
     from vlm_suppress.models.paligemma2 import PaliGemma2
     from vlm_suppress.models.qwenvl import QwenVL
+    from vlm_suppress.models.lazy import LazySurrogate
 
     _REG = {
         "internvl3_5": InternVL35,
@@ -100,8 +101,12 @@ def _load_opt_surrogates(cfg: ExperimentConfig) -> list:
         if cls is None:
             raise ValueError(f"Unknown surrogate name: {s_cfg.name!r}")
         s_cfg.device = str(device)
-        print(f"  Loading {s_cfg.name} → {device} ...")
-        models.append(cls(s_cfg))
+        if lazy:
+            print(f"  Registering [lazy] {s_cfg.name} → {device}")
+            models.append(LazySurrogate(s_cfg, cls))
+        else:
+            print(f"  Loading {s_cfg.name} → {device} ...")
+            models.append(cls(s_cfg))
 
     return models
 
@@ -182,9 +187,12 @@ def main() -> None:
     print("=" * 60)
 
     # ── Load opt surrogates ───────────────────────────────────────────────────
-    print("\nLoading opt surrogates ...")
-    surrogates = _load_opt_surrogates(cfg)
-    print(f"Loaded {len(surrogates)} surrogate(s): {[m.name for m in surrogates]}")
+    use_lazy = cfg.attack.salience_lazy
+    print(f"\n{'Registering lazy' if use_lazy else 'Loading'} opt surrogates "
+          f"(salience_lazy={use_lazy}) ...")
+    surrogates = _load_opt_surrogates(cfg, lazy=use_lazy)
+    print(f"{'Registered' if use_lazy else 'Loaded'} {len(surrogates)} "
+          f"surrogate(s): {[m.name for m in surrogates]}")
 
     # ── Load first dataset sample ─────────────────────────────────────────────
     print("\nLoading dataset (first sample only) ...")
