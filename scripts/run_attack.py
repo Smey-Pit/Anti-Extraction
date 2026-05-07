@@ -317,7 +317,7 @@ def main(
         opt_surrogates     = _load_surrogates(cfg, held_out=False,
                                                lazy=cfg.attack.lazy_loading)
         heldout_surrogates = _load_surrogates(cfg, held_out=True,
-                                               lazy=cfg.attack.lazy_loading)
+                                               lazy=True)  # never resident during PGD
 
         epsilons = cfg.epsilon_sweep or [cfg.attack.epsilon]
         kappas   = cfg.kappa_sweep   or [cfg.attack.kappa]
