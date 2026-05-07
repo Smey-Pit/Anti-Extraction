@@ -75,7 +75,7 @@ surrogates:
     alpha: 1.0
   
 
-held_out_indices: []           # both surrogates in optimisation ensemble
+held_out_indices: [2]           # held_out indices are for those models that we can choose to not participate in the PGD attack
 
 log:
   output_dir: outputs
