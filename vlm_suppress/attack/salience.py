@@ -41,7 +41,7 @@ def build_salience_budget_map(
     image_tensor:  torch.Tensor,        # (1, 3, H, W) float32 on device, requires_grad=False
     transcript:    str,
     word_boxes:    list[list[int]],     # [[x0,y0,x1,y1], ...] already scaled to H, W
-    surrogates:    list[SurrogateModel],
+    surrogates:    list,                # list[SurrogateModel | LazySurrogate]
     alpha_weights: list[float],         # one per surrogate, must sum to 1.0
     epsilon_min:   float,               # budget floor  for text pixels
     epsilon_max:   float,               # budget ceiling for text pixels
@@ -78,17 +78,25 @@ def build_salience_budget_map(
 
     Returns E on `device`.
     """
+    from vlm_suppress.models.lazy import LazySurrogate
+
     H, W = image_tensor.shape[-2], image_tensor.shape[-1]
 
     # ── Step 1 & 2: per-surrogate salience, aggregated on CPU ─────────────────
     S = torch.zeros(1, H, W, dtype=torch.float32)
 
     for surrogate, alpha in zip(surrogates, alpha_weights):
+        print(f"  [salience] {surrogate.name} ...")
         # Fresh leaf per surrogate — isolates the grad graph across iterations.
         img_clone = image_tensor.clone().detach().requires_grad_(True)
 
-        loss = surrogate.ce_loss(img_clone[0], transcript)   # (3,H,W) view
-        loss.backward()
+        if isinstance(surrogate, LazySurrogate):
+            with surrogate as model:
+                loss = model.ce_loss(img_clone[0], transcript)
+                loss.backward()
+        else:
+            loss = surrogate.ce_loss(img_clone[0], transcript)
+            loss.backward()
 
         if img_clone.grad is not None:
             # Norm over channel dim: (1,3,H,W) → (1,1,H,W) → (1,H,W)

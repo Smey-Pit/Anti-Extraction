@@ -60,11 +60,12 @@ def run_attack(
     image_id:       str,
     x_orig:         torch.Tensor,          # (3, H, W) float32 [0,1] CPU
     transcript:     str,
-    surrogates:     list[SurrogateModel],
+    surrogates:     list,
     cfg:            AttackConfig,
     word_boxes:     list[list[int]] | None = None,
     font_embedder:  object = None,
-    all_surrogates: list[SurrogateModel] | None = None,
+    all_surrogates: list | None = None,
+    lazy:           bool = False,
 ) -> AttackResult:
     """
     Run the constrained PGD attack for one image.
@@ -127,6 +128,17 @@ def run_attack(
             else:
                 sal_surrogates = surrogates
 
+            # Wrap each surrogate for per-model lazy load/unload during the
+            # salience pass.  from_eager wraps already-loaded models as a
+            # no-op context so build_salience_budget_map's isinstance branch
+            # handles them without reloading.
+            if cfg.salience_lazy:
+                from vlm_suppress.models.lazy import LazySurrogate as _LS
+                sal_surrogates = [
+                    s if isinstance(s, _LS) else _LS.from_eager(s)
+                    for s in sal_surrogates
+                ]
+
             alpha_weights = [1.0 / len(sal_surrogates)] * len(sal_surrogates)
             eps_map = build_salience_budget_map(
                 image_tensor  = x_orig_d.unsqueeze(0),
@@ -152,7 +164,7 @@ def run_attack(
         x_delta = (x_orig_d + delta).clamp(0.0, 1.0)
 
         # ── Machine failure objective ──────────────────────────────────────────
-        fm = compute_FM_ens(surrogates, x_delta, transcript, cfg)
+        fm = compute_FM_ens(surrogates, x_delta, transcript, cfg, lazy=lazy)
 
         # ── Readability proxy ──────────────────────────────────────────────────
         lh = compute_LH(x_delta, x_orig_d, cfg, word_boxes, font_embedder)

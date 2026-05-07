@@ -77,13 +77,18 @@ def _assign_devices(n_models: int) -> list[torch.device]:
     return assignments
 
 
-def _load_surrogates(cfg: ExperimentConfig, held_out: bool = False) -> list:
+def _load_surrogates(
+    cfg: ExperimentConfig,
+    held_out: bool = False,
+    lazy: bool = False,
+) -> list:
     from vlm_suppress.models.internvl2 import InternVL2
     from vlm_suppress.models.internvl3_5 import InternVL35
     from vlm_suppress.models.llava import LLaVA16
     from vlm_suppress.models.qwenvl import QwenVL
     from vlm_suppress.models.paligemma2 import PaliGemma2
     from vlm_suppress.models.llama3_2 import LlamaVision
+    from vlm_suppress.models.lazy import LazySurrogate
 
     _REG = {
         "internvl3_5": InternVL35,
@@ -109,17 +114,28 @@ def _load_surrogates(cfg: ExperimentConfig, held_out: bool = False) -> list:
         if cls is None:
             raise ValueError(f"Unknown surrogate: {s_cfg.name}")
 
-        # Stamp the assigned device onto the config object so the wrapper
-        # reads it. SurrogateConfig is a dataclass — set the field directly.
         s_cfg.device = str(device)
 
-        console.log(
-            f"Loading {'[held-out] ' if held_out else ''}"
-            f"{s_cfg.name} → {device} ..."
-        )
-        models.append(cls(s_cfg))
+        if lazy:
+            console.log(f"Registering [lazy] {s_cfg.name} → {device}")
+            models.append(LazySurrogate(s_cfg, cls))
+        else:
+            console.log(
+                f"Loading {'[held-out] ' if held_out else ''}"
+                f"{s_cfg.name} → {device} ..."
+            )
+            models.append(cls(s_cfg))
 
     return models
+
+
+def _transcribe(m, tensor: torch.Tensor) -> str:
+    """Call transcribe on an eager SurrogateModel or a LazySurrogate."""
+    from vlm_suppress.models.lazy import LazySurrogate
+    if isinstance(m, LazySurrogate):
+        with m as model:
+            return model.transcribe(tensor)
+    return m.transcribe(tensor)
 
 
 def _run_single_config(
@@ -147,7 +163,7 @@ def _run_single_config(
         clean_preds: dict[str, str] = {}
         for m in opt_surrogates + heldout_surrogates:
             with torch.no_grad():
-                clean_preds[m.name] = m.transcribe(sample.image_tensor)
+                clean_preds[m.name] = _transcribe(m, sample.image_tensor)
 
         # ── Run attack (with readability constraint) ───────────────────────
         result = run_attack(
@@ -158,13 +174,14 @@ def _run_single_config(
             cfg=cfg.attack,
             word_boxes=sample.scaled_word_boxes(),   # always use scaled boxes
             all_surrogates=opt_surrogates + heldout_surrogates,
+            lazy=cfg.attack.lazy_loading,
         )
 
         # ── Adversarial transcriptions ─────────────────────────────────────
         adv_preds: dict[str, str] = {}
         for m in opt_surrogates + heldout_surrogates:
             with torch.no_grad():
-                adv_preds[m.name] = m.transcribe(result.x_adv)
+                adv_preds[m.name] = _transcribe(m, result.x_adv)
 
         # ── Metrics ────────────────────────────────────────────────────────
         all_metrics = [
@@ -297,8 +314,9 @@ def main(
         )
         console.log(f"Loaded {len(dataset)} samples")
 
-        opt_surrogates     = _load_surrogates(cfg, held_out=False)
-        heldout_surrogates = _load_surrogates(cfg, held_out=True)
+        opt_surrogates     = _load_surrogates(cfg, held_out=False,
+                                               lazy=cfg.attack.lazy_loading)
+        heldout_surrogates = _load_surrogates(cfg, held_out=True)  # always eager
 
         epsilons = cfg.epsilon_sweep or [cfg.attack.epsilon]
         kappas   = cfg.kappa_sweep   or [cfg.attack.kappa]

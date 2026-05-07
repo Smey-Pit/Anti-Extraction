@@ -105,6 +105,18 @@ class AttackConfig:
     # computing the salience map. None means use only the opt pool (surrogates).
     salience_surrogate_indices: Optional[list[int]] = None
 
+    # If True, surrogates are loaded/unloaded each PGD step.
+    # Slower but avoids OOM when surrogates cannot all fit in VRAM.
+    # Salience surrogates always use lazy loading when
+    # salience_surrogate_indices is set.
+    lazy_loading: bool = False
+
+    # If True, the salience surrogate pool loads/unloads each model
+    # individually during the one-shot salience pass, regardless of
+    # lazy_loading.  Prevents all salience surrogates from sitting in VRAM
+    # simultaneously before the PGD loop starts.
+    salience_lazy: bool = True
+
 
 @dataclass
 class DataConfig:

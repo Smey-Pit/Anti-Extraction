@@ -41,6 +41,8 @@ attack:
   # used to compute the salience map.  0 = opt surrogate (llava16);
   # 1-4 reserved for held-out surrogates once held_out_indices is populated.
   salience_surrogate_indices: [0, 1, 2, 3, 4]
+  lazy_loading: false    # set true if OOM during PGD
+  salience_lazy: true    # load/unload each salience surrogate individually
 
   ensemble_weighting: uniform
 

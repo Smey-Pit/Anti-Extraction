@@ -29,38 +29,69 @@ def _to_scalar(t: torch.Tensor) -> torch.Tensor:
     return t.reshape(())   # guaranteed 0-dim
 
 
-def compute_FM_ens(
-    surrogates: list[SurrogateModel],
+def _weighted_contribution(
+    model: SurrogateModel,
     image_tensor: torch.Tensor,
     transcript: str,
     cfg: AttackConfig,
+    alpha: float,
+) -> torch.Tensor:
+    c = torch.zeros((), device=image_tensor.device, dtype=torch.float32)
+    if cfg.objective in (ObjectiveConfig.CE_ONLY, ObjectiveConfig.CE_AND_ALIGN):
+        c = c + cfg.lambda_ce * _to_scalar(model.ce_loss(image_tensor, transcript))
+    if cfg.objective in (ObjectiveConfig.ALIGN_ONLY, ObjectiveConfig.CE_AND_ALIGN):
+        c = c + cfg.lambda_align * _to_scalar(model.align_loss(image_tensor, transcript))
+    return alpha * c
+
+
+def compute_FM_ens(
+    surrogates: list,
+    image_tensor: torch.Tensor,
+    transcript: str,
+    cfg: AttackConfig,
+    lazy: bool = False,
 ) -> torch.Tensor:
     """
-    Computes F_M^ens(delta) = sum_k alpha_k (lambda_ce * F_ce^k + lambda_align * F_align^k)
+    Computes F_M^ens(delta) = Σ_k alpha_k (lambda_ce·F_ce^k + lambda_align·F_align^k)
 
-    Returns a 0-dim scalar tensor with gradients w.r.t. image_tensor.
+    Eager mode (lazy=False, default):
+        Returns a 0-dim scalar with a live gradient graph w.r.t. image_tensor.
+        Caller calls .backward() on the returned value (or a derived objective).
+
+    Lazy mode (lazy=True):
+        Loads each LazySurrogate, computes its contribution, calls .backward()
+        within the context so gradients accumulate into delta.grad via the chain
+        image_tensor → delta, then unloads.  Returns a detached scalar for
+        trajectory logging.  Caller must NOT call .backward() for FM again —
+        only the penalty gradient still needs to be added via obj = 0 - pen.
     """
+    from vlm_suppress.models.lazy import LazySurrogate
+
     alphas = _compute_alphas(surrogates, cfg)
-    total  = torch.zeros((), device=image_tensor.device, dtype=torch.float32)
 
-    for model, alpha in zip(surrogates, alphas):
-        contribution = torch.zeros((), device=image_tensor.device, dtype=torch.float32)
-
-        if cfg.objective in (ObjectiveConfig.CE_ONLY, ObjectiveConfig.CE_AND_ALIGN):
-            f_ce = _to_scalar(model.ce_loss(image_tensor, transcript))
-            contribution = contribution + cfg.lambda_ce * f_ce
-
-        if cfg.objective in (ObjectiveConfig.ALIGN_ONLY, ObjectiveConfig.CE_AND_ALIGN):
-            f_align = _to_scalar(model.align_loss(image_tensor, transcript))
-            contribution = contribution + cfg.lambda_align * f_align
-
-        total = total + alpha * contribution
-
-    return total
+    if lazy:
+        fm_total = torch.tensor(0.0, device=image_tensor.device, dtype=torch.float32)
+        for surrogate, alpha in zip(surrogates, alphas):
+            if isinstance(surrogate, LazySurrogate):
+                with surrogate as model:
+                    loss_k = _weighted_contribution(model, image_tensor, transcript, cfg, alpha)
+                    loss_k.backward()
+            else:
+                # Eagerly-loaded model in a lazy run (e.g. a held-out surrogate
+                # selected for this step) — call directly and backward immediately.
+                loss_k = _weighted_contribution(surrogate, image_tensor, transcript, cfg, alpha)
+                loss_k.backward()
+            fm_total = fm_total + loss_k.detach()
+        return fm_total
+    else:
+        total = torch.zeros((), device=image_tensor.device, dtype=torch.float32)
+        for surrogate, alpha in zip(surrogates, alphas):
+            total = total + _weighted_contribution(surrogate, image_tensor, transcript, cfg, alpha)
+        return total
 
 
 def _compute_alphas(
-    surrogates: list[SurrogateModel],
+    surrogates: list,
     cfg: AttackConfig,
 ) -> list[float]:
     if cfg.ensemble_weighting == EnsembleWeighting.UNIFORM or len(surrogates) == 1:
