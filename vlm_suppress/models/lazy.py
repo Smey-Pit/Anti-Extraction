@@ -1,11 +1,12 @@
 from __future__ import annotations
 
+from typing import Optional, Union
 import torch
 
 from vlm_suppress.models.base import SurrogateModel
 
 # Union accepted anywhere a surrogate is needed.
-AnySurrogate = SurrogateModel | "LazySurrogate"
+AnySurrogate = Union[SurrogateModel, "LazySurrogate"]
 
 
 class LazySurrogate:
@@ -20,7 +21,7 @@ class LazySurrogate:
     def __init__(self, surrogate_cfg, surrogate_cls) -> None:
         self.cfg  = surrogate_cfg
         self.cls  = surrogate_cls
-        self._model: SurrogateModel | None = None
+        self._model: Optional[SurrogateModel] = None
 
     @property
     def name(self) -> str:
