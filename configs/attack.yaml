@@ -14,7 +14,7 @@ data:
 
 attack:
   pgd_steps: 250
-  pgd_step_size: 0.00062745    # 2.5 * (16/255) / 250
+  pgd_step_size: 0.004    # 2.5 * (16/255) / 250
 
   mu_init: 0.1
   mu_growth: 1.05
@@ -31,29 +31,27 @@ attack:
   proxy_stage: stage2
 
   region_aware: true
-  epsilon_text: 0.06274510     # 16/255 — large budget, text pixels
-  epsilon_bg:   0.00392157     # 1/255  — small budget, background pixels
+  epsilon_text: 1    # 16/255 — large budget, text pixels
+  epsilon_bg:   1     # 1/255  — small budget, background pixels
   mask_dilation: 3
-  epsilon:      0.06274510     # 16/255 — salience mode ceiling; fallback if region_aware: false
-  epsilon_min:  0.01568627     # 4/255  — salience mode floor
+  epsilon:      1     # 16/255 — salience mode ceiling; fallback if region_aware: false
+  epsilon_min:  1     # 4/255  — salience mode floor
   salience_budget: true
   # Indices into the full surrogate list (opt + held-out, in declaration order)
   # used to compute the salience map.  0-1 = opt surrogates (internvl3_5,
   # paligemma2); 2-4 reserved for held-out surrogates once held_out_indices
   # is populated.
   salience_surrogate_indices: [0, 1, 2, 3, 4]
-  lazy_loading: true     # load/unload each surrogate per PGD step — required for OOM-safe salience
+  lazy_loading: false     # load/unload each surrogate per PGD step — required for OOM-safe salience
   salience_lazy: true    # load/unload each salience surrogate individually
 
   ensemble_weighting: uniform
 
 epsilon_sweep:
-  - 0.50
+  - 1
 
 kappa_sweep:
-  - 0.03
-  - 0.05
-  - 0.07
+  - 9999.0
 
 surrogates:
   - name: internvl3_5
@@ -68,11 +66,11 @@ surrogates:
     max_new_tokens: 256
     alpha: 1.0
   
-  - name: llama3_2
-    model_id: meta-llama/Llama-3.2-11B-Vision-Instruct
-    dtype: bfloat16
-    max_new_tokens: 256
-    alpha: 1.0
+  # - name: llama3_2
+  #   model_id: meta-llama/Llama-3.2-11B-Vision-Instruct
+  #   dtype: bfloat16
+  #   max_new_tokens: 256
+  #   alpha: 1.0
   
 
 held_out_indices: [2]           # held_out indices are for those models that we can choose to not participate in the PGD attack
