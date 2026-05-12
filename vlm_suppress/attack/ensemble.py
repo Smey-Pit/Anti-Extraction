@@ -109,28 +109,49 @@ def compute_FM_ens_eot(
     """
     EOT version of compute_FM_ens.
 
-    Draws cfg.eot.n_samples random JPEG qualities, applies each via STE to
-    produce x_ste_s, calls compute_FM_ens on each sample, and accumulates
-    gradients into x_delta (and thus delta) via per-sample .backward().
+    Draws cfg.eot.n_samples random JPEG qualities, applies each via STE,
+    and accumulates FM gradients into delta.grad via per-sample backward.
 
-    Returns the total FM value as a plain float for trajectory logging.
-    Callers must NOT call .backward() on the returned value — gradients are
-    already accumulated.  The penalty backward (-pen).backward() must be
-    called separately after this function returns.
+    Eager mode (lazy=False):
+        Uses autograd.grad to isolate the gradient at x_ste, which frees the
+        surrogate computation graph immediately after each sample.  Only the
+        tiny clamp graph (x_delta → delta) is retained between samples via
+        x_delta.backward(retain_graph=True).  Peak VRAM overhead: one surrogate
+        forward graph at a time, not n_samples simultaneously.
 
-    retain_graph=True is used on every sample so the shared x_delta → delta
-    graph edge survives for the penalty backward that follows.
+    Lazy mode (lazy=True):
+        compute_FM_ens already accumulates gradients via its own per-model
+        backward(retain_graph=True) calls.  Each surrogate is loaded, forwarded,
+        backpropagated, and unloaded before the next one is touched.  Nothing
+        additional is done here.
+
+    In both modes the clamp graph (x_delta → delta) is kept alive so the
+    caller can add the penalty gradient via (-pen).backward() afterward.
+
+    Returns the average FM value as a plain float for trajectory logging.
+    Callers must NOT call .backward() — gradients are already accumulated.
     """
     eot    = cfg.eot
     device = x_delta.device
     fm_total = 0.0
 
-    for s in range(eot.n_samples):
+    for _ in range(eot.n_samples):
         quality = random.randint(eot.quality_min, eot.quality_max)
         x_ste   = jpeg_compress_ste(x_delta, quality, device)
         fm_s    = compute_FM_ens(surrogates, x_ste, transcript, cfg, lazy=lazy)
-        # retain_graph=True: keep x_delta → delta alive for penalty backward
-        (fm_s / eot.n_samples).backward(retain_graph=True)
+
+        if lazy:
+            # Lazy path: compute_FM_ens already did per-model backward through
+            # x_ste → x_delta → delta with retain_graph=True.  Nothing to add.
+            pass
+        else:
+            # Eager path: fm_s is a live tensor.
+            # Step 1 — gradient at x_ste; frees surrogate graph immediately.
+            grad_x_ste = torch.autograd.grad(fm_s / eot.n_samples, x_ste)[0]
+            # Step 2 — route gradient through clamp to delta; keep clamp alive
+            #          for the next sample and for the penalty backward.
+            x_delta.backward(gradient=grad_x_ste, retain_graph=True)
+
         fm_total += fm_s.detach().item()
 
     return fm_total / eot.n_samples
