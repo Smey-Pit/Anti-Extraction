@@ -20,7 +20,7 @@ from dataclasses import dataclass, field
 import torch
 
 from vlm_suppress.attack.constraints import compute_LH, constraint_satisfied, penalty_term
-from vlm_suppress.attack.ensemble import compute_FM_ens
+from vlm_suppress.attack.ensemble import compute_FM_ens, compute_FM_ens_eot
 from vlm_suppress.attack.masks import build_epsilon_map, project_onto_region_ball
 from vlm_suppress.attack.salience import build_salience_budget_map
 from vlm_suppress.config import AttackConfig
@@ -171,16 +171,23 @@ def run_attack(
         x_delta = (x_orig_d + delta).clamp(0.0, 1.0)
 
         # ── Machine failure objective ──────────────────────────────────────────
-        fm = compute_FM_ens(surrogates, x_delta, transcript, cfg, lazy=lazy)
-
-        # ── Readability proxy ──────────────────────────────────────────────────
-        lh = compute_LH(x_delta, x_orig_d, cfg, word_boxes, font_embedder)
-
-        # ── Penalised objective ────────────────────────────────────────────────
-        pen = penalty_term(lh, cfg.kappa, mu)
-        obj = fm - pen
-
-        obj.backward()
+        if cfg.eot.enabled:
+            # EOT: average FM over n_samples JPEG-compressed copies via STE.
+            # Gradients accumulated into delta.grad inside compute_FM_ens_eot;
+            # retain_graph=True keeps x_delta→delta alive for the penalty below.
+            fm_val = compute_FM_ens_eot(surrogates, x_delta, transcript, cfg, lazy=lazy)
+            lh     = compute_LH(x_delta, x_orig_d, cfg, word_boxes, font_embedder)
+            pen    = penalty_term(lh, cfg.kappa, mu)
+            (-pen).backward()           # adds penalty grad; frees the shared graph
+            obj_val = fm_val - pen.item()
+        else:
+            fm = compute_FM_ens(surrogates, x_delta, transcript, cfg, lazy=lazy)
+            lh = compute_LH(x_delta, x_orig_d, cfg, word_boxes, font_embedder)
+            pen = penalty_term(lh, cfg.kappa, mu)
+            obj = fm - pen
+            obj.backward()
+            fm_val  = fm.item()
+            obj_val = obj.item()
 
         with torch.no_grad():
             grad_sign = delta.grad.sign()
@@ -196,10 +203,10 @@ def run_attack(
 
         trajectory.append(StepLog(
             step=step,
-            fm_ens=fm.item(),
+            fm_ens=fm_val,
             lh=lh.item(),
             penalty=pen.item(),
-            objective=obj.item(),
+            objective=obj_val,
             constraint_ok=constraint_satisfied(lh.item(), cfg.kappa),
             mu=mu,
         ))

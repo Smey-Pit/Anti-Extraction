@@ -56,6 +56,14 @@ class SurrogateConfig:
 
 
 @dataclass
+class EOTConfig:
+    enabled:     bool = False
+    n_samples:   int  = 8
+    quality_min: int  = 55
+    quality_max: int  = 95
+
+
+@dataclass
 class AttackConfig:
     epsilon:        float = 4.0 / 255.0
     pgd_steps:      int   = 200
@@ -116,6 +124,9 @@ class AttackConfig:
     # lazy_loading.  Prevents all salience surrogates from sitting in VRAM
     # simultaneously before the PGD loop starts.
     salience_lazy: bool = True
+
+    # Expectation over Transformations — JPEG robustness
+    eot: EOTConfig = field(default_factory=EOTConfig)
 
 
 @dataclass

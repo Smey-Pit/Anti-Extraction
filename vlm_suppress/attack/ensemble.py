@@ -7,9 +7,12 @@ Sign convention: higher = more suppression success.
 
 from __future__ import annotations
 
+import random
+
 import torch
 
-from vlm_suppress.config import AttackConfig, EnsembleWeighting, ObjectiveConfig
+from vlm_suppress.attack.transforms import jpeg_compress_ste
+from vlm_suppress.config import AttackConfig, EOTConfig, EnsembleWeighting, ObjectiveConfig
 from vlm_suppress.models.base import SurrogateModel
 
 
@@ -94,6 +97,43 @@ def compute_FM_ens(
         for surrogate, alpha in zip(surrogates, alphas):
             total = total + _weighted_contribution(surrogate, image_tensor, transcript, cfg, alpha)
         return total
+
+
+def compute_FM_ens_eot(
+    surrogates:   list,
+    x_delta:      torch.Tensor,   # (3, H, W) on device, requires_grad
+    transcript:   str,
+    cfg:          AttackConfig,
+    lazy:         bool = False,
+) -> float:
+    """
+    EOT version of compute_FM_ens.
+
+    Draws cfg.eot.n_samples random JPEG qualities, applies each via STE to
+    produce x_ste_s, calls compute_FM_ens on each sample, and accumulates
+    gradients into x_delta (and thus delta) via per-sample .backward().
+
+    Returns the total FM value as a plain float for trajectory logging.
+    Callers must NOT call .backward() on the returned value — gradients are
+    already accumulated.  The penalty backward (-pen).backward() must be
+    called separately after this function returns.
+
+    retain_graph=True is used on every sample so the shared x_delta → delta
+    graph edge survives for the penalty backward that follows.
+    """
+    eot    = cfg.eot
+    device = x_delta.device
+    fm_total = 0.0
+
+    for s in range(eot.n_samples):
+        quality = random.randint(eot.quality_min, eot.quality_max)
+        x_ste   = jpeg_compress_ste(x_delta, quality, device)
+        fm_s    = compute_FM_ens(surrogates, x_ste, transcript, cfg, lazy=lazy)
+        # retain_graph=True: keep x_delta → delta alive for penalty backward
+        (fm_s / eot.n_samples).backward(retain_graph=True)
+        fm_total += fm_s.detach().item()
+
+    return fm_total / eot.n_samples
 
 
 def _compute_alphas(

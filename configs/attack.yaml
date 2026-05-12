@@ -47,6 +47,12 @@ attack:
 
   ensemble_weighting: uniform
 
+  eot:
+    enabled: true
+    n_samples: 8        # 4 for debug (≈2× slower); use 8-16 for full runs
+    quality_min: 55
+    quality_max: 95
+
 epsilon_sweep:
   - 1
 
