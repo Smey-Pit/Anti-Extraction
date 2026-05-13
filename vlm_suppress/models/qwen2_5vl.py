@@ -84,9 +84,44 @@ class Qwen2_5VL(SurrogateModel):
             "Output the text only, no coordinates, no descriptions, no explanations."
         )
 
+        # Locate the vision encoder — attribute path varies across versions.
+        # Cache it once so align_loss doesn't repeat the search.
+        self._visual = self._find_visual()
+
         # Normalisation tensors — built once, moved to device on first use
         self._mean: torch.Tensor | None = None
         self._std:  torch.Tensor | None = None
+
+    def _find_visual(self) -> torch.nn.Module:
+        """
+        Return the vision-encoder submodule from self.model.
+
+        Different transformers versions nest it differently:
+          self.model.visual         — Qwen2-VL style (visual at top level)
+          self.model.model.visual   — Qwen2.5-VL style (visual inside backbone)
+
+        Falls back to scanning all named children for any module whose name
+        contains 'visual' or 'vision'.
+        """
+        for attr_path in ("visual", "model.visual"):
+            obj = self.model
+            for part in attr_path.split("."):
+                obj = getattr(obj, part, None)
+                if obj is None:
+                    break
+            if obj is not None and isinstance(obj, torch.nn.Module):
+                return obj
+
+        # Last resort: first child whose name contains 'visual' or 'vision'
+        for name, module in self.model.named_children():
+            if "visual" in name or "vision" in name:
+                return module
+
+        raise AttributeError(
+            f"Cannot locate vision encoder on {type(self.model).__name__}. "
+            "Tried: .visual, .model.visual, named_children scan. "
+            "Inspect model.named_children() and update _find_visual."
+        )
 
     @property
     def device(self) -> torch.device:
@@ -210,7 +245,7 @@ class Qwen2_5VL(SurrogateModel):
         pv     = self._build_pixel_values(image_tensor, static["image_grid_thw"])
 
         # Visual embeddings — differentiable through pv
-        vision_out = self.model.visual(
+        vision_out = self._visual(
             pv.to(self._dtype),
             grid_thw=static["image_grid_thw"],
         )
