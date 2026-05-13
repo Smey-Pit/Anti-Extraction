@@ -47,7 +47,20 @@ class Qwen2_5VL(SurrogateModel):
     """
 
     def __init__(self, cfg, torch_dtype: torch.dtype | None = None) -> None:
-        from transformers import AutoProcessor, Qwen2_5VLForConditionalGeneration
+        from transformers import AutoProcessor
+        # Transformers uses two naming conventions across versions:
+        #   Qwen2_5VLForConditionalGeneration  (no extra underscore, newer)
+        #   Qwen2_5_VLForConditionalGeneration (double underscore, older)
+        # Fall back to direct submodule import if neither is exported at top level.
+        try:
+            from transformers import Qwen2_5VLForConditionalGeneration as _ModelCls
+        except ImportError:
+            try:
+                from transformers import Qwen2_5_VLForConditionalGeneration as _ModelCls
+            except ImportError:
+                from transformers.models.qwen2_5_vl.modeling_qwen2_5_vl import (
+                    Qwen2_5_VLForConditionalGeneration as _ModelCls,
+                )
 
         self.name    = cfg.name
         has_cuda     = torch.cuda.is_available()
@@ -59,7 +72,7 @@ class Qwen2_5VL(SurrogateModel):
         self.processor = AutoProcessor.from_pretrained(
             cfg.model_id, trust_remote_code=True
         )
-        self.model = Qwen2_5VLForConditionalGeneration.from_pretrained(
+        self.model = _ModelCls.from_pretrained(
             cfg.model_id,
             torch_dtype=self._dtype,
             trust_remote_code=True,
