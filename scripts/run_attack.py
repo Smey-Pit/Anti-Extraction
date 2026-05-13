@@ -151,8 +151,15 @@ def _run_single_config(
     heldout_surrogates: list,
     logger: RunLogger,
 ) -> None:
-    cfg.attack.epsilon = epsilon
-    cfg.attack.kappa   = kappa
+    # epsilon drives all budget fields so the sweep works regardless of mode:
+    #   region_aware=False  → cfg.attack.epsilon (uniform)
+    #   region_aware=True   → cfg.attack.epsilon_text (text budget)
+    #   salience_budget=True→ cfg.attack.epsilon (salience ceiling)
+    # epsilon_bg and epsilon_min are left as configured — they have independent
+    # semantics and are not expected to track epsilon_text 1:1.
+    cfg.attack.epsilon      = epsilon
+    cfg.attack.epsilon_text = epsilon
+    cfg.attack.kappa        = kappa
 
     for sample in dataset:
         for m in opt_surrogates + heldout_surrogates:

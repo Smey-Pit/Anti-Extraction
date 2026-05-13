@@ -34,8 +34,9 @@ attack:
   epsilon_text: 0.12549     # 32/255 — high text budget
   epsilon_bg:   0.06274     # 16/255 — elevated bg budget (readability not a concern)
   mask_dilation: 3
-  epsilon:      0.12549     # 32/255 — salience ceiling
+  epsilon:      0.12549     # 32/255 — salience ceiling; also used as uniform fallback
   epsilon_min:  0.06274     # 16/255 — salience floor (whole text region gets at least this)
+  # epsilon_text and epsilon above are kept in sync — both represent the attack ceiling.
   salience_budget: true
   salience_surrogate_indices: [0]   # only llama3_2 active
   lazy_loading: false
@@ -48,9 +49,6 @@ attack:
     n_samples: 8
     quality_min: 55
     quality_max: 95
-
-epsilon_sweep:
-  - 0.12549   # 32/255
 
 kappa_sweep:
   - 9999.0
