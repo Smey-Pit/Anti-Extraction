@@ -76,6 +76,8 @@ def _load_opt_surrogates(cfg: ExperimentConfig, lazy: bool = False) -> list:
     from vlm_suppress.models.llama3_2 import LlamaVision
     from vlm_suppress.models.paligemma2 import PaliGemma2
     from vlm_suppress.models.qwenvl import QwenVL
+    from vlm_suppress.models.qwen2vl import Qwen2VL
+    from vlm_suppress.models.qwen2_5vl import Qwen2_5VL
     from vlm_suppress.models.lazy import LazySurrogate
 
     _REG = {
@@ -84,6 +86,8 @@ def _load_opt_surrogates(cfg: ExperimentConfig, lazy: bool = False) -> list:
         "paligemma2":  PaliGemma2,
         "llama3_2":    LlamaVision,
         "qwenvl":      QwenVL,
+        "qwen2vl":     Qwen2VL,
+        "qwen2_5vl":   Qwen2_5VL,
         "llava16":     LLaVA16,
     }
 
