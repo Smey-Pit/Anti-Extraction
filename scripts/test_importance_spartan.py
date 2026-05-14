@@ -285,6 +285,11 @@ def main() -> None:
         help="Also run compute_confidence_drop and add sixth panel.",
     )
     parser.add_argument(
+        "--entropy", action="store_true",
+        help="Run compute_blank_entropy on all surrogates individually "
+             "and show per-model contributions.",
+    )
+    parser.add_argument(
         "--categories", nargs="+", default=None,
         help=(
             "Categories to test (default: use config category_filter, "
@@ -584,6 +589,145 @@ def main() -> None:
                 fig.savefig(cd_out, dpi=150, bbox_inches="tight")
                 plt.close(fig)
                 print(f"\n  Saved six-panel → {cd_out}")
+
+            # ── Blank-image entropy (optional) ────────────────────────────────
+            if args.entropy:
+                from vlm_suppress.attack.importance import (
+                    compute_blank_entropy, _normalize_01,
+                )
+
+                entropy_maps   = {}   # name -> (H, W) normalised tensor
+                entropy_scores = {}   # name -> list[float] per word
+
+                for surrogate, alpha in zip(sal_surrogates, sal_weights):
+                    print(f"\n  [entropy] running on {surrogate.name} ...")
+                    if isinstance(surrogate, LazySurrogate):
+                        with surrogate as model:
+                            ent_k = compute_blank_entropy(
+                                model, sample.image_tensor,
+                                sample.transcript, word_boxes,
+                                word_strings=word_strings,
+                            )
+                    else:
+                        ent_k = compute_blank_entropy(
+                            surrogate, sample.image_tensor,
+                            sample.transcript, word_boxes,
+                            word_strings=word_strings,
+                        )
+
+                    ent_norm = _normalize_01(ent_k)
+                    entropy_maps[surrogate.name] = ent_norm
+
+                    # Per-word scores for this surrogate
+                    _words = word_strings if word_strings else sample.transcript.split()
+                    _n     = min(len(_words), len(word_boxes))
+                    _scores = []
+                    for i in range(_n):
+                        x0, y0, x1, y1 = (int(v) for v in word_boxes[i])
+                        x0, y0 = max(0, x0), max(0, y0)
+                        x1, y1 = min(W, x1), min(H, y1)
+                        region = ent_norm[y0:y1, x0:x1]
+                        score  = float(region.mean()) if region.numel() > 0 else 0.0
+                        _scores.append((score, _words[i]))
+                    entropy_scores[surrogate.name] = _scores
+
+                    # Print top/bottom 10 for this surrogate
+                    _sorted = sorted(_scores, key=lambda x: x[0], reverse=True)
+                    print(f"\n  ── Top 10 by entropy ({surrogate.name}): ──────────")
+                    for score, word in _sorted[:10]:
+                        print(f"    {score:.4f}  {word!r}")
+                    print(f"\n  ── Bottom 10 by entropy ({surrogate.name}): ───────")
+                    for score, word in _sorted[-10:]:
+                        print(f"    {score:.4f}  {word!r}")
+
+                    # Debug values for key words
+                    _word_list = [w for _, w in _scores]
+                    print(f"\n  ── Key word entropy ({surrogate.name}): ────────────")
+                    for _kw in ['Emily', 'Hartley', 'MR-9149760',
+                                '1980-03-15', 'presents', 'ratio', 'COPD.']:
+                        if _kw in _word_list:
+                            _kidx   = _word_list.index(_kw)
+                            _kscore = _scores[_kidx][0]
+                            print(f"    {_kscore:.4f}  {_kw!r}")
+
+                # ── Ensemble average entropy map ──────────────────────────────
+                if entropy_maps:
+                    ent_avg      = torch.stack(list(entropy_maps.values())).mean(dim=0)
+                    ent_avg_norm = _normalize_01(ent_avg)
+
+                    _words = word_strings if word_strings else sample.transcript.split()
+                    _n     = min(len(_words), len(word_boxes))
+                    _avg_scores = []
+                    for i in range(_n):
+                        x0, y0, x1, y1 = (int(v) for v in word_boxes[i])
+                        x0, y0 = max(0, x0), max(0, y0)
+                        x1, y1 = min(W, x1), min(H, y1)
+                        region = ent_avg_norm[y0:y1, x0:x1]
+                        score  = float(region.mean()) if region.numel() > 0 else 0.0
+                        _avg_scores.append((score, _words[i]))
+
+                    _avg_sorted = sorted(_avg_scores, key=lambda x: x[0], reverse=True)
+                    print(f"\n  ── Top 10 by entropy (ENSEMBLE AVERAGE): ──────────")
+                    for score, word in _avg_sorted[:10]:
+                        print(f"    {score:.4f}  {word!r}")
+                    print(f"\n  ── Bottom 10 by entropy (ENSEMBLE AVERAGE): ───────")
+                    for score, word in _avg_sorted[-10:]:
+                        print(f"    {score:.4f}  {word!r}")
+
+                    # Cross-compare ensemble entropy top-10 vs importance top-10
+                    imp_sorted = sorted(
+                        [(float(components["importance"][
+                            max(0, int(word_boxes[i][1])):min(H, int(word_boxes[i][3])),
+                            max(0, int(word_boxes[i][0])):min(W, int(word_boxes[i][2]))
+                         ].mean()), _words[i])
+                         for i in range(_n)
+                         if int(word_boxes[i][2]) > int(word_boxes[i][0])
+                         and int(word_boxes[i][3]) > int(word_boxes[i][1])],
+                        key=lambda x: x[0], reverse=True,
+                    )
+                    imp_top10 = {w for _, w in imp_sorted[:10]}
+                    ent_top10 = {w for _, w in _avg_sorted[:10]}
+                    cap_words = {w for w in (imp_top10 | ent_top10) if w[0].isupper()}
+
+                    if cap_words:
+                        print(f"\n  ── Capitalised token cross-comparison "
+                              f"(importance vs entropy): ──")
+                        for w in sorted(cap_words):
+                            in_imp = w in imp_top10
+                            in_ent = w in ent_top10
+                            tag = "[both]    " if in_imp and in_ent \
+                                  else "[ent_only] " if in_ent \
+                                  else "[imp_only] "
+                            print(f"    {tag}  {w!r}")
+
+                    # Save visualisation — original + per-model + ensemble
+                    n_models  = len(entropy_maps)
+                    n_panels  = 2 + n_models   # original + per-model + ensemble
+                    fig, axes = plt.subplots(1, n_panels, figsize=(6 * n_panels, 5))
+
+                    img_np = sample.image_tensor.permute(1, 2, 0).cpu().numpy().clip(0, 1)
+                    axes[0].imshow(img_np)
+                    axes[0].set_title("Original", fontsize=9)
+                    axes[0].axis("off")
+
+                    for ax, (name, emap) in zip(axes[1:], entropy_maps.items()):
+                        im = ax.imshow(emap.numpy(), cmap="plasma", vmin=0, vmax=1)
+                        ax.set_title(f"Entropy\n{name}", fontsize=9)
+                        ax.axis("off")
+                        fig.colorbar(im, ax=ax, fraction=0.046, pad=0.04)
+
+                    ax_last = axes[-1]
+                    im = ax_last.imshow(ent_avg_norm.numpy(), cmap="plasma",
+                                        vmin=0, vmax=1)
+                    ax_last.set_title("Entropy\n(ensemble avg)", fontsize=9)
+                    ax_last.axis("off")
+                    fig.colorbar(im, ax=ax_last, fraction=0.046, pad=0.04)
+
+                    plt.tight_layout()
+                    ent_out = out_path.parent / f"entropy_{sample.image_id}.png"
+                    fig.savefig(ent_out, dpi=150, bbox_inches="tight")
+                    plt.close(fig)
+                    print(f"\n  Saved entropy panels → {ent_out}")
 
             total_processed += 1
 

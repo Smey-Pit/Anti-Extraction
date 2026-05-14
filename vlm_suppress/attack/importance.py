@@ -358,6 +358,57 @@ def _word_correct_lp(
     return output
 
 
+def _word_entropy(
+    model,
+    image_tensor: torch.Tensor,      # (3, H, W) on model.device
+    transcript:   str,
+    spans:        list[tuple[int, int]],
+    n_words:      int,
+) -> list[float]:
+    """
+    One forward pass → per-word mean entropy of the output distribution.
+
+    For each token position t in a word's span, computes the Shannon
+    entropy of the full vocabulary distribution approximated from top-50:
+      H_approx(t) = -(sum_k p_k * log_p_k)  for k in top-50
+    Normalised by log(K) to give approximate [0, 1] range.
+
+    Higher = model more uncertain = token more visually specific.
+    Returns list[float] of length n_words. Out-of-range spans return 0.0.
+    """
+    result = model.token_logprobs(
+        image_tensor, transcript, return_top_k=50
+    )
+    if len(result) == 2:
+        warnings.warn(
+            f"_word_entropy: {type(model).__name__}.token_logprobs "
+            "returned 2-tuple — return_top_k not supported. "
+            "Returning zero entropy.",
+            RuntimeWarning, stacklevel=2,
+        )
+        return [0.0] * n_words
+
+    token_lp, tok_ids, top_k_lp, top_k_ids = result
+    top_k_lp = top_k_lp.cpu()   # (T, K)
+    T = top_k_lp.shape[0]
+
+    import math
+    log_K = math.log(max(top_k_lp.shape[-1], 2))
+    probs = top_k_lp.exp()                                    # (T, K)
+    H_per_pos = -(top_k_lp * probs).sum(dim=-1) / log_K      # (T,) normalised
+
+    output = []
+    for span_s, span_e in spans:
+        if span_s is None or span_s >= T:
+            output.append(0.0)
+            continue
+        span_e_clamped = min(span_e, T)
+        span_H = H_per_pos[span_s:span_e_clamped]
+        output.append(float(span_H.mean()) if span_H.numel() > 0 else 0.0)
+
+    return output
+
+
 # ── Core computation ──────────────────────────────────────────────────────────
 
 @torch.no_grad()
@@ -633,6 +684,59 @@ def compute_confidence_drop(
     # ── End diagnostic ────────────────────────────────────────────────
 
     return _scores_to_pixel_map(word_cd, word_boxes[:n_words], H, W)
+
+
+@torch.no_grad()
+def compute_blank_entropy(
+    model:        object,
+    image_tensor: torch.Tensor,      # (3, H, W) float32 [0,1]
+    transcript:   str,
+    word_boxes:   list[list[int]],
+    word_strings: "list[str] | None" = None,
+) -> torch.Tensor:                   # (H, W) float32 CPU
+    """
+    Pixel-space blank-image entropy map.
+
+    For each word w at pixel region R_w:
+      Entropy(w) = mean H_approx(t) for t in word's token span,
+                   computed on a blank (mean-colour) image.
+
+    High entropy = model uncertain about this token without visual
+    evidence = the pixel content is visually necessary = important.
+
+    Low entropy = model can predict this token from language prior
+    alone = not visually specific = less important to protect.
+
+    Cost: ONE forward pass on the blank image (no masking needed).
+
+    Requires model.token_logprobs() with return_top_k > 0.
+    Returns zero map if not available.
+    """
+    if not hasattr(model, "token_logprobs"):
+        warnings.warn(
+            f"compute_blank_entropy: {type(model).__name__} has no "
+            "token_logprobs — returning zero map.",
+            RuntimeWarning, stacklevel=2,
+        )
+        H_img, W_img = image_tensor.shape[-2], image_tensor.shape[-1]
+        return torch.zeros(H_img, W_img)
+
+    tokenizer    = _get_tokenizer(model)
+    H_img, W_img = image_tensor.shape[-2], image_tensor.shape[-1]
+    n_words      = len(word_boxes)
+    dev          = model.device
+
+    spans = _align_tokens_to_words(
+        tokenizer, transcript, n_words, word_strings=word_strings
+    )
+
+    blank = _make_blank(image_tensor).to(dev)
+
+    word_scores = _word_entropy(
+        model, blank, transcript, spans, n_words
+    )
+
+    return _scores_to_pixel_map(word_scores, word_boxes[:n_words], H_img, W_img)
 
 
 # ── Main entry point ──────────────────────────────────────────────────────────
