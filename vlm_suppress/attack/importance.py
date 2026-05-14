@@ -227,6 +227,7 @@ def _align_tokens_to_words(
     tokenizer,
     transcript: str,
     n_words: int,
+    word_strings: "list[str] | None" = None,
 ) -> list[tuple[int, int]]:
     """
     Return (start_tok, end_tok) half-open spans for each of n_words in transcript.
@@ -234,10 +235,11 @@ def _align_tokens_to_words(
     Uses character-level offset_mapping from the tokenizer if available.
     Falls back to proportional assignment on any failure.
 
-    The words are obtained by splitting transcript on whitespace; the caller
-    must ensure n_words matches the number of word_boxes.
+    When word_strings is provided, use it directly as the word list instead of
+    splitting transcript on whitespace.  The caller must ensure len(word_strings)
+    matches n_words.  Falls back to transcript.split() when None.
     """
-    words = transcript.split()
+    words = word_strings if word_strings is not None else transcript.split()
     if len(words) > n_words:
         words = words[:n_words]
     elif len(words) < n_words:
@@ -414,6 +416,7 @@ def compute_token_surprise(
     image_tensor: torch.Tensor,   # (3, H, W) float32 [0,1]
     transcript:   str,
     word_boxes:   list[list[int]],
+    word_strings: "list[str] | None" = None,
 ) -> torch.Tensor:                # (H, W) float32 CPU
     """
     Pixel-space surprise map: -log p(word | blank_image, field-reset context).
@@ -439,7 +442,8 @@ def compute_token_surprise(
     tokenizer = _get_tokenizer(model)
     H, W = image_tensor.shape[-2], image_tensor.shape[-1]
     n_words = len(word_boxes)
-    words   = transcript.split()[:n_words]
+    words   = (word_strings[:n_words] if word_strings is not None
+               else transcript.split()[:n_words])
     blank   = _make_blank(image_tensor).to(model.device)
 
     # Identify section boundaries (indices into words[])
@@ -467,7 +471,8 @@ def compute_token_surprise(
         section_words      = words[sec_start:sec_end]
         section_transcript = " ".join(section_words)
         section_spans      = _align_tokens_to_words(
-            tokenizer, section_transcript, len(section_words)
+            tokenizer, section_transcript, len(section_words),
+            word_strings=section_words,
         )
         section_lp = _word_logprobs(
             model, blank, section_transcript, section_spans, len(section_words)
@@ -485,6 +490,7 @@ def compute_visual_kl(
     transcript:        str,
     word_boxes:        list[list[int]],
     context_radius_px: float = 50.0,
+    word_strings:      "list[str] | None" = None,
 ) -> torch.Tensor:                     # (H, W) float32 CPU
     """
     Pixel-space visual-KL map: log p(word | orig) - log p(word | context-masked).
@@ -518,7 +524,7 @@ def compute_visual_kl(
     mean_fill  = float(image_tensor.mean())
     dev        = model.device
 
-    spans = _align_tokens_to_words(tokenizer, transcript, n_words)
+    spans = _align_tokens_to_words(tokenizer, transcript, n_words, word_strings=word_strings)
 
     # Baseline: original image log probs (one pass)
     orig_word_lp = _word_logprobs(model, image_tensor.to(dev), transcript, spans, n_words)
@@ -562,6 +568,7 @@ def compute_confidence_drop(
     word_boxes:        list[list[int]],
     context_radius_px: float = 50.0,
     top_k:             int   = 10,
+    word_strings:      "list[str] | None" = None,
 ) -> torch.Tensor:
     """
     Pixel-space confidence drop map.
@@ -623,7 +630,7 @@ def compute_confidence_drop(
     mean_fill = float(image_tensor.mean())
     dev       = model.device
 
-    spans = _align_tokens_to_words(tokenizer, transcript, n_words)
+    spans = _align_tokens_to_words(tokenizer, transcript, n_words, word_strings=word_strings)
 
     # ── Baseline: original image ──────────────────────────────────────
     orig_data = _word_top_k(
@@ -690,6 +697,7 @@ def build_importance_map(
     use_surprise:      bool  = True,
     use_visual_kl:     bool  = True,
     context_radius_px: float = 50.0,
+    word_strings:      "list[str] | None" = None,
 ) -> tuple[torch.Tensor, dict]:
     """
     Build an importance-weighted epsilon budget map (diagnostic only).
@@ -755,9 +763,13 @@ def build_importance_map(
             print(f"  [importance] surprise — {surrogate.name} ...")
             if isinstance(surrogate, LazySurrogate):
                 with surrogate as model:
-                    s_k = compute_token_surprise(model, image_tensor, transcript, word_boxes)
+                    s_k = compute_token_surprise(
+                        model, image_tensor, transcript, word_boxes, word_strings=word_strings
+                    )
             else:
-                s_k = compute_token_surprise(surrogate, image_tensor, transcript, word_boxes)
+                s_k = compute_token_surprise(
+                    surrogate, image_tensor, transcript, word_boxes, word_strings=word_strings
+                )
             surprise_map = surprise_map + alpha * s_k
         surprise_map = surprise_map * text_flag.float()
 
@@ -774,11 +786,13 @@ def build_importance_map(
             if isinstance(surrogate, LazySurrogate):
                 with surrogate as model:
                     k_k = compute_visual_kl(
-                        model, image_tensor, transcript, word_boxes, context_radius_px
+                        model, image_tensor, transcript, word_boxes, context_radius_px,
+                        word_strings=word_strings,
                     )
             else:
                 k_k = compute_visual_kl(
-                    surrogate, image_tensor, transcript, word_boxes, context_radius_px
+                    surrogate, image_tensor, transcript, word_boxes, context_radius_px,
+                    word_strings=word_strings,
                 )
             kl_map = kl_map + alpha * k_k
         kl_map = kl_map * text_flag.float()

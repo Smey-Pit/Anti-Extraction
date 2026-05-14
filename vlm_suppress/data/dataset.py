@@ -57,7 +57,9 @@ class TextImageSample:
 
     # ── Spatial annotations ───────────────────────────────────────────────────
     # word_boxes: flat list of [x0,y0,x1,y1] — used by L_shape
-    word_boxes:  list[Box]
+    word_boxes:   list[Box]
+    # word_strings: annotation word string for each box, same order as word_boxes
+    word_strings: list[str]
     # char_boxes: flat list of {"char": str, "box": Box} — used by L_conf (stage 3)
     char_boxes:  list[CharBox]
     # line_boxes: list of {"line": str, "box": Box}
@@ -92,6 +94,17 @@ class TextImageSample:
         Always use this when passing boxes to loss functions, not raw word_boxes.
         """
         return _scale_boxes(self.word_boxes, self.scale_x, self.scale_y)
+
+    def scaled_word_strings(self) -> list[str]:
+        """
+        Return the word string for each entry in scaled_word_boxes(),
+        in the same order. Length must equal len(scaled_word_boxes()).
+
+        Derived from the annotation word_boxes structure, NOT from
+        transcript.split(). This guarantees word count alignment
+        between strings and boxes regardless of transcript formatting.
+        """
+        return self.word_strings
 
     def scaled_char_boxes(self) -> list[CharBox]:
         """Char boxes rescaled to image_tensor dimensions."""
@@ -243,6 +256,13 @@ class TextImageDataset(Dataset):
                 for wb in line_words
             ]
 
+        # word_strings: same iteration as flat_word_boxes — extract "word" key
+        flat_word_strings: list[str] = [
+            wb["word"]
+            for line_words in word_boxes_raw
+            for wb in line_words
+        ]
+
         # char_boxes: [[{"char":.., "box":..}, ...], [...]]
         # Flatten to single list of {"char": str, "box": Box}
         char_boxes_raw: list[list[CharBox]] = rec.get("char_boxes", [])
@@ -263,6 +283,7 @@ class TextImageDataset(Dataset):
             transcript=rec["full_text"],
             lines=rec.get("lines", [rec["full_text"]]),
             word_boxes=flat_word_boxes,
+            word_strings=flat_word_strings,
             char_boxes=flat_char_boxes,
             line_boxes=line_boxes,
             text_category=rec.get("text_category", "unknown"),

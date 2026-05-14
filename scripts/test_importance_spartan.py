@@ -180,7 +180,8 @@ def _sanity_check(
     word_boxes:     list[list[int]],
     transcript:     str,
     H: int, W: int,
-    log_path: Optional[Path] = None,
+    log_path:     Optional[Path] = None,
+    word_strings: Optional[list] = None,
 ) -> None:
     lines: list[str] = []
 
@@ -188,7 +189,7 @@ def _sanity_check(
         print(s)
         lines.append(s)
 
-    words = transcript.split()
+    words = word_strings if word_strings is not None else transcript.split()
     n_words = min(len(words), len(word_boxes))
 
     word_scores: list[tuple[float, str, bool]] = []
@@ -387,8 +388,18 @@ def main() -> None:
         print(f"  {len(dataset)} sample(s) found.")
 
         for sample_idx, sample in enumerate(dataset):
-            word_boxes = sample.scaled_word_boxes()
-            H, W       = sample.image_tensor.shape[-2], sample.image_tensor.shape[-1]
+            word_boxes   = sample.scaled_word_boxes()
+            word_strings = sample.scaled_word_strings()
+            print(f"Word boxes:   {len(word_boxes)}")
+            print(f"Word strings: {len(word_strings)}")
+            assert len(word_boxes) == len(word_strings), (
+                f"MISMATCH: {len(word_boxes)} boxes vs "
+                f"{len(word_strings)} strings — "
+                "scaled_word_strings() iteration does not match "
+                "scaled_word_boxes()"
+            )
+            print("PASS: word_boxes and word_strings are aligned")
+            H, W = sample.image_tensor.shape[-2], sample.image_tensor.shape[-1]
 
             print(f"\n  [{sample_idx + 1}/{len(dataset)}] {sample.image_id}")
             print(f"  Image shape: {tuple(sample.image_tensor.shape)}  "
@@ -417,6 +428,7 @@ def main() -> None:
                 use_surprise      = not args.no_surprise,
                 use_visual_kl     = not args.no_kl,
                 context_radius_px = args.context_radius,
+                word_strings      = word_strings,
             )
             elapsed = time.perf_counter() - t0
             print(f"  Wall-clock: {elapsed:.1f} s")
@@ -446,6 +458,7 @@ def main() -> None:
             _sanity_check(
                 components["importance"], word_boxes, sample.transcript, H, W,
                 log_path=log_path,
+                word_strings=word_strings,
             )
 
             # ── Visualise ─────────────────────────────────────────────────────
@@ -488,6 +501,7 @@ def main() -> None:
                             sample.transcript, word_boxes,
                             context_radius_px=atk.mask_dilation * 10,
                             top_k=10,
+                            word_strings=word_strings,
                         )
                 else:
                     cd_map = compute_confidence_drop(
@@ -495,6 +509,7 @@ def main() -> None:
                         sample.transcript, word_boxes,
                         context_radius_px=atk.mask_dilation * 10,
                         top_k=10,
+                        word_strings=word_strings,
                     )
 
                 cd_norm = _normalize_01(cd_map)
