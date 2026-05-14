@@ -631,6 +631,11 @@ def compute_confidence_drop(
     dev       = model.device
 
     spans = _align_tokens_to_words(tokenizer, transcript, n_words, word_strings=word_strings)
+    print(f"  [cd] word alignment: {len(spans)} spans for "
+          f"{n_words} boxes, source="
+          f"{'annotation' if word_strings else 'transcript.split()'}")
+    print(f"  [cd] first 5 words: "
+          f"{(word_strings or transcript.split())[:5]}")
 
     # ── Baseline: original image ──────────────────────────────────────
     orig_data = _word_top_k(
