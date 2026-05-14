@@ -748,6 +748,104 @@ def main() -> None:
                     ent_out = out_path.parent / f"entropy_{sample.image_id}.png"
                     fig.savefig(ent_out, dpi=150, bbox_inches="tight")
                     plt.close(fig)
+
+                    # ── Entropy × KL product validation ──────────────────────
+                    # Rationale: entropy alone cannot separate structural labels
+                    # (ID, PATIENT, PHYSICIAN) from PII values (MR-9149760,
+                    # Emily, 1980-03-15) because both groups score high entropy
+                    # for different reasons:
+                    #   - Labels score high because they appear early in the
+                    #     autoregressive sequence before context accumulates
+                    #   - Values score high because any specific value could
+                    #     go there without visual evidence
+                    #
+                    # KL (visual dependency) breaks this tie:
+                    #   - Labels have LOW KL — masking label pixels doesn't
+                    #     change the model's prediction (structure is inferred
+                    #     from document type prior)
+                    #   - Values have HIGH KL — masking value pixels causes
+                    #     genuine prediction change
+                    #
+                    # The product entropy × KL suppresses labels (high entropy,
+                    # low KL → moderate product) and amplifies values (high
+                    # entropy, high KL → high product).
+                    #
+                    # This is the formulation for Task 4 / build_importance_map.
+
+                    if not args.entropy_only and "kl" in components:
+                        kl_map   = components["kl"]              # (H, W) normalised
+                        ent_x_kl = _normalize_01(ent_avg_norm * kl_map)
+
+                        _words  = word_strings if word_strings \
+                                  else sample.transcript.split()
+                        _n      = min(len(_words), len(word_boxes))
+
+                        _exk_scores = []
+                        for i in range(_n):
+                            x0, y0, x1, y1 = (int(v) for v in word_boxes[i])
+                            x0, y0 = max(0, x0), max(0, y0)
+                            x1, y1 = min(W, x1), min(H, y1)
+                            region = ent_x_kl[y0:y1, x0:x1]
+                            score  = float(region.mean()) \
+                                     if region.numel() > 0 else 0.0
+                            _exk_scores.append((score, _words[i]))
+
+                        _exk_sorted = sorted(
+                            _exk_scores, key=lambda x: x[0], reverse=True
+                        )
+
+                        print("\n  ── Top 10 by entropy × KL (product): ──────────")
+                        for score, word in _exk_sorted[:10]:
+                            print(f"    {score:.4f}  {word!r}")
+
+                        print("\n  ── Bottom 10 by entropy × KL (product): ───────")
+                        for score, word in _exk_sorted[-10:]:
+                            print(f"    {score:.4f}  {word!r}")
+
+                        _exk_word_map = {w: s for s, w in _exk_scores}
+                        print("\n  ── Key words entropy × KL: ─────────────────────")
+                        for _kw in ['Emily', 'Hartley', 'MR-9149760',
+                                    '1980-03-15', '2023-04-17',
+                                    'presents', 'ratio', 'with', 'of',
+                                    'ID', 'PATIENT', 'PHYSICIAN',
+                                    'COPD.', '(J44.9)', 'Salmeterol/Xinafoate']:
+                            if _kw in _exk_word_map:
+                                print(f"    {_exk_word_map[_kw]:.4f}  {_kw!r}")
+
+                        # Cross-compare product top-10 vs existing importance top-10
+                        _imp_sorted = sorted(
+                            [(float(components["importance"][
+                                max(0, int(word_boxes[i][1])):
+                                min(H, int(word_boxes[i][3])),
+                                max(0, int(word_boxes[i][0])):
+                                min(W, int(word_boxes[i][2]))
+                             ].mean()), _words[i])
+                             for i in range(_n)
+                             if int(word_boxes[i][2]) > int(word_boxes[i][0])
+                             and int(word_boxes[i][3]) > int(word_boxes[i][1])],
+                            key=lambda x: x[0], reverse=True,
+                        )
+                        _imp_top10 = {w for _, w in _imp_sorted[:10]}
+                        _exk_top10 = {w for _, w in _exk_sorted[:10]}
+                        _cap = {w for w in (_imp_top10 | _exk_top10)
+                                if w[0].isupper()}
+
+                        if _cap:
+                            print("\n  ── Capitalised token cross-comparison "
+                                  "(importance vs entropy×KL): ───")
+                            for w in sorted(_cap):
+                                in_imp = w in _imp_top10
+                                in_exk = w in _exk_top10
+                                tag = "[both]     " if in_imp and in_exk \
+                                      else "[exk_only]  " if in_exk \
+                                      else "[imp_only]  "
+                                print(f"    {tag}  {w!r}")
+                    else:
+                        print("\n  [entropy×KL] skipped — KL component not "
+                              "available in components dict. Run without "
+                              "--no_kl to enable.")
+                    # ── End entropy × KL validation ───────────────────────────
+
                     print(f"\n  Saved entropy panels → {ent_out}")
 
             total_processed += 1
