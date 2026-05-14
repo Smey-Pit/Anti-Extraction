@@ -396,9 +396,10 @@ def _word_top_k(
                 best_wrong_lp.append(float(kk_lp[-1]))
                 best_wrong_ids.append(int(kk_ids[-1]))
 
+        span_len = max(1, span_e_clamped - span_s)
         output.append((
-            correct_lp,
-            torch.tensor(best_wrong_lp,  dtype=torch.float32),
+            correct_lp / span_len,
+            torch.tensor(best_wrong_lp,  dtype=torch.float32) / span_len,
             torch.tensor(best_wrong_ids, dtype=torch.int64),
         ))
 

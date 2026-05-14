@@ -480,7 +480,6 @@ def main() -> None:
                 from vlm_suppress.attack.importance import (
                     compute_confidence_drop, _normalize_01,
                 )
-                from vlm_suppress.models.lazy import LazySurrogate
 
                 if isinstance(first_surrogate, LazySurrogate):
                     with first_surrogate as model:
