@@ -25,34 +25,7 @@ from vlm_suppress.attack.masks import build_epsilon_map, project_onto_region_bal
 from vlm_suppress.attack.salience import build_salience_budget_map
 from vlm_suppress.config import AttackConfig
 from vlm_suppress.models.base import SurrogateModel
-from vlm_suppress.models.lazy import LazySurrogate
-
-
-class _OffloadedSurrogate(LazySurrogate):
-    """
-    Wraps a CPU-offloaded eager model for the salience pass.
-
-    Inherits from LazySurrogate so salience.py's isinstance check routes it
-    through the context-manager path, giving one-model-at-a-time VRAM use.
-
-    __enter__ → move weights GPU, return eager model
-    __exit__  → move weights back to CPU, clear CUDA cache
-    """
-
-    def __init__(self, model: SurrogateModel, gpu_device: torch.device) -> None:
-        self._model      = model
-        self._gpu_device = gpu_device
-        # LazySurrogate.name / .device read from self.cfg — duck-type to model
-        self.cfg = model
-        self.cls = None   # prevents base-class __exit__ from trying to unload
-
-    def __enter__(self) -> SurrogateModel:
-        self._model.model.to(self._gpu_device)
-        return self._model
-
-    def __exit__(self, *args) -> None:
-        self._model.model.to("cpu")
-        torch.cuda.empty_cache()
+from vlm_suppress.models.lazy import LazySurrogate, OffloadSurrogate
 
 
 @dataclass
@@ -181,7 +154,7 @@ def run_attack(
                             s.model.to("cpu")
                             torch.cuda.empty_cache()
                             _offloaded.append((s, gpu_dev))
-                            _wrapped.append(_OffloadedSurrogate(s, gpu_dev))
+                            _wrapped.append(OffloadSurrogate(s))
                     sal_final = _wrapped
             elif cfg.salience_lazy:
                 import warnings

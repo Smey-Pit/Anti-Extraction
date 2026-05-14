@@ -58,3 +58,42 @@ class LazySurrogate:
         instance.cls    = None    # sentinel: __exit__ checks cls is None → no-op
         instance._model = model
         return instance
+
+
+class OffloadSurrogate(LazySurrogate):
+    """
+    Wraps an eager surrogate for one-model-at-a-time VRAM use during salience
+    or importance passes.
+
+    The wrapped model's weights live on CPU between passes.  __enter__ moves
+    them to the target GPU; __exit__ moves them back to CPU and clears the
+    CUDA cache.  Inherits from LazySurrogate so salience.py's isinstance check
+    routes it through the context-manager path automatically.
+
+    Usage
+    -----
+        wrappers = [OffloadSurrogate(m) for m in eager_models]
+        for m in eager_models:
+            m.model.to("cpu")
+        torch.cuda.empty_cache()
+        build_salience_budget_map(..., surrogates=wrappers, ...)
+        # weights restored on each __exit__; call .restore() when done
+    """
+
+    def __init__(self, model: SurrogateModel) -> None:
+        self._model      = model
+        self._gpu_device = model.device
+        self.cfg         = model   # duck-types .name and .device for LazySurrogate base
+        self.cls         = None    # prevents base-class __exit__ from trying to unload
+
+    def __enter__(self) -> SurrogateModel:
+        self._model.model.to(self._gpu_device)
+        return self._model
+
+    def __exit__(self, *args) -> None:
+        self._model.model.to("cpu")
+        torch.cuda.empty_cache()
+
+    def restore(self) -> None:
+        """Move weights back to GPU after the salience/importance pass is done."""
+        self._model.model.to(self._gpu_device)

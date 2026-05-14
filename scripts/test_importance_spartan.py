@@ -43,6 +43,7 @@ from vlm_suppress.config import (
     Domain, EnsembleWeighting, ExperimentConfig, ObjectiveConfig, ProxyStage,
 )
 from vlm_suppress.data.dataset import TextImageDataset
+from vlm_suppress.models.lazy import LazySurrogate, OffloadSurrogate
 
 
 # ── Config + surrogate loading (mirrors run_attack.py) ────────────────────────
@@ -319,6 +320,23 @@ def main() -> None:
         sal_surrogates = surrogates
         sal_weights    = alpha_weights
 
+    # Wrap eager surrogates in OffloadSurrogate so only one model occupies VRAM
+    # at a time during the salience/surprise/KL passes.  Each __enter__ moves
+    # weights to GPU; __exit__ moves them back to CPU.
+    eager_sal = [s for s in sal_surrogates if not isinstance(s, LazySurrogate)]
+    if eager_sal:
+        print(
+            f"  Offloading {len(eager_sal)} eager surrogate(s) to CPU "
+            "(one-at-a-time VRAM during importance pass) ..."
+        )
+        for s in eager_sal:
+            s.model.to("cpu")
+        torch.cuda.empty_cache()
+        sal_surrogates = [
+            OffloadSurrogate(s) if not isinstance(s, LazySurrogate) else s
+            for s in sal_surrogates
+        ]
+
     print(f"\nSalience surrogates: {[m.name for m in sal_surrogates]}")
     print(
         f"use_visual_kl={not args.no_kl}   use_surprise={not args.no_surprise}   "
@@ -342,6 +360,10 @@ def main() -> None:
         context_radius_px = args.context_radius,
     )
     elapsed = time.perf_counter() - t0
+
+    # Restore offloaded models to GPU (so they're available for any post-pass use)
+    for s in eager_sal:
+        s.model.to(s.device)
     print(f"\nWall-clock time: {elapsed:.1f} s")
 
     # ── Component statistics ──────────────────────────────────────────────────
