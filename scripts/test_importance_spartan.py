@@ -91,6 +91,11 @@ def _load_opt_surrogates(cfg: ExperimentConfig) -> list:
         if i not in cfg.held_out_indices
     ]
 
+    use_lazy = (
+        getattr(cfg.attack, "salience_lazy", False)
+        or getattr(cfg.attack, "salience_offload", False)
+    )
+
     models = []
     for k, (i, s_cfg) in enumerate(selected):
         device = torch.device(f"cuda:{k % n_gpus}" if n_gpus > 0 else "cpu")
@@ -98,8 +103,12 @@ def _load_opt_surrogates(cfg: ExperimentConfig) -> list:
         cls = _REG.get(s_cfg.name)
         if cls is None:
             raise ValueError(f"Unknown surrogate: {s_cfg.name!r}")
-        print(f"  Loading {s_cfg.name} → {device} ...")
-        models.append(cls(s_cfg))
+        if use_lazy:
+            print(f"  Registering {s_cfg.name} → {device} (lazy, no eager load) ...")
+            models.append(LazySurrogate(s_cfg, cls))
+        else:
+            print(f"  Loading {s_cfg.name} → {device} ...")
+            models.append(cls(s_cfg))
 
     return models
 
