@@ -180,7 +180,14 @@ def _sanity_check(
     word_boxes:     list[list[int]],
     transcript:     str,
     H: int, W: int,
+    log_path: Optional[Path] = None,
 ) -> None:
+    lines: list[str] = []
+
+    def _emit(s: str = "") -> None:
+        print(s)
+        lines.append(s)
+
     words = transcript.split()
     n_words = min(len(words), len(word_boxes))
 
@@ -199,43 +206,49 @@ def _sanity_check(
 
     word_scores.sort(key=lambda x: x[0], reverse=True)
 
-    print("\n── Top 10 words by importance: ─────────────────────────────────")
+    _emit("\n── Top 10 words by importance: ─────────────────────────────────")
     for score, word, is_label in word_scores[:10]:
         tag = "[label]" if is_label else "[value]"
-        print(f"  {score:.4f}  {tag:<8}  {word!r}")
+        _emit(f"  {score:.4f}  {tag:<8}  {word!r}")
 
-    print("\n── Bottom 10 words by importance: ──────────────────────────────")
+    _emit("\n── Bottom 10 words by importance: ──────────────────────────────")
     for score, word, is_label in word_scores[-10:]:
         tag = "[label]" if is_label else "[value]"
-        print(f"  {score:.4f}  {tag:<8}  {word!r}")
+        _emit(f"  {score:.4f}  {tag:<8}  {word!r}")
 
     label_scores = [s for s, _, is_label in word_scores if is_label]
     value_scores = [s for s, _, is_label in word_scores if not is_label]
 
-    print("\n── Label vs value region sanity check: ─────────────────────────")
+    _emit("\n── Label vs value region sanity check: ─────────────────────────")
     if label_scores:
         label_mean = sum(label_scores) / len(label_scores)
-        print(f"  Label words  ({len(label_scores):3d}):  mean importance = {label_mean:.4f}")
+        _emit(f"  Label words  ({len(label_scores):3d}):  mean importance = {label_mean:.4f}")
     else:
         label_mean = 0.0
-        print("  Label words: none found by heuristic")
+        _emit("  Label words: none found by heuristic")
 
     if value_scores:
         value_mean = sum(value_scores) / len(value_scores)
-        print(f"  Value words  ({len(value_scores):3d}):  mean importance = {value_mean:.4f}")
+        _emit(f"  Value words  ({len(value_scores):3d}):  mean importance = {value_mean:.4f}")
     else:
         value_mean = 0.0
-        print("  Value words: none found by heuristic")
+        _emit("  Value words: none found by heuristic")
 
     if label_scores and value_scores:
         ratio = value_mean / (label_mean + 1e-9)
-        print(f"  Value/Label ratio: {ratio:.2f}x")
+        _emit(f"  Value/Label ratio: {ratio:.2f}x")
         if ratio > 2.0:
-            print("  ✓ PASS: value regions are >2× more salient than label regions")
+            _emit("  ✓ PASS: value regions are >2× more salient than label regions")
         else:
-            print("  ✗ NOTE: ratio < 2× — KL/surprise weighting may not dominate gradient")
-            print("         Consider increasing epsilon_max/epsilon_min spread or")
-            print("         inspecting per-component maps for which signal is flat.")
+            _emit("  ✗ NOTE: ratio < 2× — KL/surprise weighting may not dominate gradient")
+            _emit("         Consider increasing epsilon_max/epsilon_min spread or")
+            _emit("         inspecting per-component maps for which signal is flat.")
+
+    if log_path is not None:
+        log_path.parent.mkdir(parents=True, exist_ok=True)
+        with open(log_path, "w", encoding="utf-8") as f:
+            f.write("\n".join(lines))
+        print(f"  Saved → {log_path}")
 
 
 # ── Main ──────────────────────────────────────────────────────────────────────
@@ -262,6 +275,17 @@ def main() -> None:
     parser.add_argument(
         "--out_dir", type=Path, default=Path("outputs/importance_debug"),
     )
+    parser.add_argument(
+        "--max_samples", type=int, default=1,
+        help="Number of samples per category (default: 1)",
+    )
+    parser.add_argument(
+        "--categories", nargs="+", default=None,
+        help=(
+            "Categories to test (default: use config category_filter, "
+            "or all UI categories if unset)"
+        ),
+    )
     args = parser.parse_args()
 
     cfg = _load_cfg(args.config)
@@ -277,47 +301,29 @@ def main() -> None:
     print(f"mask_dilation: {atk.mask_dilation}")
     print("=" * 65)
 
-    # ── Load surrogates ───────────────────────────────────────────────────────
+    _UI_CATEGORIES = [
+        "banking", "medical", "legal", "identity",
+        "communications", "news", "copyright",
+    ]
+
+    # Which categories to iterate over
+    if args.categories:
+        categories = args.categories
+    elif cfg.data.category_filter:
+        categories = [cfg.data.category_filter]
+    else:
+        categories = _UI_CATEGORIES
+
+    # ── Load surrogates (once, shared across all categories/samples) ──────────
     print("\nLoading opt surrogates ...")
     surrogates = _load_opt_surrogates(cfg)
     print(f"Loaded: {[m.name for m in surrogates]}")
 
-    # ── Load sample ───────────────────────────────────────────────────────────
-    print("\nLoading dataset (first sample) ...")
-    dataset = TextImageDataset(
-        data_dir            = cfg.data.data_dir,
-        data_dir_additional = cfg.data.data_dir_additional,
-        image_size          = cfg.data.image_size,
-        max_samples         = 1,
-        split_filter        = cfg.data.split_filter,
-        category_filter     = cfg.data.category_filter,
-        contrast_filter     = cfg.data.contrast_filter,
-    )
-    if len(dataset) == 0:
-        raise RuntimeError("Dataset is empty — check config filters.")
-
-    sample     = dataset[0]
-    word_boxes = sample.scaled_word_boxes()
-    H, W       = sample.image_tensor.shape[-2], sample.image_tensor.shape[-1]
-
-    if not word_boxes:
-        raise RuntimeError(
-            f"Sample '{sample.image_id}' has no word boxes. "
-            "Importance mapping requires bounding box annotations."
-        )
-
-    print(f"\nSample:       {sample.image_id}")
-    print(f"Image shape:  {tuple(sample.image_tensor.shape)}")
-    print(f"Word boxes:   {len(word_boxes)}")
-    print(f"Transcript:   {sample.transcript[:100]!r}"
-          f"{'...' if len(sample.transcript) > 100 else ''}")
-
-    # ── Run importance map ────────────────────────────────────────────────────
+    # ── Surrogate selection + offload wrapping (done once) ────────────────────
     device        = surrogates[0].device
     alpha_weights = [1.0 / len(surrogates)] * len(surrogates)
 
-    # Salience surrogate index filtering (mirrors pgd.py logic)
-    _pool = surrogates   # opt-only for diagnostic
+    _pool = surrogates
     if atk.salience_surrogate_indices is not None:
         sal_surrogates = [
             _pool[i] for i in atk.salience_surrogate_indices if i < len(_pool)
@@ -329,9 +335,6 @@ def main() -> None:
         sal_surrogates = surrogates
         sal_weights    = alpha_weights
 
-    # Wrap eager surrogates in OffloadSurrogate so only one model occupies VRAM
-    # at a time during the salience/surprise/KL passes.  Each __enter__ moves
-    # weights to GPU; __exit__ moves them back to CPU.
     eager_sal = [s for s in sal_surrogates if not isinstance(s, LazySurrogate)]
     if eager_sal:
         print(
@@ -351,75 +354,128 @@ def main() -> None:
         f"use_visual_kl={not args.no_kl}   use_surprise={not args.no_surprise}   "
         f"context_radius={args.context_radius:.0f}px"
     )
+    print(f"Categories: {categories}   max_samples: {args.max_samples}")
 
-    t0 = time.perf_counter()
-    eps_map, components = build_importance_map(
-        image_tensor      = sample.image_tensor,
-        transcript        = sample.transcript,
-        word_boxes        = word_boxes,
-        surrogates        = sal_surrogates,
-        alpha_weights     = sal_weights,
-        epsilon_min       = atk.epsilon_min,
-        epsilon_max       = atk.epsilon,
-        epsilon_bg        = atk.epsilon_bg,
-        dilation          = atk.mask_dilation,
-        device            = device,
-        use_surprise      = not args.no_surprise,
-        use_visual_kl     = not args.no_kl,
-        context_radius_px = args.context_radius,
-    )
-    elapsed = time.perf_counter() - t0
+    # ── Category × sample loop ────────────────────────────────────────────────
+    total_processed = 0
+    skipped         = 0
 
-    # Restore offloaded models to GPU (so they're available for any post-pass use)
-    for s in eager_sal:
-        s.model.to(s.device)
-    print(f"\nWall-clock time: {elapsed:.1f} s")
+    for category in categories:
+        print(f"\n{'━' * 65}")
+        print(f"Category: {category}")
+        print(f"{'━' * 65}")
 
-    # ── Component statistics ──────────────────────────────────────────────────
-    text_mask  = build_text_mask(H, W, word_boxes, atk.mask_dilation, torch.device("cpu"))
-    text_flag  = text_mask.squeeze(0) > 0
+        dataset = TextImageDataset(
+            data_dir            = cfg.data.data_dir,
+            data_dir_additional = cfg.data.data_dir_additional,
+            image_size          = cfg.data.image_size,
+            max_samples         = args.max_samples,
+            split_filter        = cfg.data.split_filter,
+            category_filter     = category,
+            contrast_filter     = cfg.data.contrast_filter,
+        )
 
-    print("\n── Component statistics (text region only): ─────────────────────")
-    for key in ("salience", "surprise", "kl", "importance"):
-        m = components[key]
-        vals = m[text_flag]
-        if vals.numel() == 0:
-            print(f"  {key:<12}: no text pixels")
-        else:
-            print(
-                f"  {key:<12}: "
-                f"min={vals.min():.4f}  mean={vals.mean():.4f}  max={vals.max():.4f}  "
-                f"nonzero={int((vals > 0).sum())} / {vals.numel()}"
+        if len(dataset) == 0:
+            print(f"  No samples found for category={category!r} — skipping.")
+            skipped += 1
+            continue
+
+        print(f"  {len(dataset)} sample(s) found.")
+
+        for sample_idx, sample in enumerate(dataset):
+            word_boxes = sample.scaled_word_boxes()
+            H, W       = sample.image_tensor.shape[-2], sample.image_tensor.shape[-1]
+
+            print(f"\n  [{sample_idx + 1}/{len(dataset)}] {sample.image_id}")
+            print(f"  Image shape: {tuple(sample.image_tensor.shape)}  "
+                  f"Word boxes: {len(word_boxes)}")
+            print(f"  Transcript:  {sample.transcript[:80]!r}"
+                  f"{'...' if len(sample.transcript) > 80 else ''}")
+
+            if not word_boxes:
+                print(f"  SKIP — no word boxes for {sample.image_id}.")
+                skipped += 1
+                continue
+
+            # ── Importance map ────────────────────────────────────────────────
+            t0 = time.perf_counter()
+            eps_map, components = build_importance_map(
+                image_tensor      = sample.image_tensor,
+                transcript        = sample.transcript,
+                word_boxes        = word_boxes,
+                surrogates        = sal_surrogates,
+                alpha_weights     = sal_weights,
+                epsilon_min       = atk.epsilon_min,
+                epsilon_max       = atk.epsilon,
+                epsilon_bg        = atk.epsilon_bg,
+                dilation          = atk.mask_dilation,
+                device            = device,
+                use_surprise      = not args.no_surprise,
+                use_visual_kl     = not args.no_kl,
+                context_radius_px = args.context_radius,
+            )
+            elapsed = time.perf_counter() - t0
+            print(f"  Wall-clock: {elapsed:.1f} s")
+
+            # ── Component statistics ──────────────────────────────────────────
+            text_mask = build_text_mask(
+                H, W, word_boxes, atk.mask_dilation, torch.device("cpu")
+            )
+            text_flag = text_mask.squeeze(0) > 0
+
+            print("  ── Component statistics (text region): ──────────────────")
+            for key in ("salience", "surprise", "kl", "importance"):
+                m    = components[key]
+                vals = m[text_flag]
+                if vals.numel() == 0:
+                    print(f"    {key:<12}: no text pixels")
+                else:
+                    print(
+                        f"    {key:<12}: "
+                        f"min={vals.min():.4f}  mean={vals.mean():.4f}  "
+                        f"max={vals.max():.4f}  "
+                        f"nonzero={int((vals > 0).sum())}/{vals.numel()}"
+                    )
+
+            # ── Sanity check + per-sample log ────────────────────────────────
+            log_path = args.out_dir / category / f"importance_{sample.image_id}.txt"
+            _sanity_check(
+                components["importance"], word_boxes, sample.transcript, H, W,
+                log_path=log_path,
             )
 
-    # ── Sanity check ──────────────────────────────────────────────────────────
-    _sanity_check(components["importance"], word_boxes, sample.transcript, H, W)
+            # ── Visualise ─────────────────────────────────────────────────────
+            out_path = args.out_dir / category / f"importance_{sample.image_id}.png"
+            _save_five_panel(
+                image_tensor = sample.image_tensor,
+                components   = components,
+                out_path     = out_path,
+            )
 
-    # ── Visualise ─────────────────────────────────────────────────────────────
-    out_path = args.out_dir / f"importance_{sample.image_id}.png"
-    _save_five_panel(
-        image_tensor = sample.image_tensor,
-        components   = components,
-        out_path     = out_path,
-    )
+            eps_np  = eps_map.squeeze(0).cpu().numpy()
+            fig, ax = plt.subplots(1, 1, figsize=(8, 5))
+            im = ax.imshow(eps_np, cmap="viridis",
+                           vmin=float(eps_np.min()), vmax=float(eps_np.max()))
+            ax.set_title(
+                f"Importance-weighted ε budget map\n"
+                f"[{eps_np.min():.4f}, {eps_np.max():.4f}]"
+            )
+            ax.axis("off")
+            fig.colorbar(im, ax=ax, fraction=0.046, pad=0.04, label="ε budget")
+            eps_path = args.out_dir / category / f"eps_importance_{sample.image_id}.png"
+            eps_path.parent.mkdir(parents=True, exist_ok=True)
+            fig.savefig(eps_path, dpi=150, bbox_inches="tight")
+            plt.close(fig)
+            print(f"  Saved → {eps_path}")
 
-    # Also save the eps_map for reference
-    eps_np = eps_map.squeeze(0).cpu().numpy()
-    fig, ax = plt.subplots(1, 1, figsize=(8, 5))
-    im = ax.imshow(eps_np, cmap="viridis",
-                   vmin=float(eps_np.min()), vmax=float(eps_np.max()))
-    ax.set_title(f"Importance-weighted ε budget map\n"
-                 f"[{eps_np.min():.4f}, {eps_np.max():.4f}]")
-    ax.axis("off")
-    fig.colorbar(im, ax=ax, fraction=0.046, pad=0.04, label="ε budget")
-    eps_path = args.out_dir / f"eps_importance_{sample.image_id}.png"
-    eps_path.parent.mkdir(parents=True, exist_ok=True)
-    fig.savefig(eps_path, dpi=150, bbox_inches="tight")
-    plt.close(fig)
-    print(f"  Saved → {eps_path}")
+            total_processed += 1
 
-    print("\n" + "=" * 65)
-    print("Done.")
+    # Restore any CPU-offloaded eager models
+    for s in eager_sal:
+        s.model.to(s.device)
+
+    print(f"\n{'=' * 65}")
+    print(f"Done.  Processed: {total_processed}   Skipped: {skipped}")
     print("=" * 65)
 
 
