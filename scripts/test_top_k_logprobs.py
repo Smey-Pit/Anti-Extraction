@@ -197,20 +197,54 @@ def _run_one(model, image_tensor: torch.Tensor, transcript: str) -> bool:
     else:
         print(f"  PASS: 4-tuple contract verified for {name}  (T={T}, K={K})")
 
-    # ── STEP 3: human-readable alternatives ──────────────────────────────────
-    if T > 0 and K > 0 and tokenizer is not None:
-        pos, word = _find_interesting_position(ids2, tokenizer, transcript)
-        try:
-            alt_tokens = tokenizer.convert_ids_to_tokens(top_k_id[pos].tolist())
-            alt_lps    = top_k_lp[pos].tolist()
-            print(f"\n  Top-{K} alternatives at position {pos} ({word!r}):")
-            for rank, (tok, lp) in enumerate(zip(alt_tokens, alt_lps)):
-                marker = " ◀" if rank == 0 else ""
-                print(f"    {rank:2d}: {tok!r:<20} {lp:.4f}{marker}")
-        except Exception as e:
-            print(f"  STEP 3 skipped — decode error: {e}")
+    # ── STEP 3: human-readable alternatives at correct token position ────────
+    print("\n  Step 3 — token alignment debug + alternatives")
+
+    words = transcript.split()
+
+    # Print first 20 tokens so position can be verified visually
+    enc = tokenizer(transcript, add_special_tokens=False)
+    token_strings = tokenizer.convert_ids_to_tokens(enc.input_ids)
+    print("  First 20 tokens:")
+    for i, tok in enumerate(token_strings[:20]):
+        print(f"    {i:3d}  {tok!r}")
+
+    # Find the first capitalised, non-structural, non-trivial word
+    SKIP = {"the", "a", "an", "of", "in", "at", "on", "st", "dr", "mr", "ms", "mrs"}
+    target_word = next(
+        (w for w in words
+         if len(w) > 2
+         and w[0].isupper()
+         and w.strip(".,").lower() not in SKIP),
+        words[0],
+    )
+    word_idx = words.index(target_word)
+
+    # Use _align_tokens_to_words for correct subword span lookup
+    from vlm_suppress.attack.importance import _align_tokens_to_words
+    spans = _align_tokens_to_words(tokenizer, transcript, len(words))
+    span_s, span_e = spans[word_idx]
+
+    print(f"\n  Target word: {target_word!r}")
+    print(f"  Word index in transcript.split(): {word_idx}")
+    print(f"  Token span: [{span_s}, {span_e})")
+    print(f"  Tokens in span: "
+          f"{[repr(token_strings[i]) for i in range(span_s, min(span_e, len(token_strings)))]}")
+
+    # Get top-k at first token of the span
+    t = span_s
+    if t < top_k_lp.shape[0]:
+        print(f"\n  Top-10 alternatives at span position {t} ({target_word!r}):")
+        for rank in range(min(10, top_k_lp.shape[1])):
+            tok_id  = int(top_k_id[t, rank].item())
+            tok_str = tokenizer.decode([tok_id])
+            lp      = float(top_k_lp[t, rank].item())
+            marker  = " ◀" if rank == 0 else ""
+            print(f"    {rank:2d}: {tok_str!r:<20} {lp:.4f}{marker}")
     else:
-        print("  STEP 3 skipped — no tokenizer or empty sequence")
+        print(f"  WARNING: span_s={t} is out of range "
+              f"(T={top_k_lp.shape[0]}). "
+              "Check _align_tokens_to_words output above.")
 
     return ok
 
