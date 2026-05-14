@@ -69,3 +69,4 @@ configs/tmp_*.yaml
 
 #agents
 .claude/
+*.png

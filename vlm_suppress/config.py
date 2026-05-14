@@ -125,6 +125,12 @@ class AttackConfig:
     # simultaneously before the PGD loop starts.
     salience_lazy: bool = True
 
+    # If True, eager opt-surrogates are CPU-offloaded before the salience pass
+    # and restored afterwards. This caps peak VRAM during salience to one model
+    # at a time — faster than lazy_loading (weights stay in RAM, no disk reload)
+    # and allows lazy salience over held-out models even when lazy_loading=False.
+    salience_offload: bool = False
+
     # Expectation over Transformations — JPEG robustness
     eot: EOTConfig = field(default_factory=EOTConfig)
 

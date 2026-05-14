@@ -41,6 +41,7 @@ attack:
   salience_surrogate_indices: [0]   # only llama3_2 active
   lazy_loading: false
   salience_lazy: true
+  salience_offload: false           # set true when sal_surrogates include eager models beyond VRAM capacity
 
   ensemble_weighting: uniform
 

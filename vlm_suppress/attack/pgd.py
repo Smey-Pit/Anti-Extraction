@@ -25,6 +25,34 @@ from vlm_suppress.attack.masks import build_epsilon_map, project_onto_region_bal
 from vlm_suppress.attack.salience import build_salience_budget_map
 from vlm_suppress.config import AttackConfig
 from vlm_suppress.models.base import SurrogateModel
+from vlm_suppress.models.lazy import LazySurrogate
+
+
+class _OffloadedSurrogate(LazySurrogate):
+    """
+    Wraps a CPU-offloaded eager model for the salience pass.
+
+    Inherits from LazySurrogate so salience.py's isinstance check routes it
+    through the context-manager path, giving one-model-at-a-time VRAM use.
+
+    __enter__ → move weights GPU, return eager model
+    __exit__  → move weights back to CPU, clear CUDA cache
+    """
+
+    def __init__(self, model: SurrogateModel, gpu_device: torch.device) -> None:
+        self._model      = model
+        self._gpu_device = gpu_device
+        # LazySurrogate.name / .device read from self.cfg — duck-type to model
+        self.cfg = model
+        self.cls = None   # prevents base-class __exit__ from trying to unload
+
+    def __enter__(self) -> SurrogateModel:
+        self._model.model.to(self._gpu_device)
+        return self._model
+
+    def __exit__(self, *args) -> None:
+        self._model.model.to("cpu")
+        torch.cuda.empty_cache()
 
 
 @dataclass
@@ -128,30 +156,52 @@ def run_attack(
             else:
                 sal_surrogates = surrogates
 
-            # salience_lazy is only effective when the surrogates are real
-            # LazySurrogate instances (i.e. lazy_loading=True).  Wrapping
-            # already-loaded models in from_eager does not free VRAM — the
-            # originals remain resident.  Warn if the config is inconsistent.
-            if cfg.salience_lazy:
+            # salience_offload: CPU-offload eager opt-surrogates before the
+            # salience pass so peak VRAM = one model at a time.  After the
+            # pass, each model is restored to GPU for the PGD loop.
+            _offloaded: list[tuple] = []   # (eager_model, gpu_device) for restore
+            sal_final = sal_surrogates
+
+            if getattr(cfg, "salience_offload", False):
+                if lazy:
+                    import warnings
+                    warnings.warn(
+                        "salience_offload=True is redundant when lazy_loading=True "
+                        "— surrogates already load/unload via LazySurrogate.",
+                        RuntimeWarning,
+                        stacklevel=2,
+                    )
+                else:
+                    _wrapped = []
+                    for s in sal_surrogates:
+                        if isinstance(s, LazySurrogate):
+                            _wrapped.append(s)
+                        else:
+                            gpu_dev = s.device
+                            s.model.to("cpu")
+                            torch.cuda.empty_cache()
+                            _offloaded.append((s, gpu_dev))
+                            _wrapped.append(_OffloadedSurrogate(s, gpu_dev))
+                    sal_final = _wrapped
+            elif cfg.salience_lazy:
                 import warnings
-                from vlm_suppress.models.lazy import LazySurrogate as _LS
-                non_lazy = [s for s in sal_surrogates if not isinstance(s, _LS)]
+                non_lazy = [s for s in sal_surrogates if not isinstance(s, LazySurrogate)]
                 if non_lazy:
                     warnings.warn(
                         f"salience_lazy=True but {len(non_lazy)} surrogate(s) are "
                         "already-loaded SurrogateModel instances — VRAM will NOT be "
-                        "freed between salience passes.  Set lazy_loading: true to "
-                        "actually reduce peak VRAM during the salience phase.",
+                        "freed between salience passes.  Set salience_offload: true "
+                        "or lazy_loading: true to actually reduce peak VRAM.",
                         RuntimeWarning,
                         stacklevel=2,
                     )
 
-            alpha_weights = [1.0 / len(sal_surrogates)] * len(sal_surrogates)
+            alpha_weights = [1.0 / len(sal_final)] * len(sal_final)
             eps_map = build_salience_budget_map(
                 image_tensor  = x_orig_d.unsqueeze(0),
                 transcript    = transcript,
                 word_boxes    = word_boxes,
-                surrogates    = sal_surrogates,
+                surrogates    = sal_final,
                 alpha_weights = alpha_weights,
                 epsilon_min   = cfg.epsilon_min,
                 epsilon_max   = cfg.epsilon,        # reuse cfg.epsilon as ceiling
@@ -159,6 +209,10 @@ def run_attack(
                 dilation      = cfg.mask_dilation,
                 device        = device,
             )
+
+            # Restore CPU-offloaded models to GPU for the PGD loop
+            for eager_model, gpu_dev in _offloaded:
+                eager_model.model.to(gpu_dev)
     # else: eps_map already set by the existing block above
 
     # ── Initialise delta ───────────────────────────────────────────────────────
