@@ -328,82 +328,32 @@ def _word_logprobs(
     return scores
 
 
-def _word_top_k(
+def _word_correct_lp(
     model,
     image_tensor: torch.Tensor,
     transcript:   str,
     spans:        list[tuple[int, int]],
     n_words:      int,
-    top_k:        int,
-) -> list[tuple[float, torch.Tensor, torch.Tensor]]:
+) -> list[float]:
     """
-    One forward pass → per-word (correct_lp, best_wrong_lp, best_wrong_ids).
+    One forward pass → per-word per-token-averaged correct log prob.
 
-    Calls model.token_logprobs(image_tensor, transcript, return_top_k=top_k).
-    Expects a 4-tuple — caller must verify support before calling.
-
-    For each word span (span_s, span_e):
-
-      correct_lp : float
-        sum of log p(correct_token_t) across token positions t in span
-
-      best_wrong_lp : (span_len,) float32 cpu tensor
-        for each position t in span, the log prob of the highest-ranked
-        token in top_k whose id != correct token id at position t.
-        If all top-k entries are the correct token, use the last entry.
-
-      best_wrong_ids : (span_len,) int64 cpu tensor
-        token ids corresponding to best_wrong_lp at each position.
-
-    Returns list of length n_words.
-    Out-of-range spans return (0.0, zeros(1), zeros(1)).
+    Calls model.token_logprobs(image_tensor, transcript) (2-tuple, no top_k).
+    Returns list[float] of length n_words.
+    Out-of-range spans return 0.0.
     """
-    result = model.token_logprobs(
-        image_tensor, transcript, return_top_k=top_k
-    )
-    token_lp, tok_ids, top_k_log_probs, top_k_id_tensor = result
-
-    token_lp        = token_lp.cpu()
-    tok_ids         = tok_ids.cpu()
-    top_k_log_probs = top_k_log_probs.cpu()
-    top_k_id_tensor = top_k_id_tensor.cpu()
+    token_lp, _ = model.token_logprobs(image_tensor, transcript)
+    token_lp = token_lp.cpu()
     T = token_lp.shape[0]
 
     output = []
     for span_s, span_e in spans:
         if span_s is None or span_s >= T:
-            output.append((0.0, torch.zeros(1), torch.zeros(1, dtype=torch.long)))
+            output.append(0.0)
             continue
-
         span_e_clamped = min(span_e, T)
-
-        correct_lp = float(token_lp[span_s:span_e_clamped].sum())
-
-        best_wrong_lp  = []
-        best_wrong_ids = []
-
-        for pos in range(span_s, span_e_clamped):
-            correct_id = int(tok_ids[pos].item())
-            kk_lp  = top_k_log_probs[pos]   # (K,)
-            kk_ids = top_k_id_tensor[pos]    # (K,)
-
-            wrong_mask = (kk_ids != correct_id)
-            if wrong_mask.any():
-                first_wrong = int(wrong_mask.nonzero(as_tuple=True)[0][0])
-                best_wrong_lp.append(float(kk_lp[first_wrong]))
-                best_wrong_ids.append(int(kk_ids[first_wrong]))
-            else:
-                # All top-k are the correct token — model is extremely
-                # confident. Use last entry as a floor.
-                best_wrong_lp.append(float(kk_lp[-1]))
-                best_wrong_ids.append(int(kk_ids[-1]))
-
         span_len = max(1, span_e_clamped - span_s)
-        output.append((
-            correct_lp / span_len,
-            torch.tensor(best_wrong_lp,  dtype=torch.float32) / span_len,
-            torch.tensor(best_wrong_ids, dtype=torch.int64),
-        ))
+        output.append(float(token_lp[span_s:span_e_clamped].sum()) / span_len)
 
     return output
 
@@ -567,58 +517,30 @@ def compute_confidence_drop(
     transcript:        str,
     word_boxes:        list[list[int]],
     context_radius_px: float = 50.0,
-    top_k:             int   = 10,
     word_strings:      "list[str] | None" = None,
 ) -> torch.Tensor:
     """
     Pixel-space confidence drop map.
 
     For each word w:
-      ConfidenceDrop(w) = correct_lp(w | original)
-                        - sum_over_positions(best_wrong_lp(w | masked))
-      Clamped to >= 0.
+      ConfidenceDrop(w) = exp(correct_lp(w | original))
+                        - exp(correct_lp(w | masked))
+      Clamped to >= 0. Both terms in [0, 1]; difference in [0, 1].
 
     High where masking the pixel region causes the model to lose
-    confidence in the correct token AND redistribute mass toward
-    plausible wrong alternatives. Zero where the model remains
-    confident despite masking.
+    confidence in the correct token. Near-zero for tokens the model
+    predicts from language prior alone regardless of visual content.
 
     Uses identical context-radius masking and batching as
     compute_visual_kl. Same cost: 1 + N_groups forward passes.
 
-    Requires model.token_logprobs() with return_top_k > 0 support.
-    Verified by checking return tuple length before main computation.
-    Returns zero map if not supported.
+    Requires model.token_logprobs().
+    Returns zero map if not available.
     """
     if not hasattr(model, "token_logprobs"):
         warnings.warn(
             f"compute_confidence_drop: {type(model).__name__} has no "
             "token_logprobs — returning zero map.",
-            RuntimeWarning, stacklevel=2,
-        )
-        H, W = image_tensor.shape[-2], image_tensor.shape[-1]
-        return torch.zeros(H, W)
-
-    # Verify return_top_k support with minimal transcript
-    try:
-        _probe_transcript = transcript[:20] if len(transcript) > 20 \
-                            else transcript
-        _probe = model.token_logprobs(
-            image_tensor, _probe_transcript, return_top_k=1
-        )
-        if len(_probe) != 4:
-            warnings.warn(
-                f"compute_confidence_drop: {type(model).__name__}."
-                "token_logprobs did not return 4-tuple with return_top_k=1"
-                " — returning zero map.",
-                RuntimeWarning, stacklevel=2,
-            )
-            H, W = image_tensor.shape[-2], image_tensor.shape[-1]
-            return torch.zeros(H, W)
-    except Exception as exc:
-        warnings.warn(
-            f"compute_confidence_drop: probe failed ({exc})"
-            " — returning zero map.",
             RuntimeWarning, stacklevel=2,
         )
         H, W = image_tensor.shape[-2], image_tensor.shape[-1]
@@ -647,15 +569,14 @@ def compute_confidence_drop(
                       f"token_span={spans[idx]}")
 
     # ── Baseline: original image ──────────────────────────────────────
-    orig_data = _word_top_k(
+    orig_correct_lp = _word_correct_lp(
         model, image_tensor.to(dev),
-        transcript, spans, n_words, top_k,
+        transcript, spans, n_words,
     )
-    orig_correct_lp = [entry[0] for entry in orig_data]
 
     # ── Masked passes — same batching as compute_visual_kl ────────────
     groups = _greedy_kl_groups(word_boxes, context_radius_px)
-    masked_wrong_lp: list[float | None] = [None] * n_words
+    masked_correct_lp: list[float | None] = [None] * n_words
 
     for group in groups:
         img_masked = image_tensor.clone()
@@ -672,13 +593,12 @@ def compute_confidence_drop(
             if x1 > x0 and y1 > y0:
                 img_masked[:, y0:y1, x0:x1] = mean_fill
 
-        masked_data = _word_top_k(
+        masked_data = _word_correct_lp(
             model, img_masked.to(dev),
-            transcript, spans, n_words, top_k,
+            transcript, spans, n_words,
         )
         for idx in group:
-            # Sum best-wrong log probs across token positions in span
-            masked_wrong_lp[idx] = float(masked_data[idx][1].sum())
+            masked_correct_lp[idx] = masked_data[idx]
 
     # ── Confidence drop per word ──────────────────────────────────────
     import math
@@ -688,8 +608,8 @@ def compute_confidence_drop(
         return math.exp(max(x, -500.0))
 
     word_cd = [
-        max(0.0, _safe_exp(orig) - _safe_exp(mw if mw is not None else 0.0))
-        for orig, mw in zip(orig_correct_lp, masked_wrong_lp)
+        max(0.0, _safe_exp(orig) - _safe_exp(mc if mc is not None else orig))
+        for orig, mc in zip(orig_correct_lp, masked_correct_lp)
     ]
 
     return _scores_to_pixel_map(word_cd, word_boxes[:n_words], H, W)

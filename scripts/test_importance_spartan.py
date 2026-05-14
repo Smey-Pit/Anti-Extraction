@@ -500,7 +500,6 @@ def main() -> None:
                             model, sample.image_tensor,
                             sample.transcript, word_boxes,
                             context_radius_px=atk.mask_dilation * 10,
-                            top_k=10,
                             word_strings=word_strings,
                         )
                 else:
@@ -508,7 +507,6 @@ def main() -> None:
                         first_surrogate, sample.image_tensor,
                         sample.transcript, word_boxes,
                         context_radius_px=atk.mask_dilation * 10,
-                        top_k=10,
                         word_strings=word_strings,
                     )
 
