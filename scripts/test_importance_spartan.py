@@ -290,6 +290,10 @@ def main() -> None:
              "and show per-model contributions.",
     )
     parser.add_argument(
+        "--entropy_only", action="store_true",
+        help="Skip importance pipeline; run only compute_blank_entropy.",
+    )
+    parser.add_argument(
         "--categories", nargs="+", default=None,
         help=(
             "Categories to test (default: use config category_filter, "
@@ -417,181 +421,184 @@ def main() -> None:
                 skipped += 1
                 continue
 
-            # ── Importance map ────────────────────────────────────────────────
-            t0 = time.perf_counter()
-            eps_map, components = build_importance_map(
-                image_tensor      = sample.image_tensor,
-                transcript        = sample.transcript,
-                word_boxes        = word_boxes,
-                surrogates        = sal_surrogates,
-                alpha_weights     = sal_weights,
-                epsilon_min       = atk.epsilon_min,
-                epsilon_max       = atk.epsilon,
-                epsilon_bg        = atk.epsilon_bg,
-                dilation          = atk.mask_dilation,
-                device            = device,
-                use_surprise      = not args.no_surprise,
-                use_visual_kl     = not args.no_kl,
-                context_radius_px = args.context_radius,
-                word_strings      = word_strings,
-            )
-            elapsed = time.perf_counter() - t0
-            print(f"  Wall-clock: {elapsed:.1f} s")
-
-            # ── Component statistics ──────────────────────────────────────────
-            text_mask = build_text_mask(
-                H, W, word_boxes, atk.mask_dilation, torch.device("cpu")
-            )
-            text_flag = text_mask.squeeze(0) > 0
-
-            print("  ── Component statistics (text region): ──────────────────")
-            for key in ("salience", "surprise", "kl", "importance"):
-                m    = components[key]
-                vals = m[text_flag]
-                if vals.numel() == 0:
-                    print(f"    {key:<12}: no text pixels")
-                else:
-                    print(
-                        f"    {key:<12}: "
-                        f"min={vals.min():.4f}  mean={vals.mean():.4f}  "
-                        f"max={vals.max():.4f}  "
-                        f"nonzero={int((vals > 0).sum())}/{vals.numel()}"
-                    )
-
-            # ── Sanity check + per-sample log ────────────────────────────────
-            log_path = args.out_dir / category / f"importance_{sample.image_id}.txt"
-            _sanity_check(
-                components["importance"], word_boxes, sample.transcript, H, W,
-                log_path=log_path,
-                word_strings=word_strings,
-            )
-
-            # ── Visualise ─────────────────────────────────────────────────────
             out_path = args.out_dir / category / f"importance_{sample.image_id}.png"
-            _save_five_panel(
-                image_tensor = sample.image_tensor,
-                components   = components,
-                out_path     = out_path,
-            )
 
-            eps_np  = eps_map.squeeze(0).cpu().numpy()
-            fig, ax = plt.subplots(1, 1, figsize=(8, 5))
-            im = ax.imshow(eps_np, cmap="viridis",
-                           vmin=float(eps_np.min()), vmax=float(eps_np.max()))
-            ax.set_title(
-                f"Importance-weighted ε budget map\n"
-                f"[{eps_np.min():.4f}, {eps_np.max():.4f}]"
-            )
-            ax.axis("off")
-            fig.colorbar(im, ax=ax, fraction=0.046, pad=0.04, label="ε budget")
-            eps_path = args.out_dir / category / f"eps_importance_{sample.image_id}.png"
-            eps_path.parent.mkdir(parents=True, exist_ok=True)
-            fig.savefig(eps_path, dpi=150, bbox_inches="tight")
-            plt.close(fig)
-            print(f"  Saved → {eps_path}")
+            if not args.entropy_only:
 
-            # ── Confidence drop (optional) ────────────────────────────────────
-            if args.confidence_drop:
-                from vlm_suppress.attack.importance import (
-                    compute_confidence_drop, _normalize_01,
+                # ── Importance map ────────────────────────────────────────────────
+                t0 = time.perf_counter()
+                eps_map, components = build_importance_map(
+                    image_tensor      = sample.image_tensor,
+                    transcript        = sample.transcript,
+                    word_boxes        = word_boxes,
+                    surrogates        = sal_surrogates,
+                    alpha_weights     = sal_weights,
+                    epsilon_min       = atk.epsilon_min,
+                    epsilon_max       = atk.epsilon,
+                    epsilon_bg        = atk.epsilon_bg,
+                    dilation          = atk.mask_dilation,
+                    device            = device,
+                    use_surprise      = not args.no_surprise,
+                    use_visual_kl     = not args.no_kl,
+                    context_radius_px = args.context_radius,
+                    word_strings      = word_strings,
+                )
+                elapsed = time.perf_counter() - t0
+                print(f"  Wall-clock: {elapsed:.1f} s")
+
+                # ── Component statistics ──────────────────────────────────────────
+                text_mask = build_text_mask(
+                    H, W, word_boxes, atk.mask_dilation, torch.device("cpu")
+                )
+                text_flag = text_mask.squeeze(0) > 0
+
+                print("  ── Component statistics (text region): ──────────────────")
+                for key in ("salience", "surprise", "kl", "importance"):
+                    m    = components[key]
+                    vals = m[text_flag]
+                    if vals.numel() == 0:
+                        print(f"    {key:<12}: no text pixels")
+                    else:
+                        print(
+                            f"    {key:<12}: "
+                            f"min={vals.min():.4f}  mean={vals.mean():.4f}  "
+                            f"max={vals.max():.4f}  "
+                            f"nonzero={int((vals > 0).sum())}/{vals.numel()}"
+                        )
+
+                # ── Sanity check + per-sample log ────────────────────────────────
+                log_path = args.out_dir / category / f"importance_{sample.image_id}.txt"
+                _sanity_check(
+                    components["importance"], word_boxes, sample.transcript, H, W,
+                    log_path=log_path,
+                    word_strings=word_strings,
                 )
 
-                cd_maps = []
-                for surrogate, alpha in zip(sal_surrogates, sal_weights):
-                    print(f"  [confidence_drop] running on {surrogate.name} ...")
-                    if isinstance(surrogate, LazySurrogate):
-                        with surrogate as model:
+                # ── Visualise ─────────────────────────────────────────────────────
+                _save_five_panel(
+                    image_tensor = sample.image_tensor,
+                    components   = components,
+                    out_path     = out_path,
+                )
+
+                eps_np  = eps_map.squeeze(0).cpu().numpy()
+                fig, ax = plt.subplots(1, 1, figsize=(8, 5))
+                im = ax.imshow(eps_np, cmap="viridis",
+                               vmin=float(eps_np.min()), vmax=float(eps_np.max()))
+                ax.set_title(
+                    f"Importance-weighted ε budget map\n"
+                    f"[{eps_np.min():.4f}, {eps_np.max():.4f}]"
+                )
+                ax.axis("off")
+                fig.colorbar(im, ax=ax, fraction=0.046, pad=0.04, label="ε budget")
+                eps_path = args.out_dir / category / f"eps_importance_{sample.image_id}.png"
+                eps_path.parent.mkdir(parents=True, exist_ok=True)
+                fig.savefig(eps_path, dpi=150, bbox_inches="tight")
+                plt.close(fig)
+                print(f"  Saved → {eps_path}")
+
+                # ── Confidence drop (optional) ────────────────────────────────────
+                if args.confidence_drop:
+                    from vlm_suppress.attack.importance import (
+                        compute_confidence_drop, _normalize_01,
+                    )
+
+                    cd_maps = []
+                    for surrogate, alpha in zip(sal_surrogates, sal_weights):
+                        print(f"  [confidence_drop] running on {surrogate.name} ...")
+                        if isinstance(surrogate, LazySurrogate):
+                            with surrogate as model:
+                                cd_k = compute_confidence_drop(
+                                    model, sample.image_tensor,
+                                    sample.transcript, word_boxes,
+                                    word_strings=word_strings,
+                                    context_radius_px=atk.mask_dilation * 10,
+                                )
+                        else:
                             cd_k = compute_confidence_drop(
-                                model, sample.image_tensor,
+                                surrogate, sample.image_tensor,
                                 sample.transcript, word_boxes,
                                 word_strings=word_strings,
                                 context_radius_px=atk.mask_dilation * 10,
                             )
-                    else:
-                        cd_k = compute_confidence_drop(
-                            surrogate, sample.image_tensor,
-                            sample.transcript, word_boxes,
-                            word_strings=word_strings,
-                            context_radius_px=atk.mask_dilation * 10,
-                        )
-                    cd_maps.append(alpha * cd_k)
+                        cd_maps.append(alpha * cd_k)
 
-                cd_map = torch.stack(cd_maps).sum(dim=0)   # weighted average
+                    cd_map = torch.stack(cd_maps).sum(dim=0)   # weighted average
 
-                cd_norm = _normalize_01(cd_map)
+                    cd_norm = _normalize_01(cd_map)
 
-                # ── Top/bottom 10 by confidence drop ─────────────────────────
-                words   = sample.transcript.split()
-                n_words = min(len(words), len(word_boxes))
-                cd_word_scores = []
-                for i in range(n_words):
-                    x0, y0, x1, y1 = (int(v) for v in word_boxes[i])
-                    x0, y0 = max(0, x0), max(0, y0)
-                    x1, y1 = min(W, x1), min(H, y1)
-                    region = cd_norm[y0:y1, x0:x1]
-                    score  = float(region.mean()) if region.numel() > 0 else 0.0
-                    cd_word_scores.append((score, words[i]))
+                    # ── Top/bottom 10 by confidence drop ─────────────────────────
+                    words   = sample.transcript.split()
+                    n_words = min(len(words), len(word_boxes))
+                    cd_word_scores = []
+                    for i in range(n_words):
+                        x0, y0, x1, y1 = (int(v) for v in word_boxes[i])
+                        x0, y0 = max(0, x0), max(0, y0)
+                        x1, y1 = min(W, x1), min(H, y1)
+                        region = cd_norm[y0:y1, x0:x1]
+                        score  = float(region.mean()) if region.numel() > 0 else 0.0
+                        cd_word_scores.append((score, words[i]))
 
-                cd_sorted = sorted(cd_word_scores, key=lambda x: x[0], reverse=True)
-                print("\n── Top 10 by confidence drop: ──────────────────────────")
-                for score, word in cd_sorted[:10]:
-                    print(f"  {score:.4f}  {word!r}")
-                print("\n── Bottom 10 by confidence drop: ───────────────────────")
-                for score, word in cd_sorted[-10:]:
-                    print(f"  {score:.4f}  {word!r}")
+                    cd_sorted = sorted(cd_word_scores, key=lambda x: x[0], reverse=True)
+                    print("\n── Top 10 by confidence drop: ──────────────────────────")
+                    for score, word in cd_sorted[:10]:
+                        print(f"  {score:.4f}  {word!r}")
+                    print("\n── Bottom 10 by confidence drop: ───────────────────────")
+                    for score, word in cd_sorted[-10:]:
+                        print(f"  {score:.4f}  {word!r}")
 
-                # ── Cross-compare with existing importance top-10 ─────────────
-                imp_sorted = sorted(
-                    [(float(components["importance"][
-                          max(0, int(word_boxes[i][1])):min(H, int(word_boxes[i][3])),
-                          max(0, int(word_boxes[i][0])):min(W, int(word_boxes[i][2]))
-                      ].mean()), words[i])
-                     for i in range(n_words)
-                     if int(word_boxes[i][2]) > int(word_boxes[i][0])
-                     and int(word_boxes[i][3]) > int(word_boxes[i][1])],
-                    key=lambda x: x[0], reverse=True,
-                )
-                imp_top10 = {w for _, w in imp_sorted[:10]}
-                cd_top10  = {w for _, w in cd_sorted[:10]}
-                cap_words = {w for w in (imp_top10 | cd_top10) if w[0].isupper()}
+                    # ── Cross-compare with existing importance top-10 ─────────────
+                    imp_sorted = sorted(
+                        [(float(components["importance"][
+                              max(0, int(word_boxes[i][1])):min(H, int(word_boxes[i][3])),
+                              max(0, int(word_boxes[i][0])):min(W, int(word_boxes[i][2]))
+                          ].mean()), words[i])
+                         for i in range(n_words)
+                         if int(word_boxes[i][2]) > int(word_boxes[i][0])
+                         and int(word_boxes[i][3]) > int(word_boxes[i][1])],
+                        key=lambda x: x[0], reverse=True,
+                    )
+                    imp_top10 = {w for _, w in imp_sorted[:10]}
+                    cd_top10  = {w for _, w in cd_sorted[:10]}
+                    cap_words = {w for w in (imp_top10 | cd_top10) if w[0].isupper()}
 
-                if cap_words:
-                    print("\n── Capitalised token cross-comparison: ─────────────────")
-                    for w in sorted(cap_words):
-                        in_imp = w in imp_top10
-                        in_cd  = w in cd_top10
-                        tag = "[both]   " if in_imp and in_cd \
-                              else "[cd_only] " if in_cd \
-                              else "[imp_only]"
-                        print(f"  {tag}  {w!r}")
+                    if cap_words:
+                        print("\n── Capitalised token cross-comparison: ─────────────────")
+                        for w in sorted(cap_words):
+                            in_imp = w in imp_top10
+                            in_cd  = w in cd_top10
+                            tag = "[both]   " if in_imp and in_cd \
+                                  else "[cd_only] " if in_cd \
+                                  else "[imp_only]"
+                            print(f"  {tag}  {w!r}")
 
-                # ── Six-panel visualisation ───────────────────────────────────
-                img_np = sample.image_tensor.permute(1, 2, 0).cpu().numpy().clip(0, 1)
-                panels = [
-                    ("Original",           img_np,                           False),
-                    ("Gradient salience",  components["salience"].numpy(),   True),
-                    ("Token surprise",     components["surprise"].numpy(),   True),
-                    ("Visual KL",          components["kl"].numpy(),         True),
-                    ("Importance\n(current)", components["importance"].numpy(), True),
-                    ("Confidence Drop\n(new)", cd_norm.numpy(),              True),
-                ]
-                fig, axes = plt.subplots(1, 6, figsize=(34, 5))
-                for ax, (title, data, is_heatmap) in zip(axes, panels):
-                    if is_heatmap:
-                        im = ax.imshow(data, cmap="plasma", vmin=0, vmax=1)
-                        fig.colorbar(im, ax=ax, fraction=0.046, pad=0.04)
-                    else:
-                        ax.imshow(data)
-                    ax.set_title(title, fontsize=9)
-                    ax.axis("off")
-                plt.tight_layout()
-                cd_out = out_path.parent / f"cd_{sample.image_id}.png"
-                fig.savefig(cd_out, dpi=150, bbox_inches="tight")
-                plt.close(fig)
-                print(f"\n  Saved six-panel → {cd_out}")
+                    # ── Six-panel visualisation ───────────────────────────────────
+                    img_np = sample.image_tensor.permute(1, 2, 0).cpu().numpy().clip(0, 1)
+                    panels = [
+                        ("Original",           img_np,                           False),
+                        ("Gradient salience",  components["salience"].numpy(),   True),
+                        ("Token surprise",     components["surprise"].numpy(),   True),
+                        ("Visual KL",          components["kl"].numpy(),         True),
+                        ("Importance\n(current)", components["importance"].numpy(), True),
+                        ("Confidence Drop\n(new)", cd_norm.numpy(),              True),
+                    ]
+                    fig, axes = plt.subplots(1, 6, figsize=(34, 5))
+                    for ax, (title, data, is_heatmap) in zip(axes, panels):
+                        if is_heatmap:
+                            im = ax.imshow(data, cmap="plasma", vmin=0, vmax=1)
+                            fig.colorbar(im, ax=ax, fraction=0.046, pad=0.04)
+                        else:
+                            ax.imshow(data)
+                        ax.set_title(title, fontsize=9)
+                        ax.axis("off")
+                    plt.tight_layout()
+                    cd_out = out_path.parent / f"cd_{sample.image_id}.png"
+                    fig.savefig(cd_out, dpi=150, bbox_inches="tight")
+                    plt.close(fig)
+                    print(f"\n  Saved six-panel → {cd_out}")
 
             # ── Blank-image entropy (optional) ────────────────────────────────
-            if args.entropy:
+            if args.entropy or args.entropy_only:
                 from vlm_suppress.attack.importance import (
                     compute_blank_entropy, _normalize_01,
                 )
@@ -615,8 +622,8 @@ def main() -> None:
                             word_strings=word_strings,
                         )
 
-                    ent_norm = _normalize_01(ent_k)
-                    entropy_maps[surrogate.name] = ent_norm
+                    ent_norm = _normalize_01(ent_k)        # for display only
+                    entropy_maps[surrogate.name] = ent_k   # store raw
 
                     # Per-word scores for this surrogate
                     _words = word_strings if word_strings else sample.transcript.split()
@@ -652,7 +659,15 @@ def main() -> None:
 
                 # ── Ensemble average entropy map ──────────────────────────────
                 if entropy_maps:
-                    ent_avg      = torch.stack(list(entropy_maps.values())).mean(dim=0)
+                    _ent_maps_filtered = {
+                        k: v for k, v in entropy_maps.items()
+                        if k != "llama3_2"
+                    }
+                    _maps_to_avg = _ent_maps_filtered if _ent_maps_filtered \
+                                   else entropy_maps
+                    print(f"\n  [entropy] ensemble average from: "
+                          f"{list(_maps_to_avg.keys())}")
+                    ent_avg      = torch.stack(list(_maps_to_avg.values())).mean(dim=0)
                     ent_avg_norm = _normalize_01(ent_avg)
 
                     _words = word_strings if word_strings else sample.transcript.split()
@@ -674,31 +689,32 @@ def main() -> None:
                     for score, word in _avg_sorted[-10:]:
                         print(f"    {score:.4f}  {word!r}")
 
-                    # Cross-compare ensemble entropy top-10 vs importance top-10
-                    imp_sorted = sorted(
-                        [(float(components["importance"][
-                            max(0, int(word_boxes[i][1])):min(H, int(word_boxes[i][3])),
-                            max(0, int(word_boxes[i][0])):min(W, int(word_boxes[i][2]))
-                         ].mean()), _words[i])
-                         for i in range(_n)
-                         if int(word_boxes[i][2]) > int(word_boxes[i][0])
-                         and int(word_boxes[i][3]) > int(word_boxes[i][1])],
-                        key=lambda x: x[0], reverse=True,
-                    )
-                    imp_top10 = {w for _, w in imp_sorted[:10]}
-                    ent_top10 = {w for _, w in _avg_sorted[:10]}
-                    cap_words = {w for w in (imp_top10 | ent_top10) if w[0].isupper()}
+                    if not args.entropy_only:
+                        # Cross-compare ensemble entropy top-10 vs importance top-10
+                        imp_sorted = sorted(
+                            [(float(components["importance"][
+                                max(0, int(word_boxes[i][1])):min(H, int(word_boxes[i][3])),
+                                max(0, int(word_boxes[i][0])):min(W, int(word_boxes[i][2]))
+                             ].mean()), _words[i])
+                             for i in range(_n)
+                             if int(word_boxes[i][2]) > int(word_boxes[i][0])
+                             and int(word_boxes[i][3]) > int(word_boxes[i][1])],
+                            key=lambda x: x[0], reverse=True,
+                        )
+                        imp_top10 = {w for _, w in imp_sorted[:10]}
+                        ent_top10 = {w for _, w in _avg_sorted[:10]}
+                        cap_words = {w for w in (imp_top10 | ent_top10) if w[0].isupper()}
 
-                    if cap_words:
-                        print(f"\n  ── Capitalised token cross-comparison "
-                              f"(importance vs entropy): ──")
-                        for w in sorted(cap_words):
-                            in_imp = w in imp_top10
-                            in_ent = w in ent_top10
-                            tag = "[both]    " if in_imp and in_ent \
-                                  else "[ent_only] " if in_ent \
-                                  else "[imp_only] "
-                            print(f"    {tag}  {w!r}")
+                        if cap_words:
+                            print(f"\n  ── Capitalised token cross-comparison "
+                                  f"(importance vs entropy): ──")
+                            for w in sorted(cap_words):
+                                in_imp = w in imp_top10
+                                in_ent = w in ent_top10
+                                tag = "[both]    " if in_imp and in_ent \
+                                      else "[ent_only] " if in_ent \
+                                      else "[imp_only] "
+                                print(f"    {tag}  {w!r}")
 
                     # Save visualisation — original + per-model + ensemble
                     n_models  = len(entropy_maps)
@@ -724,6 +740,7 @@ def main() -> None:
                     fig.colorbar(im, ax=ax_last, fraction=0.046, pad=0.04)
 
                     plt.tight_layout()
+                    out_path.parent.mkdir(parents=True, exist_ok=True)
                     ent_out = out_path.parent / f"entropy_{sample.image_id}.png"
                     fig.savefig(ent_out, dpi=150, bbox_inches="tight")
                     plt.close(fig)
