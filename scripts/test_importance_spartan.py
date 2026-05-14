@@ -239,11 +239,15 @@ def main() -> None:
     )
     parser.add_argument(
         "--no_kl", action="store_true",
-        help="Skip visual KL (much faster; shows surprise × salience only)",
+        help="Skip visual KL (much faster; shows surprise + salience only)",
     )
     parser.add_argument(
         "--no_surprise", action="store_true",
-        help="Skip token surprise (shows KL × salience only)",
+        help="Skip token surprise (shows KL + salience only)",
+    )
+    parser.add_argument(
+        "--context_radius", type=float, default=50.0,
+        help="Context masking radius in pixels for visual KL (default: 50)",
     )
     parser.add_argument(
         "--out_dir", type=Path, default=Path("outputs/importance_debug"),
@@ -316,22 +320,26 @@ def main() -> None:
         sal_weights    = alpha_weights
 
     print(f"\nSalience surrogates: {[m.name for m in sal_surrogates]}")
-    print(f"use_visual_kl={not args.no_kl}   use_surprise={not args.no_surprise}")
+    print(
+        f"use_visual_kl={not args.no_kl}   use_surprise={not args.no_surprise}   "
+        f"context_radius={args.context_radius:.0f}px"
+    )
 
     t0 = time.perf_counter()
     eps_map, components = build_importance_map(
-        image_tensor  = sample.image_tensor,
-        transcript    = sample.transcript,
-        word_boxes    = word_boxes,
-        surrogates    = sal_surrogates,
-        alpha_weights = sal_weights,
-        epsilon_min   = atk.epsilon_min,
-        epsilon_max   = atk.epsilon,
-        epsilon_bg    = atk.epsilon_bg,
-        dilation      = atk.mask_dilation,
-        device        = device,
-        use_surprise  = not args.no_surprise,
-        use_visual_kl = not args.no_kl,
+        image_tensor      = sample.image_tensor,
+        transcript        = sample.transcript,
+        word_boxes        = word_boxes,
+        surrogates        = sal_surrogates,
+        alpha_weights     = sal_weights,
+        epsilon_min       = atk.epsilon_min,
+        epsilon_max       = atk.epsilon,
+        epsilon_bg        = atk.epsilon_bg,
+        dilation          = atk.mask_dilation,
+        device            = device,
+        use_surprise      = not args.no_surprise,
+        use_visual_kl     = not args.no_kl,
+        context_radius_px = args.context_radius,
     )
     elapsed = time.perf_counter() - t0
     print(f"\nWall-clock time: {elapsed:.1f} s")

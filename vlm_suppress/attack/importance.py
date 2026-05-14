@@ -6,13 +6,15 @@
 # Produces a per-pixel importance map I(i,j) that identifies visually-grounded,
 # semantically surprising tokens rather than structurally salient regions:
 #
-#   I(i,j) = normalize(S) × normalize(Surprise) × normalize(KL)
+#   imp_raw = 0.2·S + 0.4·Surprise + 0.4·KL          (weighted sum)
+#   imp_raw = max(imp_raw, 0.3·(Surprise+KL).clamp(0,1))   (floor)
 #
 # Components:
 #   S         — gradient salience (‖∇_x L_ce‖₂, existing signal)
-#   Surprise  — -log p(word | blank_image, context)   [one forward pass]
-#   KL        — log p(word | orig) - log p(word | masked_at_box)
-#               [one pass per group of non-overlapping boxes]
+#   Surprise  — -log p(word | blank_image, field-reset context)
+#               [one pass per field section; context resets at ALL_CAPS headers]
+#   KL        — log p(word | orig) - log p(word | context-masked_image)
+#               [one pass per non-context-overlapping group]
 #
 # Caller contract:
 #   • Surrogates must implement token_logprobs(image_tensor, transcript).
@@ -82,6 +84,118 @@ def _greedy_nonoverlap_groups(word_boxes: list[list[int]]) -> list[list[int]]:
                 assigned[j] = True
         groups.append(group)
     return groups
+
+
+# ── Geometry helpers for contextual masking ───────────────────────────────────
+
+def _box_center(box: list[int]) -> tuple[float, float]:
+    x0, y0, x1, y1 = box
+    return ((x0 + x1) * 0.5, (y0 + y1) * 0.5)
+
+
+def _center_dist(a: list[int], b: list[int]) -> float:
+    cx_a, cy_a = _box_center(a)
+    cx_b, cy_b = _box_center(b)
+    return ((cx_a - cx_b) ** 2 + (cy_a - cy_b) ** 2) ** 0.5
+
+
+def _get_context_indices(
+    word_idx: int,
+    word_boxes: list[list[int]],
+    context_radius_px: float,
+) -> list[int]:
+    """
+    Return all word indices whose box centre is within context_radius_px of
+    word_idx, including word_idx itself.  These are all masked together when
+    computing the visual KL for word_idx.
+    """
+    box_i = word_boxes[word_idx]
+    result = []
+    for j, box_j in enumerate(word_boxes):
+        if _center_dist(box_i, box_j) <= context_radius_px:
+            result.append(j)
+    return result
+
+
+def _greedy_kl_groups(
+    word_boxes: list[list[int]],
+    context_radius_px: float,
+) -> list[list[int]]:
+    """
+    Like _greedy_nonoverlap_groups but also forbids two words from the same
+    group if they are within context_radius_px of each other.
+
+    Rationale: if word k is within context_radius of word i, masking i also
+    masks k (as context). Placing both in the same batch would create an
+    inconsistent combined mask; measuring p(k | ...) from a pass that masked
+    k-as-context-of-i AND k-as-principal would give the right number, but
+    measuring p(i | ...) from a pass that also masked k-as-principal adds an
+    uncontrolled extra mask to i's measurement.  Keeping them in separate
+    groups eliminates this cross-contamination.
+    """
+    n = len(word_boxes)
+    assigned = [False] * n
+    groups: list[list[int]] = []
+    for i in range(n):
+        if assigned[i]:
+            continue
+        group = [i]
+        assigned[i] = True
+        for j in range(i + 1, n):
+            if assigned[j]:
+                continue
+            conflict = any(
+                _boxes_overlap(word_boxes[k], word_boxes[j])
+                or _center_dist(word_boxes[k], word_boxes[j]) <= context_radius_px
+                for k in group
+            )
+            if not conflict:
+                group.append(j)
+                assigned[j] = True
+        groups.append(group)
+    return groups
+
+
+# ── Section-boundary detection for surprise context reset ─────────────────────
+
+def _same_row(box_i: list[int], box_j: list[int]) -> bool:
+    """True if two boxes share approximately the same text row."""
+    _, cy_i = _box_center(box_i)
+    _, cy_j = _box_center(box_j)
+    h_i = max(box_i[3] - box_i[1], 1)
+    h_j = max(box_j[3] - box_j[1], 1)
+    return abs(cy_i - cy_j) < 1.5 * max(h_i, h_j)
+
+
+def _is_section_boundary(
+    word_idx: int,
+    words:     list[str],
+    word_boxes: list[list[int]],
+) -> bool:
+    """
+    True if this word is a section-header token that should reset the
+    surprise context window.
+
+    Heuristics (both must hold):
+      1. The word (stripped of trailing punctuation) is ALL_CAPS and ≥2 chars.
+      2. No word on the same bounding-box row is mixed/lower case — i.e., the
+         word is not a mid-sentence caps abbreviation surrounded by prose.
+    """
+    raw = words[word_idx].strip()
+    core = raw.rstrip(":：.-_#").strip()
+    if len(core) < 2 or not core.isalpha() or not core.isupper():
+        return False
+
+    box_i = word_boxes[word_idx]
+    for j, (w_j, box_j) in enumerate(zip(words, word_boxes)):
+        if j == word_idx:
+            continue
+        if not _same_row(box_i, box_j):
+            continue
+        core_j = w_j.strip().rstrip(":：.-_#").strip()
+        if core_j and not core_j.isupper():
+            return False   # mixed-case neighbour → not a pure header row
+    return True
 
 
 def _scores_to_pixel_map(
@@ -222,10 +336,16 @@ def compute_token_surprise(
     word_boxes:   list[list[int]],
 ) -> torch.Tensor:                # (H, W) float32 CPU
     """
-    Pixel-space surprise map: -log p(word | blank_image, context).
+    Pixel-space surprise map: -log p(word | blank_image, field-reset context).
+
+    Context window resets at each ALL_CAPS section-header word that has no
+    mixed-case neighbours on its bounding-box row.  This prevents value-word
+    surprise from conditioning on the same token appearing in a prior field
+    (e.g., "COPD" in a second clinical field no longer conditions on "COPD"
+    seen in the diagnosis field).
 
     Requires model.token_logprobs().  Returns zeros if not available.
-    Cost: ONE forward pass (blank image).
+    Cost: ONE forward pass per detected field section (≥ 1, ≤ n_words).
     """
     if not hasattr(model, "token_logprobs"):
         warnings.warn(
@@ -239,32 +359,68 @@ def compute_token_surprise(
     tokenizer = _get_tokenizer(model)
     H, W = image_tensor.shape[-2], image_tensor.shape[-1]
     n_words = len(word_boxes)
+    words   = transcript.split()[:n_words]
+    blank   = _make_blank(image_tensor).to(model.device)
 
-    spans = _align_tokens_to_words(tokenizer, transcript, n_words)
+    # Identify section boundaries (indices into words[])
+    # Word 0 always starts a section; additional boundaries reset context.
+    section_starts = [0]
+    for i in range(1, n_words):
+        if _is_section_boundary(i, words, word_boxes[:n_words]):
+            section_starts.append(i)
 
-    blank = _make_blank(image_tensor).to(model.device)
-    word_lp = _word_logprobs(model, blank, transcript, spans, n_words)
+    n_sections = len(section_starts)
+    if n_sections > 1:
+        print(f"    [surprise] {n_sections} field sections detected "
+              f"(boundaries at words: {section_starts[1:]})")
 
-    # Surprise = -log p (positive; higher = model more surprised by this word)
-    word_scores = [-lp for lp in word_lp]
-    return _scores_to_pixel_map(word_scores, word_boxes, H, W)
+    # Per-section forward pass on the blank image
+    word_scores = [0.0] * n_words
+    for sec_idx, sec_start in enumerate(section_starts):
+        sec_end = (
+            section_starts[sec_idx + 1] if sec_idx + 1 < n_sections else n_words
+        )
+        if sec_start >= sec_end:
+            continue
+
+        section_words      = words[sec_start:sec_end]
+        section_transcript = " ".join(section_words)
+        section_spans      = _align_tokens_to_words(
+            tokenizer, section_transcript, len(section_words)
+        )
+        section_lp = _word_logprobs(
+            model, blank, section_transcript, section_spans, len(section_words)
+        )
+        for i, lp in enumerate(section_lp):
+            word_scores[sec_start + i] = -lp   # surprise = -log p
+
+    return _scores_to_pixel_map(word_scores, word_boxes[:n_words], H, W)
 
 
 @torch.no_grad()
 def compute_visual_kl(
-    model:        object,
-    image_tensor: torch.Tensor,   # (3, H, W) float32 [0,1]
-    transcript:   str,
-    word_boxes:   list[list[int]],
-) -> torch.Tensor:                # (H, W) float32 CPU
+    model:             object,
+    image_tensor:      torch.Tensor,   # (3, H, W) float32 [0,1]
+    transcript:        str,
+    word_boxes:        list[list[int]],
+    context_radius_px: float = 50.0,
+) -> torch.Tensor:                     # (H, W) float32 CPU
     """
-    Pixel-space visual-KL map: log p(word | orig) - log p(word | masked_at_box).
+    Pixel-space visual-KL map: log p(word | orig) - log p(word | context-masked).
 
-    Positive where the visual region meaningfully contributes to predicting
-    the word.  Non-overlapping boxes are batched into single forward passes.
+    Context masking: when measuring word i, mask box_i AND all word boxes whose
+    centres are within context_radius_px pixels of box_i's centre.  This
+    approximates field-level masking — erasing the label next to a value along
+    with the value itself avoids the model "reading" the label and guessing the
+    value without needing the actual value pixels.
+
+    Batching: words whose context masks would cross-contaminate each other are
+    placed in separate groups (_greedy_kl_groups).  Within a group, all words
+    and their contexts are masked simultaneously in one forward pass.
 
     Requires model.token_logprobs().  Returns zeros if not available.
-    Cost: 1 (original) + N_groups forward passes (N_groups ≤ n_words).
+    Cost: 1 (original) + N_groups forward passes (N_groups ≤ n_words,
+    typically much smaller due to batching).
     """
     if not hasattr(model, "token_logprobs"):
         warnings.warn(
@@ -275,25 +431,31 @@ def compute_visual_kl(
         H, W = image_tensor.shape[-2], image_tensor.shape[-1]
         return torch.zeros(H, W)
 
-    tokenizer = _get_tokenizer(model)
-    H, W = image_tensor.shape[-2], image_tensor.shape[-1]
-    n_words = len(word_boxes)
-    mean_fill = float(image_tensor.mean())
-    dev = model.device
+    tokenizer  = _get_tokenizer(model)
+    H, W       = image_tensor.shape[-2], image_tensor.shape[-1]
+    n_words    = len(word_boxes)
+    mean_fill  = float(image_tensor.mean())
+    dev        = model.device
 
     spans = _align_tokens_to_words(tokenizer, transcript, n_words)
 
-    # Baseline: original image log probs
+    # Baseline: original image log probs (one pass)
     orig_word_lp = _word_logprobs(model, image_tensor.to(dev), transcript, spans, n_words)
 
-    # Masked passes — batch non-overlapping boxes
-    groups = _greedy_nonoverlap_groups(word_boxes)
-    masked_word_lp: list[Optional[float]] = [None] * n_words
+    # Build batched groups that respect context-radius isolation
+    groups = _greedy_kl_groups(word_boxes, context_radius_px)
 
-    for g_idx, group in enumerate(groups):
+    masked_word_lp: list[Optional[float]] = [None] * n_words
+    for group in groups:
         img_masked = image_tensor.clone()
+        # For each principal word in this group, mask it AND its context words
+        masked_set: set[int] = set()
         for idx in group:
-            x0, y0, x1, y1 = (int(v) for v in word_boxes[idx])
+            for cidx in _get_context_indices(idx, word_boxes, context_radius_px):
+                masked_set.add(cidx)
+
+        for cidx in masked_set:
+            x0, y0, x1, y1 = (int(v) for v in word_boxes[cidx])
             x0, y0 = max(0, x0), max(0, y0)
             x1, y1 = min(W, x1), min(H, y1)
             if x1 > x0 and y1 > y0:
@@ -314,29 +476,36 @@ def compute_visual_kl(
 # ── Main entry point ──────────────────────────────────────────────────────────
 
 def build_importance_map(
-    image_tensor:  torch.Tensor,       # (1, 3, H, W) or (3, H, W) float32 [0,1]
-    transcript:    str,
-    word_boxes:    list[list[int]],
-    surrogates:    list,
-    alpha_weights: list[float],
-    epsilon_min:   float,
-    epsilon_max:   float,
-    epsilon_bg:    float,
-    dilation:      int,
-    device:        torch.device,
-    use_surprise:  bool = True,
-    use_visual_kl: bool = True,
+    image_tensor:      torch.Tensor,       # (1, 3, H, W) or (3, H, W) float32 [0,1]
+    transcript:        str,
+    word_boxes:        list[list[int]],
+    surrogates:        list,
+    alpha_weights:     list[float],
+    epsilon_min:       float,
+    epsilon_max:       float,
+    epsilon_bg:        float,
+    dilation:          int,
+    device:            torch.device,
+    use_surprise:      bool  = True,
+    use_visual_kl:     bool  = True,
+    context_radius_px: float = 50.0,
 ) -> tuple[torch.Tensor, dict]:
     """
     Build an importance-weighted epsilon budget map (diagnostic only).
 
     Pipeline:
-      1. Gradient salience  — ‖∇_x L_ce‖₂  (existing, from build_salience_budget_map)
-      2. Token surprise     — -log p(w | blank, context)
-      3. Visual KL          — Δ log p(w | orig vs masked)
-      4. I = normalize(S) × normalize(Surprise) × normalize(KL)
-      5. Build eps map: text pixels ← epsilon_min + (epsilon_max-epsilon_min)·I
-                        bg pixels   ← epsilon_bg
+      1. Gradient salience  — ‖∇_x L_ce‖₂  (from build_salience_budget_map)
+      2. Token surprise     — -log p(w | blank, field-reset context)
+      3. Visual KL          — Δ log p(w | orig vs context-masked)
+      4. Weighted sum + floor:
+             imp_raw  = 0.2·S + 0.4·Surprise + 0.4·KL
+             imp_raw  = max(imp_raw, 0.3·(Surprise+KL).clamp(0,1))
+      5. Build eps map: text ← epsilon_min + (epsilon_max−epsilon_min)·I
+                        bg   ← epsilon_bg
+
+    Parameters
+    ----------
+    context_radius_px : radius (pixels) for field-level context masking in KL.
 
     Returns
     -------
@@ -349,11 +518,11 @@ def build_importance_map(
     if image_tensor.dim() == 4:
         image_tensor = image_tensor.squeeze(0)   # (3, H, W)
 
-    H, W = image_tensor.shape[-2], image_tensor.shape[-1]
+    H, W     = image_tensor.shape[-2], image_tensor.shape[-1]
     image_4d = image_tensor.unsqueeze(0)
 
-    text_mask  = build_text_mask(H, W, word_boxes, dilation, device=torch.device("cpu"))
-    text_flag  = text_mask.squeeze(0) > 0   # (H, W) bool
+    text_mask = build_text_mask(H, W, word_boxes, dilation, device=torch.device("cpu"))
+    text_flag = text_mask.squeeze(0) > 0   # (H, W) bool
 
     # ── 1. Gradient salience ──────────────────────────────────────────────────
     print("  [importance] gradient salience ...")
@@ -370,15 +539,15 @@ def build_importance_map(
         device        = device,
     )
 
-    # Extract raw salience in [0, 1] (undo linear epsilon scaling)
-    sal_raw = sal_4d.squeeze(0).cpu()
+    # Undo linear epsilon scaling → raw salience in [0, 1]
+    sal_raw   = sal_4d.squeeze(0).cpu()
     eps_range = epsilon_max - epsilon_min
     if eps_range > 1e-9:
         sal_raw = (sal_raw - epsilon_min) / eps_range
-    sal_raw = sal_raw.clamp(0.0, 1.0) * text_flag.float()
+    sal_raw  = sal_raw.clamp(0.0, 1.0) * text_flag.float()
     sal_norm = _normalize_01(sal_raw)
 
-    # ── 2. Token surprise ─────────────────────────────────────────────────────
+    # ── 2. Token surprise (with field-reset context) ───────────────────────────
     surprise_map = torch.zeros(H, W, dtype=torch.float32)
     if use_surprise:
         for surrogate, alpha in zip(surrogates, alpha_weights):
@@ -391,27 +560,35 @@ def build_importance_map(
             surprise_map = surprise_map + alpha * s_k
         surprise_map = surprise_map * text_flag.float()
 
-    # ── 3. Visual KL ──────────────────────────────────────────────────────────
+    # ── 3. Visual KL (with contextual span masking) ───────────────────────────
     kl_map = torch.zeros(H, W, dtype=torch.float32)
     if use_visual_kl:
-        n_groups = len(_greedy_nonoverlap_groups(word_boxes))
+        n_groups = len(_greedy_kl_groups(word_boxes, context_radius_px))
         for surrogate, alpha in zip(surrogates, alpha_weights):
             print(
                 f"  [importance] visual KL — {surrogate.name} "
-                f"({len(word_boxes)} words → {n_groups} batched passes) ..."
+                f"({len(word_boxes)} words, r={context_radius_px:.0f}px "
+                f"→ {n_groups} batched passes) ..."
             )
             if isinstance(surrogate, LazySurrogate):
                 with surrogate as model:
-                    k_k = compute_visual_kl(model, image_tensor, transcript, word_boxes)
+                    k_k = compute_visual_kl(
+                        model, image_tensor, transcript, word_boxes, context_radius_px
+                    )
             else:
-                k_k = compute_visual_kl(surrogate, image_tensor, transcript, word_boxes)
+                k_k = compute_visual_kl(
+                    surrogate, image_tensor, transcript, word_boxes, context_radius_px
+                )
             kl_map = kl_map + alpha * k_k
         kl_map = kl_map * text_flag.float()
 
-    # ── 4. Importance = product of normalized components ──────────────────────
-    surp_n = _normalize_01(surprise_map) if use_surprise   else torch.ones(H, W)
-    kl_n   = _normalize_01(kl_map)       if use_visual_kl  else torch.ones(H, W)
-    imp_raw = sal_norm * surp_n * kl_n * text_flag.float()
+    # ── 4. Weighted sum + floor ───────────────────────────────────────────────
+    surp_n = _normalize_01(surprise_map) if use_surprise  else torch.ones(H, W)
+    kl_n   = _normalize_01(kl_map)       if use_visual_kl else torch.ones(H, W)
+
+    imp_raw = (0.2 * sal_norm + 0.4 * surp_n + 0.4 * kl_n) * text_flag.float()
+    floor   = 0.3 * (surp_n + kl_n).clamp(0.0, 1.0) * text_flag.float()
+    imp_raw = torch.maximum(imp_raw, floor)
     imp_n   = _normalize_01(imp_raw)
 
     # ── 5. Epsilon budget map ─────────────────────────────────────────────────
