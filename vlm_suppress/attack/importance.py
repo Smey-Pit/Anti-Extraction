@@ -660,8 +660,14 @@ def compute_confidence_drop(
             masked_wrong_lp[idx] = float(masked_data[idx][1].sum())
 
     # ── Confidence drop per word ──────────────────────────────────────
+    import math
+
+    def _safe_exp(x: float) -> float:
+        """exp clamped to avoid overflow on large positive values."""
+        return math.exp(max(x, -500.0))
+
     word_cd = [
-        max(0.0, orig - (mw if mw is not None else 0.0))
+        max(0.0, _safe_exp(orig) - _safe_exp(mw if mw is not None else 0.0))
         for orig, mw in zip(orig_correct_lp, masked_wrong_lp)
     ]
 
