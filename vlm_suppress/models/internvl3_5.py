@@ -273,3 +273,37 @@ class InternVL35(SurrogateModel):
 
         response = self._THINK_RE.sub("", response).strip()
         return response
+
+    @torch.no_grad()
+    def token_logprobs(
+        self,
+        image_tensor: torch.Tensor,   # (3, H, W) float32 [0,1]
+        transcript: str,
+    ) -> tuple[torch.Tensor, torch.Tensor]:
+        """
+        Per-token log probabilities for transcript given image.
+
+        Returns
+        -------
+        log_probs : (T,) float32 on self._device
+        token_ids : (T,) int64  on self._device
+        """
+        pixel_values  = self._preprocess(image_tensor)
+        input_ids     = self._build_input_ids(self._QUESTION)   # (1, L)
+        inputs_embeds = self._build_inputs_embeds(input_ids, pixel_values)
+
+        target_ids = self.tokenizer(
+            transcript, return_tensors="pt", add_special_tokens=False,
+        ).input_ids.to(self._device)   # (1, T)
+        T = target_ids.size(1)
+
+        tgt_embeds = self.model.language_model.get_input_embeddings()(target_ids).to(self._dtype)
+        full_embeds = torch.cat([inputs_embeds, tgt_embeds], dim=1)
+
+        out = self.model.language_model(inputs_embeds=full_embeds, return_dict=True)
+
+        transcript_logits = out.logits[0, -T - 1:-1, :].float()   # (T, vocab)
+        log_probs = F.log_softmax(transcript_logits, dim=-1)
+        tok_ids   = target_ids[0]                                  # (T,)
+        token_lp  = log_probs.gather(1, tok_ids.unsqueeze(1)).squeeze(1)
+        return token_lp, tok_ids

@@ -265,3 +265,53 @@ class PaliGemma2(SurrogateModel):
         prompt_len = prompt_enc["input_ids"].shape[1]
         gen_ids = out_ids[0, prompt_len:]
         return self.processor.decode(gen_ids, skip_special_tokens=True).strip()
+
+    @torch.no_grad()
+    def token_logprobs(
+        self,
+        image_tensor: torch.Tensor,   # (3, H, W) float32 [0,1]
+        transcript: str,
+    ) -> tuple[torch.Tensor, torch.Tensor]:
+        """
+        Per-token log probabilities for transcript given image.
+
+        Returns
+        -------
+        log_probs : (T,) float32 on self._device
+        token_ids : (T,) int64  on self._device
+        """
+        pixel_values   = self._preprocess(image_tensor)
+        transcript_ids = self._transcript_ids(transcript)   # (1, T)
+        T              = transcript_ids.size(1)
+
+        pil        = _tensor_to_pil(image_tensor)
+        prompt_enc = self._prompt_ids_with_image(pil)
+
+        full_input_ids = torch.cat(
+            [prompt_enc["input_ids"], transcript_ids], dim=1
+        )
+
+        if "attention_mask" in prompt_enc:
+            full_attn = torch.cat(
+                [prompt_enc["attention_mask"],
+                 torch.ones(1, T, device=self._device, dtype=torch.long)],
+                dim=1,
+            )
+        else:
+            full_attn = None
+
+        model_inputs = dict(
+            input_ids=full_input_ids,
+            pixel_values=pixel_values,
+            return_dict=True,
+        )
+        if full_attn is not None:
+            model_inputs["attention_mask"] = full_attn
+
+        out = self.model(**model_inputs)
+
+        transcript_logits = out.logits[0, -T - 1:-1, :].float()   # (T, vocab)
+        log_probs = F.log_softmax(transcript_logits, dim=-1)
+        tok_ids   = transcript_ids[0]                              # (T,)
+        token_lp  = log_probs.gather(1, tok_ids.unsqueeze(1)).squeeze(1)
+        return token_lp, tok_ids

@@ -64,6 +64,23 @@ class SurrogateModel(ABC):
         """
         ...
 
+    @torch.no_grad()
+    def token_logprobs(
+        self,
+        image_tensor: torch.Tensor,
+        transcript: str,
+    ) -> tuple[torch.Tensor, torch.Tensor]:
+        """
+        Per-token log probabilities for transcript given image.
+        Subclasses that support importance mapping must override this.
+        Returns (log_probs (T,), token_ids (T,)) both float32/int64 on device.
+        """
+        raise NotImplementedError(
+            f"{type(self).__name__} does not implement token_logprobs. "
+            "Required for importance mapping (Stage 1). "
+            "Add a token_logprobs method following the contract in base.py."
+        )
+
     @property
     @abstractmethod
     def device(self) -> torch.device:

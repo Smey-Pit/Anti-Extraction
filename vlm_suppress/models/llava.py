@@ -274,3 +274,47 @@ class LLaVA16(SurrogateModel):
         ).strip().strip('"').strip("'").strip()
 
         return raw
+
+    @torch.no_grad()
+    def token_logprobs(
+        self,
+        image_tensor: torch.Tensor,   # (3, H, W) float32 [0,1]
+        transcript: str,
+    ) -> tuple[torch.Tensor, torch.Tensor]:
+        """
+        Per-token log probabilities for transcript given image.
+
+        Returns
+        -------
+        log_probs : (T,) float32 on self._device
+        token_ids : (T,) int64  on self._device
+        """
+        pil                      = _tensor_to_pil(image_tensor)
+        pixel_values, prompt_enc = self._preprocess(image_tensor, pil)
+
+        transcript_ids = self._transcript_ids(transcript)   # (1, T)
+        T              = transcript_ids.size(1)
+
+        full_ids  = torch.cat([prompt_enc["input_ids"], transcript_ids], dim=1)
+        full_attn = torch.cat([
+            prompt_enc["attention_mask"],
+            torch.ones(1, T, device=self._device, dtype=torch.long),
+        ], dim=1)
+
+        out = self.model(
+            input_ids=full_ids,
+            attention_mask=full_attn,
+            pixel_values=pixel_values,
+            image_sizes=prompt_enc["image_sizes"],
+            return_dict=True,
+            use_cache=False,
+        )
+
+        if out.logits is None:
+            raise RuntimeError("LLaVA16.token_logprobs: model returned logits=None")
+
+        transcript_logits = out.logits[0, -T - 1:-1, :].float()   # (T, vocab)
+        log_probs = F.log_softmax(transcript_logits, dim=-1)
+        tok_ids   = transcript_ids[0]                              # (T,)
+        token_lp  = log_probs.gather(1, tok_ids.unsqueeze(1)).squeeze(1)
+        return token_lp, tok_ids

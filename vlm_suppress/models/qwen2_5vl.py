@@ -284,3 +284,45 @@ class Qwen2_5VL(SurrogateModel):
         return self.processor.decode(
             out[0][input_len:], skip_special_tokens=True
         ).strip()
+
+    @torch.no_grad()
+    def token_logprobs(
+        self,
+        image_tensor: torch.Tensor,   # (3, H, W) float32 [0,1]
+        transcript: str,
+    ) -> tuple[torch.Tensor, torch.Tensor]:
+        """
+        Per-token log probabilities for transcript given image.
+
+        Returns
+        -------
+        log_probs : (T,) float32 on self._device
+        token_ids : (T,) int64  on self._device
+        """
+        static = self._get_static_inputs(image_tensor)
+        pv     = self._build_pixel_values(image_tensor, static["image_grid_thw"])
+
+        target_ids = self.processor.tokenizer(
+            transcript, return_tensors="pt", add_special_tokens=False,
+        ).input_ids.to(self._device)   # (1, T)
+        T = target_ids.size(1)
+
+        full_input_ids = torch.cat([static["input_ids"], target_ids], dim=1)
+        full_attn = torch.cat([
+            static["attention_mask"],
+            torch.ones(1, T, device=self._device, dtype=static["attention_mask"].dtype),
+        ], dim=1)
+
+        out = self.model(
+            input_ids=full_input_ids,
+            attention_mask=full_attn,
+            pixel_values=pv,
+            image_grid_thw=static["image_grid_thw"],
+            return_dict=True,
+        )
+
+        transcript_logits = out.logits[0, -T - 1:-1, :].float()   # (T, vocab)
+        log_probs = F.log_softmax(transcript_logits, dim=-1)
+        tok_ids   = target_ids[0]                                  # (T,)
+        token_lp  = log_probs.gather(1, tok_ids.unsqueeze(1)).squeeze(1)
+        return token_lp, tok_ids
