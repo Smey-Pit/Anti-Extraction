@@ -69,11 +69,26 @@ class SurrogateModel(ABC):
         self,
         image_tensor: torch.Tensor,
         transcript: str,
-    ) -> tuple[torch.Tensor, torch.Tensor]:
+        return_top_k: int = 0,
+    ) -> "tuple[torch.Tensor, torch.Tensor] | tuple[torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor]":
         """
         Per-token log probabilities for transcript given image.
         Subclasses that support importance mapping must override this.
-        Returns (log_probs (T,), token_ids (T,)) both float32/int64 on device.
+
+        Parameters
+        ----------
+        return_top_k : if 0 (default), returns a 2-tuple.
+                       if > 0, additionally returns top-K log probs and ids
+                       at every transcript position.
+
+        Returns
+        -------
+        Always:
+          log_probs  : (T,) float32 on device
+          token_ids  : (T,) int64  on device
+        When return_top_k > 0:
+          top_k_log_probs : (T, K) float32, sorted descending
+          top_k_ids       : (T, K) int64
         """
         raise NotImplementedError(
             f"{type(self).__name__} does not implement token_logprobs. "

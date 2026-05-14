@@ -350,7 +350,8 @@ class LlamaVision(SurrogateModel):
         self,
         image_tensor: torch.Tensor,   # (3, H, W) float32 [0,1]
         transcript: str,
-    ) -> tuple[torch.Tensor, torch.Tensor]:
+        return_top_k: int = 0,
+    ) -> "tuple[torch.Tensor, torch.Tensor] | tuple[torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor]":
         """
         Per-token log probabilities for transcript given image.
 
@@ -394,4 +395,11 @@ class LlamaVision(SurrogateModel):
         log_probs = F.log_softmax(transcript_logits, dim=-1)           # (T, vocab)
         tok_ids   = transcript_ids[0]                                  # (T,)
         token_lp  = log_probs.gather(1, tok_ids.unsqueeze(1)).squeeze(1)  # (T,)
+
+        # ── Top-K extension (no-op when return_top_k == 0) ───────────────────
+        if return_top_k > 0:
+            K = min(return_top_k, log_probs.size(-1))
+            top_k_lp, top_k_id = torch.topk(log_probs, k=K, dim=-1, sorted=True)
+            return token_lp, tok_ids, top_k_lp, top_k_id
+
         return token_lp, tok_ids
