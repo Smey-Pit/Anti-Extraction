@@ -280,6 +280,10 @@ def main() -> None:
         help="Number of samples per category (default: 1)",
     )
     parser.add_argument(
+        "--confidence_drop", action="store_true",
+        help="Also run compute_confidence_drop and add sixth panel.",
+    )
+    parser.add_argument(
         "--categories", nargs="+", default=None,
         help=(
             "Categories to test (default: use config category_filter, "
@@ -467,6 +471,104 @@ def main() -> None:
             fig.savefig(eps_path, dpi=150, bbox_inches="tight")
             plt.close(fig)
             print(f"  Saved → {eps_path}")
+
+            # ── Confidence drop (optional) ────────────────────────────────────
+            if args.confidence_drop:
+                print("\n[confidence_drop] running on first surrogate only ...")
+                first_surrogate = sal_surrogates[0]
+
+                from vlm_suppress.attack.importance import (
+                    compute_confidence_drop, _normalize_01,
+                )
+                from vlm_suppress.models.lazy import LazySurrogate
+
+                if isinstance(first_surrogate, LazySurrogate):
+                    with first_surrogate as model:
+                        cd_map = compute_confidence_drop(
+                            model, sample.image_tensor,
+                            sample.transcript, word_boxes,
+                            context_radius_px=atk.mask_dilation * 10,
+                            top_k=10,
+                        )
+                else:
+                    cd_map = compute_confidence_drop(
+                        first_surrogate, sample.image_tensor,
+                        sample.transcript, word_boxes,
+                        context_radius_px=atk.mask_dilation * 10,
+                        top_k=10,
+                    )
+
+                cd_norm = _normalize_01(cd_map)
+
+                # ── Top/bottom 10 by confidence drop ─────────────────────────
+                words   = sample.transcript.split()
+                n_words = min(len(words), len(word_boxes))
+                cd_word_scores = []
+                for i in range(n_words):
+                    x0, y0, x1, y1 = (int(v) for v in word_boxes[i])
+                    x0, y0 = max(0, x0), max(0, y0)
+                    x1, y1 = min(W, x1), min(H, y1)
+                    region = cd_norm[y0:y1, x0:x1]
+                    score  = float(region.mean()) if region.numel() > 0 else 0.0
+                    cd_word_scores.append((score, words[i]))
+
+                cd_sorted = sorted(cd_word_scores, key=lambda x: x[0], reverse=True)
+                print("\n── Top 10 by confidence drop: ──────────────────────────")
+                for score, word in cd_sorted[:10]:
+                    print(f"  {score:.4f}  {word!r}")
+                print("\n── Bottom 10 by confidence drop: ───────────────────────")
+                for score, word in cd_sorted[-10:]:
+                    print(f"  {score:.4f}  {word!r}")
+
+                # ── Cross-compare with existing importance top-10 ─────────────
+                imp_sorted = sorted(
+                    [(float(components["importance"][
+                          max(0, int(word_boxes[i][1])):min(H, int(word_boxes[i][3])),
+                          max(0, int(word_boxes[i][0])):min(W, int(word_boxes[i][2]))
+                      ].mean()), words[i])
+                     for i in range(n_words)
+                     if int(word_boxes[i][2]) > int(word_boxes[i][0])
+                     and int(word_boxes[i][3]) > int(word_boxes[i][1])],
+                    key=lambda x: x[0], reverse=True,
+                )
+                imp_top10 = {w for _, w in imp_sorted[:10]}
+                cd_top10  = {w for _, w in cd_sorted[:10]}
+                cap_words = {w for w in (imp_top10 | cd_top10) if w[0].isupper()}
+
+                if cap_words:
+                    print("\n── Capitalised token cross-comparison: ─────────────────")
+                    for w in sorted(cap_words):
+                        in_imp = w in imp_top10
+                        in_cd  = w in cd_top10
+                        tag = "[both]   " if in_imp and in_cd \
+                              else "[cd_only] " if in_cd \
+                              else "[imp_only]"
+                        print(f"  {tag}  {w!r}")
+
+                # ── Six-panel visualisation ───────────────────────────────────
+                img_np = sample.image_tensor.permute(1, 2, 0).cpu().numpy().clip(0, 1)
+                panels = [
+                    ("Original",           img_np,                           False),
+                    ("Gradient salience",  components["salience"].numpy(),   True),
+                    ("Token surprise",     components["surprise"].numpy(),   True),
+                    ("Visual KL",          components["kl"].numpy(),         True),
+                    ("Importance\n(current)", components["importance"].numpy(), True),
+                    ("Confidence Drop\n(new)", cd_norm.numpy(),              True),
+                ]
+                fig, axes = plt.subplots(1, 6, figsize=(34, 5))
+                for ax, (title, data, is_heatmap) in zip(axes, panels):
+                    if is_heatmap:
+                        im = ax.imshow(data, cmap="plasma", vmin=0, vmax=1)
+                        fig.colorbar(im, ax=ax, fraction=0.046, pad=0.04)
+                    else:
+                        ax.imshow(data)
+                    ax.set_title(title, fontsize=9)
+                    ax.axis("off")
+                plt.tight_layout()
+                cd_out = out_path.parent / f"cd_{sample.image_id}.png"
+                fig.savefig(cd_out, dpi=150, bbox_inches="tight")
+                plt.close(fig)
+                print(f"\n  Saved six-panel → {cd_out}")
 
             total_processed += 1
 
