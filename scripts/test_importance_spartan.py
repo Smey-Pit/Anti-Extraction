@@ -622,8 +622,8 @@ def main() -> None:
                             word_strings=word_strings,
                         )
 
-                    ent_norm = _normalize_01(ent_k)        # for display only
-                    entropy_maps[surrogate.name] = ent_k   # store raw
+                    ent_norm = _normalize_01(ent_k)
+                    entropy_maps[surrogate.name] = ent_norm
 
                     # Per-word scores for this surrogate
                     _words = word_strings if word_strings else sample.transcript.split()
@@ -665,8 +665,12 @@ def main() -> None:
                     }
                     _maps_to_avg = _ent_maps_filtered if _ent_maps_filtered \
                                    else entropy_maps
+                    _excluded = [k for k in entropy_maps if k not in _maps_to_avg]
                     print(f"\n  [entropy] ensemble average from: "
                           f"{list(_maps_to_avg.keys())}")
+                    if _excluded:
+                        print(f"  [entropy] excluded from ensemble: {_excluded} "
+                              f"(architectural outlier — collapses on blank image)")
                     ent_avg      = torch.stack(list(_maps_to_avg.values())).mean(dim=0)
                     ent_avg_norm = _normalize_01(ent_avg)
 
