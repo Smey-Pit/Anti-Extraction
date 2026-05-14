@@ -365,8 +365,8 @@ def compute_token_surprise(
     # Identify section boundaries (indices into words[])
     # Word 0 always starts a section; additional boundaries reset context.
     section_starts = [0]
-    for i in range(1, n_words):
-        if _is_section_boundary(i, words, word_boxes[:n_words]):
+    for i in range(1, len(words)):   # len(words) ≤ n_words
+        if _is_section_boundary(i, words, word_boxes[:len(words)]):
             section_starts.append(i)
 
     n_sections = len(section_starts)
@@ -375,10 +375,11 @@ def compute_token_surprise(
               f"(boundaries at words: {section_starts[1:]})")
 
     # Per-section forward pass on the blank image
+    n_actual    = len(words)   # may be less than n_words if transcript is shorter
     word_scores = [0.0] * n_words
     for sec_idx, sec_start in enumerate(section_starts):
         sec_end = (
-            section_starts[sec_idx + 1] if sec_idx + 1 < n_sections else n_words
+            section_starts[sec_idx + 1] if sec_idx + 1 < n_sections else n_actual
         )
         if sec_start >= sec_end:
             continue
