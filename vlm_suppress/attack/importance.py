@@ -637,6 +637,15 @@ def compute_confidence_drop(
     print(f"  [cd] first 5 words: "
           f"{(word_strings or transcript.split())[:5]}")
 
+    # Print span for a known word to verify alignment
+    words_for_debug = word_strings if word_strings else transcript.split()
+    for debug_word in ['Emily', 'Hartley', 'presents', 'ratio']:
+        if debug_word in words_for_debug:
+            idx = words_for_debug.index(debug_word)
+            if idx < len(spans):
+                print(f"  [cd] '{debug_word}' → word_idx={idx}, "
+                      f"token_span={spans[idx]}")
+
     # ── Baseline: original image ──────────────────────────────────────
     orig_data = _word_top_k(
         model, image_tensor.to(dev),
