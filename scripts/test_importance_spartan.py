@@ -37,7 +37,7 @@ import yaml
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from vlm_suppress.attack.importance import build_importance_map
+from vlm_suppress.attack.importance import build_importance_map, _normalize_01
 from vlm_suppress.attack.masks import build_text_mask
 from vlm_suppress.config import (
     Domain, EnsembleWeighting, ExperimentConfig, ObjectiveConfig, ProxyStage,
@@ -117,28 +117,33 @@ def _load_opt_surrogates(cfg: ExperimentConfig) -> list:
 
 def _save_five_panel(
     image_tensor: torch.Tensor,   # (3, H, W) CPU float32 [0,1]
-    components:   dict,           # {'salience', 'surprise', 'kl', 'importance'} — (H,W) CPU
+    components:   dict,           # {'salience', 'entropy', 'kl', 'importance'} — (H,W) CPU
     out_path: Path,
 ) -> None:
     """
-    Five-panel figure:
+    Six-panel figure:
       [0] Original image
       [1] Gradient salience
-      [2] Token surprise (-log p | blank)
+      [2] Entropy (blank-image)
       [3] Visual KL
-      [4] Importance = product of 1-3
+      [4] Entropy × KL (product)
+      [5] Importance = entropy×KL with salience floor
     """
-    img_np = image_tensor.permute(1, 2, 0).cpu().numpy().clip(0, 1)
+    img_np   = image_tensor.permute(1, 2, 0).cpu().numpy().clip(0, 1)
+    ent_x_kl = _normalize_01(
+        components["entropy"] * components["kl"]
+    ).numpy()
 
     panels = [
-        ("Original",         img_np,                               False),
-        ("Gradient salience", components["salience"].numpy(),       True),
-        ("Token surprise\n(-log p | blank)", components["surprise"].numpy(), True),
-        ("Visual KL\n(log p_orig - log p_masked)", components["kl"].numpy(), True),
-        ("Importance\n(product, normalised)", components["importance"].numpy(), True),
+        ("Original",                          img_np,                              False),
+        ("Gradient salience",                  components["salience"].numpy(),      True),
+        ("Entropy\n(blank-image)",             components["entropy"].numpy(),       True),
+        ("Visual KL\n(log p_orig - p_masked)", components["kl"].numpy(),            True),
+        ("Entropy × KL\n(product)",            ent_x_kl,                           True),
+        ("Importance\n(ent×KL + sal floor)",   components["importance"].numpy(),    True),
     ]
 
-    fig, axes = plt.subplots(1, 5, figsize=(28, 5))
+    fig, axes = plt.subplots(1, 6, figsize=(34, 5))
     for ax, (title, data, is_heatmap) in zip(axes, panels):
         if is_heatmap:
             im = ax.imshow(data, cmap="plasma", vmin=0, vmax=1)
@@ -241,7 +246,7 @@ def _sanity_check(
         if ratio > 2.0:
             _emit("  ✓ PASS: value regions are >2× more salient than label regions")
         else:
-            _emit("  ✗ NOTE: ratio < 2× — KL/surprise weighting may not dominate gradient")
+            _emit("  ✗ NOTE: ratio < 2× — entropy×KL product may not dominate gradient salience floor")
             _emit("         Consider increasing epsilon_max/epsilon_min spread or")
             _emit("         inspecting per-component maps for which signal is flat.")
 
@@ -442,6 +447,8 @@ def main() -> None:
                     use_visual_kl     = not args.no_kl,
                     context_radius_px = args.context_radius,
                     word_strings      = word_strings,
+                    use_entropy       = True,
+                    entropy_exclude   = ["llama3_2"],
                 )
                 elapsed = time.perf_counter() - t0
                 print(f"  Wall-clock: {elapsed:.1f} s")
@@ -453,7 +460,7 @@ def main() -> None:
                 text_flag = text_mask.squeeze(0) > 0
 
                 print("  ── Component statistics (text region): ──────────────────")
-                for key in ("salience", "surprise", "kl", "importance"):
+                for key in ("salience", "surprise", "kl", "entropy", "importance"):
                     m    = components[key]
                     vals = m[text_flag]
                     if vals.numel() == 0:

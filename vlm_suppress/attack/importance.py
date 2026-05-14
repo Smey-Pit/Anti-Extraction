@@ -4,15 +4,19 @@
 # Stage 1: Domain-agnostic token importance mapping.
 #
 # Produces a per-pixel importance map I(i,j) that identifies visually-grounded,
-# semantically surprising tokens rather than structurally salient regions:
+# PII-specific tokens rather than structurally salient regions:
 #
-#   imp_raw = 0.2·S + 0.4·Surprise + 0.4·KL          (weighted sum)
-#   imp_raw = max(imp_raw, 0.3·(Surprise+KL).clamp(0,1))   (floor)
+#   entropy_map = weighted average of blank-image entropy per surrogate
+#   imp_raw  = normalize(entropy × KL)
+#   sal_floor = 0.15 × salience
+#   imp_n    = normalize(max(imp_raw, sal_floor))
 #
 # Components:
 #   S         — gradient salience (‖∇_x L_ce‖₂, existing signal)
+#   Entropy   — H_approx(word | blank_image); high = visually specific
+#               [one forward pass per surrogate on blank image]
 #   Surprise  — -log p(word | blank_image, field-reset context)
-#               [one pass per field section; context resets at ALL_CAPS headers]
+#               [kept for ablation; not in primary formula]
 #   KL        — log p(word | orig) - log p(word | context-masked_image)
 #               [one pass per non-context-overlapping group]
 #
@@ -756,28 +760,35 @@ def build_importance_map(
     use_visual_kl:     bool  = True,
     context_radius_px: float = 50.0,
     word_strings:      "list[str] | None" = None,
+    use_entropy:       bool  = True,
+    entropy_exclude:   "list[str] | None" = None,
 ) -> tuple[torch.Tensor, dict]:
     """
     Build an importance-weighted epsilon budget map (diagnostic only).
 
     Pipeline:
       1. Gradient salience  — ‖∇_x L_ce‖₂  (from build_salience_budget_map)
-      2. Token surprise     — -log p(w | blank, field-reset context)
+      2. Token surprise     — -log p(w | blank, field-reset context)  [ablation]
       3. Visual KL          — Δ log p(w | orig vs context-masked)
-      4. Weighted sum + floor:
-             imp_raw  = 0.2·S + 0.4·Surprise + 0.4·KL
-             imp_raw  = max(imp_raw, 0.3·(Surprise+KL).clamp(0,1))
+      3b. Blank-image entropy — H_approx(w | blank) averaged over surrogates
+      4. Importance = entropy × KL with salience floor:
+             product   = normalize(entropy × KL)
+             sal_floor = 0.15 × salience
+             imp_n     = normalize(max(product, sal_floor))
       5. Build eps map: text ← epsilon_min + (epsilon_max−epsilon_min)·I
                         bg   ← epsilon_bg
 
     Parameters
     ----------
     context_radius_px : radius (pixels) for field-level context masking in KL.
+    use_entropy       : compute blank-image entropy and use in importance formula.
+    entropy_exclude   : surrogate names to skip when computing entropy.
 
     Returns
     -------
     eps_map    : (1, H, W) float32 budget map on `device`
-    components : dict with CPU (H, W) tensors: salience, surprise, kl, importance
+    components : dict with CPU (H, W) tensors:
+                 salience, surprise, kl, entropy, importance
     """
     from vlm_suppress.attack.salience import build_salience_budget_map
     from vlm_suppress.models.lazy import LazySurrogate
@@ -855,14 +866,67 @@ def build_importance_map(
             kl_map = kl_map + alpha * k_k
         kl_map = kl_map * text_flag.float()
 
-    # ── 4. Weighted sum + floor ───────────────────────────────────────────────
-    surp_n = _normalize_01(surprise_map) if use_surprise  else torch.ones(H, W)
-    kl_n   = _normalize_01(kl_map)       if use_visual_kl else torch.ones(H, W)
+    # ── 3b. Blank-image entropy ───────────────────────────────────────────────
+    entropy_map = torch.zeros(H, W, dtype=torch.float32)
+    if use_entropy:
+        _entropy_exclude = set(entropy_exclude or [])
+        _entropy_surrogates = [
+            s for s in surrogates
+            if s.name not in _entropy_exclude
+        ]
+        _entropy_weights_raw = [
+            alpha_weights[i]
+            for i, s in enumerate(surrogates)
+            if s.name not in _entropy_exclude
+        ]
+        # Renormalise weights after exclusion
+        _w_sum = sum(_entropy_weights_raw) or 1.0
+        _entropy_weights = [w / _w_sum for w in _entropy_weights_raw]
 
-    imp_raw = (0.2 * sal_norm + 0.4 * surp_n + 0.4 * kl_n) * text_flag.float()
-    floor   = 0.3 * (surp_n + kl_n).clamp(0.0, 1.0) * text_flag.float()
-    imp_raw = torch.maximum(imp_raw, floor)
-    imp_n   = _normalize_01(imp_raw)
+        _ent_maps = []
+        for surrogate, alpha in zip(_entropy_surrogates, _entropy_weights):
+            print(f"  [importance] entropy — {surrogate.name} ...")
+            if isinstance(surrogate, LazySurrogate):
+                with surrogate as model:
+                    e_k = compute_blank_entropy(
+                        model, image_tensor,
+                        transcript, word_boxes,
+                        word_strings=word_strings,
+                    )
+            else:
+                e_k = compute_blank_entropy(
+                    surrogate, image_tensor,
+                    transcript, word_boxes,
+                    word_strings=word_strings,
+                )
+            _ent_maps.append(_normalize_01(e_k))
+
+        if _ent_maps:
+            _ent_stack = torch.stack(_ent_maps)
+            # Weighted average of per-model normalised maps
+            _ent_weights_t = torch.tensor(
+                _entropy_weights[:len(_ent_maps)],
+                dtype=torch.float32
+            )
+            entropy_map = (_ent_stack *
+                           _ent_weights_t.view(-1, 1, 1)).sum(dim=0)
+            entropy_map = entropy_map * text_flag.float()
+
+    # ── 4. Importance = entropy × KL with salience floor ─────────────────────
+    ent_n = _normalize_01(entropy_map) if use_entropy  else torch.ones(H, W)
+    kl_n  = _normalize_01(kl_map)      if use_visual_kl else torch.ones(H, W)
+
+    # Product: suppresses labels (high entropy, low KL) and
+    # amplifies values (high entropy, high KL)
+    product  = ent_n * kl_n * text_flag.float()
+    imp_raw  = _normalize_01(product)
+
+    # Salience floor: ensures gradient signal is never zeroed
+    # even when entropy×KL is weak for a region
+    sal_floor = 0.15 * sal_norm * text_flag.float()
+    imp_n     = _normalize_01(
+        torch.maximum(imp_raw, sal_floor)
+    )
 
     # ── 5. Epsilon budget map ─────────────────────────────────────────────────
     E = torch.full((1, H, W), epsilon_bg, dtype=torch.float32)
@@ -875,6 +939,7 @@ def build_importance_map(
         "salience":   sal_norm,
         "surprise":   _normalize_01(surprise_map * text_flag.float()),
         "kl":         _normalize_01(kl_map        * text_flag.float()),
+        "entropy":    _normalize_01(entropy_map    * text_flag.float()),
         "importance": imp_n,
     }
     return E.to(device), components
