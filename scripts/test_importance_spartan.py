@@ -487,28 +487,31 @@ def main() -> None:
 
             # ── Confidence drop (optional) ────────────────────────────────────
             if args.confidence_drop:
-                print("\n[confidence_drop] running on first surrogate only ...")
-                first_surrogate = sal_surrogates[0]
-
                 from vlm_suppress.attack.importance import (
                     compute_confidence_drop, _normalize_01,
                 )
 
-                if isinstance(first_surrogate, LazySurrogate):
-                    with first_surrogate as model:
-                        cd_map = compute_confidence_drop(
-                            model, sample.image_tensor,
+                cd_maps = []
+                for surrogate, alpha in zip(sal_surrogates, sal_weights):
+                    print(f"  [confidence_drop] running on {surrogate.name} ...")
+                    if isinstance(surrogate, LazySurrogate):
+                        with surrogate as model:
+                            cd_k = compute_confidence_drop(
+                                model, sample.image_tensor,
+                                sample.transcript, word_boxes,
+                                word_strings=word_strings,
+                                context_radius_px=atk.mask_dilation * 10,
+                            )
+                    else:
+                        cd_k = compute_confidence_drop(
+                            surrogate, sample.image_tensor,
                             sample.transcript, word_boxes,
-                            context_radius_px=atk.mask_dilation * 10,
                             word_strings=word_strings,
+                            context_radius_px=atk.mask_dilation * 10,
                         )
-                else:
-                    cd_map = compute_confidence_drop(
-                        first_surrogate, sample.image_tensor,
-                        sample.transcript, word_boxes,
-                        context_radius_px=atk.mask_dilation * 10,
-                        word_strings=word_strings,
-                    )
+                    cd_maps.append(alpha * cd_k)
+
+                cd_map = torch.stack(cd_maps).sum(dim=0)   # weighted average
 
                 cd_norm = _normalize_01(cd_map)
 
