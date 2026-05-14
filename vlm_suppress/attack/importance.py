@@ -612,6 +612,26 @@ def compute_confidence_drop(
         for orig, mc in zip(orig_correct_lp, masked_correct_lp)
     ]
 
+    # ── Diagnostic: raw values for key words ─────────────────────────
+    _words_debug = word_strings if word_strings else transcript.split()
+    for _dw in ['presents', 'Emily', 'Hartley', 'MR-9149760']:
+        if _dw in _words_debug:
+            _idx = _words_debug.index(_dw)
+            if _idx < len(orig_correct_lp) and _idx < len(masked_correct_lp):
+                _orig = orig_correct_lp[_idx]
+                _mask = masked_correct_lp[_idx]
+                _drop = word_cd[_idx]
+                _p_orig = _safe_exp(_orig)
+                _p_mask = _safe_exp(_mask) if _mask is not None else None
+                print(
+                    f"  [cd_debug] '{_dw}': "
+                    f"orig_lp={_orig:.4f}  p_orig={_p_orig:.4f}  "
+                    f"mask_lp={_mask if _mask is not None else 'None'}  "
+                    f"p_mask={_p_mask if _p_mask is not None else 'None'}  "
+                    f"drop={_drop:.4f}"
+                )
+    # ── End diagnostic ────────────────────────────────────────────────
+
     return _scores_to_pixel_map(word_cd, word_boxes[:n_words], H, W)
 
 
