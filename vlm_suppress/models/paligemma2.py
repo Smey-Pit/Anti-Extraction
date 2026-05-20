@@ -42,7 +42,7 @@ def _tensor_to_pil(image_tensor: torch.Tensor) -> Image.Image:
 
 class PaliGemma2(SurrogateModel):
 
-    _PROMPT = "<image> Transcribe exactly all visible text. Output only the text, nothing else.\n"
+    _PROMPT = "<image>ocr\n"
 
     def __init__(self, cfg) -> None:
         self.name         = cfg.name
