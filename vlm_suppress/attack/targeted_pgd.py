@@ -16,6 +16,29 @@ from vlm_suppress.eval.metrics import evaluate_targeted_substitution
 from vlm_suppress.watermark.steplog import StepLogger
 
 
+def make_word_mask(
+    tensor_shape: tuple[int, int, int],   # (C, H, W)
+    box: list[float],                      # [x0, y0, x1, y1] in tensor pixel coords
+    padding: int = 4,
+) -> torch.Tensor:
+    """
+    Binary mask: 1.0 inside the padded word bounding box, 0.0 elsewhere.
+
+    Returns a (1, H, W) float tensor that broadcasts across channels.
+    Concentrates the PGD budget on the target-word region, leaving the
+    rest of the image unperturbed.
+    """
+    C, H, W = tensor_shape
+    x0, y0, x1, y1 = box
+    px0 = max(0, int(x0) - padding)
+    py0 = max(0, int(y0) - padding)
+    px1 = min(W, int(x1) + padding)
+    py1 = min(H, int(y1) + padding)
+    mask = torch.zeros(1, H, W)
+    mask[:, py0:py1, px0:px1] = 1.0
+    return mask   # caller moves to device
+
+
 def run_targeted_pgd(
     wm_tensor: torch.Tensor,        # (3, H, W), [0,1], on device — ghost-watermarked
     source_transcript: str,
@@ -27,6 +50,7 @@ def run_targeted_pgd(
     epsilon: float = 8 / 255,
     step_size: float = 1 / 255,
     eval_every: int = 25,
+    mask: torch.Tensor | None = None,  # (1, H, W) or (3, H, W); see make_word_mask()
     logger: StepLogger | None = None,
     verbose: bool = True,
 ) -> tuple[torch.Tensor, str | None]:
@@ -35,8 +59,14 @@ def run_targeted_pgd(
 
     adv_tensor  : (3, H, W) float32, detached, on same device as wm_tensor
     final_outcome : last evaluated outcome string, or None if never evaluated
+
+    If `mask` is provided, δ is zeroed outside the mask region after every
+    projection step — all perturbation budget stays inside the word box.
     """
     device = wm_tensor.device
+    if mask is not None:
+        mask = mask.to(device)
+
     δ = torch.zeros_like(wm_tensor, requires_grad=True)
 
     last_outcome: str | None = None
@@ -57,6 +87,8 @@ def run_targeted_pgd(
         with torch.no_grad():
             δ_new = δ - step_size * δ.grad.sign()         # gradient descent
             δ_new = δ_new.clamp(-epsilon, epsilon)         # L∞ projection
+            if mask is not None:
+                δ_new = δ_new * mask                       # zero outside word box
 
         δ = δ_new.detach().requires_grad_(True)
 

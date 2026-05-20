@@ -53,7 +53,7 @@ import yaml
 from vlm_suppress.config import (
     Domain, EnsembleWeighting, ExperimentConfig, ObjectiveConfig, ProxyStage,
 )
-from vlm_suppress.attack.targeted_pgd import run_targeted_pgd
+from vlm_suppress.attack.targeted_pgd import make_word_mask, run_targeted_pgd
 from vlm_suppress.data.dataset import TextImageDataset
 from vlm_suppress.watermark.renderer import render_ghost_watermark
 from vlm_suppress.watermark.steplog import StepLogger
@@ -106,9 +106,13 @@ def main() -> None:
                         help="PGD iterations (default: attack.pgd_steps from config)")
     parser.add_argument("--eval-every", type=int,   default=25,
                         help="Eval checkpoint every N steps")
-    parser.add_argument("--out",        type=Path,  default=Path("runs/targeted_pgd"),
+    parser.add_argument("--out",         type=Path,  default=Path("runs/targeted_pgd"),
                         help="Output directory for PNG and JSONL")
-    parser.add_argument("--device",     type=str,   default=None)
+    parser.add_argument("--box-padding", type=int,   default=4,
+                        help="Pixels to pad the source-word box on each side (default 4)")
+    parser.add_argument("--no-mask",     action="store_true",
+                        help="Disable region mask — perturb the full image (not recommended)")
+    parser.add_argument("--device",      type=str,   default=None)
     args = parser.parse_args()
 
     cfg     = _load_cfg(args.config)
@@ -176,6 +180,31 @@ def main() -> None:
 
     wm_tensor = _pil_to_tensor(wm_pil).to(device)
 
+    # ── Word-region mask ──────────────────────────────────────────────────────
+    # wm_tensor has the same H, W as wm_pil (no resize in _pil_to_tensor),
+    # and labels_pil.json boxes are in the same PIL coordinate space.
+    word_mask = None
+    if not args.no_mask and source_box is not None:
+        word_mask = make_word_mask(
+            tensor_shape = tuple(wm_tensor.shape),
+            box          = source_box,
+            padding      = args.box_padding,
+        )
+        C, H, W = wm_tensor.shape
+        x0, y0, x1, y1 = source_box
+        px0 = max(0, int(x0) - args.box_padding)
+        py0 = max(0, int(y0) - args.box_padding)
+        px1 = min(W, int(x1) + args.box_padding)
+        py1 = min(H, int(y1) + args.box_padding)
+        active_pixels = int(word_mask.sum().item())
+        print(f"Mask: word box [{px0},{py0},{px1},{py1}]  "
+              f"active pixels={active_pixels} / {H * W}  "
+              f"({100 * active_pixels / (H * W):.2f}%)")
+    elif args.no_mask:
+        print("Mask: disabled (full-image perturbation)")
+    else:
+        print("Mask: disabled (source box not found)")
+
     # ── Surrogate ─────────────────────────────────────────────────────────────
     available = [s for s in cfg.surrogates if s.name in _MODEL_REGISTRY]
     preferred = [s for s in available if s.name == "qwen2_5vl"]
@@ -214,20 +243,24 @@ def main() -> None:
         epsilon     = args.epsilon,
         alpha_pgd   = args.step_size,
         ghost_alpha = args.alpha,
+        masked      = word_mask is not None,
+        source_box  = [round(v) for v in source_box] if source_box else None,
+        box_padding = args.box_padding,
     ) as logger:
         adv_tensor, outcome = run_targeted_pgd(
-            wm_tensor        = wm_tensor,
+            wm_tensor         = wm_tensor,
             source_transcript = source_transcript,
             target_transcript = target_transcript,
-            source_word      = args.source,
-            target_word      = args.target,
-            surrogate        = model,
-            n_steps          = n_steps,
-            epsilon          = args.epsilon,
-            step_size        = args.step_size,
-            eval_every       = args.eval_every,
-            logger           = logger,
-            verbose          = True,
+            source_word       = args.source,
+            target_word       = args.target,
+            surrogate         = model,
+            n_steps           = n_steps,
+            epsilon           = args.epsilon,
+            step_size         = args.step_size,
+            eval_every        = args.eval_every,
+            mask              = word_mask,
+            logger            = logger,
+            verbose           = True,
         )
 
     # ── Save ─────────────────────────────────────────────────────────────────
