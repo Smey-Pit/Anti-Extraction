@@ -79,6 +79,12 @@ surrogates:
     max_new_tokens: 256
     alpha: 1.0
 
+  - name: llava1_6
+    model_id: llava-hf/llava-v1.6-mistral-7b-hf
+    dtype: bfloat16
+    max_new_tokens: 256
+    alpha: 1.0
+
 held_out_indices: []    # no held-out models with single surrogate
 
 log:
