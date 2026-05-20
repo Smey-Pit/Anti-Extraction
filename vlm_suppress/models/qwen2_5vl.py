@@ -269,18 +269,33 @@ class Qwen2_5VL(SurrogateModel):
 
     @torch.no_grad()
     def transcribe(self, image_tensor: torch.Tensor) -> str:
-        static = self._get_static_inputs(image_tensor)
-        pv     = self._build_pixel_values(image_tensor, static["image_grid_thw"])
+        # Use processor pixel_values directly — _build_pixel_values is only
+        # for PGD (differentiable approximation). Passing its output to
+        # generate() produces degenerate loops because the patch layout differs
+        # from what the model was trained with.
+        arr  = (image_tensor.detach().cpu().permute(1, 2, 0).clamp(0, 1).numpy() * 255).astype("uint8")
+        pil  = Image.fromarray(arr)
+        text = self.processor.apply_chat_template(
+            [{"role": "user", "content": [
+                {"type": "image"},
+                {"type": "text", "text": self._prompt},
+            ]}],
+            tokenize=False, add_generation_prompt=True,
+        )
+        inputs = self.processor(text=[text], images=[pil], return_tensors="pt")
+        inputs = {
+            k: (v.to(self._device).to(self._dtype) if k == "pixel_values"
+                else v.to(self._device) if torch.is_tensor(v)
+                else v)
+            for k, v in inputs.items()
+        }
 
         out = self.model.generate(
-            input_ids=static["input_ids"],
-            attention_mask=static["attention_mask"],
-            pixel_values=pv.to(self._dtype),
-            image_grid_thw=static["image_grid_thw"],
+            **inputs,
             max_new_tokens=self._max_new_tokens,
             do_sample=False,
         )
-        input_len = static["input_ids"].shape[1]
+        input_len = inputs["input_ids"].shape[1]
         return self.processor.decode(
             out[0][input_len:], skip_special_tokens=True
         ).strip()
