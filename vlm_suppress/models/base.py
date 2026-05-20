@@ -96,6 +96,33 @@ class SurrogateModel(ABC):
             "Add a token_logprobs method following the contract in base.py."
         )
 
+    def targeted_ce_loss(
+        self,
+        image_tensor: torch.Tensor,   # (3, H, W), float32, [0,1], requires_grad
+        source_transcript: str,        # original full text (contains source_word)
+        target_transcript: str,        # modified text (source_word replaced by target_word)
+        source_word: str,              # word to repel,  e.g. "Thompson"
+        target_word: str,              # word to attract, e.g. "Henderson"
+    ) -> torch.Tensor:
+        """
+        Targeted substitution loss for watermark-guided PGD.
+
+        L = -log_probs_target[target_span].sum()   ← attract: raise p(target_word)
+          +  log_probs_source[source_span].sum()   ← repel:   lower p(source_word)
+
+        Both forward passes share the same differentiable pixel_values so
+        gradients from attract and repel accumulate into image_tensor in one
+        backward call.
+
+        Must NOT be decorated with @torch.no_grad().
+        Subclasses that participate in targeted PGD must override this.
+        """
+        raise NotImplementedError(
+            f"{type(self).__name__} does not implement targeted_ce_loss. "
+            "Required for targeted watermark PGD. "
+            "Add a targeted_ce_loss method following the contract in base.py."
+        )
+
     @property
     @abstractmethod
     def device(self) -> torch.device:
