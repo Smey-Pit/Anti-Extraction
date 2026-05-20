@@ -353,70 +353,35 @@ class Qwen2_5VL(SurrogateModel):
     def targeted_ce_loss(
         self,
         image_tensor: torch.Tensor,
-        source_transcript: str,
-        target_transcript: str,
-        source_word: str,
-        target_word: str,
+        transcript: str,
     ) -> torch.Tensor:
         """
-        Targeted substitution loss. No @torch.no_grad() — gradients must flow.
+        Per-token log_probs (T,) for transcript given image. No @torch.no_grad().
 
-        Two teacher-forced forward passes share the same pixel_values (pv),
-        so both attract and repel gradients accumulate into image_tensor
-        through a single backward call on the returned scalar.
+        Single teacher-forced forward pass. The PGD loop calls this twice per step
+        (target_transcript, then source_transcript) and builds the weighted
+        full-transcript loss from the returned tensors.
         """
-        from vlm_suppress.attack.importance import _align_tokens_to_words, _get_tokenizer
+        static = self._get_static_inputs(image_tensor)
+        pv     = self._build_pixel_values(image_tensor, static["image_grid_thw"])
 
-        tokenizer = _get_tokenizer(self)
-        static    = self._get_static_inputs(image_tensor)
-        pv        = self._build_pixel_values(image_tensor, static["image_grid_thw"])
-
-        def _forward(transcript: str):
-            """Teacher-forced forward pass → per-token gathered log-probs (T,)."""
-            tok_ids = self.processor.tokenizer(
-                transcript, return_tensors="pt", add_special_tokens=False,
-            ).input_ids.to(self._device)                          # (1, T)
-            T = tok_ids.size(1)
-            full_ids  = torch.cat([static["input_ids"], tok_ids], dim=1)
-            full_attn = torch.cat([
-                static["attention_mask"],
-                torch.ones(1, T, device=self._device,
-                           dtype=static["attention_mask"].dtype),
-            ], dim=1)
-            out = self.model(
-                input_ids=full_ids,
-                attention_mask=full_attn,
-                pixel_values=pv,                                  # shared, grad-connected
-                image_grid_thw=static["image_grid_thw"],
-                return_dict=True,
-            )
-            logits    = out.logits[0, -T - 1:-1, :].float()      # (T, vocab)
-            log_probs = F.log_softmax(logits, dim=-1)             # (T, vocab)
-            token_lp  = log_probs.gather(1, tok_ids[0].unsqueeze(1)).squeeze(1)  # (T,)
-            return token_lp, T
-
-        def _span_lp(transcript: str, word: str, token_lp: torch.Tensor, T: int):
-            """Return gathered log-probs for the first token span of word."""
-            words = transcript.split()
-            idx   = next(
-                (i for i, w in enumerate(words) if w.strip(".,:-") == word),
-                None,
-            )
-            if idx is None or tokenizer is None:
-                return torch.zeros(1, device=self._device)
-            spans = _align_tokens_to_words(tokenizer, transcript, len(words))
-            s, e  = spans[idx]
-            e     = min(e, T)
-            if s >= T:
-                return torch.zeros(1, device=self._device)
-            return token_lp[s:e]
-
-        # ── Attraction: -log p(target_word | adv_image, target_transcript) ──────
-        tgt_lp, T_tgt = _forward(target_transcript)
-        attract = -_span_lp(target_transcript, target_word, tgt_lp, T_tgt).sum()
-
-        # ── Repulsion: +log p(source_word | adv_image, source_transcript) ───────
-        src_lp, T_src = _forward(source_transcript)
-        repel   = _span_lp(source_transcript, source_word, src_lp, T_src).sum()
-
-        return attract + repel
+        tok_ids = self.processor.tokenizer(
+            transcript, return_tensors="pt", add_special_tokens=False,
+        ).input_ids.to(self._device)                          # (1, T)
+        T = tok_ids.size(1)
+        full_ids  = torch.cat([static["input_ids"], tok_ids], dim=1)
+        full_attn = torch.cat([
+            static["attention_mask"],
+            torch.ones(1, T, device=self._device,
+                       dtype=static["attention_mask"].dtype),
+        ], dim=1)
+        out = self.model(
+            input_ids=full_ids,
+            attention_mask=full_attn,
+            pixel_values=pv,
+            image_grid_thw=static["image_grid_thw"],
+            return_dict=True,
+        )
+        logits    = out.logits[0, -T - 1:-1, :].float()      # (T, vocab)
+        log_probs = F.log_softmax(logits, dim=-1)             # (T, vocab)
+        return log_probs.gather(1, tok_ids[0].unsqueeze(1)).squeeze(1)  # (T,)

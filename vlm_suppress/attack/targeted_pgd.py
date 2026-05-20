@@ -3,15 +3,19 @@ vlm_suppress/attack/targeted_pgd.py
 
 Targeted PGD loop for the ghost-watermark substitution attack.
 
-Minimises targeted_ce_loss over a perturbation δ constrained to an L∞ ε-ball,
-starting from the ghost-watermarked image.  Calls evaluate_targeted_substitution
-every `eval_every` steps for progress monitoring; stops early on "exact_sub".
+Loss design — full-transcript cross-entropy with span upweighting:
+  Two teacher-forced forward passes per step (target and source transcripts).
+  All T tokens contribute gradient; the substitution span is upweighted by
+  span_weight (default 5.0) to keep focused pressure on the target word.
+  This avoids the 1-token gradient sparsity that caused bf16 quantisation
+  artifacts in the span-only formulation.
 """
 
 from __future__ import annotations
 
 import torch
 
+from vlm_suppress.attack.importance import _align_tokens_to_words, _get_tokenizer
 from vlm_suppress.eval.metrics import evaluate_targeted_substitution
 from vlm_suppress.watermark.steplog import StepLogger
 
@@ -50,7 +54,8 @@ def run_targeted_pgd(
     epsilon: float = 8 / 255,
     step_size: float = 1 / 255,
     eval_every: int = 25,
-    mask: torch.Tensor | None = None,  # (1, H, W) or (3, H, W); see make_word_mask()
+    span_weight: float = 5.0,        # upweight on substitution token span
+    mask: torch.Tensor | None = None,
     logger: StepLogger | None = None,
     verbose: bool = True,
 ) -> tuple[torch.Tensor, str | None]:
@@ -59,30 +64,72 @@ def run_targeted_pgd(
 
     adv_tensor  : (3, H, W) float32, detached, on same device as wm_tensor
     final_outcome : last evaluated outcome string, or None if never evaluated
-
-    If `mask` is provided, δ is zeroed outside the mask region after every
-    projection step — all perturbation budget stays inside the word box.
     """
     device = wm_tensor.device
     if mask is not None:
         mask = mask.to(device)
 
-    δ = torch.zeros_like(wm_tensor, requires_grad=True)
+    # ── Precompute substitution spans for upweighting (once, not per step) ────
+    tokenizer = _get_tokenizer(surrogate)
+    tgt_span: tuple[int, int] | None = None
+    src_span: tuple[int, int] | None = None
+    if tokenizer is not None:
+        tgt_words = target_transcript.split()
+        src_words = source_transcript.split()
+        tgt_idx = next(
+            (i for i, w in enumerate(tgt_words) if w.strip(".,:-") == target_word), None
+        )
+        src_idx = next(
+            (i for i, w in enumerate(src_words) if w.strip(".,:-") == source_word), None
+        )
+        if tgt_idx is not None:
+            tgt_span = _align_tokens_to_words(
+                tokenizer, target_transcript, len(tgt_words)
+            )[tgt_idx]
+        if src_idx is not None:
+            src_span = _align_tokens_to_words(
+                tokenizer, source_transcript, len(src_words)
+            )[src_idx]
+    if verbose:
+        print(f"  spans: {source_word}={src_span}  {target_word}={tgt_span}"
+              f"  span_weight={span_weight}")
 
+    δ = torch.zeros_like(wm_tensor, requires_grad=True)
     last_outcome: str | None = None
-    last_transcript: str | None = None
 
     for step in range(n_steps):
         adv = (wm_tensor + δ).clamp(0.0, 1.0)
-        loss = surrogate.targeted_ce_loss(
-            adv,
-            source_transcript,
-            target_transcript,
-            source_word,
-            target_word,
-        )
+
+        # ── Two forward passes → per-token log_probs ─────────────────────────
+        lp_tgt = surrogate.targeted_ce_loss(adv, target_transcript)   # (T_tgt,)
+        lp_src = surrogate.targeted_ce_loss(adv, source_transcript)   # (T_src,)
+
+        T_tgt, T_src = lp_tgt.shape[0], lp_src.shape[0]
+
+        # ── Span-upweighted full-transcript loss ──────────────────────────────
+        w_tgt = torch.ones(T_tgt, device=device)
+        w_src = torch.ones(T_src, device=device)
+        if tgt_span is not None:
+            s, e = tgt_span
+            e = min(e, T_tgt)
+            if s < T_tgt:
+                w_tgt[s:e] = span_weight
+        if src_span is not None:
+            s, e = src_span
+            e = min(e, T_src)
+            if s < T_src:
+                w_src[s:e] = span_weight
+
+        L_attract = -(lp_tgt * w_tgt).sum()    # maximise p(target_transcript)
+        L_repel   =  (lp_src * w_src).sum()    # minimise p(source_transcript)
+        loss = L_attract + L_repel
 
         loss.backward()
+
+        # ── Gradient sanity check at step 0 ───────────────────────────────────
+        if step == 0 and verbose:
+            g = δ.grad
+            print(f"  grad sanity: max={g.abs().max():.6f}  mean={g.abs().mean():.6f}")
 
         with torch.no_grad():
             δ_new = δ - step_size * δ.grad.sign()         # gradient descent
@@ -94,26 +141,27 @@ def run_targeted_pgd(
 
         # ── Eval checkpoint ───────────────────────────────────────────────────
         outcome: str | None = None
-        transcript: str | None = None
+        transcript_out: str | None = None
         is_last = step == n_steps - 1
         if (step + 1) % eval_every == 0 or is_last:
             adv_eval = (wm_tensor + δ).clamp(0.0, 1.0).detach()
             result   = evaluate_targeted_substitution(
                 adv_eval, source_word, target_word, surrogate
             )
-            outcome    = result["outcome"]
-            transcript = result["transcript"][:120].replace("\n", " ")
-            last_outcome    = outcome
-            last_transcript = transcript
+            outcome        = result["outcome"]
+            transcript_out = result["transcript"]   # full transcript — no truncation
+            last_outcome   = outcome
             if verbose:
+                short = transcript_out[:200].replace("\n", " ")
                 print(
                     f"  step {step + 1:4d}/{n_steps}"
                     f"  loss={loss.item():.4f}"
                     f"  outcome={outcome}"
                 )
+                print(f"            {short!r}")
 
         if logger is not None:
-            logger.write(step=step, loss=loss, outcome=outcome, transcript=transcript)
+            logger.write(step=step, loss=loss, outcome=outcome, transcript=transcript_out)
 
         if last_outcome == "exact_sub":
             if verbose:

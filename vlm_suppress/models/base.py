@@ -99,22 +99,16 @@ class SurrogateModel(ABC):
     def targeted_ce_loss(
         self,
         image_tensor: torch.Tensor,   # (3, H, W), float32, [0,1], requires_grad
-        source_transcript: str,        # original full text (contains source_word)
-        target_transcript: str,        # modified text (source_word replaced by target_word)
-        source_word: str,              # word to repel,  e.g. "Thompson"
-        target_word: str,              # word to attract, e.g. "Henderson"
+        transcript: str,
     ) -> torch.Tensor:
         """
-        Targeted substitution loss for watermark-guided PGD.
+        Per-token log_probs (T,) for transcript given image.
 
-        L = -log_probs_target[target_span].sum()   ← attract: raise p(target_word)
-          +  log_probs_source[source_span].sum()   ← repel:   lower p(source_word)
+        Must NOT be decorated with @torch.no_grad(). Called twice per PGD step
+        (once with target_transcript, once with source_transcript). The caller
+        combines the two tensors into a weighted full-transcript loss and calls
+        backward once — dense gradient over all T tokens, span-upweighted.
 
-        Both forward passes share the same differentiable pixel_values so
-        gradients from attract and repel accumulate into image_tensor in one
-        backward call.
-
-        Must NOT be decorated with @torch.no_grad().
         Subclasses that participate in targeted PGD must override this.
         """
         raise NotImplementedError(

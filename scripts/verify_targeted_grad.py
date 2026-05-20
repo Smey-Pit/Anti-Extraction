@@ -185,18 +185,18 @@ def main() -> None:
     δ = torch.zeros_like(wm_tensor, requires_grad=True)
 
     try:
-        loss = model.targeted_ce_loss(
-            wm_tensor + δ,
-            source_transcript,
-            target_transcript,
-            SOURCE,
-            TARGET,
-        )
+        # New interface: two calls returning (T,) log_probs; combine into scalar
+        adv = wm_tensor + δ
+        lp_tgt = model.targeted_ce_loss(adv, target_transcript)
+        lp_src = model.targeted_ce_loss(adv, source_transcript)
+        loss = -lp_tgt.sum() + lp_src.sum()
     except Exception:
         traceback.print_exc()
         sys.exit("ERROR: targeted_ce_loss raised an exception.")
 
-    print(f"  loss value : {loss.item():.6f}")
+    print(f"  loss value   : {loss.item():.6f}")
+    print(f"  lp_tgt shape : {list(lp_tgt.shape)}  mean={lp_tgt.mean().item():.4f}")
+    print(f"  lp_src shape : {list(lp_src.shape)}  mean={lp_src.mean().item():.4f}")
     print(f"  loss.grad_fn : {loss.grad_fn}")
 
     if loss.grad_fn is None:
