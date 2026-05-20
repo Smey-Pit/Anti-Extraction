@@ -114,6 +114,8 @@ def main() -> None:
                         help="Disable region mask — perturb the full image (not recommended)")
     parser.add_argument("--span-weight", type=float, default=5.0,
                         help="Upweight on substitution token span (default 5.0)")
+    parser.add_argument("--model",       type=str,   default=None,
+                        help="Surrogate name to use (default: qwen2_5vl, or first available)")
     parser.add_argument("--device",      type=str,   default=None)
     args = parser.parse_args()
 
@@ -209,8 +211,17 @@ def main() -> None:
 
     # ── Surrogate ─────────────────────────────────────────────────────────────
     available = [s for s in cfg.surrogates if s.name in _MODEL_REGISTRY]
-    preferred = [s for s in available if s.name == "qwen2_5vl"]
-    s_cfg     = (preferred or available)[0] if (preferred or available) else None
+    if args.model:
+        preferred = [s for s in available if s.name == args.model]
+        if not preferred:
+            sys.exit(
+                f"ERROR: --model {args.model!r} not found.\n"
+                f"Config has: {[s.name for s in cfg.surrogates]}\n"
+                f"Registry has: {list(_MODEL_REGISTRY)}"
+            )
+    else:
+        preferred = [s for s in available if s.name == "qwen2_5vl"]
+    s_cfg = (preferred or available)[0] if (preferred or available) else None
     if s_cfg is None:
         sys.exit(f"ERROR: no config surrogate in registry {list(_MODEL_REGISTRY)}.")
 
@@ -226,7 +237,7 @@ def main() -> None:
 
     # ── Output paths ──────────────────────────────────────────────────────────
     args.out.mkdir(parents=True, exist_ok=True)
-    stem     = f"{sample.image_id}_{args.source.lower()}_{args.target.lower()}"
+    stem     = f"{sample.image_id}_{args.source.lower()}_{args.target.lower()}_{s_cfg.name}"
     log_path = args.out / f"{stem}.jsonl"
     png_path = args.out / f"{stem}_adv.png"
 
