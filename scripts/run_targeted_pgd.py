@@ -114,8 +114,10 @@ def main() -> None:
                         help="Disable region mask — perturb the full image (not recommended)")
     parser.add_argument("--span-weight", type=float, default=5.0,
                         help="Upweight on substitution token span (default 5.0)")
-    parser.add_argument("--model",       type=str,   default=None,
-                        help="Surrogate name to use (default: qwen2_5vl, or first available)")
+    parser.add_argument("--models",      type=str,   default=None,
+                        help="Comma-separated surrogate names, run sequentially with lazy "
+                             "unloading between each (default: qwen2_5vl,llama3_2). "
+                             "Each model refines δ from the previous model's final state.")
     parser.add_argument("--device",      type=str,   default=None)
     args = parser.parse_args()
 
@@ -209,87 +211,104 @@ def main() -> None:
     else:
         print("Mask: disabled (source box not found)")
 
-    # ── Surrogate ─────────────────────────────────────────────────────────────
-    available = [s for s in cfg.surrogates if s.name in _MODEL_REGISTRY]
-    if args.model:
-        preferred = [s for s in available if s.name == args.model]
-        if not preferred:
-            sys.exit(
-                f"ERROR: --model {args.model!r} not found.\n"
-                f"Config has: {[s.name for s in cfg.surrogates]}\n"
-                f"Registry has: {list(_MODEL_REGISTRY)}"
-            )
-    else:
-        preferred = [s for s in available if s.name == "qwen2_5vl"]
-    s_cfg = (preferred or available)[0] if (preferred or available) else None
-    if s_cfg is None:
-        sys.exit(f"ERROR: no config surrogate in registry {list(_MODEL_REGISTRY)}.")
-
-    s_cfg.device = device
-    print(f"Loading {s_cfg.name} on {device} …")
-    mod_path, cls_name = _MODEL_REGISTRY[s_cfg.name]
-    try:
-        mod   = importlib.import_module(mod_path)
-        model = getattr(mod, cls_name)(s_cfg)
-    except Exception:
-        traceback.print_exc()
-        sys.exit(f"ERROR: failed to load {s_cfg.name}.")
+    # ── Surrogate list ────────────────────────────────────────────────────────
+    model_names = [n.strip() for n in (args.models or "qwen2_5vl,llama3_2").split(",")]
+    s_cfgs = []
+    for name in model_names:
+        match = next((s for s in cfg.surrogates if s.name == name), None)
+        if match is None:
+            sys.exit(f"ERROR: '{name}' not in config surrogates. "
+                     f"Available: {[s.name for s in cfg.surrogates]}")
+        if name not in _MODEL_REGISTRY:
+            sys.exit(f"ERROR: '{name}' not in script registry. "
+                     f"Registry: {list(_MODEL_REGISTRY)}")
+        s_cfgs.append(match)
 
     # ── Output paths ──────────────────────────────────────────────────────────
     args.out.mkdir(parents=True, exist_ok=True)
-    stem     = f"{sample.image_id}_{args.source.lower()}_{args.target.lower()}_{s_cfg.name}"
-    log_path = args.out / f"{stem}.jsonl"
-    png_path = args.out / f"{stem}_adv.png"
+    model_tag = "+".join(s.name for s in s_cfgs)
+    stem      = f"{sample.image_id}_{args.source.lower()}_{args.target.lower()}_{model_tag}"
+    png_path  = args.out / f"{stem}_adv.png"
 
-    # ── PGD ───────────────────────────────────────────────────────────────────
-    print(f"\nTargeted PGD  n_steps={n_steps}  ε={args.epsilon:.4f}  "
+    # ── Sequential PGD with lazy loading ─────────────────────────────────────
+    # Each model refines the perturbation δ left by the previous model.
+    # wm_tensor stays fixed as the ε-ball reference throughout.
+    # Models are loaded one at a time and unloaded before the next is loaded.
+    print(f"\nTargeted PGD  n_steps={n_steps} per model  ε={args.epsilon:.4f}  "
           f"step_size={args.step_size:.4f}  eval_every={args.eval_every}  "
           f"span_weight={args.span_weight}")
+    print(f"Surrogate sequence: {' → '.join(s.name for s in s_cfgs)}")
     print("─" * 60)
 
-    with StepLogger(
-        path        = log_path,
-        image_id    = sample.image_id,
-        source_word = args.source,
-        target_word = args.target,
-        surrogate   = s_cfg.name,
-        n_steps     = n_steps,
-        epsilon     = args.epsilon,
-        alpha_pgd   = args.step_size,
-        ghost_alpha = args.alpha,
-        masked      = word_mask is not None,
-        source_box  = [round(v) for v in source_box] if source_box else None,
-        box_padding = args.box_padding,
-        span_weight = args.span_weight,
-    ) as logger:
-        adv_tensor, outcome = run_targeted_pgd(
-            wm_tensor         = wm_tensor,
-            source_transcript = source_transcript,
-            target_transcript = target_transcript,
-            source_word       = args.source,
-            target_word       = args.target,
-            surrogate         = model,
-            n_steps           = n_steps,
-            epsilon           = args.epsilon,
-            step_size         = args.step_size,
-            eval_every        = args.eval_every,
-            span_weight       = args.span_weight,
-            mask              = word_mask,
-            logger            = logger,
-            verbose           = True,
-        )
+    current_delta: torch.Tensor | None = None
+    adv_tensor = wm_tensor
+    outcome    = None
 
-    # ── Save ─────────────────────────────────────────────────────────────────
+    for run_idx, s_cfg in enumerate(s_cfgs):
+        s_cfg.device = device
+        print(f"\n[{run_idx + 1}/{len(s_cfgs)}] Loading {s_cfg.name} on {device} …")
+        mod_path, cls_name = _MODEL_REGISTRY[s_cfg.name]
+        try:
+            mod   = importlib.import_module(mod_path)
+            model = getattr(mod, cls_name)(s_cfg)
+        except Exception:
+            traceback.print_exc()
+            sys.exit(f"ERROR: failed to load {s_cfg.name}.")
+
+        log_path = args.out / f"{stem}_{s_cfg.name}.jsonl"
+
+        with StepLogger(
+            path        = log_path,
+            image_id    = sample.image_id,
+            source_word = args.source,
+            target_word = args.target,
+            surrogate   = s_cfg.name,
+            n_steps     = n_steps,
+            epsilon     = args.epsilon,
+            alpha_pgd   = args.step_size,
+            ghost_alpha = args.alpha,
+            masked      = word_mask is not None,
+            source_box  = [round(v) for v in source_box] if source_box else None,
+            box_padding = args.box_padding,
+            span_weight = args.span_weight,
+        ) as logger:
+            adv_tensor, outcome = run_targeted_pgd(
+                wm_tensor         = wm_tensor,
+                source_transcript = source_transcript,
+                target_transcript = target_transcript,
+                source_word       = args.source,
+                target_word       = args.target,
+                surrogate         = model,
+                n_steps           = n_steps,
+                epsilon           = args.epsilon,
+                step_size         = args.step_size,
+                eval_every        = args.eval_every,
+                span_weight       = args.span_weight,
+                mask              = word_mask,
+                logger            = logger,
+                verbose           = True,
+                delta_init        = current_delta,
+            )
+
+        # Pass δ to the next model; keep within ε-ball of wm_tensor
+        current_delta = (adv_tensor - wm_tensor).clamp(-args.epsilon, args.epsilon)
+
+        print(f"  [{s_cfg.name}] outcome={outcome}")
+        del model
+        gc.collect()
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
+
+        if outcome == "exact_sub":
+            print("  Early stop across models: exact_sub achieved.")
+            break
+
+    # ── Save final adversarial image ──────────────────────────────────────────
     _tensor_to_pil(adv_tensor).save(png_path)
     print("─" * 60)
     print(f"Final outcome : {outcome}")
     print(f"Adv image     : {png_path}")
-    print(f"Step log      : {log_path}")
-
-    del model
-    gc.collect()
-    if torch.cuda.is_available():
-        torch.cuda.empty_cache()
+    print(f"Step logs     : {args.out}/{stem}_<model>.jsonl")
 
 
 if __name__ == "__main__":

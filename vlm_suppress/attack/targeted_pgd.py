@@ -58,6 +58,7 @@ def run_targeted_pgd(
     mask: torch.Tensor | None = None,
     logger: StepLogger | None = None,
     verbose: bool = True,
+    delta_init: torch.Tensor | None = None,  # warm-start δ from a previous model's run
 ) -> tuple[torch.Tensor, str | None]:
     """
     Run targeted PGD and return (adv_tensor, final_outcome).
@@ -94,7 +95,9 @@ def run_targeted_pgd(
         print(f"  spans: {source_word}={src_span}  {target_word}={tgt_span}"
               f"  span_weight={span_weight}")
 
-    δ = torch.zeros_like(wm_tensor, requires_grad=True)
+    δ_init = delta_init.detach().clamp(-epsilon, epsilon).to(device) if delta_init is not None \
+        else torch.zeros_like(wm_tensor)
+    δ = δ_init.requires_grad_(True)
     last_outcome: str | None = None
 
     for step in range(n_steps):
