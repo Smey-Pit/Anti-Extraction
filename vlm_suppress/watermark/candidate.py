@@ -45,7 +45,8 @@ def aggregate_surrogate_candidates(
     alpha_weights: list[float] | None = None,
     top_k: int = 20,
     n_candidates: int = 3,
-    min_cand_len: int = 2,
+    min_cand_len: int = 3,
+    require_initial_cap: bool = False,
 ) -> dict[str, list[tuple[str, float]]]:
     """
     Aggregate top-K surrogate token alternatives for each target word.
@@ -60,7 +61,11 @@ def aggregate_surrogate_candidates(
     alpha_weights       : ensemble weights; None → uniform 1/K
     top_k               : number of vocab alternatives to request per position
     n_candidates        : how many to return per word
-    min_cand_len        : minimum decoded-string length to accept as a candidate
+    min_cand_len        : minimum decoded-string length to accept as a candidate;
+                          default 3 filters out common subword fragments ("is",
+                          "of", "in") that pass isalpha() but are not substitutions
+    require_initial_cap : if True, only accept candidates whose first character is
+                          uppercase — useful when targeting proper nouns / names
 
     Returns
     -------
@@ -128,6 +133,7 @@ def aggregate_surrogate_candidates(
                     tok_str.isalpha()
                     and len(tok_str) >= min_cand_len
                     and tok_str.lower() != original_lower
+                    and (not require_initial_cap or tok_str[0].isupper())
                 ):
                     scores[word_idx][tok_str] = scores[word_idx].get(tok_str, 0.0) + alpha * lp
 
