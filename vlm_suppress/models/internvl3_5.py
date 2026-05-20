@@ -4,9 +4,17 @@ import re
 
 import torch
 import torch.nn.functional as F
+from PIL import Image
+from torchvision import transforms
 from transformers import AutoModel, AutoTokenizer
 
 from vlm_suppress.models.base import SurrogateModel
+
+
+def _tensor_to_pil(t: torch.Tensor) -> Image.Image:
+    """(3, H, W) float32 [0,1] → PIL RGB. Always detached."""
+    arr = (t.detach().cpu().clamp(0, 1).permute(1, 2, 0).numpy() * 255).astype("uint8")
+    return Image.fromarray(arr, mode="RGB")
 
 
 class InternVL35(SurrogateModel):
@@ -254,9 +262,51 @@ class InternVL35(SurrogateModel):
 
     # ── Inference ──────────────────────────────────────────────────────────
 
+    def _dynamic_preprocess(self, pil_img: Image.Image) -> torch.Tensor:
+        """
+        InternVL-style dynamic tiling for transcribe(). NOT used in ce_loss.
+
+        Chooses the (ncols, nrows) grid whose aspect ratio best matches the
+        image, resizes to fit, crops into SZ×SZ patches, and appends a
+        full-image thumbnail. Returns (N, 3, SZ, SZ) on device/dtype.
+
+        ce_loss and targeted_ce_loss use the single-tile _preprocess() path
+        which is gradient-transparent — this method is inference-only.
+        """
+        SZ, MAX_TILES = 448, 12
+        img = pil_img.convert("RGB")
+        W, H = img.size
+
+        # All (ncols, nrows) grids within [1, MAX_TILES] total tiles
+        grids = {
+            (i, j)
+            for n in range(1, MAX_TILES + 1)
+            for i in range(1, n + 1)
+            for j in range(1, n + 1)
+            if 1 <= i * j <= MAX_TILES
+        }
+        # Pick grid whose aspect ratio (ncols/nrows) is closest to image (W/H)
+        ncols, nrows = min(grids, key=lambda rc: abs(rc[0] / rc[1] - W / H))
+
+        tfm = transforms.Compose([
+            transforms.ToTensor(),
+            transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225]),
+        ])
+
+        resized = img.resize((ncols * SZ, nrows * SZ), Image.BICUBIC)
+        patches = [
+            tfm(resized.crop((c * SZ, r * SZ, (c + 1) * SZ, (r + 1) * SZ)))
+            for r in range(nrows) for c in range(ncols)
+        ]
+        if ncols * nrows > 1:
+            patches.append(tfm(img.resize((SZ, SZ), Image.BICUBIC)))
+
+        return torch.stack(patches).to(device=self._device, dtype=self._dtype)
+
     @torch.no_grad()
     def transcribe(self, image_tensor: torch.Tensor) -> str:
-        pixel_values = self._preprocess(image_tensor.detach())
+        pil          = _tensor_to_pil(image_tensor)
+        pixel_values = self._dynamic_preprocess(pil)
 
         response, _ = self.model.chat(
             tokenizer=self.tokenizer,
