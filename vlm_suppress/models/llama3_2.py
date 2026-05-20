@@ -64,7 +64,14 @@ def _tensor_to_pil(image_tensor: torch.Tensor) -> Image.Image:
 
 class LlamaVision(SurrogateModel):
 
-    _PROMPT = "Transcribe exactly all visible text. Output only the text, nothing else."
+    _PROMPT = (
+        "Perform a complete OCR scan of this document. "
+        "Output every single line of text exactly as it appears, "
+        "reading from the top of the document to the very bottom. "
+        "Include all headers, body text, numbers, dates, amounts, names, and table contents. "
+        "Do not skip, summarize, or omit any line. "
+        "Output only the raw text content, nothing else."
+    )
 
     def __init__(self, cfg) -> None:
         self.name            = cfg.name     
@@ -154,12 +161,8 @@ class LlamaVision(SurrogateModel):
     def _normalize_prediction(self, text: str) -> str:
         text = text.strip()
         text = re.sub(r"^\s*assistant\s*", "", text, flags=re.IGNORECASE)
-        text = re.sub(
-            r"^Transcribe exactly all visible text\. Output only the text, nothing else\.?\s*",
-            "",
-            text,
-            flags=re.IGNORECASE,
-        )
+        text = re.sub(r"^Perform a complete OCR scan.*?nothing else\.?\s*", "", text, flags=re.IGNORECASE | re.DOTALL)
+        text = re.sub(r"^Transcribe exactly all visible text.*?nothing else\.?\s*", "", text, flags=re.IGNORECASE | re.DOTALL)
         return text.strip()
 
     # ── Differentiable image path ──────────────────────────────────────────
@@ -339,11 +342,15 @@ class LlamaVision(SurrogateModel):
             max_new_tokens=self._max_new_tokens,
             do_sample=False,
             use_cache=True,
+            eos_token_id=[],  # empty list disables all stopping tokens
         )
         gen_ids = out[0, enc["input_ids"].shape[1]:]
-        return self._normalize_prediction(
-            self.processor.decode(gen_ids, skip_special_tokens=True)
-        )
+        # Decode with specials visible, then truncate at first eot_id
+        raw = self.processor.decode(gen_ids, skip_special_tokens=False)
+        eot = "<|eot_id|>"
+        if eot in raw:
+            raw = raw[:raw.index(eot)]
+        return self._normalize_prediction(raw.strip())
 
     def targeted_ce_loss(self, image_tensor: torch.Tensor, transcript: str) -> torch.Tensor:
         """Per-token log_probs (T,) for transcript given image. Gradient-enabled."""

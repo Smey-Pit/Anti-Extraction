@@ -267,6 +267,7 @@ class InternVL35(SurrogateModel):
                 do_sample=False,
                 pad_token_id=self.tokenizer.eos_token_id,
             ),
+            system=self._SYSTEM,
             history=None,
             return_history=True,
         )
