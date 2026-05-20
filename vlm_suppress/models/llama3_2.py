@@ -93,6 +93,13 @@ class LlamaVision(SurrogateModel):
         ).eval()
         self.model = self.model.to(self._device)
 
+        # Gradient checkpointing: recomputes activations on backward rather than
+        # storing them — trades ~30% compute for large activation memory savings.
+        # use_reentrant=False is required so checkpointing activates in eval mode.
+        self.model.gradient_checkpointing_enable(
+            gradient_checkpointing_kwargs={"use_reentrant": False}
+        )
+
         # Cache static prompt text and image token id — both are constants.
         self._prompt_text    = self._build_prompt_text()
         self._image_token_id = self._get_image_token_id()
