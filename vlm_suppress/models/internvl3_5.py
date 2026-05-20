@@ -274,6 +274,26 @@ class InternVL35(SurrogateModel):
         response = self._THINK_RE.sub("", response).strip()
         return response
 
+    def targeted_ce_loss(self, image_tensor: torch.Tensor, transcript: str) -> torch.Tensor:
+        """Per-token log_probs (T,) for transcript given image. Gradient-enabled."""
+        pixel_values  = self._preprocess(image_tensor)
+        input_ids     = self._build_input_ids(self._QUESTION)
+        inputs_embeds = self._build_inputs_embeds(input_ids, pixel_values)
+
+        target_ids = self.tokenizer(
+            transcript, return_tensors="pt", add_special_tokens=False,
+        ).input_ids.to(self._device)
+        T = target_ids.size(1)
+
+        with torch.no_grad():
+            tgt_embeds = self.model.language_model.get_input_embeddings()(target_ids).to(self._dtype)
+        full_embeds = torch.cat([inputs_embeds, tgt_embeds], dim=1)
+
+        out = self.model.language_model(inputs_embeds=full_embeds, return_dict=True)
+        logits    = out.logits[0, -T - 1:-1, :].float()
+        log_probs = F.log_softmax(logits, dim=-1)
+        return log_probs.gather(1, target_ids[0].unsqueeze(1)).squeeze(1)  # (T,)
+
     @torch.no_grad()
     def token_logprobs(
         self,

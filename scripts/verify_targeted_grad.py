@@ -50,6 +50,7 @@ _MODEL_REGISTRY = {
     "paligemma2":  ("vlm_suppress.models.paligemma2",   "PaliGemma2"),
     "internvl3_5": ("vlm_suppress.models.internvl3_5",  "InternVL35"),
     "llama3_2":    ("vlm_suppress.models.llama3_2",     "LlamaVision"),
+    "llava1_6":    ("vlm_suppress.models.llava",        "LLaVA16"),
 }
 
 

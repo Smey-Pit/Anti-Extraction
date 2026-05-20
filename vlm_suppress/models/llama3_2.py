@@ -345,6 +345,39 @@ class LlamaVision(SurrogateModel):
             self.processor.decode(gen_ids, skip_special_tokens=True)
         )
 
+    def targeted_ce_loss(self, image_tensor: torch.Tensor, transcript: str) -> torch.Tensor:
+        """Per-token log_probs (T,) for transcript given image. Gradient-enabled."""
+        pil          = _tensor_to_pil(image_tensor)
+        pixel_values = self._preprocess(image_tensor, pil)
+        prompt_enc   = self._processor_inputs(pil)
+
+        transcript_ids = self._transcript_ids(transcript)   # (1, T)
+        t_len          = transcript_ids.size(1)
+
+        full_ids  = torch.cat([prompt_enc["input_ids"], transcript_ids], dim=1)
+        full_attn = torch.cat([
+            prompt_enc["attention_mask"],
+            torch.ones((1, t_len), device=self._device, dtype=prompt_enc["attention_mask"].dtype),
+        ], dim=1)
+        total_len = full_ids.size(1)
+
+        vision_kw = self._extend_cross_attention_mask(
+            self._vision_kwargs(prompt_enc), total_len
+        )
+
+        out = self.model(
+            input_ids=full_ids,
+            attention_mask=full_attn,
+            pixel_values=pixel_values,
+            return_dict=True,
+            use_cache=False,
+            **vision_kw,
+        )
+
+        logits    = out.logits[0, -t_len - 1:-1, :].float()
+        log_probs = F.log_softmax(logits, dim=-1)
+        return log_probs.gather(1, transcript_ids[0].unsqueeze(1)).squeeze(1)  # (T,)
+
     @torch.no_grad()
     def token_logprobs(
         self,
