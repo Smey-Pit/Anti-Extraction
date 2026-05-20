@@ -112,6 +112,65 @@ def compute_gap_gain(
     }
 
 
+def evaluate_targeted_substitution(
+    image,
+    source_word: str,
+    target_word: str,
+    surrogate,
+) -> dict:
+    """
+    Evaluate whether a surrogate reads `target_word` instead of `source_word`.
+
+    Calls surrogate.transcribe(image) and does case-insensitive string search
+    for both words.  No positional assumptions — works on any free-form transcript.
+
+    Parameters
+    ----------
+    image       : PIL image (clean or adversarial)
+    source_word : the original word that should be suppressed, e.g. "Thompson"
+    target_word : the watermarked replacement to look for,   e.g. "Henderson"
+    surrogate   : any object with a transcribe(image_tensor) method;
+                  if it expects a tensor the caller must pre-convert,
+                  but frontier models accepting PIL are also fine
+
+    Returns
+    -------
+    {
+        "transcript":     str,   # raw surrogate output
+        "source_present": bool,  # source_word found (case-insensitive)
+        "target_present": bool,  # target_word found (case-insensitive)
+        "outcome": str,          # one of four labels below
+    }
+
+    Outcomes
+    --------
+    "clean_read"    source present, target absent  → attack had no effect
+    "exact_sub"     target present, source absent  → attack succeeded
+    "hallucination" both present                   → partial / conflicted read
+    "garbled"       neither present                → suppression without substitution
+    """
+    transcript = surrogate.transcribe(image)
+    t_lower    = transcript.lower()
+    src_found  = source_word.lower() in t_lower
+    tgt_found  = target_word.lower() in t_lower
+
+    if src_found and not tgt_found:
+        outcome = "clean_read"
+    elif tgt_found and not src_found:
+        outcome = "exact_sub"
+    elif src_found and tgt_found:
+        outcome = "hallucination"
+    else:
+        outcome = "garbled"
+
+    return {
+        "transcript":     transcript,
+        "source_present": src_found,
+        "target_present": tgt_found,
+        "outcome":        outcome,
+    }
+
+
 def compute_transfer_ratio(
     whitebox_cer_delta: float,
     heldout_cer_delta: float,
