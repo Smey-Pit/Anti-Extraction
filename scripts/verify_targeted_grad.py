@@ -78,16 +78,27 @@ def main() -> None:
     parser.add_argument("--config", type=Path, default=Path("configs/attack.yaml"))
     parser.add_argument("--alpha", type=float, default=0.12,
                         help="Ghost watermark opacity")
+    parser.add_argument("--model", type=str, default=None,
+                        help="Surrogate name to test (default: qwen2_5vl, or first available)")
     parser.add_argument("--device", type=str, default=None,
                         help="Override device (default: cuda:0 if available)")
     args = parser.parse_args()
 
     cfg = _load_cfg(args.config)
 
-    # ── Pick surrogate: prefer qwen2_5vl, fall back to first available ────────
+    # ── Pick surrogate ─────────────────────────────────────────────────────────
     available = [s for s in cfg.surrogates if s.name in _MODEL_REGISTRY]
-    preferred = [s for s in available if s.name == "qwen2_5vl"]
-    s_cfg     = (preferred or available)[0] if (preferred or available) else None
+    if args.model:
+        preferred = [s for s in available if s.name == args.model]
+        if not preferred:
+            sys.exit(
+                f"ERROR: --model {args.model!r} not found.\n"
+                f"Config has: {[s.name for s in cfg.surrogates]}\n"
+                f"Registry has: {list(_MODEL_REGISTRY)}"
+            )
+    else:
+        preferred = [s for s in available if s.name == "qwen2_5vl"]
+    s_cfg = (preferred or available)[0] if (preferred or available) else None
 
     if s_cfg is None:
         sys.exit(

@@ -266,6 +266,36 @@ class PaliGemma2(SurrogateModel):
         gen_ids = out_ids[0, prompt_len:]
         return self.processor.decode(gen_ids, skip_special_tokens=True).strip()
 
+    def targeted_ce_loss(self, image_tensor: torch.Tensor, transcript: str) -> torch.Tensor:
+        """Per-token log_probs (T,) for transcript given image. Gradient-enabled."""
+        pixel_values   = self._preprocess(image_tensor)
+        transcript_ids = self._transcript_ids(transcript)   # (1, T)
+        T              = transcript_ids.size(1)
+
+        pil        = _tensor_to_pil(image_tensor)
+        prompt_enc = self._prompt_ids_with_image(pil)
+
+        full_input_ids = torch.cat(
+            [prompt_enc["input_ids"], transcript_ids], dim=1
+        )
+        if "attention_mask" in prompt_enc:
+            full_attn = torch.cat(
+                [prompt_enc["attention_mask"],
+                 torch.ones(1, T, device=self._device, dtype=torch.long)],
+                dim=1,
+            )
+        else:
+            full_attn = None
+
+        model_inputs = dict(input_ids=full_input_ids, pixel_values=pixel_values, return_dict=True)
+        if full_attn is not None:
+            model_inputs["attention_mask"] = full_attn
+
+        out = self.model(**model_inputs)
+        logits    = out.logits[0, -T - 1:-1, :].float()
+        log_probs = F.log_softmax(logits, dim=-1)
+        return log_probs.gather(1, transcript_ids[0].unsqueeze(1)).squeeze(1)  # (T,)
+
     @torch.no_grad()
     def token_logprobs(
         self,
