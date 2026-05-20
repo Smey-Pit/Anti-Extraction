@@ -112,6 +112,8 @@ def main() -> None:
                         help="Pixels to pad the source-word box on each side (default 4)")
     parser.add_argument("--no-mask",     action="store_true",
                         help="Disable region mask — perturb the full image (not recommended)")
+    parser.add_argument("--span-weight", type=float, default=5.0,
+                        help="Upweight on substitution token span (default 5.0)")
     parser.add_argument("--device",      type=str,   default=None)
     args = parser.parse_args()
 
@@ -230,7 +232,8 @@ def main() -> None:
 
     # ── PGD ───────────────────────────────────────────────────────────────────
     print(f"\nTargeted PGD  n_steps={n_steps}  ε={args.epsilon:.4f}  "
-          f"step_size={args.step_size:.4f}  eval_every={args.eval_every}")
+          f"step_size={args.step_size:.4f}  eval_every={args.eval_every}  "
+          f"span_weight={args.span_weight}")
     print("─" * 60)
 
     with StepLogger(
@@ -246,6 +249,7 @@ def main() -> None:
         masked      = word_mask is not None,
         source_box  = [round(v) for v in source_box] if source_box else None,
         box_padding = args.box_padding,
+        span_weight = args.span_weight,
     ) as logger:
         adv_tensor, outcome = run_targeted_pgd(
             wm_tensor         = wm_tensor,
@@ -258,6 +262,7 @@ def main() -> None:
             epsilon           = args.epsilon,
             step_size         = args.step_size,
             eval_every        = args.eval_every,
+            span_weight       = args.span_weight,
             mask              = word_mask,
             logger            = logger,
             verbose           = True,
