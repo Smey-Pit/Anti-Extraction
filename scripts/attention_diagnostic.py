@@ -768,18 +768,23 @@ class LlamaProbe(AttentionProbeBase):
         return None, self._token_gh, self._token_gw
 
     def _detect_grid_from_attentions(self, attentions: tuple) -> None:
-        """Detect token_gh, token_gw from cross-attention weight shapes."""
+        """
+        Set grid to 40×40 regardless of tile count.
+
+        extract_word_attention() sums cross-attention over tiles and always
+        returns (patches_per_tile,) = (1600,) = (40×40,).  Using n_tiles×40
+        for token_gh would mismatch the output size and crash the reshape.
+        We still scan to confirm cross-attention layers exist.
+        """
         for layer_attn in reversed(attentions):
             if layer_attn is None:
                 continue
-            s = layer_attn.shape  # (1, n_heads, text_len, n_img_features) or self-attn
+            s = layer_attn.shape
             if len(s) == 4 and s[-1] != s[-2]:
-                n_img_features = s[-1]
-                n_tiles = max(1, n_img_features // self._PATCHES_PER_TILE)
-                self._token_gh = n_tiles * 40
+                self._token_gh = 40
                 self._token_gw = 40
                 return
-        # Fallback: single tile
+        # Fallback (shouldn't reach here if cross-attn weights are present)
         self._token_gh = 40
         self._token_gw = 40
 
