@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # --- Configurable Paths ---
-IMAGE_B="/data/gpfs/projects/punim2826/Smith/Anti-Extraction-v2/outputs/alpha_sweep/rgb_alpha_0.03.png"
+IMAGE_B="/data/gpfs/projects/punim2826/Smith/Anti-Extraction-v2/outputs/stage1/banking_0000_clean_w_decoy_v2.png" #this is the decoy
 
 # Optional: You can also centralize these to make the script even cleaner
 SCRIPT_PATH="/data/gpfs/projects/punim2826/Smith/Anti-Extraction-v2/vlm_suppress/tests/Phase_1/compare_ba.py"
