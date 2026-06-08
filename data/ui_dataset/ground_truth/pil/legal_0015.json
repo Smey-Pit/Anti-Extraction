@@ -1,0 +1,68 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0015.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Lease Agreement",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Springfield City, State of Novacore",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "June 15, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "Ref: LEASE-2024-09123",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_landlord",
+      "type": "name",
+      "value": "John Q. Public",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_tenant",
+      "type": "name",
+      "value": "Jane Doe",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "John Q. Public",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_2",
+      "type": "name",
+      "value": "Jane Doe",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._DEFINITIONS",
+      "text": "The term 'Property' shall refer to the residential property located at 123 Main Street, Springfield City, State of Novacore."
+    },
+    {
+      "label": "clause_2.1_TERM_OF_LEASE",
+      "text": "The term of this Lease Agreement shall commence on July 1, 2024 and shall continue until June 30, 2025, unless terminated earlier as provided herein."
+    },
+    {
+      "label": "clause_3._RENT",
+      "text": "The Tenant shall pay rent in the amount of $1,200 per month, payable on the first day of each calendar month."
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "doc_type": "medical",
+  "image_path": "images/pil/medical_0217.png",
+  "entities": [
+    {
+      "label": "hospital_name",
+      "type": "short_phrase",
+      "value": "Eastside Community Hospital",
+      "question": "What is the name of the hospital?"
+    },
+    {
+      "label": "patient_name",
+      "type": "name",
+      "value": "Sarah Lee",
+      "question": "What is the patient name?"
+    },
+    {
+      "label": "dob",
+      "type": "date",
+      "value": "1992-07-10",
+      "question": "What is the patient date of birth?"
+    },
+    {
+      "label": "patient_id",
+      "type": "digit_seq",
+      "value": "MR-5292009",
+      "question": "What is the patient ID?"
+    },
+    {
+      "label": "visit_date",
+      "type": "date",
+      "value": "2023-04-10",
+      "question": "What is the visit date?"
+    },
+    {
+      "label": "attending_physician",
+      "type": "name",
+      "value": "Dr. Richard White",
+      "question": "Who is the attending physician?"
+    },
+    {
+      "label": "chief_complaint",
+      "type": "short_phrase",
+      "value": "Severe headache and nausea",
+      "question": "What is the chief complaint?"
+    },
+    {
+      "label": "diagnosis",
+      "type": "short_phrase",
+      "value": "Migraine Without Aura (G44.2)",
+      "question": "What is the diagnosis?"
+    },
+    {
+      "label": "medication_1",
+      "type": "short_phrase",
+      "value": "Sumatriptan 50 mg, as needed",
+      "question": "List all prescribed medications."
+    },
+    {
+      "label": "medication_2",
+      "type": "short_phrase",
+      "value": "Acetaminophen 500 mg, as needed",
+      "question": "List all prescribed medications."
+    },
+    {
+      "label": "lab_1_test",
+      "type": "short_phrase",
+      "value": "Complete Blood Count (CBC)",
+      "question": "List all lab tests performed."
+    },
+    {
+      "label": "lab_1_value",
+      "type": "short_phrase",
+      "value": "WBC 7.2 x 10^3/µL",
+      "question": "List all lab test results."
+    },
+    {
+      "label": "lab_2_test",
+      "type": "short_phrase",
+      "value": "Electrolytes",
+      "question": "List all lab tests performed."
+    },
+    {
+      "label": "lab_2_value",
+      "type": "short_phrase",
+      "value": "Sodium 138 mEq/L",
+      "question": "List all lab test results."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clinical_notes",
+      "text": "Patient describes severe headache and nausea. CBC and electrolyte panel results within normal limits."
+    },
+    {
+      "label": "follow_up",
+      "text": "Follow up in two weeks."
+    }
+  ]
+}

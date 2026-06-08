@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0071.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "iMessage",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Alice",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Bob",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Bob",
+      "text": "Hey Al, I’m still feeling kinda weird after that doc visit. U ok?"
+    },
+    {
+      "label": "message_2_Alice",
+      "text": "Yeah, I’m good. What did the doc say?"
+    },
+    {
+      "label": "message_3_Bob",
+      "text": "He said it’s probably just stress, but I’m not sure. Feels like something else is going on..."
+    },
+    {
+      "label": "message_4_Alice",
+      "text": "Maybe, but hey, you know we’ve got this. Let’s talk more if u need."
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0027.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Echoes of Silence",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Liam Hartley",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Silent Pictures",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Liam Hartley. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "607",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. ABANDONED HOSPITAL - NIGHT",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. ABANDONED HOSPITAL - NIGHT\n\nThe dim light from a single flickering bulb casts long shadows across the empty corridors. The sound of dripping water echoes through the halls. A figure, cloaked in black, moves silently down the hallway, stopping at a door marked 'INFIRMARY'. The figure hesitates, then pushes the door open. Inside, the room is dark except for a faint glow coming from a small window. The figure steps inside, closing the door behind them.\n\nFADE IN:\n\nINT. INFIRMARY - NIGHT\n\nThe figure, revealed to be a woman in her early thirties, approaches a bed where a patient lies. She reaches into her pocket and pulls out a small device, pressing a button. The device emits a soft, rhythmic hum that seems to resonate with the patient's heartbeat. The woman’s eyes close as she leans in, her breath visible in the cold air.\n\nWOMAN\n(whispering)\nI'm here now. It's okay. You're safe.\n\nThe scene fades to black."
+    }
+  ]
+}

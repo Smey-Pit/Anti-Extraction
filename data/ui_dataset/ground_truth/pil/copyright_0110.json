@@ -1,0 +1,42 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0110.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "A Century of Change: The Rise of Women in Science",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Jasmine Lee",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "The Daily Chronicle",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Jasmine Lee. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "2289",
+      "question": "What is the page number?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "In the early 20th century, the world of science was a male-dominated landscape, with women often relegated to the sidelines. However, over the past century, a wave of pioneering female scientists has shattered glass ceilings and paved the way for future generations. Dr. Elara Voss, a neuroscientist at the University of Oxford, is just one of many trailblazers whose work has transformed our understanding of the human brain. Her groundbreaking research on memory and cognition has been featured in numerous scientific journals and has earned her a prestigious award. Dr. Voss reflects on her journey: \n\nDR. ELARA Voss\nIt wasn't easy, but seeing the impact of my work on others made it all worth it. Today, more and more women are stepping into the spotlight, and I hope to inspire them to follow their dreams and push boundaries."
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "doc_type": "banking",
+  "image_path": "images/pil/banking_0176.png",
+  "entities": [
+    {
+      "label": "bank_name",
+      "type": "short_phrase",
+      "value": "Nova Bank",
+      "question": "What is the name of the bank?"
+    },
+    {
+      "label": "account_holder",
+      "type": "name",
+      "value": "Emma Jackson",
+      "question": "What is the account holder name?"
+    },
+    {
+      "label": "account_number",
+      "type": "digit_seq",
+      "value": "313-116  2070 7565 72",
+      "question": "What is the account number?"
+    },
+    {
+      "label": "account_type",
+      "type": "short_phrase",
+      "value": "Business Cheque",
+      "question": "What is the account type?"
+    },
+    {
+      "label": "statement_period",
+      "type": "date_range",
+      "value": "1 Oct – 31 Oct 2024",
+      "question": "What is the statement period?"
+    },
+    {
+      "label": "opening_balance",
+      "type": "amount",
+      "value": "$6,821.33",
+      "question": "What is the opening balance?"
+    },
+    {
+      "label": "closing_balance",
+      "type": "amount",
+      "value": "$7,213.76",
+      "question": "What is the closing balance?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "transaction_history",
+      "text": "2024-10-05 Client Payment 1,500.00 $8,321.33\n2024-10-12 Office Supplies -120.00 $8,201.33\n2024-10-18 Salary 2,000.00 $10,201.33\n2024-10-22 Marketing Expenses -450.00 $9,751.33\n2024-10-30 Loan Repayment -1,000.00 $8,751.33"
+    }
+  ]
+}

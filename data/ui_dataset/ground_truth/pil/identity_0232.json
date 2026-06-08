@@ -1,0 +1,73 @@
+{
+  "doc_type": "identity",
+  "image_path": "images/pil/identity_0232.png",
+  "entities": [
+    {
+      "label": "document_type",
+      "type": "short_phrase",
+      "value": "national_id",
+      "question": "What type of identity document is this?"
+    },
+    {
+      "label": "issuing_authority",
+      "type": "short_phrase",
+      "value": "United Province of Kaelia — National Registry",
+      "question": "What authority issued this document?"
+    },
+    {
+      "label": "surname",
+      "type": "name",
+      "value": "Morrison",
+      "question": "What is the surname?"
+    },
+    {
+      "label": "given_names",
+      "type": "name",
+      "value": "Tara",
+      "question": "What are the given names?"
+    },
+    {
+      "label": "dob",
+      "type": "date",
+      "value": "1988-08-08",
+      "question": "What is the date of birth?"
+    },
+    {
+      "label": "document_number",
+      "type": "digit_seq",
+      "value": "KA-NR-880808-123456",
+      "question": "What is the document number?"
+    },
+    {
+      "label": "nationality_state",
+      "type": "short_phrase",
+      "value": "Kaelia",
+      "question": "What is the nationality or state?"
+    },
+    {
+      "label": "issue_date",
+      "type": "date",
+      "value": "2018-09-15",
+      "question": "What is the issue date?"
+    },
+    {
+      "label": "expiry_date",
+      "type": "date",
+      "value": "2028-09-15",
+      "question": "What is the expiry date?"
+    },
+    {
+      "label": "sex",
+      "type": "short_phrase",
+      "value": "F",
+      "question": "What is the sex listed on the document?"
+    },
+    {
+      "label": "address",
+      "type": "short_phrase",
+      "value": "456 Sunflower Lane, Kaelia Town",
+      "question": "What is the address on the document?"
+    }
+  ],
+  "content_blocks": []
+}

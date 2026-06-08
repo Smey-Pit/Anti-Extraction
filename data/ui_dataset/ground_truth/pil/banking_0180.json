@@ -1,0 +1,54 @@
+{
+  "doc_type": "banking",
+  "image_path": "images/pil/banking_0180.png",
+  "entities": [
+    {
+      "label": "bank_name",
+      "type": "short_phrase",
+      "value": "FirstNational Bank",
+      "question": "What is the name of the bank?"
+    },
+    {
+      "label": "account_holder",
+      "type": "name",
+      "value": "Emily Johnson",
+      "question": "What is the account holder name?"
+    },
+    {
+      "label": "account_number",
+      "type": "digit_seq",
+      "value": "232-461  8253 5871 85",
+      "question": "What is the account number?"
+    },
+    {
+      "label": "account_type",
+      "type": "short_phrase",
+      "value": "Everyday Savings",
+      "question": "What is the account type?"
+    },
+    {
+      "label": "statement_period",
+      "type": "date_range",
+      "value": "1 Oct – 31 Oct 2024",
+      "question": "What is the statement period?"
+    },
+    {
+      "label": "opening_balance",
+      "type": "amount",
+      "value": "$4,821.33",
+      "question": "What is the opening balance?"
+    },
+    {
+      "label": "closing_balance",
+      "type": "amount",
+      "value": "$5,123.67",
+      "question": "What is the closing balance?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "transaction_history",
+      "text": "1 Oct 2024 Salary Deposit +1,000.00 $5,821.33\n3 Oct 2024 Groceries -298.45 $5,522.88\n5 Oct 2024 Utility Bill -150.00 $5,372.88\n10 Oct 2024 Car Payment -350.00 $5,022.88\n15 Oct 2024 Credit Card Payment -200.00 $4,822.88"
+    }
+  ]
+}

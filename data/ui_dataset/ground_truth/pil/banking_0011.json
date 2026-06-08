@@ -1,0 +1,54 @@
+{
+  "doc_type": "banking",
+  "image_path": "images/pil/banking_0011.png",
+  "entities": [
+    {
+      "label": "bank_name",
+      "type": "short_phrase",
+      "value": "GlobalWest Bank",
+      "question": "What is the name of the bank?"
+    },
+    {
+      "label": "account_holder",
+      "type": "name",
+      "value": "Emma Watson",
+      "question": "What is the account holder name?"
+    },
+    {
+      "label": "account_number",
+      "type": "digit_seq",
+      "value": "112-849  6925 4150 18",
+      "question": "What is the account number?"
+    },
+    {
+      "label": "account_type",
+      "type": "short_phrase",
+      "value": "Business Cheque",
+      "question": "What is the account type?"
+    },
+    {
+      "label": "statement_period",
+      "type": "date_range",
+      "value": "1 Oct – 31 Oct 2024",
+      "question": "What is the statement period?"
+    },
+    {
+      "label": "opening_balance",
+      "type": "amount",
+      "value": "$10,000.00",
+      "question": "What is the opening balance?"
+    },
+    {
+      "label": "closing_balance",
+      "type": "amount",
+      "value": "$9,300.00",
+      "question": "What is the closing balance?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "transaction_history",
+      "text": "2024-10-05 Office Supplies -250.00 $9,750.00\n2024-10-12 Client Payment 5,000.00 $14,750.00\n2024-10-18 Rent Payment -3,000.00 $11,750.00\n2024-10-22 Software License -1,500.00 $10,250.00\n2024-10-28 Employee Bonus -1,000.00 $9,250.00"
+    }
+  ]
+}

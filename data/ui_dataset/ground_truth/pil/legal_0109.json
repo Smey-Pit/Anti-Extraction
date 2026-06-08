@@ -1,0 +1,62 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0109.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Complaint",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "High Court of Verano, State of Novaria",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "September 20, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "Case No. CV-2024-08841",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_plaintiff",
+      "type": "name",
+      "value": "Isaac F. Stone",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_defendant",
+      "type": "name",
+      "value": "Catherine P. Reed",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Isaac F. Stone",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._PARTIES",
+      "text": "This Complaint is brought by Isaac F. Stone, hereinafter referred to as the Plaintiff, against Catherine P. Reed, hereinafter referred to as the Defendant."
+    },
+    {
+      "label": "clause_2.1_FACTUAL_ALLEGATIONS",
+      "text": "The Plaintiff alleges that the Defendant breached their employment contract by terminating the Plaintiff's employment without cause and without providing adequate notice."
+    },
+    {
+      "label": "clause_3._PRAYER_FOR_RELIEF",
+      "text": "WHEREFORE, the Plaintiff prays for an order directing the Defendant to reinstate the Plaintiff to their former position, or in the alternative, to pay the Plaintiff damages in the amount of $100,000."
+    }
+  ]
+}

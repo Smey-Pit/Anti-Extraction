@@ -1,0 +1,54 @@
+{
+  "doc_type": "banking",
+  "image_path": "images/pil/banking_0116.png",
+  "entities": [
+    {
+      "label": "bank_name",
+      "type": "short_phrase",
+      "value": "Midland Trust",
+      "question": "What is the name of the bank?"
+    },
+    {
+      "label": "account_holder",
+      "type": "name",
+      "value": "John Doe",
+      "question": "What is the account holder name?"
+    },
+    {
+      "label": "account_number",
+      "type": "digit_seq",
+      "value": "082-180  9486 8611 16",
+      "question": "What is the account number?"
+    },
+    {
+      "label": "account_type",
+      "type": "short_phrase",
+      "value": "Business Cheque",
+      "question": "What is the account type?"
+    },
+    {
+      "label": "statement_period",
+      "type": "date_range",
+      "value": "1 Oct – 31 Oct 2024",
+      "question": "What is the statement period?"
+    },
+    {
+      "label": "opening_balance",
+      "type": "amount",
+      "value": "$3,750.00",
+      "question": "What is the opening balance?"
+    },
+    {
+      "label": "closing_balance",
+      "type": "amount",
+      "value": "$3,500.00",
+      "question": "What is the closing balance?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "transaction_history",
+      "text": "2024-10-05 Invoice Payment -500.00 $3,250.00\n2024-10-10 Client Deposit 1,200.00 $4,450.00\n2024-10-22 Office Supplies -250.00 $4,200.00\n2024-10-28 Travel Expenses -300.00 $3,900.00"
+    }
+  ]
+}

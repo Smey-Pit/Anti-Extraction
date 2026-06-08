@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0236.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Final Act",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Evelyn Hart",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Echoes of Tomorrow Studios",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Evelyn Hart. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "4887",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. ABANDONED HOSPITAL - NIGHT",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "EXT. ABANDONED HOSPITAL - NIGHT\n\nThe moon casts long shadows across the desolate grounds of the abandoned hospital. Elara stands at the entrance, her heart racing with anticipation. Inside, the dim light from a single flickering bulb illuminates the darkened halls. She moves cautiously, her flashlight beam cutting through the shadows.\n\nELARA\n(whispering to herself)\nThis is it. The final piece of the puzzle.\n\nShe approaches a door at the end of the hallway, its hinges groaning as she pushes it open. Inside, the room is empty except for a single, old-fashioned typewriter sitting on a desk. Elara kneels beside it, her fingers hesitantly touching the keys. As she begins to type, the typewriter comes alive, spitting out sheets of paper covered in cryptic messages. The room begins to shift, the walls closing in around her. She stands up, the typewriter still running, and looks around, realizing she is trapped.\n\nELARA\n(determined)\nI won’t give up. Not now.\n\nFADE OUT."
+    }
+  ]
+}

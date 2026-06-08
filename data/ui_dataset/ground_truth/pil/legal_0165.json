@@ -1,0 +1,68 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0165.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Service Agreement",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "City of Novara, State of Verano",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "October 14, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "REF: SVC-2024-113",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_client",
+      "type": "name",
+      "value": "Johnathan M. Voss",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_vendor",
+      "type": "name",
+      "value": "Verano Tech Solutions, Inc.",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Johnathan M. Voss",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_2",
+      "type": "name",
+      "value": "Verano Tech Solutions, Inc.",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._DEFINITIONS",
+      "text": "‘PARTIES’ means both the Client and Vendor, collectively and individually."
+    },
+    {
+      "label": "clause_2.1_SCOPE_OF_SERVICES",
+      "text": "The Vendor shall provide software development services to the Client as detailed in the attached Exhibit A."
+    },
+    {
+      "label": "clause_3._PAYMENT_TERMS",
+      "text": "The Client agrees to pay the Vendor $10,000 upon signing this agreement and the remainder in equal monthly installments."
+    }
+  ]
+}

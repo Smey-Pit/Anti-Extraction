@@ -1,0 +1,54 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0108.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Gmail",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Charlie",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Dave",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_3",
+      "type": "name",
+      "value": "Eve",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "subject",
+      "type": "short_phrase",
+      "value": "Family reunion plans",
+      "question": "What is the subject line of this message?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Charlie",
+      "text": "Hey guys, how’s everyone doing? Any ideas for the reunion?"
+    },
+    {
+      "label": "message_2_Dave",
+      "text": "Hey Charlie, everything’s good here. How about we plan something at your place?"
+    },
+    {
+      "label": "message_3_Eve",
+      "text": "Sounds great! Let’s make it a big party with games and food."
+    },
+    {
+      "label": "message_4_Charlie",
+      "text": "Definitely! Should we start booking the venue next week?"
+    }
+  ]
+}

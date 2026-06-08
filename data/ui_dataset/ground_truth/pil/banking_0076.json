@@ -1,0 +1,54 @@
+{
+  "doc_type": "banking",
+  "image_path": "images/pil/banking_0076.png",
+  "entities": [
+    {
+      "label": "bank_name",
+      "type": "short_phrase",
+      "value": "FictoBank",
+      "question": "What is the name of the bank?"
+    },
+    {
+      "label": "account_holder",
+      "type": "name",
+      "value": "Bob Smith",
+      "question": "What is the account holder name?"
+    },
+    {
+      "label": "account_number",
+      "type": "digit_seq",
+      "value": "633-649  5325 9280 72",
+      "question": "What is the account number?"
+    },
+    {
+      "label": "account_type",
+      "type": "short_phrase",
+      "value": "Business Cheque",
+      "question": "What is the account type?"
+    },
+    {
+      "label": "statement_period",
+      "type": "date_range",
+      "value": "1 Oct – 31 Oct 2024",
+      "question": "What is the statement period?"
+    },
+    {
+      "label": "opening_balance",
+      "type": "amount",
+      "value": "$7,821.33",
+      "question": "What is the opening balance?"
+    },
+    {
+      "label": "closing_balance",
+      "type": "amount",
+      "value": "$7,565.67",
+      "question": "What is the closing balance?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "transaction_history",
+      "text": "2024-10-01 Invoice Payment -1,200.00 $6,621.33\n2024-10-15 Loan Repayment -1,500.00 $5,121.33\n2024-10-20 Credit Card Payment -100.00 $5,021.33\n2024-10-25 Office Supplies -50.00 $5,071.33"
+    }
+  ]
+}

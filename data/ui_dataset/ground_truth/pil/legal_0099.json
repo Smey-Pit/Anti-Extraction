@@ -1,0 +1,68 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0099.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Complaint for Damages",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Pineview City, State of Verano",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "2024-05-05",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "Case No. CV-2024-07654",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_plaintiff",
+      "type": "name",
+      "value": "Daniel L. Maple",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_defendant",
+      "type": "name",
+      "value": "Robert T. Pine",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Daniel L. Maple",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_2",
+      "type": "name",
+      "value": "Robert T. Pine",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._Parties_Involved",
+      "text": "This action is brought by Daniel L. Maple against Robert T. Pine, hereinafter referred to collectively as 'the Parties'."
+    },
+    {
+      "label": "clause_2.1_Factual_Background",
+      "text": "Whereas, on March 15, 2024, the Defendant breached a contract by failing to deliver goods as agreed."
+    },
+    {
+      "label": "clause_3._Relief_Sought",
+      "text": "The Plaintiff seeks monetary damages in the amount of $5,000 for breach of contract, as well as costs and attorney's fees incurred in bringing this action."
+    }
+  ]
+}

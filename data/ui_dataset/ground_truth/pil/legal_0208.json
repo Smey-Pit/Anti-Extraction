@@ -1,0 +1,68 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0208.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Notice of Eviction",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Greenwood Village, State of Novamont",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "2024-03-12",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "Ref: EV-2024-0312",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_landlord",
+      "type": "name",
+      "value": "Henry Wells",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_tenant",
+      "type": "name",
+      "value": "Rachel Kim",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Henry Wells",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_2",
+      "type": "name",
+      "value": "Rachel Kim",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._NOTICE",
+      "text": "You are hereby given notice that you are in violation of your lease agreement."
+    },
+    {
+      "label": "clause_2.1_REASON_FOR_NOTICE",
+      "text": "The reason for this notice is your failure to pay rent as required by the lease agreement."
+    },
+    {
+      "label": "clause_3._TERMINATION_DATE",
+      "text": "Your tenancy shall terminate on April 15, 2024, unless you cure the default within ten (10) days from the date hereof."
+    }
+  ]
+}

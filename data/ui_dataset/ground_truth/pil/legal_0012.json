@@ -1,0 +1,62 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0012.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Last Will and Testament",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Greenfield City, State of Verdure",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "September 30, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "party_1_grantor",
+      "type": "name",
+      "value": "Evelyn M. Hawthorne",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_executor",
+      "type": "name",
+      "value": "Robert W. Hawthorne",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Evelyn M. Hawthorne",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_2",
+      "type": "name",
+      "value": "Robert W. Hawthorne",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._TESTAMENTARY_DISPOSAL_OF_ESTATE",
+      "text": "I hereby revoke all previous wills and codicils and declare this my last will and testament."
+    },
+    {
+      "label": "clause_2.1_DISPOSAL_OF_PERSONAL_PROPERTY",
+      "text": "My personal property, including but not limited to furniture, jewelry, and other tangible assets, shall be distributed as follows:..."
+    },
+    {
+      "label": "clause_3._FUNERAL_ARRANGEMENTS",
+      "text": "My funeral arrangements shall be made by Robert W. Hawthorne and shall be in accordance with my wishes as set forth in my burial instructions."
+    }
+  ]
+}

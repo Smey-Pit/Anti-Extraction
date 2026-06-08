@@ -1,0 +1,86 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0014.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Moderate View",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Education Funding Bill Faces Challenges in Congress",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "David Wilson",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Boston, July 20, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Education",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Funding",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Infrastructure",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_4",
+      "type": "short_phrase",
+      "value": "Teacher Training",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "A sweeping education funding bill intended to boost resources for schools and teachers is encountering significant hurdles in Congress, with key provisions facing intense scrutiny and opposition from various quarters."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The bill, which allocates billions of dollars to improve infrastructure, enhance teacher training, and expand access to technology, has become a focal point of partisan debate, with Republicans and Democrats at odds over its scope and cost."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Educators and advocacy groups have rallied behind the bill, emphasizing the urgent need for investment in public education, while opponents argue that it represents an unwarranted expansion of government spending."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "According to a recent study, 70% of educators believe that additional funding is critical to addressing the challenges faced by schools, but only 40% of the public supports the proposed amount."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "As negotiations continue, stakeholders are calling for a balanced approach that addresses both the immediate needs of students and the long-term sustainability of educational programs."
+    },
+    {
+      "label": "pull_quote",
+      "text": "‘Our children deserve the best possible education, and this bill is a step in the right direction.’ – Educator Jane Doe"
+    }
+  ]
+}

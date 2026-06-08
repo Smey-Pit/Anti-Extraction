@@ -1,0 +1,54 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0177.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Gmail",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Alex",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Lily",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_3",
+      "type": "name",
+      "value": "Max",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "subject",
+      "type": "short_phrase",
+      "value": "Family gathering plans",
+      "question": "What is the subject line of this message?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Alex",
+      "text": "Hey Lily & Max, how's everyone doing? Thinking abt a small get-together next weekend. What do u think?"
+    },
+    {
+      "label": "message_2_Lily",
+      "text": "Sounds good! When exactly?"
+    },
+    {
+      "label": "message_3_Max",
+      "text": "Definitely. Let's make it Sat at my place, 2-4pm sounds cool?"
+    },
+    {
+      "label": "message_4_Alex",
+      "text": "Perfect! I'll send out an invite soon. Thanks!"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0017.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Last Will and Testament",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Pinehill City, State of Novacore",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "August 10, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "Case No. W-2024-08841",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_grantor",
+      "type": "name",
+      "value": "Alice M. Smith",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_executor",
+      "type": "name",
+      "value": "Robert L. Johnson",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Alice M. Smith",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_2",
+      "type": "name",
+      "value": "Robert L. Johnson",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._TESTAMENTARY_DISPOSAL_OF_ESTATE",
+      "text": "I, Alice M. Smith, of Pinehill City, State of Novacore, hereby declare this to be my Last Will and Testament."
+    },
+    {
+      "label": "clause_2.1_DISPOSAL_OF_PERSONAL_PROPERTY",
+      "text": "I give and bequeath all of my personal property to my beloved son, Michael J. Smith, free and clear of any encumbrances."
+    },
+    {
+      "label": "clause_3._EXECUTOR",
+      "text": "I appoint Robert L. Johnson as the Executor of this Will and direct him to carry out the provisions hereof."
+    }
+  ]
+}

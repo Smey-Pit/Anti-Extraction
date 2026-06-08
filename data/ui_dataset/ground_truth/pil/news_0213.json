@@ -1,0 +1,76 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0213.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "National Affairs Review",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Immigration Reform: A Path Forward Amidst Controversy",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Carlos Rodriguez",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Chicago, January 12, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Immigration Reform",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Pathway to Citizenship",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Border Security",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "The issue of immigration reform remains one of the most contentious topics in American politics. Recent proposals aim to create a pathway to citizenship for undocumented immigrants, but the debate is far from settled."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The latest bill proposes a series of steps for undocumented immigrants to gain legal status, including registering with the government and paying fines. Proponents argue that this approach would bring millions of people out of the shadows and strengthen the economy."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Critics, however, warn that granting amnesty could encourage illegal immigration and strain public resources. They also suggest that border security must be improved before any changes are made."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Senator Maria Garcia, a sponsor of the bill, said, 'We can build a better future for our country by welcoming hardworking immigrants who contribute to our society.'"
+    },
+    {
+      "label": "pull_quote",
+      "text": "'Immigration reform is not about punishing those who came here illegally; it’s about creating a fair and just system for everyone.' - Senator Maria Garcia"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0092.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "WhatsApp",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Charlie",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Dave",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Dave",
+      "text": "Hey Charlie, just wanted to check in on how things are goin w/ your mom’s health."
+    },
+    {
+      "label": "message_2_Charlie",
+      "text": "Not great, Doc said she needs to stay in the hospital for a few days. It’s stressing me out."
+    },
+    {
+      "label": "message_3_Dave",
+      "text": "Oh no, that sounds tough. Let me know if you need anything, okay?"
+    },
+    {
+      "label": "message_4_Charlie",
+      "text": "Thanks, I really appreciate it. I’m tryna keep it together but it’s hard."
+    }
+  ]
+}

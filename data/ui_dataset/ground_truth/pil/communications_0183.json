@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0183.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "WhatsApp",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Lily",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Mike",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Lily",
+      "text": "Hey Mike, can we talk about the project? I think we're off track."
+    },
+    {
+      "label": "message_2_Mike",
+      "text": "Sure thing, let's meet tomorrow morning over coffee. Sounds good?"
+    },
+    {
+      "label": "message_3_Lily",
+      "text": "Perfect, I'll bring some doughnuts. See you then!"
+    },
+    {
+      "label": "message_4_Mike",
+      "text": "Sounds yummy! Looking forward to it."
+    }
+  ]
+}

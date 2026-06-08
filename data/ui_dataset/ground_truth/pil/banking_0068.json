@@ -1,0 +1,54 @@
+{
+  "doc_type": "banking",
+  "image_path": "images/pil/banking_0068.png",
+  "entities": [
+    {
+      "label": "bank_name",
+      "type": "short_phrase",
+      "value": "FictoBank",
+      "question": "What is the name of the bank?"
+    },
+    {
+      "label": "account_holder",
+      "type": "name",
+      "value": "Sophia Green",
+      "question": "What is the account holder name?"
+    },
+    {
+      "label": "account_number",
+      "type": "digit_seq",
+      "value": "032-009  8508 2638 19",
+      "question": "What is the account number?"
+    },
+    {
+      "label": "account_type",
+      "type": "short_phrase",
+      "value": "Everyday Savings",
+      "question": "What is the account type?"
+    },
+    {
+      "label": "statement_period",
+      "type": "date_range",
+      "value": "1 Jan – 31 Jan 2025",
+      "question": "What is the statement period?"
+    },
+    {
+      "label": "opening_balance",
+      "type": "amount",
+      "value": "$7,821.33",
+      "question": "What is the opening balance?"
+    },
+    {
+      "label": "closing_balance",
+      "type": "amount",
+      "value": "$8,123.45",
+      "question": "What is the closing balance?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "transaction_history",
+      "text": "2025-01-01 Direct Deposit 3000 $10,821.33\n2025-01-05 Utility Bills -180 $10,641.33\n2025-01-10 Groceries -150 $10,491.33\n2025-01-15 Online Shopping -250 $10,241.33\n2025-01-20 Car Maintenance -120 $10,121.33\n2025-01-25 Savings Transfer -500 $9,621.33\n2025-01-31 Charity Donation -100 $9,521.33"
+    }
+  ]
+}

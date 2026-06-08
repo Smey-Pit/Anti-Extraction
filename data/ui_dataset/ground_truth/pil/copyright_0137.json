@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0137.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Echoes of the Past",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Sarah Kinsley",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Fictional Film Studios",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Sarah Kinsley. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "2811",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. ABANDONED LIBRARY - NIGHT",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. ABANDONED LIBRARY - NIGHT\n\nThe camera pans across rows of dusty shelves, their spines cracked and yellowed. The air is thick with the scent of aged paper. Suddenly, the door creaks open, and Dr. Elara Voss steps inside. She moves cautiously, her flashlight beam dancing over the books. A faint noise echoes, and she freezes, her heart pounding. A shadow passes behind her, and she spins around, her hand reaching for her pocket knife. The shadowy figure disappears as quickly as it appeared, leaving only the silence of the library."
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0165.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Instagram DM",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Zoe",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Jake",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Jake",
+      "text": "Hey Zoe, I’ve been meaning to talk to u abt that legal stuff."
+    },
+    {
+      "label": "message_2_Zoe",
+      "text": "Yeah, I know. It’s been a while. What’s up?"
+    },
+    {
+      "label": "message_3_Jake",
+      "text": "Well, I think we should schedule a meeting with the lawyer soon."
+    },
+    {
+      "label": "message_4_Zoe",
+      "text": "Ok, let’s do it. When’s good for u?"
+    }
+  ]
+}

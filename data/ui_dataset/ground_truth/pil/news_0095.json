@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0095.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "National Insight Journal",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "City Council’s Green Agenda Faces Opposition from Business Leaders",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Eleanor Myles",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "New Haven, October 10, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Politics",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Green Energy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Economic Growth",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Sustainability",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "The city council's ambitious green energy policies are facing significant pushback from local business leaders who argue that the measures will stifle economic growth."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Local business groups have organized a series of public forums to discuss the potential negative impacts of the new regulations on small businesses and job creation."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Councilor Greenfield, a vocal proponent of the green agenda, argues that long-term sustainability is crucial for the city's future prosperity, pointing out that renewable energy initiatives could create new jobs and reduce operational costs."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Environmental activists, meanwhile, see the council's actions as a step in the right direction towards combating climate change, though they also express concern about the implementation timeline and funding sources."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "The debate highlights the complex balance between environmental responsibility and economic stability that cities across the nation are grappling with."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"We need to find a way to protect our environment without sacrificing our economic health.\" - Mayor Thompson"
+    }
+  ]
+}

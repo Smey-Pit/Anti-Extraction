@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0060.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "National Beacon",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Tech Giants Face New Privacy Scrutiny as Data Leaks Surge",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Alexa Thompson",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Washington D.C., April 15, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Politics",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Privacy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Tech Regulation",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Data Breaches",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "In the wake of multiple high-profile data breaches, tech companies are under increased pressure from lawmakers to explain their handling of user information."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Senator Jane Doe has introduced legislation that would require major technology firms to provide detailed reports on how they collect and use consumer data."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Critics argue that current regulations are insufficient in protecting individual privacy in the digital age, while supporters maintain that such measures could stifle innovation."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Industry insiders predict that the new regulations could lead to significant changes in how tech companies operate, potentially impacting everything from product development to customer relations."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "The tech sector is already facing mounting criticism over its role in recent data scandals, with some calling for a complete overhaul of existing privacy laws."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"If we don't take action now, we risk losing control over our own data.\" - Senator Jane Doe"
+    }
+  ]
+}

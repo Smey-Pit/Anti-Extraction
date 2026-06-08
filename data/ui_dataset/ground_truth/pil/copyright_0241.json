@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0241.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Last Witness",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Samantha Lee",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Vanguard Films",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Samantha Lee. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "4978",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "Day 3: Testimony of the Forensic Psychologist",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. COURTROOM - DAY\n\nThe courtroom is packed with spectators, all eyes on the witness stand. DR. JORDAN, a forensic psychologist, takes the stand, her voice steady despite the tension in the room. The judge nods, signaling her to begin.\n\nDR. JORDAN\n(to the jury)\nLadies and gentlemen, I will present evidence that the accused, THOMAS KELLY, had a history of violent behavior. His actions were not spontaneous; they were a pattern of control and manipulation. He used his position of trust to exploit his victims.\n\nThe prosecutor looks at Thomas, who sits impassively in the defendant’s chair. The jury listens intently, their faces a mix of shock and disbelief.\n\nDR. JORDAN\n(to the jury)\nHis behavior is a clear indication of a psychological disorder. I urge you to consider this carefully as you deliberate on his guilt."
+    }
+  ]
+}

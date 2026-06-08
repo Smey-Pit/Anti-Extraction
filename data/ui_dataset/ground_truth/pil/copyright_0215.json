@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0215.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Lost Symphony",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Raven Blackwood",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Melody House",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Raven Blackwood. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "4444",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "Chapter 5: The Reunion",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "The concert hall was filled with the hushed anticipation of a thousand souls. The strings began to play, their notes weaving together in a haunting melody. The conductor, a man with piercing blue eyes, stood tall and resolute at the podium. His hands moved with precision, guiding the orchestra through a piece that had not been performed in decades. It was a symphony that spoke of love, loss, and the enduring power of music.\n\nAs the final notes faded, the audience erupted into applause. A young violinist, standing alone on stage, looked out at the crowd with tears in her eyes. She had discovered the score in an old attic, and now, years later, she had brought this lost symphony to life. 'This is for you,' she whispered to the empty seats, 'for all those who have ever loved and lost.'"
+    }
+  ]
+}

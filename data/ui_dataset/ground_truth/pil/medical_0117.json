@@ -1,0 +1,100 @@
+{
+  "doc_type": "medical",
+  "image_path": "images/pil/medical_0117.png",
+  "entities": [
+    {
+      "label": "hospital_name",
+      "type": "short_phrase",
+      "value": "Mount Sinai Health System",
+      "question": "What is the name of the hospital?"
+    },
+    {
+      "label": "patient_name",
+      "type": "name",
+      "value": "Chris Williams",
+      "question": "What is the patient name?"
+    },
+    {
+      "label": "dob",
+      "type": "date",
+      "value": "1970-03-18",
+      "question": "What is the patient date of birth?"
+    },
+    {
+      "label": "patient_id",
+      "type": "digit_seq",
+      "value": "HC-8248051",
+      "question": "What is the patient ID?"
+    },
+    {
+      "label": "visit_date",
+      "type": "date",
+      "value": "2023-09-11",
+      "question": "What is the visit date?"
+    },
+    {
+      "label": "attending_physician",
+      "type": "name",
+      "value": "Dr. Rachel Lee",
+      "question": "Who is the attending physician?"
+    },
+    {
+      "label": "chief_complaint",
+      "type": "short_phrase",
+      "value": "Severe headache",
+      "question": "What is the chief complaint?"
+    },
+    {
+      "label": "diagnosis",
+      "type": "short_phrase",
+      "value": "Tension-Type Headache (G44.1)",
+      "question": "What is the diagnosis?"
+    },
+    {
+      "label": "medication_1",
+      "type": "short_phrase",
+      "value": "Sumatriptan 50 mg, as needed",
+      "question": "List all prescribed medications."
+    },
+    {
+      "label": "medication_2",
+      "type": "short_phrase",
+      "value": "Acetaminophen 500 mg, three times daily",
+      "question": "List all prescribed medications."
+    },
+    {
+      "label": "lab_1_test",
+      "type": "short_phrase",
+      "value": "CBC",
+      "question": "List all lab tests performed."
+    },
+    {
+      "label": "lab_1_value",
+      "type": "short_phrase",
+      "value": "WBC: 6.2 K/uL, Hgb: 14 g/dL",
+      "question": "List all lab test results."
+    },
+    {
+      "label": "lab_2_test",
+      "type": "short_phrase",
+      "value": "Serum Electrolytes",
+      "question": "List all lab tests performed."
+    },
+    {
+      "label": "lab_2_value",
+      "type": "short_phrase",
+      "value": "Na: 138 mEq/L, K: 4.2 mEq/L",
+      "question": "List all lab test results."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clinical_notes",
+      "text": "Patient reports severe headache, no fever or other systemic symptoms. CBC and serum electrolytes within normal limits."
+    },
+    {
+      "label": "follow_up",
+      "text": "Follow up in two weeks if symptoms persist."
+    }
+  ]
+}

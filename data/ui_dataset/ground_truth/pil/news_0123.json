@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0123.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "The Progressive Voice",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Immigration Crisis: A Humanitarian Call to Action",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Lila M. Thompson",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Los Angeles, June 20, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Immigration",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Human Rights",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Border Security",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "The immigration crisis continues to dominate headlines, with thousands of migrants crossing borders in search of safety and opportunity, sparking intense debates and calls for humanitarian responses."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Human rights organizations report that many migrants face dangerous conditions and inadequate support upon arrival, highlighting the urgent need for compassionate and effective policies."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Some argue that current immigration policies are outdated and fail to address the root causes of displacement, such as conflict and economic instability."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Others contend that increased border security is essential to maintaining national safety and integrity."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Advocates for reform call for a more inclusive approach that prioritizes family reunification and asylum seekers' rights."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"We must treat all human beings with dignity and respect, regardless of their status.\" - Sister Maria Rodriguez"
+    }
+  ]
+}

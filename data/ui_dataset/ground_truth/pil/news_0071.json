@@ -1,0 +1,76 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0071.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "The Future Voice",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "City Council Member Advocates for Green Energy Transition",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Michael Green",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "New York City, April 10, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Green Energy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Climate Change",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Economic Benefits",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Council Member Sarah Lee has called for a comprehensive shift towards renewable energy sources in the city, arguing that it is both environmentally responsible and economically beneficial."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Lee’s plan outlines a phased approach to transitioning public transportation and municipal buildings to solar and wind power. She also proposes incentives for businesses to adopt green technologies and reduce carbon emissions."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Environmental activists support the initiative, seeing it as a critical step in combating climate change. However, some business owners are wary of the costs associated with such a transition."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Economists note that while the initial investment may be high, the long-term benefits, including job creation and reduced healthcare costs due to cleaner air, could outweigh the expenses."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"We can’t afford to wait any longer. The time for action on climate change is now.\" - Council Member Sarah Lee"
+    }
+  ]
+}

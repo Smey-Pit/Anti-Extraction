@@ -1,0 +1,72 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0021.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Non-Disclosure Agreement",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Greenfield Township, State of Verano",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "April 20, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "NDA-2024-113",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_disclosing_party",
+      "type": "name",
+      "value": "Robert Lee",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_receiving_party",
+      "type": "name",
+      "value": "Sarah Chen",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Robert Lee",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_2",
+      "type": "name",
+      "value": "Sarah Chen",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._DEFINITION_OF_CONFIDENTIAL_INFORMATION",
+      "text": "‘Confidential Information’ means any information disclosed by the Disclosing Party that is marked as confidential or that would reasonably be expected to be treated as such."
+    },
+    {
+      "label": "clause_2.1_OBLIGATION_OF_CONFIDENTIALITY",
+      "text": "The Receiving Party shall maintain the confidentiality of all Confidential Information and shall not disclose it to any third party without the prior written consent of the Disclosing Party."
+    },
+    {
+      "label": "clause_3._TERM",
+      "text": "This Agreement shall remain in effect until the expiration of ten (10) years from the date of execution."
+    },
+    {
+      "label": "notary_note",
+      "text": "Sworn before me this 20th day of April 2024."
+    }
+  ]
+}

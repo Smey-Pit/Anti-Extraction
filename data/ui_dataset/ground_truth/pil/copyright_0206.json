@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0206.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Midnight Call",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Maxwell Hartley",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Nightfall Studios",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Maxwell Hartley. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "4250",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. BEDROOM - NIGHT",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. BEDROOM - NIGHT\nSarah sits up in bed, her eyes wide with fear. The phone on the nightstand begins to ring, the sound echoing through the empty house. She reaches out hesitantly, her hand trembling as she picks up the receiver. \n\nSFX: Ring, ring, ring.\n\nSarah: (whispering) Hello?\n\nSFX: Silence.\n\nSarah hangs up, her heart pounding. She looks around the dark room, trying to calm herself. But the phone begins to ring again, louder this time. She picks it up once more, her voice shaking. \n\nSarah: (fearful) Who is this?\n\nSFX: Static.\n\nThe line goes dead, leaving Sarah alone with the eerie silence. She clutches the phone tightly, her mind racing with thoughts of danger and the unknown."
+    }
+  ]
+}

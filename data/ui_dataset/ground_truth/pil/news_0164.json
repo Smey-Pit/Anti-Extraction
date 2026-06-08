@@ -1,0 +1,86 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0164.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "The Moderate View",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Education Funding: Where Does the Money Go?",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Laura K. Mitchell",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Boston, July 12, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Education Funding",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Teacher Salaries",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "School Resources",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_4",
+      "type": "short_phrase",
+      "value": "Budget Efficiency",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "The debate over education funding has intensified as schools across the country struggle with budget cuts and declining resources. While some argue for increased investment to improve educational outcomes, others contend that current spending is inefficient and poorly targeted."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The proposed budget includes substantial increases in funding for public schools, with a focus on teacher salaries and classroom resources. Proponents believe this will help address longstanding issues of underfunding and improve student performance."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Educational reformer John Smith commented, 'Investing in our educators and students is the key to creating a more equitable and effective education system.'"
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "However, critics point out that much of the existing funding is wasted on administrative overhead and unnecessary expenses, suggesting that a more strategic approach is needed."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "A recent audit revealed that nearly half of all education spending goes towards non-teaching staff and operations, raising questions about the effectiveness of current allocation methods."
+    },
+    {
+      "label": "pull_quote",
+      "text": "‘We need to be smarter about where we spend our education dollars to ensure that every child receives the quality education they deserve.’ – John Smith"
+    }
+  ]
+}

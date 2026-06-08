@@ -1,0 +1,54 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0093.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Gmail",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Eve",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Frank",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_3",
+      "type": "name",
+      "value": "Grace",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "subject",
+      "type": "short_phrase",
+      "value": "Team meeting",
+      "question": "What is the subject line of this message?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Eve",
+      "text": "Hi Frank & Grace, can we schedule a quick team meeting tomorrow at 3pm?"
+    },
+    {
+      "label": "message_2_Frank",
+      "text": "Sure thing, Eve. How long do you think it’ll take?"
+    },
+    {
+      "label": "message_3_Grace",
+      "text": "I’m free then, let’s do it!"
+    },
+    {
+      "label": "message_4_Eve",
+      "text": "Great, I’ll add it to the calendar. See you all then!"
+    }
+  ]
+}

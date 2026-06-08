@@ -1,0 +1,54 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0113.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Gmail",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Sarah",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Tom",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_3",
+      "type": "name",
+      "value": "Emily",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "subject",
+      "type": "short_phrase",
+      "value": "Family Emergency",
+      "question": "What is the subject line of this message?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Sarah",
+      "text": "Hi Tom and Emily, this is an urgent message. My mom had a fall and is in the hospital."
+    },
+    {
+      "label": "message_2_Tom",
+      "text": "Oh no! Is she okay? Are you there with her?"
+    },
+    {
+      "label": "message_3_Emily",
+      "text": "We’re coming over right now. What do you need us to bring?"
+    },
+    {
+      "label": "message_4_Sarah",
+      "text": "Thanks, just some snacks and maybe a book for her to read. She’s in room 412."
+    }
+  ]
+}

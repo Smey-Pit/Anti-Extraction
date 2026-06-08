@@ -1,0 +1,68 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0073.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Notice to Vacate Premises",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Sunshine County, State of Luminara",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "October 17, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "EV-2024-1017",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_landlord",
+      "type": "name",
+      "value": "Brightside Properties LLC",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_tenant",
+      "type": "name",
+      "value": "Robert M. Green",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Brightside Properties LLC",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_2",
+      "type": "name",
+      "value": "Robert M. Green",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._NOTICE",
+      "text": "Robert M. Green is hereby given notice to vacate the premises effective immediately."
+    },
+    {
+      "label": "clause_2.1_CAUSE_FOR_EVICTION",
+      "text": "The cause for eviction is non-payment of rent as per the lease agreement."
+    },
+    {
+      "label": "clause_3._ACTION_REQUIRED",
+      "text": "Tenant must vacate the premises by 5:00 PM on October 24, 2024."
+    }
+  ]
+}

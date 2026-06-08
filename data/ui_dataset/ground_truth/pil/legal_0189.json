@@ -1,0 +1,68 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0189.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Complaint for Breach of Contract",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Verano County, State of Novacorp",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "June 15, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "Case No. CV-2024-10101",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_plaintiff",
+      "type": "name",
+      "value": "InnovateTech Solutions Inc.",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_defendant",
+      "type": "name",
+      "value": "BrightMind Innovations LLC",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Michael Innovate",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_2",
+      "type": "name",
+      "value": "Alexandra Lawton",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._Nature_of_Action",
+      "text": "The Plaintiff alleges that the Defendant breached the terms of the Confidentiality Agreement by disclosing certain proprietary information without authorization."
+    },
+    {
+      "label": "clause_2.1_Damages_Sought",
+      "text": "The Plaintiff seeks damages in the amount of $500,000 for the economic harm suffered as a result of the Defendant's breach."
+    },
+    {
+      "label": "clause_3._Request_for_Relief",
+      "text": "The Plaintiff requests that the Court enter an order enjoining the Defendant from further disclosure of the Confidential Information and awarding the requested damages."
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0029.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Last Ember",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Rowan Blackwood",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Ashwood Publishing",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Rowan Blackwood. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "676",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "Chapter 3: Into the Woods",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "The forest was a labyrinth of shadows and whispers, each tree a guardian of ancient secrets. As she walked deeper into the woods, the path became more treacherous, the underbrush thick and tangled. The air grew colder, and the sounds of the forest seemed to grow louder. Suddenly, a low growl echoed through the trees, and a shadow darted past her. Heart pounding, she quickened her pace, her flashlight beam cutting through the darkness. The growl came again, closer this time. She turned, her heart in her throat, but saw nothing but the dense foliage.\n\nShe pressed on, her mind racing with fear and determination. She knew what she had to do. She had to find the last ember, the final piece of the puzzle that would lead her to the truth. The forest seemed to close in around her, but she pushed forward, driven by a force stronger than her fear. The last ember was waiting, hidden among the shadows, and she would find it."
+    }
+  ]
+}

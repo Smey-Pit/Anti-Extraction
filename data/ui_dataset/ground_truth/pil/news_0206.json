@@ -1,0 +1,86 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0206.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "National Observer",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Healthcare Crisis Looms as Budget Cuts Threaten Essential Services",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Robert Harris",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Washington D.C., April 7, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Healthcare",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Budget",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Public Services",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_4",
+      "type": "short_phrase",
+      "value": "Social Issues",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "As Congress prepares to finalize the next budget, proposed cuts to healthcare funding could have devastating effects on patient care and public health."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The proposed reductions would significantly impact community health centers, mental health clinics, and rural hospitals, leaving millions more vulnerable to inadequate medical support."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Proponents of the cuts argue that they are necessary to address the national debt and prioritize other critical areas like defense and infrastructure."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Opponents warn that such moves will exacerbate existing disparities in access to healthcare, particularly in underserved communities."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Health professionals and advocacy groups are calling for a reassessment of the budget proposals to protect essential healthcare services."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"We cannot afford to cut our way to prosperity when our most vulnerable populations are at risk.\" — Dr. Emily White, Public Health Advocate"
+    }
+  ]
+}

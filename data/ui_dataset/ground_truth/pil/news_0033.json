@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0033.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Freedom Forum",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Immigration Policy Debate Heats Up as New Bill Faces Rejection",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "David Lee",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Chicago, June 20, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Politics",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Immigration Policy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Border Security",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Human Trafficking",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "A controversial immigration bill, aimed at tightening border security and reducing illegal crossings, has faced fierce opposition from both Democrats and immigrant rights advocates, leading to its rejection by a key committee."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The bill, sponsored by Representative James Brown, proposes stricter enforcement measures, including increased funding for border patrols and the construction of additional barriers. It also calls for expedited deportation procedures for undocumented immigrants."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Advocates for immigrant rights argue that the bill would harm families and communities, pushing vulnerable individuals into dangerous situations and undermining efforts to integrate immigrants into society."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "On the other hand, supporters of the bill claim it is necessary to restore order and protect national security. They point to rising crime rates in certain areas and the need to prevent human trafficking and smuggling operations."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "The rejection of the bill has reignited the broader debate over immigration policy, with both sides calling for more comprehensive solutions that balance security concerns with humanitarian needs."
+    },
+    {
+      "label": "pull_quote",
+      "text": "'The bill would harm families and communities, pushing vulnerable individuals into dangerous situations and undermining efforts to integrate immigrants into society.' – Advocates for Immigrant Rights"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "doc_type": "banking",
+  "image_path": "images/pil/banking_0112.png",
+  "entities": [
+    {
+      "label": "bank_name",
+      "type": "short_phrase",
+      "value": "FictiveThird Bank",
+      "question": "What is the name of the bank?"
+    },
+    {
+      "label": "account_holder",
+      "type": "name",
+      "value": "Charlie Brown",
+      "question": "What is the account holder name?"
+    },
+    {
+      "label": "account_number",
+      "type": "digit_seq",
+      "value": "012-047  5011 8784 88",
+      "question": "What is the account number?"
+    },
+    {
+      "label": "account_type",
+      "type": "short_phrase",
+      "value": "Everyday Savings",
+      "question": "What is the account type?"
+    },
+    {
+      "label": "statement_period",
+      "type": "date_range",
+      "value": "1 Oct – 31 Oct 2024",
+      "question": "What is the statement period?"
+    },
+    {
+      "label": "opening_balance",
+      "type": "amount",
+      "value": "$5,000.00",
+      "question": "What is the opening balance?"
+    },
+    {
+      "label": "closing_balance",
+      "type": "amount",
+      "value": "$5,200.00",
+      "question": "What is the closing balance?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "transaction_history",
+      "text": "2024-10-01 Direct Deposit 1500.0 $6,500.00\n2024-10-05 Restaurant Bill @ The Bistro -120.0 $6,380.00\n2024-10-10 Gas Station @ PetroMart -50.0 $6,330.00\n2024-10-15 Pet Care @ Happy Paws -75.0 $6,255.00\n2024-10-20 Online Shopping @ BestBuy -250.0 $6,005.00\n2024-10-25 Movie Night @ Cinema City -40.0 $5,965.00\n2024-10-31 Savings Contribution 200.0 $5,200.00"
+    }
+  ]
+}

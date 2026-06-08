@@ -1,0 +1,76 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0218.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Conservative Sentinel",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Border Crisis Escalates: Republicans Demand Immediate Action",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Michael K. Black",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Houston, January 5, 2024",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Immigration",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Border Security",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Illegal Entry",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Amidst growing concerns over illegal immigration, Republican leaders are calling for drastic measures to secure the southern border and reduce the influx of migrants."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The current administration has been criticized for its lackluster response to the crisis, with many calling for stricter enforcement and increased funding for border patrol."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Some lawmakers propose building a physical barrier along the entire border, while others suggest a more robust visa program to deter illegal entry."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Democrats, however, argue that addressing the root causes of migration, such as poverty and violence in Central America, is the key to long-term solutions."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"We cannot allow our borders to be a backdoor for criminals and those who wish us harm. It's time for decisive action.\" - Representative Mark Johnson"
+    }
+  ]
+}

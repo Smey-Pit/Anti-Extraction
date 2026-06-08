@@ -1,0 +1,85 @@
+{
+  "doc_type": "identity",
+  "image_path": "images/pil/identity_0108.png",
+  "entities": [
+    {
+      "label": "document_type",
+      "type": "short_phrase",
+      "value": "employee_id",
+      "question": "What type of identity document is this?"
+    },
+    {
+      "label": "issuing_authority",
+      "type": "short_phrase",
+      "value": "TechCorp",
+      "question": "What authority issued this document?"
+    },
+    {
+      "label": "surname",
+      "type": "name",
+      "value": "Hawkins",
+      "question": "What is the surname?"
+    },
+    {
+      "label": "given_names",
+      "type": "name",
+      "value": "Samuel",
+      "question": "What are the given names?"
+    },
+    {
+      "label": "dob",
+      "type": "date",
+      "value": "19850917",
+      "question": "What is the date of birth?"
+    },
+    {
+      "label": "document_number",
+      "type": "digit_seq",
+      "value": "TC-EMP-12345678",
+      "question": "What is the document number?"
+    },
+    {
+      "label": "nationality_state",
+      "type": "short_phrase",
+      "value": "TechCorp",
+      "question": "What is the nationality or state?"
+    },
+    {
+      "label": "issue_date",
+      "type": "date",
+      "value": "20210917",
+      "question": "What is the issue date?"
+    },
+    {
+      "label": "expiry_date",
+      "type": "date",
+      "value": "20310917",
+      "question": "What is the expiry date?"
+    },
+    {
+      "label": "employee_id",
+      "type": "digit_seq",
+      "value": "12345678",
+      "question": "What is the employee ID?"
+    },
+    {
+      "label": "department",
+      "type": "short_phrase",
+      "value": "Software Engineering",
+      "question": "What is the department?"
+    },
+    {
+      "label": "job_title",
+      "type": "short_phrase",
+      "value": "Senior Software Developer",
+      "question": "What is the job title?"
+    },
+    {
+      "label": "organisation",
+      "type": "short_phrase",
+      "value": "TechCorp",
+      "question": "What is the organisation?"
+    }
+  ],
+  "content_blocks": []
+}

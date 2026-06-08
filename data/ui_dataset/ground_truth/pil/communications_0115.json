@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0115.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Slack",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "David",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Karen",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_David",
+      "text": "Hey Karen, I’m facing some serious financial stress. My rent is due next month and I don’t have the money."
+    },
+    {
+      "label": "message_2_Karen",
+      "text": "I’m sorry to hear that. Have you talked to your landlord yet?"
+    },
+    {
+      "label": "message_3_David",
+      "text": "Not yet, but I’m afraid they won’t be understanding. I’m thinking of asking for a deferment."
+    },
+    {
+      "label": "message_4_Karen",
+      "text": "That’s a tough spot. I’ll try to help out if I can. Maybe we can find a solution together?"
+    }
+  ]
+}

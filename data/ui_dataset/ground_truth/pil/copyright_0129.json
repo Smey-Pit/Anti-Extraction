@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0129.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Forgotten Echoes",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Milo Carter",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Echoes Publishing",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Milo Carter. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "2668",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "Chapter 6: The Cliffs of Memory",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "The rain fell in steady sheets, washing away the dust of the past. ELARA stood at the edge of the cliff, the wind whipping her hair into a frenzy. Below, the sea stretched out endlessly, its waves crashing against the rocks. She closed her eyes, letting the salty air fill her lungs. It was here, on this very spot, that her grandmother had told her stories of the old world, of a time when magic still walked among men. Now, as she stood alone, she wondered if any of those tales were true.\n\nElara reached into her pocket and pulled out a small, silver locket. It contained a photograph of her grandmother, her face etched with lines of wisdom and love. As she traced the contours of the frame, a voice echoed in her mind, clear and certain. 'The truth is hidden in plain sight, my dear. You just need to look closer.'"
+    }
+  ]
+}

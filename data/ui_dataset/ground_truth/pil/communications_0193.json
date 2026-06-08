@@ -1,0 +1,54 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0193.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Gmail",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "John",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Jane",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_3",
+      "type": "name",
+      "value": "Mike",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "subject",
+      "type": "short_phrase",
+      "value": "Family emergency",
+      "question": "What is the subject line of this message?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_John",
+      "text": "Hey Jane & Mike, we need to talk about something urgent."
+    },
+    {
+      "label": "message_2_Jane",
+      "text": "What's going on John?"
+    },
+    {
+      "label": "message_3_Mike",
+      "text": "Is everything alright?"
+    },
+    {
+      "label": "message_4_John",
+      "text": "My sister had a bad fall and needs surgery. We need to discuss who can help cover the costs."
+    }
+  ]
+}

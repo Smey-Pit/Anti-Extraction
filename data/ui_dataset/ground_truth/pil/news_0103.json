@@ -1,0 +1,82 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0103.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Political Analyst Weekly",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "The Future of Healthcare: A Public-Private Partnership Model",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "David H. Lee",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Chicago, June 10, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Healthcare",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Public-Private Partnerships",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Affordability",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_4",
+      "type": "short_phrase",
+      "value": "Innovation",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "As debates rage over the future of healthcare systems worldwide, a new model combining public and private sector efforts is gaining traction as a potential solution."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "This hybrid approach aims to leverage the strengths of both sectors—public funding and regulation, and private innovation and efficiency—to improve access and quality of care."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Supporters believe it could help bridge gaps in coverage and affordability, particularly in underserved areas, while also driving advancements in medical research and technology."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Opponents caution that such partnerships might lead to higher costs and reduced patient choice, emphasizing the need for careful oversight and clear guidelines."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"A public-private partnership offers a promising path forward, balancing the best of both worlds to achieve better health outcomes.\" - Health Policy Expert Dr. Emily White"
+    }
+  ]
+}

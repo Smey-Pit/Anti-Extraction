@@ -1,0 +1,62 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0053.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Notice to Quit",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Pineville City, State of Novamont",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "2024-09-05",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "EVC-2024-08841",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_landlord",
+      "type": "name",
+      "value": "Henry M. Brown",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_tenant",
+      "type": "name",
+      "value": "Robert T. Clark",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Henry M. Brown",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._DEFAULT",
+      "text": "The Tenant has failed to comply with the terms of the Lease Agreement."
+    },
+    {
+      "label": "clause_2.1_NOTICE_TO_QUIT",
+      "text": "The Tenant is hereby given notice to quit the premises within thirty (30) days from the date of this Notice."
+    },
+    {
+      "label": "clause_3._RENT_DEFAULT",
+      "text": "The Tenant has defaulted on rent payments for the last three months."
+    }
+  ]
+}

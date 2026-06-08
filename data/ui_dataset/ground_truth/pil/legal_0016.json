@@ -1,0 +1,72 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0016.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Non-Disclosure Agreement",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Lakeview City, State of Novacore",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "July 20, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "REF: NDA-2024-113",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_disclosing_party",
+      "type": "name",
+      "value": "Tech Innovators Inc.",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_receiving_party",
+      "type": "name",
+      "value": "Bright Ideas LLC",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Tech Innovators Inc.",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_2",
+      "type": "name",
+      "value": "Bright Ideas LLC",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._DEFINITION_OF_CONFIDENTIAL_INFORMATION",
+      "text": "‘Confidential Information’ means all information disclosed by the Disclosing Party, whether written, oral, electronic, or otherwise, that is marked or designated as confidential or proprietary."
+    },
+    {
+      "label": "clause_2.1_OBLIGATIONS_OF_THE_RECEIVING_PARTY",
+      "text": "The Receiving Party agrees to maintain the confidentiality of the Confidential Information and shall not disclose such information to any third party without the prior written consent of the Disclosing Party."
+    },
+    {
+      "label": "clause_3._TERM",
+      "text": "This Agreement shall remain in effect indefinitely until all Confidential Information has been made public through no fault of the Receiving Party."
+    },
+    {
+      "label": "notary_note",
+      "text": "Sworn before me this 20th day of July 2024."
+    }
+  ]
+}

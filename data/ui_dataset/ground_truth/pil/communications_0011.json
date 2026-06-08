@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0011.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "iMessage",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Samantha",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Mike",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Mike",
+      "text": "Hey Sam, how's it going?"
+    },
+    {
+      "label": "message_2_Samantha",
+      "text": "Not great tbh. My back's been killing me all week."
+    },
+    {
+      "label": "message_3_Mike",
+      "text": "Oh no, that sounds awful. Have you seen a doc yet?"
+    },
+    {
+      "label": "message_4_Samantha",
+      "text": "I tried, but the doc's booked solid. I'm thinking of just waiting it out."
+    }
+  ]
+}

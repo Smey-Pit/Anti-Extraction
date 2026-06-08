@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0084.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Freedom Forum",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Immigration Policies Divided as Border Crisis Looms",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Emily P. Brown",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Los Angeles, July 10, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Politics",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Immigration",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Border Security",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Human Rights",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "As the number of undocumented immigrants crossing the southern border continues to rise, immigration policies have become a central issue in the national debate, with stark differences between Democrats and Republicans."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "President Jameson has proposed a comprehensive plan that includes building a wall, increasing border patrols, and offering a path to citizenship for those already in the country illegally."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Republicans generally support a hard-line approach, emphasizing enforcement and deportation, while Democrats advocate for a more compassionate and inclusive strategy."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Activist Maria Rodriguez comments, 'We need a solution that respects human dignity and upholds our values as a nation.'"
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "The issue has also drawn international attention, with neighboring countries expressing concern about the potential impact of a mass influx of migrants."
+    },
+    {
+      "label": "pull_quote",
+      "text": "'We need a solution that respects human dignity and upholds our values as a nation.' – Maria Rodriguez"
+    }
+  ]
+}

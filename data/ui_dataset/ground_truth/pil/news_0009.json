@@ -1,0 +1,86 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0009.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Economic Tribune",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Economic Stimulus Bill Passes House, Faces Senate Obstacles",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Laura H. Green",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Washington D.C., March 19, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Economic Stimulus",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Infrastructure Spending",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Corporate Tax Cuts",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_4",
+      "type": "short_phrase",
+      "value": "National Debt",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "The House of Representatives has passed an economic stimulus bill aimed at boosting the economy through tax cuts and infrastructure investments, but the measure faces significant hurdles in the Senate."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The bill, which includes $1 trillion in infrastructure spending and a reduction in corporate taxes, is designed to stimulate job growth and revitalize the economy."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Democrats are largely supportive of the bill, viewing it as a crucial step in addressing the lingering effects of the pandemic."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "However, Republicans argue that the bill is too costly and could lead to inflationary pressures."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "A senior senator warned, 'We need to be cautious about adding more debt to the national balance sheet at this critical time.'"
+    },
+    {
+      "label": "pull_quote",
+      "text": "'This bill is essential for our economic recovery,' said Representative Martinez."
+    }
+  ]
+}

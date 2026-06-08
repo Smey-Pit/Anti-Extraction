@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0147.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "The Citizen's Herald",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Healthcare Reform Sparks Controversy",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Morgan L. Greene",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Chicago, May 10, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Healthcare",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Reform",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Public Health",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Proposed healthcare reforms aimed at expanding coverage and lowering costs have sparked intense debate among policymakers, with supporters arguing that the changes are necessary to improve access and quality of care, while opponents warn of potential negative consequences."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Advocates for the reforms argue that the current system is inefficient and leaves millions without adequate medical coverage, leading to higher out-of-pocket expenses and poor health outcomes."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "On the other hand, critics contend that the proposed changes could lead to reduced provider reimbursements and potentially result in fewer healthcare options for patients."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "The debate has intensified as both sides mobilize public support through rallies and social media campaigns, highlighting the deep divisions within the healthcare community."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Ultimately, the outcome of this legislative battle will shape the future of healthcare in the country for years to come."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"Access to healthcare should not be a privilege, but a fundamental right,\" declared Senator John Smith during a recent town hall meeting."
+    }
+  ]
+}

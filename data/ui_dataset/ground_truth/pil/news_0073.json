@@ -1,0 +1,76 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0073.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "The National Tribune",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Healthcare Reform Bill Faces Opposition in Senate",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Sarah Johnson",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Washington D.C., June 1, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Politics",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Healthcare Reform",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Affordable Care",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Universal Coverage",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Senator Lisa Brown has introduced a healthcare reform bill aimed at expanding access to affordable insurance and reducing administrative costs, but it faces significant opposition from industry groups and conservative lawmakers."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Brown’s bill includes provisions for subsidies to lower premiums, expansion of Medicaid, and a mandate for larger employers to provide coverage. It also seeks to streamline insurance regulations to reduce bureaucratic red tape."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Industry lobbyists argue that the bill could disrupt existing business models and increase costs for employers. Conservative senators criticize the measure as government overreach and a threat to individual freedoms."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Proponents of the bill see it as a crucial step towards achieving universal healthcare coverage and ensuring that all Americans have access to quality medical care."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"Access to healthcare is a fundamental right. We need to make sure everyone can get the care they need without breaking the bank.\" - Senator Lisa Brown"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0098.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Citizen’s Voice",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Immigration Policy Debate Intensifies Amidst Border Crisis",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Linda Rivers",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Los Angeles, October 13, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Border Security",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Refugees",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Human Rights",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "As the number of migrants crossing the southern border continues to rise, the debate over immigration policy has intensified, with advocates calling for more compassionate solutions and critics emphasizing the need for stricter enforcement."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Humanitarian organizations are urging the government to provide more resources and support for those seeking refuge, arguing that turning away vulnerable individuals is morally indefensible."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Law enforcement officials, on the other hand, stress the importance of maintaining border security and preventing illegal entry, citing concerns about public safety and national security."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Political leaders are under increasing pressure to find a balanced approach that addresses both human rights and national interests, but consensus remains elusive."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "The situation at the border has become a focal point in the upcoming election cycle, with candidates offering starkly different visions for managing the influx of immigrants."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"We must show compassion and provide safe pathways for those in need.\" - Senator Garcia"
+    }
+  ]
+}

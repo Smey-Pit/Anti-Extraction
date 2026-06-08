@@ -1,0 +1,86 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0006.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "TechFuture Gazette",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Tech Giants Face New Privacy Scrutiny from Congress",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Michael R. Jones",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Washington D.C., March 16, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Privacy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Tech Regulation",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Data Breaches",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_4",
+      "type": "short_phrase",
+      "value": "Consumer Rights",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Congressional hearings into the privacy practices of major tech companies have raised new concerns about the industry's handling of consumer data."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The hearings, held in front of a bipartisan committee, focused on issues ranging from data breaches to targeted advertising."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Critics argue that tech giants are exploiting loopholes in existing regulations to amass vast amounts of personal information without adequate oversight."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Industry insiders warn that increased regulation could stifle innovation and harm the U.S. tech sector's global competitiveness."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "A representative from Google defended the company's practices, stating, 'We take privacy very seriously and are committed to transparency with our users.'"
+    },
+    {
+      "label": "pull_quote",
+      "text": "'Tech companies must be held accountable for their actions,' declared Senator Smith during the hearing."
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0214.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "A New Dawn for Forgotten Artists",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Evelyn Sinclair",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "City Sunlight",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Evelyn Sinclair. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "4415",
+      "question": "What is the page number?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "In the heart of the city lies a hidden gem, the Artisan’s Haven, a small gallery that has been bringing forgotten artists back to life. Since its reopening last month, the Haven has become a beacon for those whose talents were once overlooked. Among the featured artists is Lila Marlow, a painter whose work combines abstract expressionism with elements of urban decay. Her latest series, 'Urban Echoes,' captures the raw beauty of the city’s forgotten corners.\n\n‘When I first started painting,’ Lila says, ‘I was trying to find my own voice. Now, seeing my work displayed here, it feels like I’ve finally found a home.’ The gallery has also hosted workshops and discussions, providing a platform for emerging artists to share their stories and techniques. As the sun sets, the gallery fills with a warm glow, drawing in visitors eager to witness the rebirth of talent."
+    }
+  ]
+}

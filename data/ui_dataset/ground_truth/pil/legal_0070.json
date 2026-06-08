@@ -1,0 +1,68 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0070.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Service Agreement for Consulting Services",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Springfield County, State of Novaria",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "October 10, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "Ref: CONS-2024-1010",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_client",
+      "type": "name",
+      "value": "Tech Innovations Inc.",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_consultant",
+      "type": "name",
+      "value": "Data Solutions LLC",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Tech Innovations Inc.",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_2",
+      "type": "name",
+      "value": "Data Solutions LLC",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._DEFINITIONS",
+      "text": "The term 'PARTY' means either party to this agreement."
+    },
+    {
+      "label": "clause_2._SCOPE_OF_SERVICES",
+      "text": "CONSULTANT shall provide consulting services to CLIENT as detailed in Exhibit A."
+    },
+    {
+      "label": "clause_3._TERM",
+      "text": "This agreement shall commence on the Effective Date and continue for a period of twelve (12) months."
+    }
+  ]
+}

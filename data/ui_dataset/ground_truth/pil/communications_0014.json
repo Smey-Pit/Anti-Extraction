@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0014.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Android Messages",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Rachel",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "David",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_David",
+      "text": "Hey Rachel, did you get my text earlier?"
+    },
+    {
+      "label": "message_2_Rachel",
+      "text": "Yeah, sorry I missed it. I was out with the kids all day."
+    },
+    {
+      "label": "message_3_David",
+      "text": "No worries. I just wanted to remind you about our meeting tomorrow. 10am sharp."
+    },
+    {
+      "label": "message_4_Rachel",
+      "text": "Got it. I’ll be there. Thanks for the heads up!"
+    }
+  ]
+}

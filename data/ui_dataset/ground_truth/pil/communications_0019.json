@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0019.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Discord",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Sam",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Zoe",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Zoe",
+      "text": "Sam, I’m really stressed about my rent. Do you have any ideas?"
+    },
+    {
+      "label": "message_2_Sam",
+      "text": "Sorry to hear that. Have you talked to your landlord yet?"
+    },
+    {
+      "label": "message_3_Sam",
+      "text": "Maybe you could ask for a deferred payment plan or something."
+    },
+    {
+      "label": "message_4_Zoe",
+      "text": "That’s a good idea. Thanks, Sam. I’ll look into it."
+    }
+  ]
+}

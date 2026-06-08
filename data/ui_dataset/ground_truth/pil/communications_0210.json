@@ -1,0 +1,48 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0210.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Outlook",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Mike",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Lawyer",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "subject",
+      "type": "short_phrase",
+      "value": "Legal issue with tenant",
+      "question": "What is the subject line of this message?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Mike",
+      "text": "Hi Lawyer, I've got a problem w/ my tenant not paying rent."
+    },
+    {
+      "label": "message_2_Lawyer",
+      "text": "I see, can you send over the lease agreement and any relevant docs?"
+    },
+    {
+      "label": "message_3_Mike",
+      "text": "Sure, here they are. Any chance we can evict them?"
+    },
+    {
+      "label": "message_4_Lawyer",
+      "text": "Not without proper cause. We'll have to go through the legal process first."
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0142.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Global Viewpoint",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Climate Change Denialism Threatens International Cooperation",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Isaac R. Greene",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "London, May 5, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Climate Change",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Environmental Policy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "International Cooperation",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "As global leaders gather for the upcoming climate summit, the persistent spread of climate change denialism poses a significant challenge to international efforts to combat environmental degradation."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Despite overwhelming scientific evidence supporting the reality of human-caused climate change, a vocal minority continues to question its existence or impact."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "This skepticism undermines the credibility of policymakers and scientists, making it difficult to build consensus on necessary actions."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Environmental activists warn that continued denialism could stall progress on crucial initiatives such as renewable energy adoption and carbon emissions reduction."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "It is imperative that accurate information and robust scientific communication prevail over misinformation."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"Denialism is not just a scientific issue; it is a matter of survival for our planet.\" - Greenpeace Spokesperson Alex Johnson"
+    }
+  ]
+}

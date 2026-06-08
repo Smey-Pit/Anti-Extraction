@@ -1,0 +1,58 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0153.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Notice of Eviction",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Downtown City, State of Novaria",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "July 22, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "Eviction Case No. EV-2024-08841",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_landlord",
+      "type": "name",
+      "value": "Avery W. Stone",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_tenant",
+      "type": "name",
+      "value": "Olivia H. Reed",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Avery W. Stone",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._Termination_of_Tenancy",
+      "text": "This notice serves to terminate your tenancy with immediate effect, effective August 15, 2024."
+    },
+    {
+      "label": "clause_2.1_Reason_for_Termination",
+      "text": "You have been in violation of the lease agreement by failing to pay rent within the stipulated period of seven days."
+    }
+  ]
+}

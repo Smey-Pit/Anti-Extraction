@@ -1,0 +1,48 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0155.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Outlook",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Zoe",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Chris",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "subject",
+      "type": "short_phrase",
+      "value": "Legal issue",
+      "question": "What is the subject line of this message?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Zoe",
+      "text": "Chris, I need your help with something urgent"
+    },
+    {
+      "label": "message_2_Chris",
+      "text": "What’s up? Is everything alright?"
+    },
+    {
+      "label": "message_3_Zoe",
+      "text": "My landlord won’t return my deposit & I think they’re overcharging me for repairs"
+    },
+    {
+      "label": "message_4_Chris",
+      "text": "I can help you draft a letter & figure out your options"
+    }
+  ]
+}

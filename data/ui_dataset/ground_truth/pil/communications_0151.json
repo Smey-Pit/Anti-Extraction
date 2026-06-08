@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0151.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "iMessage",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Samantha",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Jake",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Samantha",
+      "text": "Hey Jake, how r u doing?"
+    },
+    {
+      "label": "message_2_Jake",
+      "text": "Not great tbh, my knee hurts like hell"
+    },
+    {
+      "label": "message_3_Samantha",
+      "text": "Oh no, are you ok? Did u go to doc?"
+    },
+    {
+      "label": "message_4_Jake",
+      "text": "Yeah, he said it’s just inflammation, gave me some painkillers & told me to rest"
+    }
+  ]
+}

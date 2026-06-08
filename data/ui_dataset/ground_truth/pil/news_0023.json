@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0023.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "The Liberal Ledger",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Climate Change Summit Ends with Mixed Results",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Sarah W. Johnson",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Paris, France, June 20, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "climate change",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Paris Agreement",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "renewable energy",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Despite high hopes, the recent climate change summit in Paris yielded mixed outcomes as nations struggled to reach consensus on key issues."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The summit brought together world leaders to discuss strategies for reducing greenhouse gas emissions and transitioning to renewable energy sources."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "While some countries pledged to increase their commitments under the Paris Agreement, others remained resistant to binding targets."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Environmental activists praised the progress made, but criticized the lack of concrete actions from major polluters."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "UN Secretary-General Alexei Novak stated, 'We have made strides, but there is still much work to be done to address the urgent crisis of climate change.'"
+    },
+    {
+      "label": "pull_quote",
+      "text": "‘It’s time for action, not just talk. We can’t afford to wait any longer.’ – Greenpeace Spokesperson Emma Davis"
+    }
+  ]
+}

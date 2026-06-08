@@ -1,0 +1,86 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0010.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "National Tribune",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Economic Crisis Deepens as Critics Slam New Tax Bill",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Emma Thompson",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Washington D.C., March 15, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Politics",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Economy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Tax Policy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Unemployment",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_4",
+      "type": "short_phrase",
+      "value": "Inflation",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "The economic downturn has intensified in the past month, with critics lambasting the recently passed tax bill as a failure to address the root causes of rising unemployment and inflation."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Economists from various sectors have pointed out that the new tax legislation has failed to stimulate job creation and has instead led to a significant increase in consumer prices, hitting lower-income families particularly hard."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Sen. Robert Johnson, a leading critic of the bill, stated, 'This is nothing more than a handout to corporations at the expense of the American worker.'"
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Proponents of the bill argue that it was designed to support small businesses and incentivize investment, but independent studies show that the majority of benefits have gone to large corporations."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "As the debate rages on, public opinion polls indicate growing dissatisfaction among voters, with 68% expressing concern over the current economic policies."
+    },
+    {
+      "label": "pull_quote",
+      "text": "‘This is a clear case of the rich getting richer and the poor struggling to make ends meet.’ – Sen. Robert Johnson"
+    }
+  ]
+}

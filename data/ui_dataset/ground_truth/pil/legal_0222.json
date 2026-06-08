@@ -1,0 +1,56 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0222.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Last Will and Testament",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "State of Nova",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "May 10, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "Case No. CV-2024-08841",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_grantor",
+      "type": "name",
+      "value": "Eleanor M. Bright",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Eleanor M. Bright",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._Testamentary_Intent",
+      "text": "I, Eleanor M. Bright, of the City of Lumina, State of Nova, do hereby make, publish, and declare this my last will and testament."
+    },
+    {
+      "label": "clause_2.1_Distribution_of_Estate",
+      "text": "My entire estate, real and personal, shall be distributed as follows:"
+    },
+    {
+      "label": "clause_3._Executor",
+      "text": "I hereby appoint Johnathan M. Bright as the executor of this will."
+    }
+  ]
+}

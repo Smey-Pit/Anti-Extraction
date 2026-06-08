@@ -1,0 +1,100 @@
+{
+  "doc_type": "medical",
+  "image_path": "images/pil/medical_0063.png",
+  "entities": [
+    {
+      "label": "hospital_name",
+      "type": "short_phrase",
+      "value": "Northview Community Hospital",
+      "question": "What is the name of the hospital?"
+    },
+    {
+      "label": "patient_name",
+      "type": "name",
+      "value": "Robert Greene",
+      "question": "What is the patient name?"
+    },
+    {
+      "label": "dob",
+      "type": "date",
+      "value": "1968-04-12",
+      "question": "What is the patient date of birth?"
+    },
+    {
+      "label": "patient_id",
+      "type": "digit_seq",
+      "value": "HC-6838019",
+      "question": "What is the patient ID?"
+    },
+    {
+      "label": "visit_date",
+      "type": "date",
+      "value": "2023-02-23",
+      "question": "What is the visit date?"
+    },
+    {
+      "label": "attending_physician",
+      "type": "name",
+      "value": "Dr. Emily Chen",
+      "question": "Who is the attending physician?"
+    },
+    {
+      "label": "chief_complaint",
+      "type": "short_phrase",
+      "value": "Persistent cough and fever",
+      "question": "What is the chief complaint?"
+    },
+    {
+      "label": "diagnosis",
+      "type": "short_phrase",
+      "value": "Community-Acquired Pneumonia (J12.9)",
+      "question": "What is the diagnosis?"
+    },
+    {
+      "label": "medication_1",
+      "type": "short_phrase",
+      "value": "Amoxicillin 500 mg, three times daily",
+      "question": "List all prescribed medications."
+    },
+    {
+      "label": "medication_2",
+      "type": "short_phrase",
+      "value": "Acetaminophen 500 mg, as needed for fever",
+      "question": "List all prescribed medications."
+    },
+    {
+      "label": "lab_1_test",
+      "type": "short_phrase",
+      "value": "White Blood Cell Count",
+      "question": "List all lab tests performed."
+    },
+    {
+      "label": "lab_1_value",
+      "type": "short_phrase",
+      "value": "12,500 cells/µL",
+      "question": "List all lab test results."
+    },
+    {
+      "label": "lab_2_test",
+      "type": "short_phrase",
+      "value": "Chest X-ray",
+      "question": "List all lab tests performed."
+    },
+    {
+      "label": "lab_2_value",
+      "type": "short_phrase",
+      "value": "Lobar consolidation seen in right lower lobe",
+      "question": "List all lab test results."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clinical_notes",
+      "text": "Patient has a persistent cough and fever. Chest X-ray shows lobar consolidation in the right lower lobe. White blood cell count is elevated, consistent with infection."
+    },
+    {
+      "label": "follow_up",
+      "text": "Follow-up in five days for re-evaluation."
+    }
+  ]
+}

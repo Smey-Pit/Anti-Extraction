@@ -1,0 +1,100 @@
+{
+  "doc_type": "medical",
+  "image_path": "images/pil/medical_0129.png",
+  "entities": [
+    {
+      "label": "hospital_name",
+      "type": "short_phrase",
+      "value": "Westside Specialty Clinic",
+      "question": "What is the name of the hospital?"
+    },
+    {
+      "label": "patient_name",
+      "type": "name",
+      "value": "Sophia Rodriguez",
+      "question": "What is the patient name?"
+    },
+    {
+      "label": "dob",
+      "type": "date",
+      "value": "1985-05-10",
+      "question": "What is the patient date of birth?"
+    },
+    {
+      "label": "patient_id",
+      "type": "digit_seq",
+      "value": "PT-2113003",
+      "question": "What is the patient ID?"
+    },
+    {
+      "label": "visit_date",
+      "type": "date",
+      "value": "2023-02-18",
+      "question": "What is the visit date?"
+    },
+    {
+      "label": "attending_physician",
+      "type": "name",
+      "value": "Dr. Patricia Lee",
+      "question": "Who is the attending physician?"
+    },
+    {
+      "label": "chief_complaint",
+      "type": "short_phrase",
+      "value": "Recurrent abdominal pain and bloating",
+      "question": "What is the chief complaint?"
+    },
+    {
+      "label": "diagnosis",
+      "type": "short_phrase",
+      "value": "Irritable Bowel Syndrome (R15.3)",
+      "question": "What is the diagnosis?"
+    },
+    {
+      "label": "medication_1",
+      "type": "short_phrase",
+      "value": "Loperamide, 4 mg, as needed for diarrhea",
+      "question": "List all prescribed medications."
+    },
+    {
+      "label": "medication_2",
+      "type": "short_phrase",
+      "value": "Simethicone, 10 mg, as needed for gas",
+      "question": "List all prescribed medications."
+    },
+    {
+      "label": "lab_1_test",
+      "type": "short_phrase",
+      "value": "Fecal Occult Blood Test (FOBT)",
+      "question": "List all lab tests performed."
+    },
+    {
+      "label": "lab_1_value",
+      "type": "short_phrase",
+      "value": "Negative",
+      "question": "List all lab test results."
+    },
+    {
+      "label": "lab_2_test",
+      "type": "short_phrase",
+      "value": "Complete Stool Analysis",
+      "question": "List all lab tests performed."
+    },
+    {
+      "label": "lab_2_value",
+      "type": "short_phrase",
+      "value": "No significant findings",
+      "question": "List all lab test results."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clinical_notes",
+      "text": "Patient reports recurrent abdominal pain and bloating. No signs of infection or bleeding. Diet and stress management are recommended."
+    },
+    {
+      "label": "follow_up",
+      "text": "Follow up in four weeks or sooner if symptoms worsen."
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0009.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Last Signal",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Liam Hart",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Digital Dreams Entertainment",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Liam Hart. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "237",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. ABANDONED CONTROL ROOM - NIGHT",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. ABANDONED CONTROL ROOM - NIGHT\n\nThe room is dimly lit by flickering emergency lights. Dust motes float in the air as a figure, LUCAS, a rugged engineer in his late thirties, stands before a massive control panel. He adjusts a lever, causing a series of lights to blink in response.\n\nLUCAS\n(whispering)\nOne last signal...\n\nHe reaches for a small device, pressing buttons with trembling fingers. The room vibrates slightly as a faint signal is transmitted into the void.\n\nLUCAS\n(into radio)\nThis is Echo Station. We're broadcasting our final message...\n\nThe screen displays a countdown timer, ticking down to zero. Lucas watches intently, his face etched with determination.\n\nFADE OUT."
+    }
+  ]
+}

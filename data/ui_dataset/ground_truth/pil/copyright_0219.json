@@ -1,0 +1,42 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0219.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Unseen Guardian",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Ella Whitmore",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Globe Daily News",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Ella Whitmore. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "4540",
+      "question": "What is the page number?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "In the heart of the city, there is a legend that has been whispered among the residents for generations. The story goes that a guardian watches over the neighborhood, ensuring the safety of its people. This guardian is known only as 'The Watcher,' and while many have heard tales of his deeds, few have ever seen him. Last night, however, the Watcher made himself known to a group of children who were playing near the park. They described him as a tall, silent figure with piercing eyes, always moving just beyond the edge of their vision. To this day, the children insist that he protected them from a group of hoodlums who had been terrorizing the area. Whether true or not, the story of the Watcher continues to inspire hope and courage in the community."
+    }
+  ]
+}

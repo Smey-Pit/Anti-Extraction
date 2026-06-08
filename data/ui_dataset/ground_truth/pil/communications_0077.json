@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0077.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Discord",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Lily",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Alex",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Alex",
+      "text": "Hey Lily, how’s it going?"
+    },
+    {
+      "label": "message_2_Lily",
+      "text": "It’s going okay, just a bit stressed about work. Had a fight with my boss yesterday."
+    },
+    {
+      "label": "message_3_Alex",
+      "text": "Oh no, what happened?"
+    },
+    {
+      "label": "message_4_Lily",
+      "text": "He’s been really pushy lately. I told him I’m struggling to keep up with the workload and he said it’s not his problem."
+    }
+  ]
+}

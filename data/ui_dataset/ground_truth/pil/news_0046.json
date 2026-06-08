@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0046.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Global Observer",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Climate Change Denialism Under Fire as Extremes Become the New Normal",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Michael Green",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "New York City, April 10, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Climate Change",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Environmental Activism",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Scientific Consensus",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "As extreme weather events become more frequent and severe, climate change deniers find themselves increasingly isolated in their views, facing growing public pressure and scientific consensus."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Recent studies show a direct correlation between rising global temperatures and the frequency of natural disasters, including hurricanes and wildfires."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Environmental activists are organizing nationwide protests calling for immediate action to curb carbon emissions and invest in renewable energy."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Politicians who previously downplayed climate change now find themselves under scrutiny for their past statements and actions."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Scientists warn that time is running out to prevent catastrophic environmental outcomes."
+    },
+    {
+      "label": "pull_quote",
+      "text": "‘We are at a critical juncture where denialism no longer serves the public interest,’ stated Dr. Laura Lee, a leading climatologist."
+    }
+  ]
+}

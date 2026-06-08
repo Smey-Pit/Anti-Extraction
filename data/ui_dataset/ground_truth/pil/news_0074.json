@@ -1,0 +1,76 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0074.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "The Progressive Herald",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Mayor Proposes Housing Initiative to Tackle Homelessness",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "James Taylor",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Los Angeles, July 10, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Homelessness",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Affordable Housing",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Mental Health",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Mayor Patricia Lee has launched a new initiative aimed at addressing the growing problem of homelessness in the city, proposing a combination of housing projects and social services to provide support and stability for the homeless population."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Lee’s plan includes the construction of affordable housing units, mental health clinics, and job training programs. The mayor believes that these measures will help break the cycle of homelessness and give individuals a chance to rebuild their lives."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Community leaders welcome the initiative, seeing it as a comprehensive approach to tackling a complex issue. However, critics argue that the city lacks the resources to implement such a large-scale project effectively."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Experts in urban planning suggest that a multi-faceted strategy is indeed necessary, but emphasize the importance of careful planning and community engagement to ensure success."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"Homelessness is a solvable problem if we work together and invest in solutions that truly address its root causes.\" - Mayor Patricia Lee"
+    }
+  ]
+}

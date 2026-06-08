@@ -1,0 +1,68 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0161.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Non-Disclosure Agreement",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Fairview County, State of Novaria",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "July 10, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "NDA-2024-113",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_disclosing_party",
+      "type": "name",
+      "value": "Charles W. Oakley",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_receiving_party",
+      "type": "name",
+      "value": "Laura M. White",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Charles W. Oakley",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_2",
+      "type": "name",
+      "value": "Laura M. White",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._DEFINITIONS",
+      "text": "For purposes of this Agreement, `Confidential Information` means any proprietary information disclosed by the Disclosing Party that is marked or designated as confidential or that, under the circumstances surrounding its disclosure, ought to be treated as confidential."
+    },
+    {
+      "label": "clause_2.1_OBLIGATIONS",
+      "text": "The Receiving Party shall not, directly or indirectly, disclose, use, or permit the use of Confidential Information except as expressly authorized herein or as required by law."
+    },
+    {
+      "label": "notary_note",
+      "text": "Sworn before me this 10th day of July 2024."
+    }
+  ]
+}

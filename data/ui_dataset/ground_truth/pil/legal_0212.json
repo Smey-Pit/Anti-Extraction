@@ -1,0 +1,56 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0212.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Last Will and Testament",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Hilltop City, State of Novaria",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "May 15, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "Case No. CV-2024-08841",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_grantor",
+      "type": "name",
+      "value": "Oliver Grey",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Oliver Grey",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._Personal_Property",
+      "text": "I direct that my personal property, including but not limited to my jewelry, art collection, and vehicles, be distributed as follows..."
+    },
+    {
+      "label": "clause_2.1_Real_Property",
+      "text": "I hereby devise and bequeath my real property located at 456 Oak Avenue, Hilltop City, State of Novaria, to my daughter, Amelia Grey, in fee simple absolute..."
+    },
+    {
+      "label": "clause_3._Executor",
+      "text": "I appoint my trusted friend, Benjamin White, as the Executor of my estate to manage and distribute my assets according to the provisions of this will."
+    }
+  ]
+}

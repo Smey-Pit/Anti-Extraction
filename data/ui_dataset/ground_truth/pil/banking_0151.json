@@ -1,0 +1,54 @@
+{
+  "doc_type": "banking",
+  "image_path": "images/pil/banking_0151.png",
+  "entities": [
+    {
+      "label": "bank_name",
+      "type": "short_phrase",
+      "value": "GlobalTrust Bank",
+      "question": "What is the name of the bank?"
+    },
+    {
+      "label": "account_holder",
+      "type": "name",
+      "value": "Emma Thompson",
+      "question": "What is the account holder name?"
+    },
+    {
+      "label": "account_number",
+      "type": "digit_seq",
+      "value": "032-443  6934 8532 29",
+      "question": "What is the account number?"
+    },
+    {
+      "label": "account_type",
+      "type": "short_phrase",
+      "value": "Business Cheque",
+      "question": "What is the account type?"
+    },
+    {
+      "label": "statement_period",
+      "type": "date_range",
+      "value": "1 Oct – 31 Oct 2024",
+      "question": "What is the statement period?"
+    },
+    {
+      "label": "opening_balance",
+      "type": "amount",
+      "value": "$3,456.78",
+      "question": "What is the opening balance?"
+    },
+    {
+      "label": "closing_balance",
+      "type": "amount",
+      "value": "$3,499.21",
+      "question": "What is the closing balance?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "transaction_history",
+      "text": "2024-10-01 Client Payment +2,500.00 $5,956.78\n2024-10-05 Office Supplies -200.00 $5,756.78\n2024-10-10 Electricity Bill -150.00 $5,606.78\n2024-10-15 Travel Expenses -300.00 $5,306.78\n2024-10-20 Software License -120.00 $5,186.78\n2024-10-25 Deposited Check +1,000.00 $6,186.78\n2024-10-31 Interest Earned +12.43 $6,199.21"
+    }
+  ]
+}

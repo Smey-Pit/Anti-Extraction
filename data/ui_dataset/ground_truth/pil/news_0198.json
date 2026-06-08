@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0198.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Western Herald",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Proposed Healthcare Reform Sparks Debate Among Voters",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Michael J. White",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Mountview, June 15, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Healthcare Reform",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Affordable Care",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Taxation",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Mountview residents are grappling with a new healthcare reform proposal that seeks to expand coverage and lower costs through government subsidies."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The plan, championed by local politicians, includes measures to subsidize premiums for low-income families and offer more affordable options for those without insurance."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Critics argue that the reform could lead to higher taxes and strain the state’s already stretched budget, potentially jeopardizing other essential services."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Proponents, however, believe it is a necessary step to ensure access to healthcare for all citizens and reduce the financial burden on individuals and families."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "A series of town hall meetings are scheduled over the coming weeks to gather input from the public."
+    },
+    {
+      "label": "pull_quote",
+      "text": "‘Healthcare is a fundamental right, and we must do everything in our power to make it accessible to everyone.’ — Tom Lee, State Senator"
+    }
+  ]
+}

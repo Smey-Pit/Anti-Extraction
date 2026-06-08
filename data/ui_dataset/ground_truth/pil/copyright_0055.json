@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0055.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Shadows of the Past",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Aria Kinsley",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Dark Echo Productions",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Aria Kinsley. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "1206",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. ABANDONED HOSPITAL - NIGHT",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. ABANDONED HOSPITAL - NIGHT\n\nThe camera slowly pans over the dilapidated building, its windows shattered and doors hanging crooked. Inside, the air is cold and damp, the smell of decay heavy in the air. A figure, DR. ELLIOT, stands in the hallway, his flashlight beam cutting through the darkness.\n\nDR. ELLIOT\n(whispering)\nThis place... it holds so much.\n\nCut to:\n\nINT. DOCTOR'S OFFICE - DAY\n\nA young patient, LUCY, sits nervously in the waiting room, flipping through old medical journals. Her eyes land on a photograph of a man, DR. THOMAS HARTLEY, with a look of determination in his eyes.\n\nLUCY\n(voiceover)\nDr. Hartley’s legacy lives on in every patient he touched.\n\nThe camera focuses on Lucy’s face, showing the resolve in her gaze.\n\nLUCY\n(voiceover)\nAnd in my hands, I will continue his work.\n"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0110.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Instagram DM",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Hannah",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Ian",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Hannah",
+      "text": "Hey Ian, I need ur help w/ some legal stuff."
+    },
+    {
+      "label": "message_2_Ian",
+      "text": "Sure, what’s up?"
+    },
+    {
+      "label": "message_3_Hannah",
+      "text": "My landlord won’t return my deposit. They say it’s for damages."
+    },
+    {
+      "label": "message_4_Ian",
+      "text": "Let’s go over the lease agreement and see what we can do."
+    }
+  ]
+}

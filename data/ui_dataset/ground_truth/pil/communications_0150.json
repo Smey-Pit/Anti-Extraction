@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0150.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Discord",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Emma",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Alex",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Alex",
+      "text": "Hey Emma, have you heard about the new lawsuit against our company?"
+    },
+    {
+      "label": "message_2_Emma",
+      "text": "Yeah, I saw it. It's gonna be a mess..."
+    },
+    {
+      "label": "message_3_Alex",
+      "text": "I don't know what to do. Our job security is on the line."
+    },
+    {
+      "label": "message_4_Emma",
+      "text": "We should talk to HR and see what our options are."
+    }
+  ]
+}

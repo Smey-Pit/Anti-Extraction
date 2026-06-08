@@ -1,0 +1,100 @@
+{
+  "doc_type": "medical",
+  "image_path": "images/pil/medical_0144.png",
+  "entities": [
+    {
+      "label": "hospital_name",
+      "type": "short_phrase",
+      "value": "Women's Health Clinic",
+      "question": "What is the name of the hospital?"
+    },
+    {
+      "label": "patient_name",
+      "type": "name",
+      "value": "Rachel Martinez",
+      "question": "What is the patient name?"
+    },
+    {
+      "label": "dob",
+      "type": "date",
+      "value": "1982-09-27",
+      "question": "What is the patient date of birth?"
+    },
+    {
+      "label": "patient_id",
+      "type": "digit_seq",
+      "value": "HC-6170880",
+      "question": "What is the patient ID?"
+    },
+    {
+      "label": "visit_date",
+      "type": "date",
+      "value": "2023-05-01",
+      "question": "What is the visit date?"
+    },
+    {
+      "label": "attending_physician",
+      "type": "name",
+      "value": "Dr. Emily Park",
+      "question": "Who is the attending physician?"
+    },
+    {
+      "label": "chief_complaint",
+      "type": "short_phrase",
+      "value": "Irregular menstrual cycle",
+      "question": "What is the chief complaint?"
+    },
+    {
+      "label": "diagnosis",
+      "type": "short_phrase",
+      "value": "Functional Hypomenorrhea (N55.1)",
+      "question": "What is the diagnosis?"
+    },
+    {
+      "label": "medication_1",
+      "type": "short_phrase",
+      "value": "Levonorgestrel 500 mcg, intrauterine device",
+      "question": "List all prescribed medications."
+    },
+    {
+      "label": "medication_2",
+      "type": "short_phrase",
+      "value": "Iron supplement 30 mg, daily",
+      "question": "List all prescribed medications."
+    },
+    {
+      "label": "lab_1_test",
+      "type": "short_phrase",
+      "value": "Hemoglobin",
+      "question": "List all lab tests performed."
+    },
+    {
+      "label": "lab_1_value",
+      "type": "short_phrase",
+      "value": "11.8 g/dL",
+      "question": "List all lab test results."
+    },
+    {
+      "label": "lab_2_test",
+      "type": "short_phrase",
+      "value": "Serum Ferritin",
+      "question": "List all lab tests performed."
+    },
+    {
+      "label": "lab_2_value",
+      "type": "short_phrase",
+      "value": "10 ng/mL",
+      "question": "List all lab test results."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clinical_notes",
+      "text": "Patient reports irregular menstrual cycles. Low hemoglobin and ferritin levels indicate possible iron deficiency anemia."
+    },
+    {
+      "label": "follow_up",
+      "text": "Refer to hematologist for further evaluation. Increase iron supplementation and schedule follow-up in two weeks."
+    }
+  ]
+}

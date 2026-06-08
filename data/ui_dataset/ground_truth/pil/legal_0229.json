@@ -1,0 +1,64 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0229.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Complaint for Breach of Contract",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "State of Nevada, City of Reno",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "July 15, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "Case No. CV-2024-08841",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_plaintiff",
+      "type": "name",
+      "value": "Thomas H. Wilson",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_defendant",
+      "type": "name",
+      "value": "Charles R. Miller",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Thomas H. Wilson",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_2",
+      "type": "name",
+      "value": "Alice J. Brown",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._PARTIES",
+      "text": "The Plaintiff is Thomas H. Wilson, and the Defendant is Charles R. Miller."
+    },
+    {
+      "label": "clause_2.1_STATEMENT_OF_CLAIM",
+      "text": "The Defendant breached the contract by failing to deliver goods as agreed."
+    }
+  ]
+}

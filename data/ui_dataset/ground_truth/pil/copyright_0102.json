@@ -1,0 +1,42 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0102.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Forgotten Healer",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Sophie Latham",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Daily Herald",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Sophie Latham. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "2116",
+      "question": "What is the page number?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "In the quiet town of Willowbrook, there lives a woman whose life story is as mysterious as it is inspiring. Dr. Amelia Hart, a retired physician, has spent the past decade tending to the sick and injured without ever seeking recognition. Her small clinic, nestled behind a row of ancient oak trees, is a sanctuary for those who seek solace and healing.\n\nAmelia’s dedication to her craft is unwavering. She works tirelessly, often into the night, ensuring that every patient receives the best care possible. Her methods are unconventional, yet her results speak for themselves. Patients from all walks of life come to her, drawn by a sense of hope and a belief in the power of medicine.\n\nDespite her anonymity, Amelia’s legacy continues to grow. A local charity has started a fund in her honor, aiming to support future generations of healers."
+    }
+  ]
+}

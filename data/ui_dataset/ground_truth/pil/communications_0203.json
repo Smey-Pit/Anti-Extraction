@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0203.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Discord",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Alex",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Jordan",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Alex",
+      "text": "Hey Jordan, I really need some advice. My boss is being a total jerk."
+    },
+    {
+      "label": "message_2_Jordan",
+      "text": "Sorry to hear that. Have you tried talking to HR?"
+    },
+    {
+      "label": "message_3_Alex",
+      "text": "I did but they just said it was my fault. I don't know what to do."
+    },
+    {
+      "label": "message_4_Jordan",
+      "text": "Maybe you could look for another job. You deserve better."
+    }
+  ]
+}

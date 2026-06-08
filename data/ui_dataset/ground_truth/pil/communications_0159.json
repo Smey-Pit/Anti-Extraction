@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0159.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Android Messages",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Mia",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Jake",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Jake",
+      "text": "Hey Mia, how’s everything goin'? Got any updates on that job interview?"
+    },
+    {
+      "label": "message_2_Mia",
+      "text": "Still waiting to hear back. I’m getting kinda nervous. 😬"
+    },
+    {
+      "label": "message_3_Jake",
+      "text": "Don’t worry, you’ll do great! I’m rooting for ya. 🙌"
+    },
+    {
+      "label": "message_4_Mia",
+      "text": "Thanks, Jake. You always make me feel better. Fingers crossed!"
+    }
+  ]
+}

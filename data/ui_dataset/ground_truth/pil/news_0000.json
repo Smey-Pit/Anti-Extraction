@@ -1,0 +1,76 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0000.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "National Tribune",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Tech Giant’s Political Spending Sparks Controversy",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Alexa Thompson",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Washington, DC, April 15, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Politics",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Tech Industry",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Political Spending",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Corporate Influence",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "The tech behemoth, TechGenius, has come under fire for its aggressive political spending in the last quarter, raising questions about corporate influence in elections."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "TechGenius spent over $5 million on political advertisements and lobbying efforts, a significant increase from the previous year. Critics argue that such large-scale spending undermines democratic principles."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Industry insiders claim that the company's spending is aimed at shaping public policy favorable to their business interests. However, supporters defend the move as a form of free speech and engagement in civic duties."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "The Federal Election Commission is currently investigating the legality of some of the expenditures, adding to the ongoing debate over corporate political activity."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"TechGenius is just the latest example of how corporations are using their vast resources to sway political outcomes.\" - Senator Jane Doe"
+    }
+  ]
+}

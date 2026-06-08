@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0083.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Echoes of the Past",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Liam Myles",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Fictional Films Inc.",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Liam Myles. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "1687",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. ABANDONED HOSPITAL - NIGHT",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. ABANDONED HOSPITAL - NIGHT\n\nThe dim light from a single flickering bulb casts eerie shadows on the dusty walls. A figure, cloaked in black, stands in the center of the room, looking around with a sense of unease. The door creaks open, and a young woman steps inside, her face illuminated by the faint glow of a handheld flashlight.\n\nCLOAKED FIGURE\n(whispering)\nIs it you, Eleanor?\n\nELEANOR\n(nervously)\nWho else would it be?\n\nThe cloaked figure approaches, revealing a weathered face with hollow eyes.\n\nCLOAKED FIGURE\n(softly)\nWe need to find them before it's too late.\n\nELEANOR\n(fearful)\nWho are we looking for?\n\nCLOAKED FIGURE\n(tightly)\nThe ones who can hear us.\n\nThey move through the darkened corridors, the sound of their footsteps echoing off the cold, hard floors. The air is thick with tension, and the only sound is the occasional drip from a leaky pipe.\n\nELEANOR\n(whispering)\nAre they even out there?\n\nCLOAKED FIGURE\n(resolute)\nThey are, and we will find them.\n\nFADE OUT."
+    }
+  ]
+}

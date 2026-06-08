@@ -1,0 +1,86 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0201.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Economic Observer",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Economic Growth Slows as Inflation Rates Reach Record High",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Charles R. Parker",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "New York City, May 10, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Economy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Inflation",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Growth",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_4",
+      "type": "short_phrase",
+      "value": "Central Banking",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "The latest economic data shows a sharp slowdown in growth rates, largely due to soaring inflation that has reached unprecedented levels across the country."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Experts attribute the slowdown to a combination of factors including supply chain disruptions, increased energy costs, and heightened global tensions."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Consumer spending has been hit particularly hard, with many families struggling to keep up with rising prices for essential goods and services."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Central bankers face a delicate balancing act, trying to tamp down inflation without derailing the fragile recovery that has taken hold over the past year."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Economists predict that unless significant policy changes are made, the outlook for the coming months looks grim, with further erosion of living standards expected."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"We’re in uncharted territory here. The last time we saw such high inflation was during the 1970s, and it took a major recession to bring it back under control.\" — Dr. Emily Carter"
+    }
+  ]
+}

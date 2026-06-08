@@ -1,0 +1,76 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0135.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "National Tribune",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "City Council's Budget Decision Sparks Controversy",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Johnathan H. Smith",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Washington D.C., June 1, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Politics",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Public Transportation",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Budget Allocation",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Sustainability",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "The city council's recent decision to allocate more funds to public transportation has ignited a heated debate among residents, with some praising the move as a step towards sustainable urban development while others criticize it as a waste of taxpayer money."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Council member Sarah Johnson argued that the increased investment in public transit would reduce traffic congestion and improve air quality, stating, 'We cannot afford to ignore the environmental impact of our daily commutes.'"
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "However, local business owner Mike Thompson countered, 'These funds could have been better spent on road repairs and safety improvements that directly benefit our community.'"
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Environmental activists also weighed in, emphasizing the importance of reducing carbon emissions and promoting green initiatives, with one activist saying, 'This is a crucial moment for our city to show leadership in sustainability.'"
+    },
+    {
+      "label": "pull_quote",
+      "text": "We cannot afford to ignore the environmental impact of our daily commutes."
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0238.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Discord",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Liam",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Emma",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Emma",
+      "text": "Hey Liam, how’s your project coming along?"
+    },
+    {
+      "label": "message_2_Liam",
+      "text": "Still working on it. It’s a bit tricky. Any tips?"
+    },
+    {
+      "label": "message_3_Emma",
+      "text": "Just take it one step at a time. Break it down into smaller tasks."
+    },
+    {
+      "label": "message_4_Liam",
+      "text": "Thanks, Emma. That really helps. I’ll give it a shot."
+    }
+  ]
+}

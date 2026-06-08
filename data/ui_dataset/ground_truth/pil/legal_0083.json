@@ -1,0 +1,68 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0083.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Notice to Vacate Premises",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Forestville Borough, State of Novaria",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "June 15, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "REF: EVN-2024-34567",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_landlord",
+      "type": "name",
+      "value": "Evergreen Real Estate Inc.",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_tenant",
+      "type": "name",
+      "value": "Liam D. Green",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Evergreen Real Estate Inc.",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_2",
+      "type": "name",
+      "value": "Liam D. Green",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._Notice_of_Non-Payment",
+      "text": "You are hereby notified that you have failed to pay the rent due on June 1, 2024, as per the terms of the lease agreement."
+    },
+    {
+      "label": "clause_2.1_Deadline",
+      "text": "You are required to vacate the premises at 789 Oak Avenue, Forestville Borough, State of Novaria, by 5:00 PM on July 15, 2024."
+    },
+    {
+      "label": "clause_3.1_Penalties",
+      "text": "If you fail to vacate the premises by the deadline, you will be subject to additional penalties as provided by law."
+    }
+  ]
+}

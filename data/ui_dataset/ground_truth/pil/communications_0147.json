@@ -1,0 +1,64 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0147.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Gmail",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "John",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Emily",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_3",
+      "type": "name",
+      "value": "Mike",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_4",
+      "type": "name",
+      "value": "Lisa",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "subject",
+      "type": "short_phrase",
+      "value": "Surprise Birthday Party Plan",
+      "question": "What is the subject line of this message?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_John",
+      "text": "Guys, we need to plan Emily's bday party this weekend!"
+    },
+    {
+      "label": "message_2_Emily",
+      "text": ":) Can't wait!"
+    },
+    {
+      "label": "message_3_Mike",
+      "text": "Sounds good, where do you want to go?"
+    },
+    {
+      "label": "message_4_Lisa",
+      "text": "How about that new Mexican place downtown?"
+    },
+    {
+      "label": "message_5_John",
+      "text": "Good idea! Let's make it happen."
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0132.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Shadows of the Night",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Liam Hart",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Dark Horizon Studios",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Liam Hart. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "2698",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. ABANDONED HOSPITAL - NIGHT",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. ABANDONED HOSPITAL - NIGHT\n\nThe dim light from a single flickering bulb casts long shadows across the room. A figure, cloaked in darkness, stands at the door, watching as a young nurse, LUCY, moves cautiously through the deserted hallways.\n\nLUCY\n(whispering)\nI should have known better than to come here alone.\n\nThe figure steps into the light, revealing a man with a mask covering half his face.\n\nMASKED MAN\n(sarcastically)\nOh, Lucy, always so brave.\n\nLucy spins around, her heart pounding.\n\nLUCY\n(fearful)\nWho are you?\n\nMASKED MAN\nI’m just a friend who can help.\n\nLucy hesitates, then reaches for her pocket, pulling out a small flashlight.\n\nLUCY\n(steadying herself)\nProve it.\n\nThe masked man steps closer, his eyes glowing in the dark.\n\nMASKED MAN\n(intimidatingly)\nThen let’s see what you’re made of.\n\nThe scene fades to black as the tension builds."
+    }
+  ]
+}

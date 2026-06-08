@@ -1,0 +1,54 @@
+{
+  "doc_type": "banking",
+  "image_path": "images/pil/banking_0017.png",
+  "entities": [
+    {
+      "label": "bank_name",
+      "type": "short_phrase",
+      "value": "Vista Financial Services",
+      "question": "What is the name of the bank?"
+    },
+    {
+      "label": "account_holder",
+      "type": "name",
+      "value": "Linda R. Martinez",
+      "question": "What is the account holder name?"
+    },
+    {
+      "label": "account_number",
+      "type": "digit_seq",
+      "value": "313-388  5422 4598 97",
+      "question": "What is the account number?"
+    },
+    {
+      "label": "account_type",
+      "type": "short_phrase",
+      "value": "Everyday Savings",
+      "question": "What is the account type?"
+    },
+    {
+      "label": "statement_period",
+      "type": "date_range",
+      "value": "1 Oct – 31 Oct 2024",
+      "question": "What is the statement period?"
+    },
+    {
+      "label": "opening_balance",
+      "type": "amount",
+      "value": "$6,000.00",
+      "question": "What is the opening balance?"
+    },
+    {
+      "label": "closing_balance",
+      "type": "amount",
+      "value": "$5,800.00",
+      "question": "What is the closing balance?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "transaction_history",
+      "text": "2024-10-03 Gas Station @ Petro Mart -50.00 $5,950.00\n2024-10-07 Restaurant Bill @ The Gourmet -80.00 $5,870.00\n2024-10-13 Movie Tickets @ Cinema City -20.00 $5,850.00\n2024-10-19 Transfer to Savings -500.00 $5,350.00\n2024-10-24 Transfer to Checking +500.00 $5,850.00\n2024-10-27 Pet Store @ PetPal -30.00 $5,820.00"
+    }
+  ]
+}

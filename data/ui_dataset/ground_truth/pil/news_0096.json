@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0096.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Progressive Tribune",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Education Reform Bill Divides School Boards Nationally",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "David Kinsley",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Washington D.C., October 11, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Education Reform",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Curriculum Development",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Funding",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "A proposed federal education reform bill has sparked intense debate among school boards nationwide, with some praising it for its innovative approach to curriculum development and others criticizing it for overhauling existing systems too quickly."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The bill aims to introduce advanced technology and modern teaching methods into classrooms, but critics argue that it lacks sufficient funding and fails to address the root causes of educational inequality."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Supporters of the bill highlight its potential to revolutionize how students learn, particularly in underfunded urban districts where traditional methods have failed to produce desired results."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "School board members in rural areas are especially wary of the bill, fearing that it could disrupt established community-based educational practices and lead to increased bureaucracy."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "The bill's fate remains uncertain as it moves through Congress, with key stakeholders on both sides awaiting further details and negotiations."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"We can’t afford to experiment with our children's futures.\" - Board Member Sarah Johnson"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0119.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Complaint for Breach of Contract",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Springfield City, State of Novaria",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "July 1, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "Case No. CV-2024-08841",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_plaintiff",
+      "type": "name",
+      "value": "Tech Innovate Inc.",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_defendant",
+      "type": "name",
+      "value": "Nova Solutions LLC",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Tech Innovate Inc.",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_2",
+      "type": "name",
+      "value": "Nova Solutions LLC",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._Parties",
+      "text": "This Complaint is brought by Tech Innovate Inc., hereinafter referred to as the 'Plaintiff', against Nova Solutions LLC, hereinafter referred to as the 'Defendant'."
+    },
+    {
+      "label": "clause_2.1_Facts",
+      "text": "Whereas, the Plaintiff and the Defendant entered into a Confidentiality Agreement on April 20, 2024, wherein the Defendant agreed to maintain the confidentiality of certain proprietary information of the Plaintiff; whereas, the Defendant has breached this agreement by disclosing such information to third parties without the Plaintiff's consent."
+    },
+    {
+      "label": "clause_3._Relief_Sought",
+      "text": "The Plaintiff respectfully requests the Court to enter an Order finding the Defendant in breach of the Confidentiality Agreement, awarding the Plaintiff monetary damages in an amount to be determined at trial, and ordering the Defendant to cease and desist from any further disclosure of the Plaintiff's confidential information."
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0164.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Complaint for Breach of Contract",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Highway County, State of Novaria",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "October 1, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "Case No. CV-2024-08841",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_plaintiff",
+      "type": "name",
+      "value": "Robert K. Hill",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_defendant",
+      "type": "name",
+      "value": "Victoria R. Stone",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Robert K. Hill",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._PARTIES",
+      "text": "This Complaint is filed by Robert K. Hill, hereinafter referred to as the `Plaintiff`, against Victoria R. Stone, hereinafter referred to as the `Defendant`."
+    },
+    {
+      "label": "clause_2.1_STATEMENT_OF_CLAIM",
+      "text": "The Plaintiff alleges that the Defendant breached the terms of their employment contract by failing to provide the agreed-upon compensation and benefits."
+    }
+  ]
+}

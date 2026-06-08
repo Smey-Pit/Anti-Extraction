@@ -1,0 +1,86 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0075.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "National Insight",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Tech Giants Face New Antitrust Scrutiny Amid Economic Turmoil",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Alexa Thompson",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Washington, DC, March 15, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Politics",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Technology",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Antitrust",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Economy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_4",
+      "type": "short_phrase",
+      "value": "Regulation",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "In the wake of economic uncertainty, lawmakers are calling for increased oversight of major tech companies, citing their growing influence on both the market and society."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Senators from both parties have introduced legislation that would grant the Federal Trade Commission (FTC) broader powers to investigate and potentially break up tech monopolies."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Industry insiders argue that these moves could stifle innovation and harm consumers, while critics see them as necessary to protect competition and prevent exploitation."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "The debate over tech regulation has intensified as more evidence emerges of large tech firms using data and algorithms to manipulate markets and consumer behavior."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Economic experts warn that without careful regulation, the benefits of technological advancement may be unevenly distributed, exacerbating existing inequalities."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"Tech giants have become too powerful, and it’s time we took action to ensure they serve the public good, not just their bottom line.\" - Senator Emily Carter"
+    }
+  ]
+}

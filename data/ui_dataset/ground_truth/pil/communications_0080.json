@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0080.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Instagram DM",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Olivia",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Charlie",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Charlie",
+      "text": "Hey Olivia, how’s it going?"
+    },
+    {
+      "label": "message_2_Olivia",
+      "text": "Not great, I’m in a bit of a legal bind. My ex-husband is threatening to sue me over the kids."
+    },
+    {
+      "label": "message_3_Charlie",
+      "text": "Oh no, that’s rough. Have you talked to a lawyer yet?"
+    },
+    {
+      "label": "message_4_Olivia",
+      "text": "I’ve been looking into it, but it’s expensive. I don’t know what to do."
+    }
+  ]
+}

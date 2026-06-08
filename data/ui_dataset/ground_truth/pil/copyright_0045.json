@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0045.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Whispers in the Dark",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Nathan Carter",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Shadowlight Productions",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Nathan Carter. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "981",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. ABANDONED HOSPITAL - NIGHT",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. ABANDONED HOSPITAL - NIGHT\n\nThe hospital, once bustling with life, now lay empty, its walls covered in graffiti and the air thick with the scent of mildew. The moonlight casts eerie shadows across the floors, making the place seem almost alive. LUCAS, a young detective in his early 30s, stands at the entrance, his flashlight beam cutting through the darkness.\n\nLUCAS\n(to himself)\nThis place should be a sanctuary, not a trap.\n\nHe moves cautiously through the deserted halls, his footsteps echoing off the walls. Suddenly, he hears a faint noise coming from the second floor. Curiosity piqued, he follows the sound, his flashlight illuminating a door partially ajar. He pushes it open and finds himself in a long corridor lined with old patient rooms. The door at the end of the hall is slightly ajar, and the faint glow of a candle can be seen through the crack.\n\nLUCAS\n(into the darkness)\nWhat’s out there?\n\nHe approaches the door, his hand on the handle, and pushes it open. Inside, he finds a woman, ELIZA, in her 40s, sitting in a rocking chair, her eyes closed. A candle flickers beside her, casting a warm, golden light. Lucas hesitates, unsure if he should approach her.\n\nELIZA\n(whispering)\nIt’s alright, Detective. You’re safe now.\n\nLucas steps closer, his flashlight beam catching her face. She opens her eyes, and he sees a look of peace in them, as if she has found something she has been searching for all her life.\n\nFADE OUT."
+    }
+  ]
+}

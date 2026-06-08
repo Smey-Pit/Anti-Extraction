@@ -1,0 +1,48 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0105.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "ProtonMail",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "David",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Jessica",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "subject",
+      "type": "short_phrase",
+      "value": "Legal issue",
+      "question": "What is the subject line of this message?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Jessica",
+      "text": "David, I just received a letter from the lawyer. What do u think?"
+    },
+    {
+      "label": "message_2_David",
+      "text": "Hmm, let me take a look. It looks serious."
+    },
+    {
+      "label": "message_3_Jessica",
+      "text": "Yeah, I'm really worried. Can u help me figure this out?"
+    },
+    {
+      "label": "message_4_David",
+      "text": "Of course, let's discuss it further. I'll call u later today."
+    }
+  ]
+}

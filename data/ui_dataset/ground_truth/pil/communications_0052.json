@@ -1,0 +1,38 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0052.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Discord",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Emma",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Liam",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Emma",
+      "text": "Hey Liam, can we talk about something personal?"
+    },
+    {
+      "label": "message_2_Liam",
+      "text": "Sure thing, what’s up?"
+    },
+    {
+      "label": "message_3_Emma",
+      "text": "I’ve been really stressed out at work... think I need a break."
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0000.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Whispers in the Dark",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Isabella Hartwell",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Mystic Moon Press",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Isabella Hartwell. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "5",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "Chapter 4: Echoes of the Past",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "The old house on Elm Street stood silent under the moonlight, its windows like dark eyes staring into the night. As I approached, the creaking of the porch boards echoed through the stillness, a familiar sound that brought back memories of childhood visits. Inside, the air was thick with dust and the faint scent of lavender. I stepped into the dimly lit foyer, each step echoing softly against the wooden floor. The walls were lined with antique furniture, their surfaces worn by time and the touch of countless hands. In the corner, a grandfather clock ticked steadily, marking the passage of time in a world that seemed to have paused here."
+    }
+  ]
+}

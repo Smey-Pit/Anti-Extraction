@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0247.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Instagram DM",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Emily",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Liam",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Emily",
+      "text": "Hey Liam, I'm so stressed about the rent!"
+    },
+    {
+      "label": "message_2_Liam",
+      "text": "Yeah, I know. Have you talked to your parents yet?"
+    },
+    {
+      "label": "message_3_Emily",
+      "text": "I tried, but they're not being very helpful"
+    },
+    {
+      "label": "message_4_Liam",
+      "text": "I can help you move in with me if you need to"
+    }
+  ]
+}

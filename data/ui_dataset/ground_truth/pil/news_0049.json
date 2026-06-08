@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0049.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Public Voice",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Healthcare Debate Heats Up Amid Rising Costs and Access Issues",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Rachel White",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Boston, July 10, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Healthcare Costs",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Access to Care",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Insurance Reforms",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "The healthcare debate has intensified as patients and policymakers grapple with skyrocketing costs and limited access to essential services, leading to calls for major reforms."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "A new report reveals that the average American spends over $10,000 annually on healthcare, with many facing financial ruin due to medical bills."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Democrats propose expanding Medicaid and implementing price controls on prescription drugs, while Republicans advocate for market-based solutions and tort reform."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Patient advocacy groups are mobilizing to raise awareness about the struggles faced by individuals and families dealing with chronic illnesses."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Healthcare providers are also weighing in, with many expressing concerns about the sustainability of current systems and the need for systemic changes."
+    },
+    {
+      "label": "pull_quote",
+      "text": "‘We cannot afford to wait any longer to address the flaws in our healthcare system,’ declared Dr. James Kim, a prominent physician and health policy expert."
+    }
+  ]
+}

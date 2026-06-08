@@ -1,0 +1,42 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0023.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Ghosts of Willow Creek",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Morgan Harper",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Willow Creek Herald",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Morgan Harper. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "538",
+      "question": "What is the page number?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "In the small town of Willow Creek, stories of the paranormal have been whispered for generations. The local legend speaks of a haunted cemetery where the spirits of those wronged still roam. This Halloween season, a group of curious locals decided to investigate the claims, hoping to uncover the truth behind the ghostly tales.\n\nThe night was dark and misty, the air thick with the scent of autumn leaves. A small team gathered at the entrance of the old cemetery, their flashlights cutting through the darkness. As they walked among the weathered tombstones, the wind picked up, carrying with it a chilling howl that seemed to echo from within the graves.\n\n‘Are you sure about this?’ asked Sarah, her voice trembling slightly.\n\n‘We’ve done our research,’ replied Tom, his flashlight beam sweeping over the ancient stones. ‘This place is said to be cursed.’\n\nAs they approached the oldest part of the cemetery, a sudden chill swept over them. The air grew colder, and the flashlight beams began to flicker. Suddenly, a faint whisper could be heard, a voice calling their names from the shadows. The group exchanged nervous glances before deciding to leave, the unspoken fear of the unknown hanging heavily in the air."
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0164.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Whispers in the Fog",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Lila Myles",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Misty Peak Press",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Lila Myles. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "3390",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "Chapter 6: Echoes of the Past",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "The sun had dipped below the horizon, leaving the world shrouded in an eerie twilight. In the quiet town of Willow Creek, the fog rolled in like a silent tide, wrapping itself around the old Victorian house on Maple Street. Lila stood at the window, her breath visible in the cool air. She had been here many times before, but tonight felt different. The whispers in the fog seemed louder, more insistent. Each rustle of leaves, each creak of the old house, echoed in her mind as if the very walls were alive. She turned away from the window, her fingers brushing against the cold glass. The silence was almost deafening, and she couldn't shake the feeling that she was being watched."
+    }
+  ]
+}

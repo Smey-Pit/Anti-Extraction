@@ -1,0 +1,54 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0188.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Gmail",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Liam",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Olivia",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_3",
+      "type": "name",
+      "value": "Sophia",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "subject",
+      "type": "short_phrase",
+      "value": "Family emergency",
+      "question": "What is the subject line of this message?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Liam",
+      "text": "Guys, we need to talk about grandma."
+    },
+    {
+      "label": "message_2_Olivia",
+      "text": "What's going on?"
+    },
+    {
+      "label": "message_3_Liam",
+      "text": "She's in hospital. Not looking good."
+    },
+    {
+      "label": "message_4_Sophia",
+      "text": "Oh no, I'll come over right now."
+    }
+  ]
+}

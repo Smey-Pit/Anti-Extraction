@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0189.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "WhatsApp",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Mia",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Noah",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Noah",
+      "text": "Hey Mia, how r u dealing w/ all this?"
+    },
+    {
+      "label": "message_2_Mia",
+      "text": "It's been tough. Can't pay rent this month."
+    },
+    {
+      "label": "message_3_Noah",
+      "text": "That sucks. Let's see if we can help."
+    },
+    {
+      "label": "message_4_Mia",
+      "text": "Thanks, I really appreciate it. 🙏"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0188.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Notice of Eviction",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Springfield City, State of Novacorp",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "May 1, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "EV-2024-09123",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_landlord",
+      "type": "name",
+      "value": "Jameson Enterprises Inc.",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_tenant",
+      "type": "name",
+      "value": "GreenThumb Horticulture LLC",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "John Jameson",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_2",
+      "type": "name",
+      "value": "Sarah Green",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._Notice_of_Breach",
+      "text": "The Tenant is hereby notified that it has failed to comply with the terms of the Lease Agreement by failing to maintain the Premises in good repair and condition."
+    },
+    {
+      "label": "clause_2.1_Time_for_Cure",
+      "text": "The Tenant has thirty (30) days from the date of this Notice to cure the breach or vacate the Premises without penalty."
+    },
+    {
+      "label": "clause_3._Legal_Action",
+      "text": "If the Tenant fails to cure the breach within the specified time period, the Landlord reserves the right to commence legal action for immediate possession of the Premises."
+    }
+  ]
+}

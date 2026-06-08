@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0218.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Silent Echoes",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Liam Hartley",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Vesper Films",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Liam Hartley. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "4531",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. ABANDONED HOSPITAL - NIGHT",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. ABANDONED HOSPITAL - NIGHT\nThe camera pans over the dimly lit, empty corridors of an abandoned hospital. Shadows dance along the walls, casting eerie patterns. Suddenly, a faint whisper echoes through the halls. It’s barely audible, but unmistakably human. The camera focuses on a door at the end of the corridor, which creaks open slowly. A figure steps into view, cloaked in black, their face obscured by a hood. The figure moves silently, their footsteps echoing off the cold, sterile walls.\n\nFADE OUT."
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0149.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Android Messages",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Olivia",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Jake",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Jake",
+      "text": "Hey Olivia, did you get the results back from your blood test?"
+    },
+    {
+      "label": "message_2_Olivia",
+      "text": "Yeah, they're in. I'm worried..."
+    },
+    {
+      "label": "message_3_Jake",
+      "text": "What happened? Did they find anything?"
+    },
+    {
+      "label": "message_4_Olivia",
+      "text": "It's probably nothing, but I'm scared it might be something serious."
+    }
+  ]
+}

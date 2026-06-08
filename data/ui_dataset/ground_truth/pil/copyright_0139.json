@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0139.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Last Signal",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Miles Harrison",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Nova Books",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Miles Harrison. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "2860",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "Chapter 8: The Signal",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "The wind howled through the narrow alleyways of the old city, carrying with it the distant sound of footsteps. Dr. Elara Voss clutched her flashlight tightly, her breath visible in the cold air. She had been following the signal for hours, her mind racing with possibilities. The signal was weak, but it was getting stronger. As she turned a corner, the light from her flashlight illuminated a small, weathered stone tablet. Carved into its surface was a message, a warning perhaps, but the meaning was lost to time. She touched the cool stone, feeling a chill run down her spine."
+    }
+  ]
+}

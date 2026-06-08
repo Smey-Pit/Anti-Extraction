@@ -1,0 +1,86 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0043.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Social Justice Review",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Racial Inequality: A Persistent Challenge in Modern Society",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Carlos Justice",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Chicago, June 18, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Racial Inequality",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Civil Rights",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Social Justice",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_4",
+      "type": "short_phrase",
+      "value": "Systemic Change",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Despite progress in civil rights, racial inequality continues to plague American society, affecting every aspect of life from education to employment."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Advocates for social justice argue that systemic changes are needed to address deep-seated issues of discrimination and bias."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Critics, however, suggest that individual responsibility and meritocracy are more effective solutions to these problems."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "The conversation around racial inequality is complex and multifaceted, involving historical context, current policies, and personal experiences."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Efforts to promote diversity and inclusion are gaining momentum, but challenges remain in achieving true equality."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"Racial inequality is not just a social issue; it’s an economic one. We must address it head-on.\" - Dr. Maria Rodriguez, Social Justice Scholar"
+    }
+  ]
+}

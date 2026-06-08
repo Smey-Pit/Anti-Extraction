@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0180.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Instagram DM",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Nina",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Chris",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Nina",
+      "text": "Chris, I need ur advice. My boss is being really hard on me lately. I don't know what to do..."
+    },
+    {
+      "label": "message_2_Chris",
+      "text": "I'm sorry to hear that. Have u tried talking to him about it?"
+    },
+    {
+      "label": "message_3_Nina",
+      "text": "I did, but he just brushed me off. It's like he's trying to intimidate me into working harder."
+    },
+    {
+      "label": "message_4_Chris",
+      "text": "That's not okay. Maybe you should talk to HR or someone else in management. Stand up for yourself!"
+    }
+  ]
+}

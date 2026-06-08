@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0027.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "The Southern Beacon",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Healthcare Debate Heats Up Over Proposed Medicaid Expansion",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Lila V. Stone",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Atlanta, February 28, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Medicaid",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "healthcare",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "budget",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "A proposed expansion of Medicaid is stirring up debate among policymakers and citizens, with proponents arguing it would provide much-needed healthcare coverage, while opponents warn of potential budgetary issues."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Supporters of the expansion believe it would significantly reduce the number of uninsured individuals, particularly in low-income communities."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Critics, however, contend that expanding Medicaid would strain state finances and lead to higher taxes or cuts in other areas."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "State Representative Lee commented, 'Expanding Medicaid is essential for our most vulnerable citizens, but we need to find a sustainable solution.'"
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Public health experts suggest that a balanced approach, combining Medicaid expansion with initiatives to lower healthcare costs, could offer a viable path forward."
+    },
+    {
+      "label": "pull_quote",
+      "text": "Expanding Medicaid is essential for our most vulnerable citizens, but we need to find a sustainable solution."
+    }
+  ]
+}

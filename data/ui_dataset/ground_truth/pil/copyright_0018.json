@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0018.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Whispers in the Dark",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Elianor Myles",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Mystic Lantern Press",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Elianor Myles. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "423",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "Chapter 5: The Door",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "The old house stood silent, its windows like dark eyes staring into the night. In the dim light of the streetlamp outside, the walls seemed to shift ever so slightly, as if the very fabric of reality was whispering secrets. As the wind whispered through the branches of the gnarled oak tree, it carried with it the faint scent of jasmine and the distant echo of laughter. Elianor stood at the threshold, her heart pounding against her ribcage, each beat a reminder of the stories that lingered within these walls. She reached out a trembling hand to touch the weathered door, feeling the chill that seemed to seep from every crevice. The past was heavy, pressing down on her like an unyielding weight, but she knew she could not turn back now."
+    }
+  ]
+}

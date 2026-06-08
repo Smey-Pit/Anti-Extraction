@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0103.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Whispers in the Wind",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Elena Myles",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Verdant Publications",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Elena Myles. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "2122",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "Chapter 6: The Whispering Oak",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "The old oak tree stood as a silent sentinel, its gnarled branches reaching towards the sky like bony fingers. In the heart of the forest, where the light barely penetrated, it whispered secrets to those who dared to listen. Tonight, under the pale moonlight, a young woman named Elara knelt at its base, her hands tracing the rough bark. She had come seeking answers, and the tree seemed to understand her quest. As she spoke into the night, the wind carried her words away, promising that the answers she sought would soon find her."
+    }
+  ]
+}

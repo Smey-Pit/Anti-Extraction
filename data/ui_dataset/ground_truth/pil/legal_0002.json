@@ -1,0 +1,70 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0002.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Last Will and Testament",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Riverdale County, State of Novaria",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "August 12, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "Case No. CV-2024-08841",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_grantor",
+      "type": "name",
+      "value": "William Brown",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_executor",
+      "type": "name",
+      "value": "Sarah Green",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "William Brown",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_2",
+      "type": "name",
+      "value": "James Black",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_3",
+      "type": "name",
+      "value": "Linda White",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._PERSONAL_REPRESENTATIVES",
+      "text": "I appoint Sarah Green as my Executor of this Will."
+    },
+    {
+      "label": "clause_2.1_DISPOSAL_OF_ESTATE",
+      "text": "My entire estate shall be distributed to my children, equally among them."
+    }
+  ]
+}

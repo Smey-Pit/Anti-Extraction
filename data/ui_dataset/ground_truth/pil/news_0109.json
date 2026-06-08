@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0109.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Freedom Forum",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Education Reform: The Role of Private Schools in Public Education",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Emily Rodriguez",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Chicago, July 15, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Education Reform",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Private Schools",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Public Education",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "As debates over education funding and quality intensify, the role of private schools in the public education system is under scrutiny."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Proponents of private schools argue that they offer choice and innovation, while opponents claim that reliance on private schools undermines the principles of public education."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "State officials are considering policies that would allow more private school vouchers, sparking controversy among educators and parents."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "The conversation around private schools reflects broader discussions about the future of public education and how best to serve diverse student populations."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "An educator noted, 'Private schools can complement public education, but they shouldn't replace it.'"
+    },
+    {
+      "label": "pull_quote",
+      "text": "'Choice is important, but so is equity for all students,' said Maria Gonzalez, a high school teacher in Chicago."
+    }
+  ]
+}

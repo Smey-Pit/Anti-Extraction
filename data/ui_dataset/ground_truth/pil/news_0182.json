@@ -1,0 +1,82 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0182.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "The People's Tribune",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Healthcare Crisis Deepens as Partisan Divide Widens",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Samuel Clarke",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Chicago, April 10, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Healthcare",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Partisanship",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Reform",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_4",
+      "type": "short_phrase",
+      "value": "Patient Care",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "The healthcare system is under immense strain as political disagreements over reform continue to paralyze progress."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "With hospitals struggling to cope with surging patient volumes and rising costs, many are warning of a potential health crisis unless decisive action is taken."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Supporters of the existing system argue that any changes would be detrimental to the quality of care, while those pushing for reform claim that the current model is unsustainable and discriminatory."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Dr. Michael Green, a leading healthcare analyst, told The People's Tribune, 'The status quo is not working and we need bold new solutions.'"
+    },
+    {
+      "label": "pull_quote",
+      "text": "'The status quo is not working and we need bold new solutions.' – Dr. Michael Green, Healthcare Analyst"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0231.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Ghosts of Willow Creek",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Avery Reed",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Haunted Horizons",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Avery Reed. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "4783",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. WILLOW CREEK MUSEUM - DAY",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. WILLOW CREEK MUSEUM - DAY\n\nThe museum is bustling with visitors, but the air is thick with the weight of history. In the center of the room, a group of tourists gathers around an old photograph. The guide points to a figure in the background, a woman dressed in Victorian attire.\n\nGUIDE\nThis is Elizabeth Jenkins. She was last seen near the old lighthouse, but she never returned. Some say she still haunts the area.\n\nSuddenly, the lights flicker, and a cold draft sweeps through the room. The tourists gasp, and the guide looks around nervously. The woman steps forward, her voice barely audible.\n\nWOMAN\n(whispering)\nThey say I’m gone, but I am still here.\n\nThe lights stabilize, and the woman vanishes. The tourists scatter, but the guide remains, staring at the spot where the woman stood.\n\nGUIDE\nIt’s not over yet."
+    }
+  ]
+}

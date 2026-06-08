@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0210.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Forgotten Symphony",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Alden Whitmore",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Harmony Books",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Alden Whitmore. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "4375",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "Chapter 8: Melody of the Soul",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "The rain had finally ceased, leaving behind a heavy blanket of mist that clung to the streets like a shroud. The air was thick with the scent of wet earth and decaying leaves. In the dim light of dawn, the city seemed to awaken from a long slumber, its inhabitants stirring with a sense of purpose. Among them was Isolde Blackwood, a young musician whose fingers danced across the keys of her piano, coaxing out a melody that was both haunting and beautiful.\n\nIsolde’s apartment was a sanctuary of sorts, a space where the boundaries between reality and dreams blurred. Her walls were adorned with paintings and photographs, each one telling a story of her life. As she played, the music seemed to resonate with the very essence of her being, as if it were a part of her soul. The notes soared and fell, weaving a tapestry of emotions that spoke to the deepest parts of her heart.\n\nIn the distance, the sound of a distant siren broke the silence, a reminder that the world outside was still turning, even as she lost herself in the symphony of her own making."
+    }
+  ]
+}

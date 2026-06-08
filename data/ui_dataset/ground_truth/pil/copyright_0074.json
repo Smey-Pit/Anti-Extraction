@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0074.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Whispers in the Shadows",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Evelyn Hartley",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Mystic Lane Press",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Evelyn Hartley. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "1515",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "Chapter 6: The Forgotten Room",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "The old mansion stood silent under the moonlight, its stone walls whispering tales of the past. Inside, the air was thick with the scent of decay and the faint echo of footsteps. As the door creaked open, the darkness seemed to close in, like an unseen hand reaching out. The flickering candlelight cast eerie shadows on the dusty walls, each one telling a story of secrets and sorrow. Evelyn's heart pounded in her chest as she stepped into the dimly lit room, her fingers brushing against the cold, weathered wood. It was here, she knew, that the true history of the house lay hidden, waiting to be uncovered."
+    }
+  ]
+}

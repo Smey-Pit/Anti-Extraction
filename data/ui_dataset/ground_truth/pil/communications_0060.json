@@ -1,0 +1,48 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0060.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Outlook",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "David",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Karen",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "subject",
+      "type": "short_phrase",
+      "value": "Legal Consultation",
+      "question": "What is the subject line of this message?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_David",
+      "text": "Hi Karen, I need your advice on a legal matter. Can we set up a consultation soon?"
+    },
+    {
+      "label": "message_2_Karen",
+      "text": "Of course, David. When are you free?"
+    },
+    {
+      "label": "message_3_David",
+      "text": "How about next Tuesday at 2 PM?"
+    },
+    {
+      "label": "message_4_Karen",
+      "text": "That works for me. Looking forward to it."
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0065.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Instagram DM",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Sophia",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Max",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Sophia",
+      "text": "Hey Max, I'm in a bit of a jam. Can u lend me $20?"
+    },
+    {
+      "label": "message_2_Max",
+      "text": "Sophia, I'm not sure. Maybe ask your parents?"
+    },
+    {
+      "label": "message_3_Sophia",
+      "text": "I tried, they're not home. U're my last resort. 😢"
+    },
+    {
+      "label": "message_4_Max",
+      "text": "Sorry, Sophia. I wish I could help but... "
+    }
+  ]
+}

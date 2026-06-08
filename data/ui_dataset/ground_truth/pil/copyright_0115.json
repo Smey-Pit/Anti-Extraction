@@ -1,0 +1,42 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0115.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "A Tale of Two Cities: A Journey Through Time",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Eleanor Winters",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Chronicle Herald",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Eleanor Winters. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "2396",
+      "question": "What is the page number?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "In the heart of the bustling city lies a forgotten gem, a museum dedicated to the history of two neighboring towns, each with its own unique story. The museum, named 'Twin Tides,' has recently reopened after a decade-long renovation. Inside, visitors can explore the lives of the townsfolk through exhibits that span centuries. One exhibit, titled 'The Great Flood of 1862,' tells the story of a devastating event that brought the two towns together. Despite their differences, the townspeople worked side by side to rebuild their homes and communities. This spirit of unity is a testament to the resilience of the human spirit. As the museum continues to attract visitors from all over, it serves as a reminder of the power of shared history and the importance of remembering the past."
+    }
+  ]
+}

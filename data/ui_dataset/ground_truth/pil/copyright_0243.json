@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0243.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Echoes of Tomorrow",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Liam Hart",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Futura Films",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Liam Hart. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "5005",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. LABORATORY - DAY",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. LABORATORY - DAY\n\nA high-tech lab filled with glowing screens and intricate machinery. Dr. Elara Voss stands before a large monitor, her eyes fixed on the digital display. She types rapidly on her keyboard, her fingers dancing across the keys.\n\nDR. ELARA VOSS\n(whispering to herself)\nWe’re so close...\n\nCut to:\n\nINT. KITCHEN - NIGHT\n\nDr. Voss enters, carrying a small glass vial. She places it gently on the table, her face illuminated by the soft glow of the kitchen lights. She takes a deep breath, her hand trembling slightly as she opens the vial.\n\nDR. ELARA VOSS\n(to herself)\nTonight... we change the world.\n"
+    }
+  ]
+}

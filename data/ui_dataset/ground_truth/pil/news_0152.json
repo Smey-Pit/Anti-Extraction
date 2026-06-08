@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0152.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Citizen Watch",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Healthcare System Struggles to Cope with Surge in Chronic Disease Cases",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Linda Green",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Los Angeles, May 5, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Chronic Diseases",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Healthcare Funding",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Preventive Care",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "The healthcare system is struggling to cope with a significant increase in chronic disease cases, putting immense strain on medical resources and funding."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "According to the latest health statistics, the number of patients diagnosed with chronic conditions such as diabetes and heart disease has risen sharply over the past year."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Dr. Michael Brown, a leading cardiologist, stated, 'We need more investment in preventive care and chronic disease management to avoid overwhelming our healthcare infrastructure.'"
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "The government has allocated additional funds to support hospitals and clinics, but many experts believe this is not enough to meet the growing demand."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Advocates for healthcare reform argue that addressing the root causes of chronic diseases through lifestyle changes and early intervention is crucial."
+    },
+    {
+      "label": "pull_quote",
+      "text": "'The healthcare system can only do so much; the real solution lies in empowering individuals to take control of their health.' - Dr. Michael Brown"
+    }
+  ]
+}

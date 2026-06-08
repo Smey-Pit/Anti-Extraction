@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0057.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Echoes of the Past",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Liam Hart",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Silver Peak Films",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Liam Hart. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "1227",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. ABANDONED HOSPITAL - NIGHT",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. ABANDONED HOSPITAL - NIGHT\n\nThe camera pans across the dimly lit corridors of an old, abandoned hospital. Shadows dance on the walls, and the air is thick with the scent of decay. In one of the rooms, a figure stands by a window, looking out at the moonlit sky. It's LUCAS, a man in his early forties, dressed in a tattered coat, his eyes reflecting a deep sorrow.\n\nLUCAS (V.O.)\nI never thought I’d end up here, alone and forgotten. But sometimes, the past comes back to haunt you, doesn’t it?\n\nHe turns to face the camera, his expression a mix of determination and resignation.\n\nLUCAS (CONT'D)\nTonight, I’ll find out if there’s any truth to the rumors about this place. If there’s a way to break free from the chains of my past.\n\nThe camera zooms in on his hands, clasped tightly together, as he steps forward into the darkness, ready to uncover the mysteries that lie within."
+    }
+  ]
+}

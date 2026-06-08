@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0194.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Discord",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Liam",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Ava",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Ava",
+      "text": "Hey Liam, I'm having some real money troubles. My landlord won't renew my lease without proof of income."
+    },
+    {
+      "label": "message_2_Liam",
+      "text": "That's rough. Have you tried contacting the housing office for help?"
+    },
+    {
+      "label": "message_3_Liam",
+      "text": "I can help you draft a letter if you want. Just need some info from you."
+    },
+    {
+      "label": "message_4_Ava",
+      "text": "Thanks so much, Liam. I really appreciate it."
+    }
+  ]
+}

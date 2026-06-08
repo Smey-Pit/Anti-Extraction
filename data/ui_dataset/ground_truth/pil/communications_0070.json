@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0070.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Instagram DM",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Henry",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Lily",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Henry",
+      "text": "Hey Lily, can u help me w/ this? 🙄"
+    },
+    {
+      "label": "message_2_Lily",
+      "text": "Of course, what do u need?"
+    },
+    {
+      "label": "message_3_Henry",
+      "text": "My boss is being a jerk again. I don't know how to deal w/ him."
+    },
+    {
+      "label": "message_4_Lily",
+      "text": "Maybe talk to HR or find a new job? 😔"
+    }
+  ]
+}

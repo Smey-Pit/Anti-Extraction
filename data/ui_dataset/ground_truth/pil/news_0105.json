@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0105.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "EcoVoice Daily",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Green New Deal Criticized as Job-Killing Folly",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Alexa Thompson",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Washington, DC, March 15, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Green New Deal",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Climate Change",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Economic Policy",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Critics of the Green New Deal argue that the ambitious climate plan will stifle job creation and harm the economy, despite its supporters claiming it will create millions of green jobs."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Economists from conservative think tanks warn that the proposed massive government intervention in the energy sector could lead to higher costs and fewer employment opportunities in traditional industries."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Proponents counter that the Green New Deal will actually boost the economy through investments in renewable energy and infrastructure, which they say will outpace any potential losses."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "The debate over the Green New Deal highlights the ongoing tension between environmental sustainability and economic growth, a central issue in American politics."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "One expert noted, 'We can't afford to ignore the economic consequences of such drastic policy changes.'"
+    },
+    {
+      "label": "pull_quote",
+      "text": "'The Green New Deal is a dangerous distraction from real economic challenges,' said John Doe, a leading economist at the Center for Economic Research."
+    }
+  ]
+}

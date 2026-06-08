@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0238.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Echoes of Tomorrow",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Lila Hartman",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Futura Studios",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Lila Hartman. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "4912",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "Act II: Systems Failure",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. SPACECRAFT - DUTY ROOM - NIGHT\n\nThe room is dimly lit, with screens flickering in the background. A young woman, JESSICA, stands at a console, her fingers dancing over the controls. Suddenly, the lights flicker and the ship shudders slightly. Jessica’s face contorts with worry.\n\nJESSICA\n(to herself)\nWhat is going on? We can’t afford any glitches now.\n\nShe quickly checks the systems, her hands moving with precision. The screens begin to stabilize, and she lets out a sigh of relief.\n\nJESSICA\n(to herself)\nWe’re back online. Just in time.\n\nFADE OUT."
+    }
+  ]
+}

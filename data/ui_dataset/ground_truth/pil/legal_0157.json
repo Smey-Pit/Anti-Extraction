@@ -1,0 +1,56 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0157.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Last Will and Testament",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Fairview County, State of Novaria",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "2024-01-10",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "WILL-2024-0077",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_grantor",
+      "type": "name",
+      "value": "Elizabeth L. Hargrove",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Elizabeth L. Hargrove",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._EXECUTION_AND_ACKNOWLEDGMENT",
+      "text": "I, Elizabeth L. Hargrove, do hereby execute this Last Will and Testament and acknowledge that I have executed the same freely and voluntarily."
+    },
+    {
+      "label": "clause_2.1_DISPOSITION_OF_ESTATE",
+      "text": "I direct that my personal property be distributed equally among my three children: John, Jane, and James Hargrove."
+    },
+    {
+      "label": "clause_3._GUARDIANSHIP",
+      "text": "I appoint John Hargrove as the guardian of my minor grandchildren should I predecease them."
+    }
+  ]
+}

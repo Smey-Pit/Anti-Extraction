@@ -1,0 +1,85 @@
+{
+  "doc_type": "identity",
+  "image_path": "images/pil/identity_0228.png",
+  "entities": [
+    {
+      "label": "document_type",
+      "type": "short_phrase",
+      "value": "employee_id",
+      "question": "What type of identity document is this?"
+    },
+    {
+      "label": "issuing_authority",
+      "type": "short_phrase",
+      "value": "GreenLeaf Corporation",
+      "question": "What authority issued this document?"
+    },
+    {
+      "label": "surname",
+      "type": "name",
+      "value": "Rivers",
+      "question": "What is the surname?"
+    },
+    {
+      "label": "given_names",
+      "type": "name",
+      "value": "Lila",
+      "question": "What are the given names?"
+    },
+    {
+      "label": "dob",
+      "type": "date",
+      "value": "19891111",
+      "question": "What is the date of birth?"
+    },
+    {
+      "label": "document_number",
+      "type": "digit_seq",
+      "value": "GLC-0023456789",
+      "question": "What is the document number?"
+    },
+    {
+      "label": "nationality_state",
+      "type": "short_phrase",
+      "value": "GreenLeaf",
+      "question": "What is the nationality or state?"
+    },
+    {
+      "label": "issue_date",
+      "type": "date",
+      "value": "20201212",
+      "question": "What is the issue date?"
+    },
+    {
+      "label": "expiry_date",
+      "type": "date",
+      "value": "20301212",
+      "question": "What is the expiry date?"
+    },
+    {
+      "label": "employee_id",
+      "type": "digit_seq",
+      "value": "GLC-0023456789",
+      "question": "What is the employee ID?"
+    },
+    {
+      "label": "department",
+      "type": "short_phrase",
+      "value": "Research & Development",
+      "question": "What is the department?"
+    },
+    {
+      "label": "job_title",
+      "type": "short_phrase",
+      "value": "Senior Software Engineer",
+      "question": "What is the job title?"
+    },
+    {
+      "label": "organisation",
+      "type": "short_phrase",
+      "value": "GreenLeaf Corporation",
+      "question": "What is the organisation?"
+    }
+  ],
+  "content_blocks": []
+}

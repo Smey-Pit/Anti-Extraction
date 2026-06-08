@@ -1,0 +1,72 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0211.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Confidentiality and Non-Disclosure Agreement",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Brooksville County, State of Novaria",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "April 10, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "REF: NDA-2024-113",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_disclosing_party",
+      "type": "name",
+      "value": "Aria Silver",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_receiving_party",
+      "type": "name",
+      "value": "Leo Gold",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Aria Silver",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_2",
+      "type": "name",
+      "value": "Leo Gold",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._Confidential_Information",
+      "text": "‘Confidential Information’ means all information disclosed by the Disclosing Party to the Receiving Party that is marked as confidential, or that would reasonably be understood to be confidential given the context of its disclosure."
+    },
+    {
+      "label": "clause_2.1_Obligations",
+      "text": "The Receiving Party shall keep all Confidential Information strictly confidential and shall not disclose it to any third party without the prior written consent of the Disclosing Party."
+    },
+    {
+      "label": "clause_3._Exceptions",
+      "text": "Notwithstanding the foregoing, the obligations set forth in Section 2.1 hereof shall not apply to information that is publicly known, or becomes publicly known through no fault of the Receiving Party."
+    },
+    {
+      "label": "notary_note",
+      "text": "Sworn before me this 10th day of April 2024."
+    }
+  ]
+}

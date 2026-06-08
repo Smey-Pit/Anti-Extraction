@@ -1,0 +1,38 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0044.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Instagram DM",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Olivia",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Jenny",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Olivia",
+      "text": "Jenny, I really need ur help with this. My bf said he wants to break up."
+    },
+    {
+      "label": "message_2_Jenny",
+      "text": "Oh no! That's rough. What happened?"
+    },
+    {
+      "label": "message_3_Olivia",
+      "text": "He's been acting weird lately and now says he needs space. I don't know what to do."
+    }
+  ]
+}

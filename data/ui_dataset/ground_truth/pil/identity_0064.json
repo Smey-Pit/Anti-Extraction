@@ -1,0 +1,85 @@
+{
+  "doc_type": "identity",
+  "image_path": "images/pil/identity_0064.png",
+  "entities": [
+    {
+      "label": "document_type",
+      "type": "short_phrase",
+      "value": "insurance_card",
+      "question": "What type of identity document is this?"
+    },
+    {
+      "label": "issuing_authority",
+      "type": "short_phrase",
+      "value": "BlueStar Health Group",
+      "question": "What authority issued this document?"
+    },
+    {
+      "label": "surname",
+      "type": "name",
+      "value": "Cullen",
+      "question": "What is the surname?"
+    },
+    {
+      "label": "given_names",
+      "type": "name",
+      "value": "Ethan",
+      "question": "What are the given names?"
+    },
+    {
+      "label": "dob",
+      "type": "date",
+      "value": "1995-05-21",
+      "question": "What is the date of birth?"
+    },
+    {
+      "label": "document_number",
+      "type": "digit_seq",
+      "value": "BSHG-CULLEN-ETHAN",
+      "question": "What is the document number?"
+    },
+    {
+      "label": "nationality_state",
+      "type": "short_phrase",
+      "value": "United States of Northwood",
+      "question": "What is the nationality or state?"
+    },
+    {
+      "label": "issue_date",
+      "type": "date",
+      "value": "2017-07-18",
+      "question": "What is the issue date?"
+    },
+    {
+      "label": "expiry_date",
+      "type": "date",
+      "value": "2027-07-18",
+      "question": "What is the expiry date?"
+    },
+    {
+      "label": "member_id",
+      "type": "digit_seq",
+      "value": "12345678901",
+      "question": "What is the member ID?"
+    },
+    {
+      "label": "group_number",
+      "type": "digit_seq",
+      "value": "12345",
+      "question": "What is the group number?"
+    },
+    {
+      "label": "plan_name",
+      "type": "short_phrase",
+      "value": "Gold Plus",
+      "question": "What is the plan name?"
+    },
+    {
+      "label": "primary_care_provider",
+      "type": "name",
+      "value": "Dr. Amelia Hart",
+      "question": "Who is the primary care provider?"
+    }
+  ],
+  "content_blocks": []
+}

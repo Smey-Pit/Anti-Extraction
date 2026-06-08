@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0116.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Economic Sentinel",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Economic Growth Stalls as Global Supply Chain Disruptions Persist",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "James R. Harper",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "New York City, September 15, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Economy",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Supply Chain",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Economic Policy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Manufacturing",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "The United States economy has experienced a slowdown due to ongoing supply chain disruptions, according to latest economic reports."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Manufacturing output has declined for two consecutive months, with many companies reporting shortages of raw materials and components."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Experts warn that these disruptions could extend beyond the manufacturing sector, affecting retail and services industries as well."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "The White House announced new measures aimed at improving supply chain resilience, including increased investment in domestic manufacturing and infrastructure."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "However, some economists remain skeptical, citing the complexity of global trade networks as a major challenge."
+    },
+    {
+      "label": "pull_quote",
+      "text": "'We need a comprehensive approach to address these issues, rather than piecemeal solutions,' said Treasury Secretary John Smith."
+    }
+  ]
+}

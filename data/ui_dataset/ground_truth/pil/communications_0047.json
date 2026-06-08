@@ -1,0 +1,54 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0047.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Gmail",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Charlie",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Dave",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_3",
+      "type": "name",
+      "value": "Eve",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "subject",
+      "type": "short_phrase",
+      "value": "Family Dinner Plans",
+      "question": "What is the subject line of this message?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Charlie",
+      "text": "Hey guys, any ideas for this weekend's dinner?"
+    },
+    {
+      "label": "message_2_Dave",
+      "text": "How about pizza night? It's always a hit."
+    },
+    {
+      "label": "message_3_Eve",
+      "text": "Sounds good to me. Where do you wanna order from?"
+    },
+    {
+      "label": "message_4_Charlie",
+      "text": "Let's go for Domino's. Delivery is quick and easy."
+    }
+  ]
+}

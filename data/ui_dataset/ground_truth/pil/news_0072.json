@@ -1,0 +1,76 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0072.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "The Citizen's Advocate",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "State Governor Announces Plan to Increase Minimum Wage",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Linda Martinez",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Austin, Texas, May 5, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Minimum Wage",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Economic Growth",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Poverty Alleviation",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Governor Robert Johnson has unveiled a proposal to raise the state’s minimum wage from $10.50 to $15 per hour over the next three years, aiming to alleviate poverty and boost consumer spending."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The governor’s plan includes a gradual increase in wages, with the first hike occurring six months after the bill is signed into law. He argues that this will help lift thousands out of poverty and stimulate economic growth."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Opponents contend that such a significant increase could lead to job losses in low-wage sectors, particularly in small businesses. They also worry about inflationary pressures and higher prices for consumers."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Advocates for workers’ rights praise the governor’s initiative, saying it will provide much-needed relief to those struggling to make ends meet."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"No one who works full-time should live in poverty. This is a fair and necessary step forward.\" - Governor Robert Johnson"
+    }
+  ]
+}

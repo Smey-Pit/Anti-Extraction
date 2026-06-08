@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0151.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Global Tribune",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Economic Growth Slows as Inflation Hits Record Levels",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Robert Thompson",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "New York City, April 10, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Inflation",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Economic Growth",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Fed Policy",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "The economy is experiencing a slowdown due to record-high inflation rates, according to latest economic reports released by the Federal Reserve."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Inflation, which reached a 40-year high last month, is affecting consumer spending and business investments, leading to a decrease in overall economic growth."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Economist Dr. Sarah Johnson commented, 'Inflation is eating away at household budgets and eroding the purchasing power of consumers.'"
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "The Federal Reserve has signaled its intention to raise interest rates in order to curb inflation, but economists warn that such measures could further slow down the economy."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "The government is under pressure to find a balance between controlling inflation and maintaining economic growth."
+    },
+    {
+      "label": "pull_quote",
+      "text": "'If we don’t address inflation now, we risk a full-blown recession,' - Federal Reserve Chair Alan White"
+    }
+  ]
+}

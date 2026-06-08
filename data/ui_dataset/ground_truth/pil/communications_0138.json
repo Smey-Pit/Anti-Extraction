@@ -1,0 +1,46 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0138.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Instagram DM",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Mike",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Liam",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Liam",
+      "text": "Hey Mike, can we talk about work?"
+    },
+    {
+      "label": "message_2_Mike",
+      "text": "Sure thing. What’s up?"
+    },
+    {
+      "label": "message_3_Liam",
+      "text": "I’m really stressed out with all these deadlines. Feels like I’m drowning here."
+    },
+    {
+      "label": "message_4_Mike",
+      "text": "I hear ya bro. Maybe we can chat more later today?"
+    },
+    {
+      "label": "message_5_Liam",
+      "text": "Yeah, thanks Mike. Just needed to vent a bit."
+    }
+  ]
+}

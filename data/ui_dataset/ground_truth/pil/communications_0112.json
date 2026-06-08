@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0112.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Discord",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Alex",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Lily",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Alex",
+      "text": "Hey Lily, I’m having a rough week. Just wanted to check in."
+    },
+    {
+      "label": "message_2_Lily",
+      "text": "I’m so sorry to hear that. What’s going on?"
+    },
+    {
+      "label": "message_3_Alex",
+      "text": "Work is crazy, my boss is being a total jerk and my car broke down. 🤦‍♂️"
+    },
+    {
+      "label": "message_4_Lily",
+      "text": "That sucks. Let me know if you need anything. Maybe we can grab coffee sometime?"
+    }
+  ]
+}

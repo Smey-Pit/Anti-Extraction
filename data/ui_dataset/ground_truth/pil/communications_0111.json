@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0111.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "iMessage",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Sara",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "John",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Sara",
+      "text": "Hey John, I had that doctor's appointment today 😔"
+    },
+    {
+      "label": "message_2_John",
+      "text": "Oh no! How did it go?"
+    },
+    {
+      "label": "message_3_Sara",
+      "text": "It was okay, but the doc said I might need some tests. Gotta wait for results."
+    },
+    {
+      "label": "message_4_John",
+      "text": "Do you know which ones?"
+    }
+  ]
+}

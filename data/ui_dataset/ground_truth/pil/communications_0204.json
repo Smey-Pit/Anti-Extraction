@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0204.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Android Messages",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Emma",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Tom",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Tom",
+      "text": "Hey Emma, I just got the bills. Rent is due in 2 days. 😕"
+    },
+    {
+      "label": "message_2_Emma",
+      "text": "I know. I've been trying to save more but it's tough."
+    },
+    {
+      "label": "message_3_Tom",
+      "text": "I'm worried we might have to move if we can't pay. What do you think?"
+    },
+    {
+      "label": "message_4_Emma",
+      "text": "Let's talk to the landlord first. Maybe we can negotiate something."
+    }
+  ]
+}

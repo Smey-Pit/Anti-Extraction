@@ -1,0 +1,60 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0002.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Gmail",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Sarah",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Tom",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_3",
+      "type": "name",
+      "value": "Lily",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_4",
+      "type": "name",
+      "value": "Emma",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "subject",
+      "type": "short_phrase",
+      "value": "Surprise Party Plan",
+      "question": "What is the subject line of this message?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Sarah",
+      "text": "Hey team, just sending this to make sure we're all on the same page for Tom's surprise."
+    },
+    {
+      "label": "message_2_Tom",
+      "text": "Thanks Sarah! I'm so excited!"
+    },
+    {
+      "label": "message_3_Lily",
+      "text": "I'll bring the cake! 🎂"
+    },
+    {
+      "label": "message_4_Emma",
+      "text": "I can't wait to see his face!"
+    }
+  ]
+}

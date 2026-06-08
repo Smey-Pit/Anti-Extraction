@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0131.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Whispers in the Wind",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Isabella Myles",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Mystic Quill Press",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Isabella Myles. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "2682",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "Chapter 3: Echoes of the Past",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "The old windmill stood like a silent sentinel on the edge of the village, its weathered sails whispering secrets to anyone brave enough to listen. As twilight settled over the landscape, Isabella found herself drawn to its shadow, her heart heavy with the weight of a lost love. She placed her hand on the cool stone, feeling the faint hum of the windmill’s past. 'What did you see, old friend?' she murmured, her voice barely above a whisper. The wind shifted, carrying with it the scent of wildflowers and the distant sound of a lone wolf howling in the distance."
+    }
+  ]
+}

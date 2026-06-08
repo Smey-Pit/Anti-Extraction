@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0034.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Android Messages",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Chris",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Tom",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Chris",
+      "text": "Hey Tom, we need 2 more ppl for the game tonight. U up?"
+    },
+    {
+      "label": "message_2_Tom",
+      "text": "Sorry, I’m busy. But I’ll cover for u if u can’t make it."
+    },
+    {
+      "label": "message_3_Chris",
+      "text": "Thanks! That’d be a lifesaver. We’re short 1 more. Anyone else interested?"
+    },
+    {
+      "label": "message_4_Tom",
+      "text": "I’ll ask around. Maybe someone from work can join."
+    }
+  ]
+}

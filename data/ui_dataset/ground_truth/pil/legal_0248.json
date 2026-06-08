@@ -1,0 +1,68 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0248.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Notice of Eviction",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Oakwood County, State of Novacore",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "September 15, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "Eviction Notice No. 2024-09217",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_landlord",
+      "type": "name",
+      "value": "Rivertown Properties LLC",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_tenant",
+      "type": "name",
+      "value": "Jameson K. Rivers",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Rivertown Properties LLC",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_2",
+      "type": "name",
+      "value": "Jameson K. Rivers",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._REASONS_FOR_EVICTION",
+      "text": "The TENANT has failed to comply with the terms of the lease agreement by non-payment of rent."
+    },
+    {
+      "label": "clause_2.1_NOTICE_PERIOD",
+      "text": "The TENANT is given thirty (30) days from the date of this notice to vacate the premises."
+    },
+    {
+      "label": "clause_3._ACTION_TO_BE_TAKEN",
+      "text": "If the TENANT does not vacate the premises within the specified period, legal action will be initiated."
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0183.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "The Progressive Voice",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Climate Change Denialism Undermines Environmental Progress",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Ava Martinez",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Los Angeles, April 7, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Climate Change",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Environmental Policy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Denialism",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_4",
+      "type": "short_phrase",
+      "value": "Activism",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Environmental advocates are growing increasingly frustrated as some politicians continue to deny the reality of climate change and its dire consequences."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The refusal to acknowledge the scientific consensus on climate change has led to a significant slowdown in implementing effective policies to mitigate its impacts."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Activists and scientists alike are calling for a more robust response from elected officials, arguing that the time for debate is over and action is imperative."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "In an interview with The Progressive Voice, environmental activist Maria Rodriguez said, 'We can’t afford to waste any more time on denial.'"
+    },
+    {
+      "label": "pull_quote",
+      "text": "'We can’t afford to waste any more time on denial.' – Maria Rodriguez, Environmental Activist"
+    }
+  ]
+}

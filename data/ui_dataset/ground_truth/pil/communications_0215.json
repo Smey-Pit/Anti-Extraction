@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0215.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Instagram DM",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Noah",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Sophia",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Sophia",
+      "text": "Noah, can we talk abt what happened yesterday?"
+    },
+    {
+      "label": "message_2_Noah",
+      "text": "Sure, what's up?"
+    },
+    {
+      "label": "message_3_Sophia",
+      "text": "I felt like u were being distant. Is everything okay?"
+    },
+    {
+      "label": "message_4_Noah",
+      "text": "Sorry, I was just stressed about work. I didn't mean to make u feel left out."
+    }
+  ]
+}

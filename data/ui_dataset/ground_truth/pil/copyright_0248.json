@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0248.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Echoes of Silence",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Sophia Hart",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Silent Films Inc.",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Sophia Hart. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "5139",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. KITCHEN - NIGHT",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. ABANDONED FACTORY - NIGHT\n\nThe dim light from a single flickering bulb casts long shadows across the rusted machinery. A figure, dressed in tattered clothing, moves silently through the debris-strewn floor. The sound of a distant siren pierces the silence. The figure stops at a door, covered in layers of grime and graffiti. They pull out a small key, inserted into the lock, and turn it with a creak. The door opens with a groan, revealing a dimly lit room filled with old computers and scattered papers. The figure moves towards a large desk, where a laptop hums softly. They type quickly, their fingers dancing over the keys. Suddenly, the screen lights up, displaying a message that reads: 'Signal received. Coordinates confirmed.' The figure smiles grimly, typing furiously. The scene fades to black as the figure disappears into the shadows."
+    }
+  ]
+}

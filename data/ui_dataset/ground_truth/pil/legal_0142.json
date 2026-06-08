@@ -1,0 +1,58 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0142.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Last Will and Testament",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Springfield City, State of Novaria",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "May 12, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "party_1_grantor",
+      "type": "name",
+      "value": "Harold K. Winters",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_executor",
+      "type": "name",
+      "value": "Isabella R. Stone",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Harold K. Winters",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_2",
+      "type": "name",
+      "value": "Isabella R. Stone",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._Personal_Property",
+      "text": "I hereby direct that all my personal property, including but not limited to jewelry, art, and household items, be distributed as follows..."
+    },
+    {
+      "label": "clause_2.1_Real_Property",
+      "text": "My real property located at 456 Elm Street, Springfield City, shall be conveyed to my children, equally divided among them..."
+    }
+  ]
+}

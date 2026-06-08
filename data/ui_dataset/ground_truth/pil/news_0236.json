@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0236.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Eastside Sentinel",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Education Reform Bill Stalls in State Legislature",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Robert L. Foster",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Springfield, June 28, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Education Policy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Legislative Gridlock",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Public School Reform",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "A proposed education reform bill aimed at overhauling the state’s public school system has faced significant opposition, leading to its indefinite postponement in the state legislature."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Proponents of the bill argue that it would bring much-needed changes to improve educational outcomes and reduce funding disparities between urban and rural districts."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Opponents, however, claim that the bill is overly ambitious and lacks concrete solutions, potentially exacerbating existing issues without providing clear benefits."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "The bill’s sponsors have vowed to continue pushing for its passage, believing it to be crucial for the future of the state’s education system."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Legislators from both sides of the aisle have expressed concerns about the bill's scope and feasibility."
+    },
+    {
+      "label": "pull_quote",
+      "text": "'We need to ensure that any changes we make have a tangible impact on students’ lives.' - Education Commissioner Sarah Johnson"
+    }
+  ]
+}

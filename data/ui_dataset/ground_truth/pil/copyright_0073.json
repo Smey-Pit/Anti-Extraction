@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0073.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Last Signal",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Sophie Chen",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Starlight Studios",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Sophie Chen. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "1502",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. CONTROL ROOM - NIGHT",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. CONTROL ROOM - NIGHT\n\nThe control room is dimly lit, the screens showing various readings and data feeds. Dr. LUCAS, a middle-aged scientist with a keen eye, is at the center of the room, monitoring the latest transmission from the satellite. His face is a mix of concentration and hope as he listens intently to the static-filled signal.\n\nDR. LUCAS\n(to himself)\nJust a little more...\n\nSuddenly, the signal stabilizes, and a clear voice crackles over the speakers.\n\nVOICE ON SPEAKER\nWe are the survivors. We are here.\n\nDr. Lucas leaps to his feet, his hands clenching into fists. The room erupts in cheers and applause as the news is confirmed. The search for the missing colonists has finally paid off, and they are safe.\n\nFADE OUT."
+    }
+  ]
+}

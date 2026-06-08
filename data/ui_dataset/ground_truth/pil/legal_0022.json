@@ -1,0 +1,50 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0022.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Last Will and Testament",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Hillside County, State of Novaria",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "May 5, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "party_1_grantor",
+      "type": "name",
+      "value": "Marianne Foster",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Marianne Foster",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._GRANTOR",
+      "text": "I, Marianne Foster, being of sound mind and body, make this my Last Will and Testament."
+    },
+    {
+      "label": "clause_2.1_DISPOSAL_OF_ESTATE",
+      "text": "All of my real and personal property hereafter described, and all property which I may thereafter acquire, shall be disposed of as follows:"
+    },
+    {
+      "label": "clause_3._EXECUTOR",
+      "text": "I hereby appoint my nephew, David Sinclair, as the Executor of this Will."
+    }
+  ]
+}

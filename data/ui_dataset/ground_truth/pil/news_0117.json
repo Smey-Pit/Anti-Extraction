@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0117.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Political Pulse",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Climate Change Summit Fails to Reach Agreement on Carbon Emissions Reduction",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Elizabeth K. Carter",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Paris, France, August 22, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Environment",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Climate Change",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Environmental Policy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "International Cooperation",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Negotiations at the recent international climate change summit ended without a binding agreement on reducing carbon emissions."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Developed nations and emerging economies clashed over responsibilities and funding for climate action, leaving many observers disappointed."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Environmental activists criticized the outcome, calling it a missed opportunity to take decisive action against global warming."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "The summit did result in a non-binding pledge from participating countries to increase their efforts to combat climate change, but specifics were lacking."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Scientists have warned that continued inaction could lead to irreversible environmental damage."
+    },
+    {
+      "label": "pull_quote",
+      "text": "'The world cannot afford another year of inaction on climate change,' said Greenpeace spokesperson Lisa Johnson."
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0021.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "iMessage",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Sarah",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Tom",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Tom",
+      "text": "Hey Sarah, just got the test results. 🤔"
+    },
+    {
+      "label": "message_2_Sarah",
+      "text": "OMG! Did you get them? I was so worried..."
+    },
+    {
+      "label": "message_3_Tom",
+      "text": "Yeah, it's good news actually. The doc said I'm on the right track."
+    },
+    {
+      "label": "message_4_Sarah",
+      "text": "That's great, Tom! I'm so relieved for you. 😊"
+    }
+  ]
+}

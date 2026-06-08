@@ -1,0 +1,76 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0003.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Global Observer",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Climate Change Denialism Gains Ground in Republican Party",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Michael Green",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Chicago, May 10, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Climate Change",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Republican Party",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Environmental Policy",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "A growing number of Republican politicians are now openly denying the existence of climate change, a shift that could have far-reaching implications for environmental policy and international cooperation."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "This trend, while not universally embraced within the party, has gained traction among certain factions, particularly those with strong ties to fossil fuel industries. These lawmakers argue that climate change is a hoax perpetuated by environmental activists."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Environmental scientists and experts in the field have strongly condemned this stance, citing overwhelming scientific evidence supporting the reality of climate change. They warn that such denial could hinder progress on crucial policy initiatives."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "The shift in rhetoric has also sparked debates within the Republican Party, with moderate members expressing concern over the potential damage to the party's reputation and its ability to attract younger voters."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"The science is clear; climate change is real, and we need to act now to protect our planet.\" - Dr. Laura Martinez, Climate Scientist"
+    }
+  ]
+}

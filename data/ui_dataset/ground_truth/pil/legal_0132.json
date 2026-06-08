@@ -1,0 +1,68 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0132.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Last Will and Testament",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Greenfield City, State of Novacorp",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "May 1, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "Will No. 2024-0501",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_grantor",
+      "type": "name",
+      "value": "Elizabeth A. Brown",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_executor",
+      "type": "name",
+      "value": "Daniel K. Wilson",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Elizabeth A. Brown",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_2",
+      "type": "name",
+      "value": "Daniel K. Wilson",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._GRANTOR",
+      "text": "I, Elizabeth A. Brown, being of sound mind and body, do hereby make, publish, and declare this my Last Will and Testament."
+    },
+    {
+      "label": "clause_2.1_EXECUTOR",
+      "text": "I appoint Daniel K. Wilson as my Executor to carry out the provisions of this Will."
+    },
+    {
+      "label": "clause_3._DISPOSAL_OF_ESTATE",
+      "text": "All of my personal property, real estate, and other assets shall be distributed as follows:"
+    }
+  ]
+}

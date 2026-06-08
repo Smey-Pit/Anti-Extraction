@@ -1,0 +1,62 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0040.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Commercial Lease Agreement",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Springfield City, State of Novaria",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "June 15, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "party_1_landlord",
+      "type": "name",
+      "value": "Ella M. Green",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_tenant",
+      "type": "name",
+      "value": "John H. Brown",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Ella M. Green",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_2",
+      "type": "name",
+      "value": "John H. Brown",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._Premises",
+      "text": "The Landlord hereby leases to the Tenant the Premises located at 123 Main Street, Springfield City."
+    },
+    {
+      "label": "clause_2.1_Term",
+      "text": "The Term of this Lease shall commence on July 1, 2024 and shall continue until June 30, 2029, unless terminated earlier as provided herein."
+    },
+    {
+      "label": "clause_3._Rent",
+      "text": "The Tenant shall pay to the Landlord a monthly rent of $1,500, payable in advance on the first day of each month."
+    }
+  ]
+}

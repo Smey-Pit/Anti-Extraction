@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0090.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Whispers in the Fog",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Isolde Myles",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Mystic Moons Publishing",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Isolde Myles. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "1863",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "Chapter 2: The Keeper's Gaze",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "The morning sun filtered through the fog, casting an eerie glow over the abandoned lighthouse. The old keeper, a weathered man named Thomas, stood at the edge of the cliff, his eyes scanning the horizon. His hands trembled slightly as he adjusted the lens of his telescope, searching for any sign of movement. It had been years since he last saw a ship in these parts, yet today felt different. A sense of unease settled in his chest, a whisper in the fog that refused to be silenced."
+    }
+  ]
+}

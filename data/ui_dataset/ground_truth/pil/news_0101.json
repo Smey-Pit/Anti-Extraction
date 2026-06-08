@@ -1,0 +1,82 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0101.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Economic Frontiers Review",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Free Trade Agreements Under Scrutiny: A New Dawn?",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Michael R. Thompson",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "New York City, April 20, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Trade",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Economics",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Globalization",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_4",
+      "type": "short_phrase",
+      "value": "Inequality",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "As global trade tensions continue to rise, free trade agreements are facing renewed criticism from various quarters, sparking a debate on their long-term viability."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Proponents of free trade argue that these agreements foster economic growth and enhance international cooperation, while opponents highlight the negative impacts on local industries and job losses."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Recent studies suggest that while some sectors benefit, many workers and communities are left behind, leading to calls for more balanced and inclusive trade policies."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "The upcoming renegotiations of several major trade deals present an opportunity to address these concerns and ensure that future agreements serve the interests of all stakeholders."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"It’s time to rethink our approach to free trade and focus on creating fairer and more sustainable agreements.\" - Dr. Laura Martinez"
+    }
+  ]
+}

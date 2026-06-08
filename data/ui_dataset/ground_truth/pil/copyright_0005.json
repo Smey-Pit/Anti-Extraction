@@ -1,0 +1,42 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0005.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "A Legacy of Hope",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Olivia Hart",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Sunrise Gazette",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Olivia Hart. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "123",
+      "question": "What is the page number?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "In the quiet town of Millbrook, nestled between rolling hills and whispering woods, the legacy of Dr. Eliza Green continues to inspire. For decades, Dr. Green has been a beacon of hope for those suffering from rare neurological disorders. Her groundbreaking work, funded by the Millbrook Medical Foundation, has not only brought comfort to patients but also paved the way for future research. This year, the foundation is celebrating its 25th anniversary, honoring Dr. Green’s enduring commitment to medical advancement."
+    }
+  ]
+}

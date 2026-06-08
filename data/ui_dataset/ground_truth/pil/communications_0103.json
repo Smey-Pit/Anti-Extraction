@@ -1,0 +1,60 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0103.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Gmail",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Rachel",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Mike",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_3",
+      "type": "name",
+      "value": "Emily",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_4",
+      "type": "name",
+      "value": "Sarah",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "subject",
+      "type": "short_phrase",
+      "value": "Family dinner",
+      "question": "What is the subject line of this message?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Rachel",
+      "text": "Hey guys, just wanted to confirm we're still on for this Friday at 7pm?"
+    },
+    {
+      "label": "message_2_Mike",
+      "text": "Yup, I can make it."
+    },
+    {
+      "label": "message_3_Emily",
+      "text": "Me too, see u there!"
+    },
+    {
+      "label": "message_4_Sarah",
+      "text": "Can't wait! See you Friday!"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0007.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Gmail",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Alex",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Emma",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_3",
+      "type": "name",
+      "value": "Sophie",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "subject",
+      "type": "short_phrase",
+      "value": "Family gathering next week",
+      "question": "What is the subject line of this message?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Alex",
+      "text": "Hey Emma & Sophie, when can we meet up for a quick dinner?"
+    },
+    {
+      "label": "message_2_Emma",
+      "text": "I'm free tonight at 7pm if that works for you."
+    },
+    {
+      "label": "message_3_Sophie",
+      "text": "I'm good too, let's do it!"
+    },
+    {
+      "label": "message_4_Alex",
+      "text": "Perfect! See you at 7 then."
+    }
+  ]
+}

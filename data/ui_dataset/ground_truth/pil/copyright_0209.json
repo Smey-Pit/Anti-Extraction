@@ -1,0 +1,42 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0209.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Unseen Healer",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Sophia Hartley",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Daily Sentinel",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Sophia Hartley. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "4338",
+      "question": "What is the page number?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "In the quiet town of Willowbrook, there lives a woman who has become a beacon of hope for those suffering from chronic illnesses. Dr. Elara Voss is not just a doctor; she is a healer in every sense of the word. Her clinic, nestled in a cozy corner of the town, is a sanctuary for the weary and the sick. Despite her advanced age, Dr. Voss remains vibrant and full of energy, her eyes sparkling with a determination that is both inspiring and humbling.\n\nLocal resident, Lila Thompson, shares her story. 'Dr. Voss saved my life,' Lila says, her voice filled with gratitude. 'When I was diagnosed with rheumatoid arthritis, all the medications only masked the pain. But Dr. Voss saw something in me that others couldn’t. She taught me how to live with the disease, not just endure it.'\n\nDr. Voss believes in holistic healing, combining traditional medicine with natural remedies and spiritual practices. Her approach has helped countless patients regain their strength and find peace. As the sun sets over Willowbrook, casting a warm glow over the town, Dr. Voss continues her work, a tireless advocate for those who need her most."
+    }
+  ]
+}

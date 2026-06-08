@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0239.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Android Messages",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Mia",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Ava",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Ava",
+      "text": "Hey Mia, I’m so stressed about my exam next week. Any tips?"
+    },
+    {
+      "label": "message_2_Mia",
+      "text": "Take deep breaths and practice past papers. You got this!"
+    },
+    {
+      "label": "message_3_Ava",
+      "text": "Thanks, Mia. I’m trying to stay positive. 🙏"
+    },
+    {
+      "label": "message_4_Mia",
+      "text": "You’re welcome. Good luck! 😊"
+    }
+  ]
+}

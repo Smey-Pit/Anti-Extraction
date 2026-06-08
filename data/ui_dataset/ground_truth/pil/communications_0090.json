@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0090.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Android Messages",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Nina",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Tom",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Tom",
+      "text": "Hey Nina, what’s up?"
+    },
+    {
+      "label": "message_2_Nina",
+      "text": "Just feeling kinda down today. Got any ideas for cheering up?"
+    },
+    {
+      "label": "message_3_Tom",
+      "text": "How about we go for a walk or watch a movie?"
+    },
+    {
+      "label": "message_4_Nina",
+      "text": "That sounds nice, but I think I need to talk to someone about it."
+    }
+  ]
+}

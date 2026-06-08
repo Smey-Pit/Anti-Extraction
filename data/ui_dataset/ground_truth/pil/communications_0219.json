@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0219.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Android Messages",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Liam",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Ava",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Liam",
+      "text": "Hey Ava, how are things with your mom? 🤷‍♂️"
+    },
+    {
+      "label": "message_2_Ava",
+      "text": "Not great, she's been acting weird lately. 😢"
+    },
+    {
+      "label": "message_3_Liam",
+      "text": "Oh no, what's happening?"
+    },
+    {
+      "label": "message_4_Ava",
+      "text": "She won't tell me anything. I think she might be hiding something..."
+    }
+  ]
+}

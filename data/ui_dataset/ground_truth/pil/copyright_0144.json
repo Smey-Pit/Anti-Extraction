@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0144.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Lighthouse Keeper’s Daughter",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Eldridge Hart",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Cape Light Books",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Eldridge Hart. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "2971",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "Chapter 5: The Storm",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "The lighthouse stood tall against the backdrop of the stormy sea, its beacon a steady pulse of light cutting through the darkness. Inside, Sarah Hart watched the clock, her heart heavy with the weight of her responsibilities. Her father had passed away just last month, leaving her alone to tend to the lighthouse and keep the mariners safe. The solitude was both a burden and a sanctuary, a place where she could find solace amidst the chaos of the world outside.\n\nAs the wind howled and the waves crashed against the rocks, Sarah felt a sense of peace wash over her. She knew her father would want her to continue his legacy, to keep the light burning bright. With a deep breath, she turned back to her duties, ready to face whatever the night might bring."
+    }
+  ]
+}

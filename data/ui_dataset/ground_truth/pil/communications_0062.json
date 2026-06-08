@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0062.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Discord",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Emily",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Jake",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Emily",
+      "text": "Hey Jake, I'm in a bit of a bind. Can u help?"
+    },
+    {
+      "label": "message_2_Jake",
+      "text": "Of course, what's up?"
+    },
+    {
+      "label": "message_3_Emily",
+      "text": "My rent is due tomorrow but I can't pay it. Any ideas?"
+    },
+    {
+      "label": "message_4_Jake",
+      "text": "Not sure, but let's brainstorm. Maybe we can find a way."
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0087.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Citizen's Watch",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Immigration Reform Bill Faces Stalemate in Congress",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Emma L. Thompson",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Los Angeles, May 5, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Immigration Policy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Congressional Stalemate",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Humanitarian Crisis",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Efforts to pass comprehensive immigration reform legislation have stalled in Congress, leaving many in the immigrant community and advocates frustrated and concerned about the future of immigration policy."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The bill, which includes provisions for pathway to citizenship and enhanced border security, has encountered significant resistance from conservative lawmakers."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Democrats argue that the bill is necessary to address the humanitarian crisis at the southern border and to strengthen national security."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Republicans counter that the bill would reward illegal immigrants and undermine American sovereignty."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "A leading immigration lawyer commented, 'The current impasse is deeply troubling and risks further destabilizing communities across the country.'"
+    },
+    {
+      "label": "pull_quote",
+      "text": "Leading Immigration Lawyer"
+    }
+  ]
+}

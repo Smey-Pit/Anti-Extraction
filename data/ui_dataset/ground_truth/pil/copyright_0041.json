@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0041.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Whispers in the Wind",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Eleanor Myles",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Verdant Press",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Eleanor Myles. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "930",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "Chapter 3: The Sentinel Tree",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "The old oak stood sentinel at the edge of the village green, its gnarled branches reaching like bony fingers towards the sky. In the quiet of twilight, whispers seemed to float through the air, carried on the gentle breeze. Alice sat beneath the tree, her eyes fixed on the distant horizon where the sun was setting, painting the sky in hues of orange and pink. She felt a chill run down her spine as she heard the faint rustle of leaves, a sound that always made her heart race. The village had grown silent, the usual chatter of children and the creaking of old wooden doors now hushed. Alice knew it was the hour when the world held its breath, waiting for the stories of the past to whisper through the night."
+    }
+  ]
+}

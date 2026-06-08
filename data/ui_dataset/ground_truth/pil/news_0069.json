@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0069.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Economic Review Weekly",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Economic Growth Slows as Inflation Rates Reach Record Levels",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Rachel K. White",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "San Francisco, July 20, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Inflation",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Economic Policy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Consumer Spending",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Inflationary pressures are putting significant strain on consumers and businesses alike, with many experts predicting that the economic slowdown will continue in the near future."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "High inflation rates have led to a decrease in consumer spending, particularly among lower-income households who are hit hardest by rising prices."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Businesses are also feeling the pinch, as higher costs for raw materials and labor force them to raise prices, which in turn further erodes consumer purchasing power."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Central banks are grappling with how to balance their dual mandate of price stability and maximum employment, with some economists advocating for more aggressive interest rate hikes."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Others argue that such measures could trigger a recession and recommend a more nuanced approach that takes into account the broader economic context."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"Inflation is a real threat to our economy, and we must act now to prevent it from becoming a full-blown crisis.\" - Alan Johnson, Economist"
+    }
+  ]
+}

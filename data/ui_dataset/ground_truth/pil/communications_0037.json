@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0037.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Discord",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Alex",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Jordan",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Alex",
+      "text": "Hey Jordan, I’m having some issues with my ex on here. Can u help?"
+    },
+    {
+      "label": "message_2_Jordan",
+      "text": "Sure thing! What’s the problem?"
+    },
+    {
+      "label": "message_3_Alex",
+      "text": "She keeps messaging me and it’s really stressing me out. I don’t wanna block her."
+    },
+    {
+      "label": "message_4_Jordan",
+      "text": "I get it. Maybe you can just mute her for now? I’ll help you set it up."
+    }
+  ]
+}

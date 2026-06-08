@@ -1,0 +1,68 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0043.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Notice of Eviction",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Greenfield City, State of Novaria",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "September 15, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "Case No. CV-2024-08841",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_landlord",
+      "type": "name",
+      "value": "Liam O. Blue",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_tenant",
+      "type": "name",
+      "value": "Olivia R. Green",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Liam O. Blue",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_2",
+      "type": "name",
+      "value": "Olivia R. Green",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._Reason_for_Eviction",
+      "text": "The Tenant is hereby notified that the Tenant has failed to pay the rent in full and on time as required by the lease agreement."
+    },
+    {
+      "label": "clause_2.1_Deadline",
+      "text": "The Tenant shall vacate the premises located at 789 Pine Street, Greenfield City, within 14 days from the date of this Notice."
+    },
+    {
+      "label": "clause_3._Legal_Action",
+      "text": "If the Tenant fails to vacate the premises as required, the Landlord reserves the right to file a lawsuit for unlawful detainer."
+    }
+  ]
+}

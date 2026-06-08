@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0195.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Eagle's Eye Gazette",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Local Politician Faces Ethics Charges Amidst Campaign Scandal",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Jill M. Thompson",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Springfield, April 10, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Politics",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Ethics",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Political Scandal",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Campaign Finance",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Springfield’s long-serving mayor, Robert D. Carter, finds himself at the center of a heated ethics probe after allegations of misuse of city funds during his campaign for re-election."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The investigation, initiated by the city council, centers around claims that Mayor Carter diverted public money to fund personal expenses, including a lavish wedding for his daughter and extensive renovations to his home."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Citizens for Clean Government, an advocacy group, released a statement calling on the mayor to resign immediately, citing the potential impact on public trust and the integrity of local governance."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "In response, Mayor Carter has denied all accusations, stating, 'This is an attempt to undermine my campaign and distract from the important work I have done for our city.'"
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "A hearing is scheduled for next week, where the mayor will present his case and respond to the charges."
+    },
+    {
+      "label": "pull_quote",
+      "text": "‘The integrity of our elected officials is paramount to the well-being of our community.’ — Jane Doe, President, Citizens for Clean Government"
+    }
+  ]
+}

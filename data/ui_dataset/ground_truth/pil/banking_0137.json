@@ -1,0 +1,54 @@
+{
+  "doc_type": "banking",
+  "image_path": "images/pil/banking_0137.png",
+  "entities": [
+    {
+      "label": "bank_name",
+      "type": "short_phrase",
+      "value": "Globe Trust Bank",
+      "question": "What is the name of the bank?"
+    },
+    {
+      "label": "account_holder",
+      "type": "name",
+      "value": "Sophia Martinez",
+      "question": "What is the account holder name?"
+    },
+    {
+      "label": "account_number",
+      "type": "digit_seq",
+      "value": "182-345  7211 5558 63",
+      "question": "What is the account number?"
+    },
+    {
+      "label": "account_type",
+      "type": "short_phrase",
+      "value": "Everyday Savings",
+      "question": "What is the account type?"
+    },
+    {
+      "label": "statement_period",
+      "type": "date_range",
+      "value": "1 Oct – 31 Oct 2024",
+      "question": "What is the statement period?"
+    },
+    {
+      "label": "opening_balance",
+      "type": "amount",
+      "value": "$4,250.00",
+      "question": "What is the opening balance?"
+    },
+    {
+      "label": "closing_balance",
+      "type": "amount",
+      "value": "$4,450.00",
+      "question": "What is the closing balance?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "transaction_history",
+      "text": "2024-10-01 Direct Deposit 500 $4,750.00\n2024-10-10 Bill Payment @ Utility Co. -250 $4,500.00\n2024-10-15 Bill Payment @ Telecom Co. -150 $4,350.00\n2024-10-20 Bill Payment @ Internet Co. -100 $4,250.00\n2024-10-25 Bill Payment @ Cable Co. -75 $4,175.00\n2024-10-30 Bill Payment @ Gas Co. -50 $4,125.00\n2024-10-31 Bill Payment @ Water Co. -25 $4,100.00"
+    }
+  ]
+}

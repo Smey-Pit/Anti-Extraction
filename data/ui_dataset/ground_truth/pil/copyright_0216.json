@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0216.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Shadows of the Past",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Alex Mercer",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Shadow Play Productions",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Alex Mercer. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "4474",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. ABANDONED HOSPITAL - CORRIDOR - NIGHT",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. ABANDONED HOSPITAL - NIGHT\n\nThe camera pans across the dimly lit corridors, the only sound the distant echo of footsteps. A figure, CASSIE, moves cautiously, her flashlight beam cutting through the darkness. She stops in front of a door, her hand trembling as she fumbles with the lock. With a soft click, the door opens, revealing a room filled with old medical equipment and forgotten files.\n\nCassie: (whispering) What are you hiding?\n\nShe approaches a desk, where a file is tucked away. She opens it, her eyes widening as she reads the contents. The file is about a patient, a man named Thomas, who disappeared without a trace years ago. Cassie’s heart races as she realizes the truth—Thomas is still here, somewhere in this hospital, and she must find him before it’s too late.\n\nCassie: (determined) I won’t let you escape again."
+    }
+  ]
+}

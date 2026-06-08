@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0227.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Whispers of the Forgotten",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Isaac Hartley",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Mystic Hollow Press",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Isaac Hartley. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "4708",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "Chapter 6: The First Clue",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "The old library in the heart of Willow Creek was a place where the air hung heavy with secrets. Each book, each dust mote, seemed to whisper tales of the past. As I wandered through the dimly lit aisles, my fingers traced the spines of ancient leather-bound volumes. In the corner, a large oak table held a collection of rare manuscripts, their edges worn smooth by time. It was here that I found the first clue, a faded note tucked between the pages of a history tome. The words were barely legible, but they hinted at a hidden society that had thrived in Willow Creek long before the town’s founding."
+    }
+  ]
+}

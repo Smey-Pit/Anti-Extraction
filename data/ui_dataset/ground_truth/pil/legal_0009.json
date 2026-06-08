@@ -1,0 +1,62 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0009.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Complaint for Breach of Contract",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Pinehill County, State of Novus",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "October 12, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "Case No. CV-2024-10987",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_plaintiff",
+      "type": "name",
+      "value": "Charlotte A. Brown",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_defendant",
+      "type": "name",
+      "value": "Robert C. Wilson",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Charlotte A. Brown",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._Nature_of_Action",
+      "text": "This action is brought by the Plaintiff to recover damages for breach of contract..."
+    },
+    {
+      "label": "clause_2.1_Facts",
+      "text": "On or about March 15, 2024, the Defendant entered into a contract with the Plaintiff to perform certain services..."
+    },
+    {
+      "label": "clause_3._Damages",
+      "text": "The Plaintiff seeks damages in the amount of $15,000 for the Defendant’s failure to perform as agreed..."
+    }
+  ]
+}

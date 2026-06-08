@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0085.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Instagram DM",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Liam",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Emily",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Emily",
+      "text": "Liam, r u free this afternoon?"
+    },
+    {
+      "label": "message_2_Liam",
+      "text": "Not really, got a lot of work. Sorry."
+    },
+    {
+      "label": "message_3_Emily",
+      "text": "Aw, that's too bad. Maybe another time then?"
+    },
+    {
+      "label": "message_4_Liam",
+      "text": "Definitely, let's plan something else."
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0195.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Lease Agreement",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Springfield City, State of Novaria",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "October 15, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "REF: LEASE-2024-113",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_landlord",
+      "type": "name",
+      "value": "Johnathan Oakley",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_tenant",
+      "type": "name",
+      "value": "Emily Myles",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Johnathan Oakley",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_2",
+      "type": "name",
+      "value": "Emily Myles",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._DEFINITIONS",
+      "text": "The terms 'Property' and 'Premises' shall hereinafter refer to the residential unit located at 123 Elm Street, Springfield."
+    },
+    {
+      "label": "clause_2.1_TERM_AND_RENT",
+      "text": "The term of this Lease shall commence on November 1, 2024, and end on October 31, 2025, unless terminated earlier as provided herein. Tenant agrees to pay rent of $1,200 per month."
+    },
+    {
+      "label": "clause_3.1_REPAIRS",
+      "text": "Landlord shall promptly repair any defects in the Property that affect Tenant's use and enjoyment thereof, subject to Tenant's prompt reporting of such defects."
+    }
+  ]
+}

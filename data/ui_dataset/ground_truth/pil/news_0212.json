@@ -1,0 +1,76 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0212.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Economic Observer Journal",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Healthcare Debate Heats Up as Medicare For All Gains Traction",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Lila Martinez",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Los Angeles, February 14, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Healthcare Reform",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Universal Healthcare",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Single-Payer System",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "The debate over healthcare reform has intensified with the introduction of Medicare For All, a proposal that would provide universal coverage. Advocates argue that it is the only way to ensure access to quality care for all Americans, while detractors warn of potential economic impacts."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Medicare For All would eliminate private health insurance and instead fund healthcare through a single-payer system. Proponents believe this would reduce administrative costs and make healthcare more affordable for individuals and families."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "On the other hand, opponents argue that such a system could lead to longer wait times and reduced choice for patients. They also contend that it could strain federal finances and lead to higher taxes."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Dr. Sarah Lee, a leading supporter of Medicare For All, stated, 'Access to healthcare is a basic human right, and we must act now to ensure everyone can receive the care they need.'"
+    },
+    {
+      "label": "pull_quote",
+      "text": "'Medicare For All is not just about healthcare; it’s about economic security and social justice.' - Dr. Sarah Lee"
+    }
+  ]
+}

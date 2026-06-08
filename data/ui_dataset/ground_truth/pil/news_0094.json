@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0094.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "The Moderate Beacon",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Immigration Bill Stalls Amid Partisan Divide",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Rachel K. Wilson",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Washington D.C., July 20, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Immigration",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Legislative Action",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Border Security",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Efforts to pass comprehensive immigration reform legislation have stalled due to deep ideological divisions between Democrats and Republicans."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The bill, introduced by Senator Maria Rodriguez, would provide a pathway to citizenship for undocumented immigrants and strengthen border security."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Democrats support the measure as a step towards addressing long-standing issues, while Republicans oppose it, citing security concerns and the need for stricter enforcement."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Immigrant rights activist Carlos Garcia said, 'This is about human dignity and justice.'"
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Senator Robert Smith countered, 'Security must come first; we cannot let our borders become open doors for illegal activity.'"
+    },
+    {
+      "label": "pull_quote",
+      "text": "‘We need a balanced approach that respects both human rights and national security,’ declared Senator Rodriguez at a town hall meeting."
+    }
+  ]
+}

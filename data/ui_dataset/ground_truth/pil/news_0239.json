@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0239.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Southside Observer",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Immigration Law Changes Spark Protests Across Region",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Maria G. Lopez",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Southville, June 24, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Immigration Policy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Protests",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Border Control",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Recent changes to immigration laws have sparked widespread protests across the region, with advocates calling for more humane policies and opponents emphasizing national security concerns."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The new legislation includes stricter border controls and limits on asylum seekers, measures that have been met with strong opposition from immigrant rights groups."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Protesters gathered in major cities, demanding that the government reconsider its stance and adopt a more compassionate approach to immigration."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Supporters of the new laws argue that they are necessary to prevent illegal immigration and protect American jobs."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Law enforcement officials report heightened tensions and increased incidents of civil unrest in several communities."
+    },
+    {
+      "label": "pull_quote",
+      "text": "'We cannot turn a blind eye to the suffering of those seeking refuge. Our laws must reflect compassion and justice.' - Protest Organizer Carlos Rodriguez"
+    }
+  ]
+}

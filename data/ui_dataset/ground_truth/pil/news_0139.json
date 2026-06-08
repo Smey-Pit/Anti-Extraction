@@ -1,0 +1,76 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0139.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Future Trends Magazine",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Green Energy: The Future of Power or an Unattainable Dream?",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Robert K. Brown",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Chicago, May 19, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Renewable Energy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Climate Change",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Energy Policy",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "With global leaders increasingly focused on renewable energy solutions, the debate rages on whether green energy can truly replace traditional fossil fuels and meet the world's energy demands sustainably."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Renewable energy advocate Dr. Sarah Green argues that the shift to green energy is not only possible but imperative for combating climate change, stating, 'We have the technology and the resources to make this transition.'"
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Critics, however, point out the high costs and logistical challenges of scaling up renewable infrastructure, with industry analyst Mark Thompson warning, 'The transition will require significant investment and may take decades to fully realize.'"
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Some experts suggest a hybrid approach, combining renewable energy sources with advanced storage technologies and smart grid systems to ensure a stable and reliable power supply, with energy consultant Jane Doe proposing, 'A balanced strategy is needed to achieve long-term sustainability.'"
+    },
+    {
+      "label": "pull_quote",
+      "text": "We have the technology and the resources to make this transition."
+    }
+  ]
+}

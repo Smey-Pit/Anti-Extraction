@@ -1,0 +1,62 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0177.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Last Will and Testament",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Greenwood County, State of Novamont",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "December 10, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "party_1_grantor",
+      "type": "name",
+      "value": "Geraldine S. Maple",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_executor",
+      "type": "name",
+      "value": "Henry D. Birch",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Geraldine S. Maple",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_2",
+      "type": "name",
+      "value": "Henry D. Birch",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._TESTATOR'S_NAME_AND_ADDRESS",
+      "text": "I, Geraldine S. Maple, residing at 456 Elm Avenue, Greenwood County, State of Novamont, do hereby make, publish, and declare this to be my last will and testament."
+    },
+    {
+      "label": "clause_2.1_EXECUTOR",
+      "text": "I appoint Henry D. Birch, residing at 789 Oak Lane, Greenwood County, State of Novamont, as the Executor of my estate."
+    },
+    {
+      "label": "clause_3._DISPOSAL_OF_ESTATE",
+      "text": "My personal property, including but not limited to furniture, jewelry, and bank accounts, shall be divided equally among my children: James Maple, Jane Maple, and John Maple."
+    }
+  ]
+}

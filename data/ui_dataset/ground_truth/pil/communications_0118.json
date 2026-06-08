@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0118.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Discord",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Ella",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Max",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Ella",
+      "text": "Hey Max, I'm super stressed about my rent this month..."
+    },
+    {
+      "label": "message_2_Max",
+      "text": "Same here! We should talk to our landlord."
+    },
+    {
+      "label": "message_3_Ella",
+      "text": "Yeah, I'll reach out tmrw. Thanks for the support!"
+    },
+    {
+      "label": "message_4_Max",
+      "text": "No prob. Let's get through this together."
+    }
+  ]
+}

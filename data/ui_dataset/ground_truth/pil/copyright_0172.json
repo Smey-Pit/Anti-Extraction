@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0172.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Forgotten Path",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Avery Kane",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Moonlight Books",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Avery Kane. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "3545",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "Chapter 6: The Whispering Woods",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "She stood at the edge of the forest, the trees towering above her like ancient sentinels. The path before her was overgrown, the leaves crunching underfoot as she stepped forward. The air was thick with the scent of pine and damp earth, a mixture that seemed to wrap around her like a comforting embrace. As she walked deeper into the woods, the world around her grew quieter, the distant hum of civilization fading away.\n\nThe path led her to a clearing, where a small stone statue stood in the center. It depicted a woman, her arms outstretched as if welcoming the sun. Beside the statue, a weathered wooden bench offered a place to rest. She sat down, the cool wood pressing against her back, and closed her eyes.\n\nMemories flooded her mind, images of a different life, a different time. She remembered the laughter, the love, the joy. But now, everything felt distant, like a dream from a long-ago past. She reached into her pocket, pulling out a small, tarnished locket. The clasp was worn, but the photo inside remained intact, showing a young couple smiling at each other. She traced the edges of the photo with her fingers, feeling a warmth in her chest that had been absent for so long."
+    }
+  ]
+}

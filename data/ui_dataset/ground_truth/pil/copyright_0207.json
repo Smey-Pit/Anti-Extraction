@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0207.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Whispers in the Shadows",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Elianor Hargrove",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Mystic Moon Press",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Elianor Hargrove. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "4284",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "Chapter 4: The Last Signal",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "The old house on Elm Street was as silent as it had been since the night of the storm. The wind whispered through the broken shutters, carrying with it the scent of damp earth and forgotten memories. In the dim light of the oil lamp, the walls seemed to shift ever so slightly, as if the spirits of the past were trying to communicate. Elianor Hargrove stood at the foot of the grand staircase, her heart pounding against her ribcage. She had come here, to this forsaken place, for answers that had eluded her for years. Each step she took echoed through the empty halls, a reminder of the solitude that awaited her. The silence was almost unbearable, but it was here, in this quiet, that she hoped to find what she sought."
+    }
+  ]
+}

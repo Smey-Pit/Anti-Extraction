@@ -1,0 +1,54 @@
+{
+  "doc_type": "banking",
+  "image_path": "images/pil/banking_0131.png",
+  "entities": [
+    {
+      "label": "bank_name",
+      "type": "short_phrase",
+      "value": "NationalTrust Bank",
+      "question": "What is the name of the bank?"
+    },
+    {
+      "label": "account_holder",
+      "type": "name",
+      "value": "James Thompson",
+      "question": "What is the account holder name?"
+    },
+    {
+      "label": "account_number",
+      "type": "digit_seq",
+      "value": "082-279  8140 8956 13",
+      "question": "What is the account number?"
+    },
+    {
+      "label": "account_type",
+      "type": "short_phrase",
+      "value": "Business Cheque",
+      "question": "What is the account type?"
+    },
+    {
+      "label": "statement_period",
+      "type": "date_range",
+      "value": "1 Oct – 31 Oct 2024",
+      "question": "What is the statement period?"
+    },
+    {
+      "label": "opening_balance",
+      "type": "amount",
+      "value": "$5,821.33",
+      "question": "What is the opening balance?"
+    },
+    {
+      "label": "closing_balance",
+      "type": "amount",
+      "value": "$6,167.21",
+      "question": "What is the closing balance?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "transaction_history",
+      "text": "1 Oct 2024 Client Invoice -2,000.00 $3,821.33\n5 Oct 2024 Office Supplies -150.00 $3,671.33\n10 Oct 2024 Consulting Fees -1,200.00 $2,471.33\n15 Oct 2024 Software License -300.00 $2,171.33\n20 Oct 2024 Bank Transfer to Supplier -1,000.00 $1,171.33\n25 Oct 2024 Client Payment 2,500.00 $3,671.33\n31 Oct 2024 Salary Payment -1,500.00 $2,171.33"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0061.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Global Observer",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Climate Change Denialists Under Fire as Extreme Weather Events Continue",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Robert Green",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "New York City, March 28, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Climate Change",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Weather Events",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Science vs. Denialism",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "As another wave of extreme weather events hits the United States, climate change denialists are coming under increasing scrutiny for their stance against mainstream scientific consensus."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Environmental experts warn that the frequency and intensity of these weather events are likely linked to human-induced climate change, urging policymakers to act swiftly."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Supporters of the denialist movement counter that natural cycles are to blame, pointing to historical weather patterns as evidence."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Public opinion polls show growing concern among Americans about climate change, with many calling for more aggressive policies to address the issue."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Scientists emphasize the need for urgent action to mitigate the worst impacts of climate change, highlighting the importance of transitioning to renewable energy sources."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"We cannot afford to ignore the science any longer.\" - Dr. Emily Carter, Climate Scientist"
+    }
+  ]
+}

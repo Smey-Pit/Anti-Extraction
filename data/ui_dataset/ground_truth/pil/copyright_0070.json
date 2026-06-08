@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0070.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Echoes in the Dark",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Liam O’Connor",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Shadows and Light Productions",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Liam O’Connor. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "1451",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. ABANDONED FACTORY - NIGHT",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. ABANDONED FACTORY - NIGHT\n\nThe camera pans across a dimly lit factory floor, the air thick with dust and the faint hum of machinery. A figure in a black hoodie stands at the edge of a catwalk, looking down at the vast expanse below. The figure, JASON, is a man in his early thirties, his eyes darting nervously around the space.\n\nJASON\n(to himself)\nI can do this. I just need to find the key.\n\nHe reaches into his pocket and pulls out a small, intricately carved key. He fumbles with it for a moment before finally inserting it into a rusted lock on a metal door. With a click, the door swings open, revealing a dark, cobweb-filled room. Jason steps inside, his flashlight beam cutting through the shadows.\n\nFADE OUT."
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0200.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Forgotten Path",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Aiden Quinn",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Whispering Woods Press",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Aiden Quinn. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "4122",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "Chapter 9: The Whispering Trees",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "The path was overgrown, the leaves crunching underfoot like brittle bones. Emma walked slowly, her eyes scanning the dense underbrush. She had followed this path countless times before, but today it seemed different. Today, the air felt heavier, the shadows longer. She paused, listening to the rustling in the trees, wondering if she was alone.\n\nEmma reached into her backpack, pulling out a small notebook and pen. She began to write, her handwriting shaky as she recorded every detail of the journey. She knew that somewhere along this path lay the answers she sought, but she couldn’t shake the feeling of unease that had settled in her chest."
+    }
+  ]
+}

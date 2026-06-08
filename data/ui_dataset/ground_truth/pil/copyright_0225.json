@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0225.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Last Signal",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Elara Voss",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Mystic Grove Press",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Elara Voss. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "4696",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "Chapter 6: The Last Signal",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "The sun dipped below the horizon, casting a golden glow over the town square. Sarah stood alone, her eyes fixed on the old clock tower. It was the last signal, a tradition passed down through generations. As the clock struck seven, a soft whisper filled the air—a sound so faint, it was almost imperceptible. She closed her eyes, letting the memory wash over her. Her great-grandfather, a man of great courage and wisdom, had started this ritual decades ago. Today, it was her turn to carry on the legacy. With a deep breath, she whispered back, her voice barely audible, yet filled with the strength of a thousand silent prayers."
+    }
+  ]
+}

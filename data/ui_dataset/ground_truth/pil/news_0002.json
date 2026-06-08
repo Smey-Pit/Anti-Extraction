@@ -1,0 +1,76 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0002.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "People's Voice",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Public Sector Workers Protest Low Wages, Poor Benefits",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Emily Carter",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Los Angeles, April 1, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Labor Issues",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Public Sector",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Wage Disparity",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Thousands of public sector workers across the country have joined a nationwide protest to demand better wages and improved benefits, highlighting long-standing grievances in government employment."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The protests, organized by the National Public Sector Union, have drawn attention to the often-overlooked challenges faced by those in government jobs. Participants cite issues such as stagnant salaries and inadequate healthcare coverage."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Union leaders argue that public sector workers deserve fair compensation given the critical roles they play in society. They also highlight the importance of stable, secure employment in times of economic uncertainty."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Government officials have responded by acknowledging the concerns but emphasizing the financial constraints faced by state and local budgets. They propose alternative solutions, including performance-based bonuses and career development opportunities."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"We work hard every day to serve our communities, yet we continue to be undervalued and underpaid.\" - Sarah Johnson, Public School Teacher"
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0079.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Social Sentinel",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Racial Justice Movement: Has Progress Been Made?",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Sarah Chen",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Atlanta, July 15, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Racial Justice",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Systemic Racism",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Equality",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_4",
+      "type": "short_phrase",
+      "value": "Activism",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "The racial justice movement has gained momentum in recent years, but the question remains: has there been genuine progress in addressing systemic racism and inequality?"
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Advocates celebrate the removal of Confederate symbols and the implementation of diversity training in schools and workplaces."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "However, critics argue that these changes are superficial and do not address the root causes of racial disparities in education, employment, and criminal justice."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Activists continue to push for comprehensive reforms, including police reform and reparations for historical injustices."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "The debate underscores the ongoing struggle for true equality and the importance of sustained activism and awareness."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"Systemic racism is not a problem of the past; it is a persistent reality that demands constant attention and action.\" - Dr. Michael Johnson"
+    }
+  ]
+}

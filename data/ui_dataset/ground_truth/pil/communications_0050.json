@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0050.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Instagram DM",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Jack",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Katie",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Katie",
+      "text": "Hey Jack, I heard about your car trouble. How's it going?"
+    },
+    {
+      "label": "message_2_Jack",
+      "text": "Still waiting for them to fix it. It's a pain."
+    },
+    {
+      "label": "message_3_Katie",
+      "text": "Sorry to hear that. Do you need anything from me?"
+    },
+    {
+      "label": "message_4_Jack",
+      "text": "Nah, I'll manage. Just need some patience right now."
+    }
+  ]
+}

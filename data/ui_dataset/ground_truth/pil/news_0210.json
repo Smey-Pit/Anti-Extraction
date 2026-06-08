@@ -1,0 +1,76 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0210.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Economic Insight Daily",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Tech Giants’ Tax Dodges Under Scrutiny",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Michaela Thompson",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Washington, D.C., April 15, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Tech Industry",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Tax Reform",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Corporate Accountability",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "As the tech industry continues to dominate the global economy, questions are being raised about the fairness of its tax practices. Critics argue that these companies are exploiting loopholes to avoid paying their fair share."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The debate has intensified following reports that several major tech firms have been using complex financial structures to minimize their tax liabilities. This practice has sparked calls for regulatory reforms to ensure that all businesses contribute equitably to public services."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Proponents of the status quo maintain that such strategies are within the bounds of current laws and should not be changed. However, opponents counter that these tactics are eroding the tax base and undermining the ability of governments to fund essential services."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Senator Jane Doe, a leading critic of tech industry tax practices, stated, 'It's time for tech giants to play by the same rules as everyone else.'"
+    },
+    {
+      "label": "pull_quote",
+      "text": "'Tech companies are taking advantage of our outdated tax system, and it’s time for change.' - Senator Jane Doe"
+    }
+  ]
+}

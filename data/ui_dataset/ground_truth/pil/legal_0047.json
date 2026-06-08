@@ -1,0 +1,58 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0047.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Last Will and Testament",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Pineville County, State of Novaria",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "May 15, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "party_1_grantor",
+      "type": "name",
+      "value": "Daniel K. Hill",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_executor",
+      "type": "name",
+      "value": "James R. Black",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Daniel K. Hill",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_2",
+      "type": "name",
+      "value": "James R. Black",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._Personal_Property",
+      "text": "I hereby bequeath my personal property to my beloved wife, Mary K. Hill, free and clear of all encumbrances."
+    },
+    {
+      "label": "clause_2.1_Real_Property",
+      "text": "I give and bequeath my real property located at 123 Maple Street, Pineville, to my daughter, Emily K. Hill, hereinafter referred to as 'the Beneficiary'. "
+    }
+  ]
+}

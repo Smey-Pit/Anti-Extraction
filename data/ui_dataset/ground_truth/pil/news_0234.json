@@ -1,0 +1,82 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0234.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "The Conservative Sentinel",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Economic Growth: Can Free Trade Agreements Drive Prosperity?",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Harold J. Black",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Houston, July 15, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Free Trade",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Economic Policy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Globalization",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_4",
+      "type": "short_phrase",
+      "value": "Innovation",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Free trade agreements have long been hailed as a panacea for economic growth, but do they really deliver the promised benefits? Critics argue that such deals often come at the expense of domestic industries and workers, while proponents maintain that they open up new markets and spur innovation."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Proponents of free trade argue that by eliminating tariffs and other barriers to commerce, countries can tap into larger markets and boost their economies. They also contend that increased competition leads to lower prices for consumers and drives companies to improve their products and services."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Opponents, however, warn that free trade can lead to job losses in certain sectors and exacerbate income inequality. They also point out that developing nations may struggle to compete with more established economies, leading to a widening gap between rich and poor."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Some economists suggest that a balanced approach, combining free trade with targeted support for vulnerable industries and workers, could mitigate these risks and maximize the benefits of international trade."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"Trade is not a zero-sum game; we all win when we work together.\" - Senator Thomas Green"
+    }
+  ]
+}

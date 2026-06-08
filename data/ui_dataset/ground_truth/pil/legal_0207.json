@@ -1,0 +1,56 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0207.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Last Will and Testament",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Oakville Borough, State of Novamont",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "2024-01-10",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "Case No. W-2024-0110",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_grantor",
+      "type": "name",
+      "value": "William Myles",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "William Myles",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._TESTAMENTARY_DISPOSITION",
+      "text": "I direct that my estate be distributed as follows: one-half to my daughter, Amelia Myles, and the other half to my son, Benjamin Myles."
+    },
+    {
+      "label": "clause_2.1_EXECUTOR",
+      "text": "I appoint my friend, Emily Carter, as Executor of this Will."
+    },
+    {
+      "label": "clause_3._SUBSTITUTE_EXECUTOR",
+      "text": "If Emily Carter should predecease me, my Executor shall be my sister, Charlotte Myles."
+    }
+  ]
+}

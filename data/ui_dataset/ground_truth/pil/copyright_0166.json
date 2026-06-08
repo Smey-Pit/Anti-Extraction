@@ -1,0 +1,42 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0166.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Ghosts of Elmwood Cemetery",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Samantha Hartley",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Local Ledger",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Samantha Hartley. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "3449",
+      "question": "What is the page number?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "ELMWOOD CEMETERY, WILLOW CREEK – Tonight, the historic Elmwood Cemetery will host its annual vigil for the spirits of the past. The event, organized by the Willow Creek Historical Society, promises to be both educational and enlightening. Visitors are encouraged to bring flashlights and perhaps a bit of curiosity. According to local legend, the cemetery is home to several restless souls who seek closure. Historian Dr. Elara Voss will lead the evening, sharing stories of the town’s most intriguing residents. She believes that understanding the past can help us understand the present and perhaps even the future.\n\n‘Tonight, we honor not just the dead but also the living,’ Dr. Voss says. ‘Our ancestors have much to teach us about resilience and perseverance.’ The event starts at dusk and runs until midnight, weather permitting. Admission is free, and all proceeds will go towards preserving the cemetery grounds."
+    }
+  ]
+}

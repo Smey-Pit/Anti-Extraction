@@ -1,0 +1,86 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0247.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Economic Reviewer",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Economic Stimulus Package Faces Rejection from Congress",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Sarah Williams",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Chicago, May 28, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Stimulus Package",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Economy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Infrastructure",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_4",
+      "type": "short_phrase",
+      "value": "Tax Cuts",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Efforts to pass a comprehensive economic stimulus package in the House of Representatives have been derailed after several key provisions were stripped from the bill, leaving lawmakers scrambling to find a way forward."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The original proposal included funding for infrastructure projects, tax cuts for small businesses, and emergency relief for struggling families. However, disagreements over the size and scope of the package led to its collapse."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Representative Mark Davis said, 'We need to work together to address the urgent needs of our constituents and boost the economy.'"
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Economists warn that without timely action, the recovery could stall, particularly in sectors hardest hit by the recent economic downturn."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Supporters of the bill argue that immediate action is necessary to prevent further job losses and business closures."
+    },
+    {
+      "label": "pull_quote",
+      "text": "‘The economy cannot wait for perfect conditions. We need bold action now to secure our future.’ - Senator Emily White"
+    }
+  ]
+}

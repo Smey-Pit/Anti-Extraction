@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0097.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Instagram DM",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Lily",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Emma",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Emma",
+      "text": "Hey Lily! How's it going?"
+    },
+    {
+      "label": "message_2_Lily",
+      "text": "Not great, tbh. I'm in a bit of a rut."
+    },
+    {
+      "label": "message_3_Emma",
+      "text": "Sorry to hear that. Want to talk?"
+    },
+    {
+      "label": "message_4_Lily",
+      "text": "Yeah, I think I need a friend right now. :("
+    }
+  ]
+}

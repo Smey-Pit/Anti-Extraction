@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0106.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Last Leaf",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Alden Reeves",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Mystic Press",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Alden Reeves. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "2182",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "Chapter 9: The Garden of Resilience",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "The sun dipped below the horizon, casting a golden glow over the city. In an old, weathered garden, a single ivy leaf clung tenaciously to the wall, defying the autumn chill. AMELIA, a young artist, sat beneath the leaf, her paintbrush poised over the canvas before her. She had been painting this leaf for weeks, trying to capture its essence, its resilience. As the last rays of sunlight faded, Amelia leaned back, satisfied. The leaf would be the final touch to her masterpiece, a testament to the beauty of perseverance."
+    }
+  ]
+}

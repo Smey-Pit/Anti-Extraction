@@ -1,0 +1,72 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0241.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Non-Disclosure Agreement",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Greenfield City, State of Verdantia",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "2024-07-02",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "NDA-2024-12345",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_disclosing_party",
+      "type": "name",
+      "value": "Alexander W. Willow",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_receiving_party",
+      "type": "name",
+      "value": "Isabella Q. Maple",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Alexander W. Willow",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_2",
+      "type": "name",
+      "value": "Isabella Q. Maple",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._DEFINITION_OF_CONFIDENTIAL_INFORMATION",
+      "text": "Confidential Information means all proprietary information disclosed by Disclosing Party to Receiving Party."
+    },
+    {
+      "label": "clause_2._OBLIGATIONS_OF_RECEPTIVE_PARTY",
+      "text": "Receiving Party agrees to maintain the confidentiality of the Confidential Information."
+    },
+    {
+      "label": "clause_3._TERM_AND_TERMINATION",
+      "text": "This agreement shall remain in effect until terminated by either party upon written notice."
+    },
+    {
+      "label": "notary_note",
+      "text": "Sworn before me this 2nd day of July 2024."
+    }
+  ]
+}

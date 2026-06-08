@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0176.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "iMessage",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Sara",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Tom",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Sara",
+      "text": "Hey Tom, how r u?"
+    },
+    {
+      "label": "message_2_Tom",
+      "text": "I'm good thanks! How's work?"
+    },
+    {
+      "label": "message_3_Sara",
+      "text": "It's okay. Just a bit stressed about this big presentation tmrw."
+    },
+    {
+      "label": "message_4_Tom",
+      "text": "No prob! Just take ur time & breathe. I've got your back!"
+    }
+  ]
+}

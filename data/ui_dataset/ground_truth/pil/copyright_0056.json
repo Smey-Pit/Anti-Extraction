@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0056.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Whispers in the Wind",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Isabella Myles",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Eldridge Press",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Isabella Myles. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "1218",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "Chapter 6: The Whispering Tree",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "The sun had long since set, casting long shadows over the old oak tree that stood sentinel at the edge of the meadow. Under its gnarled branches, the wind whispered secrets to those who listened closely. Tonight, it was a young woman named Elara who heard its call, her heart pounding with a mix of fear and anticipation as she approached the tree. She had come here, to this place where time seemed to stand still, to seek answers from the spirits of the land. As she reached out to touch the rough bark, a cool breeze brushed past her, carrying with it the faint scent of wildflowers and the distant sound of a lone wolf howling in the distance."
+    }
+  ]
+}

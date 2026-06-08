@@ -1,0 +1,46 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0245.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Instagram DM",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Zoe",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Chris",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Chris",
+      "text": "Hey Zoe, you look amazing in that dress!"
+    },
+    {
+      "label": "message_2_Zoe",
+      "text": "Thanks! I was nervous about wearing it, but it turned out great."
+    },
+    {
+      "label": "message_3_Chris",
+      "text": "It totally did! You looked fabulous at the event last night."
+    },
+    {
+      "label": "message_4_Zoe",
+      "text": "I wish my sister could have come, but she had to work late."
+    },
+    {
+      "label": "message_5_Chris",
+      "text": "That’s too bad. She should have made it. Maybe next time!"
+    }
+  ]
+}

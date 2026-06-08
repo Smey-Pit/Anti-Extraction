@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0068.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Last Witness",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Ella Thompson",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Pulse Pictures",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Ella Thompson. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "1390",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. ABANDONED FACTORY - NIGHT",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. ABANDONED FACTORY - NIGHT\n\nThe factory is dark, save for the flickering light of a single flashlight. JESSICA, late 20s, stands in the center of the room, her heart racing. She holds a notebook and pen, ready to record anything she might find. The walls are covered in graffiti, and the air is thick with the smell of decay. Suddenly, a shadow moves in the corner of her eye.\n\nSUSAN (O.S.)\n(from the darkness)\nJessica?\n\nJessica turns, her flashlight beam cutting through the darkness.\n\nJESSICA\n(startled)\nSusan? Is that you?\n\nSUSAN\n(softly)\nYes, I’m here. We need to get out of here.\n\nJESSICA\n(nervously)\nAre you okay?\n\nSUSAN\n(trembling)\nI think something’s following us.\n\nJessica’s flashlight wavers as she tries to calm her nerves. They move quickly, their footsteps echoing through the empty factory. Suddenly, Susan stops, her hand on Jessica’s arm.\n\nSUSAN\n(hushed)\nThere.\n\nJessica follows Susan’s gaze and sees a figure in the shadows, watching them intently.\n\nFADE OUT."
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0042.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Gmail",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Alex",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Dr. Johnson",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "subject",
+      "type": "short_phrase",
+      "value": "Doctor's Appointment",
+      "question": "What is the subject line of this message?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Alex",
+      "text": "Hi Dr. Johnson, hope you're doing well. Can we schedule my next app in Nov?"
+    },
+    {
+      "label": "message_2_Dr._Johnson",
+      "text": "Of course, Alex. How about the 15th?"
+    },
+    {
+      "label": "message_3_Alex",
+      "text": "Sounds good. Thanks!"
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0193.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "The Civic Sentinel",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Gun Control Reforms: Can We Find Common Ground Amidst Division?",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Emily Carter",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Chicago, June 5, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Gun Control",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Second Amendment",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Public Safety",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_4",
+      "type": "short_phrase",
+      "value": "Mental Health",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "The ongoing debate over gun control continues to polarize the nation. With each mass shooting, the conversation intensifies, yet meaningful progress remains elusive. Can lawmakers find common ground to enact effective reforms?"
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Advocates for stricter gun laws argue that sensible regulations can save lives and reduce violence. They point to states with robust gun control measures that have seen lower rates of gun-related deaths."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Opponents contend that such measures infringe on Second Amendment rights and fail to address the root causes of gun violence. They believe that mental health and community programs are more effective solutions."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Both sides agree that the current system is broken and that significant changes are needed. However, they differ sharply on how to achieve those changes."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Some experts suggest a compromise approach that focuses on background checks, red flag laws, and enhanced training for law enforcement officers."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"The tragedy of gun violence is not just about statistics; it’s about real lives lost. We must act now to prevent further suffering.\" — Police Chief James Wilson"
+    }
+  ]
+}

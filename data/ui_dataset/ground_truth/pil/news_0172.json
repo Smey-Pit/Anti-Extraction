@@ -1,0 +1,76 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0172.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "The Civic Voice",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Affordable Housing Crisis Grips Urban Areas",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Lila W. Thompson",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Los Angeles, February 18, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Housing Crisis",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Urban Development",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Social Justice",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "The affordable housing crisis continues to plague urban areas across the country, leaving many families struggling to find safe and affordable places to live. Advocates call for immediate action to address this growing concern."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Rising property values and limited supply have pushed housing costs to unsustainable levels, making it increasingly difficult for middle-class and low-income residents to secure adequate housing. This has led to an increase in homelessness and displacement."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Local governments and non-profits are working to provide temporary solutions, but critics argue that these measures are insufficient and that systemic changes are needed. They advocate for policies that prioritize affordable housing development."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Some cities are exploring innovative solutions, such as inclusionary zoning and density bonuses, to encourage developers to include affordable units in new projects. However, these efforts face significant opposition from developers and property owners."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"Housing is a basic human right, and it’s time we take action to ensure everyone has a place to call home.\" - City Councilor James Lee"
+    }
+  ]
+}

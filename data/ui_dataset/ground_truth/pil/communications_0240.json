@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0240.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Instagram DM",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Oliver",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Sophie",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Sophie",
+      "text": "Hey Oliver, I’m having some legal issues. Can you help?"
+    },
+    {
+      "label": "message_2_Oliver",
+      "text": "Sorry to hear that. What’s going on? Do you have a lawyer?"
+    },
+    {
+      "label": "message_3_Sophie",
+      "text": "No, I don’t. I think someone’s been stealing from my business. What should I do?"
+    },
+    {
+      "label": "message_4_Oliver",
+      "text": "That sounds serious. You should report it to the police and maybe consult a lawyer."
+    }
+  ]
+}

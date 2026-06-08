@@ -1,0 +1,76 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0168.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "The Conservative Sentinel",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Conservative Group Launches Campaign Against Affirmative Action",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Sarah Green",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "New York City, NY, June 15, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Affirmative Action",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Educational Policy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Racial Equality",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "A conservative advocacy group has launched a nationwide campaign to repeal affirmative action policies, claiming they perpetuate racial discrimination and hinder merit-based admissions."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The campaign, titled 'Fair Admissions for All,' argues that affirmative action unfairly advantages certain racial groups at the expense of qualified applicants from other backgrounds."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "‘Affirmative action is a flawed policy that does more harm than good,’ said John Miller, executive director of the group. ‘It undermines the integrity of our educational institutions and fails to promote true diversity and inclusion.’"
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "However, proponents of affirmative action maintain that it is necessary to address historical injustices and ensure equal opportunities for underrepresented communities."
+    },
+    {
+      "label": "pull_quote",
+      "text": "‘Affirmative action is not about race; it’s about ensuring that every applicant is judged based on their merits and qualifications.’ – Dr. Maria Rodriguez"
+    }
+  ]
+}

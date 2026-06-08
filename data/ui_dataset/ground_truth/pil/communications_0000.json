@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0000.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "WhatsApp",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Sarah",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Tom",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Tom",
+      "text": "Hey Sarah, I’m havin’ some probs w/ my car. Need 2 borrow ur bike 2day. Can u?"
+    },
+    {
+      "label": "message_2_Sarah",
+      "text": "Sure thing Tom! Just make sure 2 return it before u go 2 work."
+    },
+    {
+      "label": "message_3_Tom",
+      "text": "Will do! Thanks so much!"
+    },
+    {
+      "label": "message_4_Sarah",
+      "text": "No prob. Anythin’ u need, just let me know."
+    }
+  ]
+}

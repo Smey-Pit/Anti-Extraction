@@ -1,0 +1,42 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0010.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Unseen Hero: A Profile of Jane Doe",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Ava Green",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Daily Beacon",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Ava Green. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "239",
+      "question": "What is the page number?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "Jane Doe, a quiet yet determined woman from the small town of Willow Creek, has been quietly making waves in the community. Known for her unassuming nature, Jane has recently become a beacon of hope during these challenging times. Her story began when she started volunteering at the local food bank, where she noticed the struggles faced by many families. Determined to make a difference, Jane launched a grassroots initiative called 'Community Care.'\n\nThrough tireless efforts and community support, Jane has managed to provide essential resources to those in need. Her dedication and compassion have not gone unnoticed. This feature aims to shed light on the unseen hero who continues to inspire others through acts of kindness and resilience."
+    }
+  ]
+}

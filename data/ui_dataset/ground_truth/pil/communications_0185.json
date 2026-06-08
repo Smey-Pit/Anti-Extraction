@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0185.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Instagram DM",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Tom",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Anna",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Tom",
+      "text": "Anna, I need to talk to you about our breakup. Can we chat?"
+    },
+    {
+      "label": "message_2_Anna",
+      "text": "Of course, when's a good time?"
+    },
+    {
+      "label": "message_3_Tom",
+      "text": "How about now? I've been thinking about it all day."
+    },
+    {
+      "label": "message_4_Anna",
+      "text": "Sure, let's talk. I'm in my office right now."
+    }
+  ]
+}

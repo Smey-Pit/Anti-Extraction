@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0035.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "The Northern Tribune",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "City Council’s Green Energy Plan Panned by Critics",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Evelyn M. Hartley",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Springfield, July 12, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Politics",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Green Energy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Climate Change",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Job Creation",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Springfield’s City Council recently approved a controversial green energy plan aimed at reducing carbon emissions by 50% over the next decade, a move that has sparked intense debate among residents and local businesses."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Proponents argue that the plan will create thousands of jobs in renewable energy sectors and reduce the city’s reliance on fossil fuels, while opponents warn of potential job losses and increased costs for consumers."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Mayor Jameson declared, 'We cannot afford to wait any longer to act on climate change. This plan is essential for our future.' However, business owners in the manufacturing sector have expressed concerns about the high initial investment required."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Environmental activist Jane Doe added, 'This is a significant step forward, but we need to ensure it benefits all members of the community and not just a select few.'"
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "The plan now goes before the state legislature for final approval."
+    },
+    {
+      "label": "pull_quote",
+      "text": "‘We cannot afford to wait any longer to act on climate change.’ – Mayor Jameson"
+    }
+  ]
+}

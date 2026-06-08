@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0130.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Instagram DM",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Olivia",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Jake",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Olivia",
+      "text": "Jake, I got a summons for a court hearing. Can't believe this happened..."
+    },
+    {
+      "label": "message_2_Jake",
+      "text": "Omg Olivia, I'm so sorry. Do you need any help?"
+    },
+    {
+      "label": "message_3_Olivia",
+      "text": "Thanks, but I think I'll handle it myself. It's just a small issue."
+    },
+    {
+      "label": "message_4_Jake",
+      "text": "Alright. Let me know if you need anything though. We're here for u."
+    }
+  ]
+}

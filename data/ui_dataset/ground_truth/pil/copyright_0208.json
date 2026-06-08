@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0208.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Echoes of the Past",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Liam Quinn",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Silver Screen Productions",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Liam Quinn. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "4311",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. KITCHEN - NIGHT",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. KITCHEN - NIGHT\n\nThe kitchen is dimly lit by the glow of a single overhead light. The walls are lined with old, faded cabinets, and the floor is covered in a layer of dust. A faint echo of footsteps can be heard from the hallway. The camera pans slowly across the room, capturing the dust motes dancing in the light.\n\nJESSICA (mid-30s, worn but determined) enters, her movements slow and deliberate. She walks over to the old wooden table, where a single photograph lies face down. She picks it up, her fingers tracing the edges of the photo.\n\nJESSICA\n(whispering to herself)\nIt's been so long...\n\nShe turns the photo over, revealing a young couple standing in front of a small cottage. Jessica's eyes fill with tears as she looks at the picture. She places it back on the table and sits down, her hands trembling slightly.\n\nFADE TO BLACK."
+    }
+  ]
+}

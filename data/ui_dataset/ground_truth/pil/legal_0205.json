@@ -1,0 +1,68 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0205.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Lease Agreement",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Springfield City, State of Novamont",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "2024-03-15",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "REF: LEASE-2024-0315",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_landlord",
+      "type": "name",
+      "value": "Johnathan Oakley",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_tenant",
+      "type": "name",
+      "value": "Elizabeth Harper",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Johnathan Oakley",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_2",
+      "type": "name",
+      "value": "Elizabeth Harper",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._TERM_AND_PREMISES",
+      "text": "The term of the Lease shall commence on March 20, 2024, and terminate on March 19, 2027."
+    },
+    {
+      "label": "clause_2.1_RENT",
+      "text": "Tenant shall pay Rent in the amount of $1,200 per month, due on the first day of each month."
+    },
+    {
+      "label": "clause_3._USE_OF_PREMISES",
+      "text": "Premises shall be used solely for residential purposes and no part thereof shall be used for any illegal activity."
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0100.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "National Insight Journal",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Tech Giants’ Political Influence Sparks Controversy",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Evelyn M. Clarke",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Washington D.C., March 15, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Technology",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Politics",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Regulation",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_4",
+      "type": "short_phrase",
+      "value": "Corporate Influence",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "In an era where technology has become the backbone of modern society, tech giants have increasingly ventured into the political arena, raising questions about their influence on policy decisions."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The recent revelations about corporate lobbying efforts and strategic partnerships with political parties have led to widespread debate over whether these companies should have such significant sway in government affairs."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Critics argue that such influence can undermine democratic processes and create conflicts of interest, while supporters contend that tech companies bring valuable expertise and resources to the table."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "The issue has sparked a new wave of regulatory scrutiny, with calls for greater transparency and accountability from industry leaders."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"Tech companies are not just bystanders in politics; they are active participants shaping our future.\" - Senator Jane Doe"
+    }
+  ]
+}

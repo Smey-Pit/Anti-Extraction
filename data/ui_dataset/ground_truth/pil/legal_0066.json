@@ -1,0 +1,72 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0066.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Confidentiality Agreement",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Brookside County, State of Verano",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "September 27, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "NDA-2024-113",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_disclosing_party",
+      "type": "name",
+      "value": "Innovatech Solutions Corp.",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_receiving_party",
+      "type": "name",
+      "value": "Bright Ideas Consulting LLC",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Innovatech Solutions Corp.",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_2",
+      "type": "name",
+      "value": "Bright Ideas Consulting LLC",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._Scope_of_Confidential_Information",
+      "text": "The Disclosing Party may disclose to the Receiving Party certain confidential information as defined in Exhibit A attached hereto and incorporated herein by reference."
+    },
+    {
+      "label": "clause_2.1_Use_of_Confidential_Information",
+      "text": "The Receiving Party agrees that it shall use the Confidential Information solely for the purpose of evaluating the potential business relationship between the Parties and shall not disclose such information to any third party without the prior written consent of the Disclosing Party."
+    },
+    {
+      "label": "clause_3._Duration_of_Obligation",
+      "text": "The obligations of the Receiving Party under this Agreement shall survive the termination or expiration of this Agreement for a period of three (3) years."
+    },
+    {
+      "label": "notary_note",
+      "text": "Sworn before me this 27th day of September 2024."
+    }
+  ]
+}

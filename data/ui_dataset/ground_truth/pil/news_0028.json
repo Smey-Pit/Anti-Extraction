@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0028.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "The Eastern Chronicle",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Immigration Policy Shifts as New Bill Advances",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Morgan Q. Brown",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Boston, March 10, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Politics",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "immigration",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "national security",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "civil rights",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "A controversial bill aimed at tightening immigration controls is gaining momentum in Congress, despite opposition from civil rights groups and some lawmakers."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The bill seeks to increase border security, streamline deportation processes, and impose stricter visa requirements."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Advocates argue that the measure is necessary to protect national security and uphold the rule of law."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Civil rights activists, however, fear that the bill could lead to the unjust deportation of innocent immigrants and exacerbate racial tensions."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Senator Martinez stated, 'Our immigration policies must reflect our values and ensure the safety of all Americans.'"
+    },
+    {
+      "label": "pull_quote",
+      "text": "Our immigration policies must reflect our values and ensure the safety of all Americans."
+    }
+  ]
+}

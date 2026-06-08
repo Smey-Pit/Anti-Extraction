@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0129.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Android Messages",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Zoe",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "David",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Zoe",
+      "text": "Hey David, I've been feeling really down lately. We should talk."
+    },
+    {
+      "label": "message_2_David",
+      "text": "Yeah, I've noticed. When's a good time?"
+    },
+    {
+      "label": "message_3_Zoe",
+      "text": "How 'bout tomorrow after work?"
+    },
+    {
+      "label": "message_4_David",
+      "text": "Sure, that works. I'll pick u up from work."
+    }
+  ]
+}

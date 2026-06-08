@@ -1,0 +1,68 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0082.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Last Will and Testament",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Brookside County, State of Verano",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "May 10, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "Case No. W-2024-05102",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_grantor",
+      "type": "name",
+      "value": "Eleanor M. Blackwood",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_executor",
+      "type": "name",
+      "value": "Jonathan B. Blackwood",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Eleanor M. Blackwood",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_2",
+      "type": "name",
+      "value": "Jonathan B. Blackwood",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._Personal_Property",
+      "text": "I direct that all personal property, including but not limited to jewelry, art, and collectibles, shall be distributed as follows..."
+    },
+    {
+      "label": "clause_2.1_Real_Estate",
+      "text": "My residence at 456 Elm Street, Brookside County, State of Verano, shall be conveyed to my daughter, Emily M. Blackwood."
+    },
+    {
+      "label": "clause_3.1_Funeral_Arrangements",
+      "text": "My funeral arrangements are to be handled by GreenLeaf Funeral Home, Brookside County, State of Verano."
+    }
+  ]
+}

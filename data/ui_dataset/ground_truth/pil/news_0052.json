@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0052.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "The Daily Beacon",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Healthcare Reform Bill Stalls in Congress Amid Partisan Divide",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Linda H. Green",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Washington D.C., June 15, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Healthcare",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Reform",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Partisanship",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Efforts to pass a comprehensive healthcare reform bill have stalled in Congress, as Democrats and Republicans continue to clash over key provisions, including funding and coverage expansions."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Democrats have called for sweeping reforms to address long-standing issues in the healthcare system, emphasizing access and affordability for all Americans."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Republican leaders, however, are focused on maintaining existing structures and reducing government involvement, arguing that market-based solutions are more effective."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "The impasse has led to frustration among constituents who are eager for meaningful change, with some calling for a bipartisan approach to find common ground."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Without swift action, experts warn that the current state of healthcare could worsen, particularly for vulnerable populations."
+    },
+    {
+      "label": "pull_quote",
+      "text": "'The American people deserve better than this partisan gridlock,' declared Representative Emily Wilson."
+    }
+  ]
+}

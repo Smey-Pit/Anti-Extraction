@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0237.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Whispers in the Wind",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Eliot Marlow",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Aurora Press",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Eliot Marlow. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "4906",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "Chapter 3: A Year Later",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "The old oak tree stood tall, its branches whispering secrets to the wind. Sarah leaned against it, her fingers tracing the rough bark as she gazed out at the sea. The sun was setting, casting long shadows across the beach. She closed her eyes, feeling the familiar pull of the ocean's embrace. It had been a year since she last stood here, a year since she left everything behind. The memory of her mother’s voice still lingered, a gentle reminder of home. 'Be brave, my dear,' her mother used to say. 'The world is full of wonders.'"
+    }
+  ]
+}

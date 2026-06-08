@@ -1,0 +1,50 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0037.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Last Will and Testament",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Maplewood County, State of Verano",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "October 16, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "party_1_grantor",
+      "type": "name",
+      "value": "Olivia L. Johnson",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Olivia L. Johnson",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._Personal_Property",
+      "text": "I give, devise, and bequeath all my personal property, including but not limited to furniture, jewelry, and other tangible assets, to my son, Alexander J. Johnson, hereinafter referred to as 'he'."
+    },
+    {
+      "label": "clause_2._Real_Property",
+      "text": "I give, devise, and bequeath my real property located at 456 Elm Street, Maplewood City, to my daughter, Emily K. Johnson, hereinafter referred to as'she'."
+    },
+    {
+      "label": "clause_3._Executor",
+      "text": "I appoint my nephew, Benjamin P. Smith, as Executor of this Will, to manage the distribution of my estate and ensure that all provisions of this Will are carried out."
+    }
+  ]
+}

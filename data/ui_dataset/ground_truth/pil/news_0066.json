@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0066.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Political Pulse Magazine",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Environmental Groups Criticize Government Inaction on Climate Change",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Michael A. Green",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Washington D.C., April 1, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Climate Change",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Government Policy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Public Protest",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Environmental activists are increasingly vocal about the government's lack of progress in implementing effective climate policies, leading to growing public frustration."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Despite repeated calls for urgent action, the administration has so far failed to introduce substantial legislation aimed at reducing carbon emissions."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Protests and demonstrations across the country have seen an increase in attendance and intensity, with many participants demanding immediate and concrete steps from policymakers."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Experts caution that without swift intervention, the economic and environmental impacts of climate change could become irreversible."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "On the other hand, supporters of the current approach argue that the government is working diligently behind the scenes to find viable solutions."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"The time for talk is over. We need action now, or we will face catastrophic consequences.\" - Emily Carter, Green Alliance President"
+    }
+  ]
+}

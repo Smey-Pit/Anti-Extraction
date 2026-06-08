@@ -1,0 +1,86 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0191.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "The Policy Post",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Green New Deal: A Path to Prosperity or Just Another Political Fad?",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Michael Greenfield",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "New York City, April 20, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Climate Change",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Green New Deal",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Economic Growth",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_4",
+      "type": "short_phrase",
+      "value": "Environmental Policy",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "The Green New Deal has become a rallying cry for environmentalists and a point of contention for critics who argue it could stifle economic growth. But what does the future hold for this ambitious plan?"
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Proponents argue that the Green New Deal offers a comprehensive solution to climate change while creating millions of jobs and revitalizing communities. They point to successful models in Europe and Scandinavia as proof of concept."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "However, opponents warn that the plan's high costs and stringent regulations could lead to inflation and job losses in certain sectors. They also question whether the federal government has the expertise to manage such a complex transition."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Supporters counter that the economic benefits far outweigh the costs, citing studies that show long-term savings and increased competitiveness in renewable energy markets."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Critics argue that the Green New Deal is too radical and lacks practical implementation strategies. They suggest a more incremental approach to addressing climate change."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"We need bold action, not just empty promises. The Green New Deal is a step in the right direction.\" — Environmental Activist, Jane Smith"
+    }
+  ]
+}

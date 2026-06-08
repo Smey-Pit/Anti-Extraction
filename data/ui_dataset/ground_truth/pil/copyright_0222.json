@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0222.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Whispers of the Forgotten",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Elara Voss",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Mystic Grove Press",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Elara Voss. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "4626",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "Chapter 4: The Last Signal",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "In the quiet town of Willow Creek, where whispers of the past linger in the air like a mist, the old library stood as a testament to forgotten knowledge. The creaking floorboards under her feet echoed the silence that filled the room. As she turned the yellowed pages of an ancient tome, her fingers traced the faded ink, feeling the weight of centuries. The story of the town's founding family unfolded before her, their secrets and sorrows woven into the very fabric of the land. Each word was a thread in a tapestry that could unravel at any moment, revealing truths long buried beneath layers of time."
+    }
+  ]
+}

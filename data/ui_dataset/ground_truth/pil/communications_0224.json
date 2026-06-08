@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0224.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Android Messages",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "David",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Lily",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_David",
+      "text": "Hey Lily, I need to talk about our project. I think we're going to miss the deadline."
+    },
+    {
+      "label": "message_2_Lily",
+      "text": "Oh no, that's bad. Have you tried talking to our boss about it?"
+    },
+    {
+      "label": "message_3_David",
+      "text": "I did, but she's not happy. She wants us to figure it out ourselves."
+    },
+    {
+      "label": "message_4_Lily",
+      "text": "Let's brainstorm some ideas then. Maybe we can add more hours or outsource some tasks."
+    }
+  ]
+}

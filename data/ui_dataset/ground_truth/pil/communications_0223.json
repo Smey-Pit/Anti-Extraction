@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0223.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Instagram DM",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Emma",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Rachel",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Emma",
+      "text": "Hey Rachel, I've been really stressed lately with work and bills. Do u have any tips for managing anxiety?"
+    },
+    {
+      "label": "message_2_Rachel",
+      "text": "Totally understand. I started meditating every day and it really helps. Also try journaling your thoughts."
+    },
+    {
+      "label": "message_3_Emma",
+      "text": "Thanks! I'll give it a shot. Feeling pretty overwhelmed tho. 😔"
+    },
+    {
+      "label": "message_4_Rachel",
+      "text": "You're not alone. Hang in there. We'll get through this together!"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0105.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Forgotten Heroes",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Morgan Carter",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Daily Beacon",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Morgan Carter. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "2162",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "Feature: The Forgotten Heroes",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "In the heart of the city lies a hidden gem, a community center that has been serving the less fortunate for over a decade. Tonight, the Beacon shines a spotlight on the unsung heroes behind this beacon of hope. Meet LUCY, a single mother who volunteers every weekend to help feed the homeless. Her smile is warm, her spirit unbreakable. Lucy says, 'Every person deserves a chance, no matter their circumstances.' This year, she was nominated for the Community Hero Award, a recognition that highlights the tireless efforts of those who make a difference in our community."
+    }
+  ]
+}

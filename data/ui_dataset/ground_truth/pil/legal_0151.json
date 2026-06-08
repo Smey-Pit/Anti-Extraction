@@ -1,0 +1,68 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0151.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Non-Disclosure Agreement",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Westwood City, State of Novaria",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "June 17, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "NDA-2024-113",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_disclosing_party",
+      "type": "name",
+      "value": "Jameson R. Larkin",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_receiving_party",
+      "type": "name",
+      "value": "Liam D. O'Connor",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Jameson R. Larkin",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_2",
+      "type": "name",
+      "value": "Liam D. O'Connor",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._Confidential_Information",
+      "text": "‘Confidential Information’ means all information disclosed by Disclosing Party to Receiving Party, whether oral or written, and includes trade secrets, know-how, business methods, customer lists, and technical data."
+    },
+    {
+      "label": "clause_2.1_Duration_of_Obligation",
+      "text": "Receiving Party’s obligation of confidentiality hereunder shall remain in effect indefinitely, until such time as the Confidential Information becomes publicly known through no fault of Receiving Party."
+    },
+    {
+      "label": "notary_note",
+      "text": "Sworn before me this 17th day of June 2024."
+    }
+  ]
+}

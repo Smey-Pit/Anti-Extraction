@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0029.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "WhatsApp",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Rachel",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Lily",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Lily",
+      "text": "Rachel, I need to talk about my parents' divorce."
+    },
+    {
+      "label": "message_2_Rachel",
+      "text": "Oh no, that sounds tough. Want to chat?"
+    },
+    {
+      "label": "message_3_Lily",
+      "text": "Yeah, they're fighting over custody and it's so stressful."
+    },
+    {
+      "label": "message_4_Rachel",
+      "text": "I'm here for you. We can plan something to take your mind off it."
+    }
+  ]
+}

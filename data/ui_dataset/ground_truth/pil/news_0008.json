@@ -1,0 +1,86 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0008.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Progressive Pulse",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Healthcare Debate Heats Up as Medicare Expansion Plan Faces Rejection",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "David K. Lee",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Washington D.C., March 18, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Politics",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Universal Healthcare",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Medicare Expansion",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Healthcare Costs",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_4",
+      "type": "short_phrase",
+      "value": "Public Health",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "A plan to expand Medicare coverage to all Americans has been rejected by the Senate, sparking heated debate over the future of healthcare in the United States."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The proposal, championed by Senator Davis, aimed to provide universal access to healthcare, arguing that it would improve public health outcomes and reduce overall costs."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Opponents, including many Republicans, argue that such a move would be fiscally unsustainable and would lead to longer wait times for non-emergency care."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Public health experts support the plan, citing evidence that universal healthcare systems tend to yield better health outcomes and lower mortality rates."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "A spokesperson for the White House commented, 'We believe that every American should have access to quality healthcare, regardless of their income or pre-existing conditions.'"
+    },
+    {
+      "label": "pull_quote",
+      "text": "'Medicare for All is not just a policy, it's a moral imperative,' declared Senator Davis during the debate."
+    }
+  ]
+}

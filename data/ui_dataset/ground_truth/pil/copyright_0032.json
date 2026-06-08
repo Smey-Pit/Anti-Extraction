@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0032.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Echoes of Silence",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Alden Hartley",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Silent Screen Productions",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Alden Hartley. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "778",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. ABANDONED HOSPITAL - NIGHT",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. ABANDONED HOSPITAL - NIGHT\n\nThe camera pans over the desolate corridors, illuminated only by the faint glow of the moonlight filtering through broken windows. The air is thick with dust and the scent of decay. We see a figure, a woman, standing at the end of a long, empty hallway. Her face is obscured by the shadow of a hooded cloak. She turns towards us, her eyes glowing faintly in the darkness.\n\nWOMAN\n(whispering)\nI am the keeper of this place. I have seen too much, heard too much. The dead still speak here, their voices lost in the silence.\n\nShe begins to walk down the hallway, her steps echoing in the emptiness. The camera follows, capturing the ghostly figures that drift past, their faces twisted in pain and despair. The woman stops in front of a door, her hand trembling as she reaches out to touch it.\n\nWOMAN\n(sighing)\nIt's time to let them go.\n\nThe door creaks open, revealing a room filled with the remnants of a forgotten era. The woman steps inside, her silhouette disappearing into the shadows."
+    }
+  ]
+}

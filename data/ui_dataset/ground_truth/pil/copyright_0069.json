@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0069.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Whispers of the Forgotten",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Elara Voss",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Prairie Moon Press",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Elara Voss. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "1416",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "Chapter 7: The Moonlit Revelation",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "The old library stood like a silent sentinel in the heart of Willow Creek, its walls lined with shelves that seemed to whisper secrets from another era. Tonight, the moonlight filtered through the stained glass windows, casting a spectral glow over the stacks. Among the towering books, a young librarian named Theo pored over a rare manuscript, his fingers tracing the faded ink. As he turned the page, the words danced before him, telling tales of forgotten gods and lost civilizations. In the silence, he could almost hear the echoes of ancient voices."
+    }
+  ]
+}

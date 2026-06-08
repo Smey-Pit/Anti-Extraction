@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0101.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Echoes of Tomorrow",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Liam Hart",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "FutureScript",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Liam Hart. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "2109",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. ASTRONAUT SHUTTLE - CONTROL ROOM - NIGHT",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. ASTRONAUT SHUTTLE - CONTROL ROOM - NIGHT\n\nThe room is filled with the soft hum of machinery and the occasional beep. Dr. Elara Voss stands by the control panel, her fingers dancing over the dials. Her eyes are fixed on the digital screens, displaying complex graphs and data streams.\n\nELARA\n(whispering)\nIt’s almost time. We have to make sure everything is perfect.\n\nA tech, JASON, steps into the room, his face a mask of concern.\n\nJASON\nWhat if something goes wrong?\n\nELARA\nWe can’t afford any mistakes. This is our last chance.\n\nThe door slides open, and a figure in a white suit enters, followed by a team of engineers. They begin to check and recheck every system, their movements precise and deliberate.\n\nFADE OUT."
+    }
+  ]
+}

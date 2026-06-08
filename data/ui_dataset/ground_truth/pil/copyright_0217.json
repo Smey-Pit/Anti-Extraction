@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0217.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Whispers in the Wind",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Isolde Myles",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Echoes Press",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Isolde Myles. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "4508",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "Chapter 3: The End of Day",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "The sun dipped below the horizon, casting long shadows across the desolate landscape. The old man sat on his weathered porch, a weather-beaten hat shielding his eyes from the fading light. His hands, gnarled and calloused, gripped a weathered pipe as he puffed out smoke rings that spiraled into the twilight. The air was still, broken only by the distant hoot of an owl and the rustle of leaves in the gentle breeze. In the distance, the silhouette of a small village emerged from the mist, its lights twinkling like stars fallen to earth."
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0198.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Echoes of the Past",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Liam Hart",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Silver Screen Studios",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Liam Hart. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "4077",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. Lighthouse - NIGHT",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. ABANDONED Lighthouse - NIGHT\n\nThe lighthouse stands tall and silent, its beam cutting through the night. Inside, the walls are covered in layers of dust and memories. A figure, cloaked in shadows, moves silently through the darkened room. The only sound is the occasional creak of the floorboards.\n\nFigure (V.O.)\n\nEvery night, I wait. Waiting for the signal that will guide me home.\n\nThe figure reaches into a hidden compartment, pulling out an old radio. They press a button, and static crackles through the speaker.\n\nFigure (V.O.)\n\nJust a little longer.\n\nThe camera pans to a small window, where a faint light flickers on the horizon. The figure smiles, a bittersweet expression on their face.\n\nFADE OUT."
+    }
+  ]
+}

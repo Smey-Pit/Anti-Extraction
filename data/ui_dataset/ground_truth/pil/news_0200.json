@@ -1,0 +1,86 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0200.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "National Tribune",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Tech Giants Face New Antitrust Challenges as Congress Hears Testimonies",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Alexa Thompson",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Washington D.C., April 15, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Politics",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Tech",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Antitrust",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Congress",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_4",
+      "type": "short_phrase",
+      "value": "Regulation",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "In a dramatic turn of events, major tech companies find themselves under intense scrutiny from Congress as lawmakers prepare to hear testimonies on their monopolistic practices."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The hearings, scheduled for next week, aim to explore how these tech giants have amassed such significant market power, potentially stifling competition and innovation in the digital marketplace."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Industry insiders warn that any regulatory changes could have far-reaching consequences, not just for the tech sector but for the broader economy as well."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Critics argue that these companies have used their dominant positions to squash smaller competitors and manipulate consumer data for profit, raising serious ethical concerns."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Advocates for stricter oversight hope this marks the beginning of a new era where tech companies operate within more stringent legal boundaries."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"Today’s tech giants are the new industrial titans, and we must ensure they serve the public good, not just their bottom line.\" — Senator Jane Doe"
+    }
+  ]
+}

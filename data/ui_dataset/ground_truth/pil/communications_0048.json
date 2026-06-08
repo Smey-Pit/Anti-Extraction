@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0048.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Discord",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Frank",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Grace",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Grace",
+      "text": "Hey Frank, how's your job search going?"
+    },
+    {
+      "label": "message_2_Frank",
+      "text": "Not great tbh. Got rejected again today."
+    },
+    {
+      "label": "message_3_Grace",
+      "text": "That stinks! Have you tried networking more?"
+    },
+    {
+      "label": "message_4_Frank",
+      "text": "Yeah, but it's hard to make connections when you're busy applying everywhere."
+    }
+  ]
+}

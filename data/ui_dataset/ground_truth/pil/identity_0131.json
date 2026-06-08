@@ -1,0 +1,73 @@
+{
+  "doc_type": "identity",
+  "image_path": "images/pil/identity_0131.png",
+  "entities": [
+    {
+      "label": "document_type",
+      "type": "short_phrase",
+      "value": "drivers_licence",
+      "question": "What type of identity document is this?"
+    },
+    {
+      "label": "issuing_authority",
+      "type": "short_phrase",
+      "value": "Harwick County Department of Motor Vehicles",
+      "question": "What authority issued this document?"
+    },
+    {
+      "label": "surname",
+      "type": "name",
+      "value": "Frost",
+      "question": "What is the surname?"
+    },
+    {
+      "label": "given_names",
+      "type": "name",
+      "value": "Aurora",
+      "question": "What are the given names?"
+    },
+    {
+      "label": "dob",
+      "type": "date",
+      "value": "1995-11-04",
+      "question": "What is the date of birth?"
+    },
+    {
+      "label": "document_number",
+      "type": "digit_seq",
+      "value": "HW-4421-DL",
+      "question": "What is the document number?"
+    },
+    {
+      "label": "nationality_state",
+      "type": "short_phrase",
+      "value": "Harwick",
+      "question": "What is the nationality or state?"
+    },
+    {
+      "label": "issue_date",
+      "type": "date",
+      "value": "2018-02-12",
+      "question": "What is the issue date?"
+    },
+    {
+      "label": "expiry_date",
+      "type": "date",
+      "value": "2028-02-12",
+      "question": "What is the expiry date?"
+    },
+    {
+      "label": "address",
+      "type": "short_phrase",
+      "value": "123 Snowfield Lane, Harwick",
+      "question": "What is the address on the document?"
+    },
+    {
+      "label": "licence_class",
+      "type": "short_phrase",
+      "value": "P",
+      "question": "What is the licence class?"
+    }
+  ],
+  "content_blocks": []
+}

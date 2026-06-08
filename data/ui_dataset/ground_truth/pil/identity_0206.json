@@ -1,0 +1,73 @@
+{
+  "doc_type": "identity",
+  "image_path": "images/pil/identity_0206.png",
+  "entities": [
+    {
+      "label": "document_type",
+      "type": "short_phrase",
+      "value": "drivers_licence",
+      "question": "What type of identity document is this?"
+    },
+    {
+      "label": "issuing_authority",
+      "type": "short_phrase",
+      "value": "County of Mithril — Department of Motor Vehicles",
+      "question": "What authority issued this document?"
+    },
+    {
+      "label": "surname",
+      "type": "name",
+      "value": "Draconis",
+      "question": "What is the surname?"
+    },
+    {
+      "label": "given_names",
+      "type": "name",
+      "value": "Thane",
+      "question": "What are the given names?"
+    },
+    {
+      "label": "dob",
+      "type": "date",
+      "value": "19750714",
+      "question": "What is the date of birth?"
+    },
+    {
+      "label": "document_number",
+      "type": "digit_seq",
+      "value": "CM-DL-4421-DL",
+      "question": "What is the document number?"
+    },
+    {
+      "label": "nationality_state",
+      "type": "short_phrase",
+      "value": "Mithril",
+      "question": "What is the nationality or state?"
+    },
+    {
+      "label": "issue_date",
+      "type": "date",
+      "value": "20190601",
+      "question": "What is the issue date?"
+    },
+    {
+      "label": "expiry_date",
+      "type": "date",
+      "value": "20290601",
+      "question": "What is the expiry date?"
+    },
+    {
+      "label": "address",
+      "type": "short_phrase",
+      "value": "123 Silverwind Lane, Mithril City",
+      "question": "What is the address on the document?"
+    },
+    {
+      "label": "licence_class",
+      "type": "short_phrase",
+      "value": "A",
+      "question": "What is the licence class?"
+    }
+  ],
+  "content_blocks": []
+}

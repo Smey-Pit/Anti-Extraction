@@ -1,0 +1,86 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0204.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Economic Outlook",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Trade War Escalates as US Imposes New Tariffs on Chinese Imports",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "David L. Brown",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Washington D.C., August 5, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Politics",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Trade",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Tariffs",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "China",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_4",
+      "type": "short_phrase",
+      "value": "Economics",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "The ongoing trade war between the United States and China intensified yesterday as the U.S. government announced new tariffs on a wide range of Chinese goods, sparking concern among business leaders and economists."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The move comes after months of escalating tensions, with both sides imposing sanctions and retaliatory measures on each other’s exports."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Critics argue that these tariffs will only exacerbate economic woes and could lead to a full-blown trade war, with negative repercussions for global markets."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Proponents of the tariffs assert that they are necessary to protect American industries and jobs, and to level the playing field in international trade."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Negotiations to resolve the dispute remain at an impasse, leaving many wondering if a resolution is even possible without significant concessions from either side."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"The trade war is a lose-lose situation for everyone involved. We need to find common ground and work towards a mutually beneficial agreement.\" — Treasury Secretary Jane Smith"
+    }
+  ]
+}

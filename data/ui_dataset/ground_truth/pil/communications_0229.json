@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0229.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Android Messages",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Mia",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Tom",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Mia",
+      "text": "Hey Tom, r u free tonight?"
+    },
+    {
+      "label": "message_2_Tom",
+      "text": "Yeah, what’s up?"
+    },
+    {
+      "label": "message_3_Mia",
+      "text": "Can u help me move some stuff? I’m swamped w/ work."
+    },
+    {
+      "label": "message_4_Tom",
+      "text": "Sure thing, let’s do it after u finish work. "
+    }
+  ]
+}

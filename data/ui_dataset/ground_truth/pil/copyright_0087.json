@@ -1,0 +1,42 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0087.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "A Life Unfolding",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Lila Grey",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "The Daily Chronicle",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Lila Grey. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "1775",
+      "question": "What is the page number?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "In a quiet corner of the city lies a small, unassuming bookstore, known to locals as 'Whispers and Whims'. For over two decades, it has been the heart of the community, a place where stories come to life and dreams are shared. Today, we meet the woman behind the counter, Eleanor, who has dedicated her life to preserving the art of reading and writing. Her story is one of passion, perseverance, and the enduring power of words."
+    }
+  ]
+}

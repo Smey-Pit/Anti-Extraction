@@ -1,0 +1,72 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0086.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Non-Disclosure Agreement",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Sunset City, State of Zenith",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "September 15, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "NDA-2024-113",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_disclosing_party",
+      "type": "name",
+      "value": "Avery Green",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_receiving_party",
+      "type": "name",
+      "value": "Liam Brown",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Avery Green",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_2",
+      "type": "name",
+      "value": "Liam Brown",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._DEFINITIONS",
+      "text": "‘Confidential Information’ means any information disclosed by the Disclosing Party that is not generally known to the public."
+    },
+    {
+      "label": "clause_2.1_OBLIGATIONS",
+      "text": "The Receiving Party shall keep all Confidential Information strictly confidential and shall not disclose such information to any third party without the prior written consent of the Disclosing Party."
+    },
+    {
+      "label": "clause_3._TERM",
+      "text": "This Agreement shall remain in effect until all Confidential Information has been made publicly available through no fault of the Receiving Party."
+    },
+    {
+      "label": "notary_note",
+      "text": "Sworn before me this 15th day of September 2024."
+    }
+  ]
+}

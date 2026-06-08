@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0099.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Echoes of the Past",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Liam Kane",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Silver Screen Studios",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Liam Kane. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "2069",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. OLD LIBRARY - DAY",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. OLD LIBRARY - DAY\n\nThe room is filled with sunlight streaming through the windows. ELIANOR GREY, a young woman in her late twenties, sits at a large oak desk, surrounded by books and papers. She looks up from her notes, a determined look on her face.\n\nELIANOR\nWe can’t let the past define us. We have to find a way to move forward.\n\nShe stands up and walks to a large map hanging on the wall, tracing the route with her finger. The map shows a path through the dense forest, leading to an abandoned cabin. She turns back to the camera, her eyes full of resolve.\n\nELIANOR\nIt’s time to uncover the truth.\n\nFADE OUT."
+    }
+  ]
+}

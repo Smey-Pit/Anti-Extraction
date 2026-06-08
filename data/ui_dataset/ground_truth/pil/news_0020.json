@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0020.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "National Insight Journal",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Tech Giant’s New Policy Sparks Debate on Privacy vs. Security",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Evelyn M. Thompson",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Washington, D.C., March 15, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Politics",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "cybersecurity",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "privacy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "government surveillance",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "In an unprecedented move, tech behemoth CyberSecure has announced a new policy that will allow government agencies to access user data without a warrant in cases of national security threats."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The announcement has ignited a fierce debate among privacy advocates and law enforcement officials. Critics argue that such a policy will erode the fundamental rights of citizens, while supporters contend that it is necessary to combat emerging cyber threats."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "CyberSecure CEO, Alex Voss, defended the policy, stating, 'Our goal is to protect both our users and the nation from potential threats. This is a delicate balance, but we believe it is essential.'"
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Senator Jane Doe expressed concern, saying, 'This could set a dangerous precedent and open the door for widespread surveillance without proper oversight.'"
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Privacy groups have vowed to challenge the policy in court, arguing that it violates the Fourth Amendment protections against unreasonable searches."
+    },
+    {
+      "label": "pull_quote",
+      "text": "‘This is a dangerous policy that prioritizes security over individual freedoms.’ – Senator Jane Doe"
+    }
+  ]
+}

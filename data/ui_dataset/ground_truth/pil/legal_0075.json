@@ -1,0 +1,68 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0075.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Service Agreement",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Springfield City, State of Novaria",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "2024-06-15",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "REF: SA-2024-113",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_client",
+      "type": "name",
+      "value": "JULIA KELLY",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_service_provider",
+      "type": "name",
+      "value": "TECHNOLOGIES INC.",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "JULIA KELLY",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_2",
+      "type": "name",
+      "value": "TECHNOLOGIES INC.",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._Scope_of_Services",
+      "text": "TECHNOLOGIES INC. shall provide software development services to JULIA KELLY as detailed in Exhibit A."
+    },
+    {
+      "label": "clause_2.1_Term",
+      "text": "This agreement shall commence on the Effective Date and continue for a term of three (3) years, unless terminated earlier as provided herein."
+    },
+    {
+      "label": "clause_3._Confidentiality",
+      "text": "All information disclosed by either party hereunder shall be considered Confidential Information and shall not be disclosed to any third party without the prior written consent of the disclosing party."
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0220.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "The Progressive Beacon",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "City Council's Green Initiatives Face Criticism from Environmental Advocates",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Eleanor Greenfield",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "New Haven, June 15, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Politics",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Environmental Policy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "City Council",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Renewable Energy",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Despite the city council's ambitious plan to reduce carbon emissions by 50% in five years, environmental groups are questioning the feasibility and effectiveness of the proposed measures."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The council has proposed a series of new regulations on industrial emissions and the implementation of renewable energy projects. However, critics argue that the timeline is too aggressive and the funding sources are unclear."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Environmental activist Jane Doe stated, 'While the intentions are commendable, we need concrete plans and measurable goals to ensure real progress.'"
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Councilor Michael Thompson defended the initiative, saying, 'We understand the urgency and are committed to working with stakeholders to find practical solutions.'"
+    },
+    {
+      "label": "pull_quote",
+      "text": "While the intentions are commendable, we need concrete plans and measurable goals to ensure real progress."
+    }
+  ]
+}

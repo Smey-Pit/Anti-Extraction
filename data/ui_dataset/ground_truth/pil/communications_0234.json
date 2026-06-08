@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0234.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "WhatsApp",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Olivia",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Jack",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Jack",
+      "text": "Hey Olivia, can we talk about something?"
+    },
+    {
+      "label": "message_2_Olivia",
+      "text": "Sure, what's up?"
+    },
+    {
+      "label": "message_3_Jack",
+      "text": "I'm having some money issues and it's stressing me out."
+    },
+    {
+      "label": "message_4_Olivia",
+      "text": "I can help if you need it. What's going on?"
+    }
+  ]
+}

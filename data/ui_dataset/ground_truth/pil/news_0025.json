@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0025.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "National Tribune",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "City Council’s Move to Ban Plastic Bags Sparks Controversy",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Evelyn M. Hartley",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Washington D.C., March 15, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Politics",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "plastic ban",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "environment",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "local politics",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "The city council's recent decision to ban plastic bags has divided residents and businesses alike, with environmentalists praising the move while local merchants argue it will hurt their profits."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Environmental advocates have hailed the ban as a step towards sustainability, arguing that reducing plastic waste is crucial for the health of the planet."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "However, small business owners are concerned about the economic impact, citing the cost of switching to paper or reusable bags as a significant burden."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Councilor Greenfield, who proposed the ban, stated in an interview, 'We must prioritize our environment over short-term financial gains.'"
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Opponents argue that such bans are ineffective and that they should focus on education and incentives rather than outright prohibition."
+    },
+    {
+      "label": "pull_quote",
+      "text": "We must prioritize our environment over short-term financial gains."
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0238.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Notice of Eviction",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Springfield County, State of Novus",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "June 1, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "EV-2024-069",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_landlord",
+      "type": "name",
+      "value": "Jameson Estates LLC",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_tenant",
+      "type": "name",
+      "value": "Lila W. Stone",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Jameson Estates LLC",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_2",
+      "type": "name",
+      "value": "Lila W. Stone",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._NOTICE_OF_VIOLATION",
+      "text": "You are hereby notified that you have violated the terms of your lease by failing to pay rent within the time period specified in your lease agreement."
+    },
+    {
+      "label": "clause_2.1_RENT_PAYMENT",
+      "text": "You are required to pay the past due rent of $1,200.00, plus late fees, within ten (10) days from the date of this notice, otherwise, this notice shall be deemed as an eviction notice."
+    }
+  ]
+}

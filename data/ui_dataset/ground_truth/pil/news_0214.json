@@ -1,0 +1,76 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0214.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Social Justice Sentinel",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Police Reform: The Fight for Justice and Accountability",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Evelyn Lopez",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "San Francisco, December 7, 2022",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Police Reform",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Racial Bias",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Law Enforcement",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Calls for police reform have grown louder following a series of high-profile incidents involving law enforcement. Advocates argue that systemic changes are needed to address issues of racial bias and excessive use of force."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Proposed reforms include increased training on de-escalation techniques, independent oversight boards, and stricter accountability measures. Supporters believe these changes are necessary to rebuild trust between communities and police departments."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Opponents, however, argue that such measures could undermine the ability of officers to effectively perform their duties. They also worry about the potential for lawsuits and increased costs associated with new regulations."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Officer David Kim, a critic of the proposed reforms, stated, 'We need to focus on improving officer morale and ensuring they have the tools they need to keep our communities safe.'"
+    },
+    {
+      "label": "pull_quote",
+      "text": "'Police reform is not about defunding the police; it’s about ensuring that every community is treated with dignity and respect.' - Community Organizer Jamal Davis"
+    }
+  ]
+}

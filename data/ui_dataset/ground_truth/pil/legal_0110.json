@@ -1,0 +1,68 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0110.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Lease Agreement",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Springfield City, State of Novacorp",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "2024-02-15",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "REF: LEASE-2024-0215",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_landlord",
+      "type": "name",
+      "value": "Jameson Properties LLC",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_tenant",
+      "type": "name",
+      "value": "Alice Johnson",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Jameson Properties LLC",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_2",
+      "type": "name",
+      "value": "Alice Johnson",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._TERM_AND_RENT",
+      "text": "The term of the Lease shall be for a period of three (3) years, commencing on March 1, 2024."
+    },
+    {
+      "label": "clause_2.1_RENTAL_AMOUNT",
+      "text": "Monthly rent hereinafter due and payable in advance shall be in the amount of $1,200.00 per month."
+    },
+    {
+      "label": "clause_3._USE_OF_PREMISES",
+      "text": "Tenant shall use the Premises solely for residential purposes, as further detailed in Exhibit A attached hereto."
+    }
+  ]
+}

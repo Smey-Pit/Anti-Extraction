@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0118.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Social Justice Advocate",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Racial Inequities Persist Despite Decades of Progress, Report Shows",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "David J. Wilson",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Los Angeles, CA, July 18, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Society",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Racial Equity",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Civil Rights",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Social Justice",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "A comprehensive report released today reveals that racial inequities continue to persist across various sectors in the United States, despite decades of progress."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The study found disparities in education, employment, housing, and healthcare, with Black and Hispanic communities disproportionately affected."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Civil rights organizations are calling for more robust policies to address systemic racism and promote social justice."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Some policymakers argue that targeted initiatives, such as affirmative action and community-based programs, are necessary to bridge the gap."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "The report's author stated, 'While we’ve made progress, the data clearly shows that more work needs to be done.'"
+    },
+    {
+      "label": "pull_quote",
+      "text": "'Systemic racism is not a myth; it is a reality that affects millions of lives,' said Dr. Maria Rodriguez, a leading sociologist."
+    }
+  ]
+}

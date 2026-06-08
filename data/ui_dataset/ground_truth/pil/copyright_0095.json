@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0095.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Whispers in the Shadows",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Elianor Grey",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Aurora Publications",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Elianor Grey. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "1955",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "Chapter 2: The First Discovery",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "The old house on Elm Street stood silent under the moonlight, its windows like dark eyes staring into the night. As I stepped inside, the air was thick with the scent of dust and forgotten memories. The walls seemed to close in around me, each crevice whispering tales of past inhabitants. In the dim light, I could make out a faint outline of a portrait hanging on the wall, its subject's eyes following me as I moved through the room. It was a chilling sensation, as if the house itself was alive, waiting for someone to break the silence."
+    }
+  ]
+}

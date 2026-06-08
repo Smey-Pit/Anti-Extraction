@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0017.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Whispers in the Dark",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Aiden Quinn",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Eldridge Press",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Aiden Quinn. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "383",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. ELIZA'S LIBRARY - NIGHT",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. ELIZA'S LIBRARY - NIGHT\nEliza stands in front of a large window, the moonlight filtering through the curtains, casting a soft glow over the books. She holds a leather-bound journal, its cover worn and tattered. Her hand trembles slightly as she opens it, revealing pages filled with faded ink. She reads aloud, her voice barely audible. \n\nELIZA\n(reading)\nIn the darkest hour, when the world seems to turn against you, seek solace in the whispers of the past. They hold the keys to unlocking your destiny.\n\nThe camera focuses on her face, showing the determination in her eyes. She closes the journal, tucking it back into the bookshelf. \n\nFADE OUT."
+    }
+  ]
+}

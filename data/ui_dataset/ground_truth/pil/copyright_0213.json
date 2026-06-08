@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0213.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Echoes of Tomorrow",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Lena Hartley",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "FutureFlicks Studios",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Lena Hartley. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "4410",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. SPACECRAFT - CONTROL ROOM - DAY",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. SPACECRAFT - DAY\n\nThe interior of the spacecraft is a sleek, modern environment, with large windows offering views of the stars. A young woman, JESSICA, sits at a control panel, her fingers moving deftly over the touchscreens. She looks up as a voice crackles over the intercom.\n\nCOMMANDER: Initiate the quantum jump sequence, Jessica.\n\nJESSICA: Aye, Commander. Engaging protocol.\n\nShe types furiously, the screens lighting up with complex data. Suddenly, the ship shudders slightly, and Jessica’s eyes widen as she sees the countdown timer ticking down.\n\nJESSICA: (whispering) Hold on, everyone. We’re almost there.\n\nThe ship’s engines roar to life, and the crew gathers around, their faces a mix of determination and fear. The quantum jump begins, and the world outside fades into a kaleidoscope of colors and shapes."
+    }
+  ]
+}

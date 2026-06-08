@@ -1,0 +1,54 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0028.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Gmail",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Emily",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Dr. Johnson",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_3",
+      "type": "name",
+      "value": "Dr. Smith",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "subject",
+      "type": "short_phrase",
+      "value": "Update on John's diagnosis",
+      "question": "What is the subject line of this message?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Emily",
+      "text": "Hi Drs. Johnson and Smith, any updates on John's condition?"
+    },
+    {
+      "label": "message_2_Dr._Johnson",
+      "text": "Hello Emily, we've made some progress. John is stable now."
+    },
+    {
+      "label": "message_3_Emily",
+      "text": "That's great news! Can you share more details?"
+    },
+    {
+      "label": "message_4_Dr._Smith",
+      "text": "Sure, we'll send you an update via email later today."
+    }
+  ]
+}

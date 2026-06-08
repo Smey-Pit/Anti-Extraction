@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0112.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Forgotten Village",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Elara Voss",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Pendulum Pictures",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Elara Voss. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "2341",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. VILLAGE CAFE - DAY",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. VILLAGE CAFE - DAY\nThe camera pans over the cozy interior of the cafe, where patrons sit at small tables sipping coffee and reading newspapers. Among them is a woman named Maya, who looks up from her book as a group of tourists enters the cafe. They are dressed in hiking gear and appear eager to explore the nearby mountains. Maya smiles and waves at them, her eyes twinkling with excitement. She is a local guide, leading groups through the rugged terrain and sharing stories of the village’s rich history.\n\nTOURIST GROUP LEADER\nWe’ve heard so much about your village. It’s been a dream to come here.\n\nMAYA\nOh, you’ll love it. There’s so much to discover. And if you’re lucky, you might even catch a glimpse of the ghost of the old miller.\n\nThe group laughs, and Maya leads them out of the cafe, ready to begin their adventure."
+    }
+  ]
+}

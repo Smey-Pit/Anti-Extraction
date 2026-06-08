@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0039.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Instagram DM",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Emma",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Liam",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Emma",
+      "text": "Hey Liam, I’m really stressed about paying rent this month. U ok?"
+    },
+    {
+      "label": "message_2_Liam",
+      "text": "I feel ya. My parents are helping out, but it’s still tight."
+    },
+    {
+      "label": "message_3_Emma",
+      "text": "Thanks for letting me know. I think I might have to talk to my landlord about extending the due date."
+    },
+    {
+      "label": "message_4_Liam",
+      "text": "Sounds like a plan. Good luck!"
+    }
+  ]
+}

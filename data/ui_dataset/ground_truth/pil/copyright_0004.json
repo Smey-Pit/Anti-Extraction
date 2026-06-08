@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0004.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Echoes of the Past",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Liam Harper",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Crimson Screen Productions",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Liam Harper. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "118",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. ABANDONED HOSPITAL - NIGHT",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. ABANDONED HOSPITAL - NIGHT\n\nThe room is dimly lit by a single flickering light bulb. The walls are peeling, and the air is thick with dust and silence. JESSICA, a young woman in her late twenties, stands at the center of the room, her hands trembling as she clutches a photograph. She looks around nervously, as if expecting someone to jump out from behind the crumbling walls.\n\nJESSICA\n(whispering)\nIt can’t be true. Not after all this time.\n\nShe turns to the door, her resolve strengthening.\n\nJESSICA\nI have to find out.\n\nShe opens the door and steps into the hallway, the sound of her footsteps echoing ominously."
+    }
+  ]
+}

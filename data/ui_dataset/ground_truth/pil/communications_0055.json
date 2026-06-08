@@ -1,0 +1,44 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0055.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "ProtonMail",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Olivia",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "David",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "subject",
+      "type": "short_phrase",
+      "value": "Legal Issue",
+      "question": "What is the subject line of this message?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Olivia",
+      "text": "Hi David, I’ve been dealing with some legal issues... need your advice."
+    },
+    {
+      "label": "message_2_David",
+      "text": "Sure, what’s the situation?"
+    },
+    {
+      "label": "message_3_Olivia",
+      "text": "Just got a summons for a traffic violation... not sure if I should contest it or not."
+    }
+  ]
+}

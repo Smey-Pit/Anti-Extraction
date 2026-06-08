@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0228.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Echoes in the Dark",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Eleanor Myles",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Shadowlight Productions",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Eleanor Myles. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "4742",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. ABANDONED HOSPITAL - NIGHT",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. ABANDONED HOSPITAL - NIGHT\n\nThe camera pans over the decaying corridors, the air thick with the scent of decay. The moonlight filters through broken windows, casting eerie shadows. In the center of the room, a figure stands alone, a flashlight in hand. The light flickers, revealing a tattered journal lying on the floor. The figure picks it up, flipping through the pages.\n\nJOURNALIST\n(whispering)\nWhat secrets do you hold?\n\nSuddenly, the flashlight dies. The figure fumbles for a lighter, striking it and igniting a small flame. They read from the journal, their voice barely audible.\n\nJOURNALIST\n(reading)\n...the truth lies buried here, waiting to be uncovered. But beware, for those who seek the truth may find themselves lost in the darkness."
+    }
+  ]
+}

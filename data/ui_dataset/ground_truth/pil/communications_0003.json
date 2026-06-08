@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0003.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Discord",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Mia",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Zoe",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Zoe",
+      "text": "Hey Mia, how’s work going?"
+    },
+    {
+      "label": "message_2_Mia",
+      "text": "It's been hectic... I'm swamped with deadlines."
+    },
+    {
+      "label": "message_3_Zoe",
+      "text": "I hear ya. How about we grab coffee tomorrow?"
+    },
+    {
+      "label": "message_4_Mia",
+      "text": "Sure thing! Let's do it."
+    }
+  ]
+}

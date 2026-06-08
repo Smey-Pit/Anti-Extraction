@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0209.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "WhatsApp",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Tom",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Lily",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Tom",
+      "text": "Hey Lily, do u remember our talk abt the job offer?"
+    },
+    {
+      "label": "message_2_Lily",
+      "text": "Yeah, you're still considering it right?"
+    },
+    {
+      "label": "message_3_Tom",
+      "text": "Exactly. I'm leaning towards it but unsure."
+    },
+    {
+      "label": "message_4_Lily",
+      "text": "Go for it, it sounds like a great opportunity."
+    }
+  ]
+}

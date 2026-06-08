@@ -1,0 +1,76 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0138.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Tech Tomorrow",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "AI in Healthcare: Revolutionizing Patient Care or Overhyped Fad?",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Emily J. White",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "San Francisco, May 22, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Artificial Intelligence",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Healthcare",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Ethics",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "The integration of artificial intelligence into healthcare is generating significant buzz, with proponents heralding its potential to transform patient care and outcomes, while skeptics warn of the risks and ethical dilemmas associated with such advancements."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Dr. Richard Green, a leading AI researcher, emphasizes the transformative potential of AI in diagnostics and treatment, asserting, 'AI can help us make faster, more accurate diagnoses and tailor treatments to individual patients.'"
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "However, privacy advocates are wary of the implications for patient data and confidentiality, with privacy expert Jane Doe cautioning, 'We must be vigilant about protecting patient information and ensuring informed consent.'"
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Healthcare professionals also express concern about the potential for bias in AI algorithms, which could exacerbate existing health disparities, with Dr. Sarah Johnson noting, 'It's crucial to address these issues before AI becomes widely adopted.'"
+    },
+    {
+      "label": "pull_quote",
+      "text": "AI can help us make faster, more accurate diagnoses and tailor treatments to individual patients."
+    }
+  ]
+}

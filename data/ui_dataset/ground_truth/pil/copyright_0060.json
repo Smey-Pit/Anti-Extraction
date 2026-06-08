@@ -1,0 +1,42 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0060.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Echoes of Tomorrow",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Samuel Quinn",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Future Vision Studios",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Samuel Quinn. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "1265",
+      "question": "What is the page number?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. SPACECRAFT - CONTROL ROOM - NIGHT\n\nThe room is dimly lit by the glow of computer screens and the soft hum of machinery. Dr. Elena Reeves stands before a large monitor displaying a star map, her fingers tracing the coordinates of a distant planet. Her colleague, Jack, approaches.\n\nJACK\nDr. Reeves, we’re almost there. Are you sure about this?\n\nELENA\nAbsolutely. This is our last chance. We can’t afford to fail.\n\nThe screen flickers, and a message appears: ‘WARNING: UNEXPECTED ASTEROID FIELD APPROACHING’. Elena’s face contorts with worry.\n\nELENA\nWe have to reroute. Quickly.\n\nJack begins typing furiously on his console as alarms blare in the background. The screen updates, showing a new course.\n\nELENA\nIt’s risky, but it might work. Let’s hope.\n\nThe camera zooms out, showing the spacecraft navigating the asteroid field. It’s a tense moment, the tension palpable.\n\nFADE OUT.\n\nFADE IN:\n\nINT. SPACECRAFT - COCKPIT - NIGHT\n\nThe spacecraft successfully clears the asteroid field, and the tension eases. Elena and Jack share a relieved smile.\n\nELENA\nWe made it.\n\nJACK\nAnd now, let’s find what we came for.\n\nFADE TO BLACK.\n\nFADE IN:\n\nINT. SPACECRAFT - DILIGENT LAB - NIGHT\n\nElena and Jack stand in front of a large, transparent chamber filled with strange, glowing organisms. They begin to interact with the creatures, their faces illuminated by the bioluminescence.\n\nELENA\nThese could be the key to our future.\n\nJACK\nThey’ve been here all along, waiting for us.\n\nThe scene fades to black, setting the stage for the next act.\n\nFADE OUT."
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0079.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Android Messages",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Emma",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Tom",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Tom",
+      "text": "Hey Emma, how’s it going?"
+    },
+    {
+      "label": "message_2_Emma",
+      "text": "Not great, I’m having some financial issues. Rent is due soon and I’m short on cash."
+    },
+    {
+      "label": "message_3_Tom",
+      "text": "I’m sorry to hear that. Do you need help finding a way to manage your expenses?"
+    },
+    {
+      "label": "message_4_Emma",
+      "text": "Yeah, I’m thinking about cutting back on some non-essentials. Any tips?"
+    }
+  ]
+}

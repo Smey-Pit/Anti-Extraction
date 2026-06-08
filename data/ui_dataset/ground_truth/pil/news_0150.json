@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0150.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "National Insight Journal",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Tech Giants Face New Privacy Scrutiny Amidst Data Breach Scandal",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Amanda Lee",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Washington D.C., March 15, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Politics",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Privacy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Data Breach",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Tech Regulation",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "In the wake of a massive data breach that compromised millions of user records, tech giants are facing unprecedented scrutiny from lawmakers and the public alike."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The breach, which exposed personal information including addresses, emails, and financial data, has sparked outrage among privacy advocates and calls for stricter regulations."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Senator Jane Doe stated in a recent press conference, 'We cannot afford to let corporations prioritize profits over the fundamental rights of their users.'"
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Meanwhile, tech companies defend their practices, arguing that the breach was an isolated incident and that they have robust security measures in place."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Experts predict that this incident could lead to significant changes in how tech firms operate, with potential new legislation on the horizon."
+    },
+    {
+      "label": "pull_quote",
+      "text": "'This breach is not just about the tech companies; it's about the trust we place in institutions that handle our most private information.' - Senator John Smith"
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "doc_type": "identity",
+  "image_path": "images/pil/identity_0085.png",
+  "entities": [
+    {
+      "label": "document_type",
+      "type": "short_phrase",
+      "value": "passport",
+      "question": "What type of identity document is this?"
+    },
+    {
+      "label": "issuing_authority",
+      "type": "short_phrase",
+      "value": "Republic of Valdoria — Ministry of Interior",
+      "question": "What authority issued this document?"
+    },
+    {
+      "label": "surname",
+      "type": "name",
+      "value": "Thorsen",
+      "question": "What is the surname?"
+    },
+    {
+      "label": "given_names",
+      "type": "name",
+      "value": "Aldorin",
+      "question": "What are the given names?"
+    },
+    {
+      "label": "dob",
+      "type": "date",
+      "value": "1985-03-17",
+      "question": "What is the date of birth?"
+    },
+    {
+      "label": "document_number",
+      "type": "digit_seq",
+      "value": "VD-8841-2209",
+      "question": "What is the document number?"
+    },
+    {
+      "label": "nationality_state",
+      "type": "short_phrase",
+      "value": "Valdoria",
+      "question": "What is the nationality or state?"
+    },
+    {
+      "label": "issue_date",
+      "type": "date",
+      "value": "2020-06-15",
+      "question": "What is the issue date?"
+    },
+    {
+      "label": "expiry_date",
+      "type": "date",
+      "value": "2030-06-15",
+      "question": "What is the expiry date?"
+    },
+    {
+      "label": "sex",
+      "type": "short_phrase",
+      "value": "M",
+      "question": "What is the sex listed on the document?"
+    },
+    {
+      "label": "place_of_birth",
+      "type": "short_phrase",
+      "value": "Port Valdoria",
+      "question": "What is the place of birth?"
+    },
+    {
+      "label": "mrz_line1",
+      "type": "short_phrase",
+      "value": "PVL+THORSEN+ALDORIN",
+      "question": "What does the first machine readable zone line say?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "mrz_line2",
+      "text": "DOC_NO+VD-8841-2209+NAT+VL+DOB+19850317+EXPIRY+20300615+PERSONAL_NO+123456789+CHECK+123"
+    }
+  ]
+}

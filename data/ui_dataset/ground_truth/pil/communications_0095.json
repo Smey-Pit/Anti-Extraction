@@ -1,0 +1,48 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0095.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "ProtonMail",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Jenny",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Karl",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "subject",
+      "type": "short_phrase",
+      "value": "Financial update",
+      "question": "What is the subject line of this message?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Jenny",
+      "text": "Karl, I’ve been having some financial troubles lately. Can we talk?"
+    },
+    {
+      "label": "message_2_Karl",
+      "text": "Of course, Jenny. What’s going on?"
+    },
+    {
+      "label": "message_3_Jenny",
+      "text": "I’m behind on rent and my car needs repairs. I don’t know what to do."
+    },
+    {
+      "label": "message_4_Karl",
+      "text": "That sounds rough. Let’s figure something out. Maybe we can look into a loan or something."
+    }
+  ]
+}

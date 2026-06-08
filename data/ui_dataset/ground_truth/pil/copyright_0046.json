@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0046.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Whispers of the Forgotten",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Lila Myles",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Eclipse Books",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Lila Myles. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "1019",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "Chapter 3: The Hidden Tome",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "The old library was a sanctuary, a place where time seemed to slow and memories lingered. The scent of aged paper and leather bound volumes filled the air as she stepped inside. Her fingers traced the spines of the books, each one a story waiting to be told. Among the towering shelves, she found a faded volume, its cover worn and tattered. As she opened it, the pages crinkled under her touch, revealing a tale of love and loss that had been hidden for decades. The words danced across the page, each sentence a whisper from the past, urging her to uncover the secrets it held."
+    }
+  ]
+}

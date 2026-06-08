@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0145.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "National Tribune",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Economic Policies Fail to Deliver on Promises",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Jenna M. Clarke",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Washington D.C., March 15, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Economics",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Inflation",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Unemployment",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "In the face of rising inflation and unemployment rates, critics argue that recent economic policies have fallen short of their intended goals, leaving many questioning the effectiveness of current leadership."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The latest economic indicators show a sharp increase in consumer prices, coupled with a decline in job creation, casting doubt on the government’s ability to steer the economy towards recovery."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Economists and political analysts alike point to flawed policy implementation and a lack of foresight as key factors contributing to the current economic malaise."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Critics also highlight the widening income gap and increased financial strain on middle-class families, suggesting that the benefits of economic growth have not been evenly distributed."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "While the administration maintains its stance that recent measures will yield positive results, opposition voices continue to demand more robust action to address the nation's economic challenges."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"We are witnessing a significant disconnect between policy rhetoric and real-world outcomes,\" said Dr. Emily Hart, an economist at the University of Virginia."
+    }
+  ]
+}

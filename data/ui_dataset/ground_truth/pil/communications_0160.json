@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0160.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Instagram DM",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Ava",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Zoe",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Zoe",
+      "text": "Hey Ava, I’ve been feeling kinda down lately. Any tips for staying positive?"
+    },
+    {
+      "label": "message_2_Ava",
+      "text": "Definitely. Try meditating or even just taking a walk outside. It helps a lot."
+    },
+    {
+      "label": "message_3_Zoe",
+      "text": "Good idea. I’m gonna give it a shot. Thanks so much, Ava. 💖"
+    },
+    {
+      "label": "message_4_Ava",
+      "text": "Anytime, Zoe. We all need a little boost sometimes. 😊"
+    }
+  ]
+}

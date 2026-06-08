@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0039.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Last Light",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Elara Voss",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Aurora Books",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Elara Voss. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "905",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "Chapter 6: The First Light",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "The sun dipped below the horizon, casting long shadows across the desolate landscape. In the distance, the ruins of an ancient city stood silent, a testament to a civilization long gone. ALARA, a young archaeologist, stood before the entrance, her heart pounding with anticipation. She had spent years searching for this place, driven by a relentless curiosity and a desire to uncover the truth.\n\nALARA\n(to herself)\nThis is it. This is where it all began.\n\nShe stepped inside, the air cool and damp. The walls were lined with intricate carvings, each telling a story of a people who once thrived. As she explored deeper, she felt a strange presence, as if the spirits of the past were watching over her."
+    }
+  ]
+}

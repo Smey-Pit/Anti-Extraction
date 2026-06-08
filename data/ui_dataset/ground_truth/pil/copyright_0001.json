@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0001.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Echoes of Tomorrow",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Liam O'Connor",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Futurescript Productions",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Liam O'Connor. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "21",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. FUTURIS LAB - DAY",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. FUTURIS LAB - DAY\n\nThe room is filled with advanced machinery and screens displaying complex data. Dr. Elara Voss stands at the center, her expression intense as she monitors the latest experiment. Her assistant, Alex, approaches with a tray of tools.\n\nALEX\n(whispering)\nAre you sure about this, Elara? We don’t know what we’re dealing with.\n\nELARA VOSS\n(steadfast)\nWe can’t let fear guide us. This could change everything.\n\nShe reaches for a small device, her fingers moving with precision. The device hums to life, projecting a holographic image of a future cityscape. The image flickers briefly before stabilizing, showing bustling streets and towering skyscrapers.\n\nELARA VOSS\n(pointing)\nSee that? That’s what we need to achieve. It’s within our reach.\n\nAlex nods, his eyes wide with awe. They both turn to watch the projection, their determination clear."
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0218.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "WhatsApp",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Alex",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Jordan",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Alex",
+      "text": "Hey Jordan, I'm having some trouble with my boss at work. Can I talk to you about it?"
+    },
+    {
+      "label": "message_2_Jordan",
+      "text": "Of course, what's going on?"
+    },
+    {
+      "label": "message_3_Alex",
+      "text": "He keeps micromanaging me and it's really stressing me out. 😔"
+    },
+    {
+      "label": "message_4_Jordan",
+      "text": "That sounds tough. Have you talked to HR yet?"
+    }
+  ]
+}

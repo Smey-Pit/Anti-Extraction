@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0075.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Android Messages",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Julia",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Kevin",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Kevin",
+      "text": "Julia, I’m having some financial trouble. Can we talk?"
+    },
+    {
+      "label": "message_2_Julia",
+      "text": "Sure, Kev. What’s going on?"
+    },
+    {
+      "label": "message_3_Kevin",
+      "text": "Rent is due next week and I don’t have the money. I’m so stressed..."
+    },
+    {
+      "label": "message_4_Julia",
+      "text": "I’m sorry, Kev. Let’s figure this out together."
+    }
+  ]
+}

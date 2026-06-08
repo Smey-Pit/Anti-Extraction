@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0117.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Echoes of the Past",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Liam Harper",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Flicker Films",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Liam Harper. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "2464",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. OLD LIBRARY - NIGHT",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. OLD LIBRARY - NIGHT\n\nThe room is dimly lit, with rows of dusty books lining the walls. A faint breeze stirs the pages, and the only sound is the ticking of a grandfather clock in the corner. A young woman, ELAINE, stands before an ancient desk, her fingers hovering over a worn leather-bound journal.\n\nELAINE\n(whispering)\nI can feel it, the presence. It’s here, in these pages.\n\nShe opens the journal, revealing yellowed pages filled with cryptic notes and sketches. As she flips through them, a series of images come into focus: a map, a portrait, and a set of coordinates.\n\nELAINE\n(taking a deep breath)\nThis is it. The key to everything.\n\nFADE OUT."
+    }
+  ]
+}

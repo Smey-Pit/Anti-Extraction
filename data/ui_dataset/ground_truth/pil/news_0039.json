@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0039.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "The Midland Gazette",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Tax Reform Plan Sparks Controversy Among Taxpayers",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Olivia Green",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Midtown, June 25, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Tax Reform",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Corporate Taxes",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Income Tax",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "A proposed tax reform plan that would lower income tax rates but increase corporate taxes has divided the public, with many taxpayers expressing concern about the impact on their personal finances."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Treasury Secretary Brown explained, 'This plan is designed to stimulate economic growth and create jobs, which will ultimately benefit middle-class families.'"
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "However, small business owner John Doe complained, 'If my taxes go up, I won’t have the funds to invest in my business or hire more employees.'"
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Taxpayer advocate Sarah Williams said, 'We need a fair tax system that doesn’t burden hardworking Americans and corporations equally.'"
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "The plan has sparked heated discussions in town halls and online forums, with many citizens urging their representatives to reconsider the proposed changes."
+    },
+    {
+      "label": "pull_quote",
+      "text": "'We need a fair tax system that doesn’t burden hardworking Americans and corporations equally.' – Taxpayer Advocate Sarah Williams"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0139.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Complaint for Breach of Contract",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Pinehill County, State of Novaria",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "July 10, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "CASE NO. CV-2024-07101",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_plaintiff",
+      "type": "name",
+      "value": "BrightTech Solutions LLC",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_defendant",
+      "type": "name",
+      "value": "NovaCorp Inc.",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "David A. Tech",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._Factual_Background",
+      "text": "On March 1, 2023, Plaintiff entered into a contract with Defendant for the provision of software development services."
+    },
+    {
+      "label": "clause_2._Breach_of_Contract",
+      "text": "Defendant failed to complete the project as per the agreed timeline, resulting in a material breach of the contract."
+    },
+    {
+      "label": "clause_3._Remedy_Sought",
+      "text": "Plaintiff seeks damages in the amount of $75,000 and specific performance of the contract."
+    }
+  ]
+}

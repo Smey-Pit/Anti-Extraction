@@ -1,0 +1,48 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0023.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Gmail",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Alex",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Jordan",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "subject",
+      "type": "short_phrase",
+      "value": "Financial Stress",
+      "question": "What is the subject line of this message?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Alex",
+      "text": "Jordan, I really need to talk to you about something important."
+    },
+    {
+      "label": "message_2_Jordan",
+      "text": "Sure thing Alex, shoot me an email when you have a minute."
+    },
+    {
+      "label": "message_3_Alex",
+      "text": "I'm having some serious money issues. I can barely make ends meet..."
+    },
+    {
+      "label": "message_4_Jordan",
+      "text": "Oh no, Alex. I'll try to help out as much as I can."
+    }
+  ]
+}

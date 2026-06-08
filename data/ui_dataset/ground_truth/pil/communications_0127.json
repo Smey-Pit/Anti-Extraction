@@ -1,0 +1,60 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0127.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Gmail",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Alex",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Emily",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_3",
+      "type": "name",
+      "value": "Tom",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_4",
+      "type": "name",
+      "value": "Sara",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "subject",
+      "type": "short_phrase",
+      "value": "Party Plan",
+      "question": "What is the subject line of this message?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Alex",
+      "text": "Hey team, just a quick reminder for our Halloween party next week!"
+    },
+    {
+      "label": "message_2_Emily",
+      "text": ":) Sure thing Alex. What time?"
+    },
+    {
+      "label": "message_3_Tom",
+      "text": "6pm? Sounds good to me."
+    },
+    {
+      "label": "message_4_Sara",
+      "text": "Perfect timing. I'll bring some snacks."
+    }
+  ]
+}

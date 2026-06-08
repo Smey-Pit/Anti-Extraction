@@ -1,0 +1,54 @@
+{
+  "doc_type": "banking",
+  "image_path": "images/pil/banking_0069.png",
+  "entities": [
+    {
+      "label": "bank_name",
+      "type": "short_phrase",
+      "value": "FictoBank",
+      "question": "What is the name of the bank?"
+    },
+    {
+      "label": "account_holder",
+      "type": "name",
+      "value": "Daniel Brown",
+      "question": "What is the account holder name?"
+    },
+    {
+      "label": "account_number",
+      "type": "digit_seq",
+      "value": "334-218  9288 5345 26",
+      "question": "What is the account number?"
+    },
+    {
+      "label": "account_type",
+      "type": "short_phrase",
+      "value": "Everyday Savings",
+      "question": "What is the account type?"
+    },
+    {
+      "label": "statement_period",
+      "type": "date_range",
+      "value": "1 Feb – 28 Feb 2025",
+      "question": "What is the statement period?"
+    },
+    {
+      "label": "opening_balance",
+      "type": "amount",
+      "value": "$8,821.33",
+      "question": "What is the opening balance?"
+    },
+    {
+      "label": "closing_balance",
+      "type": "amount",
+      "value": "$9,056.78",
+      "question": "What is the closing balance?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "transaction_history",
+      "text": "2025-02-01 Direct Deposit 3500 $12,321.33\n2025-02-05 Restaurant Bill -120 $12,201.33\n2025-02-10 Groceries -150 $12,051.33\n2025-02-15 Online Shopping -200 $11,851.33\n2025-02-20 Pet Supplies -80 $11,771.33\n2025-02-25 Charity Donation -150 $11,621.33\n2025-02-28 Savings Transfer -300 $11,321.33"
+    }
+  ]
+}

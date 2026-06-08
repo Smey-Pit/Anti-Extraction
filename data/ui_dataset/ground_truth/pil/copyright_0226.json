@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0226.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Whispers in the Wind",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Alec Hartley",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Silver Screen Productions",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Alec Hartley. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "4700",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "EXT. WILLOW CREEK TOWN SQUARE - NIGHT",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "EXT. WILLOW CREEK TOWN SQUARE - NIGHT\n\nThe sky is a canvas of stars, the wind rustling through the trees. The camera focuses on JESSICA, standing at the base of the old clock tower. She clutches a small, leather-bound book, her face illuminated by the flickering light of a lantern. She turns to face the crowd, her voice steady and calm.\n\nJESSICA\n(softly, to the audience)\nTonight, we honor those who came before us. Tonight, we listen to the whispers of the past.\n\nThe crowd murmurs in anticipation. Jessica opens the book, her fingers tracing the worn pages. As she reads, the words seem to float off the page, carried on the breeze. The audience listens intently, their faces a mix of wonder and awe.\n\nFADE OUT."
+    }
+  ]
+}

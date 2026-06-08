@@ -1,0 +1,86 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0202.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Liberty Watch",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Protests Erupt Across Country in Response to Proposed Gun Control Legislation",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Evelyn Hart",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Los Angeles, June 2, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Gun Control",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Second Amendment",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Protests",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_4",
+      "type": "short_phrase",
+      "value": "Legislation",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Outraged citizens took to the streets in major cities yesterday, protesting against a new bill that seeks to impose stricter gun control measures nationwide."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The legislation, which aims to ban assault weapons and increase background checks, has sparked fierce debate and widespread opposition from conservative groups."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Organizers claim the rally drew thousands of participants who fear the bill infringes on their constitutional rights and represents an overreach of government power."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Supporters of the bill argue that it is necessary to address the growing number of mass shootings and ensure public safety."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Lawmakers are now faced with the challenge of navigating this contentious issue while maintaining political balance."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"This isn’t about taking away your guns; it’s about ensuring those who commit heinous acts can be stopped before they hurt innocent people.\" — Representative John Smith"
+    }
+  ]
+}

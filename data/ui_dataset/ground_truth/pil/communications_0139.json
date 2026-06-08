@@ -1,0 +1,46 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0139.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Android Messages",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Emily",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Tom",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Tom",
+      "text": "Hey Em, how’s it going?"
+    },
+    {
+      "label": "message_2_Emily",
+      "text": "Not great tbh. My mom called to say she’s in the hospital again."
+    },
+    {
+      "label": "message_3_Tom",
+      "text": "Oh no, that’s rough. How’s she doing?"
+    },
+    {
+      "label": "message_4_Emily",
+      "text": "She’s stable but they’re running some tests. I’m worried sick."
+    },
+    {
+      "label": "message_5_Tom",
+      "text": "I’m here if u need to vent. Let me know how it goes."
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0118.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Forgotten Healer",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Ella Green",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Daily Chronicle",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Ella Green. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "2482",
+      "question": "What is the page number?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "In the quiet town of Willowbrook, there lies a tale of healing that has been largely forgotten. Dr. Eliza Hart, a renowned herbalist and midwife, lived and worked in the early 1900s. Her home, now a museum, is a testament to her life’s work. Visitors often leave with a sense of peace, having learned about the natural remedies and holistic practices that Dr. Hart championed. This week, we revisit her story, a reminder of the power of traditional medicine and the importance of preserving our local history."
+    }
+  ]
+}

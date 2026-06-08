@@ -1,0 +1,42 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0128.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "A Garden of Hope",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Eleanor Green",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Local Herald",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Eleanor Green. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "2665",
+      "question": "What is the page number?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "In the heart of the city lies a hidden gem, a garden that has become a sanctuary for many. The Rosewood Community Garden, founded by the late Mr. Harold Thompson, has transformed an abandoned lot into a vibrant space filled with color and life. Every morning, volunteers gather to tend to the plots, sharing stories and laughter over the soil. Among them is LUCY, a retired schoolteacher, who has found solace in the garden's peaceful atmosphere.\n\nLucy recounts, \"Mr. Thompson believed in the power of nature to heal. He started this garden to bring people together, to give them a place where they could forget their troubles for a while. It’s amazing how something so simple can make such a big difference.\"\n\nThe garden not only provides a physical space for growth but also serves as a symbol of resilience and community. As the sun sets, the garden is bathed in a warm glow, a testament to the enduring spirit of those who nurture it."
+    }
+  ]
+}

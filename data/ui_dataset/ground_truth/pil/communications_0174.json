@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0174.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Discord",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Hank",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Ivy",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Hank",
+      "text": "Hey Ivy, I need your help with something. Can you meet me in the office after lunch?"
+    },
+    {
+      "label": "message_2_Ivy",
+      "text": "Sure thing Hank, I'll be free. What's going on?"
+    },
+    {
+      "label": "message_3_Hank",
+      "text": "I think there might be some issues with our project timeline. I want to discuss this with you before we escalate it to upper management. 🤔"
+    },
+    {
+      "label": "message_4_Ivy",
+      "text": "Okay, let's figure it out together. We'll get through this!"
+    }
+  ]
+}

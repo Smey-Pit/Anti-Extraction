@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0243.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Economic Reviewer",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Tech Giant Announces Massive Layoffs Amidst Economic Woes",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Evan K. Smith",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "San Francisco, June 5, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Economy",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Tech Industry",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Economic Uncertainty",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Corporate Strategy",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "In a surprising move, tech behemoth NovaTech announced plans to lay off 20% of its workforce, citing 'economic uncertainty' and the need to cut costs."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Company CEO Alex Lee issued a statement saying, 'While we believe in the long-term potential of our industry, we must take decisive action to ensure the sustainability of our business during these challenging times.'"
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "The layoffs come as the broader economy continues to grapple with inflation, supply chain disruptions, and rising interest rates, affecting consumer spending and corporate profits."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Union leaders criticized the decision, stating that it could lead to a ripple effect across the tech sector, potentially causing further job losses and economic instability."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Analysts predict that other major tech companies may follow suit, leading to a wave of layoffs and restructuring in the coming months."
+    },
+    {
+      "label": "pull_quote",
+      "text": "‘The economy is facing unprecedented challenges, and we must adapt to survive.’ - CEO Alex Lee"
+    }
+  ]
+}

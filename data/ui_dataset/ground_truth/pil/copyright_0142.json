@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0142.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Echoes of the Forgotten",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Liam O'Connor",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Echo Productions",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Liam O'Connor. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "2937",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. ABANDONED FACTORY - NIGHT",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. ABANDONED FACTORY - NIGHT\n\nThe factory, once bustling with life, now lay silent and decaying. A single beam of light sliced through the darkness, casting eerie shadows on the rusted machinery. A figure, cloaked in shadow, moves stealthily through the empty corridors, the sound of their footsteps echoing ominously.\n\nCUT TO:\n\nINT. FACTORY OFFICE - NIGHT\n\nThe figure stands before an old desk, illuminated by the same beam of light. They reach out, their hand trembling slightly as they touch a faded photograph. The image is of a young woman, her eyes filled with a mixture of joy and sorrow. A faint whisper can be heard, barely audible over the hum of the factory's machinery.\n\nFADE OUT."
+    }
+  ]
+}

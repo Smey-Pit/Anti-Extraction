@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0141.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Economic Sentinel",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Economic Growth Outpaces Inflation, But Income Disparity Widens",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Charles L. Thompson",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "New York City, April 10, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Economic Policy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Income Inequality",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "GDP Growth",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "While the economy continues to grow at a steady pace, a growing divide between the rich and poor is raising concerns about the sustainability of current economic policies."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "According to latest data from the Bureau of Labor Statistics, the GDP has increased by 4% in the past quarter, while inflation remains under control at 2.5%. However, the gap between the wealthiest 1% and the rest of the population has widened significantly."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Proponents of the current economic model argue that the benefits of growth will eventually trickle down to all segments of society."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Opponents counter that without targeted interventions, the gains from economic growth will continue to accrue primarily to those already at the top of the income ladder."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Policy makers face a challenging task in balancing economic growth with social equity."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"If we fail to address income disparity, the economic gains of recent years may prove hollow for many Americans.\" - Senator Emily Davis"
+    }
+  ]
+}

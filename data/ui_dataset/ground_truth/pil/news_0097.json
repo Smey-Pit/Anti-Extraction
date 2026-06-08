@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0097.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Right Side News",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Healthcare Overhaul Fails to Gain Support from Republican Leadership",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Michael Hargrove",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Washington D.C., October 12, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Healthcare Reform",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Affordable Care",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Government Intervention",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Efforts to overhaul the national healthcare system have been met with resistance from key Republican lawmakers who fear that any changes could undermine the current system and lead to higher costs for consumers."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The proposed bill seeks to expand access to affordable healthcare while also addressing issues like prescription drug prices and insurance coverage gaps."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Republican leaders, however, argue that the bill would increase government intervention and could result in longer wait times and reduced quality of care."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Democrats counter that the current system is broken and that comprehensive reforms are necessary to ensure all Americans have access to quality healthcare."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "The impasse highlights the deep divisions within the Republican party and raises questions about the prospects for meaningful healthcare legislation in the near future."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"This bill is a non-starter. It’s a recipe for disaster.\" - Senate Majority Leader Smith"
+    }
+  ]
+}

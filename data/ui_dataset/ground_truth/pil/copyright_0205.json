@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0205.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Lost City",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Raven Blackwood",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Enigma Press",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Raven Blackwood. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "4219",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "Chapter 6: Into the Unknown",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "The dense jungle swallowed them whole, the only sounds the rustling of leaves and the occasional call of a distant bird. They had been walking for hours, their progress slowed by the thick underbrush and the weight of their backpacks. Finally, as the sun began to set, they stumbled upon an ancient path, its stones worn smooth by centuries of foot traffic. The path led them deeper into the heart of the forest, and as they followed it, the air grew cooler and the trees more towering. It was then that they saw it—a crumbling wall, partially hidden by vines, leading to what appeared to be the entrance of a city."
+    }
+  ]
+}

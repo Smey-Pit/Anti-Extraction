@@ -1,0 +1,68 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0068.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Notice to Vacate Premises",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Oakwood County, State of Verano",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "December 1, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "Eviction Notice No. 2024-1201",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_landlord",
+      "type": "name",
+      "value": "Hilltop Properties LLC",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_tenant",
+      "type": "name",
+      "value": "Alex Johnson",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Hilltop Properties LLC",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_2",
+      "type": "name",
+      "value": "Alex Johnson",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._Notice_of_Default",
+      "text": "You are hereby notified that you have breached the terms of your lease agreement by failing to pay rent as required."
+    },
+    {
+      "label": "clause_2.1_Time_to_Cure",
+      "text": "You have thirty (30) days from the date of this notice to cure the default and restore compliance with the terms of the lease agreement."
+    },
+    {
+      "label": "clause_3._Consequences_of_Non-Cure",
+      "text": "If you fail to cure the default within the time specified, this notice constitutes a demand for immediate possession of the premises and will result in the commencement of an action for eviction."
+    }
+  ]
+}

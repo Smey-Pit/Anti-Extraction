@@ -1,0 +1,42 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0224.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "A Town’s Untold History",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Lila Morgan",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Willow Creek Gazette",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Lila Morgan. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "4663",
+      "question": "What is the page number?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "Willow Creek, a quaint town nestled in the heart of the countryside, has always been shrouded in mystery. Few know its true history, hidden behind layers of time and forgotten tales. This week, the Willow Creek Gazette delves into the untold stories of our town’s founding family, the Hawthorns. Their legacy is one of both triumph and tragedy, a tale that has shaped the very fabric of our community. Through interviews with local historians and descendants, we uncover the Hawthorns’ struggle against adversity, their contributions to the town, and the secrets they carried to their graves. Join us as we explore the whispers of the past and the enduring spirit of Willow Creek."
+    }
+  ]
+}

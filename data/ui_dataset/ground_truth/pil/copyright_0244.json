@@ -1,0 +1,42 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0244.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Unseen Heroes of Our Time",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Jasper Blackwood",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "The Sentinel Herald",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Jasper Blackwood. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "5025",
+      "question": "What is the page number?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "In the heart of the city, there are those who work tirelessly behind the scenes, their contributions often overlooked yet vital to our community’s well-being. Meet Sarah Thompson, a social worker dedicated to helping the homeless find stability. Every day, she navigates the challenges of limited resources and complex personal issues, offering hope and support where it is most needed.\n\nSarah’s journey is a testament to the power of compassion and resilience. Her story is one of countless unsung heroes who make a difference in the lives of others, often without seeking recognition."
+    }
+  ]
+}

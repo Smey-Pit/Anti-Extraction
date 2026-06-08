@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0089.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Shadows Over the City",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Morgan Reed",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Nightfall Productions",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Morgan Reed. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "1839",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. ABANDONED FACTORY - NIGHT",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "EXT. ABANDONED FACTORY - NIGHT\n\nThe factory looms large in the moonlit sky, its windows shattered and its walls crumbling. Inside, the air is thick with dust and the faint hum of machinery. A figure, cloaked in darkness, moves silently through the shadows, their presence barely noticeable. They pause at a door, the hinges creaking under the weight of years. With a gentle push, the door opens, revealing a dimly lit room filled with old machinery and forgotten tools. The figure steps inside, their silhouette barely visible against the flickering light."
+    }
+  ]
+}

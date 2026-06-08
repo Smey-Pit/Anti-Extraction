@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0114.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Android Messages",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Mike",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Emma",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Mike",
+      "text": "Hey Emma, I’ve been thinking about us. I don’t think we should be together anymore."
+    },
+    {
+      "label": "message_2_Emma",
+      "text": "Why? We were doing great!"
+    },
+    {
+      "label": "message_3_Mike",
+      "text": "I just feel like we’re growing apart. Maybe we should take a break and see where things stand."
+    },
+    {
+      "label": "message_4_Emma",
+      "text": "I don’t know... I really liked us. Can we at least talk more before making any big decisions?"
+    }
+  ]
+}

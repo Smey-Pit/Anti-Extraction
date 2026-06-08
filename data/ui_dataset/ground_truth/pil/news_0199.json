@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0199.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Eastern Post",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Immigration Bill Draws Divided Reactions Across the Nation",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Emily K. Chen",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Eastport, July 2, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Immigration",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Border Security",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Human Trafficking",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "The recently introduced immigration bill in Eastport aims to streamline the process for legal immigration while cracking down on illegal entry and human trafficking."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The legislation includes provisions for faster processing of asylum applications and increased funding for border security."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Advocates for immigrant rights argue that the bill disproportionately targets vulnerable populations and fails to address the root causes of migration."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Opponents, on the other hand, see it as a necessary measure to protect national security and uphold law and order."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "A bipartisan committee will review the bill and hold hearings to gather feedback from various stakeholders."
+    },
+    {
+      "label": "pull_quote",
+      "text": "‘We must balance compassion with responsibility when it comes to immigration policy.’ — Lisa Johnson, Immigration Attorney"
+    }
+  ]
+}

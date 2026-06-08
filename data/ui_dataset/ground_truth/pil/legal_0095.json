@@ -1,0 +1,62 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0095.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Lease Agreement",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Springfield City, State of Novamont",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "2024-01-15",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "party_1_landlord",
+      "type": "name",
+      "value": "Johnathan M. Oakley",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_tenant",
+      "type": "name",
+      "value": "Elizabeth A. Maple",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Johnathan M. Oakley",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_2",
+      "type": "name",
+      "value": "Elizabeth A. Maple",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._Premises",
+      "text": "The Landlord hereby leases to the Tenant the property located at 123 Maplewood Lane, Springfield City, State of Novamont."
+    },
+    {
+      "label": "clause_2.1_Term",
+      "text": "This Lease shall commence on January 20, 2024, and terminate on January 19, 2025, unless terminated earlier as provided herein."
+    },
+    {
+      "label": "clause_3._Rental",
+      "text": "The Tenant shall pay rent in the amount of $1,200 per month, payable on the first day of each calendar month."
+    }
+  ]
+}

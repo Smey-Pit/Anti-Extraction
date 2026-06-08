@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0015.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Instagram DM",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Natalie",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Sophia",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Sophia",
+      "text": "Hey Natalie, I need your help with something urgent. Can you talk now?"
+    },
+    {
+      "label": "message_2_Natalie",
+      "text": "Sure, what’s up? 🤔"
+    },
+    {
+      "label": "message_3_Sophia",
+      "text": "My mom just called and said she needs more money for groceries. She lost her job last week."
+    },
+    {
+      "label": "message_4_Natalie",
+      "text": "That’s rough. I’ll transfer some money to you right now. How much do you need?"
+    }
+  ]
+}

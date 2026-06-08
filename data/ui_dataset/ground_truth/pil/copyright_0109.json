@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0109.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Echoes of the Past",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Liam Quinn",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Framing Focus Studios",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Liam Quinn. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "2278",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. PSYCHIATRIC WARD - NIGHT",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. ABANDONED HOSPITAL - NIGHT\nThe camera pans across the dimly lit corridors, the silence broken only by the distant echo of footsteps. A figure in a tattered coat moves cautiously down the hall, stopping at a door marked 'Psychiatric Ward'. The figure pulls out a small key and unlocks the door. Inside, the room is filled with old, dusty medical equipment. In the corner, a large mirror hangs on the wall, reflecting the figure's weary face. Suddenly, the figure turns and looks directly into the camera, eyes filled with a mix of fear and determination.\n\nFIGURE\nI can't let this place be forgotten. Not now, when there's still so much to uncover.\n\nThe figure reaches into a bag and pulls out a tape recorder, pressing play.\n\nTape Recording\nThey say the spirits here are restless. But I believe they have stories to tell."
+    }
+  ]
+}

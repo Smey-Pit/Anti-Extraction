@@ -1,0 +1,86 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0078.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Economic Echoes",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Healthcare Crisis: The Cost of Prescription Drugs",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Michael Davis",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Chicago, June 10, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Healthcare",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Pharmaceuticals",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Cost Containment",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_4",
+      "type": "short_phrase",
+      "value": "Access",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Pharmaceutical companies continue to face intense scrutiny over the soaring costs of prescription drugs, which many argue are unaffordable and unsustainable."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The average price of a single medication has risen dramatically in recent years, putting a strain on both individual patients and healthcare systems."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Patient advocates demand greater transparency and pricing controls, while industry leaders stress the need for continued investment in drug development."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Legislators are considering various measures to curb drug prices, including importation from other countries and government negotiations."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Experts warn that unchecked drug pricing could lead to further health disparities and financial ruin for many families."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"Drug companies must be held accountable for the exorbitant prices they charge, and we need policies that prioritize the health of our citizens over profits.\" - Senator John Smith"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0242.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Last Will and Testament",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Riverdale City, State of Verdantia",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "2024-08-10",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "WILL-2024-10101",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_grantor",
+      "type": "name",
+      "value": "Charlotte P. Birch",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_executor",
+      "type": "name",
+      "value": "Daniel T. Oak",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Charlotte P. Birch",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_2",
+      "type": "name",
+      "value": "Daniel T. Oak",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._EXECUTION_AND_EFFECTIVENESS",
+      "text": "This Last Will and Testament is executed by the Grantor and shall become effective upon the death of the Grantor."
+    },
+    {
+      "label": "clause_2._DISPOSAL_OF_ESTATE",
+      "text": "The Grantor hereby directs that all personal property and real estate be distributed according to the terms herein."
+    },
+    {
+      "label": "clause_3._EXECUTOR",
+      "text": "The Executor named herein is appointed to carry out the terms of this Will."
+    }
+  ]
+}

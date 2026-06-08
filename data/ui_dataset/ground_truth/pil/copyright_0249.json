@@ -1,0 +1,42 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0249.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Unseen Hero",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Liam Clarke",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Daily Echo",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Liam Clarke. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "5150",
+      "question": "What is the page number?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "In the heart of the city, there's a story that whispers in the shadows, a tale of quiet heroism. Meet Sarah Thompson, a librarian by day and a volunteer firefighter by night. For years, Sarah has been risking her life to save those trapped in burning buildings, all while maintaining her secret identity. Her dedication and bravery have saved countless lives, yet she remains anonymous, preferring to help without recognition. Recently, a fire broke out in an old apartment building, trapping several residents inside. Sarah, along with a team of firefighters, rushed to the scene. She scaled the building, breaking windows to create escape routes and guiding the terrified residents to safety. When asked about her actions, she simply smiled and said, 'Just doing what anyone would do in my shoes.' Sarah's story is a reminder that true heroes come in many forms, often unseen and unheralded."
+    }
+  ]
+}

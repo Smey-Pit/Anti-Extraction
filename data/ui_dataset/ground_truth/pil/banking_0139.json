@@ -1,0 +1,54 @@
+{
+  "doc_type": "banking",
+  "image_path": "images/pil/banking_0139.png",
+  "entities": [
+    {
+      "label": "bank_name",
+      "type": "short_phrase",
+      "value": "Horizon Savings Bank",
+      "question": "What is the name of the bank?"
+    },
+    {
+      "label": "account_holder",
+      "type": "name",
+      "value": "Ava Wilson",
+      "question": "What is the account holder name?"
+    },
+    {
+      "label": "account_number",
+      "type": "digit_seq",
+      "value": "734-552  1853 6733 38",
+      "question": "What is the account number?"
+    },
+    {
+      "label": "account_type",
+      "type": "short_phrase",
+      "value": "Everyday Savings",
+      "question": "What is the account type?"
+    },
+    {
+      "label": "statement_period",
+      "type": "date_range",
+      "value": "1 Oct – 31 Oct 2024",
+      "question": "What is the statement period?"
+    },
+    {
+      "label": "opening_balance",
+      "type": "amount",
+      "value": "$3,000.00",
+      "question": "What is the opening balance?"
+    },
+    {
+      "label": "closing_balance",
+      "type": "amount",
+      "value": "$3,200.00",
+      "question": "What is the closing balance?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "transaction_history",
+      "text": "2024-10-01 Direct Deposit 400 $3,400.00\n2024-10-10 Groceries @ Supermarket -150 $3,250.00\n2024-10-15 Bill Payment @ Electricity Co. -200 $3,050.00\n2024-10-20 Bill Payment @ Water Co. -100 $2,950.00\n2024-10-25 Bill Payment @ Gas Co. -50 $2,900.00\n2024-10-30 Bill Payment @ Internet Co. -75 $2,825.00\n2024-10-31 Bill Payment @ Phone Co. -50 $2,775.00"
+    }
+  ]
+}

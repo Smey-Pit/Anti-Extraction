@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0049.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Android Messages",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Hank",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Ivy",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Hank",
+      "text": "Hey Ivy, how's the new job treating you?"
+    },
+    {
+      "label": "message_2_Ivy",
+      "text": "It's alright, still getting used to the new team."
+    },
+    {
+      "label": "message_3_Hank",
+      "text": "Any big projects coming up soon?"
+    },
+    {
+      "label": "message_4_Ivy",
+      "text": "Yeah, we're working on a big client presentation next month. Feels like a lot of pressure."
+    }
+  ]
+}

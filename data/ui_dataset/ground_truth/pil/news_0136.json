@@ -1,0 +1,76 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0136.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Economic Insight Journal",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Free Trade Agreements: A Boon or a Bane?",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Lila M. Greene",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "New York City, May 28, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Free Trade",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Economic Growth",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Labor Rights",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "The ongoing negotiations for a new free trade agreement between the United States and several European nations have reignited discussions about the benefits and drawbacks of such pacts, with both supporters and critics lining up to voice their opinions."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Proponents argue that these agreements will enhance economic growth by opening markets and increasing trade opportunities, with economist Dr. Emily Carter stating, 'Open markets are key to fostering innovation and job creation.'"
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "On the other hand, labor unions are concerned about the potential loss of jobs due to increased competition from foreign workers, with union representative Mark Wilson warning, 'We need to protect American jobs and ensure fair labor practices.'"
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Critics also point out that such agreements can sometimes lead to environmental degradation and exploitation of natural resources, with environmental advocate Jane Doe noting, 'We must prioritize sustainable development over short-term gains.'"
+    },
+    {
+      "label": "pull_quote",
+      "text": "Open markets are key to fostering innovation and job creation."
+    }
+  ]
+}

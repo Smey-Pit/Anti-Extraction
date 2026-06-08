@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0035.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Instagram DM",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Ava",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Taylor",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Ava",
+      "text": "Hey Taylor, I’m having a tough week. Just wanted to vent."
+    },
+    {
+      "label": "message_2_Taylor",
+      "text": "I’m so sorry to hear that. What’s going on?"
+    },
+    {
+      "label": "message_3_Ava",
+      "text": "Just bills and stuff. Feels like everything’s piling up."
+    },
+    {
+      "label": "message_4_Taylor",
+      "text": "I’m here for you. Maybe we can grab coffee tomorrow?"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0010.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Lease Agreement",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Sunset City, State of Horizon",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "October 14, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "party_1_landlord",
+      "type": "name",
+      "value": "Jameson Estates, LLC",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_tenant",
+      "type": "name",
+      "value": "Sarah L. Thompson",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Jameson Estates, LLC",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_2",
+      "type": "name",
+      "value": "Sarah L. Thompson",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._TERM_OF_LEASE",
+      "text": "The Lease Term shall commence on November 1, 2024, and shall expire on October 31, 2025."
+    },
+    {
+      "label": "clause_2.1_RENT",
+      "text": "The Tenant shall pay rent in the amount of $1,200.00 per month, payable on the first day of each month."
+    },
+    {
+      "label": "clause_3._USE_OF_PREMISES",
+      "text": "The Premises shall be used solely for residential purposes, as further defined in Exhibit A attached hereto."
+    }
+  ]
+}

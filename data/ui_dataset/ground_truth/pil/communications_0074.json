@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0074.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Instagram DM",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Hannah",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Ian",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Ian",
+      "text": "Hey Hannah, how’s it going? Thinking of u."
+    },
+    {
+      "label": "message_2_Hannah",
+      "text": "Not bad, just dealing with some stuff. Thanks for asking."
+    },
+    {
+      "label": "message_3_Ian",
+      "text": "Wanna talk about it?"
+    },
+    {
+      "label": "message_4_Hannah",
+      "text": "Nah, it’s fine. Just personal stuff. Maybe later?"
+    }
+  ]
+}

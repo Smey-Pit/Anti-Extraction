@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0026.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "The Northern Sentinel",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Government’s Education Reform Plan Faces Widespread Opposition",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "James R. Thompson",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "New York City, April 1, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "education reform",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "public schools",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "government policy",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "The government's ambitious plan to overhaul the public education system has met with resistance from teachers, parents, and students, raising questions about its feasibility and effectiveness."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The reform aims to increase funding for schools and introduce new standards to improve academic performance, but critics claim it lacks clear implementation strategies."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Teachers' unions have called for more dialogue before any changes are made, fearing that the plan could undermine existing educational programs."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Parent groups have also expressed concerns, arguing that the reforms do not adequately address the needs of diverse student populations."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Education Minister Johnson responded, 'We are committed to ensuring that every child receives the best possible education, regardless of their background.'"
+    },
+    {
+      "label": "pull_quote",
+      "text": "We are committed to ensuring that every child receives the best possible education, regardless of their background."
+    }
+  ]
+}

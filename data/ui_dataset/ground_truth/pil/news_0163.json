@@ -1,0 +1,86 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0163.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "The Liberal Beacon",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Immigration Policy: A Path Forward?",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "David R. Lee",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Los Angeles, June 5, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Immigration Reform",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Undocumented Immigrants",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Border Security",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_4",
+      "type": "short_phrase",
+      "value": "Economic Impact",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "The ongoing debate over immigration policy has reached a critical juncture, with calls for reform echoing across the country. Advocates argue for a pathway to citizenship for undocumented immigrants, while critics stress the need for stricter enforcement and border security."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The proposed bill includes provisions for legalizing the status of millions of undocumented immigrants currently living and working in the United States. Proponents view this as a moral imperative and a way to strengthen the economy and family unity."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Immigrant rights activist Maria Garcia stated, 'This is not just about legality; it’s about recognizing the contributions of millions of hardworking individuals who make our communities thrive.'"
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "However, opponents argue that such a measure would incentivize illegal immigration and put undue strain on public resources. They advocate for a more robust border patrol and increased penalties for employers who hire undocumented workers."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "A recent study showed that legalizing undocumented immigrants could boost the economy by billions of dollars annually, further fueling the debate over the best path forward."
+    },
+    {
+      "label": "pull_quote",
+      "text": "‘It’s time to acknowledge the humanity of those seeking a better life and provide them with a fair and just path to citizenship.’ – Maria Garcia"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0230.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "The New Horizon",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Is the Government Overstepping Boundaries with New Privacy Laws?",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Eleanor M. Greene",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Washington D.C., March 15, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Privacy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Data Protection",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Technology",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_4",
+      "type": "short_phrase",
+      "value": "Free Speech",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "The recent introduction of sweeping privacy legislation has sparked a heated debate among lawmakers and citizens alike. Critics argue that these new laws will stifle free speech and innovation, while supporters contend they are necessary to protect personal data in an increasingly digital age."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The proposed bill mandates strict regulations on how companies can collect and use consumer data, including the requirement for explicit consent before any data sharing can occur. This has alarmed tech giants who fear it could hinder their ability to operate efficiently."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Supporters, however, point out that recent data breaches have exposed the vulnerability of personal information and that stronger protections are needed. They argue that the new laws will empower individuals to control their own data and hold corporations accountable."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "However, some experts warn that such stringent measures could inadvertently create a chilling effect on online discourse, limiting the free exchange of ideas and opinions."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"Privacy is not a luxury; it is a fundamental right.\" - Senator Jameson Hart"
+    }
+  ]
+}

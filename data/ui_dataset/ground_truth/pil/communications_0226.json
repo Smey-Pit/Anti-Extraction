@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0226.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "iMessage",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Samantha",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Jake",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Samantha",
+      "text": "Hey Jake, u r home?"
+    },
+    {
+      "label": "message_2_Jake",
+      "text": "Yeah, just got in. What’s up?"
+    },
+    {
+      "label": "message_3_Samantha",
+      "text": "Cn u meet me at the doc's? I have a new med test results."
+    },
+    {
+      "label": "message_4_Jake",
+      "text": "Sure, what time?"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0150.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Shadows and Light",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Morgan Lee",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Silver Screen Productions",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Morgan Lee. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "3122",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. ABANDONED HOSPITAL - NIGHT",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. ABANDONED HOSPITAL - NIGHT\n\nThe dim lights flicker, casting eerie shadows on the walls. Detective Jake Hawkins stands in the doorway, his flashlight beam illuminating the dusty corridors. He hears a faint sound, like footsteps, coming from the far end of the hall. He moves cautiously, his gun drawn. As he approaches, the sound grows louder, until he sees a figure in the distance.\n\nJAKE\n(hushed)\nWho’s there?\n\nThe figure turns, revealing a woman with wild hair and a determined expression. She holds a small flashlight, its beam dancing on the walls.\n\nWOMAN\n(whispering)\nI’m here to help you find the truth.\n\nJake steps closer, his heart racing. The woman’s words are a promise, a glimmer of hope in the darkness."
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "doc_type": "banking",
+  "image_path": "images/pil/banking_0111.png",
+  "entities": [
+    {
+      "label": "bank_name",
+      "type": "short_phrase",
+      "value": "FictiveSecond Bank",
+      "question": "What is the name of the bank?"
+    },
+    {
+      "label": "account_holder",
+      "type": "name",
+      "value": "Bob Smith",
+      "question": "What is the account holder name?"
+    },
+    {
+      "label": "account_number",
+      "type": "digit_seq",
+      "value": "633-317  4680 4262 28",
+      "question": "What is the account number?"
+    },
+    {
+      "label": "account_type",
+      "type": "short_phrase",
+      "value": "Business Cheque",
+      "question": "What is the account type?"
+    },
+    {
+      "label": "statement_period",
+      "type": "date_range",
+      "value": "1 Oct – 31 Oct 2024",
+      "question": "What is the statement period?"
+    },
+    {
+      "label": "opening_balance",
+      "type": "amount",
+      "value": "$3,210.50",
+      "question": "What is the opening balance?"
+    },
+    {
+      "label": "closing_balance",
+      "type": "amount",
+      "value": "$3,890.00",
+      "question": "What is the closing balance?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "transaction_history",
+      "text": "2024-10-01 Direct Deposit 2500.0 $5,710.50\n2024-10-05 Office Supplies @ OfficeDepot -250.0 $5,460.50\n2024-10-10 Software License @ TechCo -400.0 $5,060.50\n2024-10-15 Marketing Budget @ AdWords -1000.0 $4,060.50\n2024-10-20 Client Payment 1500.0 $5,560.50\n2024-10-25 Travel Expenses @ Delta Airlines -250.0 $5,310.50\n2024-10-31 Salary Payment to Employee -800.0 $3,890.00"
+    }
+  ]
+}

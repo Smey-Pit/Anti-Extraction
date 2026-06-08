@@ -1,0 +1,68 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0013.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Notice of Eviction",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Oakwood County, State of Oakton",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "October 15, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "Case No. EV-2024-08841",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_landlord",
+      "type": "name",
+      "value": "Greenwood Properties, Inc.",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_tenant",
+      "type": "name",
+      "value": "Michael J. Reed",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Greenwood Properties, Inc.",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_2",
+      "type": "name",
+      "value": "Michael J. Reed",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._NOTICE_OF_VIOLATION",
+      "text": "You are hereby notified that you have violated the terms of your lease agreement by failing to maintain the cleanliness of the premises."
+    },
+    {
+      "label": "clause_2.1_TIME_FOR_REMEDY",
+      "text": "You have thirty (30) days from the receipt of this notice to remedy the violation and restore the premises to their original condition."
+    },
+    {
+      "label": "clause_3._FAILURE_TO_REMEDY",
+      "text": "If the violation is not remedied within the specified time, this notice constitutes a formal demand for possession of the premises."
+    }
+  ]
+}

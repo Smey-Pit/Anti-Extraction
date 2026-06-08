@@ -1,0 +1,76 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0166.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "The Liberty Post",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Republican Proposal to Increase Minimum Wage Faces Backlash",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "James O'Connor",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Chicago, IL, April 10, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Politics",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Minimum Wage",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Economic Policy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Small Business",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Republican lawmakers in Illinois have proposed raising the state’s minimum wage to $15 per hour, a move that has been met with fierce opposition from small business owners and economists."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The proposal, which would take effect over a five-year period, would see the minimum wage increase gradually from its current rate of $9.25 per hour."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Supporters argue that a higher minimum wage would boost consumer spending and reduce poverty levels, while opponents warn that it could lead to job losses and higher prices for consumers."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "‘Small businesses are already struggling to stay afloat, and this would only make things worse,’ said local shop owner Sarah Johnson. ‘I’m worried about being able to keep my doors open if this passes.’"
+    },
+    {
+      "label": "pull_quote",
+      "text": "‘Raising the minimum wage is a Band-Aid solution that doesn’t address the root causes of economic inequality.’ – Economist Dr. Emily Davis"
+    }
+  ]
+}

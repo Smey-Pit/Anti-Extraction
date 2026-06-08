@@ -1,0 +1,62 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0160.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Lease Agreement",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Springfield City, State of Novaria",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "June 15, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "party_1_landlord",
+      "type": "name",
+      "value": "Johnathan H. Blackwood",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_tenant",
+      "type": "name",
+      "value": "Emily R. Green",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Johnathan H. Blackwood",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_2",
+      "type": "name",
+      "value": "Emily R. Green",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._TERM_AND_PREMISES",
+      "text": "This Lease Agreement shall commence on June 20, 2024, and shall terminate on June 19, 2027, hereinafter referred to as the `Term`. The Premises are located at 123 Maple Street, Springfield, State of Novaria."
+    },
+    {
+      "label": "clause_2.1_RENT",
+      "text": "The Tenant shall pay Rent in the amount of $1,200.00 per month, payable on the first day of each calendar month."
+    },
+    {
+      "label": "clause_3._USE_OF_PREMISES",
+      "text": "The Tenant shall use the Premises solely for residential purposes and shall not sublet, assign, or otherwise transfer possession without the prior written consent of the Landlord."
+    }
+  ]
+}

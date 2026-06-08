@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0153.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "National Observer",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Climate Change Crisis Forces Government to Reconsider Energy Policies",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Elena Martinez",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Toronto, June 20, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Politics",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Climate Change",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Energy Policy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Renewable Energy",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "The government is under increasing pressure to reconsider its energy policies following a series of extreme weather events linked to climate change."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Recent heatwaves and flooding have highlighted the urgent need for action on climate change, prompting calls for a shift towards renewable energy sources."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Environment Minister Lisa Johnson said, 'We cannot continue with business as usual if we want to protect our communities and the planet.'"
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Opposition parties are pushing for stricter emissions targets and incentives for green technology, while industry groups argue that such changes would be too costly and disruptive."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Environmental activists are planning a series of protests to raise awareness about the impacts of climate change and push for stronger government action."
+    },
+    {
+      "label": "pull_quote",
+      "text": "'The time for half-measures is over. We need bold action now to combat climate change.' - Greenpeace Canada"
+    }
+  ]
+}

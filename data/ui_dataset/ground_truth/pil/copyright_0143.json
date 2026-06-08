@@ -1,0 +1,42 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0143.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Legacy of Lost Rivers",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Maeve Quinn",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Water’s Edge Journal",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Maeve Quinn. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "2966",
+      "question": "What is the page number?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "Hidden within the dense forests of the Pacific Northwest, the river of whispers flows silently, its waters carrying secrets of the past. For generations, local elders have spoken of this river, a place where the spirits of the ancestors linger. Recently, a group of intrepid researchers has begun exploring the area, hoping to uncover the truth behind the legends. Their journey takes them through dense underbrush and across ancient bridges, each step bringing them closer to the heart of the mystery.\n\nAs night falls, the researchers set up camp near the river’s mouth. The air is thick with the scent of pine and earth, and the stars above seem to twinkle with a special intensity. It is here that the true magic of the river begins to reveal itself, its stories whispered in the wind, waiting to be heard."
+    }
+  ]
+}

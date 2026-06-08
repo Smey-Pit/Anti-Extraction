@@ -1,0 +1,68 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0235.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Service Agreement",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Springfield County, State of Novus",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "March 15, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "REF: SA-2024-092",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_client",
+      "type": "name",
+      "value": "Johnathan A. Quick",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_service_provider",
+      "type": "name",
+      "value": "Tech Innovators LLC",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Johnathan A. Quick",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_2",
+      "type": "name",
+      "value": "Tech Innovators LLC",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._DEFINITIONS",
+      "text": "The term 'PARTY' shall mean and include the Client and Service Provider hereinafter."
+    },
+    {
+      "label": "clause_2._SCOPE_OF_SERVICES",
+      "text": "The Service Provider agrees to provide the following services: web development, software implementation, and maintenance as detailed in Exhibit A."
+    },
+    {
+      "label": "clause_3._TERM_AND_TERMINATION",
+      "text": "This Agreement shall commence on the Effective Date and terminate upon the completion of all Services unless terminated earlier by mutual agreement or as provided herein."
+    }
+  ]
+}

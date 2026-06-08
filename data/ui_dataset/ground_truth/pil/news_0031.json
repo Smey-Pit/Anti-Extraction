@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0031.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Citizen's Voice",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Republican Party Seeks Radical Healthcare Overhaul Amidst Public Outcry",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Michael Greene",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "New York City, April 10, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Politics",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Healthcare Reform",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Market-Based Solutions",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Public Health",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "The Republican Party has proposed a sweeping overhaul of the nation’s healthcare system, a move that has sparked intense public debate and opposition from medical professionals and consumer groups."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The proposed reforms aim to shift away from the current system of government-funded insurance towards a market-driven approach, with an emphasis on private sector solutions and competition."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Dr. Laura Johnson, a prominent healthcare expert, warned, 'This could lead to significant increases in premiums and out-of-pocket costs, making quality care unaffordable for many Americans.'"
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Proponents of the plan argue that it would increase choice and reduce costs, ultimately leading to better health outcomes. They cite studies showing that countries with market-based healthcare systems often have lower costs and higher satisfaction rates."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "The proposal faces stiff opposition from labor unions and patient advocacy groups, who fear it will lead to reduced access to care and higher prices."
+    },
+    {
+      "label": "pull_quote",
+      "text": "'This could lead to significant increases in premiums and out-of-pocket costs, making quality care unaffordable for many Americans.' – Dr. Laura Johnson"
+    }
+  ]
+}

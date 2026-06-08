@@ -1,0 +1,85 @@
+{
+  "doc_type": "identity",
+  "image_path": "images/pil/identity_0043.png",
+  "entities": [
+    {
+      "label": "document_type",
+      "type": "short_phrase",
+      "value": "employee_id",
+      "question": "What type of identity document is this?"
+    },
+    {
+      "label": "issuing_authority",
+      "type": "short_phrase",
+      "value": "Corporate Identity Services, MegaCorp",
+      "question": "What authority issued this document?"
+    },
+    {
+      "label": "surname",
+      "type": "name",
+      "value": "Hartley",
+      "question": "What is the surname?"
+    },
+    {
+      "label": "given_names",
+      "type": "name",
+      "value": "Felicity",
+      "question": "What are the given names?"
+    },
+    {
+      "label": "dob",
+      "type": "date",
+      "value": "1990-09-12",
+      "question": "What is the date of birth?"
+    },
+    {
+      "label": "document_number",
+      "type": "digit_seq",
+      "value": "MC-123456",
+      "question": "What is the document number?"
+    },
+    {
+      "label": "nationality_state",
+      "type": "short_phrase",
+      "value": "MegaCorp",
+      "question": "What is the nationality or state?"
+    },
+    {
+      "label": "issue_date",
+      "type": "date",
+      "value": "2023-04-15",
+      "question": "What is the issue date?"
+    },
+    {
+      "label": "expiry_date",
+      "type": "date",
+      "value": "2028-04-15",
+      "question": "What is the expiry date?"
+    },
+    {
+      "label": "employee_id",
+      "type": "digit_seq",
+      "value": "E123456",
+      "question": "What is the employee ID?"
+    },
+    {
+      "label": "department",
+      "type": "short_phrase",
+      "value": "Human Resources",
+      "question": "What is the department?"
+    },
+    {
+      "label": "job_title",
+      "type": "short_phrase",
+      "value": "Recruitment Coordinator",
+      "question": "What is the job title?"
+    },
+    {
+      "label": "organisation",
+      "type": "short_phrase",
+      "value": "MegaCorp",
+      "question": "What is the organisation?"
+    }
+  ],
+  "content_blocks": []
+}

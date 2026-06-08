@@ -1,0 +1,46 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0241.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "iMessage",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Alex",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Jamie",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Jamie",
+      "text": "Hey Alex, I've been feeling kinda off lately."
+    },
+    {
+      "label": "message_2_Alex",
+      "text": "Really? What’s going on?"
+    },
+    {
+      "label": "message_3_Alex",
+      "text": "I dunno, just like my head feels all fuzzy and stuff."
+    },
+    {
+      "label": "message_4_Jamie",
+      "text": "Yeah, and my stomach's been acting up too. Gotta see a doc tomorrow."
+    },
+    {
+      "label": "message_5_Alex",
+      "text": "Oh no, that’s not good. Are you sure it’s nothing serious?"
+    }
+  ]
+}

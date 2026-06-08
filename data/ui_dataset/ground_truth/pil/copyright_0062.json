@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0062.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Forgotten Garden",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Avery Hart",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Garden Press",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Avery Hart. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "1297",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "Chapter 6: The Heart of the Garden",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "The garden was a sanctuary, a place where time seemed to slow down. Emma wandered through the winding paths, her fingers brushing against the velvety petals of roses and the rough bark of ancient trees. Each step took her deeper into memories and secrets. In the center of the garden stood a fountain, its water glistening under the sun. As she approached, a sense of peace washed over her. Here, amidst the flowers and foliage, she felt connected to something greater than herself. The garden was more than just a collection of plants; it was a living, breathing entity that held the stories of those who had come before her."
+    }
+  ]
+}

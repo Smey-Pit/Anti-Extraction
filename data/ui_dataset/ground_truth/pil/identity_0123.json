@@ -1,0 +1,85 @@
+{
+  "doc_type": "identity",
+  "image_path": "images/pil/identity_0123.png",
+  "entities": [
+    {
+      "label": "document_type",
+      "type": "short_phrase",
+      "value": "employee_id",
+      "question": "What type of identity document is this?"
+    },
+    {
+      "label": "issuing_authority",
+      "type": "short_phrase",
+      "value": "TechCorp",
+      "question": "What authority issued this document?"
+    },
+    {
+      "label": "surname",
+      "type": "name",
+      "value": "Lopez",
+      "question": "What is the surname?"
+    },
+    {
+      "label": "given_names",
+      "type": "name",
+      "value": "Carlos",
+      "question": "What are the given names?"
+    },
+    {
+      "label": "dob",
+      "type": "date",
+      "value": "1978-04-23",
+      "question": "What is the date of birth?"
+    },
+    {
+      "label": "document_number",
+      "type": "digit_seq",
+      "value": "TC-0012345678",
+      "question": "What is the document number?"
+    },
+    {
+      "label": "nationality_state",
+      "type": "short_phrase",
+      "value": "USA",
+      "question": "What is the nationality or state?"
+    },
+    {
+      "label": "issue_date",
+      "type": "date",
+      "value": "2021-09-15",
+      "question": "What is the issue date?"
+    },
+    {
+      "label": "expiry_date",
+      "type": "date",
+      "value": "2026-09-15",
+      "question": "What is the expiry date?"
+    },
+    {
+      "label": "employee_id",
+      "type": "digit_seq",
+      "value": "TC-0012345678",
+      "question": "What is the employee ID?"
+    },
+    {
+      "label": "department",
+      "type": "short_phrase",
+      "value": "IT",
+      "question": "What is the department?"
+    },
+    {
+      "label": "job_title",
+      "type": "short_phrase",
+      "value": "Software Engineer",
+      "question": "What is the job title?"
+    },
+    {
+      "label": "organisation",
+      "type": "short_phrase",
+      "value": "TechCorp",
+      "question": "What is the organisation?"
+    }
+  ],
+  "content_blocks": []
+}

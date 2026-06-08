@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0069.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Android Messages",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Frank",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Grace",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Frank",
+      "text": "Hey Grace, can we meet for coffee? 😊"
+    },
+    {
+      "label": "message_2_Grace",
+      "text": "Sure, where and when?"
+    },
+    {
+      "label": "message_3_Frank",
+      "text": "How about Starbucks near the park? Let's meet in 2 hrs?"
+    },
+    {
+      "label": "message_4_Grace",
+      "text": "Sounds good, see u there!"
+    }
+  ]
+}

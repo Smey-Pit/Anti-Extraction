@@ -1,0 +1,85 @@
+{
+  "doc_type": "identity",
+  "image_path": "images/pil/identity_0233.png",
+  "entities": [
+    {
+      "label": "document_type",
+      "type": "short_phrase",
+      "value": "employee_id",
+      "question": "What type of identity document is this?"
+    },
+    {
+      "label": "issuing_authority",
+      "type": "short_phrase",
+      "value": "GlobalTech Corporation HR Department",
+      "question": "What authority issued this document?"
+    },
+    {
+      "label": "surname",
+      "type": "name",
+      "value": "Reed",
+      "question": "What is the surname?"
+    },
+    {
+      "label": "given_names",
+      "type": "name",
+      "value": "Carter",
+      "question": "What are the given names?"
+    },
+    {
+      "label": "dob",
+      "type": "date",
+      "value": "1984-04-14",
+      "question": "What is the date of birth?"
+    },
+    {
+      "label": "document_number",
+      "type": "digit_seq",
+      "value": "GT-EMP-840414-001",
+      "question": "What is the document number?"
+    },
+    {
+      "label": "nationality_state",
+      "type": "short_phrase",
+      "value": "GlobalTech",
+      "question": "What is the nationality or state?"
+    },
+    {
+      "label": "issue_date",
+      "type": "date",
+      "value": "2021-06-20",
+      "question": "What is the issue date?"
+    },
+    {
+      "label": "expiry_date",
+      "type": "date",
+      "value": "2031-06-20",
+      "question": "What is the expiry date?"
+    },
+    {
+      "label": "employee_id",
+      "type": "digit_seq",
+      "value": "001",
+      "question": "What is the employee ID?"
+    },
+    {
+      "label": "department",
+      "type": "short_phrase",
+      "value": "Research and Development",
+      "question": "What is the department?"
+    },
+    {
+      "label": "job_title",
+      "type": "short_phrase",
+      "value": "Senior Software Engineer",
+      "question": "What is the job title?"
+    },
+    {
+      "label": "organisation",
+      "type": "short_phrase",
+      "value": "GlobalTech Corporation",
+      "question": "What is the organisation?"
+    }
+  ],
+  "content_blocks": []
+}

@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0007.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Shadows and Light",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Samantha Rayne",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Dawnlight Pictures",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Samantha Rayne. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "163",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "EXT. ABANDONED FACTORY - NIGHT",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "EXT. ABANDONED FACTORY - NIGHT\n\nThe factory looms large in the moonlit sky, its windows shattered and doors hanging askew. JASON, a detective, stands at the entrance, his flashlight casting long shadows across the concrete floor. He approaches cautiously, his mind racing with theories and possibilities. Suddenly, the sound of a muffled scream echoes through the night, sending a chill down his spine.\n\nJASON\n(into radio)\nI need backup, now.\n\nHe hurries deeper into the factory, his footsteps muffled by the thick carpet of dust and debris."
+    }
+  ]
+}

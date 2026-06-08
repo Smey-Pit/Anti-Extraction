@@ -1,0 +1,42 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0092.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Ghosts of the Grand Canal",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Liam Quinn",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Venetian Voice",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Liam Quinn. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "1915",
+      "question": "What is the page number?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "VENICE, ITALY – As the sun sets behind the ancient stone buildings, the Grand Canal transforms into a canvas of shadows and whispers. Locals and tourists alike have reported sightings of a ghostly figure, believed to be a noblewoman from the 18th century, who haunts the waterways. Known as the Lady of the Lagoon, this spectral presence has been the subject of countless tales and legends. Tonight, a team of paranormal investigators plans to explore the canal, hoping to capture evidence of the Lady’s existence. The air is thick with anticipation as they launch their boats, ready to face the unknown."
+    }
+  ]
+}

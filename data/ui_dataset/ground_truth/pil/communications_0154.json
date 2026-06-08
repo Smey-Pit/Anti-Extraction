@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0154.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "WhatsApp",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Olivia",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Daniel",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Olivia",
+      "text": "Hey Dan, can u help me with this report? I’m stuck"
+    },
+    {
+      "label": "message_2_Daniel",
+      "text": "Sure, what’s the issue?"
+    },
+    {
+      "label": "message_3_Olivia",
+      "text": "I don’t know how to structure the analysis part"
+    },
+    {
+      "label": "message_4_Daniel",
+      "text": "Start with the main findings, then break down each section"
+    }
+  ]
+}

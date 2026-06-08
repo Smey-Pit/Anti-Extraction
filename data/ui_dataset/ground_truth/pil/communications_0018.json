@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0018.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Instagram DM",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Ella",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Tom",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Tom",
+      "text": "Hey Ella, I’ve been thinking about us. We need to talk."
+    },
+    {
+      "label": "message_2_Ella",
+      "text": "Sure, when’s a good time?"
+    },
+    {
+      "label": "message_3_Tom",
+      "text": "Maybe tonight after work?"
+    },
+    {
+      "label": "message_4_Ella",
+      "text": "Sounds good, I’ll be free then."
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0134.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Public Interest Journal",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Education Funding Crisis Sparks Nationwide Protests",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Emily R. Wilson",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Los Angeles, July 20, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Education Funding",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Public Schools",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Student Protest",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Teachers and students across the country are joining forces to protest funding cuts in public education systems, highlighting the urgent need for investment in our schools."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The protests have been fueled by years of underfunding in school districts, resulting in overcrowded classrooms, outdated textbooks, and insufficient resources for special education programs."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Organizers of the movement argue that adequate funding is crucial for providing quality education and preparing students for the future job market."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "School administrators and local politicians have defended current funding levels, citing budget constraints and competing priorities."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Activists are calling for a national conversation on the importance of education and the role of government in supporting public schools."
+    },
+    {
+      "label": "pull_quote",
+      "text": "'Our children deserve better than what we're giving them,' said teacher Sarah Johnson."
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0047.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Echoes in the Night",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Jameson Hart",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Shadowplay Studios",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Jameson Hart. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "1041",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. ABANDONED FACTORY - NIGHT",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. ABANDONED FACTORY - NIGHT\n\nThe camera pans over the rusted machinery, shadows dancing on the walls. Suddenly, a soft glow emanates from behind a pile of crates. A figure emerges, cloaked and hooded, moving silently towards a dilapidated door. The figure stops, glancing around before pushing open the door. Inside, the room is dimly lit by an old lamp. The figure steps inside, the door closing behind them.\n\nFADE IN:\n\nFADE TO BLACK\n\nCUT TO:\n\nINT. ABANDONED FACTORY - NIGHT\n\nThe figure moves cautiously, their silhouette barely visible in the dim light. They stop at a wall covered in graffiti, reaching out to touch a symbol etched into the concrete. A low hum fills the room, and the figure's eyes widen. They pull out a small device, pressing a button. The wall begins to glow, revealing a hidden passage. The figure disappears into the darkness, the camera following them until they vanish from sight."
+    }
+  ]
+}

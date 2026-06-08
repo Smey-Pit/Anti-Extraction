@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0093.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Forgotten Shore",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Rowan Blackwood",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Seaside Tales Press",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Rowan Blackwood. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "1921",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "Chapter 5: The Cursed Cove",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "The beach was deserted, save for the occasional seagull scavenging for scraps. Sarah walked along the shore, her bare feet sinking into the sand with each step. The waves crashed against the rocks, their rhythm a soothing lullaby. She paused at a small cove, where the water was calm and clear. In the distance, she could see a ghostly figure standing on the cliffs above, its form barely discernible through the fog. Sarah felt a chill run down her spine, but she couldn't look away. Something about that figure seemed familiar, as if it had been waiting for her all along."
+    }
+  ]
+}

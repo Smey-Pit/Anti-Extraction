@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0081.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Citizen’s Voice",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Protests Escalate as Climate Change Activists Demand Action",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Michael J. Green",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "New York City, April 10, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Climate Change",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Protests",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Environmental Policy",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Climate change activists have taken to the streets in unprecedented numbers, demanding immediate and drastic action from the federal government to address the escalating crisis."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The protests, which have seen thousands of participants in major cities across the country, have been characterized by passionate speeches and calls for urgent policy changes."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Organizers claim that current efforts to combat climate change are insufficient and that only bold measures can prevent irreversible environmental damage."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Environmental scientist Dr. Emily Carter adds, 'We cannot afford to wait any longer. The science is clear, and the time for action is now.'"
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Government officials have responded with mixed messages, some expressing support for increased funding for renewable energy projects while others remain skeptical of the protesters' demands."
+    },
+    {
+      "label": "pull_quote",
+      "text": "'We cannot afford to wait any longer. The science is clear, and the time for action is now.' – Dr. Emily Carter"
+    }
+  ]
+}

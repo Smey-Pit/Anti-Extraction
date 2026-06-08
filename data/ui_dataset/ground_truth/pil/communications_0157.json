@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0157.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Discord",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Alex",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Jordan",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Jordan",
+      "text": "Hey Alex, how’s work? 😅 Still dealing w/ that boss from hell?"
+    },
+    {
+      "label": "message_2_Alex",
+      "text": "Yeah, it’s been a nightmare. I’m thinkin’ of just quitin’ & findin’ somethin’ else."
+    },
+    {
+      "label": "message_3_Jordan",
+      "text": "That’s a tough call. Have you tried talkin’ to HR about it?"
+    },
+    {
+      "label": "message_4_Alex",
+      "text": "I did, but they said there’s nothing they can do. It’s like working in a toxic environment."
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0132.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Gmail",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Emily",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Dr. Smith",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_3",
+      "type": "name",
+      "value": "Jane Doe",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_4",
+      "type": "name",
+      "value": "John Smith",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "subject",
+      "type": "short_phrase",
+      "value": "Doctor's Appointment Update",
+      "question": "What is the subject line of this message?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Emily",
+      "text": "Hi Dr. Smith, just wanted to follow up on the results from our recent visit."
+    },
+    {
+      "label": "message_2_Dr._Smith",
+      "text": "Hi Emily, thank you for reaching out. The results came back positive for a minor thyroid issue."
+    },
+    {
+      "label": "message_3_Emily",
+      "text": "Oh no, that sounds bad. What does that mean for me?"
+    },
+    {
+      "label": "message_4_Dr._Smith",
+      "text": "Don't worry, it's manageable. We'll need to schedule a follow-up appointment next month to monitor your progress."
+    }
+  ]
+}

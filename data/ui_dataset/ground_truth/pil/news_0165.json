@@ -1,0 +1,76 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0165.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "National Tribune",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Democrat-Backed Bill Seeks to Censor Conservative Media",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Evelyn Hartley",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Washington, DC, March 15, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Politics",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Freedom of Speech",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Government Regulation",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Media Bias",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "A newly introduced bill in the House of Representatives aims to regulate and potentially censor conservative media outlets, sparking outrage among Republican lawmakers and free speech advocates."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The legislation, known as the Media Accountability and Transparency Act (MATA), would require all media organizations that receive more than $500,000 in federal funding to undergo regular audits and submit detailed reports on their editorial processes and funding sources."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Critics argue that MATA is nothing more than an attempt to stifle dissent and control the narrative, while supporters claim it will ensure transparency and accountability in government-funded media."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "‘This is a clear violation of our First Amendment rights,’ said Senator John Smith, a Republican from Texas. ‘We cannot allow the government to dictate what we can and cannot say.’"
+    },
+    {
+      "label": "pull_quote",
+      "text": "‘MATA is just another tool in the arsenal of those who seek to silence opposing viewpoints and control the public discourse.’ – Senator John Smith"
+    }
+  ]
+}

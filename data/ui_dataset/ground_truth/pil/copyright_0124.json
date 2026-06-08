@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0124.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Forgotten Path",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Cyrus Grey",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Prairie Moon Books",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Cyrus Grey. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "2585",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "Chapter 7: Shadows of the Past",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "The path wound through the dense underbrush, its twists and turns hidden by the thick canopy overhead. Alex walked steadily, his boots crunching on the damp earth beneath him. He had been following this route for days, searching for any sign of the missing hiker. The forest seemed to stretch endlessly, its secrets locked away in the shadows. As he turned a corner, a faint rustling caught his attention. He paused, listening intently. From behind a cluster of bushes emerged a figure, cloaked in tattered garments. Alex hesitated, unsure whether to approach or retreat. The stranger spoke in a voice barely above a whisper.\n\nSTRANGER\n(softly)\nThey’re looking for me. Please, help me find my way home."
+    }
+  ]
+}

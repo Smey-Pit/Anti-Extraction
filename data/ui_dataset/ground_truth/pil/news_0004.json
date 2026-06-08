@@ -1,0 +1,76 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0004.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Citizen Watch",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Calls for Police Reform Spark Nationwide Protests",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Rachel Lee",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "San Francisco, June 15, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Police Reform",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Racial Justice",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Community Policing",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Protesters across the country are demanding sweeping reforms to police departments, citing systemic racism and excessive use of force as primary concerns."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The movement has gained momentum following a series of high-profile incidents involving police brutality, leading to widespread calls for accountability and justice. Demonstrators are pushing for changes such as stricter training requirements and community oversight boards."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Law enforcement agencies have responded with mixed reactions, some embracing the need for reform while others defending current practices. The debate has intensified tensions between law enforcement and civilian groups."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Supporters of the movement argue that meaningful change requires a fundamental shift in how policing is conducted, emphasizing the importance of trust and collaboration between officers and the communities they serve."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"It’s time for a new approach to policing that prioritizes safety and respect for all members of our community.\" - Activist Jane Doe"
+    }
+  ]
+}

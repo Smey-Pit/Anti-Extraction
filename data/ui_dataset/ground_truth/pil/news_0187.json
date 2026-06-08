@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0187.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "The Southern Herald",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Education Reform Bill Passes Senate Committee",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Linda J. Green",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Jacksonville, May 10, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Education Reform",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Teacher Training",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Class Size Reduction",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "The senate committee has given preliminary approval to a sweeping education reform bill aimed at improving teacher training and reducing class sizes, though the measure still faces opposition."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Supporters believe the bill will enhance the quality of education and prepare students better for the workforce."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Critics, however, warn that the proposed funding increases could strain already tight budgets and lead to job losses in other areas."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "The bill now moves to the full senate for further debate and voting."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Teachers unions have expressed mixed reactions, with some backing the reforms and others concerned about potential layoffs."
+    },
+    {
+      "label": "pull_quote",
+      "text": "‘Enhance the quality of education and prepare students better for the workforce.’ — Proponents"
+    }
+  ]
+}

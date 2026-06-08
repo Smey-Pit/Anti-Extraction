@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0203.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Last Signal",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Lena Kellerman",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Silver Screen Productions",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Lena Kellerman. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "4173",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. CONTROL ROOM - NIGHT",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. CONTROL ROOM - NIGHT\nThe dimly lit control room buzzed with activity. Monitors flickered, displaying various signals and data streams. At the center of the room, the director, Alex, stood by a large window overlooking the ocean. His eyes were fixed on the horizon, searching for any sign of the missing satellite. Suddenly, the monitor to his left lit up with a strange signal. Alex’s hands flew over the controls, adjusting settings and calibrating equipment. \n\nSFX: A soft hum, then a sharp beep.\n\nAlex: (excited) Something’s here!\n\nA tech approaches, holding a tablet. Tech: It’s a weak signal, but it’s coming from that direction.\n\nAlex nods, his voice steady and focused. Alex: Set the coordinates and prepare to intercept."
+    }
+  ]
+}

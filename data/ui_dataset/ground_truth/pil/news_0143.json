@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0143.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Political Insight",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Proposed Healthcare Reform Sparks Controversy Among Voters",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Lila J. Foster",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Los Angeles, June 2, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Healthcare Reform",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Universal Coverage",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Public vs Private",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "A newly proposed healthcare reform bill has ignited fierce debates across the country, with both supporters and opponents presenting compelling arguments for their positions."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The legislation aims to expand coverage to millions of uninsured Americans and reduce costs for existing patients through a combination of public and private sector reforms."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Advocates hail the bill as a step towards achieving universal healthcare, arguing that it will provide much-needed relief to families struggling with medical expenses."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Critics, however, warn that the plan could lead to higher taxes and reduced quality of care, particularly for those currently satisfied with their current insurance plans."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "The outcome of this debate will likely shape the political landscape for years to come."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"Healthcare is a fundamental right, and this bill is a critical first step towards ensuring everyone has access to quality care.\" - Democratic Representative Mark Wilson"
+    }
+  ]
+}

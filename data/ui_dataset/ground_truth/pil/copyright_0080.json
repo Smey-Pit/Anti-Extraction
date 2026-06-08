@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0080.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Echoes of the Past",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Eliot Kane",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Silver Screen Productions",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Eliot Kane. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "1609",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. ABANDONED HOUSE - NIGHT",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. ABANDONED HOUSE - NIGHT\n\nThe camera pans across a dusty living room, the walls peeling and the furniture covered in layers of dust. A single flickering light bulb casts eerie shadows. In the corner, a small radio plays static. Suddenly, the static clears, and a familiar voice comes through.\n\nRADIO VOICE\n(ANGRY)\nI’m telling you, the truth will set you free!\n\nThe voice fades out, leaving the room in silence. The camera zooms in on a framed photograph of a family, smiling and happy. The door creaks open, and a figure steps inside, the silhouette barely visible in the darkness.\n\nFADE TO BLACK"
+    }
+  ]
+}

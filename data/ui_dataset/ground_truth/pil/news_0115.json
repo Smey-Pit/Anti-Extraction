@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0115.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "National Tribune",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Tech Giants Face New Privacy Scrutiny as Whistleblower Revelations Emerge",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Sarah M. Thompson",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Washington, DC, October 10, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Technology",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Privacy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "FTC",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Tech Regulation",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "In an unprecedented move, the Federal Trade Commission has launched a probe into several tech giants following a series of leaks detailing alleged misuse of user data."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Sources close to the investigation claim that internal documents reveal a pattern of practices that violate existing privacy laws, raising serious concerns about corporate accountability."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Industry insiders suggest that these revelations could lead to significant regulatory changes and increased public scrutiny of digital giants."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "The FTC's chief investigator stated, 'These leaks highlight the urgent need for transparency and ethical business practices in the tech sector.'"
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Critics argue that such practices erode consumer trust and could have long-term implications for the tech industry's reputation."
+    },
+    {
+      "label": "pull_quote",
+      "text": "'This is not just about protecting user data; it’s about safeguarding the future of our democracy,' said Senator Jane Doe."
+    }
+  ]
+}

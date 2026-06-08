@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0173.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Last Witness",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Isaac Stone",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Shadowplay Studios",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Isaac Stone. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "3557",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. LIBRARY DESK - NIGHT",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. OLD LIBRARY - NIGHT\n\nThe library is dimly lit, the shelves lined with dusty books and faded posters. A single lamp casts a warm glow on the desk where LUCY, a retired detective, sits. She is typing furiously on her laptop, her expression intense. Suddenly, the door creaks open, and MARCUS, a young journalist, enters, holding a stack of papers.\n\nMARCUS\nLucy, I have something you might find interesting.\n\nLUCY\n(settling in)\nWhat is it?\n\nMARCUS\n(pulling out a file)\nThese are the records of the case we’ve been investigating. There are inconsistencies, and I think we’re onto something.\n\nLUCY\n(raising an eyebrow)\nWhat kind of inconsistencies?\n\nMARCUS\n(shuffling through the papers)\nWell, there are discrepancies in the alibis of several witnesses. And the forensic evidence doesn’t quite add up. It’s like someone is trying to cover something up.\n\nLUCY\n(sighing)\nThis is getting more complicated than I thought. We need to dig deeper.\n\nMARCUS\n(nodding)\nAgreed. Let’s start with the first witness, Sarah Thompson. She was the last person to see the victim alive.\n\nLUCY\n(getting up)\nLet’s go. We have some questions to ask."
+    }
+  ]
+}

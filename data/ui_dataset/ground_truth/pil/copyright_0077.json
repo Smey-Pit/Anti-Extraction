@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0077.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Last Signal",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Morgan Blackwood",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Darkside Books",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Morgan Blackwood. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "1561",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "Chapter 3: Midnight Call",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "The night was cold and clear, the stars a frozen tableau of light above the vast expanse of the desert. The radio crackled to life, static filling the air before a voice cut through, urgent and desperate. 'This is your last signal, Mr. Blackwood. You have until midnight to meet me. Failure means certain death.' The voice faded, leaving only the eerie silence of the desert. Blackwood leaned back in his chair, the weight of the words pressing down on him. He had been chasing this man for months, always one step behind. But tonight, he would finally catch up. The clock on the wall ticked steadily, each second a reminder of the looming deadline. Blackwood's mind raced, piecing together the clues that had led him to this moment. Tonight, he would either solve the puzzle or join the countless others who had disappeared into the darkness."
+    }
+  ]
+}

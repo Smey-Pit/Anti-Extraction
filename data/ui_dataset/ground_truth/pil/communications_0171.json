@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0171.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "iMessage",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Alice",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Bob",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Alice",
+      "text": "Hey u there, how r u doing?"
+    },
+    {
+      "label": "message_2_Bob",
+      "text": "Hey Alice! I'm good, just got back from a doctor's appt."
+    },
+    {
+      "label": "message_3_Alice",
+      "text": "Oh no! Did they say anything bad? 🙈"
+    },
+    {
+      "label": "message_4_Bob",
+      "text": "It's okay, they said it's nothing serious. Just some minor stuff. 😊"
+    }
+  ]
+}

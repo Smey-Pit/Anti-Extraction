@@ -1,0 +1,72 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0246.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Confidentiality Agreement",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Greenfield County, State of Verano",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "July 1, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "NDA-2024-113",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_disclosing_party",
+      "type": "name",
+      "value": "NovaTech Solutions Inc.",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_receiving_party",
+      "type": "name",
+      "value": "InnovateCorp Ltd.",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "NovaTech Solutions Inc.",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_2",
+      "type": "name",
+      "value": "InnovateCorp Ltd.",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._DEFINITION_OF_CONFIDENTIAL_INFORMATION",
+      "text": "‘CONFIDENTIAL INFORMATION’ means any proprietary information disclosed by the DISCLOSING PARTY to the RECEIVING PARTY, whether in written, oral, electronic, or other form."
+    },
+    {
+      "label": "clause_2.1_OBLIGATIONS_OF_RECEIVING_PARTY",
+      "text": "The RECEIVING PARTY shall not disclose or use the CONFIDENTIAL INFORMATION for any purpose other than as expressly permitted herein."
+    },
+    {
+      "label": "clause_3._TERM_AND_TERMINATION",
+      "text": "This agreement shall remain in effect until terminated by mutual written agreement of the parties or as otherwise provided herein."
+    },
+    {
+      "label": "notary_note",
+      "text": "Sworn before me this 1st day of July 2024."
+    }
+  ]
+}

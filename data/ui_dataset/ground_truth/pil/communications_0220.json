@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0220.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Discord",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Rachel",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Chris",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Rachel",
+      "text": "Hey Chris, I'm in a bit of a bind with my finances. Can you help?"
+    },
+    {
+      "label": "message_2_Chris",
+      "text": "Sure thing, what's the deal?"
+    },
+    {
+      "label": "message_3_Rachel",
+      "text": "I need to come up with $500 by next week, and I don't have it. 😕"
+    },
+    {
+      "label": "message_4_Chris",
+      "text": "Maybe we can split a bill or something?"
+    }
+  ]
+}

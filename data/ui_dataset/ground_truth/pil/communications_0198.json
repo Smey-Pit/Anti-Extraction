@@ -1,0 +1,60 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0198.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Gmail",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "David",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Emma",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_3",
+      "type": "name",
+      "value": "Frank",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_4",
+      "type": "name",
+      "value": "Grace",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "subject",
+      "type": "short_phrase",
+      "value": "Family Dinner Plans",
+      "question": "What is the subject line of this message?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_David",
+      "text": "Hey team, just a quick reminder for the family dinner tomorrow night at 6. Don't forget to bring a dish!"
+    },
+    {
+      "label": "message_2_Emma",
+      "text": "Got it, bringing a salad. Anyone else have ideas?"
+    },
+    {
+      "label": "message_3_Frank",
+      "text": "I'll bring some veggies on the side. Anything else we need to pick up?"
+    },
+    {
+      "label": "message_4_Grace",
+      "text": "I'm bringing a dessert. See you there!"
+    }
+  ]
+}

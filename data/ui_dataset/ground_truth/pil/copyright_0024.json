@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0024.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Echoes of Memory",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Isadora Gray",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Whispering Willow Books",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Isadora Gray. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "544",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "Chapter 11: The Last Sunset",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "She stood at the edge of the cliff, the wind tearing at her hair as she gazed out at the vast expanse of the ocean below. The sun was setting, painting the sky in hues of orange and pink, and the waves crashed against the rocks with a rhythmic fury. Memories flooded her mind, each one bringing a wave of nostalgia and sorrow. She remembered the laughter, the joy, and the love that had once filled this very spot. Now, all that remained were the echoes of those memories, fading with each passing day.\n\n‘Why did we have to let go?’ she whispered to the wind, her voice barely audible. The waves seemed to respond, crashing even harder against the shore. She closed her eyes, letting the salty breeze wash over her, and tried to hold onto the fragments of what had been.\n\n‘We can’t change the past, but maybe, just maybe, we can find a way to remember it forever.’"
+    }
+  ]
+}

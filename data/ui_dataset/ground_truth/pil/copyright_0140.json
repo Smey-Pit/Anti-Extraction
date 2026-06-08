@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0140.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Guardian",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Ava Lee",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Dreamscape Pictures",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Ava Lee. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "2889",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. ABANDONED LIBRARY - DAY",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. ABANDONED LIBRARY - DAY\n\nDr. Elara Voss stands before a large, ornate door, its surface covered in strange symbols. She reaches out and touches the door, feeling a sudden surge of energy. The door begins to glow, and a soft hum fills the air. Slowly, it creaks open, revealing a dark, winding staircase. Voss takes a deep breath and steps inside, her flashlight beam slicing through the darkness. As she descends, the symbols on the door seem to shift and change, forming a pattern that she recognizes. She knows what she must do next."
+    }
+  ]
+}

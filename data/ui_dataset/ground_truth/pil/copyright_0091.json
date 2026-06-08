@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0091.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Echoes of Silence",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Eliot Hart",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Silent Films Inc.",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Eliot Hart. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "1897",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. ABANDONED HOSPITAL - NIGHT",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. ABANDONED HOSPITAL - NIGHT\n\nThe camera pans across the desolate corridors, the only sound the distant echo of a heartbeat. Dr. Evelyn Carter stands at the end of a long hallway, her flashlight beam cutting through the darkness. She stops before a door, her hand trembling as she fumbles with the lock. With a soft click, the door swings open, revealing a room filled with medical equipment and empty beds. In the center, a single chair sits by a window, its back facing the light. As she approaches, a faint whisper can be heard, barely audible over the silence.\n\nDR. EVELYN CARTER (whispering)\nI know you're here. Please, just talk to me."
+    }
+  ]
+}

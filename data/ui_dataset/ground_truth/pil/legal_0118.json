@@ -1,0 +1,68 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0118.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Notice of Eviction",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Maplewood County, State of Verano",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "June 15, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "Eviction Notice No. 2024-113",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_landlord",
+      "type": "name",
+      "value": "Verano Real Estate LLC",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_tenant",
+      "type": "name",
+      "value": "John D. Doe",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Verano Real Estate LLC",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_2",
+      "type": "name",
+      "value": "John D. Doe",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._Notice_of_Default",
+      "text": "The Tenant is hereby notified that it has failed to comply with the terms of the Lease Agreement, specifically the requirement to pay rent in full by the first day of each month."
+    },
+    {
+      "label": "clause_2.1_Notice_Period",
+      "text": "The Tenant is given thirty (30) days from the date of this Notice to cure the default by paying the overdue rent in full, together with any late fees, to avoid the commencement of eviction proceedings."
+    },
+    {
+      "label": "clause_3._Legal_Action",
+      "text": "If the Tenant fails to cure the default within the thirty (30) day period, the Landlord reserves the right to commence legal action to recover possession of the premises and collect any damages incurred as a result of the Tenant's failure to comply with the terms of the Lease Agreement."
+    }
+  ]
+}

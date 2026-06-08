@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0043.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "A Life Unfolding",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Lila Thompson",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Glimmer Gazette",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Lila Thompson. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "958",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "A Life Unfolding",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "In the quiet town of Willow Creek, nestled between rolling hills and dense forests, lives a woman whose life story reads like a novel. Meet Mrs. Elsie Jenkins, a centenarian who has seen more than a century of change pass by her front porch. Her house, a modest two-story home with a wraparound porch, is the center of her world. Each morning, she wakes up before dawn, her routine as steady as the ticking of the clock in the living room.\n\nMrs. Jenkins grew up during the Great Depression, learning early the value of hard work and resilience. She met her husband, Tom, in the 1940s, and they were married for over 70 years until his passing. Together, they raised three children and built a life filled with love and laughter. Today, she still maintains a garden, tending to it with the same care and dedication she did decades ago.\n\nHer granddaughter, EMILY, a local high school student, often helps her with the chores. Emily says, 'Grandma is like a walking history book. Every day, she shares stories about her youth and the world she grew up in. It’s amazing how much she remembers.'\n\nMrs. Jenkins’ life is a testament to the strength of the human spirit and the enduring power of family bonds. As she celebrates another birthday, she looks forward to the days ahead, knowing that her legacy will continue to inspire those around her."
+    }
+  ]
+}

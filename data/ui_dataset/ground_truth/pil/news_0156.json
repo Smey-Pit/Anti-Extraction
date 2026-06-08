@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0156.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "The Northern Sentinel",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Is the Federal Government Overstepping Boundaries with New Surveillance Laws?",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Michael Thompson",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Detroit, April 15, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Surveillance",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Civil Liberties",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "National Security",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Recent federal legislation aimed at enhancing national security through expanded surveillance powers has raised concerns among civil liberties groups about potential misuse of authority."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Supporters of the new laws argue that they are necessary to combat rising cyber threats and protect citizens from terrorism."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Critics, however, warn that these measures could erode individual privacy rights and lead to an Orwellian society where government overreach becomes the norm."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Civil rights organizations have called for stringent oversight mechanisms to ensure that these powers are used responsibly."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Legal experts suggest that a balanced approach is needed to safeguard both public safety and personal freedoms."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"Surveillance without accountability is a recipe for tyranny.\" - Privacy Rights Coalition Spokesperson"
+    }
+  ]
+}

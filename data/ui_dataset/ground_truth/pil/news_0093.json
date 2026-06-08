@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0093.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "The Conservative Herald",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Education Funding Cuts Spark Protests Across the Country",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Michael R. Thompson",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Chicago, June 15, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Politics",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Education",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Budget Cuts",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Protests",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Public school teachers and students have taken to the streets in protest against proposed cuts to education funding, drawing national attention to the issue."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The proposed budget allocates significantly less money to schools, prompting fears of reduced resources and increased class sizes."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Teachers unions have called for immediate action to protect educational standards, while school boards argue the cuts are necessary to balance the state’s budget."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Parent and activist Jane Doe expressed frustration, 'Our kids deserve better than this.'"
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "State Representative David Smith responded, 'We must prioritize fiscal responsibility without compromising our children’s future.'"
+    },
+    {
+      "label": "pull_quote",
+      "text": "‘Education is not a luxury; it’s a necessity,’ said Governor Emily Clark in a televised address."
+    }
+  ]
+}

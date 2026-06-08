@@ -1,0 +1,60 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0033.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Gmail",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Lily",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Emily",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_3",
+      "type": "name",
+      "value": "Sophie",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_4",
+      "type": "name",
+      "value": "Mia",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "subject",
+      "type": "short_phrase",
+      "value": "Family gathering this weekend",
+      "question": "What is the subject line of this message?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Lily",
+      "text": "Hey girls, just wanted to confirm the details. Who’s bringing what?"
+    },
+    {
+      "label": "message_2_Emily",
+      "text": "I’ll bring the dessert. Any ideas for drinks?"
+    },
+    {
+      "label": "message_3_Sophie",
+      "text": "I can make some punch. And maybe some chips?"
+    },
+    {
+      "label": "message_4_Mia",
+      "text": "I’ll bring soda and some snacks. Let me know if u need anything else!"
+    }
+  ]
+}

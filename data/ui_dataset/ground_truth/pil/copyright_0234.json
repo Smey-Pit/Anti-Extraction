@@ -1,0 +1,42 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0234.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Unseen Healer",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Jenna Carter",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "The Daily Sentinel",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Jenna Carter. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "4830",
+      "question": "What is the page number?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "In a quiet corner of the city lies a small, unassuming clinic that has been making waves in the medical community. Dr. Elena Myles, a young physician with a heart full of compassion, has become a beacon of hope for those seeking alternative healing methods. Her clinic, known simply as 'The Sanctuary,' offers a unique blend of traditional medicine and holistic practices, attracting patients from all walks of life.\n\nDr. Myles’ approach is holistic, focusing not just on treating symptoms but on addressing the root causes of illness. She believes in the power of nature and the body’s innate ability to heal itself. Her methods include acupuncture, herbal remedies, and guided meditation, all tailored to the individual needs of each patient. What sets her apart is her unwavering commitment to her patients, often staying late into the night to ensure they receive the care they need.\n\n‘Every person has their own story,’ Dr. Myles says. ‘It’s my job to listen and help them find the path to wellness.’ Her dedication has not gone unnoticed, and the clinic has recently been featured in several local news stories, drawing attention to the growing trend of integrative healthcare."
+    }
+  ]
+}

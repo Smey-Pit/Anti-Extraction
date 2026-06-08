@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0107.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Progressive Post",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Healthcare Reform: A Path to Universal Coverage",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Sarah Chen",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "New York City, May 5, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Healthcare Reform",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Universal Coverage",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Public Health",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Proposals for universal healthcare coverage are gaining traction as politicians and activists push for a system where all Americans have access to affordable medical care."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Supporters of universal healthcare argue that it would reduce financial strain on families and improve overall public health outcomes."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Opponents counter that such a system would be costly and could lead to longer wait times for non-urgent care."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "The debate centers around how to fund the expansion of healthcare services and whether private insurance should continue to play a role."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "A healthcare expert stated, 'Universal coverage is not just about access; it's about ensuring everyone has the same opportunity to live a healthy life.'"
+    },
+    {
+      "label": "pull_quote",
+      "text": "'No one should be denied medical care because of their bank account,' argued Dr. Emily Johnson, a leading advocate for universal healthcare."
+    }
+  ]
+}

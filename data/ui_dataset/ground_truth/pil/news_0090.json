@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0090.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "The Progressive Sentinel",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Local Mayor's Climate Plan Panned by Critics as Unrealistic",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Evelyn M. Green",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "New Haven, March 15, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Politics",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Climate Change",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Local Politics",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Economic Development",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Mayor Sarah Thompson's ambitious climate action plan has been met with skepticism from local business leaders who argue it could stifle economic growth."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Thompson unveiled her proposal last week, which includes a ban on single-use plastics and a significant increase in public transportation funding."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Critics claim the measures will lead to job losses and higher costs for consumers, while supporters see them as crucial steps towards sustainability."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Business owner John Smith told reporters, 'We need to balance our commitment to the environment with the needs of our community.'"
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Environmental activist Jane Doe countered, 'This isn’t about stifling growth; it’s about creating a livable future for all residents.'"
+    },
+    {
+      "label": "pull_quote",
+      "text": "‘It’s time to take bold action before it’s too late,’ said Mayor Thompson at the press conference."
+    }
+  ]
+}

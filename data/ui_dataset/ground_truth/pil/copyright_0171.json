@@ -1,0 +1,42 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0171.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "A City Divided: The Battle for the Heart of New Haven",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Morgan Reed",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "New Haven Herald",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Morgan Reed. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "3516",
+      "question": "What is the page number?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "In the heart of New Haven, two communities stand at odds, each fighting for control over the city’s future. On one side, the residents of Eastside Square, a vibrant neighborhood known for its rich cultural heritage, are determined to preserve the area’s charm and diversity. On the other, the developers of the Northern Gateway project seek to transform the area into a modern commercial hub, promising economic growth and job opportunities.\n\nAt a recent community meeting, tensions ran high as residents of Eastside Square expressed their concerns about the proposed development. They argued that the project would displace long-time residents, erode the unique character of the neighborhood, and exacerbate existing social inequalities. “This isn’t just about buildings and profits,” said Maria Lopez, a local activist. “It’s about our homes, our families, and our way of life.”\n\nThe Northern Gateway team countered that the project would bring much-needed investment to the area, creating jobs and improving infrastructure. “We believe in working together to create a better future for everyone,” said John Harris, spokesperson for the development company. “Our plans include affordable housing options and community spaces that will benefit all members of the community.”\n\nAs the debate continues, the fate of New Haven hangs in the balance. Will the city embrace change or protect its heritage? Only time will tell, but one thing is clear: the battle for the heart of New Haven is far from over."
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0238.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Northside Chronicle",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Healthcare Debate Heats Up as New Proposal Emerges",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "David R. Smith",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Northeast City, July 10, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Politics",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Healthcare Reform",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Universal Coverage",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Lobbying",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "A controversial healthcare proposal that seeks to overhaul the current system by introducing a universal healthcare framework has ignited a fierce debate among lawmakers and constituents alike."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Backed by progressive politicians, the proposal aims to provide comprehensive coverage to all residents, funded through increased taxes on corporations and high-income earners."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Opposition comes from conservative lawmakers who argue that such a system would be too costly and lead to longer wait times for services."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Proponents argue that the current system is unsustainable and that universal coverage is essential for equitable access to healthcare."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "The proposal faces significant hurdles, including resistance from powerful lobbying groups and potential legal challenges."
+    },
+    {
+      "label": "pull_quote",
+      "text": "'Universal coverage is not just a dream; it’s a necessity for our society to thrive.' - Senator Emily Carter"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0040.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Silent Witness",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Sophia Grey",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Mystic Vision Pictures",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Sophia Grey. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "907",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. COURTROOM - DAY",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. COURTROOM - DAY\n\nThe courtroom was packed, the tension palpable. JUDY WILSON, a middle-aged woman, sat in the witness stand, her voice steady as she recounted the events of the night. Her eyes never left the defendant, JASON KELLY, who sat impassively in the defendant’s chair.\n\nJUDY WILSON\n(to the court)\nI saw him, Your Honor. I saw him break into my home, and then... he was gone.\n\nThe judge nodded, taking notes as the prosecutor questioned her further. Suddenly, the defendant’s lawyer interjected, his voice low and menacing.\n\nDEFENSE COUNSEL\nDo you have any reason to believe Ms. Wilson might be lying?\n\nJUDY WILSON\n(shaken)\nNo, sir. I’m telling the truth.\n\nThe courtroom held its breath as the trial continued, each word a potential turning point in the case."
+    }
+  ]
+}

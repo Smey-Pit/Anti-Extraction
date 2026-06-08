@@ -1,0 +1,85 @@
+{
+  "doc_type": "identity",
+  "image_path": "images/pil/identity_0024.png",
+  "entities": [
+    {
+      "label": "document_type",
+      "type": "short_phrase",
+      "value": "insurance_card",
+      "question": "What type of identity document is this?"
+    },
+    {
+      "label": "issuing_authority",
+      "type": "short_phrase",
+      "value": "GreenLife Insurance Co.",
+      "question": "What authority issued this document?"
+    },
+    {
+      "label": "surname",
+      "type": "name",
+      "value": "Martinez",
+      "question": "What is the surname?"
+    },
+    {
+      "label": "given_names",
+      "type": "name",
+      "value": "Sofia",
+      "question": "What are the given names?"
+    },
+    {
+      "label": "dob",
+      "type": "date",
+      "value": "19950220",
+      "question": "What is the date of birth?"
+    },
+    {
+      "label": "document_number",
+      "type": "digit_seq",
+      "value": "GLIC-987654321",
+      "question": "What is the document number?"
+    },
+    {
+      "label": "nationality_state",
+      "type": "short_phrase",
+      "value": "GreenLife",
+      "question": "What is the nationality or state?"
+    },
+    {
+      "label": "issue_date",
+      "type": "date",
+      "value": "2019-03-15",
+      "question": "What is the issue date?"
+    },
+    {
+      "label": "expiry_date",
+      "type": "date",
+      "value": "2029-03-15",
+      "question": "What is the expiry date?"
+    },
+    {
+      "label": "member_id",
+      "type": "digit_seq",
+      "value": "987654321",
+      "question": "What is the member ID?"
+    },
+    {
+      "label": "group_number",
+      "type": "digit_seq",
+      "value": "123456789",
+      "question": "What is the group number?"
+    },
+    {
+      "label": "plan_name",
+      "type": "short_phrase",
+      "value": "Gold Plan",
+      "question": "What is the plan name?"
+    },
+    {
+      "label": "primary_care_provider",
+      "type": "name",
+      "value": "Dr. Green",
+      "question": "Who is the primary care provider?"
+    }
+  ],
+  "content_blocks": []
+}

@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0168.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Echoes of the Past",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Jenna Green",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Silver Screen Pictures",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Jenna Green. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "3494",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. OLD LIBRARY - DAY",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. OLD LIBRARY - DAY\n\nThe library is dimly lit, with rows of dusty books lining the shelves. The air is thick with the scent of old paper and forgotten knowledge. Sarah, a young archivist, stands at a large table, surrounded by stacks of documents. Her fingers run over the yellowed pages of an old journal, her expression one of both wonder and sorrow. Suddenly, the door creaks open, and an elderly man steps in, his eyes alight with a spark of excitement.\n\nMAN\nYou’ve found it, haven’t you?\n\nSARAH\n(looking up) Found what?\n\nMAN\nThe truth. The truth about our ancestors.\n\nSARAH\n(leaning in) What do you mean?\n\nMAN\nThey kept secrets, Sarah. Secrets that could change everything. This journal is full of them. You must read it, understand it. The past is not just history; it’s a mirror reflecting our present."
+    }
+  ]
+}

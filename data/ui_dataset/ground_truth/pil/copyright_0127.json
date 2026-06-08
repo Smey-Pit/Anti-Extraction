@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0127.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Echoes of the Past",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Liam Hartley",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Rivertown Films",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Liam Hartley. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "2636",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. ROOM 107 - NIGHT",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. ABANDONED HOSPITAL - NIGHT\n\nThe camera pans across the dimly lit corridor, shadows dancing on the peeling walls. A soft hum of machinery echoes through the empty halls. Suddenly, the door to Room 107 creaks open. JESSICA, a young woman with a haunted look in her eyes, steps inside, her flashlight beam cutting through the darkness. She moves to a desk in the corner and pulls out an old, dusty box. Inside, she finds a stack of yellowed photographs and a single, faded letter. Her hand trembles as she opens the letter.\n\nJESSICA\n(whispering)\nI don't know why I'm doing this... but I have to find out what happened here.\n\nShe begins to flip through the photos, each one more disturbing than the last. The room fills with the sound of distant sirens, growing louder until they fill the entire building."
+    }
+  ]
+}

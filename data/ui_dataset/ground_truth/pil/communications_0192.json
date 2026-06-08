@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0192.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Instagram DM",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Jordan",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Emily",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Emily",
+      "text": "Hey Jordan, I've been thinking about us..."
+    },
+    {
+      "label": "message_2_Jordan",
+      "text": "Yeah? What's on your mind?"
+    },
+    {
+      "label": "message_3_Emily",
+      "text": "I don't know... things have been different lately and I'm feeling kinda lost."
+    },
+    {
+      "label": "message_4_Jordan",
+      "text": "Me too. It's been tough, but we're in this together, right?"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0057.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Last Will and Testament",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Greenwood County, State of Novaria",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "July 10, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "party_1_grantor",
+      "type": "name",
+      "value": "Isabella M. White",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_executor",
+      "type": "name",
+      "value": "Thomas R. Black",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Isabella M. White",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_2",
+      "type": "name",
+      "value": "Thomas R. Black",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._Testamentary_Intent",
+      "text": "I, Isabella M. White, being of sound mind and body, do hereby make, publish, and declare this my Last Will and Testament."
+    },
+    {
+      "label": "clause_2.1_Disposal_of_Property",
+      "text": "I direct that all of my personal property, including but not limited to furniture, jewelry, and household items, be distributed equally among my children, John and Mary White."
+    },
+    {
+      "label": "clause_3._Executor",
+      "text": "I hereby appoint Thomas R. Black as the Executor of my estate, with full power and authority to carry out the provisions of this Will."
+    }
+  ]
+}

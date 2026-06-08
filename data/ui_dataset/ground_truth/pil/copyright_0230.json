@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0230.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Lighthouse Keeper",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Evelyn Carter",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Cove Edge Books",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Evelyn Carter. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "4772",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "Chapter 8: A New Day",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "The lighthouse stood as a sentinel against the endless sea, its beam slicing through the fog like a sword. Inside, the keeper, Thomas, sat hunched over his desk, a stack of logs and charts beside him. His eyes scanned the horizon, searching for any sign of ships. The sound of the waves echoed through the narrow halls, a constant reminder of the isolation he faced. Every day was the same, yet somehow, it felt different today. A faint glow from the kitchen drew him towards the warmth, where his wife, Elizabeth, waited with a steaming cup of tea and a small package wrapped in brown paper. She handed it to him with a smile, and he opened it to reveal a new set of lenses for his glasses. The world suddenly came into sharper focus, not just in his vision, but in his heart."
+    }
+  ]
+}

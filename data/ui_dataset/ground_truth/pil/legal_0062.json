@@ -1,0 +1,56 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0062.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Last Will and Testament",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Maplewood County, State of Verano",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "August 12, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "Case No. CV-2024-08841",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_grantor",
+      "type": "name",
+      "value": "Eleanor White",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Eleanor White",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._TESTAMENTARY_DISPOSITION",
+      "text": "I direct that my estate shall be distributed as follows: all real property to my daughter, Lily White; all personal property to my son, Jack White."
+    },
+    {
+      "label": "clause_2._EXECUTOR",
+      "text": "My executor is to be my son, Jack White, who shall settle my estate and carry out my wishes."
+    },
+    {
+      "label": "clause_3._ALTERATIONS",
+      "text": "This will may be altered, revoked, or canceled only by a subsequent will executed in accordance with the laws of Maplewood County, State of Verano."
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0135.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Silent Witness",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Aria Lee",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Silent Films",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Aria Lee. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "2771",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. LIVING ROOM - NIGHT",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. LIVING ROOM - NIGHT\n\nThe room is dimly lit by a single lamp. JASON, a young man with a haunted expression, sits on the couch, staring blankly at the wall. His phone buzzes, interrupting his silence. He picks it up, looking at the message with a mix of dread and curiosity.\n\nMESSAGE\n(from unknown number)\nYou know what happened to your sister.\n\nJason’s grip tightens around the phone, his knuckles turning white.\n\nJASON\n(whispering to himself)\nWhat do you want?\n\nThe camera pans to a picture frame on the wall, showing a smiling girl, LUCY, who Jason lost three years ago under mysterious circumstances. He looks back at the phone, his resolve hardening.\n\nJASON\n(resolute)\nI won’t let you get away with this.\n\nThe screen fades to black, leaving the audience on edge."
+    }
+  ]
+}

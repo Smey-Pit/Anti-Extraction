@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0196.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "A Tale of Two Cities: Reviving the Forgotten Artisan",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Evelyn Winters",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "The Urban Tribune",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Evelyn Winters. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "4023",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "Feature Article",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "In the heart of the bustling city, there lies a quiet corner where tradition meets innovation. Meet Mr. Thomas Reed, a master artisan whose family has been crafting exquisite leather goods for generations. Despite the modern world's rush towards mass production, Mr. Reed remains steadfast in his commitment to preserving the art of handcrafting.\n\nMr. Reed's workshop is a small, sunlit room filled with the rich aroma of leather and the soft clatter of tools. His hands move deftly, shaping and stitching each piece with precision and care. \"Every item,\" he says, \"is a conversation between the maker and the material.\"\n\nAs he works, Mr. Reed reflects on the challenges of keeping his craft alive in today's fast-paced society. \"It's about slowing down, taking the time to appreciate the beauty in every stitch, every seam.\"\n\nThe article goes on to explore how Mr. Reed is working with local schools to teach students about traditional crafts, hoping to ignite a new generation's passion for this ancient art."
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0068.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "National Observer",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Immigration Reform: Advocates Call for Comprehensive Solutions",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "David J. Lee",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Chicago, June 15, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Immigration",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Border Security",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Human Rights",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "As immigration debates intensify, advocates are pushing for comprehensive reforms that address the root causes of migration and provide pathways to citizenship for those already in the country."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The current system is criticized for being overly complex and inefficient, often leaving undocumented immigrants vulnerable to exploitation and deportation."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Supporters argue that a well-designed reform package should include measures to secure borders, streamline legal immigration channels, and offer a path to citizenship for those who meet certain criteria."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "However, opponents of such reforms warn that they could incentivize more illegal immigration and undermine national security."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Civil rights groups emphasize the moral imperative to treat all individuals with dignity and respect, regardless of their immigration status."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"Our nation was built by immigrants. It’s time we create a system that reflects our values and provides a fair path forward for everyone.\" - Maria Rodriguez, Immigration Rights Activist"
+    }
+  ]
+}

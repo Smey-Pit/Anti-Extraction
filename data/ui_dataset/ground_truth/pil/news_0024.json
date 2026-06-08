@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0024.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "The Moderate Monitor",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Education Funding Bill Reaches House Floor",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "David K. Miller",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Washington, D.C., July 15, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Politics",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "education funding",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "school infrastructure",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "teacher salaries",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "The House of Representatives is set to vote on a comprehensive education funding bill that seeks to improve school infrastructure and support teacher salaries."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The bill proposes an additional $50 billion in federal funding for schools, with a focus on rural and underserved areas."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Democrats argue that the bill is essential for closing the achievement gap and providing equal opportunities for all students."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Republicans, however, express concern about the cost and suggest that states should take more responsibility for funding education."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Representative Maria Lopez said, 'Investing in our schools is investing in our future. This bill is a critical step towards achieving that goal.'"
+    },
+    {
+      "label": "pull_quote",
+      "text": "‘We must prioritize our children’s education and ensure they have the resources they need to succeed.’ – Representative Maria Lopez"
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0249.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "State Watch",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Environmental Regulations Spark Legal Challenges",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Laura Carter",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Los Angeles, March 19, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Environmental Regulations",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Pollution",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Legal Challenges",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_4",
+      "type": "short_phrase",
+      "value": "Public Health",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "A series of new environmental regulations aimed at reducing industrial pollution have faced legal challenges from industry groups who argue that the rules are overly burdensome and will harm their operations."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The regulations, which took effect last week, require major polluters to install advanced emission control systems and limit the amount of hazardous waste they can discharge into waterways."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Industry leaders have responded by filing lawsuits in federal court, claiming that the regulations exceed the authority granted by Congress."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Environmental advocates argue that the regulations are essential for protecting public health and the environment from the harmful effects of pollution."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Attorney General Alex Rodriguez said, 'We will defend these regulations because they are in the best interest of all Californians.'"
+    },
+    {
+      "label": "pull_quote",
+      "text": "‘Clean air and water are fundamental rights. We cannot allow industry to undermine our efforts to protect them.’ - Governor Sarah Martinez"
+    }
+  ]
+}

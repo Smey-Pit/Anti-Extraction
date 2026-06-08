@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0064.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Social Justice Review",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Racial Inequality Persists Despite Decades of Progress",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Isabella Martinez",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Atlanta, July 20, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Racial Inequality",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Systemic Racism",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Civil Rights",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "While strides have been made in reducing racial disparities, deep-seated inequalities persist, particularly in areas such as education, employment, and criminal justice."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "A new report from the Civil Rights Commission highlights persistent gaps in educational attainment and income levels between different racial groups."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Advocates for social justice argue that systemic racism remains a significant barrier to progress, citing ongoing incidents of police brutality and discrimination in hiring practices."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Some policymakers propose targeted interventions, such as increased funding for historically black colleges and universities, to address these issues."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Opponents of these measures argue that more emphasis should be placed on merit-based policies and individual responsibility."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"We must confront the legacy of racism head-on if we are to achieve true equality.\" - Dr. Michael Harris, Civil Rights Activist"
+    }
+  ]
+}

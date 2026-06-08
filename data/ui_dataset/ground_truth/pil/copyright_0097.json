@@ -1,0 +1,42 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0097.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Unearthing the Truth Behind the Haunted House",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Jenna Blackwood",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Glimmering Times",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Jenna Blackwood. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "2022",
+      "question": "What is the page number?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "The old house on Elm Street has been a mystery for decades, its history shrouded in whispers and rumors. Now, a local historian, Dr. Elara Voss, has uncovered a series of letters that reveal the tragic story behind the house’s haunting. These letters, written by the previous owner, reveal a tale of love, betrayal, and tragedy that led to the family’s untimely demise. Dr. Voss shares her findings with the community, hoping to shed light on the true story of this haunted house and bring closure to those who have wondered about its past."
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0022.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "The Conservative Chronicle",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Healthcare Reform Bill Passes Senate Amid Controversy",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Laura J. Hartley",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Washington, D.C., May 5, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "healthcare reform",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "public option",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Medicaid",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "After weeks of intense negotiations, the Senate has passed a healthcare reform bill that aims to expand coverage and reduce costs for millions of Americans."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The bill includes provisions for a public option, Medicaid expansion, and subsidies for lower-income individuals."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Supporters hail the legislation as a major step forward in ensuring access to quality care for all, while opponents warn of potential negative impacts on private insurance markets."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Senator Robert Lee commented, 'This is a victory for the American people who deserve affordable and accessible healthcare.'"
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "However, critics argue that the bill could lead to higher taxes and reduced choice for consumers."
+    },
+    {
+      "label": "pull_quote",
+      "text": "‘We need to focus on solutions that work, not just on expanding government programs.’ – Republican Senator Emily Wilson"
+    }
+  ]
+}

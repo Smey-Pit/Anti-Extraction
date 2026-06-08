@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0237.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Westside Herald",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Environmental Group Criticizes Mayor’s Climate Plan",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Isabella C. Green",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Westville, August 3, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Climate Change",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Renewable Energy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Public Health",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "An environmental advocacy group has harshly criticized the mayor’s recently unveiled climate action plan, arguing that it falls short of addressing the urgent needs of the community."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The mayor’s plan focuses on promoting renewable energy sources and expanding public transportation, but critics say it fails to address key issues like air quality and waste management."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "‘While these are important steps, they do not go far enough to protect our environment and the health of our citizens,’ said Jane Doe, spokesperson for Green Future Coalition."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Supporters of the plan counter that it represents a significant step forward and should be given time to implement fully."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "The city council is expected to review the plan in the coming months, with public input being sought during this process."
+    },
+    {
+      "label": "pull_quote",
+      "text": "'While these are important steps, they do not go far enough to protect our environment and the health of our citizens.' - Jane Doe, Green Future Coalition"
+    }
+  ]
+}

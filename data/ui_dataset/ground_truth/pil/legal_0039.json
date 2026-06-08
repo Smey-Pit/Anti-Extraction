@@ -1,0 +1,62 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0039.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Complaint",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Verano County, State of Verano",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "October 18, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "Case No. CV-2024-08841",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_plaintiff",
+      "type": "name",
+      "value": "Verano Tech Solutions Inc.",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_defendant",
+      "type": "name",
+      "value": "Nova Innovations Inc.",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Verano Tech Solutions Inc.",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._Nature_of_Suit",
+      "text": "This action arises from a breach of contract between Plaintiff, Verano Tech Solutions Inc., and Defendant, Nova Innovations Inc., relating to the provision of software development services."
+    },
+    {
+      "label": "clause_2.1_Allegations",
+      "text": "Defendant breached the contract by failing to deliver the agreed-upon software product on the specified timeline and by delivering substandard work, causing significant financial loss to Plaintiff."
+    },
+    {
+      "label": "clause_3._Relief_Sought",
+      "text": "Plaintiff seeks damages in the amount of $500,000 and an order compelling Defendant to fulfill its contractual obligations."
+    }
+  ]
+}

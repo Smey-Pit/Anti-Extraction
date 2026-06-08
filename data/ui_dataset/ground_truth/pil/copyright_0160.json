@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0160.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Echoes of Silence",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Liam Hart",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Silent Films Inc.",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Liam Hart. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "3313",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. ABANDONED HOSPITAL - NIGHT",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. ABANDONED HOSPITAL - NIGHT\n\nThe dim light from a single flickering bulb casts long shadows across the dusty floor. A lone figure, dressed in a white lab coat, stands at the end of a long corridor, looking down at a stack of old medical records. The air is thick with the smell of disinfectant and decay.\n\nDR. ELARA VOS\n(muttering to herself)\nWhat did you find, Alice?\n\nShe flips through the pages, her eyes scanning for any sign of what she’s searching for. Suddenly, she stops, her hand clenching around a yellowed sheet.\n\nDR. ELARA VOS\n(excitedly)\nHere it is.\n\nShe reads aloud, her voice trembling with emotion.\n\nDR. ELARA VOS\n(reading)\nPatient: Alice Johnson\nDiagnosis: Multiple Personality Disorder\nTreatment: Electroconvulsive Therapy\nOutcome: Death\n\nThe camera zooms in on her face, showing the mix of fear and determination.\n\nFADE OUT."
+    }
+  ]
+}

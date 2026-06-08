@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0225.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Discord",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Nina",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Tom",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Nina",
+      "text": "Hey Tom, I'm facing some legal trouble. The landlord says I owe them $2000 for damages. It feels like a scam."
+    },
+    {
+      "label": "message_2_Tom",
+      "text": "That does sound sketchy. Have you checked your lease agreement?"
+    },
+    {
+      "label": "message_3_Nina",
+      "text": "I did, but it's vague. I don't think I owe that much. Should I contact a lawyer?"
+    },
+    {
+      "label": "message_4_Tom",
+      "text": "Definitely. I'll send you some contacts from my network. You shouldn't just take their word for it."
+    }
+  ]
+}

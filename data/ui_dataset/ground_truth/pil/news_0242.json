@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0242.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Conservative Herald",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Progressive Senator’s Healthcare Bill Faces Rejection",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Lila H. Hart",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Los Angeles, May 20, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Universal Healthcare",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Single-Payer System",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Budgetary Concerns",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Senator Patricia Martinez's ambitious healthcare reform bill, designed to provide universal coverage, was voted down in the Senate last week, dealing a significant blow to progressive lawmakers."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Martinez's bill aimed to overhaul the current system by creating a single-payer model, arguing that it would cover all citizens regardless of income or pre-existing conditions."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "However, the proposal faced strong opposition from Republicans and some moderate Democrats, who argued that it would be fiscally unsustainable and could lead to longer wait times for medical procedures."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Dr. Robert Green, a prominent physician and critic of the bill, stated, 'We need to focus on efficiency and cost-effectiveness, not simply expanding coverage at any cost.'"
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "The rejection marks a setback for the administration's efforts to improve access to healthcare, but supporters remain optimistic that future revisions might gain traction."
+    },
+    {
+      "label": "pull_quote",
+      "text": "‘Healthcare should be a right, not a privilege.’ - Senator Patricia Martinez"
+    }
+  ]
+}

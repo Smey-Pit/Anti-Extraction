@@ -1,0 +1,76 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0059.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Independent Journal",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Education Funding Debate Divides Congress",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Rachel H. Brown",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Boston, July 10, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Education",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Funding",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Budget",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Congress is currently grappling with a contentious education funding bill that seeks to allocate billions more dollars to schools across the country, but faces resistance from fiscal conservatives who argue that the funds are better spent elsewhere."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Backers of the bill argue that increased funding is essential for improving educational outcomes and addressing the needs of disadvantaged students."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Critics, including several Republican representatives, maintain that the current budget is already stretched thin and that additional spending could lead to waste and inefficiency."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "The bill is expected to pass the House but may face challenges in the Senate, where negotiations are ongoing."
+    },
+    {
+      "label": "pull_quote",
+      "text": "‘Investing in our children’s education is investing in our future.’ — Senator James Wilson"
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0176.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Citizen’s Watch",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Immigration Reform: A Pathway to Progress or Pandora’s Box?",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "James R. Mitchell",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "New York City, March 28, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Immigration",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Citizenship",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Border Security",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_4",
+      "type": "short_phrase",
+      "value": "Public Services",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Proposed immigration reform legislation is poised to reshape the demographic landscape of the United States, but its impact remains uncertain."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The bill seeks to provide a pathway to citizenship for millions of undocumented immigrants while also cracking down on illegal border crossings."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Supporters argue it will strengthen national security and provide a legal framework for those already living in the country."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Opponents warn that such a move could overwhelm public services and create new challenges for law enforcement."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "The debate is intense, with both sides presenting compelling arguments, leaving the future of America’s immigration policy unclear."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"This is not just about immigration; it’s about the future of our nation and the values we hold dear.\" - Senator Jane Doe"
+    }
+  ]
+}

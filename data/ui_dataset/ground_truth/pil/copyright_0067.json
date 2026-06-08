@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0067.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Forgotten Symphony",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Liam Morgan",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Harmony House Publishing",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Liam Morgan. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "1357",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "Chapter 5: The First Note",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "The concert hall was a hushed sea of anticipation as the conductor raised his baton. The strings began to play, their notes weaving together in a tapestry of sound. AMELIA, a young violinist, stood at the edge of the stage, her fingers dancing over the strings. Each note seemed to carry her deeper into a world of emotion and memory. Memories of her childhood, spent practicing under the watchful eye of her father, a renowned musician. Memories of the first time she heard the symphony, its power overwhelming her young mind. Now, years later, she was performing the piece he had written for her, a symphony of love and loss.\n\nAmelia closed her eyes, letting the music envelop her. When she opened them again, the audience was on its feet, cheering. She smiled, feeling a sense of fulfillment she had never known before."
+    }
+  ]
+}

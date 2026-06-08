@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0080.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "National Tribune",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Economic Recovery Bill Criticized as ‘Empty Promises’",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Sarah M. Thompson",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Washington D.C., March 15, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Politics",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Economic Policy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Congressional Debate",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Infrastructure Funding",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "In a heated debate on the floor of Congress, Republican lawmakers have lambasted the latest economic recovery bill, calling it a series of empty promises that will do little to address the country’s long-term fiscal challenges."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The bill, which includes substantial funding for infrastructure and social programs, has been met with skepticism from conservative factions who argue that it fails to address the root causes of economic instability."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Rep. John Adams stated, 'This legislation is nothing more than a band-aid on a gaping wound. It’s time for real solutions, not more debt.'"
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Democrats, however, defend the bill, asserting that it represents a critical step forward in rebuilding the nation’s crumbling infrastructure and ensuring a brighter future for all Americans."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "The bill now faces a crucial vote in the Senate, where its fate remains uncertain."
+    },
+    {
+      "label": "pull_quote",
+      "text": "‘This legislation is nothing more than a band-aid on a gaping wound.’ – Rep. John Adams, Republican"
+    }
+  ]
+}

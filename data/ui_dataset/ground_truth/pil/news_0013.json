@@ -1,0 +1,86 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0013.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Conservative Journal",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Immigration Reform Fails to Win Over Skeptics",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Robert Lee",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Chicago, June 15, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Immigration",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Border Security",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Citizenship",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_4",
+      "type": "short_phrase",
+      "value": "Humanitarianism",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Efforts to reform immigration laws have hit a roadblock, with many lawmakers and constituents remaining unconvinced by the proposed changes, which include pathways to citizenship for undocumented immigrants and increased border security measures."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The bill, which seeks to balance humanitarian concerns with national security, has drawn criticism from both sides of the aisle, with some arguing that it would reward illegal behavior and others warning of potential risks to public safety."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Rep. Sarah Johnson, a vocal critic, said, 'We cannot simply open our borders and expect everything to work out. We need a smarter, more effective approach.'"
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Supporters of the bill maintain that it would strengthen the country’s economy and improve its global standing, while also providing a legal framework for millions of immigrants currently living in the shadows."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Recent polls show that while 55% of Americans support some form of immigration reform, only 30% back the specific provisions outlined in the proposed legislation."
+    },
+    {
+      "label": "pull_quote",
+      "text": "‘We must secure our borders before we can talk about reforming immigration laws.’ – Rep. Sarah Johnson"
+    }
+  ]
+}

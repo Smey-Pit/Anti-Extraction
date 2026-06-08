@@ -1,0 +1,68 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0072.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Last Will and Testament",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Bayview County, State of Maris",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "October 15, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "WILL-2024-1015",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_grantor",
+      "type": "name",
+      "value": "Eleanor M. Bright",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_executor",
+      "type": "name",
+      "value": "James R. Bright",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Eleanor M. Bright",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_2",
+      "type": "name",
+      "value": "James R. Bright",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._EXECUTION",
+      "text": "I, Eleanor M. Bright, execute this Last Will and Testament on the date and year stated above."
+    },
+    {
+      "label": "clause_2.1_DISPOSAL_OF_ESTATE",
+      "text": "My entire estate shall be distributed as follows: one-half to my son, James R. Bright, and one-half to my daughter, Elizabeth M. Bright."
+    },
+    {
+      "label": "clause_3._EXECUTOR",
+      "text": "James R. Bright is appointed as the Executor of this Will and shall perform all duties hereunder."
+    }
+  ]
+}

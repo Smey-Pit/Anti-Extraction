@@ -1,0 +1,54 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0067.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Gmail",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Charlie",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Samantha",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_3",
+      "type": "name",
+      "value": "Emily",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "subject",
+      "type": "short_phrase",
+      "value": "Family Emergency",
+      "question": "What is the subject line of this message?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Charlie",
+      "text": "Hi Samantha & Emily, need ur help w/ family emergency. 🚨"
+    },
+    {
+      "label": "message_2_Samantha",
+      "text": "What's going on Charlie? Please tell us more."
+    },
+    {
+      "label": "message_3_Emily",
+      "text": "We're here for you. Let us know what we can do."
+    },
+    {
+      "label": "message_4_Charlie",
+      "text": "My sister had a car accident. She's in the hospital. We need money for her."
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0189.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "The Western Tribune",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Healthcare Debate Heats Up as New Bill Advances",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Margaret L. Brown",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Denver, July 20, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Healthcare Reform",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Medicaid Expansion",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Mental Health Services",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "A controversial healthcare bill, which aims to expand Medicaid coverage and increase funding for mental health services, has passed through the house committee, reigniting debates over healthcare reform."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Backers of the bill argue that it will provide critical support to those in need and improve overall public health."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Opponents, however, claim that it would add an unsustainable financial burden to the state budget."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "The bill now heads to the full house for a vote, where it is expected to face significant opposition."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Patient advocacy groups are urging legislators to pass the bill, while business organizations are lobbying against it."
+    },
+    {
+      "label": "pull_quote",
+      "text": "‘Provide critical support to those in need and improve overall public health.’ — Supporters"
+    }
+  ]
+}

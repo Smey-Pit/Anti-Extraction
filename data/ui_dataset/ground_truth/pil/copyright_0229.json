@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0229.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Vanishing Act",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Lila Thompson",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Willow Creek Daily News",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Lila Thompson. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "4752",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "Feature Article",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "In the quiet town of Willow Creek, a series of mysterious disappearances has left residents on edge. The latest victim, Sarah Jenkins, vanished without a trace last night. Her family has been searching frantically, but no leads have surfaced. The town’s police chief, Officer Mark Thompson, assures the community that every effort is being made to find her. However, some residents suspect more than just a simple case of abduction. Local historian, Dr. Harold Green, believes there might be a connection to an old legend about a cursed well in the woods. As the search continues, the town braces itself for whatever may come next."
+    }
+  ]
+}

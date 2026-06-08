@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0062.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Daily Sentinel",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Healthcare System Struggles Amidst Rising Costs and Staff Shortages",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Maggie White",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Los Angeles, May 10, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Healthcare Costs",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Staff Shortages",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Patient Access",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "The U.S. healthcare system is facing unprecedented challenges, with soaring costs and a critical shortage of medical professionals threatening access to care for millions of Americans."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "A report released today by the Department of Health shows that hospital stays have become increasingly expensive, with average costs rising by nearly 10% over the past year."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Meanwhile, a nationwide survey found that nearly half of all doctors and nurses are considering leaving their jobs due to burnout and low wages."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Patient advocates argue that systemic reforms are needed to address these issues, including increased funding for healthcare infrastructure and better pay for healthcare workers."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Critics of these proposals suggest that market-driven solutions, such as competition among providers, are more effective in controlling costs and improving quality."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"The healthcare crisis is real, and it's time for bold action.\" - Dr. John Smith, Healthcare Advocate"
+    }
+  ]
+}

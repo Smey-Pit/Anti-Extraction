@@ -1,0 +1,54 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0217.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Gmail",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Emily",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Dr. Johnson",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_3",
+      "type": "name",
+      "value": "Sarah",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "subject",
+      "type": "short_phrase",
+      "value": "Doctor's Appointment",
+      "question": "What is the subject line of this message?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Emily",
+      "text": "Hi Dr. Johnson, just wanted to confirm my appointment today."
+    },
+    {
+      "label": "message_2_Dr._Johnson",
+      "text": "Yes, Emily, see you at 2pm. Hope all goes well!"
+    },
+    {
+      "label": "message_3_Emily",
+      "text": "Thanks! And Dr. Johnson, can we discuss my knee pain more?"
+    },
+    {
+      "label": "message_4_Dr._Johnson",
+      "text": "Absolutely, let's focus on that. See you soon!"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0099.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Tech Reviewer",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Tech Giants Face Scrutiny over Data Privacy Practices",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Rachel Clarke",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "San Francisco, October 14, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Data Breaches",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Privacy Regulations",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "User Control",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Recent data breaches and privacy violations have put tech giants under intense scrutiny, prompting calls for stricter regulations and greater transparency from consumer advocacy groups."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Companies like Zentech and Novatech have faced widespread criticism for mishandling user data and failing to adequately inform customers about how their information is used."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Consumer advocates argue that these companies are prioritizing profits over privacy, putting millions of users at risk of identity theft and other forms of exploitation."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Industry insiders defend the companies, stating that the complexity of modern technology makes it difficult to fully protect user data without compromising functionality."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Legislators are considering new laws to hold tech companies accountable for data breaches and to give consumers more control over their personal information."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"Data privacy is not just an option; it's a fundamental right.\" - Consumer Advocate Sarah Lee"
+    }
+  ]
+}

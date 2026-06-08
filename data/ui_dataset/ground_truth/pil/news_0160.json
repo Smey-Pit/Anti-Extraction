@@ -1,0 +1,86 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0160.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "National Sentinel",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Is the New Economy Leaving Behind the Middle Class?",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Evelyn M. Harper",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Washington D.C., April 15, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Economic Inequality",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Middle Class",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Tax Policy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_4",
+      "type": "short_phrase",
+      "value": "Income Disparity",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "As the nation celebrates the latest economic report showing record-breaking stock market growth, many middle-class Americans are left wondering if their hard-earned savings and wages are enough to keep up with the rising costs of living."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The gap between the rich and the rest continues to widen, with a recent study revealing that the top 1% of earners now control over 50% of the nation's wealth. This stark reality has led to growing calls for policy changes to address income inequality and support those left behind by the new economy."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Critics argue that the current tax policies favor corporations and the wealthy, exacerbating the divide. Proponents of the status quo, however, claim that these policies are necessary to maintain the economic growth that benefits everyone in the long run."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "In an interview, Senator Jane Doe stated, 'We need to ensure that the fruits of our economic success are shared more equitably, rather than concentrated at the top.'"
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Economic experts predict that without intervention, the trend of increasing wealth disparity could lead to social unrest and political polarization."
+    },
+    {
+      "label": "pull_quote",
+      "text": "‘The middle class is being squeezed, and it’s time for a serious conversation about how we can build a more inclusive economy.’ – Senator Jane Doe"
+    }
+  ]
+}

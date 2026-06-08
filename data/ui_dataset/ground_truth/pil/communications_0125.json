@@ -1,0 +1,40 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0125.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Outlook",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Ian",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Julie",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "subject",
+      "type": "short_phrase",
+      "value": "Financial Stress",
+      "question": "What is the subject line of this message?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Ian",
+      "text": "Julie, I'm in a bit of a bind here. Could I borrow some cash?"
+    },
+    {
+      "label": "message_2_Julie",
+      "text": "I'll see what I can do, Ian. Hope everything works out."
+    }
+  ]
+}

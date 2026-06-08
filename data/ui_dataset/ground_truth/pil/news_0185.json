@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0185.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "National Beacon",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "City Council's Budget Cuts Spark Controversy",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Evelyn M. Hartley",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "New Haven, March 15, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Politics",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Public Transportation",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Budget Cuts",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Urban Mobility",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "The city council’s recent decision to cut funding for public transportation has sparked heated debate among residents and local politicians alike, raising questions about the future of urban mobility."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Mayor Thompson defended the cuts, stating, 'We must prioritize essential services over luxury amenities.' However, critics argue that such measures will disproportionately affect low-income communities who rely on public transit."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Local activist Sarah Lee commented, 'This is a step backwards in our fight for social justice and equality.'"
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "The cuts have also led to protests and calls for a community forum to discuss alternative solutions."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "City officials plan to hold a town hall meeting next week to address concerns and gather input from the public."
+    },
+    {
+      "label": "pull_quote",
+      "text": "‘We must prioritize essential services over luxury amenities.’ — Mayor Thompson"
+    }
+  ]
+}

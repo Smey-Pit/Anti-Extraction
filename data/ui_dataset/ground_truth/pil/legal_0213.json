@@ -1,0 +1,62 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0213.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Notice of Eviction",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Riverdale Town, State of Novaria",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "June 1, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "Case No. EV-2024-09973",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_landlord",
+      "type": "name",
+      "value": "Cecilia Green",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_tenant",
+      "type": "name",
+      "value": "Sam Black",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Cecilia Green",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._Notice",
+      "text": "You are hereby notified that you have failed to comply with the terms of your lease agreement, specifically the requirement to pay rent on time."
+    },
+    {
+      "label": "clause_2.1_Deadline",
+      "text": "You are required to vacate the premises located at 789 Maple Lane, Riverdale Town, State of Novaria, within thirty (30) days from the date of this notice."
+    },
+    {
+      "label": "clause_3._Consequences",
+      "text": "If you fail to vacate the premises within the aforementioned period, legal action may be initiated against you to recover possession of the property."
+    }
+  ]
+}

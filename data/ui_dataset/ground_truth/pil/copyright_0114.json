@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0114.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Echoes of the Past",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Lucas Hartley",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Echo Productions",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Lucas Hartley. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "2373",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. ABANDONED HOSPITAL - NIGHT",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. ABANDONED HOSPITAL - NIGHT\n\nThe camera pans slowly through the dimly lit corridors, capturing the echoes of a forgotten past. The sound of dripping water reverberates through the air. Suddenly, the lights flicker, casting eerie shadows on the walls. A figure, dressed in a tattered white gown, appears at the end of a hallway. She moves cautiously, her footsteps barely audible. The camera follows her as she disappears into a room filled with old medical equipment. The figure stops, looking around before speaking in a soft, almost inaudible voice.\n\nFIGURE\nI'm sorry, I didn't mean to come here.\n\nThe door slams shut behind her, trapping her inside. The lights flicker again, and the figure vanishes into the darkness."
+    }
+  ]
+}

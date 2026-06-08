@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0036.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "iMessage",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Samantha",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Mike",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Mike",
+      "text": "Hey Sam, how's ur day going?"
+    },
+    {
+      "label": "message_2_Samantha",
+      "text": "Not bad, just a bit tired from work. U?"
+    },
+    {
+      "label": "message_3_Mike",
+      "text": ":/ same here. I think I might need to call in sick tomorrow."
+    },
+    {
+      "label": "message_4_Samantha",
+      "text": "Yeah, that sounds like a good idea. Let me know if u need anything."
+    }
+  ]
+}

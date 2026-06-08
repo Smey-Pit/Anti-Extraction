@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0221.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "iMessage",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Samantha",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Alex",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Samantha",
+      "text": "Hey Alex, how r u feeling today?"
+    },
+    {
+      "label": "message_2_Alex",
+      "text": "I'm still kinda tired but getting better. Did the doctor say when I can go back to work?"
+    },
+    {
+      "label": "message_3_Samantha",
+      "text": "Not sure yet. He said they need to run some more tests. Just keep resting!"
+    },
+    {
+      "label": "message_4_Alex",
+      "text": "Ok thanks. I hate being off work. When do u think they'll call me back?"
+    }
+  ]
+}

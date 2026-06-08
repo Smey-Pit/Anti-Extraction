@@ -1,0 +1,86 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0126.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "TechInsider Journal",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Tech Giants Face Scrutiny Over Data Privacy Practices",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Michael J. Harper",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "San Francisco, April 1, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Data Privacy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Tech Regulation",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Consumer Protection",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_4",
+      "type": "short_phrase",
+      "value": "Data Security",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Privacy advocates and lawmakers are increasingly calling for greater transparency and accountability from major tech companies regarding their handling of user data, raising concerns about potential violations of personal privacy."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Following a series of high-profile data breaches and misuse incidents, consumer groups have launched campaigns urging companies to adopt more stringent data protection measures."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Representatives from the Federal Trade Commission (FTC) have expressed their intention to review the current practices of leading tech firms, highlighting the need for clearer guidelines and enforcement mechanisms."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Industry insiders claim that while many companies are making efforts to improve their data security protocols, significant challenges remain in ensuring customer trust and compliance with evolving regulations."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "One tech executive remarked, 'The public deserves to know exactly how their data is being used and protected, and we need to do better.'"
+    },
+    {
+      "label": "pull_quote",
+      "text": "'We can no longer afford to treat user data as a commodity to be bought and sold without clear consent.' - John Smith, FTC Commissioner"
+    }
+  ]
+}

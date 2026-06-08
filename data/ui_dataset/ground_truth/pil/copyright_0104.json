@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0104.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Echoes of the Past",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Liam Harper",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Silver Screen Productions",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Liam Harper. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "2143",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. ABANDONED HOSPITAL - NIGHT",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. ABANDONED HOSPITAL - NIGHT\n\nThe dimly lit hallways echo with the faint sound of dripping water. A single beam of light from the broken window casts eerie shadows on the walls. JASON, a middle-aged detective, stands at the end of a long corridor, his flashlight beam sweeping across the floor. He stops in front of a closed door, his hand resting on the handle.\n\nJASON\n(whispering)\nThis place... it's like stepping back in time. I can almost hear the screams.\n\nHe turns the handle and pushes the door open, revealing a room filled with old medical equipment and forgotten files. A sudden chill runs down his spine as he steps inside.\n\nJASON\n(to himself)\nI'm not alone here.\n"
+    }
+  ]
+}

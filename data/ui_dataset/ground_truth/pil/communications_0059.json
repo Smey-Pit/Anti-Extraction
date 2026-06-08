@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0059.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Android Messages",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Lily",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Mia",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Mia",
+      "text": "Hey Lily, I was wondering if you could help me with my grandma's birthday party this weekend"
+    },
+    {
+      "label": "message_2_Lily",
+      "text": "Sure, I'd love to help! What do you need?"
+    },
+    {
+      "label": "message_3_Mia",
+      "text": "We're trying to plan a surprise, so keep it hush hush :)"
+    },
+    {
+      "label": "message_4_Lily",
+      "text": "Got it, I'll start looking into venues and catering. Let me know when you have more details"
+    }
+  ]
+}

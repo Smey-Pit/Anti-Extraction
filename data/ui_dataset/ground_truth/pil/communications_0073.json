@@ -1,0 +1,54 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0073.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Gmail",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Eve",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Frank",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_3",
+      "type": "name",
+      "value": "Grace",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "subject",
+      "type": "short_phrase",
+      "value": "Family Dinner",
+      "question": "What is the subject line of this message?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Eve",
+      "text": "Hey guys, just confirming the dinner plans. It’s at my place at 6 PM. See u there?"
+    },
+    {
+      "label": "message_2_Frank",
+      "text": "Sure thing, Eve. Can’t wait!"
+    },
+    {
+      "label": "message_3_Grace",
+      "text": "I’ll be there. Hope the food is good!"
+    },
+    {
+      "label": "message_4_Eve",
+      "text": "Will be, promise! See you then!"
+    }
+  ]
+}

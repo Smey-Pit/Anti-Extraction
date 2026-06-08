@@ -1,0 +1,76 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0001.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Economic Sentinel",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Economic Stimulus Bill Faces Major Obstacles",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Charles Hargrove",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "New York City, March 30, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Economic Policy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Inflation",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Budget",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "The proposed $1 trillion economic stimulus bill is facing significant opposition from conservative lawmakers, who argue that it will only exacerbate inflation and debt."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The bill, which includes substantial funding for infrastructure, social welfare programs, and tax cuts, has been met with skepticism by many Republicans. They contend that the proposed measures are unnecessary and counterproductive."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Proponents of the bill, however, believe it is crucial for addressing the lingering effects of the pandemic and boosting economic recovery. They point to recent economic data showing high unemployment rates and low consumer confidence."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Negotiations between the two parties have stalled, with both sides unable to agree on key provisions. The outcome remains uncertain, with potential ramifications for the next fiscal year."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"We need to focus on long-term growth and stability, not short-term band-aids.\" - Representative John Smith"
+    }
+  ]
+}

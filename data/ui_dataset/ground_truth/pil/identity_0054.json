@@ -1,0 +1,85 @@
+{
+  "doc_type": "identity",
+  "image_path": "images/pil/identity_0054.png",
+  "entities": [
+    {
+      "label": "document_type",
+      "type": "short_phrase",
+      "value": "insurance_card",
+      "question": "What type of identity document is this?"
+    },
+    {
+      "label": "issuing_authority",
+      "type": "short_phrase",
+      "value": "MediGuard Insurance",
+      "question": "What authority issued this document?"
+    },
+    {
+      "label": "surname",
+      "type": "name",
+      "value": "Reyes",
+      "question": "What is the surname?"
+    },
+    {
+      "label": "given_names",
+      "type": "name",
+      "value": "Mateo",
+      "question": "What are the given names?"
+    },
+    {
+      "label": "dob",
+      "type": "date",
+      "value": "2000-01-01",
+      "question": "What is the date of birth?"
+    },
+    {
+      "label": "document_number",
+      "type": "digit_seq",
+      "value": "MG-1234567890",
+      "question": "What is the document number?"
+    },
+    {
+      "label": "nationality_state",
+      "type": "short_phrase",
+      "value": "MediGuard Insurance",
+      "question": "What is the nationality or state?"
+    },
+    {
+      "label": "issue_date",
+      "type": "date",
+      "value": "2022-06-10",
+      "question": "What is the issue date?"
+    },
+    {
+      "label": "expiry_date",
+      "type": "date",
+      "value": "2032-06-10",
+      "question": "What is the expiry date?"
+    },
+    {
+      "label": "member_id",
+      "type": "digit_seq",
+      "value": "MG-1234567890",
+      "question": "What is the member ID?"
+    },
+    {
+      "label": "group_number",
+      "type": "digit_seq",
+      "value": "G00123456",
+      "question": "What is the group number?"
+    },
+    {
+      "label": "plan_name",
+      "type": "short_phrase",
+      "value": "Premium Plus",
+      "question": "What is the plan name?"
+    },
+    {
+      "label": "primary_care_provider",
+      "type": "name",
+      "value": "Dr. Patricia Green, MD",
+      "question": "Who is the primary care provider?"
+    }
+  ],
+  "content_blocks": []
+}

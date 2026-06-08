@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0025.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Haunting of Willow Creek",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Evelyn Carter",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Haunted Productions",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Evelyn Carter. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "578",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. WILLOW CREEK HOSPITAL - NIGHT",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. WILLOW CREEK HOSPITAL - NIGHT\n\nThe hospital is dimly lit, the halls echoing with the sound of distant footsteps. A nurse, wearing a crisp white uniform, walks briskly down the corridor, her flashlight illuminating the path ahead. Suddenly, the sound of a child’s cry echoes through the hall. She stops, her heart racing, and follows the sound to a room at the end of the corridor.\n\nNURSE\n(whispering)\nWho’s there?\n\nThe door to the room is slightly ajar, and she pushes it open cautiously. Inside, a child lies on the bed, eyes wide with fear, clutching a teddy bear tightly. The nurse approaches, her flashlight beam dancing over the child’s face.\n\nNURSE\n(softly)\nIt’s okay, sweetie. I’m here to help you.\n\nThe child looks up, and the nurse sees a ghostly figure standing beside the bed. The figure disappears as quickly as it appeared, leaving the nurse and the child alone. The nurse kneels beside the child, trying to comfort her.\n\nNURSE\n(whispering)\nDo you know who I am? I’m here to help you, little one.\n\nThe child nods, tears streaming down her face. The nurse gently strokes her hair, and the sound of the child’s sobs begins to fade, replaced by a sense of peace."
+    }
+  ]
+}

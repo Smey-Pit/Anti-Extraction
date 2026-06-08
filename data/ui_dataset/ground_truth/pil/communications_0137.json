@@ -1,0 +1,58 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0137.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Gmail",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Alex",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Emma",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_3",
+      "type": "name",
+      "value": "Sophia",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "subject",
+      "type": "short_phrase",
+      "value": "Surprise Party Plan",
+      "question": "What is the subject line of this message?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Alex",
+      "text": "Hey guys, we need to plan this quickly!"
+    },
+    {
+      "label": "message_2_Emma",
+      "text": "Totally! Who’s the birthday girl?"
+    },
+    {
+      "label": "message_3_Sophia",
+      "text": "It’s for Sarah! Can’t wait to surprise her!"
+    },
+    {
+      "label": "message_4_Alex",
+      "text": "Great! Let’s meet at my place tonight to finalize everything."
+    },
+    {
+      "label": "message_5_Emma",
+      "text": "Sounds good to me. See you there!"
+    }
+  ]
+}

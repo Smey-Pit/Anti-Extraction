@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0065.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Echoes of Tomorrow",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Cyrus Kane",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Futurelight Studios",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Cyrus Kane. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "1316",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. SPACECRAFT - DUSK",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. SPACECRAFT - DUSK\n\nA sleek, futuristic spacecraft glides through the stars, its windows reflecting the vastness of space. JASON, mid-30s, a seasoned astronaut, stands at the helm, his eyes fixed on the digital readouts.\n\nJASON\n(to himself)\nWe’re almost there.\n\nSuddenly, the ship jolts slightly, and alarms blare. JASON’s face contorts in concern.\n\nJASON\n(to the crew)\nWhat is happening?\n\nThe bridge lights flicker, and a holographic map of the asteroid field flickers to life. A red dot appears, pulsating.\n\nANNOUNCER\n(reverberating from speakers)\nUnknown object detected. Proceed with caution.\n\nJASON\n(to the crew)\nPrepare for landing. We’ll need to investigate.\n\nFADE OUT."
+    }
+  ]
+}

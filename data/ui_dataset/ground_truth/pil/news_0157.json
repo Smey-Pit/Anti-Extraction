@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0157.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Eastern Chronicle",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Education Reform: Is the Current System Failing Our Youth?",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Laura Martinez",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Boston, May 20, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Education Reform",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "School Funding",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Curriculum",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "The current education system faces numerous challenges, including funding disparities, outdated curricula, and a lack of access to quality resources, prompting calls for comprehensive reform."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Proponents of change advocate for increased funding to improve school infrastructure and provide more resources for teachers."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Others suggest overhauling standardized testing to better assess student learning and promote critical thinking skills."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Educators point to the need for more diverse and inclusive curricula that reflect the needs of today’s students."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Parents and community leaders express frustration with the status quo, urging policymakers to take decisive action."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"Our children deserve better than what we’re offering them now.\" - Parent and Community Activist"
+    }
+  ]
+}

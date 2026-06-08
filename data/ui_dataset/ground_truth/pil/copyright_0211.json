@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0211.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Shadows of the Past",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Morgan Reed",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Shadowplay Studios",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Morgan Reed. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "4380",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. ABANDONED FACTORY - NIGHT",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. ABANDONED FACTORY - NIGHT\n\nThe factory is dark and foreboding, its windows shattered and the interior filled with shadows. The only source of light comes from a flickering flashlight held by JASON (early 40s, rugged and intense). He moves cautiously through the debris-strewn floor, his flashlight beam cutting through the darkness.\n\nJASON\n(muttering to himself)\nNot again...\n\nHe stops suddenly, his hand reaching into his pocket as he pulls out a small, worn locket. He opens it to reveal a faded photograph of a woman and two children. Jason’s face softens as he looks at the picture, a mix of love and sorrow etched on his features.\n\nFADE TO BLACK."
+    }
+  ]
+}

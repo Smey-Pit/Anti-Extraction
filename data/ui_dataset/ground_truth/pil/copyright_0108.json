@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0108.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Whispers in the Mist",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Elara Voss",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Pendulum Press",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Elara Voss. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "2250",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "Chapter 6: The Whispering Oak",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "The old oak tree stood sentinel in the center of the village green, its gnarled branches reaching skyward like bony fingers. The villagers often spoke of the whispers that carried through its leaves, secrets and tales from a time long past. Tonight, as the moon cast silvery shadows across the cobblestones, young Isolde sat beneath the tree, her heart pounding with anticipation. She had heard the whispers, and she knew they spoke of the hidden treasure buried deep within the forest. With a deep breath, she reached into her pocket and pulled out the faded map, tracing the lines with trembling fingers. It was said that the treasure would reveal itself only to those who truly believed."
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0061.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "iMessage",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Alex",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Sarah",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Alex",
+      "text": "Hey Sarah, how r u?"
+    },
+    {
+      "label": "message_2_Sarah",
+      "text": "I'm ok, just a bit stressed. 😔"
+    },
+    {
+      "label": "message_3_Alex",
+      "text": "What's up? Need to talk?"
+    },
+    {
+      "label": "message_4_Sarah",
+      "text": "Yeah, my mom's been in the hospital. Doc said it's not good."
+    },
+    {
+      "label": "message_5_Alex",
+      "text": "Oh no, that sounds bad. Are you going to see her?"
+    }
+  ]
+}

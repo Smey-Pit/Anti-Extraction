@@ -1,0 +1,82 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0184.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "The Conservative Watchman",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Tax Cuts for Middle Class Spark Controversy",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Daniel Wright",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Houston, April 12, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Tax Policy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Middle Class",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Economic Growth",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_4",
+      "type": "short_phrase",
+      "value": "Wealth Gap",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Proposed tax cuts aimed at benefiting the middle class have sparked intense debate among policymakers and the public."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Proponents of the plan argue that reducing taxes will boost economic growth and improve living standards for average Americans."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "However, critics contend that such measures will only serve to widen the wealth gap and provide little relief to those who truly need it."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Economist Thomas Johnson, commenting on the proposal, stated, 'The focus should be on targeted relief rather than blanket tax cuts.'"
+    },
+    {
+      "label": "pull_quote",
+      "text": "'The focus should be on targeted relief rather than blanket tax cuts.' – Thomas Johnson, Economist"
+    }
+  ]
+}

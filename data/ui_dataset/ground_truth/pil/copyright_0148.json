@@ -1,0 +1,42 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0148.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Unseen Hero",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Lila Thompson",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "The Daily Globe",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Lila Thompson. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "3075",
+      "question": "What is the page number?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "In the quiet town of Millbrook, a local hero has been quietly saving lives for over a decade. Dr. Emma Watson, a retired nurse, has dedicated herself to helping the homeless and the sick without any recognition. Every weekend, she can be found at the local shelter, providing medical care and emotional support. Her kindness and selflessness have inspired countless residents, yet her name remains unknown to most. This week, The Daily Globe seeks to shine a light on this unsung hero and the impact she has had on the community."
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0186.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "The Northern Sentinel",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "State Legislature Approves Controversial Tax Bill",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "James R. O’Connor",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Springfield, April 1, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Politics",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Tax Reform",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Sales Tax",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Economic Impact",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "The state legislature has overwhelmingly approved a new tax bill that includes significant changes to the sales tax structure, drawing criticism from some lawmakers and business owners."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Proponents of the bill argue that it will modernize the state’s tax system and generate much-needed revenue for education and infrastructure projects."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Opposition leader Michael Davis stated, 'This bill is a blatant attempt to shift the burden onto working families.'"
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "The bill now goes to the governor for final approval, where it faces potential veto."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Business groups are divided, with some welcoming the changes as necessary and others warning of economic repercussions."
+    },
+    {
+      "label": "pull_quote",
+      "text": "'This bill is a blatant attempt to shift the burden onto working families.' — Michael Davis"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0122.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Instagram DM",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Charlie",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Sarah",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Sarah",
+      "text": "Hey Charlie, I've been thinking... wanna hang out this weekend?"
+    },
+    {
+      "label": "message_2_Charlie",
+      "text": "Sure thing Sarah, let's make it happen!"
+    }
+  ]
+}

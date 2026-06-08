@@ -1,0 +1,42 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0186.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Reviving the Lost Art of Handmade Books",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Lila Hart",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "The Literary Herald",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Lila Hart. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "3831",
+      "question": "What is the page number?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "In a world dominated by digital screens and instant gratification, a small community of artisans in the quaint town of Willowbrook has found a way to preserve the lost art of handmade books. At the heart of this revival is the Willowbrook Bookbinding Workshop, where skilled craftsmen like EVELYN REID turn raw materials into exquisite works of art. Each book is a labor of love, from selecting the perfect paper to meticulously hand-sewing the binding. Evelyn’s latest project, a collection of short stories titled 'Whispers of the Forest,' is a testament to the enduring power of the written word."
+    }
+  ]
+}

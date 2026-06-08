@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0120.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "National Tribune",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Tech Giants Face Growing Pressure Over Data Privacy",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Evelyn M. Hartley",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Washington D.C., March 15, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Data Privacy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Tech Regulation",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Consumer Rights",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "As concerns over data privacy continue to escalate, tech giants find themselves at the center of a growing public outcry, with calls for stricter regulations and greater transparency."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The latest scandal involving a major social media company has reignited debates about the role of technology in modern society and the need for stronger oversight."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Activists and lawmakers alike are pushing for comprehensive data protection laws that would limit the amount of personal information companies can collect and use."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Meanwhile, consumer advocates warn that without immediate action, citizens' privacy will continue to be eroded by unchecked corporate practices."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Industry insiders, however, argue that self-regulation is more effective than government intervention, citing recent improvements in data security measures."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"We need to strike a balance between innovation and protecting individual rights.\" - Senator Maria Thompson"
+    }
+  ]
+}

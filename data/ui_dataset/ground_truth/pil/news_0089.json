@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0089.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "The Future Forum",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Education Funding Bill Divides State Legislators",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Linda J. Carter",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Boston, July 10, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Education Policy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Legislative Division",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "School Funding",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "A proposed education funding bill aimed at improving school infrastructure and teacher salaries has divided state legislators along party lines, sparking heated debates about the role of government in education."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Advocates of the bill argue that increased funding is necessary to provide students with better learning environments and attract top talent to the teaching profession."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Opponents, particularly from the Republican-controlled legislature, argue that the bill represents an overreach by the state and could lead to higher taxes."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "A spokesperson for the Department of Education stated, 'Investing in our schools is investing in our future,' while a Republican legislator responded, 'This is about more than just dollars; it’s about priorities.'"
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "The outcome of this debate could have far-reaching implications for public education in the state."
+    },
+    {
+      "label": "pull_quote",
+      "text": "Department of Education Spokesperson"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0058.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Conservative Watch",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Immigration Bill Faces Protests Nationwide",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "David K. White",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Chicago, June 2, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Politics",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Immigration",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Labor Market",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Public Safety",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "A new immigration bill, designed to streamline the process for legal entry and residency, has sparked nationwide protests, with demonstrators arguing that it will lead to an influx of unvetted immigrants and strain public resources."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Supporters of the bill argue that it will help to address the labor shortage in key industries and provide a pathway to citizenship for millions of undocumented workers."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Opponents, including several state governors, have vowed to challenge the bill in court, citing concerns about national security and the welfare of existing residents."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "The bill has also faced criticism from civil rights organizations, who claim it does not do enough to protect the rights of immigrants and refugees."
+    },
+    {
+      "label": "pull_quote",
+      "text": "‘We must prioritize the safety and well-being of our citizens above all else.’ — Governor Michael Rodriguez"
+    }
+  ]
+}

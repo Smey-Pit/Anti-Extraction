@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0162.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Discord",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Alex",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Jordan",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Jordan",
+      "text": "Hey Alex, how r u doing? 😔"
+    },
+    {
+      "label": "message_2_Alex",
+      "text": "Not great. Just got fired from my job. 🤦‍♂️"
+    },
+    {
+      "label": "message_3_Jordan",
+      "text": "Oh no! That’s rough. Any plans on what to do next?"
+    },
+    {
+      "label": "message_4_Alex",
+      "text": "I don’t know. I’m so stressed out. 🤯"
+    }
+  ]
+}

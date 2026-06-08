@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0098.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Last Signal",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Myles O’Connor",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Mystic Press",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Myles O’Connor. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "2034",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "Chapter 3: The Last Signal",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "As the sun set over the vast expanse of the desert, the last signal was sent out. It was a desperate plea for help, a cry for salvation in the midst of a storm that seemed to never end. The radio crackled with static, but the message was clear. ‘Help us, we are lost, and we need you.’ The words echoed in the empty space, a haunting reminder of the human spirit’s resilience. In the distance, a faint light appeared, a beacon of hope in the darkness. It was a small town, a place where strangers became friends, and hope was never far away."
+    }
+  ]
+}

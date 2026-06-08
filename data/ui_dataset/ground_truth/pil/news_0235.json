@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0235.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "National Tribune",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "City Councilors Divided on New Public Safety Initiative",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Jenna M. Thompson",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Newport, July 15, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Politics",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Public Safety",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Privacy Rights",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "City Council",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "The Newport City Council is grappling with a new public safety initiative that aims to increase surveillance in public areas, sparking a heated debate among members."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Councilor Eliza Hart argues that the increased monitoring is necessary to combat rising crime rates, stating, 'We can’t afford to let our community become a breeding ground for criminal activity.'"
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "However, Councilor Marcus Lee counters that such measures infringe on citizens' privacy rights, emphasizing, 'This is about more than just safety; it’s about trust and respect for our residents.'"
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "The initiative has also drawn criticism from local civil liberties groups, who fear it could set a dangerous precedent."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "The council will hold a special meeting next week to discuss the proposal further."
+    },
+    {
+      "label": "pull_quote",
+      "text": "'This is about more than just safety; it’s about trust and respect for our residents.' - Councilor Marcus Lee"
+    }
+  ]
+}

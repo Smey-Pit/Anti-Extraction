@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0125.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Last Signal",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Nora Blackwood",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Signal Peak Productions",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Nora Blackwood. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "2587",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. RADAR STATION CONTROL ROOM - NIGHT",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. ABANDONED RADAR STATION - NIGHT\n\nThe station is dark, save for the flickering light of a single monitor. The screen displays a map of the surrounding area, with a blinking dot marking a remote location. Suddenly, the dot begins to move, its path erratic and unpredictable. Jack, the sole occupant, watches intently as the signal grows stronger, drawing closer to the station. He reaches for the radio, his voice steady but tense.\n\nJACK\n(into radio)\nThis is Station 72. Do you read me?\n\nA static-filled response crackles back, followed by a voice that sounds distant yet urgent.\n\nUNKNOWN VOICE\n(somewhat distorted)\nWe’re coming in. Hold on.\n\nJack’s heart races as he waits, his hand hovering over the emergency transmitter. The signal continues to draw nearer, its intensity increasing. Suddenly, a blinding flash of light erupts from the darkness, illuminating the station for an instant. Jack knows without a doubt that he is not alone."
+    }
+  ]
+}

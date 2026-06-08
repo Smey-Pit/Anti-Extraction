@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0141.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "iMessage",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Sarah",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "John",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_John",
+      "text": "Hey Sarah, how r u?"
+    },
+    {
+      "label": "message_2_Sarah",
+      "text": "I'm okay, just tired from work. How bout u?"
+    },
+    {
+      "label": "message_3_John",
+      "text": "Same here. Gotta finish this report tonight. 😔"
+    },
+    {
+      "label": "message_4_Sarah",
+      "text": "Yeah, I know the feeling. Maybe we can grab coffee tomorrow?"
+    }
+  ]
+}

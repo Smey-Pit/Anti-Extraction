@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0135.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "WhatsApp",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Liam",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Brother",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Liam",
+      "text": "Bro, I really need your help. I think someone’s following me and I’m scared."
+    },
+    {
+      "label": "message_2_Brother",
+      "text": "What?! That’s crazy, Liam. Are you sure it’s not just your imagination playing tricks on you?"
+    },
+    {
+      "label": "message_3_Liam",
+      "text": "I don’t know, but something feels off. Can we meet up tomorrow to talk more?"
+    },
+    {
+      "label": "message_4_Brother",
+      "text": "Yeah, let’s meet up in the morning. Maybe we can figure this out together."
+    }
+  ]
+}

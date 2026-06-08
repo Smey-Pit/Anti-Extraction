@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0091.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "The Righteous Banner",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Supreme Court Nears Decision on Controversial Abortion Law",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Robert L. Greenfield",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Washington D.C., April 2, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Abortion Rights",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Legal Reform",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Public Health",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "The Supreme Court is poised to rule on a landmark abortion law that has sparked intense debate across the nation, with implications for reproductive rights and state sovereignty."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The case centers around a new state law that requires doctors to obtain consent from a second physician before performing an abortion."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Proponents argue the law protects women’s health, while opponents say it unfairly restricts access to safe medical procedures."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Legal experts predict the decision could set a precedent for similar laws in other states."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Justice Elena Marquez stated during oral arguments, 'The right to privacy is fundamental, but so is the protection of public health.'"
+    },
+    {
+      "label": "pull_quote",
+      "text": "‘This is not just about one law; it’s about the future of reproductive freedom,’ said Dr. Laura Martinez, a leading advocate for women’s health rights."
+    }
+  ]
+}

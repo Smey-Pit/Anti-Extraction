@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0088.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Forgotten Garden",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Avery Hart",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Garden Gate Books",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Avery Hart. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "1807",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "Chapter 7: The Rose's Secret",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "The garden was a forgotten treasure, hidden away from the bustling world beyond. Its once vibrant colors had faded to a muted palette, a silent witness to the years that had passed. Amidst the overgrown foliage, a single rose bush stood tall, its thorns a testament to resilience. As she approached, the scent of old roses filled her lungs, transporting her back to a time when the garden was alive with laughter and joy. She reached out a hand, brushing against the rough bark, and felt a surge of nostalgia."
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0053.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Gmail",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Alice",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Bob",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_3",
+      "type": "name",
+      "value": "Charlie",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "subject",
+      "type": "short_phrase",
+      "value": "Family Update",
+      "question": "What is the subject line of this message?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Alice",
+      "text": "Hi Bob & Charlie, just wanted to update you on how things are going..."
+    },
+    {
+      "label": "message_2_Bob",
+      "text": "Sounds good, send over the details!"
+    },
+    {
+      "label": "message_3_Alice",
+      "text": "Will do, just a few changes since last time..."
+    }
+  ]
+}

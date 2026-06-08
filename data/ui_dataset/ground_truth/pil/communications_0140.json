@@ -1,0 +1,46 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0140.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Discord",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Zoe",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Oliver",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Oliver",
+      "text": "Hey Zoe, how’s it going?"
+    },
+    {
+      "label": "message_2_Zoe",
+      "text": "Not so great. Got a speeding ticket and my car’s broken down."
+    },
+    {
+      "label": "message_3_Oliver",
+      "text": "Aw man, that stinks. Do u have insurance for the car?"
+    },
+    {
+      "label": "message_4_Zoe",
+      "text": "Yeah, but the deductible is high. And now I can’t afford to pay rent on time."
+    },
+    {
+      "label": "message_5_Oliver",
+      "text": "Maybe we can find a way to help. Let’s brainstorm some ideas."
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0140.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "National Tribune",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Tech Giants Under Scrutiny for Political Bias in Search Algorithms",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Evelyn M. Harper",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Washington D.C., March 15, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Tech Regulation",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Political Influence",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Digital Privacy",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "In an unprecedented move, the Federal Trade Commission (FTC) has launched an investigation into leading tech companies over allegations of political bias in their search algorithms."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The FTC's probe comes after several reports emerged suggesting that major search engines have been manipulating results to favor certain political viewpoints over others, potentially influencing public opinion and election outcomes."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Critics argue that such practices could undermine democratic processes by silencing dissenting voices and promoting a narrow range of opinions."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Industry insiders claim that any perceived biases are simply a result of algorithmic adjustments aimed at improving user experience and relevance."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "This controversy highlights the ongoing tension between free speech and corporate responsibility in the digital age."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"We will not tolerate any form of political manipulation in our search results. The public deserves access to unbiased information.\" - FTC Commissioner Jane Smith"
+    }
+  ]
+}

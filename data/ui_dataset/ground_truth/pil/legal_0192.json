@@ -1,0 +1,68 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0192.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Last Will and Testament",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "County of Maplewood, State of Verano",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "May 17, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "Case No. W-2024-09876",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_testator",
+      "type": "name",
+      "value": "Emily Rose",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_executor",
+      "type": "name",
+      "value": "Michael Green",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Emily Rose",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_2",
+      "type": "name",
+      "value": "Michael Green",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._Disposition_of_Estate",
+      "text": "I direct that my entire estate, both real and personal, shall be equally divided among my children, Sarah and Mark."
+    },
+    {
+      "label": "clause_2.1_Executor",
+      "text": "I hereby appoint Michael Green as the Executor of this Will and grant him full authority to carry out the provisions of this Will."
+    },
+    {
+      "label": "clause_3._Gifts",
+      "text": "I give and bequeath to my beloved cat, Whiskers, a sum of $5,000 to be used for her care and maintenance."
+    }
+  ]
+}

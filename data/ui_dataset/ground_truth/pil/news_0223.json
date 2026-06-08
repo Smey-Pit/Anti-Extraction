@@ -1,0 +1,76 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0223.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "The Moderate Messenger",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Education Funding Bill Divides State Legislature",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "James Kim",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Springfield, September 1, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Politics",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Education Funding",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Public Schools",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Legislative Debate",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "A proposed education funding bill is causing division within the state legislature, with some lawmakers advocating for increased spending while others call for more targeted investments."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The bill seeks to allocate $500 million towards public schools over the next fiscal year, but there is disagreement on how best to use these funds."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "State Senator Lisa Chen argued, 'We need to invest in teacher salaries and smaller class sizes to improve student outcomes.'"
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Representative John Lee countered, 'We should focus on technology upgrades and special programs to provide more value for our tax dollars.'"
+    },
+    {
+      "label": "pull_quote",
+      "text": "We need to invest in teacher salaries and smaller class sizes to improve student outcomes."
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "doc_type": "identity",
+  "image_path": "images/pil/identity_0039.png",
+  "entities": [
+    {
+      "label": "document_type",
+      "type": "short_phrase",
+      "value": "insurance_card",
+      "question": "What type of identity document is this?"
+    },
+    {
+      "label": "issuing_authority",
+      "type": "short_phrase",
+      "value": "HealingSpring Insurance",
+      "question": "What authority issued this document?"
+    },
+    {
+      "label": "surname",
+      "type": "name",
+      "value": "Windsong",
+      "question": "What is the surname?"
+    },
+    {
+      "label": "given_names",
+      "type": "name",
+      "value": "Cora",
+      "question": "What are the given names?"
+    },
+    {
+      "label": "dob",
+      "type": "date",
+      "value": "1991-11-22",
+      "question": "What is the date of birth?"
+    },
+    {
+      "label": "document_number",
+      "type": "digit_seq",
+      "value": "HSI-123456789",
+      "question": "What is the document number?"
+    },
+    {
+      "label": "nationality_state",
+      "type": "short_phrase",
+      "value": "HealingSpring Insurance",
+      "question": "What is the nationality or state?"
+    },
+    {
+      "label": "issue_date",
+      "type": "date",
+      "value": "2017-11-23",
+      "question": "What is the issue date?"
+    },
+    {
+      "label": "expiry_date",
+      "type": "date",
+      "value": "2027-11-23",
+      "question": "What is the expiry date?"
+    },
+    {
+      "label": "member_id",
+      "type": "digit_seq",
+      "value": "123456789",
+      "question": "What is the member ID?"
+    },
+    {
+      "label": "group_number",
+      "type": "digit_seq",
+      "value": "G123456",
+      "question": "What is the group number?"
+    },
+    {
+      "label": "plan_name",
+      "type": "short_phrase",
+      "value": "Silver Plus",
+      "question": "What is the plan name?"
+    },
+    {
+      "label": "primary_care_provider",
+      "type": "name",
+      "value": "Dr. Elara Frost",
+      "question": "Who is the primary care provider?"
+    }
+  ],
+  "content_blocks": []
+}

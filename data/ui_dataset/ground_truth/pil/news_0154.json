@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0154.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "People’s Voice",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Education Reform Movement Gains Momentum Across Country",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "James Wilson",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Chicago, July 15, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Education Reform",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Curriculum Change",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Classroom Innovation",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "A nationwide movement for education reform is gaining momentum, challenging traditional approaches to teaching and learning."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Proponents of the movement argue that current educational systems are outdated and fail to prepare students for the modern workforce."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Teacher John Smith stated, 'Our classrooms need to be more inclusive and engaging, focusing on critical thinking and real-world problem-solving skills.'"
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "The movement is supported by a coalition of educators, parents, and community leaders who advocate for smaller class sizes, more funding for schools, and a curriculum that reflects diverse perspectives."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Critics, however, warn that such changes could disrupt established educational practices and lead to confusion among students and teachers."
+    },
+    {
+      "label": "pull_quote",
+      "text": "'We need to revolutionize education if we want to ensure that every child has the opportunity to succeed.' - Education Advocate Maria Rodriguez"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0233.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "The Progressive Voice",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Should We Rethink Capital Punishment in Light of Recent Cases?",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Cassidy M. White",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Chicago, June 10, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Capital Punishment",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Human Rights",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Legal Reform",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_4",
+      "type": "short_phrase",
+      "value": "Crime Prevention",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Recent high-profile cases have reignited the debate over the morality and efficacy of capital punishment. As evidence of wrongful convictions continues to mount, is it time to reconsider this ultimate form of retribution?"
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Capital punishment remains a contentious issue, with advocates arguing that it serves as a deterrent against heinous crimes and provides closure to victims' families. They also claim that it is an irreversible means of justice for those guilty beyond a reasonable doubt."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Critics, however, point out that studies have shown little correlation between the death penalty and crime rates, and that the risk of executing innocent people is too great. They argue that life imprisonment without parole is a more humane and effective alternative."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Advocates for reform argue that investing in better legal representation and forensic science could help prevent wrongful convictions and ensure that only the truly guilty face execution."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"Justice is not served by taking a life, but by ensuring that the guilty are held accountable and the innocent are protected.\" - Judge Elena Martinez"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0197.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Last Will and Testament",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Riverdale City, State of Novaria",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "November 10, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "Case No. CV-2024-08841",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_grantor",
+      "type": "name",
+      "value": "Isabella Stone",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_executor",
+      "type": "name",
+      "value": "Ethan Grey",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Isabella Stone",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_2",
+      "type": "name",
+      "value": "Liam White",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_3",
+      "type": "name",
+      "value": "Sophia Brown",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._DEFINITIONS",
+      "text": "‘Personal Property’ includes all tangible and intangible personal property owned by the Grantor as of the date of this Will."
+    },
+    {
+      "label": "clause_2.1_DISPOSITION_OF_ESTATE",
+      "text": "All Personal Property shall be distributed equally among my children: John, Jane, and James."
+    },
+    {
+      "label": "clause_3.1_EXECUTOR",
+      "text": "Ethan Grey is hereby appointed Executor of this Will and shall carry out the provisions hereof."
+    }
+  ]
+}

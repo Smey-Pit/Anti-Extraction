@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0040.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Android Messages",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Olivia",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Rachel",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Rachel",
+      "text": "Hey Olivia, did u see the new episode of Friends? It was amazing!"
+    },
+    {
+      "label": "message_2_Olivia",
+      "text": "Oh yeah! I watched it with my sister. We cried at the end. 😢"
+    },
+    {
+      "label": "message_3_Rachel",
+      "text": "I know right?! Such a bummer it’s over. But at least we have the re-runs!"
+    },
+    {
+      "label": "message_4_Olivia",
+      "text": "Definitely. I miss them so much. Maybe we should watch it together sometime?"
+    }
+  ]
+}

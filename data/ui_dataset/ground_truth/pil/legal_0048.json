@@ -1,0 +1,58 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0048.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Notice of Eviction",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Greenwood Township, State of Novaria",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "June 20, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "party_1_landlord",
+      "type": "name",
+      "value": "Charles P. Stone",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_tenant",
+      "type": "name",
+      "value": "William T. Brown",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Charles P. Stone",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_2",
+      "type": "name",
+      "value": "William T. Brown",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._Notice_of_Default",
+      "text": "This Notice of Eviction is given pursuant to the terms of the Lease Agreement dated May 15, 2024, between the Landlord and the Tenant."
+    },
+    {
+      "label": "clause_2.1_Cause_of_Eviction",
+      "text": "The Tenant has failed to pay rent in the amount of $1,200 on June 1, 2024, as required by the Lease Agreement."
+    }
+  ]
+}

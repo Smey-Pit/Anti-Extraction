@@ -1,0 +1,86 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0175.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "National Tribune",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Economic Collapse Looms as Biden’s Policies Fail to Deliver",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Sarah M. Thompson",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Washington D.C., April 12, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Economy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Presidential Policy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Inflation",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_4",
+      "type": "short_phrase",
+      "value": "Unemployment",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "President Biden’s economic policies have failed to deliver on promises of job creation and prosperity, leading to a growing sense of despair among the American public."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Despite his administration’s claims of progress, unemployment rates remain stubbornly high, and inflation continues to soar, putting a strain on middle-class families."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Economists argue that the current trajectory is unsustainable, warning of a potential recession if immediate changes are not made."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Biden’s supporters counter that his policies are still in their early stages and improvements will come, but critics remain unconvinced, pointing to historical precedents of failed economic interventions."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "The political landscape is shifting, with opposition parties gaining ground as voters lose faith in the current leadership."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"We are witnessing the failure of big government solutions to address the fundamental issues facing our economy.\" - Economist Dr. Emily Carter"
+    }
+  ]
+}

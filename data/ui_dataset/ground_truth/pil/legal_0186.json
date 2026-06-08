@@ -1,0 +1,72 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0186.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Confidentiality Agreement",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Verano County, State of Novacorp",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "February 28, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "NDA-2024-113",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_disclosing_party",
+      "type": "name",
+      "value": "InnovateTech Solutions Inc.",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_receiving_party",
+      "type": "name",
+      "value": "BrightMind Innovations LLC",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Michael Innovate",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_2",
+      "type": "name",
+      "value": "David Bright",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._Confidential_Information",
+      "text": "‘Confidential Information’ means any information disclosed by the Disclosing Party to the Receiving Party in writing, orally, or by other means that is designated as confidential."
+    },
+    {
+      "label": "clause_2.1_Use_of_Confidential_Information",
+      "text": "The Receiving Party agrees to use the Confidential Information solely for the purpose of evaluating a potential business relationship between the Parties."
+    },
+    {
+      "label": "clause_3._Duration_of_Agreement",
+      "text": "This Agreement shall remain in effect until the earlier of (a) five (5) years from the Effective Date, or (b) termination of the business relationship between the Parties."
+    },
+    {
+      "label": "notary_note",
+      "text": "Sworn before me this 28th day of February 2024."
+    }
+  ]
+}

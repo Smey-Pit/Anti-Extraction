@@ -1,0 +1,86 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0194.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "The Social Justice Review",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Affirmative Action: Still Needed or an Obstacle to Meritocracy?",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "David Lewis",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "San Francisco, July 1, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Affirmative Action",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Diversity",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Meritocracy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_4",
+      "type": "short_phrase",
+      "value": "Equality",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Affirmative action policies are under intense scrutiny once again, with some arguing they hinder merit-based admissions while others insist they are essential for promoting diversity and equality."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Supporters of affirmative action claim that it levels the playing field for underrepresented groups who historically faced systemic barriers to educational opportunities. They argue that these policies help create a more inclusive society and foster innovation."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Critics, however, argue that such policies unfairly disadvantage qualified applicants from majority backgrounds and undermine the principle of meritocracy. They assert that these policies perpetuate a sense of victimhood and entitlement among certain groups."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Recent court cases and policy debates have highlighted the tension between these perspectives. Some states have moved to ban or limit affirmative action in public institutions, while others have strengthened their support for these programs."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Academic research indicates that the impact of affirmative action varies widely depending on the specific context and implementation. Many experts recommend a nuanced approach that balances fairness and equity."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"Affirmative action is not about giving anyone a free ride; it’s about ensuring that everyone has a fair shot at success.\" — Professor Maria Rodriguez"
+    }
+  ]
+}

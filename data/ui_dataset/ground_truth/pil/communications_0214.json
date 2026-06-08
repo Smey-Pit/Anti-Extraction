@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0214.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Android Messages",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Liam",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Ava",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Ava",
+      "text": "Hey Liam, how r u feeling today?"
+    },
+    {
+      "label": "message_2_Liam",
+      "text": "Not great, still havin chest pain. Doc said it's stress-related."
+    },
+    {
+      "label": "message_3_Ava",
+      "text": "Oh no, that's tough. Are u taking any meds?"
+    },
+    {
+      "label": "message_4_Liam",
+      "text": "Yep, they're helping a bit. Just need to relax more."
+    }
+  ]
+}

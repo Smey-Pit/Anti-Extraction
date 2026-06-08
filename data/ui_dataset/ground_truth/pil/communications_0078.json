@@ -1,0 +1,54 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0078.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Gmail",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "John",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Jane",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_3",
+      "type": "name",
+      "value": "Mark",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "subject",
+      "type": "short_phrase",
+      "value": "Family Dinner Plans",
+      "question": "What is the subject line of this message?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_John",
+      "text": "Hi Jane and Mark, any ideas on where we should go for dinner this weekend?"
+    },
+    {
+      "label": "message_2_Jane",
+      "text": "How about that new Italian place downtown? I heard they have great pasta!"
+    },
+    {
+      "label": "message_3_Mark",
+      "text": "Yeah, sounds good to me. Let’s make it Saturday at 6 PM."
+    },
+    {
+      "label": "message_4_John",
+      "text": "Perfect, I’ll book the table. See you there!"
+    }
+  ]
+}

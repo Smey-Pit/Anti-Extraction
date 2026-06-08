@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0075.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Echoes of Silence",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Liam Morgan",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Silent Cinema Productions",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Liam Morgan. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "1534",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. ABANDONED HOSPITAL - NIGHT",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. ABANDONED HOSPITAL - NIGHT\n\nThe camera pans over the desolate corridors, the only sound the distant hum of a ventilation fan. The lights flicker, casting long shadows across the peeling walls. Suddenly, the camera focuses on a small, dimly lit room at the end of the hallway. The door creaks open, revealing a figure standing in the center of the room, their face obscured by shadows. They reach into their pocket, pulling out a small, worn photograph. The figure looks up, and the camera zooms in on their eyes, dark and haunted.\n\nFADE IN:\n\nINT. ABANDONED HOSPITAL - NIGHT\n\nDR. ELARA VOS\n(30s, pale, eyes haunted)\n\nDR. VOS\n(whispering)\nThey're coming... I can feel it.\n\nFADE OUT.\n\nLiam Morgan\nSilent Cinema Productions\nPage 12\n"
+    }
+  ]
+}

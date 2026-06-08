@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0233.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Echoes of the Past",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Liam MacKenzie",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Shadows & Light Productions",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Liam MacKenzie. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "4815",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. ABANDONED HOSPITAL - NIGHT",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. ABANDONED HOSPITAL - NIGHT\n\nThe dimly lit hallways are filled with the eerie echo of distant footsteps. The camera pans over the peeling wallpaper and broken windows, revealing the ghostly figures of former patients and staff. In the center of the scene, an elderly man, dressed in tattered clothes, sits on a rickety chair, his eyes vacant.\n\nELARA\n(whispering)\nI’m sorry, Grandpa. I can’t do this alone.\n\nThe man’s gaze shifts towards her, and for a moment, his eyes seem to flicker with recognition. He stands up, his movements slow and deliberate, and walks towards her.\n\nGRANDPA\n(muttering)\nYou have to keep going, Elara. Find the truth.\n\nElara reaches out, placing a hand on his shoulder. He leans into her touch, his breathing shallow and labored. Suddenly, the hospital doors slam shut with a loud bang, and the lights flicker, plunging the scene into darkness.\n\nFADE OUT."
+    }
+  ]
+}

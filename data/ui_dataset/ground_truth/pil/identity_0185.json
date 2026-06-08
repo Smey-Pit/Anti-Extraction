@@ -1,0 +1,84 @@
+{
+  "doc_type": "identity",
+  "image_path": "images/pil/identity_0185.png",
+  "entities": [
+    {
+      "label": "document_type",
+      "type": "short_phrase",
+      "value": "passport",
+      "question": "What type of identity document is this?"
+    },
+    {
+      "label": "issuing_authority",
+      "type": "short_phrase",
+      "value": "Federation of Aloria — Ministry of Foreign Affairs",
+      "question": "What authority issued this document?"
+    },
+    {
+      "label": "surname",
+      "type": "name",
+      "value": "Thorn",
+      "question": "What is the surname?"
+    },
+    {
+      "label": "given_names",
+      "type": "name",
+      "value": "Eldric",
+      "question": "What are the given names?"
+    },
+    {
+      "label": "dob",
+      "type": "date",
+      "value": "1975-03-12",
+      "question": "What is the date of birth?"
+    },
+    {
+      "label": "document_number",
+      "type": "digit_seq",
+      "value": "FA-THORN-ELEDRIC<<19750312",
+      "question": "What is the document number?"
+    },
+    {
+      "label": "nationality_state",
+      "type": "short_phrase",
+      "value": "Federation of Aloria",
+      "question": "What is the nationality or state?"
+    },
+    {
+      "label": "issue_date",
+      "type": "date",
+      "value": "2020-06-15",
+      "question": "What is the issue date?"
+    },
+    {
+      "label": "expiry_date",
+      "type": "date",
+      "value": "2030-06-15",
+      "question": "What is the expiry date?"
+    },
+    {
+      "label": "sex",
+      "type": "short_phrase",
+      "value": "M",
+      "question": "What is the sex listed on the document?"
+    },
+    {
+      "label": "place_of_birth",
+      "type": "short_phrase",
+      "value": "City of Thistlewood",
+      "question": "What is the place of birth?"
+    },
+    {
+      "label": "mrz_line1",
+      "type": "short_phrase",
+      "value": "PFA+ALORIA+THORN+ELEDRIC<<19750312",
+      "question": "What does the first machine readable zone line say?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "mrz_line2",
+      "text": "FA-THORN-ELEDRIC<<19750312ALOR203006150000000000000000"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0229.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Social Justice Chronicle",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Police Reform Movement Gains Momentum Across Major Cities",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Laura Brown",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Chicago, June 5, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Police Reform",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Racial Justice",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Community Policing",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Advocates for police reform are pushing for sweeping changes in law enforcement practices, citing a series of high-profile incidents involving excessive force and racial bias."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Protesters and community leaders are calling for the implementation of body cameras, de-escalation training, and independent oversight mechanisms."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Law enforcement officials defend current protocols, emphasizing the importance of maintaining public safety and order."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "The debate reflects ongoing tensions between law enforcement agencies and the communities they serve, particularly regarding issues of race and justice."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Supporters of reform argue that meaningful change is needed to rebuild trust and ensure accountability."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"Until we see real change, nothing will truly improve.\" - Community Activist Maria Rodriguez"
+    }
+  ]
+}

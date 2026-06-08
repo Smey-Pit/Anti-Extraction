@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0133.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Discord",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Alex",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Rachel",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Alex",
+      "text": "Hey Rach, I need to talk to you about something important."
+    },
+    {
+      "label": "message_2_Rachel",
+      "text": "Sure thing Alex, what’s up?"
+    },
+    {
+      "label": "message_3_Alex",
+      "text": "It’s about our upcoming vacation. I’m having some financial issues and I don’t know if I can afford it anymore."
+    },
+    {
+      "label": "message_4_Rachel",
+      "text": "Oh no, that’s tough. Let’s see if we can figure something out together."
+    }
+  ]
+}

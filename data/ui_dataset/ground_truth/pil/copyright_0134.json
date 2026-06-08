@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0134.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Last Symphony",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Cyrus Blackwood",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Echoes of Time Publishing",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Cyrus Blackwood. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "2746",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "Chapter 6: The Final Measure",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "The concert hall was hushed, the audience holding their breath as the final notes of the symphony echoed through the vast space. The conductor, a figure of towering presence, stood motionless, allowing the music to wash over the crowd. In the wings, a young violinist, EVELYN, watched with bated breath, her hands trembling slightly as she realized the performance was her last.\n\nHer fingers moved deftly over the strings, each note a testament to her passion and dedication. As the final chord rang out, the audience erupted into applause, their cheers mingling with the lingering echoes of the music. Evelyn smiled, a mix of relief and sadness in her eyes, as she bowed deeply, her heart full of gratitude for the journey that had brought her to this moment."
+    }
+  ]
+}

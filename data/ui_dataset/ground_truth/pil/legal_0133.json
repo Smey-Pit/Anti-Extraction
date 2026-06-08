@@ -1,0 +1,68 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0133.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Notice of Eviction",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Hilltop City, State of Novacorp",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "June 15, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "EVICTION-2024-0615",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_landlord",
+      "type": "name",
+      "value": "Michael J. Smith",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_tenant",
+      "type": "name",
+      "value": "Jameson O. Lee",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Michael J. Smith",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_2",
+      "type": "name",
+      "value": "Jameson O. Lee",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._NOTICE_OF_EVICTION",
+      "text": "You are hereby notified that you are in default of the lease agreement for the premises at 456 Oak Avenue, Hilltop City, State of Novacorp."
+    },
+    {
+      "label": "clause_2.1_REASON_FOR_EVICTION",
+      "text": "You have failed to pay the rent in full within five days of the due date, which constitutes a material breach of the lease agreement."
+    },
+    {
+      "label": "clause_3._ACTION_REQUIRED",
+      "text": "You must vacate the premises on or before July 15, 2024, or face legal action."
+    }
+  ]
+}

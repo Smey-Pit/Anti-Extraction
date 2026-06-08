@@ -1,0 +1,42 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0138.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Unearthing the Past: An Interview with Dr. Elara Voss",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Jared Thompson",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "City Sunlight",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Jared Thompson. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "2850",
+      "question": "What is the page number?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "Dr. Elara Voss has dedicated her life to unearthing the secrets of the past. Her latest project, an excavation in the ruins of an ancient city, has sparked a media frenzy. We caught up with her at her home to discuss her findings and the thrill of discovery.\n\nCity Sunlight: What drew you to this particular site?\n\nDr. Voss: It’s the mystery, really. Every artifact tells a story, and sometimes, those stories are hidden in plain sight. This site is filled with enigmas waiting to be solved.\n\nCS: Can you share any exciting discoveries you’ve made so far?\n\nDr. Voss: There’s a small statue that appears to be a guardian of some sort. It’s carved with intricate designs that seem to shift and change depending on the angle of light. It’s almost as if it’s trying to communicate something to us."
+    }
+  ]
+}

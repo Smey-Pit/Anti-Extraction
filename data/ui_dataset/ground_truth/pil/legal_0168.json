@@ -1,0 +1,68 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0168.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Notice of Eviction",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "City of Verano, State of Verano",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "October 16, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "Eviction Notice No. EV-2024-113",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_landlord",
+      "type": "name",
+      "value": "Thomas P. Winters",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_tenant",
+      "type": "name",
+      "value": "Liam R. Carter",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Thomas P. Winters",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_2",
+      "type": "name",
+      "value": "Liam R. Carter",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._REASON_FOR_EVICTION",
+      "text": "Tenant has failed to pay rent for the month of September 2024, as required under the lease agreement."
+    },
+    {
+      "label": "clause_2.1_TIME_TO_REMEDY",
+      "text": "Tenant has thirty (30) days from the date of this notice to remedy the default and restore the premises to good repair."
+    },
+    {
+      "label": "clause_3._EFFECTIVE_DATE",
+      "text": "If Tenant fails to remedy the default within the specified time, this notice shall become effective on the thirtieth day."
+    }
+  ]
+}

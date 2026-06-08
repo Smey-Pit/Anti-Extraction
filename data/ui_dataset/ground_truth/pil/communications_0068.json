@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0068.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Discord",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "David",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Jenny",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_David",
+      "text": "Hey Jenny, sorry to bother u late at night. 😔"
+    },
+    {
+      "label": "message_2_Jenny",
+      "text": "No worries, what's up David?"
+    },
+    {
+      "label": "message_3_David",
+      "text": "Just havin' some relationship issues. Feels like I'm not being heard."
+    },
+    {
+      "label": "message_4_Jenny",
+      "text": "Can we talk more about it tomorrow? I'm exhausted now."
+    }
+  ]
+}

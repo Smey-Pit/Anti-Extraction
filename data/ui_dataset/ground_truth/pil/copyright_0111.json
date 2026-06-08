@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0111.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Last Signal",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Liam Quinn",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Eclipse Books",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Liam Quinn. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "2318",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "Chapter 9: The Obscured Signal",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "The sun dipped below the horizon, casting long shadows across the desolate landscape. Alex stood at the edge of the cliff, gazing out at the vast expanse of desert. His heart was heavy with the weight of his mission. He had received a cryptic message, an encoded signal that led him to this remote location. As he approached the ancient stone structure at the base of the cliff, a chill ran down his spine. The structure was a dilapidated observatory, its windows shattered and walls crumbling. Inside, the air was thick with dust and the faint scent of decay. Alex stepped inside, his flashlight cutting through the darkness. He found a small, hidden compartment containing a map and a series of notes. It was then that he realized the true significance of his mission."
+    }
+  ]
+}

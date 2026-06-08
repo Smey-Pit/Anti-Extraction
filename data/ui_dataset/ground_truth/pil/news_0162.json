@@ -1,0 +1,86 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0162.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "The Conservative Post",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Healthcare Reforms: A Step Too Far?",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Sarah J. Thompson",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Chicago, May 10, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Healthcare Reform",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Universal Healthcare",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Public Health",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_4",
+      "type": "short_phrase",
+      "value": "Liberty vs. Control",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Proposed healthcare reforms aimed at expanding access and coverage have sparked intense debate among policymakers and citizens alike. Advocates see it as a crucial step towards ensuring that all Americans have access to quality medical care, while opponents warn of the potential risks and unintended consequences."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The proposed reforms include a universal healthcare system funded through increased taxes and expanded government programs. Supporters argue that this would reduce the number of uninsured and improve overall public health outcomes."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Dr. Robert Lee, a prominent conservative healthcare expert, said, 'Expanding government control over healthcare is a slippery slope that could undermine individual freedoms and lead to higher costs.'"
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "On the other hand, public health advocates emphasize the importance of addressing systemic inequalities in healthcare access and affordability. They point to countries with universal healthcare systems that report better health outcomes and lower infant mortality rates."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "The debate highlights the complex challenges facing policymakers as they navigate the delicate balance between providing essential services and preserving individual liberties."
+    },
+    {
+      "label": "pull_quote",
+      "text": "‘We must be cautious about expanding government control over healthcare, as it could have unforeseen negative impacts on patient care and innovation.’ – Dr. Robert Lee"
+    }
+  ]
+}

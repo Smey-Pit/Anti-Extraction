@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0089.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Discord",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Emma",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Max",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Max",
+      "text": "Hey Emma, how’s it going with the project?"
+    },
+    {
+      "label": "message_2_Emma",
+      "text": "It’s going okay, but the client’s being a pain."
+    },
+    {
+      "label": "message_3_Max",
+      "text": "Oh no, what’s up with them this time?"
+    },
+    {
+      "label": "message_4_Emma",
+      "text": "They keep changing requirements and I can’t get anything done."
+    }
+  ]
+}

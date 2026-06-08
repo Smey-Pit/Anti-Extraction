@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0158.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Western Herald",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Healthcare Debate: Universal Coverage or Market-Based Solutions?",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "James Wilson",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Denver, June 5, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Universal Healthcare",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Market Solutions",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Healthcare Costs",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "The ongoing debate over healthcare reform centers on whether universal coverage should be implemented or if market-based solutions are sufficient to address the nation's medical needs."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Advocates for universal coverage argue that it ensures equal access to care regardless of income or pre-existing conditions."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Supporters of market-based solutions contend that competition and choice will drive down costs and improve service quality."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Both sides agree on the importance of addressing the high cost of healthcare, but disagree on how best to achieve this goal."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Public opinion polls show a divided electorate, with neither option gaining overwhelming support."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"The future of healthcare is about more than just insurance; it's about access and affordability.\" - Healthcare Analyst"
+    }
+  ]
+}

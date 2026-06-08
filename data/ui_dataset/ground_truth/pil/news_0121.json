@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0121.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "The Democratic Sentinel",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Climate Change Crisis: A Call for Immediate Action",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Charles R. Greenfield",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "New York City, April 10, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Climate Change",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Renewable Energy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Environmental Policy",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "With the planet facing an unprecedented climate crisis, it is imperative that our leaders take decisive action now to mitigate the worst effects of global warming."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Recent scientific reports have underscored the urgent need for drastic reductions in greenhouse gas emissions if we are to avoid catastrophic environmental consequences."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Environmental experts stress that immediate policy changes are necessary to transition to renewable energy sources and reduce carbon footprints."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Opponents of strict environmental policies argue that such measures could stifle economic growth and job creation."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "However, proponents of green initiatives contend that the long-term benefits far outweigh any short-term costs."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"It's time for bold leadership and meaningful action to protect our future.\" - Dr. Emily Carter"
+    }
+  ]
+}

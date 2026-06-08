@@ -1,0 +1,46 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0152.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Last Will and Testament",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Greenfield County, State of Verano",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "May 10, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "party_1_testator",
+      "type": "name",
+      "value": "Sarah J. Thompson",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Sarah J. Thompson",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._Distribution_of_Estate",
+      "text": "I hereby leave my entire estate to my beloved daughter, Elizabeth A. Thompson."
+    },
+    {
+      "label": "clause_2.1_Executor",
+      "text": "My executor shall be my son, Michael B. Thompson, who shall have the authority to manage and distribute my estate as provided herein."
+    }
+  ]
+}

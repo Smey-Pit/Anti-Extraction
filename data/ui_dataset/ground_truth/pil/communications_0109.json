@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0109.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Android Messages",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Frank",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Grace",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Frank",
+      "text": "Hey Grace, can we talk abt our relationship?"
+    },
+    {
+      "label": "message_2_Grace",
+      "text": "Sure, what’s going on?"
+    },
+    {
+      "label": "message_3_Frank",
+      "text": "I’ve been feeling like we’re not connecting as much as before."
+    },
+    {
+      "label": "message_4_Grace",
+      "text": "Me too, let’s try to find some quality time together this weekend."
+    }
+  ]
+}

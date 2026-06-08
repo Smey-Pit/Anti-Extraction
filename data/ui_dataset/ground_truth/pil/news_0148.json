@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0148.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "The Progressive Post",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Education Funding Disparities Widen",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Ethan K. White",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Los Angeles, June 5, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Education",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Funding",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Equity",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Despite increased funding and policy initiatives, disparities in education funding remain stark, with urban and rural schools continuing to struggle while affluent districts enjoy superior resources and facilities."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Recent data reveals that school districts in low-income areas often receive significantly less funding per student compared to their wealthier counterparts, exacerbating existing inequalities."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Advocates argue that equitable distribution of resources is crucial for closing achievement gaps and ensuring all students have equal opportunities for success."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "However, critics counter that additional funding alone does not guarantee better educational outcomes and that systemic issues need to be addressed to truly improve the quality of education."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "The ongoing debate highlights the complex challenges facing the education system and the need for comprehensive solutions to ensure fair access to quality education for all students."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"Our schools should reflect the diversity of our communities, not perpetuate inequality,\" said Maria Rodriguez, a teacher at Lincoln High School."
+    }
+  ]
+}

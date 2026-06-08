@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0002.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Last Straw",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Ella Thompson",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Sunrise Herald",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Ella Thompson. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "48",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "Feature Story: Local Business Struggles",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "In the heart of downtown, the once-thriving coffee shop 'Morning Brew' has closed its doors for good. For many regulars, it was more than just a place to grab a cup of coffee; it was a community hub where stories were shared and friendships formed. Today, the empty space is marked only by a sign reading 'Closed.' The owner, Sarah Johnson, looks on from a nearby café, her eyes red-rimmed as she sips her own coffee, a far cry from the rich brews she used to serve.\n\n\"It’s been tough,“ she says, her voice barely above a whisper. “People came here not just for coffee, but for a sense of belonging. Now, it feels like a part of my life has disappeared.\"\n\nSarah’s story is just one among many in a city where small businesses are struggling to survive. As rents soar and competition intensifies, the question remains: how long can these local gems hold on?"
+    }
+  ]
+}

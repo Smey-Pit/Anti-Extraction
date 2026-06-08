@@ -1,0 +1,42 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0053.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Lost and Found: A Tale of Family Secrets",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Sophia Graham",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "The Coastal Chronicle",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Sophia Graham. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "1145",
+      "question": "What is the page number?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "In the quaint coastal town of Willow Creek, a long-buried family secret has resurfaced, stirring memories and emotions. The discovery of an old diary belonging to the town’s founding father, Thomas Hartley, has led to a series of revelations about the town’s history. Local historian, EMMA WILKINS, shares insights into the diary’s contents and its impact on the community.\n\nEMMA WILKINS\nThis diary offers a unique perspective on our town’s past, revealing personal struggles and triumphs that shaped Willow Creek into what it is today.\n\nThe story of Thomas Hartley’s life, filled with love, loss, and the pursuit of justice, has brought the town together in a shared journey of understanding and healing."
+    }
+  ]
+}

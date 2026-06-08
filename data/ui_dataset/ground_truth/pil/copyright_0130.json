@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0130.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Shadows of the Past",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Sophia Lee",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Shadowlight Studios",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Sophia Lee. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "2677",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. OLD LIBRARY - NIGHT",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. OLD LIBRARY - NIGHT\n\nThe room is dimly lit, with flickering candles casting long shadows on the ancient wooden floors. THOMAS, a middle-aged man with a stern expression, stands before a large, dusty map of the town. His fingers trace the outline of a hidden path, a secret he has kept for years. Suddenly, the door creaks open, and ANNA, a young historian with a curious glint in her eye, enters.\n\nTHOMAS\n(voice low)\nWhat brings you here, Anna?\n\nANNA\n(smiling)\nI heard about your interest in the old maps. I have some information that might interest you.\n\nThomas’s eyes narrow, his grip on the map tightening. He gestures for her to sit down, and together they delve into the mysteries of the past, uncovering secrets that could change everything.\n\nFADE OUT."
+    }
+  ]
+}

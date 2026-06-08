@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0019.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Western Sentinel",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Tax Reform Plan Divides Community Leaders",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Mia Carter",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Western Village, October 10, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Tax Reform",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Economic Growth",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Infrastructure Funding",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "A proposed tax reform plan in Western Village has divided community leaders, with some praising its potential to boost local economies, while others fear it could lead to significant budget cuts."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The plan, developed by local economist John Miller, suggests reducing corporate taxes and increasing property taxes to fund infrastructure improvements and social services."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Supporters argue that lower corporate taxes will encourage business investment and job creation, while increased property taxes will generate revenue without burdening low-income residents."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Critics, including several mayors and city council members, warn that the plan could result in fewer resources for essential public services."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Community activist Sarah Wilson said, 'We need to find a way to balance economic growth with maintaining the quality of life in our community.'"
+    },
+    {
+      "label": "pull_quote",
+      "text": "‘We must prioritize investments in our community’s future, not just short-term gains,’ said John Miller."
+    }
+  ]
+}

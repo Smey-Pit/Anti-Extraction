@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0004.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Android Messages",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Ella",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Jake",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Jake",
+      "text": "Hey Ella, I’m having some trouble with my car. Any ideas?"
+    },
+    {
+      "label": "message_2_Ella",
+      "text": "Not really, sorry. Maybe take it to a mechanic?"
+    },
+    {
+      "label": "message_3_Jake",
+      "text": "Sounds like a plan. Thanks!"
+    },
+    {
+      "label": "message_4_Ella",
+      "text": "No problem. Let me know how it goes."
+    }
+  ]
+}

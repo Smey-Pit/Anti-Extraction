@@ -1,0 +1,76 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0137.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Global Viewpoint Review",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Immigration Policies: Balancing Security and Humanity",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "David R. Lee",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Los Angeles, May 25, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Immigration Policy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Border Security",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Human Rights",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "As the country grapples with tightening immigration policies, there is a growing debate about how to balance national security concerns with humanitarian considerations, particularly in light of recent border incidents and policy changes."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Attorney General James Carter believes that stricter enforcement is necessary to protect the nation's borders, asserting, 'Our primary responsibility is to ensure the safety and security of our citizens.'"
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Human rights organizations, however, argue that these measures disproportionately affect vulnerable populations and can lead to inhumane conditions, with executive director Sarah Johnson stating, 'We must treat all individuals with dignity and respect, regardless of their immigration status.'"
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Some experts suggest a middle ground approach, focusing on improving vetting processes and providing support for those who seek legal pathways to enter the country, with immigration scholar Dr. Robert Smith proposing, 'A balanced approach is essential for addressing both security and humanitarian needs.'"
+    },
+    {
+      "label": "pull_quote",
+      "text": "Our primary responsibility is to ensure the safety and security of our citizens."
+    }
+  ]
+}

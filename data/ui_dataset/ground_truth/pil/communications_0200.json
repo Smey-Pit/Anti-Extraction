@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0200.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Android Messages",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Jenny",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Kevin",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Jenny",
+      "text": "Kevin, I need to talk to u abt something urgent. Can we meet now?"
+    },
+    {
+      "label": "message_2_Kevin",
+      "text": "Sure, what's going on?"
+    },
+    {
+      "label": "message_3_Jenny",
+      "text": "It's about the loan I applied for. They said they need more info."
+    },
+    {
+      "label": "message_4_Kevin",
+      "text": "Oh no, that's stressful. Let's go over everything together. Meet at my place?"
+    }
+  ]
+}

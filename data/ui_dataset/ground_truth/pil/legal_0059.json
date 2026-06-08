@@ -1,0 +1,68 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0059.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Complaint for Personal Injury",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Oakwood County, State of Novaria",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "September 5, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "Case No. CV-2024-08841",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_plaintiff",
+      "type": "name",
+      "value": "David L. Thompson",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_defendant",
+      "type": "name",
+      "value": "Sarah J. Miller",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "David L. Thompson",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_2",
+      "type": "name",
+      "value": "Sarah J. Miller",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._Nature_of_Action",
+      "text": "The Plaintiff, David L. Thompson, brings this action against the Defendant, Sarah J. Miller, for personal injuries sustained on August 20, 2024, as a result of the Defendant's negligence."
+    },
+    {
+      "label": "clause_2.1_Damages_Sought",
+      "text": "The Plaintiff seeks compensatory damages in the amount of $50,000.00 for medical expenses, lost wages, and pain and suffering resulting from the incident."
+    },
+    {
+      "label": "clause_3._Factual_Basis",
+      "text": "On the aforementioned date, the Defendant negligently operated her vehicle, causing it to collide with the Plaintiff's vehicle, resulting in the Plaintiff's injuries."
+    }
+  ]
+}

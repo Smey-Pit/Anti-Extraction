@@ -1,0 +1,62 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0038.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Notice of Eviction",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Springfield City, State of Novaria",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "October 17, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "party_1_landlord",
+      "type": "name",
+      "value": "Jameson Properties LLC",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_tenant",
+      "type": "name",
+      "value": "Henry M. Thompson",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Jameson Properties LLC",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_2",
+      "type": "name",
+      "value": "Henry M. Thompson",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._Notice_of_Non-Payment",
+      "text": "Tenant is hereby notified that he has failed to pay the rent due on September 1, 2024, and as of October 17, 2024, remains in arrears for a total of $1,200."
+    },
+    {
+      "label": "clause_2.1_Deadline",
+      "text": "Tenant is given thirty (30) days from the date of this notice to either cure the default by paying the outstanding rent or vacate the premises."
+    },
+    {
+      "label": "clause_3._Consequences_of_Failure_to_Comply",
+      "text": "If Tenant fails to comply with the terms of this notice, Landlord reserves the right to commence legal proceedings for eviction."
+    }
+  ]
+}

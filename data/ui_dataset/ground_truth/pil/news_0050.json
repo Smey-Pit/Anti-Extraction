@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0050.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "National Tribune",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Tech Giants Face New Privacy Scrutiny in Senate Hearing",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Emily R. Carter",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Washington D.C., April 15, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Politics",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Tech Regulation",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Privacy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Senate Hearing",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "In a highly anticipated Senate hearing, tech giants such as Zentech and Cybervision were grilled on their privacy policies, sparking new concerns among lawmakers and the public."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Senators from both sides of the aisle expressed deep skepticism over the companies' handling of user data, citing recent high-profile breaches that affected millions of users."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Zentech CEO, Alex Myles, defended his company's practices, stating, 'We take user privacy very seriously and have implemented stringent measures to protect our customers.'"
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Cybervision's COO, Lisa Nguyen, admitted to some lapses but promised to make significant changes, adding, 'We are committed to transparency and accountability.'"
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "The hearing comes amid growing public pressure and calls for stricter regulations on data collection and usage."
+    },
+    {
+      "label": "pull_quote",
+      "text": "'This is just the beginning of a long overdue conversation about digital privacy rights,' said Senator Jane Doe."
+    }
+  ]
+}

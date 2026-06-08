@@ -1,0 +1,54 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0222.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Gmail",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "John",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Sarah",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_3",
+      "type": "name",
+      "value": "Michael",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "subject",
+      "type": "short_phrase",
+      "value": "Family Emergency",
+      "question": "What is the subject line of this message?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_John",
+      "text": "Hey guys, I need to talk to you urgently. My mom had a stroke this morning."
+    },
+    {
+      "label": "message_2_Sarah",
+      "text": "Oh no, are you ok? What's happening now?"
+    },
+    {
+      "label": "message_3_Michael",
+      "text": "Are you at the hospital? Let us know if we can help in any way."
+    },
+    {
+      "label": "message_4_John",
+      "text": "Yeah, we're there. They're doing some tests to figure out next steps. I'll update you as soon as I know more."
+    }
+  ]
+}

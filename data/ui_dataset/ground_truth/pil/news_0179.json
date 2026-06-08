@@ -1,0 +1,86 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0179.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Democratic Voice",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Education Reform: Can Biden’s Plan Transform Our Schools?",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Emily J. Parker",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Philadelphia, December 12, 2022",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Education",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "School Reform",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Teacher Training",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_4",
+      "type": "short_phrase",
+      "value": "Student Support",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "President Biden’s education reform plan aims to transform schools across the country, but will it succeed in addressing long-standing issues?"
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The plan includes significant investments in school infrastructure, teacher training, and student support programs, with the goal of improving educational outcomes."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Advocates believe that these measures could help close achievement gaps and provide a better education for all students."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Critics argue that the plan lacks sufficient detail and may not address the root causes of educational disparities."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "The debate is ongoing, with educators, parents, and policymakers weighing in on the potential impact of the reforms."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"Our children deserve the best education possible, and this plan is a step in the right direction.\" - Teacher Jane Doe"
+    }
+  ]
+}

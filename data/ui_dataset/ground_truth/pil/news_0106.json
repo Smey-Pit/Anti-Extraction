@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0106.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Liberty Herald",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Tech Giants Face Antitrust Scrutiny in Senate Hearing",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Michael Davis",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Washington, DC, April 1, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Politics",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Antitrust",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Tech Regulation",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Senate Hearings",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Senators from both parties are calling for increased regulation of tech giants, accusing them of monopolistic practices and unfair competition."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The hearing, held yesterday, saw lawmakers questioning executives from major tech companies about their business practices and the impact on smaller competitors."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Representatives from the tech industry defended their companies, arguing that they provide essential services and have faced intense competition from startups."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Advocates for stricter regulations argue that the tech giants' dominance hinders innovation and harms consumers."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "A senator remarked, 'It's time to level the playing field and ensure fair competition in the digital marketplace.'"
+    },
+    {
+      "label": "pull_quote",
+      "text": "'These companies have grown too powerful and need to be brought back down to size,' Senator Jane Smith declared during the hearing."
+    }
+  ]
+}

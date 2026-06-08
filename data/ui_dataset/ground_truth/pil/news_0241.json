@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0241.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Liberal Times",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "GOP Congressman Proposes Draconian Gun Control Measures",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Michael R. Davis",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "New York City, April 15, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Gun Control",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Second Amendment",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Legislative Debate",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Congressman Thomas Johnson has introduced sweeping gun control legislation that would ban most semi-automatic weapons and require universal background checks at gun shows, drawing immediate backlash from conservative groups."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Johnson's bill, titled the 'Public Safety Act,' aims to reduce gun violence through stricter regulations, but critics argue it infringes on Second Amendment rights and will do little to prevent mass shootings."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "In a statement, Johnson said, 'We need to protect our communities from the senseless tragedies that occur every day due to unchecked access to firearms.'"
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Rep. Sarah Lee, a Republican colleague, called the proposal 'unconstitutional nonsense' and vowed to fight its passage in Congress."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "The bill has garnered support from numerous advocacy groups focused on reducing gun-related deaths, while opposition has come from pro-gun organizations who see the legislation as a threat to their members' freedoms."
+    },
+    {
+      "label": "pull_quote",
+      "text": "‘This isn’t about safety; this is about stripping away our rights.’ - Rep. Sarah Lee"
+    }
+  ]
+}

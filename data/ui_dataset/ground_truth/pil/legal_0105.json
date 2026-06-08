@@ -1,0 +1,62 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0105.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Commercial Lease Agreement",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Springfield Township, State of Novaria",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "May 17, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "party_1_landlord",
+      "type": "name",
+      "value": "Johnathan Oakley",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_tenant",
+      "type": "name",
+      "value": "Lila M. Rose",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Johnathan Oakley",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_2",
+      "type": "name",
+      "value": "Lila M. Rose",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._TERM_AND_PREMISES",
+      "text": "The term of this lease shall commence on June 1, 2024, and terminate on May 31, 2029, unless terminated earlier as provided herein."
+    },
+    {
+      "label": "clause_2.1_USE_OF_PREMISES",
+      "text": "The Tenant shall use the Premises solely for commercial office purposes, as further detailed in Exhibit A attached hereto."
+    },
+    {
+      "label": "clause_3._RENT",
+      "text": "The Tenant shall pay rent in the amount of $3,500 per month, payable on the first day of each calendar month, commencing June 1, 2024."
+    }
+  ]
+}

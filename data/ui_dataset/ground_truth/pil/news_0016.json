@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0016.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Sunset Herald",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Controversial School Reform Bill Passes State Legislature",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "James Mckenna",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "State Capitol, July 10, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Education Reform",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Teacher Evaluations",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Standardized Testing",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Last night, the state legislature passed a sweeping education reform bill that aims to overhaul teacher evaluations and increase standardized testing requirements, sparking outrage among educators and parents alike."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Proponents of the bill argue that it will improve accountability and ensure that students are prepared for college and career."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Teachers’ unions and educational advocates, however, warn that the bill could undermine classroom creativity and lead to increased stress on both teachers and students."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Parent groups have praised the bill, saying it will provide clearer metrics for school performance and help identify underperforming schools."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "State Senator Jane Doe, who authored the bill, stated, 'Our children deserve the best education possible, and this legislation is a step in the right direction.'"
+    },
+    {
+      "label": "pull_quote",
+      "text": "‘This bill is about more than just tests; it’s about ensuring every child has access to quality education,’ said Jane Doe."
+    }
+  ]
+}

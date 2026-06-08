@@ -1,0 +1,50 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0052.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Last Will and Testament",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Brookside City, State of Novamont",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "2024-08-01",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "party_1_grantor",
+      "type": "name",
+      "value": "William H. Rivers",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "William H. Rivers",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._DISPOSAL_OF_ESTATE",
+      "text": "I hereby direct that my estate shall be distributed as follows."
+    },
+    {
+      "label": "clause_2.1_EXECUTOR",
+      "text": "My Executor shall be my nephew, Charles P. Green."
+    },
+    {
+      "label": "clause_3._GUARDIAN",
+      "text": "My Guardian shall be my niece, Elizabeth A. Smith."
+    }
+  ]
+}

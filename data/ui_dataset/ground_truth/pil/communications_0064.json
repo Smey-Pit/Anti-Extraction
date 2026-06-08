@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0064.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Android Messages",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Liam",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Olivia",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Liam",
+      "text": "Hey Olivia, I need ur help w/ something."
+    },
+    {
+      "label": "message_2_Olivia",
+      "text": "Sure, what do u need?"
+    },
+    {
+      "label": "message_3_Liam",
+      "text": "Can u take my dog for a walk this afternoon?"
+    },
+    {
+      "label": "message_4_Olivia",
+      "text": "Absolutely, no prob. When?"
+    }
+  ]
+}

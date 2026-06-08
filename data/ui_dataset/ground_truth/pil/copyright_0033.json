@@ -1,0 +1,42 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0033.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Ghosts of Forgotten Places",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Isolde Marlow",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "The Evening Star",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Isolde Marlow. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "780",
+      "question": "What is the page number?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "In the quiet town of Willow Creek, a local historian, Dr. Eleanor Blackwood, has uncovered a mysterious story from the town’s past. According to the records, the old St. Agnes Hospital, now abandoned, was once a sanctuary for the mentally ill. Many patients were said to have never left, trapped within the walls of the crumbling building. Dr. Blackwood has been researching the history of the hospital for months, hoping to uncover the truth behind these rumors.\n\nOne evening, she decides to explore the hospital herself, guided only by the moonlight. As she walks through the deserted corridors, she can’t help but feel a sense of unease. The air is cold, and the silence is almost palpable. She hears whispers, faint and indistinct, but they seem to grow louder as she delves deeper into the building.\n\nDr. Blackwood believes that the stories of the patients who never left might hold the key to understanding the true nature of the hospital. Her findings could shed new light on the dark history of Willow Creek and perhaps even offer some solace to those who believe in the ghosts of the past."
+    }
+  ]
+}

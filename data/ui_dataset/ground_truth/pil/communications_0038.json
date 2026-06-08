@@ -1,0 +1,54 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0038.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Gmail",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Sarah",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Dr. Johnson",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_3",
+      "type": "name",
+      "value": "Jane Doe",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "subject",
+      "type": "short_phrase",
+      "value": "Follow-up on appointment results",
+      "question": "What is the subject line of this message?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Sarah",
+      "text": "Hi Dr. J, just following up on my appointment last week. Any updates?"
+    },
+    {
+      "label": "message_2_Dr._Johnson",
+      "text": "Hi Sarah, we’ve reviewed your results. Everything looks good!"
+    },
+    {
+      "label": "message_3_Sarah",
+      "text": "That’s great news! When can I come back for my next checkup?"
+    },
+    {
+      "label": "message_4_Dr._Johnson",
+      "text": "We’d recommend coming in every 6 months. Booked you for next March."
+    }
+  ]
+}

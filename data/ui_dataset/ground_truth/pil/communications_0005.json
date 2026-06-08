@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0005.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Instagram DM",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Nina",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Max",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Max",
+      "text": "Hey Nina, I've been thinking about us... things have been tough lately."
+    },
+    {
+      "label": "message_2_Nina",
+      "text": "Yeah, I know. It's been hard for both of us."
+    },
+    {
+      "label": "message_3_Max",
+      "text": "I think we need to talk more openly about our feelings."
+    },
+    {
+      "label": "message_4_Nina",
+      "text": "Agreed. Let's set up a time to chat soon."
+    }
+  ]
+}

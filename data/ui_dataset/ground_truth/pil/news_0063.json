@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0063.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Economic Herald",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Free Trade Agreements Face Criticism as Domestic Industries Struggle",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "David Lee",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Chicago, June 15, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Politics",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Free Trade",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Economic Policy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Job Losses",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Domestic manufacturers are sounding the alarm as free trade agreements continue to erode local industries, leading to job losses and economic instability."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "A recent study by the Economic Research Institute indicates that imports from countries with which the U.S. has free trade agreements have surged, putting pressure on American producers."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Proponents of free trade argue that these agreements create jobs and stimulate growth, but critics contend that they come at too high a cost to domestic industries."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Congressional hearings are scheduled to discuss potential revisions to existing trade deals, with stakeholders on both sides eager to shape the outcome."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Trade experts predict that any changes will be closely watched by global markets, with implications for international relations and economic policy."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"It's time to protect American jobs and industries before it's too late.\" - Rep. Sarah Johnson, Trade Committee Member"
+    }
+  ]
+}

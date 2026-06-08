@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0058.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "A Tale of Two Cities",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Sophia Chen",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Metropolis Daily",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Sophia Chen. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "1232",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "Feature Article",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "In the bustling city of Metropolis, two neighborhoods stand in stark contrast: the vibrant, thriving district of Northside and the struggling, under-resourced area of Southside. Despite their proximity, these communities often seem worlds apart, each facing its own unique challenges and triumphs. This week, we explore the lives of two residents, one from each side, whose stories intertwine in unexpected ways.\n\nMEGAN, a young teacher from Northside, has dedicated her life to helping children in her community. Her passion and commitment have earned her the respect and admiration of many. Meanwhile, JASON, a local entrepreneur from Southside, has been working tirelessly to bring economic opportunities to his neighborhood. His innovative projects have sparked hope among the residents.\n\nAs we delve deeper into their journeys, we discover that their paths have crossed more than once, each time bringing them closer to understanding the complexities of their shared city. Their stories serve as a reminder that even in the most divided of places, there is always a chance for connection and change."
+    }
+  ]
+}

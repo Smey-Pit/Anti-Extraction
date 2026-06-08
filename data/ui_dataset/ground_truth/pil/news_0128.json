@@ -1,0 +1,86 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0128.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Economic Tribune",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Free Market Advocates Praise Tax Cuts for Business Growth",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "David K. Lee",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Chicago, June 5, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Tax Reform",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Economic Growth",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Job Creation",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_4",
+      "type": "short_phrase",
+      "value": "Corporate Taxes",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Economists and business leaders are hailing recent tax reforms aimed at reducing corporate tax rates as a key driver of economic growth and job creation, though critics warn of potential long-term fiscal risks."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The new tax law, passed last month, significantly lowers the corporate tax rate from 35% to 21%, citing the need to make American businesses more competitive globally."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Proponents argue that lower taxes will encourage investment and innovation, leading to increased productivity and higher wages."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "However, some economists express concern that reduced government revenue could strain public services and social programs."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "A leading economist observed, 'While cutting taxes can stimulate short-term growth, it’s essential to balance fiscal responsibility with economic vitality.'"
+    },
+    {
+      "label": "pull_quote",
+      "text": "'Tax cuts are not just about saving money; they’re about creating jobs and fostering a vibrant economy.' - Robert Johnson, Chief Economist"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0058.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Gmail",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Emily",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "John Doe",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_3",
+      "type": "name",
+      "value": "Jane Smith",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "subject",
+      "type": "short_phrase",
+      "value": "Financial Update",
+      "question": "What is the subject line of this message?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Emily",
+      "text": "Hi John, I hope you're doing well. Just wanted to give you an update on our finances."
+    },
+    {
+      "label": "message_2_John",
+      "text": "Hey Emily, yeah, I'm fine. What's going on with the money?"
+    },
+    {
+      "label": "message_3_Emily",
+      "text": "We're facing some issues with the rent. I think we need to cut back on some expenses."
+    },
+    {
+      "label": "message_4_John",
+      "text": "I see. Do you have any ideas on where we can save?"
+    }
+  ]
+}

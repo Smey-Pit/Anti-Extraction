@@ -1,0 +1,73 @@
+{
+  "doc_type": "identity",
+  "image_path": "images/pil/identity_0132.png",
+  "entities": [
+    {
+      "label": "document_type",
+      "type": "short_phrase",
+      "value": "national_id",
+      "question": "What type of identity document is this?"
+    },
+    {
+      "label": "issuing_authority",
+      "type": "short_phrase",
+      "value": "United States of Alabamia — National Identification Bureau",
+      "question": "What authority issued this document?"
+    },
+    {
+      "label": "surname",
+      "type": "name",
+      "value": "Riverstone",
+      "question": "What is the surname?"
+    },
+    {
+      "label": "given_names",
+      "type": "name",
+      "value": "Jordan",
+      "question": "What are the given names?"
+    },
+    {
+      "label": "dob",
+      "type": "date",
+      "value": "1978-09-23",
+      "question": "What is the date of birth?"
+    },
+    {
+      "label": "document_number",
+      "type": "digit_seq",
+      "value": "US-A23456789",
+      "question": "What is the document number?"
+    },
+    {
+      "label": "nationality_state",
+      "type": "short_phrase",
+      "value": "Alabamia",
+      "question": "What is the nationality or state?"
+    },
+    {
+      "label": "issue_date",
+      "type": "date",
+      "value": "2019-04-10",
+      "question": "What is the issue date?"
+    },
+    {
+      "label": "expiry_date",
+      "type": "date",
+      "value": "2029-04-10",
+      "question": "What is the expiry date?"
+    },
+    {
+      "label": "sex",
+      "type": "short_phrase",
+      "value": "M",
+      "question": "What is the sex listed on the document?"
+    },
+    {
+      "label": "address",
+      "type": "short_phrase",
+      "value": "456 River Road, Springville",
+      "question": "What is the address on the document?"
+    }
+  ],
+  "content_blocks": []
+}

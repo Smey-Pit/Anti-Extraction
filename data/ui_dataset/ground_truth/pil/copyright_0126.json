@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0126.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Whispers in the Wind",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Isabella Myles",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Etherea Press",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Isabella Myles. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "2597",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "Chapter 5: Beneath the Oak",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "The old oak stood sentinel at the edge of the forest, its gnarled branches reaching towards the sky like bony fingers. In the fading light of dusk, it whispered secrets to those who dared to listen. Alice had always been drawn to the tree, its presence both comforting and unsettling. Tonight, she sat beneath its canopy, her hands clasped tightly around a small, leather-bound journal. The wind carried the scent of pine and earth, mingling with the faint aroma of jasmine from the garden beyond. She opened her journal and began to write, her words flowing like the river that wound through the valley."
+    }
+  ]
+}

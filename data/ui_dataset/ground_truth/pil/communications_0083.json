@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0083.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Discord",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Sarah",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Mike",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Mike",
+      "text": "Hey Sarah, r u still awake?"
+    },
+    {
+      "label": "message_2_Sarah",
+      "text": "Yup, just watching a movie. What's up?"
+    },
+    {
+      "label": "message_3_Mike",
+      "text": "Just wanted to check in. U ok?"
+    },
+    {
+      "label": "message_4_Sarah",
+      "text": "Yeah, just feeling a bit stressed about work. How about u?"
+    }
+  ]
+}

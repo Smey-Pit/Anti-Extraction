@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0013.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Discord",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Jake",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Jordan",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Jake",
+      "text": "Hey Jordan, can you help me with my coding project? I’m stuck on this part."
+    },
+    {
+      "label": "message_2_Jordan",
+      "text": "Sure thing, buddy. Let’s take a look. Send me the code and I’ll see if I can spot the issue."
+    },
+    {
+      "label": "message_3_Jake",
+      "text": "Thanks a lot, man. I really appreciate it. Here’s the link to the repo."
+    },
+    {
+      "label": "message_4_Jordan",
+      "text": "Will do. I’ll check it out in a bit. 👍"
+    }
+  ]
+}

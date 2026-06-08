@@ -1,0 +1,62 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0042.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Last Will and Testament",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Riverdale City, State of Novaria",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "August 1, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "party_1_grantor",
+      "type": "name",
+      "value": "Alice W. White",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_executor",
+      "type": "name",
+      "value": "Robert G. Black",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Alice W. White",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_2",
+      "type": "name",
+      "value": "Robert G. Black",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._Personal_Property",
+      "text": "I direct that my personal property, including but not limited to jewelry, art, and collectibles, shall be distributed as follows..."
+    },
+    {
+      "label": "clause_2.1_Real_Property",
+      "text": "I direct that my real property located at 456 Elm Street, Riverdale City, shall be conveyed to my daughter, Emily W. Green."
+    },
+    {
+      "label": "clause_3._Funeral_Arrangements",
+      "text": "My funeral arrangements shall be handled by Johnson Funeral Home, and my ashes shall be interred at Maple Grove Cemetery."
+    }
+  ]
+}

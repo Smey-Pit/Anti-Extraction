@@ -1,0 +1,86 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0161.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "The Progressive Tribune",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Climate Change: Is the Government Doing Enough?",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Michael Greenfield",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "New York City, March 20, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Climate Change",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Environmental Policy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Green Energy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_4",
+      "type": "short_phrase",
+      "value": "Public Opinion",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "With extreme weather events becoming increasingly frequent, the question of whether the government is doing enough to combat climate change has never been more pressing. Critics argue that current measures fall short of what is needed to protect the environment and public health."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Despite the mounting evidence, the federal government has been slow to implement comprehensive climate policies, focusing instead on piecemeal solutions and short-term fixes. Environmental activists have called for bolder action, such as transitioning to renewable energy sources and investing in green infrastructure."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Environmental scientist Dr. Emily Chen remarked, 'We need a clear and consistent national strategy to address climate change, and that means making tough choices and taking decisive action now.'"
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "However, some argue that the government should prioritize economic stability and job creation over environmental concerns, citing the potential risks to industries reliant on fossil fuels."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "A recent poll found that 70% of Americans believe the government is not doing enough to address climate change, indicating a significant gap between public sentiment and policy implementation."
+    },
+    {
+      "label": "pull_quote",
+      "text": "‘The science is clear, and the time for action is now. We cannot afford to wait any longer.’ – Dr. Emily Chen"
+    }
+  ]
+}

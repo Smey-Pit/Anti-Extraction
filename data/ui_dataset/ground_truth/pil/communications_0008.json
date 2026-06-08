@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0008.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Discord",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Mike",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Liam",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Liam",
+      "text": "Hey Mike, how's it going?"
+    },
+    {
+      "label": "message_2_Mike",
+      "text": "Not great tbh, my girlfriend just broke up with me."
+    },
+    {
+      "label": "message_3_Liam",
+      "text": "Ouch, that sucks. Want to talk about it?"
+    },
+    {
+      "label": "message_4_Mike",
+      "text": "Yeah, I really need to vent. We've been together for 3 years..."
+    }
+  ]
+}

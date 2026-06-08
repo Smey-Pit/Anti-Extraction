@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0065.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Economic Insight Journal",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Tech Giants Face Growing Pressure to Address Labor Shortages",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Lila M. Thompson",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "New York, March 15, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Labor Market",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Tech Industry",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Economic Policy",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "As the tech industry grapples with a severe labor shortage, pressure mounts on major companies to take decisive action to retain and attract talent."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "With unemployment rates at historic lows, tech firms are struggling to fill key positions despite offering competitive salaries and benefits packages."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Critics argue that these companies need to do more than just offer perks; they must address systemic issues within their organizations that discourage employee loyalty."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Industry leaders warn that if this trend continues, it could stifle innovation and slow down technological advancements that have been pivotal in recent years."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "However, proponents of the current model believe that the market will naturally correct itself as more people enter the job market."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"If tech giants fail to act, we risk losing the very foundation of our economy to other sectors that can better support their workers.\" - Jane Doe, CEO of TechForward"
+    }
+  ]
+}

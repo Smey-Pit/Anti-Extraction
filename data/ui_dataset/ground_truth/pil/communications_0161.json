@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0161.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "iMessage",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Sara",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Tom",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Tom",
+      "text": "Hey Sara, I got ur msg. R u free tomorrow?"
+    },
+    {
+      "label": "message_2_Sara",
+      "text": "Yea, I can make it. What’s up?"
+    },
+    {
+      "label": "message_3_Tom",
+      "text": "Just wanna chat abt our med appt. U ok w/ 10am?"
+    },
+    {
+      "label": "message_4_Sara",
+      "text": "Sure thing. See u then."
+    }
+  ]
+}

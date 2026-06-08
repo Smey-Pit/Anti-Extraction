@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0091.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "iMessage",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Alice",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Bob",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Bob",
+      "text": "Hey Al, I was thinking abt us goin 2 that concert this weekend."
+    },
+    {
+      "label": "message_2_Alice",
+      "text": "Yeah, I’m down! But uh, I’ve got a doctor’s appt at 3 so maybe we can do it next week?"
+    },
+    {
+      "label": "message_3_Bob",
+      "text": "Nah, it’s good. We can reschedule if u’re not feelin well tho."
+    },
+    {
+      "label": "message_4_Alice",
+      "text": "Thanks, I’ll check in with my doc after & let you know. 👍"
+    }
+  ]
+}

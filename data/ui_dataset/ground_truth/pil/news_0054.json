@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0054.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "The Political Sentinel",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Economic Stimulus Package Faces Delay as Congressional Committees Disagree",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Sarah W. Chen",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Washington D.C., August 5, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Economic Stimulus",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Congress",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Fiscal Policy",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Negotiations over an economic stimulus package have hit a roadblock as congressional committees remain at odds over its scope and funding levels, threatening to delay crucial relief efforts."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Democrats have pushed for a larger package to address ongoing economic challenges, including job losses and inflation, while Republicans have called for more targeted spending and tax cuts."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "House Speaker John Adams, a Democrat, emphasized the urgency of passing the bill, saying, 'We cannot afford to wait any longer to provide relief to American families and businesses.'"
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Meanwhile, Senate Majority Leader Margaret White, a Republican, argued that a smaller package would be more fiscally responsible and ensure the funds are used effectively."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "The impasse has raised concerns among economists and policymakers about the potential negative impact on the economy if a deal is not reached soon."
+    },
+    {
+      "label": "pull_quote",
+      "text": "'Time is of the essence,' declared White, 'we need to act now to stabilize the economy and prevent further damage.'"
+    }
+  ]
+}

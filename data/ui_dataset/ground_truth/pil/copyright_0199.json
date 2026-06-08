@@ -1,0 +1,42 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0199.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Reviving the Forgotten Art of Storytelling",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Jasmine Lee",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "The Echo Times",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Jasmine Lee. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "4113",
+      "question": "What is the page number?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "In the heart of the bustling city lies a forgotten art form that has been brought back to life by a group of passionate storytellers. The annual Storytelling Festival, now in its third year, has become a beacon for those who seek to reconnect with the power of the spoken word.\n\nOrganizer, Maya Singh, shares her vision, “We believe that storytelling is not just about sharing a tale; it’s about creating a shared experience, bridging gaps between cultures and communities.” The festival features a diverse lineup of storytellers from all walks of life, each sharing their unique perspective.\n\nAttendees are transported to different worlds, from the ancient tales of India to the futuristic narratives of young writers. The event also includes workshops and masterclasses, offering aspiring storytellers the chance to hone their craft.\n\nThis year’s festival promises to be even more exciting, with a special guest appearance by renowned storyteller, Ravi Patel, known for his captivating performances around the globe."
+    }
+  ]
+}

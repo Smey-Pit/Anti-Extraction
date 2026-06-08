@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0223.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Echoes of the Past",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Alec Hartley",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Silver Screen Productions",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Alec Hartley. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "4635",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. WILLOW CREEK LIBRARY - NIGHT",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. WILLOW CREEK LIBRARY - NIGHT\n\nThe library is dimly lit, the only sound the soft hum of a distant fan. The camera pans across rows of towering shelves, each holding countless stories. A figure, JESSICA, a young librarian with a determined look, approaches an old, leather-bound book. She opens it carefully, her fingers tracing the embossed letters on the cover. Suddenly, a soft, echoing voice starts to speak from the pages.\n\nJESSICA\n(whispering)\nI am the keeper of the past. I will guide you.\n\nThe voice grows louder, more urgent. Jessica looks around, confused, before she sees the ghostly figure of ANNA, the founder of Willow Creek, standing beside her.\n\nANNA\n(softly)\nListen to me, Jessica. Your town has secrets. Secrets that need to be told.\n\nThe camera zooms in on Anna's face, full of wisdom and sorrow. Jessica nods, her eyes wide with wonder and fear.\n\nFADE OUT."
+    }
+  ]
+}

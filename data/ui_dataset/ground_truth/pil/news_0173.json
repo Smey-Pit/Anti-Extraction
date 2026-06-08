@@ -1,0 +1,76 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0173.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "The Progressive Sentinel",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Climate Change: Are We Doing Enough?",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Rachel K. Davis",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "San Francisco, January 10, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Climate Change",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Environmental Policy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Renewable Energy",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "As the world grapples with the devastating effects of climate change, there is growing skepticism about whether current efforts are sufficient to prevent catastrophic outcomes. Environmentalists push for more aggressive action."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Despite international agreements and national commitments, greenhouse gas emissions continue to rise, leading to record-breaking temperatures and extreme weather events. Many experts believe that the pace of change needs to accelerate significantly."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Critics argue that current policies are too focused on voluntary measures and not enough on mandatory reductions in carbon emissions. They call for a shift towards renewable energy sources and stringent regulations on industries responsible for pollution."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Supporters of the current approach counter that progress is being made, albeit slowly, and that sustained effort is necessary to achieve meaningful results. They emphasize the importance of continued research and development in clean technologies."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"We cannot afford to wait any longer. The time to act on climate change is now.\" - Greenpeace Campaigner, Alex Chen"
+    }
+  ]
+}

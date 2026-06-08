@@ -1,0 +1,46 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0243.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Discord",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Mia",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Liam",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Liam",
+      "text": "Hey Mia, how’s it going?"
+    },
+    {
+      "label": "message_2_Mia",
+      "text": "Not great, to be honest. My boss has been piling on extra work and it’s stressing me out."
+    },
+    {
+      "label": "message_3_Liam",
+      "text": "Sorry to hear that. Have you talked to HR about it?"
+    },
+    {
+      "label": "message_4_Mia",
+      "text": "I did, but they said they can’t do anything until there’s a formal complaint."
+    },
+    {
+      "label": "message_5_Liam",
+      "text": "That’s frustrating. Maybe we can brainstorm some ways to handle it."
+    }
+  ]
+}

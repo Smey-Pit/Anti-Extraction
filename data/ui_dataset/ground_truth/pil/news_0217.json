@@ -1,0 +1,76 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0217.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Democratic Voice",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Healthcare Reform: Democrats Push for Universal Coverage",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Sarah J. White",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Los Angeles, December 10, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Healthcare",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Universal Coverage",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Single-Payer",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "With the healthcare debate at a boiling point, Democratic lawmakers are rallying behind a new bill that aims to provide universal coverage, a move that could dramatically reshape the U.S. healthcare landscape."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The proposed legislation seeks to eliminate private insurance companies and instead establish a single-payer system funded by progressive taxation."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Proponents argue that this approach would ensure access to care for all Americans, regardless of income or pre-existing conditions."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Opponents warn that such a system would be costly and could lead to long wait times and reduced quality of care."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"Access to healthcare should not be a privilege, but a right. We need to act now to protect our citizens.\" - Senator Jane Doe"
+    }
+  ]
+}

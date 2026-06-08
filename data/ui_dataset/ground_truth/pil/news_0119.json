@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0119.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Global Insight Journal",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Immigration Policies Under Fire as Border Crisis Escalates",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Laura M. Greene",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Washington, DC, June 30, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Politics",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Immigration",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Border Control",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Human Rights",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "The Trump administration's immigration policies are facing intense criticism as a new border crisis emerges, with thousands of migrants crossing into the country illegally."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Border patrol agencies report a surge in illegal crossings, particularly along the southern border with Mexico."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Humanitarian groups and legal experts argue that current policies are ineffective and contribute to dangerous conditions for migrants."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "The Department of Homeland Security has announced plans to bolster enforcement efforts and expedite deportations."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Opponents contend that these actions ignore the root causes of migration and may exacerbate the situation."
+    },
+    {
+      "label": "pull_quote",
+      "text": "'We need humane and effective policies that address both the security and humanitarian aspects of this issue,' said Senator Michael Brown."
+    }
+  ]
+}

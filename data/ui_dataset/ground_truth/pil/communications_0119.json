@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0119.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Android Messages",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Fiona",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Greg",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Fiona",
+      "text": "Greg, can we talk about the project? I'm kinda lost."
+    },
+    {
+      "label": "message_2_Greg",
+      "text": "Sure thing Fiona. What's going on?"
+    },
+    {
+      "label": "message_3_Fiona",
+      "text": "I don't get how to use that new software. It's driving me nuts!"
+    },
+    {
+      "label": "message_4_Greg",
+      "text": "Let's grab lunch and go over it. I'll explain it to you."
+    }
+  ]
+}

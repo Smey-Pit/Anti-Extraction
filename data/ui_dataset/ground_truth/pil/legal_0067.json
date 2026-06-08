@@ -1,0 +1,68 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0067.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Last Will and Testament",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Pineville City, State of Novaria",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "November 12, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "Will No. 2024-1112",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_grantor",
+      "type": "name",
+      "value": "Evelyn Hartley",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_executor",
+      "type": "name",
+      "value": "Robert Hartley",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Evelyn Hartley",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_2",
+      "type": "name",
+      "value": "Robert Hartley",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._Personal_Property",
+      "text": "I direct that all my personal property, including but not limited to jewelry, artwork, and collectibles, shall be distributed equally among my children, Sarah Hartley and Michael Hartley."
+    },
+    {
+      "label": "clause_2.1_Real_Property",
+      "text": "I give and bequeath my residence located at 123 Elm Street, Pineville City, to my spouse, Robert Hartley, for his lifetime, and upon his death, it shall pass to my children, Sarah Hartley and Michael Hartley, in equal shares."
+    },
+    {
+      "label": "clause_3._Funeral_Arrangements",
+      "text": "I request that my funeral be conducted in accordance with the wishes set forth in my personal papers, and that my ashes be interred at Green Hill Cemetery, Pineville City."
+    }
+  ]
+}

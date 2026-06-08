@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0153.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Discord",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Liam",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Emma",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Liam",
+      "text": "Hey Emma, how’s work going?"
+    },
+    {
+      "label": "message_2_Emma",
+      "text": "It’s hectic, we’re trying to meet Q4 targets"
+    },
+    {
+      "label": "message_3_Liam",
+      "text": "Same here, it’s crazy. Do you have any tips for staying focused?"
+    },
+    {
+      "label": "message_4_Emma",
+      "text": "Just take breaks & prioritize the most important tasks"
+    }
+  ]
+}

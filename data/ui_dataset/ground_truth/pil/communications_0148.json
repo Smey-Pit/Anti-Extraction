@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0148.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "WhatsApp",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Liam",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Ava",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Ava",
+      "text": "Hey Liam, I've been feeling kinda down lately..."
+    },
+    {
+      "label": "message_2_Liam",
+      "text": "What's going on? You can talk to me if you want."
+    },
+    {
+      "label": "message_3_Ava",
+      "text": "Just... everything. Work, bills, my mom..."
+    },
+    {
+      "label": "message_4_Liam",
+      "text": "I'm here for you, Ava. We'll figure it out together."
+    }
+  ]
+}

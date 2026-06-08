@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0106.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "iMessage",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Sara",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "John",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Sara",
+      "text": "Hey John, u there?"
+    },
+    {
+      "label": "message_2_John",
+      "text": "Yeah, sorry just got back from gym 🏋️‍♂️"
+    },
+    {
+      "label": "message_3_Sara",
+      "text": "Can we talk abt my blood test results? 😕"
+    },
+    {
+      "label": "message_4_John",
+      "text": "Sure, let's do it after dinner. Gotta finish work first though."
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0078.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Shadows and Secrets",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Sophie Grant",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Shadowplay Films",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Sophie Grant. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "1583",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. ABANDONED LIBRARY - NIGHT",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. ABANDONED LIBRARY - NIGHT\n\nThe room is dimly lit by a single, flickering lamp. The shelves are lined with ancient books, their spines cracked and pages yellowed. In the center of the room, a figure stands, illuminated by the light. DR. ELARA VOS\n(30s, pale, eyes intense) approaches a large, leather-bound tome. She opens it, her fingers tracing the intricate designs etched into the cover. A sudden gust of wind causes the pages to flutter, revealing a hidden compartment beneath. Inside, she finds a small, tarnished locket. As she opens it, a photo falls out, showing two young women, both smiling. Dr. Voss looks up, her expression unreadable. The camera zooms in on the locket, the faces of the women hauntingly familiar.\n\nFADE IN:\n\nINT. ABANDONED LIBRARY - NIGHT\n\nDR. VOS\n(whispering)\nYou can't hide from the past.\n\nFADE OUT.\n\nSophie Grant\nShadowplay Films\nPage 15\n"
+    }
+  ]
+}

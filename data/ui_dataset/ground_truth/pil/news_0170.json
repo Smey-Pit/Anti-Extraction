@@ -1,0 +1,76 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0170.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "National Tribune",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Tech Giants’ Data Practices Spark Privacy Concerns",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Evelyn M. Hart",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Washington, D.C., April 15, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Data Privacy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Tech Industry",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Consumer Rights",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "As tech giants continue to dominate the digital landscape, concerns over their data practices have reached new heights. Critics argue that these companies are infringing on personal privacy in ways that were once unimaginable."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Recent revelations about how social media platforms track user behavior and sell this information to third parties have raised alarm among lawmakers and privacy advocates. The debate has intensified as consumers demand more transparency and control over their personal data."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Industry leaders defend their practices, citing the need for targeted advertising and innovation. However, the growing backlash suggests that public trust in these companies may be at risk unless significant changes are made."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Experts warn that without stricter regulations, the current data collection methods could lead to severe consequences, including identity theft and manipulation of public opinion."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"The digital age has given us unprecedented access to information, but it has also opened the door to unprecedented invasions of privacy.\" - Senator Jane Doe"
+    }
+  ]
+}

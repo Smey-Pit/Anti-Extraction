@@ -1,0 +1,86 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0209.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Freedom Watch",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Censorship Concerns Rise as Social Media Platforms Tighten Content Policies",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Lila Chen",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "San Francisco, July 12, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Social Media",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Free Speech",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Content Moderation",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_4",
+      "type": "short_phrase",
+      "value": "Misinformation",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Recent tightening of content policies by major social media platforms has raised alarms about potential censorship and suppression of free speech."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Companies like MediaSphere and TalkNet have introduced stricter guidelines to combat misinformation and hate speech, but critics argue these measures could be used to stifle legitimate debate and expression."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Supporters of the new policies emphasize the importance of maintaining a safe online environment and protecting users from harmful content."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Digital rights activists warn that such policies could lead to self-censorship and the chilling effect on free expression."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Tech industry insiders suggest a need for greater transparency and public consultation before implementing sweeping changes to content moderation."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"Free speech is non-negotiable. We must guard against any efforts to silence dissenting voices.\" — Digital Rights Advocate, FreeSpeech Coalition"
+    }
+  ]
+}

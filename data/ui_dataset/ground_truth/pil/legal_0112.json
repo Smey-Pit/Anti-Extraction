@@ -1,0 +1,52 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0112.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Last Will and Testament",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Riverdale City, State of Novacorp",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "2024-04-10",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "CASE NO. CV-2024-0910",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_grantor",
+      "type": "name",
+      "value": "William Blackwell",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "William Blackwell",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._EXECUTION",
+      "text": "I, William Blackwell, being of sound mind and body, do hereby execute this Last Will and Testament."
+    },
+    {
+      "label": "clause_2.1_DISPOSAL_OF_ESTATE",
+      "text": "My estate, including but not limited to all real and personal property, shall be divided among my heirs as follows:"
+    }
+  ]
+}

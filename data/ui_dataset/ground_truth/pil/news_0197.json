@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0197.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Southern Sentinel",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Teacher Union Demands Higher Salaries, Raises Concerns About School Funding",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Sarah R. Martinez",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Hilltop, May 5, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Education",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Teacher Salaries",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Public School Funding",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Teachers across Hilltop City are rallying behind a union demand for increased salaries, arguing that current funding levels are insufficient to attract and retain qualified educators."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The teachers’ union has called for a 10% salary increase, citing rising costs of living and declining enrollment in teacher training programs."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "School administrators contend that funding constraints necessitate careful budgeting and emphasize the importance of maintaining quality education."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Parents and community members are divided, with some supporting higher salaries as a means to improve educational outcomes and others concerned about potential tax increases."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "A town hall meeting is planned for this weekend to discuss the issue further."
+    },
+    {
+      "label": "pull_quote",
+      "text": "‘Our children deserve the best education possible, and that starts with investing in their teachers.’ — Maria Garcia, Parent and Community Activist"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0050.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Last Witness",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Sofia Lee",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Fusion Films",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Sofia Lee. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "1076",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. COURTROOM - DAY",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. COURTROOM - DAY\n\nThe courtroom is packed, the tension palpable. The witness stands, a middle-aged woman with a weathered face. She looks nervous but resolute. The judge bangs the gavel, calling for order. The prosecutor approaches, a file in hand.\n\nPROSECUTOR\n(voice firm)\nMs. Thompson, can you tell us what you saw on the night of the incident?\n\nWITNESS\n(nodding)\nYes, I was walking home from the bar when I heard a scream. I turned around and saw a figure running away, someone chasing after them. I couldn’t see their faces, but I remember the chase lasted for several blocks before the person disappeared into an alley.\n\nPROSECUTOR\n(intently)\nDid you recognize the person running?\n\nWITNESS\n(shaking head)\nNo, I didn’t. But I do remember the chase was intense, and the person being chased was in obvious distress.\n\nJUDGE\n(calling for order)\nThank you, Ms. Thompson. You may take your seat.\n\nThe witness sits down, her breathing heavy. The prosecutor nods to the jury, and the next witness is called."
+    }
+  ]
+}

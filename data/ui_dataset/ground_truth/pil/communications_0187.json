@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0187.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Discord",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Alex",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Emma",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Emma",
+      "text": "Hey Alex, u there? I need ur help."
+    },
+    {
+      "label": "message_2_Alex",
+      "text": "Ofc, what's up?"
+    },
+    {
+      "label": "message_3_Emma",
+      "text": "My bf broke up with me. Can't get over it. 😢"
+    },
+    {
+      "label": "message_4_Alex",
+      "text": "I'm sry. Let's talk."
+    }
+  ]
+}

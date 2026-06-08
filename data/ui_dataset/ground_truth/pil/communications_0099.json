@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0099.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Discord",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Tom",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Bob",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Bob",
+      "text": "Hey Tom, how's work going?"
+    },
+    {
+      "label": "message_2_Tom",
+      "text": "It's been hectic. My boss is being a real pain."
+    },
+    {
+      "label": "message_3_Bob",
+      "text": "That sucks. Any ideas to deal with him?"
+    },
+    {
+      "label": "message_4_Tom",
+      "text": "I don't know. I feel like I can't do anything."
+    }
+  ]
+}

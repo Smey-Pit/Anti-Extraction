@@ -1,0 +1,42 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0063.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Silent Echoes",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Ella Foster",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Silent Films",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Ella Foster. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "1300",
+      "question": "What is the page number?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. ABANDONED HOUSE - NIGHT\n\nThe house is dark, except for a single beam of light seeping through a broken window. Inside, the air is thick with dust and silence. Suddenly, a faint noise breaks the stillness—a soft whisper. The camera pans across the room, revealing a small figure huddled in the corner, eyes wide with fear. It’s a child, perhaps ten years old, dressed in tattered clothes. The whisper grows louder, and the child’s hand trembles as they reach towards the source.\n\nCHILD (whispering)\nMama... Papa...\n\nThe whisper becomes a full-fledged voice, malevolent and chilling. The child’s eyes fill with tears as they realize the truth. This house is haunted. The whispers are not of love, but of something far darker.\n\nFADE OUT.\n\nFADE IN:\n\nINT. CHILDREN’S HOME - DAY\n\nThe child, now older, sits in a classroom, surrounded by peers. They are quiet, listening to a story read by their teacher. The story is about a brave girl who faces her fears and finds strength. The child smiles, finding comfort in the narrative. Outside, the wind howls, and the whispers can still be heard, but now they are part of a larger story of survival and courage.\n\nFADE TO BLACK."
+    }
+  ]
+}

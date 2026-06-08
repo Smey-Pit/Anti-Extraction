@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0049.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Lighthouse Keeper's Daughter",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Ethan Blackwood",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Whispering Winds Press",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Ethan Blackwood. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "1053",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "Chapter 5: Stormy Night",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "The lighthouse stood tall and proud, its beam slicing through the night sky like a giant’s eye. Inside, the keeper’s daughter, Elara, watched the waves crash against the rocks below. The sea was her playground, yet tonight, it felt more like a monster lurking in the darkness. She wrapped her arms around herself, feeling the cold seep through her coat. Her father had taught her to fear nothing, but the storm outside was too fierce. As she turned to leave, a soft knock sounded at the door. She hesitated, then opened it to find her brother standing there, his face pale and wet from the rain."
+    }
+  ]
+}

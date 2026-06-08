@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0202.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Whispers in the Fog",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Isaac Hargrove",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Mystic's Edge Publishing",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Isaac Hargrove. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "4168",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "Chapter 7: Echoes of the Past",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "The old lighthouse stood like a silent sentinel, its stone walls weathered by decades of salt spray and storms. Inside, the air was thick with the scent of kerosene and the faint echo of distant waves. As the first light of dawn began to filter through the windows, the room grew warm despite the chill outside. Isaac stood at the base of the spiral staircase, his fingers tracing the rough texture of the wooden rail. Each step he took felt as if it carried him back in time, to the days when the lighthouse was still manned by a keeper and the beacon guided sailors safely to shore."
+    }
+  ]
+}

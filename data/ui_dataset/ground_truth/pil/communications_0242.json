@@ -1,0 +1,58 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0242.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Gmail",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Sarah",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Mark",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_3",
+      "type": "name",
+      "value": "Emily",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "subject",
+      "type": "short_phrase",
+      "value": "Party Plan",
+      "question": "What is the subject line of this message?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Sarah",
+      "text": "Hey guys, we need to finalize the plan for next weekend’s party!"
+    },
+    {
+      "label": "message_2_Mark",
+      "text": ":) Got it. Any ideas on games or activities?"
+    },
+    {
+      "label": "message_3_Emily",
+      "text": "How about a scavenger hunt around the house?"
+    },
+    {
+      "label": "message_4_Sarah",
+      "text": "Sounds fun! We can split into teams and have a prize for the winners."
+    },
+    {
+      "label": "message_5_Mark",
+      "text": "Perfect! Let’s do it. Who wants to be on which team?"
+    }
+  ]
+}

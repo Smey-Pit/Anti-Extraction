@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0014.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Shadows Over Elmwood",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Aiden Quinn",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Foggy Night Productions",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Aiden Quinn. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "335",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. ELIZA'S BEDROOM - NIGHT",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. ELIZA'S BEDROOM - NIGHT\nEliza sits at her desk, surrounded by scattered notes and an open journal. Her flashlight casts a beam of light over her notes, illuminating the room. She leans forward, her fingers tapping rhythmically on the desk. \n\nELIZA\n(whispering)\nI can feel it, Aiden. It’s here.\n\nShe glances out the window, where the moon hangs low, casting eerie shadows on the trees outside. The camera zooms in on her face, capturing the intensity in her eyes. \n\nELIZA\n(sighing)\nIt’s time to find out what’s been haunting me.\n\nFADE OUT."
+    }
+  ]
+}

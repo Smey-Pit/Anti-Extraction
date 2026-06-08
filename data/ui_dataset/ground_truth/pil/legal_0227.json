@@ -1,0 +1,70 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0227.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Last Will and Testament",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "City of Oakwood, State of Oregon",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "May 5, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "WILL-2024-09876",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_grantor",
+      "type": "name",
+      "value": "Henry J. Thompson",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_executor",
+      "type": "name",
+      "value": "Sarah L. Johnson",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Henry J. Thompson",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_2",
+      "type": "name",
+      "value": "Michael K. Wilson",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_3",
+      "type": "name",
+      "value": "Karen S. Green",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._TESTAMENTARY_DISPOSITION",
+      "text": "I hereby revoke all prior Wills and Codicils."
+    },
+    {
+      "label": "clause_2.1_EXECUTOR",
+      "text": "My Executor is Sarah L. Johnson, who shall carry out the terms of this Will."
+    }
+  ]
+}

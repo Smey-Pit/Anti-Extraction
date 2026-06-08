@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0141.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Whispers in the Wind",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Isolde Myles",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Verdant Press",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Isolde Myles. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "2913",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "Chapter 7: Sketching the Past",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "The old oak tree stood sentinel at the edge of the meadow, its gnarled branches reaching like ancient fingers into the sky. Beneath its sprawling canopy, Elara Myles sat with her sketchbook, the soft grass beneath her knees a cool counterpoint to the warmth of the afternoon sun. The world seemed to slow as she lost herself in the intricate patterns of the leaves dancing in the breeze. Every line, every shadow, held a story, a whisper from the past, and she felt the weight of centuries pressing down on her fingertips as she captured them on paper."
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0019.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Echoes of Tomorrow",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Lila Hart",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Futuristic Films",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Lila Hart. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "446",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. SPACECRAFT CARRIER - BRIDGE - NIGHT",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. SPACECRAFT CARRIER - BRIDGE - NIGHT\n\nThe bridge is a hub of activity, with screens flickering and crew members moving with purpose. Captain Ava Johnson stands at the helm, her fingers deftly manipulating the controls. Her eyes scan the holographic map of the star system they are approaching.\n\nCAPTAIN JOHNSON\n(to herself)\nWe’re getting closer. We can’t afford any mistakes.\n\nA soft hum fills the air as the carrier begins to decelerate. The crew falls silent, their attention focused on the task at hand. Suddenly, a warning chime rings out, and the captain’s eyes widen.\n\nCAPTAIN JOHNSON\n(urgently)\nLieutenant, we have an anomaly in the sensor readings!\n\nLIEUTENANT KELLY\n(squinting at the screen)\nIt looks like we’re being pulled towards something, Captain. Could be a black hole or a wormhole.\n\nCAPTAIN JOHNSON\n(determined)\nFull reverse thrusters! We need to gain some distance.\n\nThe ship lurches as the engines fire up, and the crew braces themselves against the force. The captain’s face is set in determination, her mind racing with possibilities and dangers.\n\nCAPTAIN JOHNSON\n(over the intercom)\nPrepare for emergency protocols. We’re going to need all hands on deck.\n\nThe bridge erupts into a flurry of activity as the crew springs into action, their faces a mix of fear and resolve. The fate of the mission hangs in the balance."
+    }
+  ]
+}

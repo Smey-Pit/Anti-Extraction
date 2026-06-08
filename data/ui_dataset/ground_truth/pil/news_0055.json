@@ -1,0 +1,76 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0055.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "National Beacon",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Economic Crisis Looms as New Tax Bill Passes",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Sarah M. Thompson",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Washington, D.C., March 15, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Politics",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Economy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Tax Reform",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Fiscal Policy",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "The controversial new tax bill, passed with bipartisan support last night, has raised eyebrows among economists and politicians alike, who fear it could exacerbate the already fragile economic recovery."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Senator Jameson, a leading proponent of the bill, stated, 'This is a critical step towards ensuring fiscal stability and growth.' However, critics argue that the bill's provisions will only serve to widen the wealth gap and destabilize the economy."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "According to recent polls, public sentiment is divided, with 52% of respondents expressing concern over the bill's potential negative impacts on job creation and income inequality."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Experts warn that without significant modifications, the bill could lead to a recession within the next two years, a claim that has prompted calls for a comprehensive review of its economic implications."
+    },
+    {
+      "label": "pull_quote",
+      "text": "‘This bill is a gamble with our future, and we cannot afford to lose.’ — Senator Emily Carter"
+    }
+  ]
+}

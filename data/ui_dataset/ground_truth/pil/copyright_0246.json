@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0246.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Last Signal",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Avery White",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Nova Entertainment",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Avery White. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "5100",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. ABANDONED SHIP - NIGHT",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. ABANDONED SHIP - NIGHT\n\nThe ship is dark and eerie, the only light coming from a flickering flashlight held by Alex. He moves cautiously, his steps echoing off the metal hull. Suddenly, the flashlight beam catches something glinting on the floor.\n\nALEX\n(startled)\nWhat the—\n\nHe bends down to examine the object, which turns out to be a small, rusted radio. As he activates it, static crackles into life, followed by a faint signal. The signal grows stronger, and Alex can make out a voice, muffled and distorted.\n\nALEX\n(into radio)\nWho’s there? Can you hear me?\n\nThe signal fades, leaving Alex alone once more in the darkness."
+    }
+  ]
+}

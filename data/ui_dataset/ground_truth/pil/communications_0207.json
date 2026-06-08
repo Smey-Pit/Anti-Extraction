@@ -1,0 +1,54 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0207.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Gmail",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Jane",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Dr. Smith",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_3",
+      "type": "name",
+      "value": "Mr. Brown",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "subject",
+      "type": "short_phrase",
+      "value": "Update on health status",
+      "question": "What is the subject line of this message?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Jane",
+      "text": "Hi Dr. Smith, can we schedule an appointment soon?"
+    },
+    {
+      "label": "message_2_Dr._Smith",
+      "text": "Sure Jane, how about next week?"
+    },
+    {
+      "label": "message_3_Jane",
+      "text": "That works, but I'm really worried about my diagnosis."
+    },
+    {
+      "label": "message_4_Dr._Smith",
+      "text": "It's nothing to worry about, everything looks good so far."
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0020.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Reviving the Lost Art of Storytelling",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Jasper Reed",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Chronicle Times",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Jasper Reed. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "462",
+      "question": "What is the page number?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "In a world where screens dominate and instant gratification reigns, there is a resurgence of interest in the ancient art of storytelling. Local author and storyteller, Elara Voss, has been at the forefront of this movement, bringing tales of wonder and wisdom to life through her captivating performances. Her latest project, “Legends of the Forgotten,” aims to preserve and share stories that have been lost to time.\n\nVoss believes that storytelling is more than just entertainment; it is a means of connecting people across generations and cultures. “When we listen to a story,” she says, “we step into someone else’s shoes, experiencing their joys and sorrows. It’s a powerful way to build empathy and understanding.”\n\nHer performances often take place in cozy cafes and community centers, where she weaves together tales from various traditions. “I love the diversity of stories,” she explains. “Each one offers a unique perspective, and together they create a rich tapestry of human experience.”\n\nVoss’s dedication to storytelling has not gone unnoticed. She has received numerous awards and recognition for her contributions to the arts. “Her work is inspiring,” says local historian, Dr. Amelia Hart. “She reminds us of the importance of preserving our cultural heritage and sharing it with future generations.”\n\nAs the evening draws to a close, Voss takes a moment to reflect on the impact of her work. “I hope that my stories can ignite a spark in people, encouraging them to explore the power of imagination and the joy of a good tale.”"
+    }
+  ]
+}

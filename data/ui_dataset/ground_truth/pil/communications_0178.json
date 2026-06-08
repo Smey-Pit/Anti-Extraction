@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0178.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Discord",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Jenny",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Sam",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Jenny",
+      "text": "Hey Sam, u still up? I need ur help w/ this math hw. Cmon, just a quick question!"
+    },
+    {
+      "label": "message_2_Sam",
+      "text": "Yeah, sure! What's up?"
+    },
+    {
+      "label": "message_3_Jenny",
+      "text": "The probability of rolling a 6 on a dice 3 times in a row is... I think it's 1/216, but I'm not sure."
+    },
+    {
+      "label": "message_4_Sam",
+      "text": "Yep, that's right! Great job thinking it through!"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0163.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Gmail",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Lily",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Ella",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_3",
+      "type": "name",
+      "value": "Mia",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "subject",
+      "type": "short_phrase",
+      "value": "Surprise Party Plan",
+      "question": "What is the subject line of this message?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Lily",
+      "text": "Hey Ella & Mia, we need to finalize the plan for next weekend!"
+    },
+    {
+      "label": "message_2_Ella",
+      "text": "Definitely! When should we meet to discuss?"
+    },
+    {
+      "label": "message_3_Mia",
+      "text": "How about at your place on Sat morning?"
+    },
+    {
+      "label": "message_4_Lily",
+      "text": "Sounds good. Let’s get this sorted soon!"
+    }
+  ]
+}

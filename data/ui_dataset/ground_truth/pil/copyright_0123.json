@@ -1,0 +1,42 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0123.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Unseen Hero: Dr. Elara Voss",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Eleanor Hart",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "City Sunlight Daily",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Eleanor Hart. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "2574",
+      "question": "What is the page number?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "Dr. Elara Voss is not a name that rolls off the tongue easily, but her impact on the community is undeniable. As the head of the city's new research institute, Dr. Voss has dedicated herself to finding solutions to some of the most pressing health issues facing our society. Her latest breakthrough involves a revolutionary treatment for chronic pain, which has already shown promising results in early trials. What sets Dr. Voss apart is not just her scientific prowess, but her unwavering commitment to making a difference in the lives of those who suffer.\n\n\"It’s about more than just curing diseases,\" she says, \"it’s about improving quality of life. Every patient I see is a reminder of why I do what I do.\""
+    }
+  ]
+}

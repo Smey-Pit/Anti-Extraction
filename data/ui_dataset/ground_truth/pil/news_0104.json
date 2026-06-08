@@ -1,0 +1,82 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0104.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Social Justice Advocate",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Education Reform: A Call for Inclusive Policies",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Rachel K. Chen",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "San Francisco, July 15, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Education",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Equity",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Inclusion",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_4",
+      "type": "short_phrase",
+      "value": "Reform",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "With growing concerns over educational disparities, there is a pressing need for comprehensive reforms that prioritize inclusivity and equity in our school systems."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Current trends show that students from marginalized communities often face systemic barriers to accessing quality education, perpetuating cycles of disadvantage."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Proposed reforms include increasing funding for under-resourced schools, implementing anti-discrimination policies, and providing targeted support for diverse student populations."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Advocates argue that these measures are essential for creating a more just and equitable society, while critics raise concerns about potential inefficiencies and increased taxes."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"We cannot afford to leave any child behind. Education reform must be at the heart of our efforts to build a fairer society.\" - Educator Maria Rodriguez"
+    }
+  ]
+}

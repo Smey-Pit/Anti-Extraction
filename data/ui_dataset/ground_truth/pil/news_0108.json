@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0108.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Capital Chronicle",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Immigration Debate Heats Up Ahead of Midterms",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "David Lee",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Los Angeles, June 10, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Immigration",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Midterm Elections",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Border Security",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "With midterm elections looming, immigration has become a contentious issue, with differing views on border security and path to citizenship."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Republican leaders are advocating for stricter enforcement and reduced legal pathways for immigrants, while Democrats emphasize the need for a pathway to citizenship and improved border conditions."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Public opinion polls show a divided nation, with many voters citing immigration as a top concern."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Immigration experts suggest that the debate may shift towards more practical solutions, such as family reunification policies and workforce needs."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "An immigration lawyer commented, 'The current system is broken, and we need comprehensive reform that addresses the root causes of migration.'"
+    },
+    {
+      "label": "pull_quote",
+      "text": "'We must secure our borders and protect our citizens first,' said Senator John Brown."
+    }
+  ]
+}

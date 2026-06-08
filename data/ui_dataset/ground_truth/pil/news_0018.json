@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0018.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Eastern Gazette",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Immigration Reform Bill Sparks Protests Across the Country",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "David Lee",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Eastern City, September 20, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Politics",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Immigration Policy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Points-Based System",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Family Separation",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Protesters across the country have taken to the streets to voice their opposition to the recently introduced immigration reform bill, which would drastically change the legal pathways for immigrants."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The bill, championed by Congresswoman Laura Green, proposes a points-based system for granting visas, emphasizing skills and education over family ties."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Advocates for immigrant rights argue that the bill would separate families and create an unfair system based on luck rather than need."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Opponents, including business leaders, contend that the current system is inefficient and does not meet the workforce needs of the country."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Lawyer Alex Thompson said, 'This bill ignores the contributions immigrants make to our society and economy.'"
+    },
+    {
+      "label": "pull_quote",
+      "text": "‘Families should not be torn apart by policy,’ said Laura Green."
+    }
+  ]
+}

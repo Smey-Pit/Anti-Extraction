@@ -1,0 +1,42 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0038.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Reviving the Rust Belt: A New Dawn for Steel City",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Morgan Reed",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "The Rustbelt Gazette",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Morgan Reed. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "888",
+      "question": "What is the page number?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "Steel City, once the heart of industrial America, is undergoing a remarkable transformation. After decades of decline, the city is experiencing a renaissance, thanks to innovative urban planning and a surge in green technology. Mayor Lila Hartman has spearheaded the initiative to revitalize the area, transforming abandoned factories into vibrant community centers and converting old steel mills into sustainable energy hubs.\n\nLocal resident, JIM HARRISON, shares his perspective on the changes: 'I grew up here, and I’ve seen this place change before. But now, it feels like we’re truly building a future. The jobs are coming back, and the community is stronger than ever.'"
+    }
+  ]
+}

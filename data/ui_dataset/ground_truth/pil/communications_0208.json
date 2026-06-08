@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0208.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Discord",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Charlie",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Sarah",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Charlie",
+      "text": "Hey Sarah, I'm in a bit of a bind w/ rent this month."
+    },
+    {
+      "label": "message_2_Sarah",
+      "text": "Sorry to hear that, I can help if u need."
+    },
+    {
+      "label": "message_3_Charlie",
+      "text": "Thanks a lot, I really appreciate it. U a lifesaver!"
+    },
+    {
+      "label": "message_4_Sarah",
+      "text": "No prob, we're a team here. Let me know when u need to pick up."
+    }
+  ]
+}

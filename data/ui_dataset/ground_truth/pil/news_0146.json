@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0146.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "The People's Voice",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Climate Change Legislation Faces Gridlock",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Alex R. Thompson",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "New York City, April 20, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Climate Change",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Legislation",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Environmental Policy",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "As global temperatures continue to rise, environmental activists and lawmakers push for urgent climate change legislation, only to find themselves met with resistance from conservative lawmakers who prioritize economic interests over environmental concerns."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Environmental groups have called for immediate action to reduce carbon emissions and invest in renewable energy sources, citing the dire consequences of inaction."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "However, Republican leaders in Congress argue that proposed regulations would stifle economic growth and disproportionately affect small businesses and working-class Americans."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "The debate has become increasingly polarized, with both sides digging in their heels and refusing to compromise on key issues."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Some observers suggest that the current political climate may hinder the passage of comprehensive climate change legislation, leaving the country vulnerable to the impacts of climate change."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"The clock is ticking, and we cannot afford to wait any longer,\" said Jane Doe, a prominent environmental activist."
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0190.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Outlook",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "David",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Rachel",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "subject",
+      "type": "short_phrase",
+      "value": "Legal issue",
+      "question": "What is the subject line of this message?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_David",
+      "text": "Rachel, I need your help with a lawyer."
+    },
+    {
+      "label": "message_2_Rachel",
+      "text": "Sure, what's the situation?"
+    },
+    {
+      "label": "message_3_David",
+      "text": "I got sued by my ex-partner. It's complicated."
+    },
+    {
+      "label": "message_4_Rachel",
+      "text": "Let's discuss this tomorrow."
+    }
+  ]
+}

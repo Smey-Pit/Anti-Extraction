@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0114.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Liberty Watcher",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Immigration Reform Stalls Amidst Political Gridlock",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Robert M. Martinez",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Houston, October 3, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Immigration",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Border Security",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Social Services",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Efforts to pass comprehensive immigration reform have been derailed by partisan disagreements and a lack of consensus on key issues."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The current impasse has left many undocumented immigrants living in fear and uncertainty, while also straining local resources and social services."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Supporters of reform argue that a fair and humane policy is essential for the country's future and economic prosperity."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Opponents contend that strict enforcement measures are needed to secure the border and protect American workers."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "As the issue remains unresolved, the divide between different factions within the political spectrum continues to widen."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"Our immigration policies must reflect our values and protect the interests of all Americans.\" - Congressman James Brown"
+    }
+  ]
+}

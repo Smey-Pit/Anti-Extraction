@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0246.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "iMessage",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Sarah",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "John",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Sarah",
+      "text": "Hey John, I just got my doc's call back"
+    },
+    {
+      "label": "message_2_John",
+      "text": "Oh? What did they say?"
+    },
+    {
+      "label": "message_3_Sarah",
+      "text": "It's not great... they think it might be cancer"
+    },
+    {
+      "label": "message_4_John",
+      "text": "Oh no! Are you going to get a second opinion?"
+    }
+  ]
+}

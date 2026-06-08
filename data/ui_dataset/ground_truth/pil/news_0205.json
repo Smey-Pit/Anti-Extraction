@@ -1,0 +1,86 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0205.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Economic Tribune",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Tech Giants’ Tax Dodges Fuel Public Anger",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Amanda Greenfield",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "New York, March 12, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Tech",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Taxation",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Economy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_4",
+      "type": "short_phrase",
+      "value": "Inequality",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "In an era where the middle class feels squeezed by rising costs and stagnant wages, tech giants continue to avoid paying their fair share in taxes, sparking outrage among citizens."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The latest revelations about how companies like ZonixTech and CyberSecure use offshore tax havens to minimize their tax burden have reignited debates on corporate accountability and economic inequality."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Critics argue that while ordinary Americans struggle to make ends meet, these tech behemoths amass vast fortunes without contributing their fair share to public services."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Supporters of the current tax structures defend the companies, citing complex international laws and the need for innovation incentives."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "However, many economists and lawmakers believe it’s time for a reevaluation of the global tax system to ensure that all corporations contribute equitably to society."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"If we allow big tech to escape taxes, we’re rewarding greed over responsibility.\" — Senator Jane Doe"
+    }
+  ]
+}

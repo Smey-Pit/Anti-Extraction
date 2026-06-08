@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0235.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Lost City",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Aiden Gray",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Mystic Peninsula Press",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Aiden Gray. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "4853",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "Chapter 2: Into the Jungle",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "The dense jungle canopy stretched high above, filtering the sunlight into a dappled pattern on the forest floor. The air was thick with the scent of damp earth and decaying leaves. Elara pressed onward, her boots sinking slightly into the soft undergrowth. The map in her hand, though ancient and worn, seemed to guide her through the maze of trees. She had followed it for hours now, her mind consumed by the possibility of what lay ahead.\n\nAs she turned a corner, the clearing opened up before her, revealing a sight that defied belief. Nestled among the trees, half-buried in the earth, stood the ruins of a city. The structures were made of stone, their surfaces weathered but still holding a hint of grandeur. Elara approached cautiously, her heart pounding with a mixture of excitement and trepidation. This was the lost city, and she was about to uncover its secrets."
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0167.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Gmail",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Sarah",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "David",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_3",
+      "type": "name",
+      "value": "Emily",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "subject",
+      "type": "short_phrase",
+      "value": "Meeting next week",
+      "question": "What is the subject line of this message?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Sarah",
+      "text": "Hi David & Emily, hope you guys are doing well."
+    },
+    {
+      "label": "message_2_David",
+      "text": "Hi Sarah, all good here. When’s the meeting?"
+    },
+    {
+      "label": "message_3_Sarah",
+      "text": "We’ll have it on Wednesday at 2 PM in conference room B."
+    },
+    {
+      "label": "message_4_Emily",
+      "text": "Sounds good. I'll make sure to be there."
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0144.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Android Messages",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Mia",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Mom",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Mia",
+      "text": "Mom, I'm running late. Can you keep dinner warm?"
+    },
+    {
+      "label": "message_2_Mom",
+      "text": "Sure, no problem. How's work going?"
+    },
+    {
+      "label": "message_3_Mia",
+      "text": "It's been stressful. Boss is on my case again."
+    },
+    {
+      "label": "message_4_Mom",
+      "text": "I'm sorry, honey. You need to take a break sometime."
+    }
+  ]
+}

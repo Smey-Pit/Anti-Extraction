@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0199.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "WhatsApp",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Hannah",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Ian",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Hannah",
+      "text": "Ian, can u believe we're moving into our new place next week? I'm so excited!"
+    },
+    {
+      "label": "message_2_Ian",
+      "text": "Yeah, me too! But also a bit nervous about all the unpacking. 😅"
+    },
+    {
+      "label": "message_3_Hannah",
+      "text": "Don't worry, we'll take it one box at a time. And we'll have pizza night after!"
+    },
+    {
+      "label": "message_4_Ian",
+      "text": "Sounds perfect. Thanks for the pep talk. 😊"
+    }
+  ]
+}

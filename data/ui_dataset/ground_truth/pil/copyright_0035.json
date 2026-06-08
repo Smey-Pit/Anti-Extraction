@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0035.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Shadows of the Past",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Raven Kell",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Darkened Screen Productions",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Raven Kell. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "836",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. ABANDONED HOSPITAL - NIGHT",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. ABANDONED HOSPITAL - NIGHT\n\nThe camera moves slowly through the empty halls, the only sound being the soft tapping of the detective’s flashlight. Detective Sarah Carter stands in the center of a large, dimly lit room. The walls are covered in peeling wallpaper, and the floorboards creak under her feet. She notices a faint light coming from a small room at the end of the corridor.\n\nDETECTIVE CARTER\n(muttering to herself)\nThere’s something in there...\n\nShe approaches the door and pushes it open. Inside, the room is filled with old medical equipment and patient files. On a desk, a file is open, revealing a name: Elizabeth Blackwood. Detective Carter picks up the file and reads the notes, her expression growing more serious.\n\nDETECTIVE CARTER\n(whispering)\nWhat happened to Elizabeth?\n\nThe camera zooms in on a photograph of a young woman, her face etched with fear. Detective Carter looks around the room, her mind racing with questions. The sound of footsteps echoes down the hallway, making her jump. She quickly closes the file and hides it under a pile of papers. The footsteps grow louder, and she ducks behind a curtain, watching as a shadow passes by.\n\nDETECTIVE CARTER\n(sighing)\nI’m not alone here.\n\nThe camera pulls back, showing the entire room, and the tension builds as the detective waits for whatever might come next."
+    }
+  ]
+}

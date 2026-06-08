@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0220.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Lighthouse Keeper's Daughter",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Avery Kane",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Seaside Publications",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Avery Kane. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "4576",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "Chapter 7: Storms and Stars",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "The lighthouse stood tall and proud against the stormy sea, its beam cutting through the darkness like a guiding hand. Inside, the keeper’s daughter, Elara, sat by the window, watching the waves crash against the shore. Her father had always taught her to find beauty in the chaos, to see the stars even when they were obscured by clouds. As she gazed out, a distant ship appeared on the horizon, its lights flickering in the tumultuous sea. Elara felt a surge of determination, knowing that her father would be waiting, ready to guide the ship safely to port. She resolved to take on more of the responsibilities, to become the lighthouse’s true guardian, even if it meant facing the tempest alone."
+    }
+  ]
+}

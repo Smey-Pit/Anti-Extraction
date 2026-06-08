@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0030.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Shadows of the Past",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Morgan Reed",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Dark Echoes Productions",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Morgan Reed. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "709",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. ABANDONED LAUNDRY ROOM - NIGHT",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. ABANDONED LAUNDRY ROOM - NIGHT\n\nThe room is dimly lit by a single, flickering bulb. The machines are rusted and silent, their dials and buttons covered in dust. The smell of mildew hangs heavy in the air. A figure, dressed in all black, stands in the center of the room, her back to the camera. She turns slowly, revealing a woman in her late twenties with a haunted expression. She takes a deep breath, her eyes scanning the room as if searching for something.\n\nWOMAN\n(whispering)\nIt’s here. I can feel it.\n\nShe walks towards a large, cracked mirror hanging on the wall. The reflection of her face is distorted, as if the mirror is breaking. She touches the glass, her fingers sinking into the cracks. The mirror shatters, sending shards of glass flying. The woman gasps, her hand bleeding. She looks at her reflection, which is now a chaotic mix of faces and images. Her eyes widen in horror as she realizes what she has done.\n\nFADE TO BLACK."
+    }
+  ]
+}

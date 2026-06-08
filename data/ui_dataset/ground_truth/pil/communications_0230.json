@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0230.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Instagram DM",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Olivia",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Jordan",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Olivia",
+      "text": "Hey Jordan, u around?"
+    },
+    {
+      "label": "message_2_Jordan",
+      "text": "Yup, what’s up?"
+    },
+    {
+      "label": "message_3_Olivia",
+      "text": "Need to talk abt some stuff. Can we meet in person?"
+    },
+    {
+      "label": "message_4_Jordan",
+      "text": "Sure, let’s meet at the park. "
+    }
+  ]
+}

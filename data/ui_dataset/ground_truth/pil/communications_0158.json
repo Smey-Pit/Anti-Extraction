@@ -1,0 +1,48 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0158.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Gmail",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Emily",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Liam",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "subject",
+      "type": "short_phrase",
+      "value": "Family emergency",
+      "question": "What is the subject line of this message?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Emily",
+      "text": "Liam, this is urgent. My mom had a stroke this mornin’. She’s in the hospital now. Can u come by?"
+    },
+    {
+      "label": "message_2_Liam",
+      "text": "Of course, Em. I’ll be there as soon as I can. What’s her condition look like?"
+    },
+    {
+      "label": "message_3_Emily",
+      "text": "They’re monitoring her, but she’s stable for now. I’ll keep u updated. ❤️"
+    },
+    {
+      "label": "message_4_Liam",
+      "text": "Will do. Take care of yourself too, okay?"
+    }
+  ]
+}

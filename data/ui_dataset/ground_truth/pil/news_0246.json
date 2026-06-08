@@ -1,0 +1,86 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0246.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Daily Beacon",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Healthcare Debate Heats Up as Senate Bill Stalls",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Michael Johnson",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "New York City, July 3, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Medicaid Expansion",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Healthcare",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Budget",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_4",
+      "type": "short_phrase",
+      "value": "Legislation",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "The ongoing healthcare debate in New York State has taken another turn as the Senate’s proposed bill to expand Medicaid coverage has stalled due to disagreements over funding and eligibility requirements."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The bill, which was introduced last month, aimed to provide insurance coverage to an estimated 300,000 uninsured residents. However, Republican senators have expressed concerns about the cost and the potential impact on the state budget."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Democratic senator Lisa Lee commented, 'We cannot afford to leave anyone behind in this fight for health equity.'"
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Meanwhile, advocacy groups are pressuring lawmakers to find a compromise that can pass both chambers before the legislative session ends in August."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Proponents of the bill argue that expanding Medicaid is crucial for addressing the state’s high uninsured rate and improving public health outcomes."
+    },
+    {
+      "label": "pull_quote",
+      "text": "‘Healthcare should be a right, not a privilege. We need to act now to ensure everyone has access to quality care.’ - Dr. Robert Green, Healthcare Advocate"
+    }
+  ]
+}

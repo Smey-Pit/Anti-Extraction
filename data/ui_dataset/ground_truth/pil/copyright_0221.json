@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0221.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Echoes of Silence",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Morgan Reeves",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Silent Pictures",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Morgan Reeves. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "4614",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. ABANDONED FACTORY - NIGHT",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. ABANDONED FACTORY - NIGHT\nThe factory, once bustling with life, now lay quiet and dark. Only the occasional creaking of old machinery broke the silence. In the center of the room, a figure stands, cloaked in shadows. The camera zooms in on their face, hidden behind a veil of darkness. Suddenly, the figure lifts a hand, revealing a single, glowing eye. It scans the room, searching for something, or someone. The figure then moves towards a large, locked door, pausing to look back at the darkness. With a sudden burst of energy, the door creaks open, and the figure steps inside, disappearing into the shadows.\n\nFADE OUT."
+    }
+  ]
+}

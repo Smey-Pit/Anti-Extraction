@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0081.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Unseen Hero",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Lila Hartman",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "City Sunlight Daily",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Lila Hartman. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "1633",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "A DAY IN THE LIFE OF SARAH THOMPSON",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "In the heart of downtown, where the hustle and bustle of daily life often blurs into a haze of noise and distraction, there’s a quiet hero who goes unnoticed. Meet Sarah Thompson, a volunteer firefighter who has saved countless lives without ever seeking recognition. Her dedication and bravery are a testament to the unsung heroes who risk everything to keep us safe. Sarah’s story is one of quiet strength and selflessness, a reminder that sometimes, the greatest acts of courage come from the most unexpected places."
+    }
+  ]
+}

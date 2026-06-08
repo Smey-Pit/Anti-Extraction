@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0052.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Echoes of the Past",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Liam Hartley",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Silver Screen Productions",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Liam Hartley. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "1133",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. ABANDONED Lighthouse - NIGHT",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. ABANDONED Lighthouse - NIGHT\n\nThe camera pans across the dimly lit interior, highlighting the rusted machinery and peeling wallpaper. A figure, cloaked in shadows, stands at the window, looking out at the stormy sea. Thunder rumbles in the distance.\n\nCLOAKED FIGURE\n(whispering)\nThey say this place is haunted. But I know the truth.\n\nCut to:\n\nINT. LIVING ROOM - NIGHT\n\nA young woman, JESSICA, sits alone by the fireplace, her eyes filled with fear as she clutches a small, worn journal. She flips through the pages, each one revealing a darker secret.\n\nJESSICA\n(voiceover)\nEvery night, I hear their voices. Calling me to join them.\n\nThe fire crackles, casting eerie shadows on the walls. Jessica looks up, her gaze meeting the camera.\n\nJESSICA\n(voiceover)\nBut tonight, I won't listen.\n"
+    }
+  ]
+}

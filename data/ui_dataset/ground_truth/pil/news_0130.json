@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0130.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "National Tribune",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Local Politician's 'Unprecedented' Effort to Protect Voting Rights",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Eleanor M. Hartley",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Washington, D.C., March 15, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Politics",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Voting Rights",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Political Legislation",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Elections",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Congresswoman Jane Smith has introduced a bill that she claims will revolutionize voting access in the United States, promising unprecedented protections against voter suppression and intimidation."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The proposed legislation would require states to implement automatic voter registration, expand early voting periods, and provide free mail-in ballots to all registered voters."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Smith argues that her bill is essential to ensuring fair elections and protecting the democratic process, stating, 'Every American should have the right to vote without fear or hindrance.'"
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "However, critics argue that the bill could be seen as an overreach, potentially leading to increased government control over the electoral process."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Smith's office has stated that the bill aims to address long-standing issues and is designed to make voting more accessible and secure."
+    },
+    {
+      "label": "pull_quote",
+      "text": "'This bill is about ensuring every voice is heard and every vote counts,' said Congresswoman Smith."
+    }
+  ]
+}

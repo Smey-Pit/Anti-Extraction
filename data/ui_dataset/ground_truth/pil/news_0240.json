@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0240.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "National Tribune",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Democrat Mayor's Housing Policies Face Major Criticism",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Jenna M. Clarke",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Washington D.C., March 10, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Politics",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Housing Crisis",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Urban Policy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Economic Growth",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Mayor Emily Carter's aggressive housing policies have sparked heated debate among city council members, with some calling her proposals 'radical' and others praising them as necessary steps towards affordability."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Carter's plan includes significant rent control measures and the creation of new public housing units, which opponents argue will stifle economic growth and property values."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Supporters, however, view the mayor's initiatives as crucial in addressing the city's severe housing crisis, noting that median rents have risen by 20% over the past year."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Councilor John Thompson expressed his concerns, stating, 'We can't afford to alienate our business community by imposing such heavy-handed regulations.'"
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "The debate comes as the city faces mounting pressure from residents and businesses alike, with no clear consensus on the best path forward."
+    },
+    {
+      "label": "pull_quote",
+      "text": "‘Affordability is a human right, and we must act now to ensure it remains accessible to all.’ - Mayor Emily Carter"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0007.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Last Will and Testament",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Greenfield County, State of Novus",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "August 10, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "Case No. CV-2024-08841",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_grantor",
+      "type": "name",
+      "value": "Lila M. Blackwood",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Lila M. Blackwood",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._Personal_Property",
+      "text": "I direct that my personal property, including but not limited to jewelry, art, and other tangible assets, be distributed as follows..."
+    },
+    {
+      "label": "clause_2.1_Real_Property",
+      "text": "My real property located at 123 Main Street, Novus City, shall be conveyed to my daughter, Amelia M. Blackwood, free and clear of all encumbrances..."
+    },
+    {
+      "label": "clause_3._Executor",
+      "text": "I hereby appoint my son, Ethan B. Blackwood, as the Executor of this Will and of my estate..."
+    }
+  ]
+}

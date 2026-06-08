@@ -1,0 +1,42 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0066.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "A Tale of Two Cities",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Isabel Hart",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Chronicle Herald",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Isabel Hart. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "1337",
+      "question": "What is the page number?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "In the bustling streets of New York City, where skyscrapers touch the sky and dreams are made, two lives intersect in an unexpected way. On a chilly autumn evening, EMILY, a young artist, stumbles upon a small, cozy bookstore tucked away on a side street. The shop is filled with an eclectic mix of books, each one telling a different story. As she browses, she overhears a conversation between two elderly men discussing a rare edition of a classic novel.\n\nEMILY\n(to herself)\nI should have known better than to eavesdrop, but their voices were so captivating.\n\nThe men notice her and smile warmly.\n\nMAN\n(smiling)\nWelcome to Books & Beyond. What brings you here today?\n\nEMILY\n(nervously)\nJust browsing. I love finding hidden gems like this.\n\nTheir kind demeanor puts Emily at ease, and they spend the next hour sharing stories and recommendations. By the end of the night, Emily has discovered not only a new passion but also a community of fellow book lovers.\n\nFADE IN."
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0155.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "National Beacon",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "City Council's Green Policies Ignite Debate on Economic Impact",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Eleanor Greenfield",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Newport City, March 12, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Politics",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Green Energy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Economic Policy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Local Politics",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "The Newport City Council's recent push for stricter green energy regulations has sparked a heated debate among local businesses and residents about the economic consequences of such policies."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Local business owners argue that increased compliance costs could lead to higher prices for consumers and potentially drive small enterprises out of the market."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "However, environmental advocates counter that long-term savings from reduced energy costs and job creation in renewable sectors will outweigh initial investments."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "The council insists that it is committed to balancing environmental goals with economic stability, but critics remain unconvinced."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "A study commissioned by the council predicts that while there may be short-term economic challenges, the transition to sustainable practices will ultimately benefit the city."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"We can't afford to ignore the long-term benefits of green policies, despite the immediate costs.\" - Mayor Jameson"
+    }
+  ]
+}

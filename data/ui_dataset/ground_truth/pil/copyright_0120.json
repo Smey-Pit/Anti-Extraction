@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0120.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Last Witness",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Avery White",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Silver Screen Productions",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Avery White. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "2491",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. HOSPITAL ROOM - NIGHT",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "INT. HOSPITAL ROOM - NIGHT\n\nThe room is dim, with only a single lamp casting a soft glow. DR. JORDAN, a seasoned detective, sits beside a patient, MRS. HARRIS, who is unconscious. The air is thick with tension.\n\nDR. JORDAN\n(to himself)\nYou can do this, Jordan. Find out what happened.\n\nHe reaches for Mrs. Harris’s chart, flipping through it quickly. His eyes widen as he reads the notes.\n\nDR. JORDAN\n(whispering)\nNo, this can’t be right...\n\nHe stands up, his voice steady but firm.\n\nDR. JORDAN\n(to the nurse)\nI need to see the security footage immediately.\n\nFADE OUT."
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0030.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Android Messages",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Mike",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Jessica",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Jessica",
+      "text": "Mike, I think I'm in some trouble with the boss."
+    },
+    {
+      "label": "message_2_Mike",
+      "text": "What happened? Did you say something to upset them?"
+    },
+    {
+      "label": "message_3_Jessica",
+      "text": "No, it's more about a project I didn't finish on time."
+    },
+    {
+      "label": "message_4_Mike",
+      "text": "That's rough. We should come up with a plan to fix it."
+    }
+  ]
+}

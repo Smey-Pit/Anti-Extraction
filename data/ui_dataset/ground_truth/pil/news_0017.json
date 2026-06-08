@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0017.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Northern Tribune",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Healthcare Debate Heats Up as New Legislation Proposed",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Sarah Johnson",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Northern Town, August 5, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Universal Healthcare",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Health Policy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Budget Impact",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "A proposed healthcare bill in Northern Town has reignited the debate over universal healthcare, with proponents arguing that it will provide better access to care, while critics warn of potential budgetary impacts."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The bill, sponsored by Representative Michael Brown, would establish a single-payer system funded through increased taxes on corporations and high-income individuals."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Supporters claim that this system would eliminate the financial barriers many face when seeking medical treatment, leading to healthier communities overall."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Critics, including local business owners, argue that such a system could lead to longer wait times and reduced access to specialized care."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Public health expert Dr. Emily White commented, 'Access to healthcare should not be determined by one’s income level or ability to pay.'"
+    },
+    {
+      "label": "pull_quote",
+      "text": "‘We cannot allow healthcare to become a luxury for only those who can afford it,’ said Michael Brown."
+    }
+  ]
+}

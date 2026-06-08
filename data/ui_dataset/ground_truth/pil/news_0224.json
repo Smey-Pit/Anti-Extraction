@@ -1,0 +1,76 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0224.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "The Independent Insight",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Tax Reform Plan Sparks Protests Across Major Cities",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Sarah Thompson",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "New York City, October 3, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Tax Reform",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Wealth Redistribution",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Economic Inequality",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "A sweeping tax reform plan unveiled by the administration has sparked widespread protests across major cities, with demonstrators calling for more progressive taxation and wealth redistribution."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The plan includes a significant increase in corporate taxes and a new wealth tax on individuals with assets over $50 million."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Protest organizer Alex Lee stated, 'This is about fairness and ensuring that those who benefit most from our economy pay their fair share.'"
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Economist Dr. Rachel Patel explained, 'The current system is regressive and needs to be reformed to promote greater equality.'"
+    },
+    {
+      "label": "pull_quote",
+      "text": "This is about fairness and ensuring that those who benefit most from our economy pay their fair share."
+    }
+  ]
+}

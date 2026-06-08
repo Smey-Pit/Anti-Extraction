@@ -1,0 +1,76 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0056.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Progressive Sentinel",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Healthcare Reform Debate Heats Up as Senate Bill Advances",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Michael J. Green",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "New York City, April 10, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Healthcare",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Insurance",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Patient Rights",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "The Senate has advanced a sweeping healthcare reform bill, which aims to expand coverage and reduce costs, but faces intense opposition from conservative groups who argue it will lead to higher taxes and reduced quality of care."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Proponents of the bill claim it will provide millions with access to essential health services and lower out-of-pocket expenses."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "However, opponents, including the American Medical Association, have criticized the bill for including provisions they say will limit patient choice and increase government control over medical decisions."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "The debate over the bill has become increasingly polarized, with rallies and protests held across major cities in support of both sides."
+    },
+    {
+      "label": "pull_quote",
+      "text": "‘We cannot afford to let greed and politics dictate the health of our citizens.’ — Dr. Laura Davis"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0145.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Instagram DM",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Taylor",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Emma",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Emma",
+      "text": "Hey Taylor, did u see the news? 😱"
+    },
+    {
+      "label": "message_2_Taylor",
+      "text": "No, what happened?"
+    },
+    {
+      "label": "message_3_Emma",
+      "text": "My brother got arrested. He's in jail now."
+    },
+    {
+      "label": "message_4_Taylor",
+      "text": "Oh no, that's rough. Can I help in any way?"
+    }
+  ]
+}

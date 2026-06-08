@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0197.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Instagram DM",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Charlie",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Sara",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Charlie",
+      "text": "Hey Sara, u lookin' good in that new outfit! What event was it for?"
+    },
+    {
+      "label": "message_2_Sara",
+      "text": "Thanks! It was my sister's wedding. So many tears & hugs!"
+    },
+    {
+      "label": "message_3_Charlie",
+      "text": "Aww, sounds like a lovely day. Any chance we can catch up soon?"
+    },
+    {
+      "label": "message_4_Sara",
+      "text": "Sure thing! Maybe over coffee this weekend?"
+    }
+  ]
+}

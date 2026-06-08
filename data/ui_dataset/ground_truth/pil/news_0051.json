@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0051.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "The Civic Watcher",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Local School Board Divided Over Proposed Charter School Expansion",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Michael J. Thompson",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Springfield, May 10, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Education Policy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Charter Schools",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Public Schools",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "A heated debate erupted at last night’s school board meeting as members grappled with the expansion of charter schools in the district, a move that has divided parents and educators alike."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Proponents argue that the expansion will bring much-needed resources and innovative teaching methods to struggling schools, while opponents fear it will dilute the quality of education and drain funding from traditional public schools."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Board member Sarah Lee, a vocal critic of the proposal, said, 'Charter schools are a distraction from the real issues facing our public schools and should not be given preferential treatment.'"
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Supporters countered that charter schools offer alternative models that can benefit students who do not thrive in traditional settings, citing improved graduation rates and higher test scores in several districts."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "The decision will likely set the stage for further discussions and potential legal challenges in the coming months."
+    },
+    {
+      "label": "pull_quote",
+      "text": "'We cannot afford to ignore the needs of our students and communities any longer,' stated John Davis, a parent advocating for the expansion."
+    }
+  ]
+}

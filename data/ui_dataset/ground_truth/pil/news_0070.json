@@ -1,0 +1,76 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0070.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "The New Horizon",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Local Congressman Proposes Sweeping Education Reform",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Emily Hartley",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Washington D.C., March 15, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Politics",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Education Reform",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Equity",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Technology in Schools",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Congressman Jameson Thorne has introduced a bill that would overhaul the education system in the United States, aiming to bring about a more equitable and efficient educational landscape."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Thorne's proposal includes increased funding for early childhood education, longer school days, and the integration of technology in classrooms. The congressman argues that these measures are necessary to address longstanding issues within the U.S. education sector."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "However, critics argue that such reforms could lead to an overburdened teacher workforce and higher taxes for families. Some educators have also expressed concerns about the potential for standardized testing to become even more prevalent under this new framework."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Supporters of the bill believe it will provide much-needed resources and tools to improve student outcomes and close achievement gaps."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"Education is the cornerstone of our society. We must invest in our children's future, not just their present.\" - Congressman Jameson Thorne"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0244.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Android Messages",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Nina",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Sophie",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Nina",
+      "text": "Hey Sophie, I’ve got some bad news about my car."
+    },
+    {
+      "label": "message_2_Sophie",
+      "text": "Oh no, what happened?"
+    },
+    {
+      "label": "message_3_Nina",
+      "text": "The engine blew up. I think I’m gonna need to sell it."
+    },
+    {
+      "label": "message_4_Sophie",
+      "text": "That’s rough. How much will it cost to fix?"
+    },
+    {
+      "label": "message_5_Nina",
+      "text": "Probably more than the car’s worth. It’s a total loss."
+    }
+  ]
+}

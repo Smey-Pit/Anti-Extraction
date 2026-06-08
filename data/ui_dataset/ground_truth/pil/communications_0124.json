@@ -1,0 +1,34 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0124.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Discord",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Grace",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Hannah",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Hannah",
+      "text": "Grace, I'm having a rough day. Can you talk?"
+    },
+    {
+      "label": "message_2_Grace",
+      "text": "Of course, come over to my place if you need to vent. 😔"
+    }
+  ]
+}

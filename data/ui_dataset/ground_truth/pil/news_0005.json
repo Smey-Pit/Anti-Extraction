@@ -1,0 +1,86 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0005.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "EcoVoice Daily",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Green New Deal Backers Accuse Republicans of 'Environmental Sabotage'",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Sarah M. Thompson",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Washington D.C., March 15, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Politics",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Climate Change",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Green New Deal",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Republican Party",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_4",
+      "type": "short_phrase",
+      "value": "Environmental Policy",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "In a scathing critique, proponents of the Green New Deal have accused Republican lawmakers of deliberately undermining environmental protections and progress on climate change."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The accusation comes as the Senate prepares to vote on a series of energy bills that critics say prioritize fossil fuels over renewable energy sources."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Environmental activists argue that Republican policies will set back years of hard-fought gains in reducing carbon emissions and promoting sustainable practices."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Sources close to the White House claim that the GOP is engaging in a 'war on green' to appeal to their base, despite overwhelming scientific evidence of climate crisis."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "A spokesperson for the Environmental Defense Fund stated, 'It's clear that the Republican party is more concerned with short-term economic gains than long-term survival.'"
+    },
+    {
+      "label": "pull_quote",
+      "text": "'Republicans are playing with fire by ignoring the urgent need for climate action,' said Jane Doe, a leading environmental advocate."
+    }
+  ]
+}

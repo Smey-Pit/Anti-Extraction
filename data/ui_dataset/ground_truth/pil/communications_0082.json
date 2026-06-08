@@ -1,0 +1,60 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0082.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Gmail",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Sara",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Dr. Smith",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_3",
+      "type": "name",
+      "value": "Dr. Jones",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_4",
+      "type": "name",
+      "value": "Dr. Brown",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "subject",
+      "type": "short_phrase",
+      "value": "Follow-up on recent blood test results",
+      "question": "What is the subject line of this message?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Dr._Smith",
+      "text": "Hi Sara, here are the results from the recent blood test."
+    },
+    {
+      "label": "message_2_Sara",
+      "text": "Thanks Dr. Smith. Can we schedule a follow-up?"
+    },
+    {
+      "label": "message_3_Dr._Smith",
+      "text": "Sure, how about next Tuesday at 3 PM?"
+    },
+    {
+      "label": "message_4_Sara",
+      "text": "Sounds good, I'll mark it in my calendar."
+    }
+  ]
+}

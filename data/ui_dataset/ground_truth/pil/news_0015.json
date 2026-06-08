@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0015.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "National Beacon",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "City Council's Green Agenda Faces Resistance from Business Leaders",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Evelyn Hartley",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Newport City, June 15, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Politics",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Green Energy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Local Politics",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Business Regulation",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "The Newport City Council’s ambitious green energy initiatives have sparked heated debates among local business leaders, who argue that the new policies could stifle economic growth."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "City councilor Eliza Green has been pushing for stricter emissions standards and incentives for renewable energy projects, claiming they will create jobs and reduce carbon footprints."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "However, the Newport Chamber of Commerce argues that these measures could increase operational costs for small businesses, potentially leading to job losses and higher consumer prices."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Mayor Robert Thompson has called for a balanced approach, stating, 'We need to protect our environment while ensuring that our businesses can thrive.'"
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "Environmental activists support the council’s stance, citing recent studies that link pollution reduction with improved public health."
+    },
+    {
+      "label": "pull_quote",
+      "text": "‘If we don’t act now, future generations will pay the price,’ said Eliza Green."
+    }
+  ]
+}

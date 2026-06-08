@@ -1,0 +1,76 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0171.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "The Sentinel Post",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Is Free Trade Agreement Hurting Local Industries?",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Michael R. Johnson",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "New York City, March 30, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Trade Policy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Economic Growth",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Small Business",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "The recently signed free trade agreement between the United States and several European nations has been hailed as a victory for economic integration. However, critics argue that it could be detrimental to local industries, particularly small businesses."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Proponents of the agreement claim it will boost economic growth and create jobs by facilitating easier trade and investment. They point to historical precedents where similar agreements have led to increased prosperity."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "On the other hand, opponents argue that the influx of cheaper imports from foreign countries could undermine domestic manufacturers and lead to job losses. They contend that the government needs to do more to protect local industries."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Economic experts suggest that while the long-term benefits of such agreements are clear, short-term disruptions cannot be ignored. A balanced approach that includes support for affected industries is crucial."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"Free trade can be a double-edged sword. While it opens up opportunities, it also poses risks that need to be managed carefully.\" - Dr. Laura Green"
+    }
+  ]
+}

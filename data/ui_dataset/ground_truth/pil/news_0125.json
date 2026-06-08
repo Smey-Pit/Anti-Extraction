@@ -1,0 +1,86 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0125.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "EcoVoice Daily",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Green New Deal Proponents Demand Immediate Action on Climate Crisis",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Sarah M. Thompson",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "New York City, March 15, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Politics",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Climate Change",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Green New Deal",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Environmental Policy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_4",
+      "type": "short_phrase",
+      "value": "Activism",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "In a heated rally at the United Nations, supporters of the Green New Deal called for swift legislative action to address the escalating climate crisis, emphasizing that time is running out to prevent irreversible environmental damage."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Environmental activists and politicians alike emphasized the urgency of transitioning to renewable energy sources and implementing stricter regulations on carbon emissions."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "The event, organized by the Climate Justice Coalition, featured speeches from various leaders who highlighted the moral imperative to act now for future generations."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Critics argue that such ambitious policies could stifle economic growth and job creation, but proponents maintain that failing to act will result in catastrophic consequences."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "A leading environmental scientist stated, 'We have the technology and the knowledge; what we lack is the will to act.'"
+    },
+    {
+      "label": "pull_quote",
+      "text": "‘Time is not on our side, and every day without decisive action is a day closer to ecological collapse.’ - Dr. Jane Doe, Environmental Scientist"
+    }
+  ]
+}

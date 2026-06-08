@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0021.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "The Progressive Banner",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Economic Recovery Plan Faces Resistance from Republican Leadership",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Michael R. Grant",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "New York City, April 10, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "economic stimulus",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "fiscal policy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "partisan politics",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "President's Proposal for a $1 trillion economic stimulus package has hit a roadblock as Republican leaders in Congress push back against key provisions."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The proposal includes significant funding for infrastructure, social programs, and tax cuts aimed at boosting small businesses and low-income families."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Republican leaders argue that the plan is too costly and lacks sufficient fiscal discipline, pointing to growing national debt concerns."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Democratic lawmakers maintain that the package is crucial for lifting millions out of poverty and revitalizing the economy post-pandemic."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "A spokesperson for the White House said, 'We understand the concerns but believe this plan is vital for long-term growth and social equity.'"
+    },
+    {
+      "label": "pull_quote",
+      "text": "‘This is a classic case of short-sighted politics over the well-being of the American people.’ – Democratic Representative John Smith"
+    }
+  ]
+}

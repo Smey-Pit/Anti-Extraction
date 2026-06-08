@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0227.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Global Observer",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Climate Activists Protest Fossil Fuel Industry",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Rachel Green",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Los Angeles, February 22, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Climate Change",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Renewable Energy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Environmental Activism",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Environmental activists are staging a series of high-profile protests against major fossil fuel companies, demanding an end to carbon emissions and a shift towards renewable energy sources."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The demonstrations, which have drawn thousands of participants, are part of a broader movement calling for urgent action on climate change."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Activists argue that continued reliance on fossil fuels is incompatible with efforts to limit global warming to safe levels."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Industry representatives maintain that fossil fuels remain essential for meeting energy demands and that transitioning to renewables is too costly and impractical."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "The conflict highlights the deep divide between those advocating for immediate action and those prioritizing economic stability."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"The time for excuses is over. We need radical action now!\" - Protester Emily White"
+    }
+  ]
+}

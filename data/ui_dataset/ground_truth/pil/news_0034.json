@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0034.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Progressive Pulse",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Tech Giants Face Scrutiny Over Data Privacy Practices Amid User Complaints",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Rachel White",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "San Francisco, July 15, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Data Privacy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Regulation",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Consumer Rights",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Amid growing concerns about data privacy, major tech companies are facing increasing scrutiny from regulators and the public, as user complaints mount regarding the handling of personal information."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Recent scandals involving data breaches and unauthorized use of user information have sparked outrage among consumers and prompted calls for stronger regulations. Critics argue that tech giants are exploiting users' trust for profit, often at the expense of individual privacy."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "In an interview with Progressive Pulse, consumer advocate John Davis said, 'We need to hold these companies accountable for their actions and ensure that our personal data is protected.'"
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Tech industry leaders, however, defend their practices, citing the importance of data analysis for improving services and targeting advertising. They also note that many users willingly share their information in exchange for free services."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "As the debate continues, lawmakers are considering new legislation to address data privacy concerns, potentially setting stricter guidelines for how companies can collect and use user data."
+    },
+    {
+      "label": "pull_quote",
+      "text": "'We need to hold these companies accountable for their actions and ensure that our personal data is protected.' – Consumer Advocate John Davis"
+    }
+  ]
+}

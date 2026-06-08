@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0175.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Android Messages",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Jack",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Jill",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Jack",
+      "text": "Hey Jill, can we talk about the divorce? 😢"
+    },
+    {
+      "label": "message_2_Jill",
+      "text": "Of course, when's a good time?"
+    },
+    {
+      "label": "message_3_Jack",
+      "text": "How about tonight at 8? We can grab dinner and chat. 🍽️"
+    },
+    {
+      "label": "message_4_Jill",
+      "text": "Sounds good to me. Looking forward to it."
+    }
+  ]
+}

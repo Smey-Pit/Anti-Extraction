@@ -1,0 +1,68 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0173.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Notice to Vacate Premises",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Hilltop City, State of Novaria",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "2024-04-10",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "REF: EVICTION-2024-113",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_landlord",
+      "type": "name",
+      "value": "Robert Green",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_tenant",
+      "type": "name",
+      "value": "Maggie Lee",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Robert Green",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_2",
+      "type": "name",
+      "value": "Maggie Lee",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._NOTICE_OF_VIOLATION",
+      "text": "Tenant is in violation of the lease agreement by failing to pay rent in full..."
+    },
+    {
+      "label": "clause_2.1_TIME_FOR_CURE",
+      "text": "Tenant has thirty (30) days from the date of this Notice to cure the violation..."
+    },
+    {
+      "label": "clause_2.2_ACTION_TO_RECOVER_POSSESSION",
+      "text": "If Tenant fails to cure the violation within the time provided, Landlord may proceed to recover possession of the premises..."
+    }
+  ]
+}

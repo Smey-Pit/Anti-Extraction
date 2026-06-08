@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0072.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Discord",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Charlie",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Dave",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Dave",
+      "text": "Hey Charlie, I’m in a bit of a jam here. My boss is being a total prick. Can u help me brainstorm?"
+    },
+    {
+      "label": "message_2_Charlie",
+      "text": "Of course, D. Just send over the details and I’ll see what I can do."
+    },
+    {
+      "label": "message_3_Dave",
+      "text": "Thanks, bro. Here’s the situation..."
+    },
+    {
+      "label": "message_4_Charlie",
+      "text": "Gotcha. I’ll work on it and send you some ideas later today."
+    }
+  ]
+}

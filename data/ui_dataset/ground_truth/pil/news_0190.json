@@ -1,0 +1,86 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0190.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Election Watcher",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Tech Giants Under Fire: Who’s Really Behind the Digital Divide?",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Alexa Thompson",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Washington D.C., March 15, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Digital Divide",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Tech Industry",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Regulation",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_4",
+      "type": "short_phrase",
+      "value": "Equity",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "In an era where technology is supposed to connect us all, the digital divide remains a stark reality. Critics argue that tech giants are exploiting this gap for their own gain, while defenders claim they are merely responding to market demands."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The latest report from the National Broadband Agency reveals that despite billions in investment, internet access remains unevenly distributed across different regions. Advocates for equitable access argue that these companies should be held accountable for their role in perpetuating this disparity."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "On the other hand, industry leaders contend that they have been working tirelessly to bridge the gap through various initiatives and partnerships with local governments and nonprofits."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Critics point out that the current regulatory framework is insufficient, allowing tech giants to operate without sufficient oversight. Meanwhile, supporters maintain that the government needs to do more to incentivize private investment in infrastructure."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "As the debate rages on, one thing is clear: the digital divide is not just a technical issue, but a socio-economic one that requires immediate attention."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"Tech companies must prioritize social responsibility over profit margins if we are to truly bridge the digital divide.\" — Senator Jane Doe"
+    }
+  ]
+}

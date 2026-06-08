@@ -1,0 +1,42 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0061.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Art of Resilience: A Conversation with Artist Maya Greene",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Jenna Marlow",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "The Daily Chronicle",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Jenna Marlow. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "1284",
+      "question": "What is the page number?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "Maya Greene stands in her studio, surrounded by canvases that tell stories of struggle and triumph. Her latest series, 'Rebirth,' explores themes of resilience and perseverance. 'Art is my way of processing the world,' she says, her eyes reflecting the intensity of her work. Maya’s journey has not been easy; she faced numerous setbacks, including a debilitating illness that left her bedridden for months. Yet, she found solace in painting, channeling her pain into vibrant, hopeful pieces. 'Every stroke is a testament to my spirit,' she explains, pointing to a canvas depicting a phoenix rising from ashes.\n\nThe feature continues with interviews and insights from art critics and fellow artists, highlighting Maya’s unique perspective and the impact of her work on the community. The article concludes with an invitation to attend her upcoming exhibition, where visitors can experience the raw emotion and beauty of 'Rebirth.'"
+    }
+  ]
+}

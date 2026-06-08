@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0057.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Discord",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Alex",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Jordan",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Alex",
+      "text": "Hey Jordan, we need to talk abt this fight we had"
+    },
+    {
+      "label": "message_2_Jordan",
+      "text": "I know, I've been thinking about it all day"
+    },
+    {
+      "label": "message_3_Alex",
+      "text": "Can we meet up tomorrow? Maybe grab a coffee?"
+    },
+    {
+      "label": "message_4_Jordan",
+      "text": "Sure, that sounds good. Let's do it"
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0207.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Citizen's Voice",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Environmental Regulations Rollback Sparks Nationwide Protests",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Sarah Martinez",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Los Angeles, May 5, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Environment",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Climate Change",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Regulations",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_4",
+      "type": "short_phrase",
+      "value": "Protests",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Massive protests have erupted across the country in response to the government’s decision to roll back environmental regulations aimed at combating climate change."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Activists and environmentalists argue that the rollback will undo years of progress in reducing pollution and protecting natural habitats."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Industry leaders counter that the regulations were overly burdensome and hindered economic growth, particularly in sectors like manufacturing and energy."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Environmental scientists caution that these changes could lead to irreversible damage to ecosystems and public health."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "The government maintains that the new policies will create jobs and stimulate economic activity, though many doubt these claims."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"We can’t let short-term profits jeopardize our future and the future of our children.\" — Environmental Activist, Greenpeace"
+    }
+  ]
+}

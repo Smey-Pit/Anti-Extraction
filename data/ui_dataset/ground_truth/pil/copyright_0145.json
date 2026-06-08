@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0145.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Shadows Over the City",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Aria Blackwood",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Dark Horizon Studios",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Aria Blackwood. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "3008",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "INT. ABANDONED BUILDING - NIGHT",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "EXT. ABANDONED BUILDING - NIGHT\n\nThe city is quiet, save for the occasional distant siren. A figure, hooded and cloaked, stands outside the crumbling walls of an abandoned building. The moon casts long shadows, adding to the atmosphere of mystery and danger. The figure moves forward, their steps silent on the cracked pavement.\n\nCUT TO:\n\nINT. ABANDONED BUILDING - NIGHT\n\nInside, the space is dimly lit by a flickering flashlight. The figure moves through the darkened rooms, their movements deliberate and cautious. They stop at a locked door, the sound of their breathing the only noise in the room. With a deft motion, they unlock the door and slip inside.\n\nFADE OUT."
+    }
+  ]
+}

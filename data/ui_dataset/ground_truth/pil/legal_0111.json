@@ -1,0 +1,68 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0111.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Confidentiality Agreement",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Fairview County, State of Novacorp",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "2024-03-20",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "case_ref_number",
+      "type": "short_phrase",
+      "value": "NDA-2024-203",
+      "question": "What is the case or reference number?"
+    },
+    {
+      "label": "party_1_disclosing_party",
+      "type": "name",
+      "value": "Tech Innovate Corp",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "party_2_receiving_party",
+      "type": "name",
+      "value": "Bright Minds Consulting",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Tech Innovate Corp",
+      "question": "Who are the signatories of this document?"
+    },
+    {
+      "label": "signatory_2",
+      "type": "name",
+      "value": "Bright Minds Consulting",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._DEFINITIONS",
+      "text": "‘CONFIDENTIAL INFORMATION’ means all proprietary, technical, business, financial, and other information disclosed by Disclosing Party to Receiving Party, whether in written, oral, electronic, or other form."
+    },
+    {
+      "label": "clause_2.1_OBLIGATIONS",
+      "text": "Receiving Party shall maintain the confidentiality of the CONFIDENTIAL INFORMATION at all times and shall not disclose such information to any third party without the prior written consent of Disclosing Party."
+    },
+    {
+      "label": "notary_note",
+      "text": "Sworn before me this 20th day of March 2024."
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0213.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Discord",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Emma",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Oliver",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Oliver",
+      "text": "Hey Emma, I c u're havin probs with ur boss. R u okay?"
+    },
+    {
+      "label": "message_2_Emma",
+      "text": "Yeah, it's been rough. He keeps tryin to micromanage everything."
+    },
+    {
+      "label": "message_3_Oliver",
+      "text": "That's suckin. U shld talk to HR abt it. They can help."
+    },
+    {
+      "label": "message_4_Emma",
+      "text": "Thanks, I'll think about it. Gotta go now, ttyl."
+    }
+  ]
+}

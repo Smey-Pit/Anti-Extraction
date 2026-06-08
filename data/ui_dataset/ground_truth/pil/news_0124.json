@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0124.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "The Conservative Tribune",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Economic Growth: The Case for Free-Market Policies",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Michael J. Davis",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Chicago, July 15, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Free Market",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Economic Policy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Tax Reform",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "In an era of economic uncertainty, conservative economists argue that free-market policies are crucial for fostering growth and creating jobs."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Supporters of free-market policies believe that reduced regulatory burdens and lower taxes can unleash entrepreneurial spirit and stimulate investment."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "They also emphasize the importance of free trade agreements in expanding markets and promoting international cooperation."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Critics counter that such policies can exacerbate income inequality and leave vulnerable populations behind."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "However, proponents maintain that a robust private sector is key to long-term prosperity and stability."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"The free market is the best engine for economic growth and innovation.\" - Dr. John Smith"
+    }
+  ]
+}

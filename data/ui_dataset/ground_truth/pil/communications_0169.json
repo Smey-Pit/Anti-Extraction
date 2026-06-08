@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0169.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Android Messages",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Emma",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Tom",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Tom",
+      "text": "Hey Emma, how r u doing?"
+    },
+    {
+      "label": "message_2_Emma",
+      "text": "I’m okay, just feeling a bit stressed about work."
+    },
+    {
+      "label": "message_3_Tom",
+      "text": "Sorry to hear that. Anything specific?"
+    },
+    {
+      "label": "message_4_Emma",
+      "text": "It’s just the deadlines are piling up. 😔"
+    }
+  ]
+}

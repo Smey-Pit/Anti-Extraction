@@ -1,0 +1,82 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0180.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "The Sentinel Gazette",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Economic Crisis Looms as Government Fails to Act",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Evelyn Harper",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Washington D.C., April 15, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Economy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Government",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Recession",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_4",
+      "type": "short_phrase",
+      "value": "Unemployment",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "As the economy teeters on the brink of collapse, critics are increasingly pointing fingers at the federal government for its inaction."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Economic experts warn that without immediate intervention, the country risks a full-blown recession within the next year. Despite calls from opposition parties for urgent measures, the current administration remains steadfast in its belief that market forces will correct themselves."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Meanwhile, citizens across the nation are bracing for the worst, with unemployment rates climbing and consumer confidence at an all-time low."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "In an interview with The Sentinel Gazette, economist Dr. Laura Thompson stated, 'The government’s failure to act now could have catastrophic consequences.'"
+    },
+    {
+      "label": "pull_quote",
+      "text": "‘The government’s failure to act now could have catastrophic consequences.’ – Dr. Laura Thompson, Economist"
+    }
+  ]
+}

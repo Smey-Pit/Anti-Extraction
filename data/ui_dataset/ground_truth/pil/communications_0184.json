@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0184.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Discord",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Emily",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Sarah",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Emily",
+      "text": "Hey Sarah, I'm having some financial troubles. Can we talk?"
+    },
+    {
+      "label": "message_2_Sarah",
+      "text": "Of course, what's going on?"
+    },
+    {
+      "label": "message_3_Emily",
+      "text": "I lost my job and can't pay rent. I don't know what to do."
+    },
+    {
+      "label": "message_4_Sarah",
+      "text": "I'm so sorry to hear that. We can figure something out together."
+    }
+  ]
+}

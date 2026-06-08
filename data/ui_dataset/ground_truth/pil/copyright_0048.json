@@ -1,0 +1,42 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0048.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Unseen Hero: Saving Lives One Call at a Time",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Aria Quinn",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Metropolis Gazette",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Aria Quinn. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "1050",
+      "question": "What is the page number?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "In the heart of Metropolis, there’s a hero who operates in the shadows, saving lives through a single phone call. Known only as ‘Echo,’ this mysterious figure has been the backbone of the city’s emergency services for over a decade. Echo doesn’t just answer calls; they listen. With a calm, reassuring voice, they guide people through crises, offering advice and comfort when all seems lost. Their stories have spread like wildfire, inspiring countless others to pay it forward. This month, we shine a light on this unsung hero, exploring the impact they’ve had on our community."
+    }
+  ]
+}

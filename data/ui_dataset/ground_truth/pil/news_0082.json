@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0082.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Liberty Herald",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Healthcare Reform Bill Faces Resistance in State Legislatures",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Linda R. White",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Chicago, May 22, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Healthcare Reform",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "State Legislation",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Universal Coverage",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "State legislatures across the country are grappling with a new healthcare reform bill that aims to expand access to affordable medical services, but the measure is facing significant opposition from conservative lawmakers."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The bill, which includes provisions for universal coverage and increased funding for community health centers, has sparked intense debates over the role of government in healthcare."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Republican leaders in several states have vowed to block the bill, arguing that it would lead to higher taxes and an overreaching government presence in personal health decisions."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Democratic advocates counter that the bill is necessary to ensure that all citizens have access to quality healthcare regardless of their socioeconomic status."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "The outcome of these legislative battles could have far-reaching implications for the future of healthcare in the United States."
+    },
+    {
+      "label": "pull_quote",
+      "text": "'We need to ensure that every American has access to the care they need, when they need it.' – Senator Jane Doe"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0215.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "National Tribune",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Tech Giants Under Fire for Political Influence in Election",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Emma R. Harper",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Washington D.C., October 15, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Politics",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Elections",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Tech Regulation",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Political Influence",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "In a heated debate over the role of technology in modern democracy, tech giants like QuantumNet and CyberCore have come under intense scrutiny for allegedly influencing the recent election."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "According to sources close to the investigation, these companies were found to have manipulated social media algorithms to spread biased information and suppress voter turnout among certain demographics."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Activists argue that such practices undermine the integrity of the democratic process, while industry leaders defend their actions as mere attempts to reach out to younger voters."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "The Federal Communications Commission (FCC) has launched an unprecedented probe into the activities of these tech titans, raising questions about the future of digital influence in elections."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"If tech companies continue to weaponize our platforms, we risk losing faith in our electoral system.\" - Senator Lisa Martinez"
+    }
+  ]
+}

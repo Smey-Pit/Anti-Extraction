@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0045.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Android Messages",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Nathan",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Chris",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Nathan",
+      "text": "Hey Chris, I've been thinking about our project. U think we can meet today?"
+    },
+    {
+      "label": "message_2_Chris",
+      "text": "Sure, let's meet at the usual place. What time?"
+    },
+    {
+      "label": "message_3_Nathan",
+      "text": "How about 3pm?"
+    },
+    {
+      "label": "message_4_Chris",
+      "text": "Works for me. See u there."
+    }
+  ]
+}

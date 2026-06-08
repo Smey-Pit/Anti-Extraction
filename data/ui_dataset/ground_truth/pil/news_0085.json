@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0085.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "National Tribune",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Economic Policies Under Scrutiny as Inflation Hits All-Time High",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Sarah M. Clarke",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Washington D.C., March 15, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Inflation",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Economic Policy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Political Debate",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "The economic policies of the current administration have come under intense scrutiny following a sharp rise in inflation rates to levels not seen since the early 1980s, raising questions about the effectiveness of fiscal measures."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Experts argue that recent government spending and tax cuts may have contributed to the surge in prices, while others point to global supply chain disruptions as a primary factor."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Critics within the opposition party have called for a reevaluation of the economic strategy, suggesting more conservative approaches could stabilize the economy."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Supporters of the administration maintain that their policies are necessary for long-term growth and that the current challenges are temporary."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "A key figure in the debate, Senator Jameson Brown, stated, 'We need to look beyond short-term fixes and focus on sustainable solutions.'"
+    },
+    {
+      "label": "pull_quote",
+      "text": "Senator Jameson Brown"
+    }
+  ]
+}

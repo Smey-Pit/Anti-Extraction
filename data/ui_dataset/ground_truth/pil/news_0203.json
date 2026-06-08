@@ -1,0 +1,86 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0203.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Progressive Voice",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Climate Change Denialism Under Scrutiny as Extreme Weather Events Persist",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Rachel Greenfield",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Chicago, July 18, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Climate Change",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Environment",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Weather",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_4",
+      "type": "short_phrase",
+      "value": "Science",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "As extreme weather conditions continue to plague the nation, climate change denialism remains a contentious issue, with some policymakers still questioning the science behind global warming."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Recent heatwaves, droughts, and wildfires have highlighted the urgent need for action, yet a vocal minority continues to push back against efforts to combat climate change."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Environmental activists argue that these events are clear evidence of the dire consequences of unchecked carbon emissions and call for immediate policy changes."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Scientists maintain that the overwhelming consensus is that human activity is the primary driver of climate change, and that urgent steps must be taken to mitigate its effects."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "The upcoming presidential election may provide a pivotal moment for addressing this issue, with candidates offering starkly different visions for the future of environmental policy."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"We can’t afford to ignore the science any longer. The planet is sending us a clear message, and it’s time to listen.\" — Dr. Michael Lee"
+    }
+  ]
+}

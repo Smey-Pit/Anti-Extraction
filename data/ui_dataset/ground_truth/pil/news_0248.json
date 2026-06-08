@@ -1,0 +1,86 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0248.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Political Pulse",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "President Proposes Sweeping Education Reform",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "David Brown",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Washington D.C., April 15, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Education Reform",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Teacher Training",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Vocational Education",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_4",
+      "type": "short_phrase",
+      "value": "Funding",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "In an effort to improve educational outcomes across the country, President Jameson has unveiled a sweeping education reform plan that includes increased funding for schools, teacher training programs, and vocational education initiatives."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The proposal, which was announced during a nationally televised address, aims to address longstanding issues in the U.S. education system, including teacher shortages and unequal access to resources."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Education Secretary Jane Doe stated, 'Our children deserve the best possible education, and this plan is a critical step towards achieving that goal.'"
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Teachers' unions have praised the initiative, calling it a necessary investment in the nation's future workforce."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "However, critics argue that the plan is too costly and may divert funds from other critical areas such as healthcare and social services."
+    },
+    {
+      "label": "pull_quote",
+      "text": "‘Investing in education is investing in our children’s future. We owe it to them to make this happen.’ - President Jameson"
+    }
+  ]
+}

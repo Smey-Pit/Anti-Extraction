@@ -1,0 +1,42 @@
+{
+  "doc_type": "communications",
+  "image_path": "images/pil/communications_0249.png",
+  "entities": [
+    {
+      "label": "platform",
+      "type": "short_phrase",
+      "value": "Discord",
+      "question": "What platform or app is this conversation on?"
+    },
+    {
+      "label": "participant_1",
+      "type": "name",
+      "value": "Rachel",
+      "question": "Who are the participants in this conversation?"
+    },
+    {
+      "label": "participant_2",
+      "type": "name",
+      "value": "Tom",
+      "question": "Who are the participants in this conversation?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "message_1_Rachel",
+      "text": "Hey Tom, I'm in deep shit at work"
+    },
+    {
+      "label": "message_2_Tom",
+      "text": "What happened?"
+    },
+    {
+      "label": "message_3_Rachel",
+      "text": "My boss caught me slacking and now I'm under investigation"
+    },
+    {
+      "label": "message_4_Tom",
+      "text": "That's rough. Have you talked to HR yet?"
+    }
+  ]
+}

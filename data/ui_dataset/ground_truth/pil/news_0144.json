@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0144.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "Social Justice Monitor",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Racial Inequities Persist Despite Decades of Progress",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Derek K. Lee",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Chicago, July 1, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Racial Equity",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Systemic Racism",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Community Development",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Despite decades of efforts to address racial disparities, significant gaps remain in areas such as education, employment, and criminal justice, sparking renewed calls for systemic change."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "Recent studies indicate that Black and Hispanic communities continue to lag behind their white counterparts in key socioeconomic indicators, including median income and homeownership rates."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Activists and community leaders argue that systemic racism is a root cause of these persistent inequities and demand more comprehensive policies to address underlying structural issues."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Some policymakers propose targeted initiatives focused on closing achievement gaps in schools and increasing access to affordable housing."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "However, critics contend that such measures do not go far enough and advocate for broader reforms that challenge entrenched racial hierarchies."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"Until we dismantle the systems that perpetuate racial inequality, true progress will remain elusive.\" - Dr. Maria Rodriguez, Civil Rights Advocate"
+    }
+  ]
+}

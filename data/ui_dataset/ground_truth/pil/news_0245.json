@@ -1,0 +1,86 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0245.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "National Tribune",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "City Council Passes Controversial Land Use Bill",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Emma Thompson",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Washington D.C., June 12, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Politics",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Land Use",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Housing",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Gentrification",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_4",
+      "type": "short_phrase",
+      "value": "City Council",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "In a move that has sparked heated debate among city residents, the City Council of Washington D.C. passed a new land use bill last night that allows for increased density in certain neighborhoods, leading to concerns over gentrification and housing affordability."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The bill, which was pushed through by a narrow margin, aims to boost economic development and housing supply. However, critics argue that it will exacerbate existing inequalities and push out long-time residents."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Council member John Doe stated, 'This is a step in the right direction for our city's growth, but we must ensure that no one is left behind.'"
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Opponents have organized protests and vowed to challenge the bill in court, claiming it violates local zoning laws."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "The mayor has yet to comment on the legislation, leaving many to wonder if the administration will support or oppose the bill as it moves forward."
+    },
+    {
+      "label": "pull_quote",
+      "text": "‘The bill is a double-edged sword; while it promises more homes, it also threatens the very community it seeks to serve.’ - Jane Smith, Local Activist"
+    }
+  ]
+}

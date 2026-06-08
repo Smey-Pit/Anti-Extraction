@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0021.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Whispers in the Dark",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Elara Voss",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Moonlight Press",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Elara Voss. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "499",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "Chapter 6: Shadows of the Past",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "The old house creaked softly as the wind whispered through its hollows. The moon cast long shadows across the dusty floor, and the faint scent of lavender filled the air. A single candle flickered on the table, casting an eerie glow over the room. In the silence, a soft sigh echoed from the corner where a faded portrait hung, its eyes seeming to follow the movements of the lone figure standing by the window. The figure turned slowly, her eyes meeting the gaze of the portrait. 'Why do you still haunt me?' she murmured, her voice barely above a whisper. The wind outside howled, and the portrait’s eyes narrowed, as if in response."
+    }
+  ]
+}

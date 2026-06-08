@@ -1,0 +1,50 @@
+{
+  "doc_type": "legal",
+  "image_path": "images/pil/legal_0107.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "Last Will and Testament",
+      "question": "What is the title of this legal document?"
+    },
+    {
+      "label": "jurisdiction",
+      "type": "short_phrase",
+      "value": "Riverdale Town, State of Novaria",
+      "question": "What is the jurisdiction?"
+    },
+    {
+      "label": "date",
+      "type": "date",
+      "value": "July 10, 2024",
+      "question": "What is the date of this document?"
+    },
+    {
+      "label": "party_1_testator",
+      "type": "name",
+      "value": "Alexander S. White",
+      "question": "Who are the parties involved in this document?"
+    },
+    {
+      "label": "signatory_1",
+      "type": "name",
+      "value": "Alexander S. White",
+      "question": "Who are the signatories of this document?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "clause_1._EXECUTION",
+      "text": "I, Alexander S. White, of Riverdale Town, State of Novaria, do hereby execute this Last Will and Testament."
+    },
+    {
+      "label": "clause_2.1_DISPOSAL_OF_ESTATE",
+      "text": "My entire estate, including all personal property, real property, and financial assets, shall be distributed according to the provisions set forth herein."
+    },
+    {
+      "label": "clause_3._EXECUTORS",
+      "text": "I appoint my niece, Emily L. Gray, as Executor of this Will, with full power and authority to carry out the provisions of this Will."
+    }
+  ]
+}

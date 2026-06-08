@@ -1,0 +1,48 @@
+{
+  "doc_type": "copyright",
+  "image_path": "images/pil/copyright_0072.png",
+  "entities": [
+    {
+      "label": "title",
+      "type": "short_phrase",
+      "value": "The Echoes of Midnight",
+      "question": "What is the title of the work?"
+    },
+    {
+      "label": "author",
+      "type": "name",
+      "value": "Eleanor Myles",
+      "question": "Who is the author?"
+    },
+    {
+      "label": "publisher",
+      "type": "short_phrase",
+      "value": "Whispering Wind Publications",
+      "question": "Who is the publisher?"
+    },
+    {
+      "label": "copyright_line",
+      "type": "short_phrase",
+      "value": "© 2023 Eleanor Myles. All rights reserved.",
+      "question": "What is the copyright notice?"
+    },
+    {
+      "label": "page_number",
+      "type": "short_phrase",
+      "value": "1499",
+      "question": "What is the page number?"
+    },
+    {
+      "label": "chapter_scene",
+      "type": "short_phrase",
+      "value": "Chapter 9: The Hymn of Hope",
+      "question": "What is the chapter or scene title?"
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "body_text",
+      "text": "She had always been drawn to the old church, its weathered stonework a testament to a bygone era. Tonight, as she stood under the arch of the nave, the soft glow of candles flickering against the stone walls, she felt an inexplicable sense of peace. The air was thick with the scent of incense, and the sound of the organ filled her ears, transporting her back in time. As she walked up the aisle, the words of the hymn seemed to echo in her mind, a reminder of the enduring power of faith and love.\n\n'And I shall be near thee, dear child, in the day of thy distress...'"
+    }
+  ]
+}

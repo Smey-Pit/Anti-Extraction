@@ -1,0 +1,76 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0169.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "The Liberal Herald",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Liberal Activists Protest New Tax Bill",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "Michael White",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Boston, MA, July 3, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Opinion",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Tax Reform",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Income Inequality",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Social Welfare",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "Hundreds of liberal activists have taken to the streets to protest a new tax bill that they claim disproportionately benefits the wealthy and undermines social welfare programs."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The bill, known as the Economic Growth and Fiscal Responsibility Act (EGFRA), includes significant tax cuts for corporations and high-income individuals, while cutting funding for public services such as education and healthcare."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Protesters argue that the bill will exacerbate income inequality and leave millions of Americans without access to essential services."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "‘This is a clear example of how the wealthy and powerful continue to enrich themselves at the expense of the working class,’ said activist Jane Smith. ‘We need a tax system that works for everyone, not just the elite.’"
+    },
+    {
+      "label": "pull_quote",
+      "text": "‘The EGFRA is a slap in the face to the middle class and the poor. It’s time to stand up and demand a fairer tax system.’ – Jane Smith"
+    }
+  ]
+}

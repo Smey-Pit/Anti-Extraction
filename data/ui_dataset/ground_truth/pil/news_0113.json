@@ -1,0 +1,80 @@
+{
+  "doc_type": "news",
+  "image_path": "images/pil/news_0113.png",
+  "entities": [
+    {
+      "label": "outlet_name",
+      "type": "short_phrase",
+      "value": "People's Tribune",
+      "question": "What is the name of the news outlet?"
+    },
+    {
+      "label": "headline",
+      "type": "short_phrase",
+      "value": "Healthcare Debate Heats Up as Republican Proposal Falls Flat",
+      "question": "What is the article headline?"
+    },
+    {
+      "label": "byline",
+      "type": "name",
+      "value": "David K. Johnson",
+      "question": "Who wrote the article?"
+    },
+    {
+      "label": "dateline",
+      "type": "short_phrase",
+      "value": "Chicago, September 1, 2023",
+      "question": "What is the dateline of the article?"
+    },
+    {
+      "label": "category_tag",
+      "type": "short_phrase",
+      "value": "Analysis",
+      "question": "What is the article category or section?"
+    },
+    {
+      "label": "tag_1",
+      "type": "short_phrase",
+      "value": "Healthcare",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_2",
+      "type": "short_phrase",
+      "value": "Fiscal Policy",
+      "question": "List all topic tags for this article."
+    },
+    {
+      "label": "tag_3",
+      "type": "short_phrase",
+      "value": "Public Health",
+      "question": "List all topic tags for this article."
+    }
+  ],
+  "content_blocks": [
+    {
+      "label": "lead_paragraph",
+      "text": "A proposed healthcare reform bill from the Republican Party has failed to gain traction, leaving many wondering about the future of the nation's healthcare system."
+    },
+    {
+      "label": "body_paragraph_1",
+      "text": "The bill aimed to reduce the federal deficit by cutting funding for public health programs and shifting more responsibility to private insurers."
+    },
+    {
+      "label": "body_paragraph_2",
+      "text": "Critics argue that the proposal would exacerbate existing inequalities and leave millions without access to affordable care."
+    },
+    {
+      "label": "body_paragraph_3",
+      "text": "Democrats have pledged to work towards a more inclusive approach that addresses the needs of all Americans."
+    },
+    {
+      "label": "body_paragraph_4",
+      "text": "The ongoing debate underscores the complex challenges facing the U.S. healthcare system."
+    },
+    {
+      "label": "pull_quote",
+      "text": "\"Healthcare is a fundamental right, not a privilege.\" - Senator Rachel Lee"
+    }
+  ]
+}
